@@ -1,0 +1,28 @@
+[
+    {
+        "pk": 1, 
+        "model": "pages.page", 
+        "fields": {
+            "modification_date": "2008-09-01 07:58:14", 
+            "author": 1, 
+            "title": "Test page", 
+            "creation_date": "2008-09-01 07:58:14", 
+            "content": "Test page content.", 
+            "slug": "test-page", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "pages.page", 
+        "fields": {
+            "modification_date": "2008-09-01 07:58:46", 
+            "author": 1, 
+            "title": "Unpublished page", 
+            "creation_date": "2008-09-01 07:58:46", 
+            "content": "Unpublished page content.", 
+            "slug": "unpublished-page", 
+            "is_published": 0
+        }
+    }
+]

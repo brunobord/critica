@@ -1,0 +1,106 @@
+[
+    {
+        "pk": 1, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "National", 
+            "slug": "national"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Etranger", 
+            "slug": "etranger"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Soci\u00e9t\u00e9", 
+            "slug": "societe"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Pipoles", 
+            "slug": "pipoles"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "T\u00e9l\u00e9", 
+            "slug": "tele"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Bouquins", 
+            "slug": "bouquins"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Nanas", 
+            "slug": "nanas"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Insolites", 
+            "slug": "insolites"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "R\u00e9gions", 
+            "slug": "regions"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Voyages", 
+            "slug": "voyages"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Epicurien", 
+            "slug": "epicurien"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Coup de gueule", 
+            "slug": "coup-de-gueule"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Coup de coeur", 
+            "slug": "coup-de-coeur"
+        }
+    }
+]
