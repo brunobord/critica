@@ -17,6 +17,7 @@ class UserProfile(models.Model):
             ('can_feature_article', 'Can feature an article'),
             ('can_illustrate_article', 'Can illustrate an article'),
             ('can_publish_article', 'Can publish an article'),
+            ('can_publish_page', 'Can publish a page'),
         )
         
     def get_initials(self):

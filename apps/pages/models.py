@@ -8,6 +8,7 @@ from django.db import models
 from django.db.models import permalink
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+from django.template.defaultfilters import slugify
 from critica.apps.pages.managers import PageManager
 
 
@@ -50,10 +51,10 @@ class Page(models.Model):
     
     """
     title             = models.CharField(_('title'), max_length=255)
-    slug              = models.SlugField(_('slug'), max_length=255, unique=True)
+    slug              = models.SlugField(_('slug'), max_length=255, unique=True, editable=False)
     author            = models.ForeignKey(User, verbose_name=_('author'))
-    creation_date     = models.DateTimeField(_('creation date'), null=True, blank=True)
-    modification_date = models.DateTimeField(_('modification date'), null=True, blank=True)
+    creation_date     = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
+    modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
     is_published      = models.BooleanField(_('published'), default=False)
     content           = models.TextField(_('content'))
     
@@ -80,6 +81,7 @@ class Page(models.Model):
             self.modification_date = self.creation_date
         else:
             self.modification_date = datetime.now()
+        self.slug = slugify(self.title)
         super(Page, self).save()
     
     # Managers
