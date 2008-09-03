@@ -1,0 +1,528 @@
+[
+    {
+        "pk": 1, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "National", 
+            "slug": "national"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "International", 
+            "slug": "international"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Soci\u00e9t\u00e9", 
+            "slug": "societe"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Sports", 
+            "slug": "sports"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Pipoles", 
+            "slug": "pipoles"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "T\u00e9l\u00e9", 
+            "slug": "tele"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Bouquins", 
+            "slug": "bouquins"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Nanas", 
+            "slug": "nanas"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Insolites", 
+            "slug": "insolites"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "R\u00e9gions", 
+            "slug": "regions"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Voyages", 
+            "slug": "voyages"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Epicurien", 
+            "slug": "epicurien"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "journal.category", 
+        "fields": {
+            "name": "Coup de gueule", 
+            "slug": "coup-de-gueule"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:03:48", 
+            "image": "upload/2008/09/04/national.jpg", 
+            "creation_date": "2008-09-03 23:55:30", 
+            "credits": "Photopqr", 
+            "is_generic": 0, 
+            "legend": "Cki ? Clavier et Sarko"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:04:48", 
+            "image": "upload/2008/09/04/international.jpg", 
+            "creation_date": "2008-09-04 00:04:48", 
+            "credits": "Ip3Press", 
+            "is_generic": 0, 
+            "legend": "Cki ? Saakachvili"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:05:29", 
+            "image": "upload/2008/09/04/societe.jpg", 
+            "creation_date": "2008-09-04 00:05:29", 
+            "credits": "MAXPPP", 
+            "is_generic": 0, 
+            "legend": "Cki ? Michel Fourniret"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:06:07", 
+            "image": "upload/2008/09/04/sport.jpg", 
+            "creation_date": "2008-09-04 00:06:07", 
+            "credits": "Teamshoot", 
+            "is_generic": 0, 
+            "legend": "Cki ? Bruce Mc Laren, pionnier"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:06:47", 
+            "image": "upload/2008/09/04/pipole.jpg", 
+            "creation_date": "2008-09-04 00:06:47", 
+            "credits": "Alphapress", 
+            "is_generic": 0, 
+            "legend": "Cki ? Sienna Miller"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:07:29", 
+            "image": "upload/2008/09/04/tele.jpg", 
+            "creation_date": "2008-09-04 00:07:29", 
+            "credits": "Ip3Press", 
+            "is_generic": 0, 
+            "legend": "Cki ? Brigitte Lahaie"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:08:48", 
+            "image": "upload/2008/09/04/bouquin.jpg", 
+            "creation_date": "2008-09-04 00:08:48", 
+            "credits": "Critic@", 
+            "is_generic": 0, 
+            "legend": "Les ch'tis c'\u00e9tait les clich\u00e9s"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:09:25", 
+            "image": "upload/2008/09/04/insolite.jpg", 
+            "creation_date": "2008-09-04 00:09:25", 
+            "credits": "ILLU MAXPPP", 
+            "is_generic": 0, 
+            "legend": "ILLU MAXPPP"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:10:06", 
+            "image": "upload/2008/09/04/voyageingridjouault.jpg", 
+            "creation_date": "2008-09-04 00:10:06", 
+            "credits": "Ingrid Jouault", 
+            "is_generic": 0, 
+            "legend": "Ingrid Jouault"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "journal.illustration", 
+        "fields": {
+            "modification_date": "2008-09-04 00:10:57", 
+            "image": "upload/2008/09/04/nana.jpg", 
+            "creation_date": "2008-09-04 00:10:57", 
+            "credits": "Blog \"Au pays de Candy\"", 
+            "is_generic": 0, 
+            "legend": "Blog \"Au pays de Candy\""
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "journal.issue", 
+        "fields": {
+            "publication_date": "2008-09-03 23:27:16", 
+            "number": 125, 
+            "is_complete": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "journal.type", 
+        "fields": {
+            "name": "Article principal"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 1, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:11:46", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Christian Clavier, l'enqu\u00eate corse dont on se serait pass\u00e9", 
+            "is_illustrated": 1, 
+            "illustration": 1, 
+            "creation_date": "2008-09-03 23:32:39", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">D&eacute;licat pour moi, vu mon nom et mes attaches, d'&ecirc;tre serein d&egrave;s que j'&eacute;cris sur la Corse. Le plus beau pays du monde, n'en d&eacute;plaise aux grincheux et aux sectaires, qui est aussi le th&eacute;&acirc;tre depuis trop longtemps de d&eacute;bordements x&eacute;nophobes, voire terroristes, qui ne devraient pas exister. Dernier &eacute;pisode en date : l'occupation pacifique de la villa que poss&egrave;de l'acteur Christian Clavier &agrave; Palombaggia, d&eacute;pendant de Porto-Vecchio, sans doute la plage la plus d&eacute;licieuse de l'&icirc;le.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Sur le bien fond&eacute; du combat des nationalistes, je ne me prononcerai pas. Chacun a le droit de penser ce qu'il veut, &agrave; condition de ne pas enfreindre la loi. Et ils ont beau jeu de claironner que le plasticage de villas a permis au littoral corse de garder sa virginit&eacute;. Le contraste avec la C&ocirc;te d'Azur et le Languedoc-Roussillon est &eacute;vident. Mais le proc&eacute;d&eacute; est insupportable et m&eacute;rite la plus dure r&eacute;pression. Aussi, lorsqu'on a appris qu'une cinquantaine de manifestants avait pacifiquement envahi durant une heure la demeure estivale de Clavier, ou du moins le jardin, et avaient m&ecirc;me bu un coup aux frais de l'acteur, on a pens&eacute; 'tiens, les m&eacute;thodes changent, tant mieux !'</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Dans son bureau &agrave; Ajaccio, un homme surveille l'op&eacute;ration, inform&eacute; en direct par les flics sur place. C'est Dominique Rossi (de Piana), le coordinateur des forces de s&eacute;curit&eacute; en Corse. Pr&eacute;venu des intentions non belliqueuses des s&eacute;paratistes, il a donn&eacute; l'ordre de laisser faire ; pour une fois que ce genre de fredaines se passe dans la bonne humeur et sans casse ! Et de fait, apr&egrave;s avoir scand&eacute; leurs slogans et s'&ecirc;tre rafra&icirc;chi au <em>Casanis</em> local, les braillards quittent les lieux ; pas de casse, les flics qui ne sont pas intervenus sont soulag&eacute;s et les manifestants ravis. Bien jou&eacute; des deux c&ocirc;t&eacute;s.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Mais l'affaire&hellip; se corse. L'incident est remont&eacute; &agrave; l'Elys&eacute;e. Est-ce Clavier en personne qui a appel&eacute; son pote pour se plaindre ? Et en deux coups les gros, l'affaire est entendue : dehors le Tino Rossi de mes deux, qui a laiss&eacute; des gros bras violer le domicile d'une personnalit&eacute; amie. Ce qui laisse pantois car sa gestion de l'&eacute;v&eacute;nement a &eacute;t&eacute; exemplaire : aucun d&eacute;g&acirc;t ni bless&eacute; au d&eacute;bit. Juste un peu moins de liquide dans les bouteilles. Cette r&eacute;action du pouvoir est r&eacute;v&eacute;latrice et inqui&eacute;tante : Nicolas aurait-il abus&eacute; de ses pr&eacute;rogatives en privil&eacute;giant ses amiti&eacute;s personnelles ? Car si la m&ecirc;me aventure &eacute;tait survenue &agrave; M. Dupont, retrait&eacute;, on doute que le super flic aurait saut&eacute;. Mais Clavier, c'est un chouette copain rigolo, et les copains, c'est sacr&eacute; !</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Naturellement, la classe politique a beau jeu de s'infiltrer dans la br&egrave;che. Fran&ccedil;ois Hollande, plus requinqu&eacute; que jamais apr&egrave;s La Rochelle, y va de sa question : <em>\"En mati&egrave;re de s&eacute;curit&eacute;, il n'y a pas des citoyens qui seraient plus prot&eacute;g&eacute;s que d'autres. Cela m&eacute;rite qu'on ait des explications.\"</em> Et Bayrou, d&eacute;barrass&eacute; de ses acouph&egrave;nes, y va de son tacle <em>: \"C'est le fait du prince. Parce que monsieur Christian Clavier, qui est un ami de vacances du pr&eacute;sident de la R&eacute;publique, a eu affaire &agrave; des manifestants chez lui&hellip; on met &agrave; la porte le coordinateur de l'ensemble de la s&eacute;curit&eacute; publique en Corse ?\"</em> Quant aux flics, ils expriment ouvertement leur d&eacute;go&ucirc;t, par la voix d'Emmanuel Roux : <em>\"Ce n'est pas l'affaire Clavier, mais l'affaire Rossi. Qu'est-ce qu'on lui aurait fait si face &agrave; des forces de police lourdes, des manifestants s'&eacute;taient rebell&eacute;s devant ce qu'on aurait appel&eacute; une provocation polici&egrave;re et avaient cass&eacute; le lotissement ? On aurait fusill&eacute; Rossi ?\"</em></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Arbitraire et copinage, les deux mamelles du satrape. Nicolas, tu d&eacute;connes.</p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:32:39", 
+            "position": null, 
+            "summary": "<p>D&eacute;licat pour moi, vu mon nom et mes attaches, d'&ecirc;tre serein d&egrave;s que j'&eacute;cris sur la Corse. Le plus beau pays du monde, n'en d&eacute;plaise aux grincheux et aux sectaires, qui est aussi le th&eacute;&acirc;tre depuis trop longtemps de d&eacute;bordements x&eacute;nophobes, voire terroristes, qui ne devraient pas exister. Dernier &eacute;pisode en date : l'occupation pacifique de la villa que poss&egrave;de l'acteur Christian Clavier &agrave; Palombaggia, d&eacute;pendant de Porto-Vecchio, sans doute la plage la plus d&eacute;licieuse de l'&icirc;le. Aux derni&egrave;res nouvelles, une victime, un superflic...</p>", 
+            "issue": 1, 
+            "slug": "christian-clavier-lenquete-corse-dont-on-se-serait-passe", 
+            "tags": "politique, sarkozy", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 2, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:12:07", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Saakachvili est un cadavre politique - qui sera le prochain ? ", 
+            "is_illustrated": 1, 
+            "illustration": 2, 
+            "creation_date": "2008-09-03 23:36:03", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Il y va fort, Medvedev : le choix du mot cadavre est lourd de connotation. On a l'impression que Dmitri nous dit plut&ocirc;t <em>: \"on a &eacute;cras&eacute; la G&eacute;orgie et son Pr&eacute;sident, on peut &eacute;craser n'importe qui\"</em> - ne dites pas \"m&ecirc;me pas peur\", on sait que les Russes sont capables de tout ! Et les anciens pays sovi&eacute;tiques peuvent se faire du souci, car il y en a quelques-uns qui mettent le Kremlin dans une col&egrave;re noire, et dont les pr&eacute;sidents pourraient bient&ocirc;t eux aussi devenir des cadavres politiques. Voire des cadavres tout court. Alors qui sont les top priorit&eacute;s sur la killing list (ndlr : ne la cherchez pas cette liste, les Russes sont assez rus&eacute;s pour ne pas laisser tra&icirc;ner des preuves mat&eacute;rielles qui permettraient au futurs cadavres politiques de prendre les devants) de Poutine et de sa marionnette Medvedev ? Voici le top 3 des futurs cadavres politiques de Vladimir et Dmitri.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Number 3 : l'Ukraine.</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Tout comme la G&eacute;orgie, l'Ukraine a demand&eacute; &agrave; rejoindre l'OTAN. Quand on sait que l'Organisation du trait&eacute; de l'Atlantique nord, cr&eacute;e en 1949<em>, \"&eacute;tablit un lien permanent entre la s&eacute;curit&eacute; de l'Am&eacute;rique du Nord et celle de l'Europe\"</em>, dixit son site Internet, on se dit que, effectivement, le Kremlin doit voir rouge &agrave; l'id&eacute;e que l'Ukraine puisse en faire partie. Pour le moment, la France et l'Allemagne rejettent la candidature ukrainienne, arguant que le pays est encore trop instable pour &ecirc;tre admis - et ce ne sont pas les &eacute;v&eacute;nements en G&eacute;orgie qui vont les faire changer d'avis. Ouf de soulagement en Russie ! Mais que le pr&eacute;sident ukrainien Viktor Iouchtchenko, amoureux de l'Occident, se m&eacute;fie, ou il pourrait bien devenir le prochain cadavre politique.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Number 2 : la R&eacute;publique tch&egrave;que. </strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">L&agrave;, c'est le projet de bouclier antimissile qui f&acirc;che le grand fr&egrave;re russe. Prague pourrait se laisser s&eacute;duire par les avances ricaines, et dire oui au projet d&eacute;fensif US. Pour le moment, on n'en est pas l&agrave; : la population n'est pas convaincue - je vous l'accorde, elle ne sera pas consult&eacute;e sur le sujet - et, m&ecirc;me si le Conseil de s&eacute;curit&eacute; de l'Etat a donn&eacute; son feu vert &agrave; l'ouverture des n&eacute;gociations avec les States, la d&eacute;cision finale ne lui appartient pas. Bref, &ccedil;a discute ! Mais le simple fait de converser ennuie fortement le Kremlin. Pourtant Mirek Topolanek, le Premier ministre tch&egrave;que, fait tout pour le rassurer : ce projet est <em>\"strictement d&eacute;fensif\"</em>, affirme-t-il. C'est cela, oui, faut pas prendre les Russes pour des imb&eacute;ciles ! Pour eux, des radars ricains proches de leur fronti&egrave;re, &ccedil;a ne peut vouloir dire qu'une chose : Big Brother US vous surveille.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>&nbsp;</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Number 1 : la Pologne.</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>And the winner is&hellip; Varsovie ! </span>Faut dire qu'elle prend des risques ! Contrairement &agrave; la R&eacute;publique tch&egrave;que, Varsovie a d&eacute;j&agrave; accept&eacute; implantation su bouclier antimissile sur son sol. Mauvaise r&eacute;ponse ! Les Russes avaient d&eacute;j&agrave; moyennement appr&eacute;ci&eacute; que les Polonais entrent dans l'Union europ&eacute;enne, mais alors troquer la protection historique du grand fr&egrave;re sovi&eacute;tique contre celle de son ennemi de plus de 40 ans, c'est d&eacute;passer toutes les limites ! Sans oublier que le pr&eacute;sident polonais, Lech Kaczynski, s'est rendu le 12 ao&ucirc;t &agrave; Tbilissi, la capitale g&eacute;orgienne, pour servir de bouclier humain - mais non, pas de bouclier antimissile, Kaczynski n'est quand m&ecirc;me pas un super h&eacute;ros - en cas de frappes russes. C'est s&ucirc;r, il ne l&egrave;che pas les bottes de Poutine - ou Medvedev, on ne sait plus - le Lech !</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Bon, &ccedil;a promet de jolies confrontations &agrave; venir, tout &ccedil;a ! Reste &agrave; savoir comment les Russes vont se d&eacute;brouiller pour provoquer leurs ennemis : un petit incident sur leurs fronti&egrave;res ? Ou bien l'empoisonnement d'un agent des services secrets ukrainien, tch&egrave;que ou polonais ?</p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:36:03", 
+            "position": null, 
+            "summary": "<p>Humiliation ou provocation ? Peu importe la r&eacute;elle volont&eacute; du pr&eacute;sident russe Dmitri Medvedev, car qualifier son homologue g&eacute;orgien de \"cadavre politique\" aura des r&eacute;percussions, c'est certain. Ca va certes &eacute;nerver Mikha&iuml;l Saakachvili, qui a tendance &agrave; r&eacute;agir au quart de tour. Mais il se pourrait bien que Medvedev utilise cette expression pour d'autres pays. A moins qu'il s'en tienne au mot \"cadavre\", sans adjectif.</p>", 
+            "issue": 1, 
+            "slug": "saakachvili-est-un-cadavre-politique-qui-sera-le-prochain", 
+            "tags": "politique", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 3, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:12:40", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Fourniret serait-il encore dans la Mou(i)zin ?", 
+            "is_illustrated": 1, 
+            "illustration": 3, 
+            "creation_date": "2008-09-03 23:38:20", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Et voil&agrave; que l'on pourrait reparler d'une &eacute;ventuelle implication de Michou le Foufou dans la disparition d'Estelle Mouzin, cette fillette de 9 ans &agrave; l'&eacute;poque, disparue &agrave; Guermantes, Seine-et-Marne, le 9 janvier 2003. Le tueur en s&eacute;rie a d&eacute;j&agrave; &eacute;t&eacute; suspect&eacute; d'&ecirc;tre le ravisseur d'Estelle, mais il a toujours ni&eacute; y &ecirc;tre pour quoi que se soit et s'abrite derri&egrave;re un alibi que les enqu&ecirc;teurs n'ont jamais r&eacute;ussi &agrave; contester : au moment o&ugrave; la petite se faisait enlever, sur le chemin entre l'&eacute;cole et la maison, Foufou &eacute;tait en train de t&eacute;l&eacute;phoner depuis la Belgique. Etrange co&iuml;ncidence, c'est justement une affaire de SMS qui a mis la puce (de portable) &agrave; l'oreille de la police belge, qui tente &agrave; nouveau de v&eacute;rifier s'il y a une connexion possible entre Fourniret et l'affaire Mouzin. Vous captez ? Pas bien, hein ? Alors on vous explique.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Un appel au secours sign&eacute; Estelle</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Tout est parti d'un SMS r&eacute;cemment envoy&eacute; &agrave; la r&eacute;daction de RTL Belgique. Le message &eacute;tait sign&eacute; Estelle Mouzin ! Texto, elle y lan&ccedil;ait un appel au secours, pour elle, ainsi que pour trois autres enfants disparus (eux aussi des victimes un temps pr&eacute;sum&eacute;es de Michou), et demandait &agrave; ce que l'on pr&eacute;vienne la police fran&ccedil;aise et son papa. 5 ans apr&egrave;s la disparition de la fillette, on pourrait l&eacute;gitimement penser que c'est un canular de mauvais go&ucirc;t. Sauf que, en diss&eacute;quant le SMS, les enqu&ecirc;teurs belges ont d&eacute;couvert qu'il avait &eacute;t&eacute; envoy&eacute; depuis le plat pays qui est le leur. Ils ont &eacute;galement appris qu'une des vieilles connaissances de la justice locale, Dominique F., avait eu des contacts avec ce num&eacute;ro de t&eacute;l&eacute;phone portable. Et alors, nous direz-vous ? Quel rapport avec notre Foufou ? Ben justement. Figurez-vous que Dominique F. a &eacute;t&eacute; le cod&eacute;tenu de Michou, &agrave; la prison de Dinant&hellip; Ca y est, vous distinguez le r&eacute;seau, maintenant ?</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Perquisition et nouvelle enqu&ecirc;te</strong></p>\r\n<p>Pour en savoir un peu plus, la police judiciaire f&eacute;d&eacute;rale a effectu&eacute;, hier matin, une perquisition de la cellule de Dominique F. &agrave; la prison d'Ittre, o&ugrave; il est actuellement h&eacute;berg&eacute;. On suppose &eacute;galement qu'elle a d&ucirc; interroger le Dominique en question, ou que cela ne saurait tarder. Ce qu'ils cherchent &agrave; savoir aussi, les flics belges, c'est pourquoi ce message a &eacute;t&eacute; envoy&eacute; autant d'ann&eacute;es apr&egrave;s la disparition d'Estelle, et si la fillette (qui aurait 14 ans aujourd'hui) en est miraculeusement bien l'auteur. Et puis<span> </span>nous, on n'est pas de la police, mais &ccedil;a nous interpelle, quelque part, que ce message provienne de Belgique, justement l'endroit d'o&ugrave; avait soit disant appel&eacute; Foufou lors de la disparition d'Estelle&hellip; Quoi qu'il en soit, la piste m&eacute;rite d'&ecirc;tre fouill&eacute;e, et quelque chose nous dit que cette nouvelle enqu&ecirc;te pourrait bien remettre Michou dans la Mou(i)zin. Ce qui est s&ucirc;r en revanche, c'est qu'il ne va pas trop falloir compter sur la collaboration de Foufou : s'il &eacute;tait coop&eacute;ratif avec la police dans un dossier le concernant, &ccedil;a se saurait. Son truc &agrave; lui, on le sait, c'est plut&ocirc;t \"motus et bouche cousue\"&hellip; Une attitude un peu t&eacute;l&eacute;phon&eacute;e, non ?</p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:38:20", 
+            "position": null, 
+            "summary": "<p>Et voil&agrave; que l'on pourrait reparler d'une &eacute;ventuelle implication de Michou le Foufou dans la disparition d'Estelle Mouzin, cette fillette de 9 ans &agrave; l'&eacute;poque, disparue &agrave; Guermantes, Seine-et-Marne, en janvier 2003. C'est une &eacute;trange affaire de SMS qui a mis la puce (de portable) &agrave; l'oreille de la police belge, qui tente &agrave; nouveau de v&eacute;rifier s'il y a une connexion possible entre Fourniret et l'affaire Mouzin.</p>", 
+            "issue": 1, 
+            "slug": "fourniret-serait-il-encore-dans-la-mouizin", 
+            "tags": "fourniret, enqu\u00eate", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 8, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:12:58", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Le tregging : le nouvel Objet Fashion Non Identifi\u00e9\u2026 et importable ", 
+            "is_illustrated": 1, 
+            "illustration": 10, 
+            "creation_date": "2008-09-03 23:40:28", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Les stars ont adopt&eacute; un nouveau futal : le tregging ! Mais ce n'est pas une raison pour que nous aussi on l'ajoute &agrave; notre garde-robe ! \"Tregging\", c'est la contraction de trousers (pantalon en anglais, pour celles qui ne ma&icirc;trisent pas la langue de Shakespeare - pourtant c'est l'un des premiers mots qu'on apprend &agrave; l'&eacute;cole) et de legging (&ccedil;a va, vous ma&icirc;trisez &ccedil;a ?). Donc, on peut consid&eacute;rer que cette sape, c'est soit un legging qui a mut&eacute; vers le slim en cuir noir ; soit un slim qui s'est transform&eacute; en legging. <span>Vous vous souvenez d'Olivia Newton John dans la derni&egrave;re sc&egrave;ne de Grease &ndash; <em>\"you're the one that I want, you're one that ouh ouh ouh, the one that I want, you're one that ouh ouh ouh\"</em>... </span>OK, j'arr&ecirc;te le massacre, mais vous voyez ce &agrave; quoi je fais r&eacute;f&eacute;rence, n'est-ce pas ? Et bien, son pantalon, c'est un tregging ! Eh oui, &ccedil;a date quand m&ecirc;me de la fin des ann&eacute;es 70 - c'est bien connu la mode tourne en rond. Et il y a fort &agrave; parier que si vous n'avez pas aim&eacute; le legging, vous d&eacute;testerez le tregging ! En revanche, si vous avez adooooor&eacute; le legging, on va vous montrer que le tregging ne m&eacute;rite pas que l'on y investisse nos petites &eacute;conomies !</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Le tregging ne pardonne rien</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">On l'a compris - mais j'insiste encore un peu sur le bourrage de cr&acirc;ne -, m&ecirc;me si cette fringue s&eacute;duit de plus en plus de nanas, il faut bien dire ce qui est : c'est quand m&ecirc;me un magnifique faux pas de la mode - n'ayons pas peur des mots, c'est moche &agrave; souhait ! Et &agrave; moins d'&ecirc;tre gaul&eacute;e comme une poup&eacute;e Barbie, je ne vois pas comment vous pourriez porter un tel truc ! Car avec lui, pas de piti&eacute; : le moindre d&eacute;faut est d&eacute;multipli&eacute; ! Un cul un chouia trop d&eacute;velopp&eacute;, des cuisses &agrave; peine grosses ou des hanches un peu trop larges - ne me dites pas que vous ne voyez absolument pas de quoi je parle - et on ne voit que &ccedil;a. D&eacute;j&agrave; que le slim &eacute;tait dur avec nos formes, l&agrave; c'est encore pire. Y'a qu'&agrave; voir, seules les Kate Moss, Mary-Kate Olsen et Heidi Klum de ce monde peuvent oser porter une telle sape - et encore, tout d&eacute;pend de comment on le porte. Car un peu de fain&eacute;antise de votre part et vous courez &agrave; la catastrophe ! M&ecirc;me la pauvre Mischa Barton en a fait les frais ! Vous ne pouvez pas porter cet OFNI avec un tee-shirt court, par exemple : on ne verrait que votre entrejambe et honn&ecirc;tement, c'est pas tr&egrave;s claaasse ! Exit aussi les hauts sans forme : si vous n'optez pas pour un top avec un minimum de coupe, vous pouvez &ecirc;tre s&ucirc;re d'avoir l'air de sortir de votre cours de gym hebdomadaire ! Bref, s'habiller devient tout une aventure - et votre mec va encore se plaindre que vous passez trois heures &agrave; vous d&eacute;cider sur une tenue.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Le cauchemar de l'essayage</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Et puis, il reste une question non r&eacute;solue : comment on rentre l&agrave;-dedans ? C'est impossible ! Je m'imagine d&eacute;j&agrave; allong&eacute;e par terre, en train de tirer sur ce p***** de tregging ou d'utiliser de l'huile de massage ou du talc pour r&eacute;ussir &agrave; le monter jusqu'&agrave; la taille. Un peu comme Ross dans cet &eacute;pisode de <em>Friends</em> o&ugrave; il n'arrive plus &agrave; enfiler son pantalon en cuir. Sans compter qu'apr&egrave;s, vous ne pourrez plus l'enlever, et vous serez oblig&eacute;e de le porter jusqu'&agrave; la fin de vos jours, gnagnagnagnagna ! Bref, tout &ccedil;a me fait peur - OK, j'suis peut-&ecirc;tre pas courageuse, mais en m&ecirc;me temps, je suis journaliste pour la page Nanas et pas reporter de guerre !</div>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</div>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Alors convaincues ? En ce qui me concerne, oui ! Et je vais continuer de feuilleter la presse f&eacute;minine, non pas pour y voir toutes ces stars qui pavanent dans leurs treggings, mais pour imaginer quelle(s) souffrance(s) elles ont d&ucirc; traverser pour enfiler un tel truc ! En m&ecirc;me temps, heureusement que certaines osent le porter : au moins, on r&eacute;alise qu'il ne faut ab-so-lu-ment pas tomber dans le panneau des cr&eacute;ateurs de mode !</p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:40:28", 
+            "position": null, 
+            "summary": "<p>Toutes les stars les plus tendance et hype - prononcez \"a&iuml;ep\", pour &ecirc;tre compl&egrave;tement \"in\" - le portent. De Rihanna &agrave; Agyness Deyn, de Posh &agrave; Kylie &ndash; ben oui, Minogue, y'en a pas 35 des Kylie ! De quoi je parle ? Mais du tregging, bien s&ucirc;r ! Vous ne connaissez pas ? Vous n'&ecirc;tes vraiment pas dans le coup. En m&ecirc;me temps, on vous comprend, c'est un peu l'OFNI (Objet Fashion Non Identifi&eacute;) du si&egrave;cle&hellip; Bon, reprenons depuis le d&eacute;but.</p>", 
+            "issue": 1, 
+            "slug": "le-tregging-le-nouvel-objet-fashion-non-identifie-et-importable", 
+            "tags": "tregging, hype, mode", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 4, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:13:15", 
+            "author": 1, 
+            "type": 1, 
+            "title": "F1 : Ne serait-ce Spa-Francorchamps dimanche ?", 
+            "is_illustrated": 1, 
+            "illustration": 4, 
+            "creation_date": "2008-09-03 23:42:02", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Eh ben si. Ce week-end, nos amis belges vont poursuivre leur histoire d&rsquo;amour avec&nbsp;la Formule 1&nbsp;d&eacute;but&eacute;e en 1950. Autant dire qu&rsquo;il s&rsquo;agit d&rsquo;une classique parmi les classiques, comme dirait le cycliste du plat pays. Que ce soit &agrave; Zolder autrefois, ou &agrave; Spa-Francorchamps aujourd&rsquo;hui, les plus grands s&rsquo;y sont distingu&eacute;s, de Fangio &agrave; Ra&iuml;kk&ouml;nen. D&rsquo;ailleurs, comme Juan-Manuel, celui-ci y a gagn&eacute; trois fois.&nbsp;Va-t-il passer la 4e ? A moins que le leader Hamilton, ou le dauphin Massa&hellip;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Quelque chose nous dit que ce Grand Prix rappelle m&ecirc;me Michael Schumacher aux bons souvenirs. Cette semaine, le septuple empereur allemand s&rsquo;est fait choper &agrave; 140 km/h sur une route limit&eacute;e &agrave; cent au volant d&rsquo;une Audi cabriolet, c&rsquo;est dire&nbsp;! Il s&rsquo;est alors excus&eacute; en pr&eacute;cisant que \"<em>la vitesse n&rsquo;&eacute;tait d&eacute;stin&eacute;e que pour les circuits de course</em>\"&hellip; Ben dis donc, &ccedil;a tombe super bien, vu que tous les pilotes se pointent d&egrave;s aujourd&rsquo;hui sur le trac&eacute; belge, l&agrave;, non loin de Li&egrave;ge une fois&nbsp;! Parce que dimanche, ils s&rsquo;attaqueront au treizi&egrave;me <em>- vrRAAOUOUMmm -</em> de l&rsquo;ann&eacute;e (sur un total de dix-huit). Et donc que les choses vont <em>- vrRAAOUOUMmm - </em>commencer &agrave; se <em>- vrRAAOUOUMmm - </em>pr&eacute;ciser.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">C&rsquo;est sur cette longue, longue, longue piste qui fut ramen&eacute;e de 14 &agrave; 6,973 km, pour &ecirc;tre super pr&eacute;cis, que les mecs vont alterner lignes droites et courbes rapides. Bref, du <em>- vrRAAOUOUMmm -</em>&nbsp;tr&egrave;s technique. Par ses virages en d&eacute;vers, son &eacute;pingle tr&egrave;s lente (La Source), et le c&eacute;l&egrave;bre \"Raidillon\" (Eau Rouge), ce circuit offre aux pilotes des sensations qu&rsquo;ils ne connaissent pas forc&eacute;ment ailleurs. Une boucle qu&rsquo;ils se taperont 44 fois, pour une <em>- vrRAAOUOUMmm -</em> totale de 308,176 bornes. Et puis, il y a la m&eacute;t&eacute;o belge. Le plat pays se fait souvent balay&eacute; par le vent, et des fois m&ecirc;me, eh ben il pleut &agrave; verse. Ainsi, il arrive que &ccedil;a pisse comme vache sur une partie du trac&eacute;, alors que l&rsquo;autre reste au sec. Plut&ocirc;t <em>- vrRAAOUOUMmm - </em>emb&ecirc;tant. Mais cela n&rsquo;a pas emp&ecirc;ch&eacute; Schumacher d&rsquo;y gagner, 6 fois, mais aussi Senna, 5 fois, ou Fangio, 3 fois, ou encore Prost, 2 fois, ou encore McLaren, une fois...</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Qui en preumse&nbsp;? Hamilton ou Massa&nbsp;?</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Bon, le vieux circuit, l&rsquo;historique, tout &ccedil;a, c&rsquo;est bien <em>- vrRAAOUOUMmm - </em>beau. Mais cette ann&eacute;e, kic&eacute;ki peut voir le drapeau &agrave; damier en preumse&nbsp;? Lewis Hamilton, british pilote qui affectionne autant la flotte que son compatriote le rugbyman, il peut le faire. Surtout qu&rsquo;il se trouve en t&ecirc;te du classement g&eacute;n&eacute;ral, avec 70 points et six <em>- vrRAAOUOUMmm -</em> d&rsquo;avance sur Felipe Massa. D&rsquo;autant plus qu&rsquo;&agrave; 23 balais, le talent de chez McLaren consid&egrave;re Spa comme son goudron pr&eacute;f&eacute;r&eacute;, qu&rsquo;il arrive &agrave; maturit&eacute;, avec quatre&nbsp;<em>- vrRAAOUOUMmm -</em> gagn&eacute;s cette ann&eacute;e, dont deux rien qu&rsquo;en juillet (Angleterre et Allemagne). Mais bi carrefour quand m&ecirc;me&nbsp;! Bicause il a failli se choper le cou du lapin lors des essais du <em>- vrRAAOUOUMmm -</em> d&rsquo;Europe, &agrave; Valence le week-end dernier. Malgr&eacute; &ccedil;a, Hamilton a assum&eacute; son statut de leader, en finissant second&hellip; Donc s&rsquo;il pouvait creuser l&rsquo;&eacute;cart sur ses concurrents, il ne se g&ecirc;nera pas.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Second en Espagne, c&rsquo;&eacute;tait juste derri&egrave;re un Br&eacute;silien de chez Ferrari&hellip; Massa&nbsp;justement ! Celui-l&agrave; se r&eacute;jouit de constater que la <em>Scuderitaliana</em> a progress&eacute; en mati&egrave;re de moteur. Fini les casses &agrave; la noix et les petits p&eacute;pins techniques qui foutent sa conduite en l&rsquo;air. Du coup, il ne faut pas oublier son Kimi Ra&iuml;kk&ouml;nen de coll&egrave;gue, le Finlandais champion du monde en titre (57 points), d&eacute;j&agrave; vainqueur &agrave; cet endroit &agrave; trois reprises, faut-il le rappeler. Ni le Polonais Robert Kubica, un nouveau trouble-f&ecirc;te qui <em>- vrRAAOUOUMmm -</em> en BMW-Sauber. A moins que ce double champion d&rsquo;Espagnol Fernando Alonso, tomb&eacute; en rade sous les yeux attrist&eacute;s des&nbsp;aficionados&nbsp;&agrave; Valence, ne cherche &agrave; prendre sa revanche&hellip; Ah mais non&nbsp;! Lui, il roule en Renault cette saison. Donc &ccedil;a va pas &ecirc;tre possible.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p><em><strong>53e - vrRAAOUOUMmm -<span>&nbsp;</span>de Belgique&nbsp;:</strong> dimanche &agrave; 14h, circuit de Spa-Francorchamps, 55, route du Circuit, B-4970 Francorchamps, Belgique (et sur TF1).</em><span>&nbsp; </span></p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:42:02", 
+            "position": null, 
+            "summary": "<p>Eh ben si. Ce week-end, nos amis belges vont poursuivre leur histoire d&rsquo;amour avec la Formule 1 d&eacute;but&eacute;e en 1950. Autant dire qu&rsquo;il s&rsquo;agit d&rsquo;une classique, comme dirait le cycliste du plat pays. Les plus grands (pilotes) s&rsquo;y sont distingu&eacute;s, de Fangio &agrave; Ra&iuml;kk&ouml;nen. D&rsquo;ailleurs, celui-ci y a gagn&eacute; trois fois. Va-t-il passer la 4e ? A moins que le leader Hamilton, ou le dauphin Massa&hellip;</p>", 
+            "issue": 1, 
+            "slug": "f1-ne-serait-ce-spa-francorchamps-dimanche", 
+            "tags": "f1", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 6, 
+            "is_featured": 0, 
+            "citation": "<p><br mce_bogus=\"1\"></p>", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:13:34", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Sex in the Paf ! (et ailleurs...)", 
+            "is_illustrated": 1, 
+            "illustration": 6, 
+            "creation_date": "2008-09-03 23:43:22", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\">Au programme du soir, hier, THE question : est-on fait pour vivre en couple ? Et pour trouver la r\u00e9ponse \u00e0 cette interrogation certainement aussi insoluble que celle de la<span>&nbsp; </span>poule et de l'\u0153uf, on savait que l'on pouvait compter sur les talents de casteuse de Mireille Dumas pour nous fournir les meilleurs experts en la mati\u00e8re. Et comme d'hab, on n'a pas \u00e9t\u00e9 d\u00e9\u00e7us. Mireille avait convi\u00e9 un parterre de personnalit\u00e9s suffisamment inconnues (J-Pierre et Chantal Malignon, Delphine Darmant\u2026 D\u00e9sol\u00e9s, mais quitte \u00e0 passer pour des incultes de premi\u00e8re, on ne savait pas qui c'\u00e9tait avant l'\u00e9mission) ou totalement has been (Roland Magdane, Brigitte Lahaie\u2026) pour ne pas sombrer dans le vulgaire pipole, mais avec un minimum d'actu, histoire de faire tout de m\u00eame un brin de promo. Faut bien une petite compensation \u00e0 l'impudeur : quand y'a rien \u00e0 vendre ou \u00e0 gagner, on voit pas l'int\u00e9r\u00eat de d\u00e9baller sa vie priv\u00e9e devant des millions de t\u00e9l\u00e9spectateurs. Et encore une fois, vous savez que, gr\u00e2ce \u00e0 notre psy du paf, on en a appris des trucs sur le (dys)fonctionnement homme/femme !</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\"><br></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\"><b>Trompez votre mec, vous porterez la culotte</b></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\"><br></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\">Par exemple, gr\u00e2ce \u00e0 Brigitte Lahaie, docteur \u00e8s cul-couple du (main au) paf, on apprend que si on est une nana, on peut se laisser aller sans vergogne \u00e0 des relations adult\u00e8res. Car, selon elle, les hommes acceptent mieux l'infid\u00e9lit\u00e9, car ils ont l'impression que s'ils disent <i>\"c'est lui ou moi\", ils vont perdre leur femme\u2026 Sauf que, \u00e0 partir du moment o\u00f9 ils pardonnent, ils deviennent cocker, et ils finiront par se faire plaquer de toute fa\u00e7on\"</i>. Sous-entendu : \"Allez-y, les nanas ! Prenez des amants, vous aurez encore plus de poids dans le couple ! Car m\u00eame si Doudou a des cornes qui rayent le plafond, il aura pas les c\u2026 de partir\". Faudrait qu'on essaie, pour voir\u2026 (mais non, mon ch\u00e9ri, je d\u00e9conne).</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\"><br></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\"><b>Une femme pour mon mari</b></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\"><br></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\">Autre th\u00e9orie incongrue : chercher une ma\u00eetresse \u00e0 son mec pour entretenir l'amour. C'est le truc r\u00e9volutionnaire qui a germ\u00e9 dans l'esprit (de blonde) de Delphine Darnant (n'insistez pas, on ne sait toujours pas qui c'est). Pour pimenter sa vie de couple apr\u00e8s dix ans de mariage, cette nana s'\u00e9tait mis en t\u00eate de trouver \u00e0 son mari une seconde femme ! Sa <i>\"femme id\u00e9ale, (\u2026) une Julia Roberts de 25 ans\"</i>,<span>&nbsp; </span>une femme qui la <i>\"seconderait\"</i> (sic). Non, mais elle va pas bien, celle-l\u00e0, ou quoi ? Elle voudrait pousser son homme dans les bras d'une autre, alors que tant d'autres refreinent leurs pulsions de meurtre contre la p'tite pouff' qui a manqu\u00e9 de voler leur mec !?! Et c'est l\u00e0 que l'on a compris que c'\u00e9tait uniquement pour vendre son livre qu'elle est venue raconter cette douce gal\u00e9jade, la Delphine. Parce qu'en (t\u00e9l\u00e9)r\u00e9alit\u00e9, elle s'est d\u00e9gonfl\u00e9e la fille, elle l'a pas fait, d'offrir une meuf \u00e0 son mec. D'abord parce qu'il n'\u00e9tait pas int\u00e9ress\u00e9, le gonze (quitte \u00e0 s'en taper une autre, autant la chasser soi-m\u00eame, histoire de se rassurer sur son pouvoir de s\u00e9duction). Ensuite, parce que son mari est justement parti \u00e0 ce moment-l\u00e0, bosser \u00e0 l'\u00e9tranger<span>&nbsp; </span>pour un an (c'est bien ce qu'on vous disait, il se l'est d\u00e9busqu\u00e9 tout seul, sa belette\u2026).</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\"><br></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\" mce_style=\"margin: 0cm 0cm 0pt;\">Si c'est juste pour \u00e9pater la galerie, nous aussi on peut aller faire croire \u00e0 la t\u00e9l\u00e9 qu'on est une nana super ouverte, pr\u00eate \u00e0 faire tomber les tabous du conjugalement correct pour garder notre petit mari\u2026 Sauf que \u00e7a serait juste de la (science) fiction.<span>&nbsp; </span>D'ailleurs, s'il ne cesse pas imm\u00e9diatement de reluquer l'autre greluche aux gros seins, Doudou va entendre parler du pays.</p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:43:22", 
+            "position": null, 
+            "summary": "<p>Au programme du soir, hier, THE question : est-on fait pour vivre en couple ? Et pour trouver la r\u00e9ponse \u00e0 cette interrogation certainement aussi insoluble que celle de la poule et de l'\u0153uf, on savait que l'on pouvait compter sur les talents de casteuse de Mireille Dumas pour nous fournir les meilleurs experts en la mati\u00e8re. Encore une fois, gr\u00e2ce \u00e0 notre psy du paf, on en a appris des trucs sur le (dys)fonctionnement homme/femme.</p>", 
+            "issue": 1, 
+            "slug": "sex-in-the-paf-et-ailleurs", 
+            "tags": "sex, paf", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 5, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:13:56", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Sienna Miller : la (presque) interview", 
+            "is_illustrated": 1, 
+            "illustration": 5, 
+            "creation_date": "2008-09-03 23:45:55", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #0000ff;\"><strong>Critic@ :</strong> Hello Sienna&hellip; Bon, on vous pr&eacute;vient tout de suite, on va se la faire en froggy, cette interview, parce que l&agrave;, on est en plein jet lag, et notre rosbif est moyen au top. Ca vous d&eacute;range pas trop ?</span><span>&nbsp; </span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong><span><span style=\"color: #ff00ff;\">SM : </span></span></strong><span><span style=\"color: #ff00ff;\">Not at all, I am bilingue. And I'm American, not British !</span> <span>&nbsp;</span></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #0000ff;\"><strong>Critic@</strong> : OK, sorry&hellip; Bon, on va commencer par les questions qui f&acirc;chent. Balthazar, c'est pour l'argent ?</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #ff00ff;\"><strong>SM</strong> : God ! I don&rsquo;t have besoin de son money ! You know, my papa is a rich banquier, I have always nag&eacute; in the pognon ! And I remind you que je suis an independent woman ! I travaille, and I gagne my cash by myself ! So, this question is vraiment stupid ! It commence pas very bien, this interview&hellip; You didn't prepare your fiches, or what ?</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #0000ff;\"><strong>Critic@ :</strong> Euh, ouais, pardon, c'est juste qu'on rentre de nos vacances &agrave; Berck-Plage, l&agrave;, et on a du mal &agrave; supporter l'heure de d&eacute;calage horaire avec Londres&hellip; Allez, on se reprend. Donc, entre vous et Balthazar, c'est une v&eacute;ritable love story&hellip;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; color: #ff00ff;\"><strong><span>SM : </span></strong><span>Of course !<strong> </strong>You think que I destroyed une family for the plaisir ?! Absolutely pas ! I really love Babar ! This is le surnom I gave him, because il has une big trunk, just like an elephant&hellip; Au fait, what's the French for \"trunk\"?</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #0000ff;\"><strong>Critic@</strong> : Euh&hellip; une trompe. Hum. Bon, on va pas aller v&eacute;rifier, hein, on vous croit sur parole... Mais quand m&ecirc;me, Sienna, quand vous dites ce genre de choses alors que tout le monde vous stigmatise pour avoir bris&eacute; une famille, comment osez-vous vous plaindre que des gens ont tagu&eacute; \"salope\" sur un mur de votre maison londonienne ?</span> &nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #ff00ff;\"><strong>SM</strong> : I didn't complain du tout ! I have rien &agrave; foutre de ces sons of a bitch ! And de toutes fa&ccedil;ons, we have decided to acheter a new maison with Babar, but &agrave; Malibu, because I want du soleil ! Fuck the pluie ! And you know, I have l'habitude to be insulted&hellip; It's always comme &ccedil;a when a girl se comporte like a mec&hellip; It's not my faute if I'm a serial lover ! I'm not responsable for that ! It's la faute &agrave; Jude !</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #0000ff;\"><strong>Critic@</strong> : Ah, Jude Law, votre ex&hellip;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; color: #ff00ff;\"><strong>SM</strong> : Yes ! I was a gentille girl before lui ! But maintenant, because of ce qu'il a fait with la nounou de ses kids, I'm not pareille que before ! How can I have confiance in les mecs, now ?! I loved him, and he destroyed me ! He fucked with her, alors que she is very moche ! I was very triste, he apologized, but rien &agrave; foutre ! Too late, Jude ! Next time, you r&eacute;fl&eacute;chiras before agir ! You bastard !</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #0000ff;\"><strong>Critic@ : </strong>Oh la la, doucement, Sienna, nous on l'aime bien, Jude Law, il nous a encore rien fait&hellip; D'ailleurs, c'est o&ugrave; il veut, quand il veut&hellip; Euh, pardon, on s'&eacute;gare. Bref, c'est depuis cette histoire que vous avez acquis votre r&eacute;putation de croqueuse d'hommes&hellip;</span></p>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #ff00ff;\"><strong>SM </strong>: Definitly. I have retenu the lesson. I fucked with Daniel Craig, Hayden Christensen, and many other mecs&hellip; And Rhys Ifans, too, the one qui plays Hugh Grant's colocataire in <em>Notting Hill</em>. I have failli marry him, but I didn't : he was vraiment trop moche !</span>\r\n<div><span style=\"color: #0000ff;\"><strong>Critic@</strong> : Ah, &ccedil;a c'est s&ucirc;r que compar&eacute; aux autres, il tenait pas la route&hellip; Bon, pour finir, avec Balthazar, c'est vraiment du s&eacute;rieux, alors ?</span></div>\r\n</div>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #ff00ff;\"><strong>SM</strong> : Hum&hellip; Sincerely ? Not really, en fait. I just want que Jude soit jealous, because I'm toujours in love avec him&hellip; It's vrai ! And I'm sure that's pareil for lui&hellip; Hey Jude, don't make it bad&hellip; Na na na nananana, nannana&hellip;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span style=\"color: #0000ff;\"><strong>Critic@ : </strong>(<em>Apart&eacute;</em>) Ouh la, elle part en live, la Sienna. C'est le moment de mettre un terme &agrave; cette (presque) interview. Mais pas avant d'avoir r&eacute;cup&eacute;r&eacute; le num&eacute;ro de portable de Jude, parce qu'en fait, on &eacute;tait (presque) l&agrave; rien que pour &ccedil;a, gniark gniark&hellip;</span></p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:45:55", 
+            "position": null, 
+            "summary": "<p>L'actrice Sienna Miller est l'une des cibles pr&eacute;f&eacute;r&eacute;es des tablo&iuml;ds britanniques, pour cause de vie sentimentale tr&egrave;s tr&egrave;s agit&eacute;e. Dernier pipole accroch&eacute; &agrave; son tableau de chasse : Balthazar Getty, acteur, millionnaire (jusqu'ici tout va bien), mari&eacute;, quatre enfants (oups). Curieux de voir le ph&eacute;nom&egrave;ne, nous sommes (presque) all&eacute;s rencontrer celle que l'on appelle d&eacute;sormais \"Serial Miller\".</p>", 
+            "issue": 1, 
+            "slug": "sienna-miller-la-presque-interview", 
+            "tags": "actrice, interview", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 11, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:14:17", 
+            "author": 1, 
+            "type": 1, 
+            "title": "C'est d\u00e9cid\u00e9, cet \u00e9t\u00e9, je retourne \u00e0 Belfast !", 
+            "is_illustrated": 1, 
+            "illustration": 9, 
+            "creation_date": "2008-09-03 23:47:45", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><strong><span style=\"color: #ff0000;\">C'est d&eacute;cid&eacute;, cet &eacute;t&eacute;, je retourne &agrave; Belfast ! Regards surpris et visages perplexes - oui, oui, c'est de vous que je parle, je suis s&ucirc;re que vous me prenez pour une folle ! Dans votre t&ecirc;te, 15.000 images se bousculent : guerre civile, cathos contre protestants, pluie, grisaille, fum&eacute;e, et caetera, et caetera - que des clich&eacute;s ! Vous vous dites tous : \"Elle est tar&eacute;e ! Qui irait passer ses vacances dans un tel pays ?\" Moi ! Et j'en suis bien contente parce qu'au moins, je ne serai pas d&eacute;goulinante de sueur et puante sous les bras, je ne passerai pas 2 heures dans les embouteillages avant d'atteindre la plage et je ne serai pas grill&eacute;e comme un steak h&acirc;ch&eacute; ! Et toc !</span></strong></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><strong><span style=\"color: #ff0000;\">Contrairement &agrave; ce que vous pensez, Belfast est aujourd'hui une capitale en pleine expansion, vivante, dynamique, jeune et accueillante. Bon, d'accord, tout n'est pas rose, mais le Belfast r&eacute;el est loin de l'id&eacute;e que vous vous en faites. Et j'entends bien vous le d&eacute;montrer !</span></strong><span>&nbsp; </span></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><span style=\"color: #0000ff;\"><strong>Qui a dit que Belfast n'&eacute;tait pas une ville touristique ?</strong></span></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Ok, Belfast porte toujours les traces de cette guerre civile - qui n'a jamais dit son nom - entre catholiques et protestants, une p&eacute;riode appel&eacute;e pudiquement &laquo; Les Troubles &raquo; - comme s'il s'&eacute;tait agi d'une petite broutille de rien du tout ! D'ailleurs, les touristes cherchent avant tout &agrave; comprendre cette p&eacute;riode. Et pour se faire, rien de tel qu'un petit tour en Black Taxi. A l'origine ces taxis noirs servaient de bus entre les quartiers catholiques et le centre ville - ben oui, les cathos &eacute;tant consid&eacute;r&eacute; comme des citoyens de seconde zone, les bus ne circulaient pas dans leurs quartiers ! Aujourd'hui, ils emm&egrave;nent les touristes voir les murals, des fresques murales qui promeuvent les id&eacute;es des deux camps. M&ecirc;me si l'histoire narr&eacute;e n'est pas forc&eacute;ment tr&egrave;s dr&ocirc;le, faire le tour de ces fresques permet non seulement de mieux comprendre l'Irlande du Nord, mais aussi de d&eacute;couvrir de v&eacute;ritables ouvrages d'art. Si, si, je vous le jure ! Les mecs qui se sont amus&eacute;s &agrave; peindre ces pans entiers de murs - avec ou sans le consentement des habitants, ces derniers n'avaient pas le choix et ceux qui protestaient se faisaient casser la gueule ! - sont vraiment des artistes - je sais que vous en doutez, mais allez-y et vous verrez que j'ai raison ! La culture des murals existe toujours, mais les peintres trouvent aujourd'hui leur inspiration dans le sport - David Healy ou George Best pour les fans de foot -, le cin&eacute;ma, la musique - Liam Neeson vient d'une ville &agrave; 30 minutes de Belfast, Van Morrison est n&eacute; &agrave; Belfast et Neil Hannon, le chanteur de Divine Comedy vient aussi de l'Irlande du Nord - et le pass&eacute; industriel de la ville - on va en reparler, promis. Le Black Taxi - plus original, plus perso et moins chiant que ces bus &agrave; ciel ouvert que l'on trouve dans toutes les grandes villes - vous emm&egrave;nera aussi voir le Peace Wall, le mur de la paix qui s&eacute;pare la ville en 2 - levez la main ceux et celles qui savaient que Belfast &eacute;tait divis&eacute;e en 2 par un mur ? Ce mur divise les quartiers &agrave; majorit&eacute; protestante de ceux &agrave; majorit&eacute; catho, avec bien s&ucirc;r un no man's land entre les 2 ! Le Peace Wall compte de nombreuses portes qui restent ferm&eacute;es lorsque les tensions entre les 2 communaut&eacute;s augmentent - et &ccedil;a arrive encore aujourd'hui, on n'efface pas des d&eacute;cennies de conflit en un coup de baguette magique ! Ceci dit, les divisions s'estompent avec le temps et<span>&nbsp; </span>les gens sont en g&eacute;n&eacute;ral accueillants. Bon y'a bien certains secteurs de la ville qui ont mauvaise r&eacute;putation, mais c'est le lot de toutes grandes capitales.<strong> </strong></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Un conseil : faites gaffe aux chauffeurs de Black Taxi que vous choisissez car certains ont un parti-pris et peuvent vous induire en erreur, voire vous raconter des contre-v&eacute;rit&eacute;s - &ccedil;a s'est d&eacute;j&agrave; vu ! Essayez de r&eacute;server un taxi avec Michael Johnston de Black Cabs Tours (0044 28 9064 2264 ou <a href=\"http://www.belfasttours.com/\" target=\"_blank\">http://www.belfasttours.com</a>om) qui offre des commentaires neutres et r&eacute;pond honn&ecirc;tement &agrave; toutes les questions. Pas s&ucirc;r que vous compreniez son accent d'entr&eacute;e de jeu, mais il s'attache &agrave; r&eacute;p&eacute;ter plus doucement les commentaires !</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><span style=\"color: #0000ff;\"><strong>Et le Titanic, devinez o&ugrave; il a &eacute;t&eacute; construit ?</strong></span></span></p>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><br />Aujourd'hui la capitale d'Irlande du nord change et, m&ecirc;me s'il y a toujours des tensions - faut pas se leurrer non plus -, la plupart de ses 500.000 habitants veulent aujourd'hui passer &agrave; autre chose et reconna&icirc;tre Belfast pour ce qu'elle est vraiment : une cit&eacute; maritime en plein d&eacute;veloppement. Entre 1916 et 1918, Belfast est la capitale industrielle de l'Europe gr&acirc;ce &agrave; son port et ses diverses usines et manufactures (tabac, distillerie, lin...). Ca vous en bouche un coin, hein ! A cette &eacute;poque, le port poss&egrave;de la plus grande cale s&egrave;che du monde, o&ugrave; le paquebot le plus c&eacute;l&egrave;bre du monde a &eacute;t&eacute; construit. Oui, oui, je parle bien du Titanic, le seul, l'unique ! Mais, comme s'amusent &agrave; le pr&eacute;ciser les Irlandais, il &eacute;tait en parfait &eacute;tat de fonctionnement quand il a quitt&eacute; le port de Belfast. Que les choses soient claires ! Aujourd'hui l'industrie portuaire est en crise, mais la grue des chantiers Harland &amp; Wolff (H&amp;W) reste l'embl&egrave;me de la ville. D'ailleurs, Belfast entreprend de revitaliser cette histoire maritime en cr&eacute;ant un projet touristique appel&eacute; Projet Titanic. Une r&eacute;plique du tristement c&eacute;l&egrave;bre liner doit voir le jour. Si avec &ccedil;a les touristes ne se pointent pas, on ne comprend plus rien !</span></div>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Et puis, il y a bien s&ucirc;r la ville en elle-m&ecirc;me : sa Queen's University, tout droit sortie de Harry Potter, son imposant City Hall, son Botanic Garden pour des siestes bien m&eacute;rit&eacute;es - quand il ne pleut pas, &ccedil;a va de soi - sa cath&eacute;drale Sainte Anne, son Stormont (o&ugrave; si&egrave;gent les d&eacute;put&eacute;s d'Irlande du Nord), son Albert's Clock, son ch&acirc;teau nich&eacute; dans la montagne&hellip; </span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><strong style=\"color: #0000ff;\">De la culture, toujours plus de culture</strong></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Quand on vous dit Irlande, vous pensez certainement &agrave; musique traditionnelle dans un pub, accoud&eacute; au comptoir avec une pinte de Guinness. Vous n'&ecirc;tes pas loin, mais l&agrave; encore laissez vos clich&eacute;s au vestiaire ! Les pubs, oui &agrave; 100% ; la pinte, oui mais pas n'importe quel breuvage ; la musique traditionnelle, oui, mais pas que. D'abord, merci pour la Guinness, mais &agrave; Belfast on boit de la Harp car cette bi&egrave;re blonde est fabriqu&eacute;e dans la ville. D&eacute;-li-cieuse ! Ensuite, il n'y a pas que des violons et des tin whistles (fl&ucirc;tes typiquement irlandaises) dans les pubs Belfastish, il y a aussi de jeunes groupes de rock, de pop et m&ecirc;me de R n' B. Apr&egrave;s des ann&eacute;es de Troubles o&ugrave; tout &eacute;tait contr&ocirc;l&eacute; - aussi bien la presse que les chansons -, les jeunes artistes d'aujourd'hui ont des choses &agrave; dire. Pendant longtemps, les groupes de musique n'&eacute;taient autoris&eacute;s qu'&agrave; jouer des reprises, ce qui permettait aux instances gouvernementales de surveiller de pr&egrave;s ce qui &eacute;tait&hellip; chant&eacute;. Attention, hein, on vous a l'&oelig;il ! Interdiction non seulement d'&eacute;crire des hymnes &agrave; l'ind&eacute;pendance irlandaise ou &agrave; l'attachement &agrave; la couronne, mais interdition aussi de jouer Bloody Sunday de U2 - que beaucoup d'Irlandais du Nord ont d&eacute;couvert &agrave; l'&eacute;tranger, un comble. Aujourd'hui la jeune sc&egrave;ne musicale n'a plus peur de parler de politique et des groupes, tels que <a href=\"http://www.snowpatrol.com/\" target=\"_blank\">Snow Patrol </a>ou <a href=\"http://www.dukespecial.com/\" target=\"_blank\">Duke Special</a>, se multiplient - vous connaissez pas ? Vous &ecirc;tes nuls ! Les festivals aussi se multiplient &agrave; Belfast. Que ce soient Queen's Festival en octobre<span>&nbsp; </span>(musique, projection de film, danse&hellip;), Belfest (musique) en novembre, le Cathedral Quartet Arts festival (musique, projection, danse) fin avril ou Summer Fun Days<span>&nbsp; </span>(th&eacute;&acirc;tre de rue) en juillet et ao&ucirc;t, la cit&eacute; bouge au rythme de ces animations. Si de grands complexes, style z&eacute;nith, voient le jour &agrave; l'ext&eacute;rieur de Belfast, le centre ville h&eacute;berge encore 2 salles magnifiques et tr&egrave;s diff&eacute;rentes l'une de l'autre : le Waterfront et le Ulster Hall - mon pr&eacute;f&eacute;r&eacute; avec son architecture art d&eacute;co. </span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><strong style=\"color: #0000ff;\">Tavernier, &agrave; boire ou j'tue le chien, &ccedil;a donne quoi en English ?</strong></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Musique, mais aussi pub - ah enfin, vous entends-je crier ! LE pub par excellence, c'est The Crown Bar ! Situ&eacute; sur Great Victoria Street, ce pub a plusieurs fois &eacute;t&eacute; endommag&eacute; par des attentats, directs ou indirects. Cependant il continue d'attirer des foules et ce depuis 1885. Certes, la d&eacute;co est somptueuse et d'origine - ou presque - ; certes, il poss&egrave;de encore des arri&egrave;re-salles o&ugrave; l'on enfermait les femmes et les hommes de clerg&eacute;, interdits d'acc&egrave;s au bar ; mais c'est le pub &agrave; touristes. Et je vous d&eacute;conseille d'aller y l&acirc;cher votre thune. Poussez la porte juste pour y jeter un coup d'&oelig;il, mais c'est tout ! Faites plut&ocirc;t un tour au Limelight (Ormeau Avenue), Auntie Annie's (Dublin Road) ou au Botanic Inn (Malone Road), que tout le monde appelle le &laquo; Bot &raquo;, les pubs les plus in de Belfast. Mais moi, je vous conseille surtout un vendredi soir au John Hewitt (Donegal Street, dans le quartier de la Cath&eacute;drale) avec le groupe Panama Jazz Band (www.panamajazz.net), des grands-p&egrave;res qui font du jazz et qui vous invitent &agrave; danser ! Allez &eacute;galement vous envoyer une pinte au Whites Tavern (Winecellar Entry, litt&eacute;ralement l'entr&eacute;e de la cave, &ccedil;a ne s'invente pas) ou au Duke of York (Commercial Court) ! En revanche, vous avez int&eacute;r&ecirc;t d'&ecirc;tre munis d'une carte pour les trouver, car ces pubs se cachent pour &ecirc;tre mieux appr&eacute;ci&eacute;s ! Une fois arriv&eacute; dans l'&eacute;tablissement de votre choix, oubliez la pinte de Guinness et optez pour celle de Harp - je sais j'insiste, mais elle est vraiment bonne ! Si vous sympathisez avec le patron, il vous laissera peut-&ecirc;tre consommer jusqu'&agrave; pas d'heure - au moins le temps qu'il fasse son rangement et son m&eacute;nage ! Les pubs ferment &agrave; 1h, mais certains taverniers autorisent leurs clients &agrave; rester.<span>&nbsp;&nbsp; </span></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><strong style=\"color: #0000ff;\">Shopping, les filles ?</strong></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Pour celles qui sont dans le coup, inutiles de vous pr&eacute;ciser que les UK sont la destination r&ecirc;v&eacute;e pour d&eacute;couvrir de nouvelles tendances. Et Belfast en fait partie ! Sa Royal Street est id&eacute;ale pour trouver un max de sapes &agrave; moindre prix. Vous y trouverez des magasins comme Tops Shop, Gap ou Next, mais aussi le centre commercial de Castle Court, le premier centre commercial de Belfast - o&ugrave; se trouve TK Maxx, le magasin de fringues d&eacute;griff&eacute;es -, et le dernier n&eacute; :&nbsp;<a href=\"http://www.victoriasquare.com/\" target=\"_blank\">Victoria Square</a> - que je n'ai pas encore pu arpenter, mais qui a l'air pas mal d'apr&egrave;s internet ! Et puis il y a, &agrave; l'ext&eacute;rieur de la ville, de nombreux autres centres commerciaux, mais ils ne valent pas forc&eacute;ment le d&eacute;tour. Un centre commercial ressemble toujours &agrave; un autre centre commercial. M&ecirc;me pour les nana branch&eacute;es !</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span><strong style=\"color: #0000ff;\">Mais encore ?</strong></span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong><span>&nbsp;</span></strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>L'Irlande du Nord ne se r&eacute;sume pas qu'&agrave; Belfast. Tant que vous y &ecirc;tes, allez visiter Derry (ou Londonderry), d&eacute;couvrez les Sperrins ou les Mournes, et surtout baladez-vous sur la c&ocirc;te nord de la province<span>&nbsp; </span>: Portrush, White Park Bay, Dunluce Castle, la distillerie de Bushmillls et bien s&ucirc;r, Giant's Causeway. En revanche, faudra pas trop compter sur les bus et les trains pour vous d&eacute;placer. M&ecirc;me les grandes villes comme Derry sont ravitaill&eacute;es par les corbeaux ! Pas le choix, faudra louer une voiture. </span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>&nbsp;</span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Je vous ai convaincu(e)s ? G&eacute;nial ! Alors rendez-vous &agrave; Belfast ! Promis, j'vous paie une pinte si vous me trouvez ! En attendant allez faire un tour sur les sites <a href=\"http://www.gotobelfast.com/\" target=\"_blank\">www.gotobelfast.com </a>et <a href=\"http://www.discovernorthernireland.com/\" target=\"_blank\">www.discovernorthernireland.com</a></span></p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:47:45", 
+            "position": null, 
+            "summary": "<p>C'est d&eacute;cid&eacute;, cet &eacute;t&eacute;, je retourne &agrave; Belfast ! Regards surpris et visages perplexes - oui, oui, c'est de vous que je parle, je suis s&ucirc;re que vous me prenez pour une folle ! Dans votre t&ecirc;te, 15.000 images se bousculent : guerre civile, cathos contre protestants, pluie, grisaille, fum&eacute;e, et caetera, et caetera - que des clich&eacute;s ! Vous vous dites tous : \"Elle est tar&eacute;e ! Qui irait passer ses vacances dans un tel pays ?\" Moi ! Et j'en suis bien contente parce qu'au moins, je ne serai pas d&eacute;goulinante de sueur et puante sous les bras, je ne passerai pas 2 heures dans les embouteillages avant d'atteindre la plage et je ne serai pas grill&eacute;e comme un steak h&acirc;ch&eacute; ! Et toc ! Contrairement &agrave; ce que vous pensez, Belfast est aujourd'hui une capitale en pleine expansion, vivante, dynamique, jeune et accueillante. Bon, d'accord, tout n'est pas rose, mais le Belfast r&eacute;el est loin de l'id&eacute;e que vous vous en faites. Et j'entends bien vous le d&eacute;montrer !</p>", 
+            "issue": 1, 
+            "slug": "cest-decide-cet-ete-je-retourne-a-belfast", 
+            "tags": "irlande, belfast", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 9, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:14:47", 
+            "author": 1, 
+            "type": 1, 
+            "title": "En Espagne, on se lib\u00e8re grassement les bourses", 
+            "is_illustrated": 1, 
+            "illustration": 8, 
+            "creation_date": "2008-09-03 23:49:23", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Vous n&rsquo;&ecirc;tes pas sans savoir qu&rsquo;en Espagne, on aime bien l&acirc;cher son liquide dans les bordels. Mais &agrave; un tel point, c&rsquo;est impensable&nbsp;! Savez-vous en effet combien de pognon les Ib&egrave;res vont foutre chaque jour chez les p&eacute;ripat&eacute;tiputes&nbsp;? Attention, &ccedil;a d&eacute;chire&nbsp;: 50 millions d'euros&nbsp;! Les r&eacute;gions les plus sensibles &agrave; ce genre de pratique se situent du c&ocirc;t&eacute; de Madrid, de Valence et de l'Andalousie. Et l&agrave;, forc&eacute;ment, on reste sur le cul&hellip;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Alors on se doute bien que si cette activit&eacute; ne d&eacute;bande pas, elle doit faire vivre un beau paquet de personnes dans le pays. Environ 300.000 selon des chiffres non officiels, 100.000 selon les experts mandat&eacute;s par le Congr&egrave;s des D&eacute;put&eacute;s. De m&ecirc;me que 6% de la population effectue des va-et-vient r&eacute;guliers dans le milieu de la prostitution. Evidemment, ces chiffres gonflent &agrave; vue d&rsquo;&oelig;il si l&rsquo;on compte les allers et venues des touristes.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Selon une banque de donn&eacute;es de l'assos des proprios de clubs, ce petit commerce repr&eacute;sente ainsi 18.000 millions d'euros par an. Et encore, on n&rsquo;ins&egrave;re pas les m&eacute;dias, qui se font un paquet de b&eacute;n&eacute;fices gr&acirc;ce &agrave; l'insertion de publicit&eacute;s de \"contacts\" dans leurs colonnes. Bref, un secteur d&rsquo;activit&eacute; en pleine croissance, qui incite m&ecirc;me la Guardia Civil &agrave; inspecter p&eacute;riodiquement les locaux o&ugrave; les nanas de joie se sont s&eacute;dentaris&eacute;es. Mieux, il s'agit de la deuxi&egrave;me affaire mondiale la plus lucrative, apr&egrave;s le trafic d'armes et devant celui de la came... D&rsquo;apr&egrave;s le dernier recensement, elles seraient donc 96.000 &agrave; bosser dur pour gagner leur vie. Parmi les zones pr&eacute;cit&eacute;es dans cet article, l&rsquo;Andalousie pointe en t&ecirc;te avec 18.200 t&ecirc;tes de pipes, suivie de pr&egrave;s par la Communaut&eacute; Valencienne (14.200), puis par Madrid et sa banlieue (13.800). Sans oublier celles qui travaillent &agrave; leur compte, pr&egrave;s de 6.000, mais l&agrave;, on n&rsquo;en est pas tout &agrave; fait s&ucirc;r, porqu&eacute; elles n&rsquo;ont pas toutes pignon sur rue.<span>&nbsp; </span></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Des statistiques qui gonflent &agrave; vue d&rsquo;oeil</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Un petit paradoxe vient cependant nous titiller, l&rsquo;esprit. Il concerne les r&eacute;gions frontali&egrave;res qui, a priori, ne poss&egrave;dent pas autant de gonzesses qu&rsquo;on pourrait le supposer. En effet&nbsp;: l&rsquo;Estr&eacute;madure, voisine du Portugal, se contente de 1.400 filles actives&nbsp;; le Pays basque et la Navarre, si proches de la France en comptent respectivement (et seulement) 1.300 et 700&hellip; Alors, comme ce sont des sites favorables &agrave; de gros passages, m&ecirc;me hors saison, on se pose la question&nbsp;: une telle diff&eacute;rence de salari&eacute;es, comment se fait-ce&nbsp;?</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Peut-&ecirc;tre parce que l&agrave;, les p&eacute;ripat&eacute;tiputes ne sont pas si s&eacute;dentaires que &ccedil;a. Si l'on se penche un peu plus pr&egrave;s sur la question, on se rend ais&eacute;ment compte que plus de 50% des douani&egrave;res sont d&rsquo;origine latino-am&eacute;ricaine. Vu qu&rsquo;elles se trouvent dans la n&eacute;cessit&eacute; la plus absolue dans leur pays, elles ne font pas le voyage &agrave; vide, &eacute;videmment. Mais, comme elles se trouvent bien souvent en situation irr&eacute;guli&egrave;re sur le vieux continent, elles viennent, et puis s&rsquo;en vont apr&egrave;s avoir re&ccedil;u leurs bourses. Des fois, y&rsquo;en a qui reviennent, mais c&rsquo;est rare. D&rsquo;o&ugrave; ce ph&eacute;nom&egrave;ne, qui ne finit pas de grossir, et qui se voit m&ecirc;me enfler grave avec l&rsquo;arriv&eacute;e de nouvelles troupes depuis quelques ann&eacute;es&nbsp;: les blondes de l&rsquo;Est. Des wagons entiers&nbsp;! Tout un bloc&nbsp;m&ecirc;me !</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p>Mais que ce soit l&agrave;, ou &agrave; Barcelone, Murcie, Almer&iacute;a, Grenade ou Cordoue, la (tr&egrave;s) jeune &eacute;trang&egrave;re est devenue un produit de discount, mais vu qu&rsquo;elles oeuvrent pour pas cher, c&rsquo;est du lourd. Bien que les flics fassent des fiches techniques sur ces ill&eacute;galit&eacute;s, la r&eacute;alit&eacute; se veut pesante&nbsp;: le nombre de p&eacute;ripat&eacute;tiputes traditionnelles espagnoles r&eacute;tr&eacute;cit.&nbsp;De nos jours, on suppute m&ecirc;me qu&rsquo;elles ne repr&eacute;sentent plus que 10% du march&eacute;. Ce qui signifie que maintenant, les mecs qui veulent brancher une nana contre un peu de liquide, ils doivent ma&icirc;triser plusieurs langues&hellip; M&ecirc;me si dans la plupart des cas, en Espagne comme ailleurs, ils ne leur demandent pas de l&rsquo;ouvrir. Ni pendant, ni apr&egrave;s.</p>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:49:23", 
+            "position": null, 
+            "summary": "<p>Savez-vous combien de pognon les Ib&egrave;res vont foutre chaque jour chez les p&eacute;ripat&eacute;tiputes ? Attention, &ccedil;a d&eacute;chire : 50 millions d'euros ! Les r&eacute;gions les plus sensibles &agrave; ce genre de pratique se situent du c&ocirc;t&eacute; de Madrid, de Valence et de l'Andalousie. Et l&agrave;, forc&eacute;ment, on reste sur le cul&hellip; Enqu&eacute;-qu&ecirc;te.</p>", 
+            "issue": 1, 
+            "slug": "en-espagne-on-se-libere-grassement-les-bourses", 
+            "tags": "sex, espagne", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 7, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:15:02", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Les ch'tis c'\u00e9tait les clich\u00e9s : qu'est-ce qu'elle leur met !", 
+            "is_illustrated": 1, 
+            "illustration": 7, 
+            "creation_date": "2008-09-03 23:50:36", 
+            "content": "<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Auteur : Elise Ovart-Baratte</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Editeur : Calmann-L&eacute;vy</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>127 pages &ndash; 11 euros</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Note Critic@ : <span style=\"color: red;\">18/20</span></strong></p>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;\r\n<div>&nbsp;</div>\r\n</div>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Une jeunette de 28 ans cette Elise Ovart-Baratte qui ose s'insurger contre les id&eacute;es re&ccedil;ues v&eacute;hicul&eacute;es par le succ&egrave;s de \"<em>Bienvenue chez les ch'tis</em>\" et autres joyeuset&eacute;s du genre \"<em>Au norddddd, c'&eacute;tait les corons</em>\" de feu Bachelet. Onze ans qu'elle vit &agrave; Lille, et elle d&eacute;fend son Nord avec plus d'&acirc;pret&eacute;, d'opini&acirc;tret&eacute; qu'une native du ch'Nord. S&ucirc;r qu'elle ne s'est pas fait que des copains, surtout au PS local o&ugrave; elle est secr&eacute;taire de section, tant ses id&eacute;es vont &agrave; l'encontre de l'euphorie g&eacute;n&eacute;rale apr&egrave;s la sortie du film qui a d&eacute;tr&ocirc;n&eacute; en entr&eacute;es \"<em>La grande vadrouille</em>\".</p>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;<br /></div>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>Merde, faut encore dire du bien de Bienvenue chez les Ch'tis ? Point du tout, ouf !</strong></p>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</div>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Au d&eacute;but, on s'est dit : \"<em>merde, tu vas voir que c'est encore une ode aux ch'tis, alors qu'on fait partie des rares qui ont refus&eacute; de se laisser avoir par le film &ndash; &agrave; tel point qu'on doit &ecirc;tre les seuls cr&eacute;tins &agrave; ne pas avoir fil&eacute; au cin&eacute;ma illico &ndash; bon sang, pile poil quand on s'est corrompu &agrave; dire le plus grand bien des &eacute;ditions Calmann-L&eacute;vy, la voil&agrave; la d&eacute;ception tant redout&eacute;e !</em>\" Ben pas du tout. <br /></div>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</div>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">Notre ego (d&eacute;mesur&eacute;, forc&eacute;ment) a appr&eacute;ci&eacute; la d&eacute;dicace personnalis&eacute;e de l'auteur, et en plus, on a fait un gros \"ouf\" &agrave; la lecture. Enfin quelqu'un qui dit tout haut ce que nous murmurions tout bas : est-ce vraiment un bien pour les ch'tis que ce film caricatural qui les pr&eacute;sente comme des imb&eacute;ciles parlant mal, alcooliques latents, vivant dans une terre d&eacute;sagr&eacute;able a priori o&ugrave; seules les qualit&eacute;s de c&oelig;ur des habitants compensent l'horreur ambiante. Tu parles d'une pub pour la r&eacute;gion !</div>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</div>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">D'autant qu'Elise Ovart-Baratte pointe du doigt une autre inconvenance du syst&egrave;me : la subvention de 600.000 euros accord&eacute;e par le Conseil R&eacute;gional pour subventionner le film, alors que finalement les vertus soulign&eacute;es par Dany Boon sont plus caricaturales que bienfaisantes pour l'image des ch'tis. Ouf, ouf, ouf ! Alleluia et tout le saint-frusquin. Elise Ovart-Baratte ne s'est pas faite avoir et le clame tout haut. A Critic@, on est ravis de constater que nous ne sommes pas les seuls &agrave; nous inqui&eacute;ter de la \"culture au rabais\" encens&eacute;e par les foules, et au revers sous-jacent des &eacute;tiquettes trop vite accol&eacute;es.</div>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><strong>La tartine&nbsp;de Maroilles dans le caf&eacute;, c'est que des conneries !</strong></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">En plus, faut pas croire : c'est pas une vulgaire petite jeunette aigrie, la Elise. Y en a l&agrave;-dedans comme dirait l'autre. En temps que charg&eacute; de cours &agrave; l'IEP de Lille et chercheur en histoire contemporaine, avec des travaux portant sur \"l'image de la r&eacute;gion Nord-Pas-de-Calais\", elle connait son sujet, tout de m&ecirc;me. Et elle est la premi&egrave;re &agrave; conc&eacute;der qu'elle a appr&eacute;ci&eacute; le film et s'est volontiers marr&eacute;e, comme toute la France. Donc, pas de propos rancuniers &agrave; esp&eacute;rer dans cet essai, ass&eacute;n&eacute;s par une anti-Dany Boon-primaire. Au contraire, un froid r&eacute;alisme et une analyse des plus s&eacute;rieuses, tout en demeurant facile &agrave; lire et accessible &agrave; tous. Pour une fois qu'on se r&eacute;gale &agrave; lire un essai, vous noterez notre enthousiasme.</p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">&nbsp;</p>\r\n<div class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\">En plus, b&ecirc;tement, &ccedil;a nous a fait r&eacute;fl&eacute;chir &agrave; l'identit&eacute; tronqu&eacute;e de toutes les r&eacute;gions de France. A l'heure de la mondialisation, de la globalisation, notre terroir ne s'est jamais autant inqui&eacute;t&eacute; de la pr&eacute;servation de son unit&eacute;. Imagine un Dany Boon corse ou basque qui assimilerait les Corses ou les Basques &agrave; des terroristes. Imagine un Dany Boon breton qui leur ferait tremper leurs cr&ecirc;pes au sarrasin dans le caf&eacute;. Tu crois que &ccedil;a v&eacute;hiculerait vraiment une bonne image des r&eacute;gions ? Pas s&ucirc;r. Voil&agrave; pourquoi on a parfaitement compris les inqui&eacute;tudes d'Elise Ovart-Baratte. Donc, quand tout le monde va lui sauter sur le poil parce qu'elle va &agrave; l'encontre de l'id&eacute;e g&eacute;n&eacute;rale, chez Critic@, on s'engage &agrave; la soutenir contre vents et mar&eacute;es. C'est pas une bonne ch'tite nouvelle, &ccedil;a ?</div>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:50:36", 
+            "position": null, 
+            "summary": "<p>Une jeunette de 28 ans cette Elise Ovart-Baratte qui ose s'insurger contre les id&eacute;es re&ccedil;ues v&eacute;hicul&eacute;es par le succ&egrave;s de \"Bienvenue chez les ch'tis\" et autres joyeuset&eacute;s du genre \"Au norddddd, c'&eacute;tait les corons\" de feu Bachelet. Onze ans qu'elle vit &agrave; Lille, et elle d&eacute;fend son Nord avec plus d'&acirc;pret&eacute;, d'opini&acirc;tret&eacute; qu'une native du ch'Nord. S&ucirc;r qu'elle ne s'est pas fait que des copains, surtout au PS local o&ugrave; elle est secr&eacute;taire de section, tant ses id&eacute;es vont &agrave; l'encontre de l'euphorie g&eacute;n&eacute;rale apr&egrave;s la sortie du film qui a d&eacute;tr&ocirc;n&eacute; en entr&eacute;es \"La grande vadrouille\".</p>", 
+            "issue": 1, 
+            "slug": "les-chtis-cetait-les-cliches-quest-ce-quelle-leur-met", 
+            "tags": "ch'tis, bouquins", 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "journal.article", 
+        "fields": {
+            "category": 13, 
+            "is_featured": 0, 
+            "citation": "", 
+            "is_reserved": 0, 
+            "modification_date": "2008-09-04 00:15:36", 
+            "author": 1, 
+            "type": 1, 
+            "title": "Pourquoi vit-on dans un pays compliqu\u00e9 ? ", 
+            "is_illustrated": 1, 
+            "illustration": null, 
+            "creation_date": "2008-09-03 23:53:07", 
+            "content": "<div class=\"TEXTE_ARTICLE\">Je fais partie de ces rares privil&eacute;gi&eacute;s qui ont une r&eacute;sidence secondaire au bout du monde. Un morceau de piste chaotique, des nids de poule &agrave; foison et des ralentisseurs non r&eacute;glementaires jalonnent le parcours, mais le r&ecirc;ve et le paradis ont un prix. Dans ce coin de bout du monde, tout est compliqu&eacute; : ravitaillement, eau potable, &eacute;lectricit&eacute;, nourriture. Il faut souvent se contenter de l'existant. Ca fait aussi partie du d&eacute;paysement. Mais, aussi incroyable que cela puisse para&icirc;tre, si vous demandez &agrave; un local comment obtenir le wi-fi, il vous r&eacute;pond : \"<em>pas de probl&egrave;me, le gars viendra demain</em>.\" Et de fait, le lendemain, un type basan&eacute; se pointe et en deux minutes, l'affaire est boucl&eacute;e. Idem pour le menuisier qui vous propose du sur-mesure &agrave; prix d&eacute;risoire et vous livrera, <em>Do&ntilde;a</em>, pas de probl&egrave;me. Le ma&ccedil;on ? Il est disponible imm&eacute;diatement et vous dessine un nouveau mur, digne des Le Corbusier pour moins de mille euros, main d'&oelig;uvre comprise. L'artiste peintre local ? Ca tombe bien, il n'avait pas de client, vous voulez une peinture murale ? Ce sera pr&ecirc;t dans trois semaines. Une &oelig;uvre originale qui aurait sa place sans rougir dans une galerie new-yorkaise, et personnalis&eacute;e siouplait. Vous allez pouvoir frimer dans les cocktails non mondains, en contemplant le coucher de soleil et avec la nonchalance &eacute;tudi&eacute;e du m&eacute;c&egrave;ne heureux de faire &eacute;clore un nouveau talent. Ouais, super les vacances !\r\n<p>De retour en France, vous &ecirc;tes encore r&ecirc;veur. Vous rejoignez la civilisation et pendant votre absence, les soucis se sont accumul&eacute;s. Plus de machine &agrave; laver, le robinet d'eau ne s'ouvre plus. Un plombier, apr&egrave;s ce que vous venez de vivre, &ccedil;a va &ecirc;tre du pipi de chat. Allo ? Pla&icirc;t-il ? Pas un plombier disponible avant juin 2009 ? Mais je fais comment pour laver mon linge ? Ah ma bonne dame, c'est la crise. Elle a bon dos, la crise !</p>\r\n<p>Quand vous appelez chez France T&eacute;l&eacute;com parce que votre Livebox est tomb&eacute;e en panne suite &agrave; un orage (non seulement, la France est un pays de fain&eacute;ants, mais en plus il n'y fait m&ecirc;me pas beau !), vous tombez sur un stagiaire &agrave; l'accent improbable nich&eacute; lui-aussi dans une de ces contr&eacute;es lointaines o&ugrave; l'on r&eacute;pare les Fran&ccedil;ais en mal de technique. Liste de questions inutiles, ton agac&eacute; et surtout, comment allez-vous faire pour lui expliquer que, sans racisme aucun, vous ne comprenez absolument rien &agrave; son accent exotique ? Parler dans ces conditions de routeur (wouteuhhh), connexion (wonnewhion), ou e-mail (imehou), vous garantit le bonheur d'une conversation de pr&egrave;s de deux heures, factur&eacute;e au prix fort. Youpi&hellip;</p>\r\n<p>Toujours suite aux orages, l'entr&eacute;e de votre maison est un vrai bourbier. Il faudrait faire b&eacute;tonner pour y rem&eacute;dier. Et l&agrave;, un architecte et ses nombreuses ann&eacute;es d'&eacute;tude vous r&eacute;pondent que vous vivez vraiment dans un endroit inaccessible et que jamais la b&eacute;tonni&egrave;re n'arrivera jusque-l&agrave;. Mais ? Je vis dans une grande ville, en France, pays surd&eacute;velopp&eacute;, de consommation, traumatis&eacute; par la globalisation, non ? Pourquoi ce qui &eacute;tait simple &agrave; l'autre bout du monde devient-il compliqu&eacute; ici ?</p>\r\n<p>J'en viens &agrave; me demander si on n'est pas cern&eacute;s de grosses feignasses incomp&eacute;tentes, mais je dois faire du mauvais esprit, pensez donc. Et puis l'id&eacute;e mesquine me taraude : est-ce que les gens ont vraiment envie de bosser dans notre pays ? Est-ce qu'ils ont suffisamment \"faim\" pour trouver les solutions &agrave; nos probl&egrave;mes quotidiens et se \"bouger le cul\" en cons&eacute;quence ? S&ucirc;rement. Mais le sentiment g&eacute;n&eacute;ral est &agrave; la \"ert&eacute;tisation\", rappelez lundi, aujourd'hui il est en RTT.</p>\r\n<p>Pourtant, j'&eacute;tais pour les 35 heures, je vous jure. Mais si, d&eacute;g&acirc;t collat&eacute;ral, elles ont transform&eacute; les vaillants en d&eacute;missionnaires professionnels, je ne suis pas s&ucirc;re de continuer &agrave; trouver du talent &agrave; la petite Martine Aubry. Dis, Titine, t'as aucun souci quotidien toi, depuis ta mesure &agrave; la noix ? Ah non, c'est vrai, le meilleur moyen de contourner une mauvaise loi, s'appelle justement le \"passe-droit\", et &agrave; gauche, les passe-droits, &ccedil;a vous conna&icirc;t. En attendant, je fais comment pour laver mon linge ? J'ai une id&eacute;e, et si j'allais m'exiler dans ma vill&eacute;giature du bout du monde ? Ca doit &ecirc;tre &ccedil;a qu'on appelle la \"fuite des cerveaux\", et puis dans cerveau, y a eau, c'est d&eacute;j&agrave; pas mal&hellip;</p>\r\n</div>", 
+            "related_articles": [], 
+            "publication_date": "2008-09-03 23:53:07", 
+            "position": null, 
+            "summary": "<p>J'en viens &agrave; me demander si on n'est pas cern&eacute;s de grosses feignasses incomp&eacute;tentes, mais je dois faire du mauvais esprit, pensez donc. Et puis l'id&eacute;e mesquine me taraude : est-ce que les gens ont vraiment envie de bosser dans notre pays ? Est-ce qu'ils ont suffisamment \"faim\" pour trouver les solutions &agrave; nos probl&egrave;mes quotidiens et se \"bouger le cul\" en cons&eacute;quence ? S&ucirc;rement. Mais le sentiment g&eacute;n&eacute;ral est &agrave; la \"ert&eacute;tisation\", rappelez lundi, aujourd'hui il est en RTT.</p>", 
+            "issue": 1, 
+            "slug": "pourquoi-vit-on-dans-un-pays-complique", 
+            "tags": "rtt, feignasses", 
+            "is_published": 1
+        }
+    }
+]

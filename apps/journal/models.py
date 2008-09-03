@@ -149,8 +149,8 @@ class Illustration(models.Model):
     image = models.ImageField(upload_to='upload/%Y/%m/%d', max_length=200, help_text=_('Please, select an image to upload'))
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
-    credits = models.CharField(_('credits'), max_length=100, help_text=_('100 characters max.'))
-    legend = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
+    credits = models.CharField(_('credits'), max_length=100, null=True, blank=True, help_text=_('100 characters max.'))
+    legend = models.CharField(_('legend'), max_length=100, null=True, blank=True, help_text=_('100 characters max.'))
     is_generic = models.BooleanField(_('generic'), default=False, db_index=True, help_text=_('Could image be generic?'))
 
     class Meta:
@@ -417,6 +417,9 @@ class Page(models.Model):
         modification_date
             The page modification date.
             
+        is_cover
+            Is issue cover?
+            
         is_complete
             Is page complete? Default to ``False``.
             
@@ -430,10 +433,11 @@ class Page(models.Model):
             
     """
     issue = models.ForeignKey(Issue, verbose_name=_('issue'), help_text=_('Please, select an issue.'))
-    category = models.ForeignKey(Category, verbose_name=_('category'), help_text=_('Please, select a category.'))
+    category = models.ForeignKey(Category, verbose_name=_('category'), null=True, blank=True, help_text=_('Please, select a category.'))
     articles = models.ManyToManyField(Article, verbose_name=_('articles'), help_text=_('Please, select articles to insert in this page.'))
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
+    is_cover = models.BooleanField(_('cover'), default=False, help_text=_('Is issue cover?'))
     is_complete = models.BooleanField(_('complete'), default=False, help_text=_('Is page complete?'))
 
     class Meta:
