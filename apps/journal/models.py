@@ -64,7 +64,7 @@ class Category(models.Model):
         Access this through the property ``complete_article_set``.
         
         """
-        return self.article_set.filter(is_published=True, is_illustrated=True)
+        return self.article_set.filter(is_published=True, is_illustrated=True, is_reserved=False)
     complete_article_set = property(_get_complete_articles)
     
     def save(self):
@@ -96,7 +96,7 @@ class Position(models.Model):
             All objects.
 
     """
-    position    = models.PositiveIntegerField(_('position'), unique=True, help_text=_('Hierarchical position in the page.'))
+    position = models.PositiveIntegerField(_('position'), unique=True, help_text=_('Hierarchical position in the page.'))
     description = models.CharField(_('description'), max_length=100, help_text=_('A short description of this position'))
     
     class Meta:
@@ -120,10 +120,6 @@ class Illustration(models.Model):
     
         image
             The image file path.
-            Required.
-        
-        submitter
-            User who uploaded the image.
             Required.
             
         creation_date
@@ -150,13 +146,12 @@ class Illustration(models.Model):
             All objects.
     
     """
-    image             = models.ImageField(upload_to='upload/%Y/%m/%d', max_length=200, help_text=_('Please, select an image to upload'))
-    submitter         = models.ForeignKey(User, verbose_name=_('submitter'))
-    creation_date     = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
+    image = models.ImageField(upload_to='upload/%Y/%m/%d', max_length=200, help_text=_('Please, select an image to upload'))
+    creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
-    credits           = models.CharField(_('credits'), max_length=100, help_text=_('100 characters max.'))
-    legend            = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
-    is_generic        = models.BooleanField(_('generic'), default=False, db_index=True, help_text=_('Could image be generic?'))
+    credits = models.CharField(_('credits'), max_length=100, help_text=_('100 characters max.'))
+    legend = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
+    is_generic = models.BooleanField(_('generic'), default=False, db_index=True, help_text=_('Could image be generic?'))
 
     class Meta:
         """ Model metadata. """
@@ -206,9 +201,9 @@ class Issue(models.Model):
             Returns complete article set.
     
     """
-    number           = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
+    number = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
     publication_date = models.DateTimeField(_('publication date'), null=True, blank=True, help_text=_("Don't forget to adjust the publication date"))
-    is_complete      = models.BooleanField(_('complete'), default=False, db_index=True, help_text=_('Is issue complete'))
+    is_complete = models.BooleanField(_('complete'), default=False, db_index=True, help_text=_('Is issue complete'))
 
     class Meta:
         """ Model metadata. """
@@ -233,7 +228,7 @@ class Issue(models.Model):
         Access this through the property ``complete_article_set``.
         
         """
-        return self.article_set.filter(is_published=True, is_illustrated=True)
+        return self.article_set.filter(is_published=True, is_illustrated=True, is_reserved=False)
     complete_article_set = property(_get_complete_articles)
     
     def save(self):
@@ -343,25 +338,26 @@ class Article(models.Model):
             Complete articles.
             
     """
-    type      = models.ForeignKey(Type, verbose_name=_('type'), help_text=_('Please, select the article type.'))
-    title     = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
-    slug      = models.SlugField(_('slug'), max_length=255, blank=True, null=True)
+    type = models.ForeignKey(Type, verbose_name=_('type'), help_text=_('Please, select the article type.'))
+    title = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
+    slug = models.SlugField(_('slug'), max_length=255, blank=True, null=True)
     
-    author   = models.ForeignKey(User, verbose_name=_('author'), db_index=True, help_text=_('Please, select an author for this article.'))
-    issue    = models.ForeignKey(Issue, verbose_name=_('issue'), db_index=True, help_text=_('Please, select an issue.'))
+    author = models.ForeignKey(User, verbose_name=_('author'), db_index=True, help_text=_('Please, select an author for this article.'))
+    issue = models.ForeignKey(Issue, verbose_name=_('issue'), db_index=True, help_text=_('Please, select an issue.'))
     category = models.ForeignKey(Category, verbose_name=_('category'), db_index=True, help_text=_('Please, select a category for this article.'))
-    tags     = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
+    tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     position = models.ForeignKey(Position, verbose_name=_('position'), null=True, blank=True, help_text=_('Please, select a position for this article.'))
     
-    creation_date     = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
+    creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
-    publication_date  = models.DateTimeField(_('publication date'), null=True, blank=True, help_text=_("Don't forget to adjust the publication date."))
+    publication_date = models.DateTimeField(_('publication date'), null=True, blank=True, help_text=_("Don't forget to adjust the publication date."))
     
-    citation     = models.TextField(_('citation'), null=True, blank=True, help_text=_('Enter a citation which will be attached to this article.'))
+    citation = models.TextField(_('citation'), null=True, blank=True, help_text=_('Enter a citation which will be attached to this article.'))
     illustration = models.ForeignKey(Illustration, verbose_name=_('illustration'), null=True, blank=True, help_text=_('Please, select an illustration which will be attached to this article.'))
     
-    is_featured    = models.BooleanField(_('featured'), default=False, help_text=_('Is article featured?'))
-    is_published   = models.BooleanField(_('published'), default=False, help_text=_('Is article published?'))
+    is_reserved = models.BooleanField(_('reserved'), default=False, help_text=_('Is article reserved?'))
+    is_featured = models.BooleanField(_('featured'), default=False, help_text=_('Is article featured?'))
+    is_published = models.BooleanField(_('published'), default=False, help_text=_('Is article published?'))
     is_illustrated = models.BooleanField(_('illustrated'), default=False, help_text=_('Is article illustrated?'))
     
     summary = models.TextField(_('summary'))
@@ -433,12 +429,12 @@ class Page(models.Model):
             Complete pages.
             
     """
-    issue             = models.ForeignKey(Issue, verbose_name=_('issue'), help_text=_('Please, select an issue.'))
-    category          = models.ForeignKey(Category, verbose_name=_('category'), help_text=_('Please, select a category.'))
-    articles          = models.ManyToManyField(Article, verbose_name=_('articles'), help_text=_('Please, select articles to insert in this page.'))
-    creation_date     = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
+    issue = models.ForeignKey(Issue, verbose_name=_('issue'), help_text=_('Please, select an issue.'))
+    category = models.ForeignKey(Category, verbose_name=_('category'), help_text=_('Please, select a category.'))
+    articles = models.ManyToManyField(Article, verbose_name=_('articles'), help_text=_('Please, select articles to insert in this page.'))
+    creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
-    is_complete       = models.BooleanField(_('complete'), default=False, help_text=_('Is page complete?'))
+    is_complete = models.BooleanField(_('complete'), default=False, help_text=_('Is page complete?'))
 
     class Meta:
         """ Model metadata. """

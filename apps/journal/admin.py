@@ -27,7 +27,7 @@ class PositionAdmin(admin.ModelAdmin):
 
 class IllustrationAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Illustration`` model. """
-    list_display = ('image', 'submitter', 'credits', 'legend', 'is_generic')
+    list_display = ('image', 'credits', 'legend', 'is_generic')
     list_filter = ('is_generic',)
     search_fields = ('image', 'credits', 'legend')
     ordering = ('legend',)
@@ -41,7 +41,7 @@ class TypeAdmin(admin.ModelAdmin):
 
 class ArticleAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Article`` model. """
-    list_display = ('issue', 'category', 'title', 'type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'author')
+    list_display = ('issue', 'category', 'title', 'type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'is_reserved', 'author')
     list_filter = ('author', 'type', 'is_featured', 'is_published', 'is_illustrated', 'category')
     search_fiels = ('title', 'summary', 'content', 'citation')
     ordering = ('-publication_date',)
@@ -65,6 +65,8 @@ class ArticleAdmin(admin.ModelAdmin):
             
         validation_fields = []
         
+        if request.user.has_perm('users.can_reserve_article'):
+            validation_fields.append('is_reserved')
         if request.user.has_perm('users.can_feature_article'):
             validation_fields.append('is_featured')
         if request.user.has_perm('users.can_illustrate_article'):
@@ -72,9 +74,12 @@ class ArticleAdmin(admin.ModelAdmin):
         if request.user.has_perm('users.can_publish_article'):
             validation_fields.append('is_published')
             
-        if request.user.has_perm('users.can_feature_article') or request.user.has_perm('users.can_illustrate_article') or request.user.has_perm('users.can_publish_article'):
+        if request.user.has_perm('users.can_reserve_article') \
+            or request.user.has_perm('users.can_feature_article') \
+            or request.user.has_perm('users.can_illustrate_article') \
+            or request.user.has_perm('users.can_publish_article'):
             fieldsets += [(_('Validation'), {'fields': validation_fields})]
-           
+            
         return fieldsets
 
 

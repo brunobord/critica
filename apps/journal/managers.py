@@ -53,7 +53,7 @@ class ArticleManager(models.Manager):
     
     def get_query_set(self):
         """ Retrieves complete articles. """
-        return super(ArticleManager, self).get_query_set().filter(is_published=True, is_illustrated=True)
+        return super(ArticleManager, self).get_query_set().filter(is_published=True, is_illustrated=True, is_reserved=False)
 
 
 

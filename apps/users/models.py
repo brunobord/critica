@@ -14,6 +14,7 @@ class UserProfile(models.Model):
     
     class Meta:
         permissions = (
+            ('can_reserve_article', 'Can reserve an article'),
             ('can_feature_article', 'Can feature an article'),
             ('can_illustrate_article', 'Can illustrate an article'),
             ('can_publish_article', 'Can publish an article'),

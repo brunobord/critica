@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-31 10:21+0200\n"
+"POT-Creation-Date: 2008-09-03 14:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,265 +16,347 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: apps/journal/admin.py:51 apps/journal/models.py:322
+#: apps/journal/admin.py:59
 msgid "Article"
 msgstr "Article"
 
-#: apps/journal/admin.py:54
-msgid "Related information"
-msgstr "Informations relatives"
+#: apps/journal/admin.py:60
+#, fuzzy
+msgid "Citation"
+msgstr "citation"
 
-#: apps/journal/admin.py:58
-msgid "Add inside"
-msgstr "Insérer"
+#: apps/journal/admin.py:64
+#, fuzzy
+msgid "Illustration"
+msgstr "illustration"
 
-#: apps/journal/admin.py:62
-msgid "Date and time"
-msgstr "Date et heure"
+#: apps/journal/admin.py:81 apps/pages/admin.py:32
+#, fuzzy
+msgid "Validation"
+msgstr "citation"
 
-#: apps/journal/admin.py:65
-msgid "Flags"
-msgstr "Flags"
-
-#: apps/journal/models.py:45
+#: apps/journal/models.py:42 apps/journal/models.py:260
 msgid "name"
 msgstr "nom"
 
-#: apps/journal/models.py:45
+#: apps/journal/models.py:42
 msgid "As short as possible. 20 characters max."
 msgstr "Aussi court que possible. 20 caractères max."
 
-#: apps/journal/models.py:46 apps/journal/models.py:328
-#: apps/pages/models.py:53
+#: apps/journal/models.py:43 apps/journal/models.py:348
+#: apps/pages/models.py:54
 msgid "slug"
 msgstr "URL"
 
-#: apps/journal/models.py:50 apps/journal/models.py:332
+#: apps/journal/models.py:47 apps/journal/models.py:352
+#: apps/journal/models.py:438 apps/newsletter/models.py:94
 msgid "category"
 msgstr "catégorie"
 
-#: apps/journal/models.py:51
+#: apps/journal/models.py:48
 msgid "categories"
 msgstr "catégories"
 
-#: apps/journal/models.py:98 apps/journal/models.py:103
-#: apps/journal/models.py:335
+#: apps/journal/models.py:99 apps/journal/models.py:104
+#: apps/journal/models.py:354
 msgid "position"
 msgstr "position"
 
-#: apps/journal/models.py:98
+#: apps/journal/models.py:99
 msgid "Hierarchical position in the page."
 msgstr "Position hiérarchique dans la page."
 
-#: apps/journal/models.py:99
+#: apps/journal/models.py:100
 msgid "description"
 msgstr "description"
 
-#: apps/journal/models.py:99
+#: apps/journal/models.py:100
 msgid "A short description of this position"
 msgstr "Une courte description de cette position"
 
-#: apps/journal/models.py:104
+#: apps/journal/models.py:105
 msgid "positions"
 msgstr "positions"
 
-#: apps/journal/models.py:146
+#: apps/journal/models.py:153
 msgid "Please, select an image to upload"
 msgstr "Sélectionnez une image à télécharger"
 
-#: apps/journal/models.py:147
-msgid "upload date"
-msgstr "date de téléchargement"
-
-#: apps/journal/models.py:148
-msgid "credits"
-msgstr "crédits"
-
-#: apps/journal/models.py:148 apps/journal/models.py:149
-#: apps/journal/models.py:326 apps/journal/models.py:327
-msgid "100 characters max."
-msgstr "100 caractères max."
-
-#: apps/journal/models.py:149
-msgid "legend"
-msgstr "légende"
-
-#: apps/journal/models.py:150
-msgid "generic"
-msgstr "générique"
-
-#: apps/journal/models.py:150
-msgid "Could image be generic?"
-msgstr "L'image peut-elle être générique ?"
-
-#: apps/journal/models.py:154 apps/journal/models.py:342
-msgid "illustration"
-msgstr "illustration"
-
-#: apps/journal/models.py:155
-msgid "illustrations"
-msgstr "illustrations"
-
-#: apps/journal/models.py:198
-msgid "number"
-msgstr "numéro"
-
-#: apps/journal/models.py:198
-msgid "Please, enter the issue's number."
-msgstr "Entrez le numéro de l'édition."
-
-#: apps/journal/models.py:199 apps/journal/models.py:339
-msgid "publication date"
-msgstr "date de publication"
-
-#: apps/journal/models.py:199
-msgid "Don't forget to adjust the publication date"
-msgstr "N'oubliez pas d'ajuster la date de publication"
-
-#: apps/journal/models.py:200 apps/journal/models.py:417
-msgid "complete"
-msgstr "complet"
-
-#: apps/journal/models.py:200
-msgid "Is issue complete"
-msgstr "L'édition est-elle complète ?"
-
-#: apps/journal/models.py:204 apps/journal/models.py:331
-#: apps/journal/models.py:413
-msgid "issue"
-msgstr "édition"
-
-#: apps/journal/models.py:205
-#, fuzzy
-msgid "issues"
-msgstr "editions"
-
-#: apps/journal/models.py:323
-msgid "News"
-msgstr "Actualités"
-
-#: apps/journal/models.py:326
-msgid "top title"
-msgstr "surtitre"
-
-#: apps/journal/models.py:327 apps/pages/models.py:52
-msgid "title"
-msgstr "titre"
-
-#: apps/journal/models.py:330 apps/pages/models.py:54
-msgid "author"
-msgstr "auteur"
-
-#: apps/journal/models.py:330
-msgid "Please, select an author for this article."
-msgstr "Sélectionnez un auteur pour cette article."
-
-#: apps/journal/models.py:331
-msgid "Please, select an issue."
-msgstr "Sélectionnez une édition."
-
-#: apps/journal/models.py:332
-msgid "Please, select a category for this article."
-msgstr "Sélectionnez une catégorie pour cette article."
-
-#: apps/journal/models.py:333
-msgid "Please, enter tags separated by commas or spaces."
-msgstr "Entrez des tags séparés par des virgules ou des espaces."
-
-#: apps/journal/models.py:334
-msgid "type"
-msgstr "type"
-
-#: apps/journal/models.py:334
-msgid "Please, select the article type."
-msgstr "Sélectionnez le type de l'article."
-
-#: apps/journal/models.py:335
-msgid "Please, select a position for this article."
-msgstr "Sélectionnez une position pour cette article."
-
-#: apps/journal/models.py:337 apps/journal/models.py:415
-#: apps/pages/models.py:55
+#: apps/journal/models.py:155 apps/journal/models.py:356
+#: apps/journal/models.py:440 apps/pages/models.py:56
 msgid "creation date"
 msgstr "date de création"
 
-#: apps/journal/models.py:338 apps/journal/models.py:416
-#: apps/pages/models.py:56
+#: apps/journal/models.py:156 apps/journal/models.py:357
+#: apps/journal/models.py:441 apps/pages/models.py:57
 msgid "modification date"
 msgstr "date de modification"
 
-#: apps/journal/models.py:339
+#: apps/journal/models.py:157
+msgid "credits"
+msgstr "crédits"
+
+#: apps/journal/models.py:157 apps/journal/models.py:158
+msgid "100 characters max."
+msgstr "100 caractères max."
+
+#: apps/journal/models.py:158
+msgid "legend"
+msgstr "légende"
+
+#: apps/journal/models.py:159
+msgid "generic"
+msgstr "générique"
+
+#: apps/journal/models.py:159
+msgid "Could image be generic?"
+msgstr "L'image peut-elle être générique ?"
+
+#: apps/journal/models.py:163 apps/journal/models.py:361
+msgid "illustration"
+msgstr "illustration"
+
+#: apps/journal/models.py:164
+msgid "illustrations"
+msgstr "illustrations"
+
+#: apps/journal/models.py:209
+msgid "number"
+msgstr "numéro"
+
+#: apps/journal/models.py:209
+msgid "Please, enter the issue's number."
+msgstr "Entrez le numéro de l'édition."
+
+#: apps/journal/models.py:210 apps/journal/models.py:358
+msgid "publication date"
+msgstr "date de publication"
+
+#: apps/journal/models.py:210
+msgid "Don't forget to adjust the publication date"
+msgstr "N'oubliez pas d'ajuster la date de publication"
+
+#: apps/journal/models.py:211 apps/journal/models.py:442
+msgid "complete"
+msgstr "complet"
+
+#: apps/journal/models.py:211
+msgid "Is issue complete"
+msgstr "L'édition est-elle complète ?"
+
+#: apps/journal/models.py:215 apps/journal/models.py:351
+#: apps/journal/models.py:437
+msgid "issue"
+msgstr "édition"
+
+#: apps/journal/models.py:216
+msgid "issues"
+msgstr "editions"
+
+#: apps/journal/models.py:263 apps/journal/models.py:346
+msgid "type"
+msgstr "type"
+
+#: apps/journal/models.py:264
+#, fuzzy
+msgid "types"
+msgstr "type"
+
+#: apps/journal/models.py:346
+msgid "Please, select the article type."
+msgstr "Sélectionnez le type de l'article."
+
+#: apps/journal/models.py:347 apps/pages/models.py:53
+msgid "title"
+msgstr "titre"
+
+#: apps/journal/models.py:347
+#, fuzzy
+msgid "255 characters max."
+msgstr "100 caractères max."
+
+#: apps/journal/models.py:350 apps/pages/models.py:55
+msgid "author"
+msgstr "auteur"
+
+#: apps/journal/models.py:350
+msgid "Please, select an author for this article."
+msgstr "Sélectionnez un auteur pour cette article."
+
+#: apps/journal/models.py:351 apps/journal/models.py:437
+msgid "Please, select an issue."
+msgstr "Sélectionnez une édition."
+
+#: apps/journal/models.py:352
+msgid "Please, select a category for this article."
+msgstr "Sélectionnez une catégorie pour cette article."
+
+#: apps/journal/models.py:353
+msgid "Please, enter tags separated by commas or spaces."
+msgstr "Entrez des tags séparés par des virgules ou des espaces."
+
+#: apps/journal/models.py:354
+msgid "Please, select a position for this article."
+msgstr "Sélectionnez une position pour cette article."
+
+#: apps/journal/models.py:358
 msgid "Don't forget to adjust the publication date."
 msgstr "N'oubliez pas d'ajuster la date de publication."
 
-#: apps/journal/models.py:341
+#: apps/journal/models.py:360
 msgid "citation"
 msgstr "citation"
 
-#: apps/journal/models.py:341
+#: apps/journal/models.py:360
 msgid "Enter a citation which will be attached to this article."
 msgstr "Entrez une citation à insérer dans l'article."
 
-#: apps/journal/models.py:342
+#: apps/journal/models.py:361
 msgid "Please, select an illustration which will be attached to this article."
 msgstr "Sélectionnez une illustration à insérer dans l'article."
 
-#: apps/journal/models.py:344
+#: apps/journal/models.py:363
+msgid "reserved"
+msgstr "ajouté au marbre"
+
+msgid "Is article reserved?"
+msgstr "L'article doit-il être ajouté au marbre?"
+
+#: apps/journal/models.py:364
 msgid "featured"
 msgstr "exclusif"
 
-#: apps/journal/models.py:344
+#: apps/journal/models.py:364
 msgid "Is article featured?"
 msgstr "L'article est-il exclusif ?"
 
-#: apps/journal/models.py:345 apps/pages/models.py:57
+#: apps/journal/models.py:365 apps/newsletter/models.py:44
+#: apps/pages/models.py:58
 msgid "published"
 msgstr "publié"
 
-#: apps/journal/models.py:345
+#: apps/journal/models.py:365
 msgid "Is article published?"
 msgstr "L'article doit-il être publié ?"
 
-#: apps/journal/models.py:346
+#: apps/journal/models.py:366
 msgid "illustrated"
 msgstr "illustré"
 
-#: apps/journal/models.py:346
+#: apps/journal/models.py:366
 msgid "Is article illustrated?"
 msgstr "L'article est-il illustré ?"
 
-#: apps/journal/models.py:348
+#: apps/journal/models.py:368
 msgid "summary"
 msgstr "accroche"
 
-#: apps/journal/models.py:348 apps/journal/models.py:349
-msgid "Please, respect the markup syntax."
-msgstr "Merci de respecter la syntaxe wiki."
-
-#: apps/journal/models.py:349 apps/pages/models.py:58
+#: apps/journal/models.py:369 apps/pages/models.py:59
 msgid "content"
 msgstr "contenu"
 
-#: apps/journal/models.py:351
+#: apps/journal/models.py:371
 msgid "You can select some related articles to attach to this one."
 msgstr ""
 "Vous pouvez sélectionner d'autres articles en rapport avec cet article."
 
-#: apps/journal/models.py:355
+#: apps/journal/models.py:375 apps/newsletter/models.py:84
 msgid "article"
 msgstr "article"
 
-#: apps/journal/models.py:356 apps/journal/models.py:414
+#: apps/journal/models.py:376 apps/journal/models.py:439
 msgid "articles"
 msgstr "articles"
 
-#: apps/journal/models.py:421 apps/pages/models.py:62
+#: apps/journal/models.py:438
+#, fuzzy
+msgid "Please, select a category."
+msgstr "Sélectionnez une édition."
+
+#: apps/journal/models.py:439
+#, fuzzy
+msgid "Please, select articles to insert in this page."
+msgstr "Sélectionnez une position pour cette article."
+
+#: apps/journal/models.py:442
+#, fuzzy
+msgid "Is page complete?"
+msgstr "L'édition est-elle complète ?"
+
+#: apps/journal/models.py:446 apps/pages/models.py:63
 msgid "page"
 msgstr "page"
 
-#: apps/journal/models.py:422 apps/pages/models.py:63
+#: apps/journal/models.py:447 apps/pages/models.py:64
 msgid "pages"
 msgstr "pages"
+
+#: apps/newsletter/models.py:40
+#, fuzzy
+msgid "sending date"
+msgstr "date de création"
+
+#: apps/newsletter/models.py:40
+msgid "The newsletter is sent at this date."
+msgstr ""
+
+#: apps/newsletter/models.py:41
+msgid "recipient count"
+msgstr ""
+
+#: apps/newsletter/models.py:42
+msgid "viewed count"
+msgstr ""
+
+#: apps/newsletter/models.py:43 apps/newsletter/models.py:103
+msgid "hash code"
+msgstr ""
+
+#: apps/newsletter/models.py:45
+msgid "sending start at"
+msgstr ""
+
+#: apps/newsletter/models.py:46
+msgid "sending end at"
+msgstr ""
+
+#: apps/newsletter/models.py:50 apps/newsletter/models.py:82
+msgid "newsletter"
+msgstr ""
+
+#: apps/newsletter/models.py:51
+msgid "newsletters"
+msgstr ""
+
+#: apps/newsletter/models.py:83 apps/newsletter/models.py:93
+msgid "order"
+msgstr ""
+
+#: apps/newsletter/models.py:85
+msgid "clicked count"
+msgstr ""
+
+#: apps/newsletter/models.py:102
+msgid "email"
+msgstr ""
+
+#: apps/newsletter/models.py:104
+#, fuzzy
+msgid "subscribing date"
+msgstr "date de publication"
+
+#: apps/newsletter/models.py:105
+msgid "unsubscribing date"
+msgstr ""
+
+#: apps/newsletter/models.py:106
+#, fuzzy
+msgid "active"
+msgstr "article"
+
+#: apps/newsletter/models.py:107
+msgid "last newsletter"
+msgstr ""
 
 #: apps/syndication/feeds.py:21
 #, python-format
@@ -298,3 +380,9 @@ msgid ""
 msgstr ""
 "Derniers articles publiés dans la rubrique \"%(category)s\" sur %(site_name)"
 "s."
+
+#: apps/users/models.py:13
+#, fuzzy
+msgid "user"
+msgstr "numéro"
+
