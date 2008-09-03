@@ -2,6 +2,7 @@ tinyMCE.init({
     width: "800",
     height: "500",
 	mode : "textareas",
+	language: "fr",
 	theme : "advanced",
 	theme_advanced_toolbar_location : "top",
 	theme_advanced_toolbar_align : "left",
