@@ -1,0 +1,121 @@
+How to install Critic@-engine
+=============================
+
+This is a quickstart guide to help you installing Critic@-engine on your system.
+
+Requirements
+------------
+
+First of all, this project requires Python 2.5 (or later) and a recent Subversion
+checkout of Django. You can obtain Python from http://www.python.org/ and
+Django from http://www.djangoproject.com/.
+
+Critic@-engine is database-driven. So you need to install a Django-supported 
+database server on your system. For now, it has been only tested with MySQL but
+there's no reason to not work with other Django-supported database servers.
+
+Critic@-engine is hosted on Launchpad (http://launchpad.net/critica-engine). 
+As Launchpad is based on Bazaar (http://bazaar-vcs.org/), a distributed version 
+control system, you must install it on your system to grab its source. But you
+probably already know it.
+
+Critic@-engine uses the latest development version of django-tagging 
+(http://code.google.com/p/django-tagging/) as tagging system. So you need to 
+download and install this Django application.
+
+Installation
+------------
+
+Python 2.5 ready? Django ready? A Django-supported database server ready? 
+Bazaar ready? Django-tagging ready? Great! Now, grab the latest version of 
+Critic@-engine::
+
+    $ bzr branch lp:critica-engine critica
+    
+This command creates a ``critica`` directory. It is a Django project without two 
+files: ``manage.py`` and ``settings.py``. So you need to add yours if you want to 
+run it. How to do? Easy as a pie! Create an empty Django project and move the 
+files into the ``critica`` directory::
+
+    $ django-admin.py startproject sample
+    $ mv sample/settings.py sample/manage.py critica/
+    $ rm -rf sample
+    
+That's all! Critic@-engine is installed.
+
+Configuration
+-------------
+
+Well, at this step, if you run the project, Critic@-engine should not work 
+properly. You need to create a database and add / adjust some settings into 
+``settings.py``.
+
+For example, to create a MySQL database::
+
+    $ mysql -u root -p
+    mysql> CREATE DATABASE critica DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+    mysql> exit
+
+Then, change these settings to match your database's connection parameters::
+
+    DATABASE_ENGINE = 'mysql'
+    DATABASE_NAME = 'critica'
+    DATABASE_USER = 'youruser'
+    DATABASE_PASSWORD = 'yourpassword'
+
+Into ``settings.py``, because DRY is cool, you may add a ``PROJECT_PATH`` 
+constant which points to the project root directory::
+
+    import os.path
+    PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+
+Then, add project templates directory::
+
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_PATH, 'templates'),
+)
+
+Because Critic@-engine uses a auth profile module, you need to indicate it by 
+adding the setting ``AUTH_PROFILE_MODULE``::
+
+    AUTH_PROFILE_MODULE = 'apps.users.UserProfile'
+
+Replace the value of ``ROOT_URLCONF`` with the appropriate one::
+
+    ROOT_URLCONF = 'critica.urls'
+
+And add these applications to your ``INSTALLED_APPS``::
+
+    INSTALLED_APPS = (
+        'django.contrib.admin',
+        'tagging',
+        'critica.apps.pages',
+        'critica.apps.users',
+        'critica.apps.weather',
+        'critica.apps.polls',
+        'critica.apps.journal',
+        'critica.apps.newsletter',
+        'critica.apps.utils',
+    )
+
+Voilà! Critic@-engine is ready.
+
+Database synchronization and sample data
+----------------------------------------
+
+We need to create the tables in the database. To do that, run the following command
+into your project root directory::
+
+    $ python manage.py syncdb
+    
+At this step, you can run the server but the website will be empty. That's not 
+sexy to play with it and test features. It is recommended to load sample data::
+
+    $ python manage.py loaddata sample_data
+    
+Then, have fun::
+
+    $ python manage.py runserver
+    
+You should see the website running at this URL: ``http://127.0.0.1:8000``.
+
