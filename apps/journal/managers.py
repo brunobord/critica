@@ -30,7 +30,6 @@ class PositionManager(models.Manager):
         return super(PositionManager, self).get_query_set()
 
 
-
 class IllustrationManager(models.Manager):
     """
     ``Illustration`` model manager.
@@ -42,6 +41,17 @@ class IllustrationManager(models.Manager):
         """ Retrieves all illustrations. """
         return super(IllustrationManager, self).get_query_set()
 
+
+class ReportageManager(models.Manager):
+    """
+    ``Reportage`` model manager.
+    By default, retrieves published reportages.
+    
+    """
+    
+    def get_query_set(self):
+        """ Retrieves published reportages. """
+        return super(ReportageManager, self).get_query_set()
 
 
 class ArticleManager(models.Manager):

@@ -11,8 +11,13 @@ from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from tagging.models import Tag
 from tagging.fields import TagField
-from critica.apps.journal.managers import CategoryManager, PositionManager, IllustrationManager
-from critica.apps.journal.managers import ArticleManager, IssueManager, PageManager
+from critica.apps.journal.managers import CategoryManager
+from critica.apps.journal.managers import PositionManager
+from critica.apps.journal.managers import IllustrationManager
+from critica.apps.journal.managers import ReportageManager
+from critica.apps.journal.managers import ArticleManager
+from critica.apps.journal.managers import IssueManager
+from critica.apps.journal.managers import PageManager
 
 
 class Category(models.Model):
@@ -173,6 +178,40 @@ class Illustration(models.Model):
         
     # Managers
     objects = IllustrationManager()
+
+
+class Reportage(models.Model):
+    """
+    A video reportage.
+    
+    """
+    video_name = models.CharField(_('video name'), max_length=255, help_text=_('Please, enter a name for this video.'))
+    video_link = models.CharField(_('video link'), max_length=255, help_text=_('Please, enter the video URL.'))
+    creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
+    modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
+    is_published = models.BooleanField(_('published'), default=False, help_text=_('Is video ready to be published?'))
+    
+    class Meta:
+        """ Model metadata. """
+        verbose_name = _('reportage')
+        verbose_name_plural = _('reportages')
+        
+    def __unicode__(self):
+        """ Object human-readable string representation. """
+        return u'%s' % self.video_name
+
+    def save(self):
+        """ Object pre-saving operations. """
+        if not self.id:
+            self.creation_date = datetime.now()
+            self.modification_date = self.creation_date
+        else:
+            self.modification_date = datetime.now()
+        super(Reportage, self).save() 
+
+    # Managers
+    objects = models.Manager()
+    published = ReportageManager()
 
 
 class Issue(models.Model):
@@ -405,8 +444,8 @@ class Page(models.Model):
     
     A journal page is composed of::
     
-        issue
-            The page issue.
+        category
+            The page category.
             
         articles
             The page articles.
@@ -416,9 +455,6 @@ class Page(models.Model):
             
         modification_date
             The page modification date.
-            
-        is_cover
-            Is issue cover?
             
         is_complete
             Is page complete? Default to ``False``.
@@ -432,12 +468,12 @@ class Page(models.Model):
             Complete pages.
             
     """
-    issue = models.ForeignKey(Issue, verbose_name=_('issue'), help_text=_('Please, select an issue.'))
     category = models.ForeignKey(Category, verbose_name=_('category'), null=True, blank=True, help_text=_('Please, select a category.'))
     articles = models.ManyToManyField(Article, verbose_name=_('articles'), help_text=_('Please, select articles to insert in this page.'))
+    illustration_of_the_day = models.ForeignKey(Illustration, verbose_name=_('illustration of the day'), help_text=_('If this page is the cover, you can add the illustration of the day'))
+    reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), help_text=_('If this page is the cover, you can add a reportage'))
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
-    is_cover = models.BooleanField(_('cover'), default=False, help_text=_('Is issue cover?'))
     is_complete = models.BooleanField(_('complete'), default=False, help_text=_('Is page complete?'))
 
     class Meta:
@@ -447,7 +483,7 @@ class Page(models.Model):
         
     def __unicode__(self):
         """ Object human-readable string representation. """
-        return u'%s' % self.issue 
+        return u'%s' % self.category
 
     def save(self):
         """ Object pre-saving operations. """

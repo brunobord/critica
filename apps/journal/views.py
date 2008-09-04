@@ -7,12 +7,10 @@ from critica.apps.journal.models import Page
 
 
 def home(request):
-    page = Page.complete.filter(is_cover=True)[0]
-    return render_to_response('journal/home.html', {'page': page})
+    return render_to_response('journal/home.html', {})
     
 def category(request, category):
-    page = Page.complete.filter(category__slug=category)[0]
-    return render_to_response('journal/category.html', {'page': page})
+    return render_to_response('journal/category.html', {})
     
 def archives(request):
     return render_to_response('journal/archives.html', {})

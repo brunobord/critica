@@ -7,8 +7,14 @@ from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from tagging.models import Tag, TaggedItem
-from critica.apps.journal.models import Category, Position, Illustration, Type
-from critica.apps.journal.models import Article, Issue, Page
+from critica.apps.journal.models import Category
+from critica.apps.journal.models import Position
+from critica.apps.journal.models import Reportage
+from critica.apps.journal.models import Illustration
+from critica.apps.journal.models import Type
+from critica.apps.journal.models import Article
+from critica.apps.journal.models import Issue
+from critica.apps.journal.models import Page
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -23,6 +29,14 @@ class PositionAdmin(admin.ModelAdmin):
     list_display = ('position', 'description')
     search_fields = ('description',)
     ordering = ('position',)
+    
+
+class ReportageAdmin(admin.ModelAdmin):
+    """ Administration interface options for ``Reportage`` model. """
+    list_display = ('video_name', 'video_link', 'creation_date', 'modification_date', 'is_published')
+    search_fields = ('video_name',)
+    ordering = ('-creation_date',)
+    date_hierarchy = 'creation_date'
     
 
 class IllustrationAdmin(admin.ModelAdmin):
@@ -101,6 +115,7 @@ admin.site.unregister(Tag)
 admin.site.unregister(TaggedItem)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Position, PositionAdmin)
+admin.site.register(Reportage, ReportageAdmin)
 admin.site.register(Illustration, IllustrationAdmin)
 admin.site.register(Type, TypeAdmin)
 admin.site.register(Article, ArticleAdmin)
