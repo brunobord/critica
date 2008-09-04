@@ -33,6 +33,15 @@ class PositionAdmin(admin.ModelAdmin):
 
 class ReportageAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Reportage`` model. """
+    fieldsets = (
+        (_('Video'), {
+            'fields': ('video_name', 'video_link')
+        }),
+        (_('Validation'), {
+            'fields': ('is_published',)
+        }),
+    )
+    
     list_display = ('video_name', 'video_link', 'creation_date', 'modification_date', 'is_published')
     search_fields = ('video_name',)
     ordering = ('-creation_date',)
@@ -99,6 +108,15 @@ class ArticleAdmin(admin.ModelAdmin):
 
 class IssueAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Issue`` model. """
+    fieldsets = (
+        (_('Issue'), {
+            'fields': ('number', 'publication_date')
+        }),
+        (_('Validation'), {
+            'fields': ('is_complete',)
+        }),
+    )
+    
     list_display = ('number', 'publication_date', 'is_complete')
     list_filter = ('is_complete',)
     search_fields = ('number',)
@@ -109,7 +127,7 @@ class IssueAdmin(admin.ModelAdmin):
 class PageAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Page`` model. """
     fieldsets = (
-        (_('Page content'), {
+        (_('Page'), {
             'fields': ('category', 'articles')
         }),
         (_('Attach to this page'), {

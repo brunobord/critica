@@ -162,12 +162,12 @@
         }
     }, 
     {
-        "pk": 57, 
+        "pk": 60, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_article", 
             "name": "Can add article", 
-            "content_type": 18
+            "content_type": 19
         }
     }, 
     {
@@ -189,21 +189,21 @@
         }
     }, 
     {
-        "pk": 51, 
+        "pk": 54, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_issue", 
             "name": "Can add issue", 
-            "content_type": 16
+            "content_type": 17
         }
     }, 
     {
-        "pk": 60, 
+        "pk": 63, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_page", 
             "name": "Can add page", 
-            "content_type": 19
+            "content_type": 20
         }
     }, 
     {
@@ -216,21 +216,30 @@
         }
     }, 
     {
-        "pk": 54, 
+        "pk": 51, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_reportage", 
+            "name": "Can add reportage", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 57, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_type", 
             "name": "Can add type", 
-            "content_type": 17
+            "content_type": 18
         }
     }, 
     {
-        "pk": 58, 
+        "pk": 61, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_article", 
             "name": "Can change article", 
-            "content_type": 18
+            "content_type": 19
         }
     }, 
     {
@@ -252,21 +261,21 @@
         }
     }, 
     {
-        "pk": 52, 
+        "pk": 55, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_issue", 
             "name": "Can change issue", 
-            "content_type": 16
+            "content_type": 17
         }
     }, 
     {
-        "pk": 61, 
+        "pk": 64, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_page", 
             "name": "Can change page", 
-            "content_type": 19
+            "content_type": 20
         }
     }, 
     {
@@ -279,21 +288,30 @@
         }
     }, 
     {
-        "pk": 55, 
+        "pk": 52, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_reportage", 
+            "name": "Can change reportage", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 58, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_type", 
             "name": "Can change type", 
-            "content_type": 17
+            "content_type": 18
         }
     }, 
     {
-        "pk": 59, 
+        "pk": 62, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_article", 
             "name": "Can delete article", 
-            "content_type": 18
+            "content_type": 19
         }
     }, 
     {
@@ -315,21 +333,21 @@
         }
     }, 
     {
-        "pk": 53, 
+        "pk": 56, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_issue", 
             "name": "Can delete issue", 
-            "content_type": 16
+            "content_type": 17
         }
     }, 
     {
-        "pk": 62, 
+        "pk": 65, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_page", 
             "name": "Can delete page", 
-            "content_type": 19
+            "content_type": 20
         }
     }, 
     {
@@ -342,120 +360,129 @@
         }
     }, 
     {
-        "pk": 56, 
+        "pk": 53, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_reportage", 
+            "name": "Can delete reportage", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 59, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_type", 
             "name": "Can delete type", 
-            "content_type": 17
-        }
-    }, 
-    {
-        "pk": 69, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "add_defaultnewslettercontent", 
-            "name": "Can add default newsletter content", 
-            "content_type": 22
-        }
-    }, 
-    {
-        "pk": 63, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "add_newsletter", 
-            "name": "Can add newsletter", 
-            "content_type": 20
-        }
-    }, 
-    {
-        "pk": 66, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "add_newslettercontent", 
-            "name": "Can add newsletter content", 
-            "content_type": 21
+            "content_type": 18
         }
     }, 
     {
         "pk": 72, 
         "model": "auth.permission", 
         "fields": {
-            "codename": "add_subscriber", 
-            "name": "Can add subscriber", 
+            "codename": "add_defaultnewslettercontent", 
+            "name": "Can add default newsletter content", 
             "content_type": 23
         }
     }, 
     {
-        "pk": 70, 
+        "pk": 66, 
         "model": "auth.permission", 
         "fields": {
-            "codename": "change_defaultnewslettercontent", 
-            "name": "Can change default newsletter content", 
+            "codename": "add_newsletter", 
+            "name": "Can add newsletter", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_newslettercontent", 
+            "name": "Can add newsletter content", 
             "content_type": 22
         }
     }, 
     {
-        "pk": 64, 
+        "pk": 75, 
         "model": "auth.permission", 
         "fields": {
-            "codename": "change_newsletter", 
-            "name": "Can change newsletter", 
-            "content_type": 20
-        }
-    }, 
-    {
-        "pk": 67, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "change_newslettercontent", 
-            "name": "Can change newsletter content", 
-            "content_type": 21
+            "codename": "add_subscriber", 
+            "name": "Can add subscriber", 
+            "content_type": 24
         }
     }, 
     {
         "pk": 73, 
         "model": "auth.permission", 
         "fields": {
-            "codename": "change_subscriber", 
-            "name": "Can change subscriber", 
+            "codename": "change_defaultnewslettercontent", 
+            "name": "Can change default newsletter content", 
             "content_type": 23
         }
     }, 
     {
-        "pk": 71, 
+        "pk": 67, 
         "model": "auth.permission", 
         "fields": {
-            "codename": "delete_defaultnewslettercontent", 
-            "name": "Can delete default newsletter content", 
+            "codename": "change_newsletter", 
+            "name": "Can change newsletter", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_newslettercontent", 
+            "name": "Can change newsletter content", 
             "content_type": 22
         }
     }, 
     {
-        "pk": 65, 
+        "pk": 76, 
         "model": "auth.permission", 
         "fields": {
-            "codename": "delete_newsletter", 
-            "name": "Can delete newsletter", 
-            "content_type": 20
-        }
-    }, 
-    {
-        "pk": 68, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "delete_newslettercontent", 
-            "name": "Can delete newsletter content", 
-            "content_type": 21
+            "codename": "change_subscriber", 
+            "name": "Can change subscriber", 
+            "content_type": 24
         }
     }, 
     {
         "pk": 74, 
         "model": "auth.permission", 
         "fields": {
+            "codename": "delete_defaultnewslettercontent", 
+            "name": "Can delete default newsletter content", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_newsletter", 
+            "name": "Can delete newsletter", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_newslettercontent", 
+            "name": "Can delete newsletter content", 
+            "content_type": 22
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "auth.permission", 
+        "fields": {
             "codename": "delete_subscriber", 
             "name": "Can delete subscriber", 
-            "content_type": 23
+            "content_type": 24
         }
     }, 
     {
@@ -669,68 +696,6 @@
         "pk": 1, 
         "model": "auth.group", 
         "fields": {
-            "name": "Journalistes", 
-            "permissions": [
-                57, 
-                58, 
-                59, 
-                25, 
-                28, 
-                26, 
-                29, 
-                27, 
-                30
-            ]
-        }
-    }, 
-    {
-        "pk": 2, 
-        "model": "auth.group", 
-        "fields": {
-            "name": "R\u00e9dacteurs en chef", 
-            "permissions": [
-                57, 
-                42, 
-                48, 
-                51, 
-                60, 
-                45, 
-                54, 
-                58, 
-                43, 
-                49, 
-                52, 
-                61, 
-                46, 
-                55, 
-                59, 
-                44, 
-                50, 
-                53, 
-                62, 
-                47, 
-                56, 
-                31, 
-                32, 
-                33, 
-                25, 
-                28, 
-                26, 
-                29, 
-                27, 
-                30, 
-                38, 
-                39, 
-                40, 
-                41, 
-                37
-            ]
-        }
-    }, 
-    {
-        "pk": 3, 
-        "model": "auth.group", 
-        "fields": {
             "name": "Administrateurs", 
             "permissions": [
                 22, 
@@ -751,39 +716,42 @@
                 13, 
                 14, 
                 15, 
-                57, 
+                60, 
                 42, 
                 48, 
-                51, 
-                60, 
-                45, 
                 54, 
-                58, 
+                63, 
+                45, 
+                51, 
+                57, 
+                61, 
                 43, 
                 49, 
-                52, 
-                61, 
-                46, 
                 55, 
-                59, 
+                64, 
+                46, 
+                52, 
+                58, 
+                62, 
                 44, 
                 50, 
-                53, 
-                62, 
-                47, 
                 56, 
-                69, 
-                63, 
-                66, 
-                72, 
-                70, 
-                64, 
-                67, 
-                73, 
-                71, 
                 65, 
-                68, 
+                47, 
+                53, 
+                59, 
+                72, 
+                66, 
+                69, 
+                75, 
+                73, 
+                67, 
+                70, 
+                76, 
                 74, 
+                68, 
+                71, 
+                77, 
                 31, 
                 32, 
                 33, 
@@ -811,63 +779,146 @@
         }
     }, 
     {
+        "pk": 2, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "R\u00e9dacteurs en chef", 
+            "permissions": [
+                60, 
+                42, 
+                48, 
+                54, 
+                63, 
+                45, 
+                51, 
+                57, 
+                61, 
+                43, 
+                49, 
+                55, 
+                64, 
+                46, 
+                52, 
+                58, 
+                62, 
+                44, 
+                50, 
+                56, 
+                65, 
+                47, 
+                53, 
+                59, 
+                31, 
+                32, 
+                33, 
+                25, 
+                28, 
+                26, 
+                29, 
+                27, 
+                30, 
+                38, 
+                39, 
+                40, 
+                41, 
+                37
+            ]
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "Journalistes", 
+            "permissions": [
+                60, 
+                61, 
+                62, 
+                25, 
+                28, 
+                26, 
+                29, 
+                27, 
+                30
+            ]
+        }
+    }, 
+    {
         "pk": 1, 
         "model": "auth.user", 
         "fields": {
-            "username": "journaliste", 
-            "first_name": "Journaliste", 
-            "last_name": "", 
+            "username": "gilles", 
+            "first_name": "Gilles", 
+            "last_name": "Fabio", 
             "is_active": 1, 
-            "is_superuser": 0, 
+            "is_superuser": 1, 
             "is_staff": 1, 
-            "last_login": "2008-09-03 15:08:38", 
-            "groups": [
-                1
-            ], 
+            "last_login": "2008-09-04 17:22:28", 
+            "groups": [], 
             "user_permissions": [], 
-            "password": "sha1$88e28$30c84e0db4763c074a08cd0fc3d3030f5edeb149", 
+            "password": "sha1$36624$aa67eab8394348428b672ccb6339d73e47c60635", 
             "email": "", 
-            "date_joined": "2008-09-03 15:08:38"
+            "date_joined": "2008-09-04 17:14:00"
         }
     }, 
     {
         "pk": 2, 
         "model": "auth.user", 
         "fields": {
-            "username": "redacchef", 
-            "first_name": "R\u00e9dacteur en chef", 
-            "last_name": "", 
+            "username": "mdupont", 
+            "first_name": "Marc", 
+            "last_name": "Dupont", 
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-03 15:09:07", 
+            "last_login": "2008-09-04 17:17:11", 
             "groups": [
                 2
             ], 
             "user_permissions": [], 
-            "password": "sha1$60f79$b7180624f4a7513000b06a4aff41e52724534399", 
+            "password": "sha1$849e0$38a68a908400f038a704c61901b5046c169bb321", 
             "email": "", 
-            "date_joined": "2008-09-03 15:09:07"
+            "date_joined": "2008-09-04 17:17:11"
         }
     }, 
     {
         "pk": 3, 
         "model": "auth.user", 
         "fields": {
-            "username": "administrateur", 
-            "first_name": "Administrateur", 
-            "last_name": "", 
+            "username": "jmartin", 
+            "first_name": "J\u00e9r\u00f4me", 
+            "last_name": "Martin", 
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-03 15:09:29", 
+            "last_login": "2008-09-04 17:18:13", 
             "groups": [
                 3
             ], 
             "user_permissions": [], 
-            "password": "sha1$e6a04$7445f234c3cdcee574e0305876e74eca5d042bfd", 
+            "password": "sha1$09a50$04dbe0702c94c4ea0cda2d70b83b078b65c92089", 
             "email": "", 
-            "date_joined": "2008-09-03 15:09:29"
+            "date_joined": "2008-09-04 17:18:13"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "gcarre", 
+            "first_name": "G\u00e9rard", 
+            "last_name": "Carr\u00e9", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-04 17:19:40", 
+            "groups": [
+                1
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$12212$562ab8e7dae17e8bbdf8a4582bc5e613baec2f3d", 
+            "email": "", 
+            "date_joined": "2008-09-04 17:19:40"
         }
     }
 ]
