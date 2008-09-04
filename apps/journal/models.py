@@ -5,6 +5,7 @@ Models for ``critica.apps.journal``.
 """
 from datetime import datetime
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
