@@ -149,8 +149,8 @@ class Illustration(models.Model):
     image = models.ImageField(upload_to='upload/%Y/%m/%d', max_length=200, help_text=_('Please, select an image to upload'))
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
-    credits = models.CharField(_('credits'), max_length=100, null=True, blank=True, help_text=_('100 characters max.'))
-    legend = models.CharField(_('legend'), max_length=100, null=True, blank=True, help_text=_('100 characters max.'))
+    credits = models.CharField(_('credits'), max_length=100, default=_('all rights reserved'), help_text=_('100 characters max.'))
+    legend = models.CharField(_('legend'), max_length=100, blank=True, help_text=_('100 characters max.'))
     is_generic = models.BooleanField(_('generic'), default=False, db_index=True, help_text=_('Could image be generic?'))
 
     class Meta:
