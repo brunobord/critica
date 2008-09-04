@@ -450,6 +450,12 @@ class Page(models.Model):
         articles
             The page articles.
         
+        illustration_of_the_day
+            The illustration of the day to attach to this page.
+        
+        reportage
+            The reportage to attach to attach to this page.
+            
         creation_date
             The page creation date.
             
@@ -468,10 +474,10 @@ class Page(models.Model):
             Complete pages.
             
     """
-    category = models.ForeignKey(Category, verbose_name=_('category'), null=True, blank=True, help_text=_('Please, select a category.'))
+    category = models.ForeignKey(Category, verbose_name=_('category'), help_text=_('Please, select a category.'))
     articles = models.ManyToManyField(Article, verbose_name=_('articles'), help_text=_('Please, select articles to insert in this page.'))
-    illustration_of_the_day = models.ForeignKey(Illustration, verbose_name=_('illustration of the day'), help_text=_('If this page is the cover, you can add the illustration of the day'))
-    reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), help_text=_('If this page is the cover, you can add a reportage'))
+    illustration_of_the_day = models.ForeignKey(Illustration, null=True, blank=True, verbose_name=_('illustration of the day'), help_text=_('If this page is the cover, you can add the illustration of the day'))
+    reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), null=True, blank=True, help_text=_('If this page is the cover, you can add a reportage'))
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
     is_complete = models.BooleanField(_('complete'), default=False, help_text=_('Is page complete?'))

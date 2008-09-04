@@ -108,7 +108,20 @@ class IssueAdmin(admin.ModelAdmin):
 
 class PageAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Page`` model. """
-    pass
+    fieldsets = (
+        (_('Page content'), {
+            'fields': ('category', 'articles')
+        }),
+        (_('Attach to this page'), {
+            'fields': ('illustration_of_the_day', 'reportage'),
+        }),
+        (_('Validation'), {
+            'fields': ('is_complete',),
+        }),
+    )
+
+    list_display = ('category', 'is_complete')
+    list_filter = ('is_complete',)
 
 
 admin.site.unregister(Tag)
