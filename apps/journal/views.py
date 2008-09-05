@@ -7,7 +7,8 @@ from critica.apps.journal.models import Page
 
 
 def home(request):
-    return render_to_response('journal/home.html', {})
+    page = Page.complete.filter(category__pk=1)[0]
+    return render_to_response('journal/home.html', {'page': page})
     
 def category(request, category):
     return render_to_response('journal/category.html', {})

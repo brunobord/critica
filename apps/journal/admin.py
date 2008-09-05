@@ -72,8 +72,8 @@ class ArticleAdmin(admin.ModelAdmin):
     
     class Media:
         js = (
-            settings.MEDIA_URL + 'js/tiny_mce/tiny_mce.js',
-            settings.MEDIA_URL + 'js/textarea.js',
+            settings.MEDIA_URL + 'common/js/tiny_mce/tiny_mce.js',
+            settings.MEDIA_URL + 'common/js/textarea.js',
         )
     
     def get_fieldsets(self, request, obj=None):
