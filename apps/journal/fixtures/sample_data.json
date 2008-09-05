@@ -124,7 +124,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:03:48", 
-            "image": "upload/2008/09/04/national.jpg", 
+            "image": "critica/upload/2008/09/04/national.jpg", 
             "creation_date": "2008-09-03 23:55:30", 
             "credits": "Photopqr", 
             "is_generic": 0, 
@@ -136,7 +136,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:04:48", 
-            "image": "upload/2008/09/04/international.jpg", 
+            "image": "critica/upload/2008/09/04/international.jpg", 
             "creation_date": "2008-09-04 00:04:48", 
             "credits": "Ip3Press", 
             "is_generic": 0, 
@@ -148,7 +148,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:05:29", 
-            "image": "upload/2008/09/04/societe.jpg", 
+            "image": "critica/upload/2008/09/04/societe.jpg", 
             "creation_date": "2008-09-04 00:05:29", 
             "credits": "MAXPPP", 
             "is_generic": 0, 
@@ -160,7 +160,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:06:07", 
-            "image": "upload/2008/09/04/sport.jpg", 
+            "image": "critica/upload/2008/09/04/sport.jpg", 
             "creation_date": "2008-09-04 00:06:07", 
             "credits": "Teamshoot", 
             "is_generic": 0, 
@@ -172,7 +172,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:06:47", 
-            "image": "upload/2008/09/04/pipole.jpg", 
+            "image": "critica/upload/2008/09/04/pipole.jpg", 
             "creation_date": "2008-09-04 00:06:47", 
             "credits": "Alphapress", 
             "is_generic": 0, 
@@ -184,7 +184,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:07:29", 
-            "image": "upload/2008/09/04/tele.jpg", 
+            "image": "critica/upload/2008/09/04/tele.jpg", 
             "creation_date": "2008-09-04 00:07:29", 
             "credits": "Ip3Press", 
             "is_generic": 0, 
@@ -196,7 +196,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:08:48", 
-            "image": "upload/2008/09/04/bouquin.jpg", 
+            "image": "critica/upload/2008/09/04/bouquin.jpg", 
             "creation_date": "2008-09-04 00:08:48", 
             "credits": "Critic@", 
             "is_generic": 0, 
@@ -208,7 +208,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:09:25", 
-            "image": "upload/2008/09/04/insolite.jpg", 
+            "image": "critica/upload/2008/09/04/insolite.jpg", 
             "creation_date": "2008-09-04 00:09:25", 
             "credits": "ILLU MAXPPP", 
             "is_generic": 0, 
@@ -220,7 +220,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:10:06", 
-            "image": "upload/2008/09/04/voyageingridjouault.jpg", 
+            "image": "critica/upload/2008/09/04/voyageingridjouault.jpg", 
             "creation_date": "2008-09-04 00:10:06", 
             "credits": "Ingrid Jouault", 
             "is_generic": 0, 
@@ -232,7 +232,7 @@
         "model": "journal.illustration", 
         "fields": {
             "modification_date": "2008-09-04 00:10:57", 
-            "image": "upload/2008/09/04/nana.jpg", 
+            "image": "critica/upload/2008/09/04/nana.jpg", 
             "creation_date": "2008-09-04 00:10:57", 
             "credits": "Blog \"Au pays de Candy\"", 
             "is_generic": 0, 
