@@ -123,11 +123,12 @@
         "pk": 1, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:03:48", 
+            "category": 2, 
+            "modification_date": "2008-09-05 08:46:39", 
             "image": "critica/upload/2008/09/04/national.jpg", 
             "creation_date": "2008-09-03 23:55:30", 
             "credits": "Photopqr", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Cki ? Clavier et Sarko"
         }
     }, 
@@ -135,11 +136,12 @@
         "pk": 2, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:04:48", 
+            "category": 3, 
+            "modification_date": "2008-09-05 08:46:53", 
             "image": "critica/upload/2008/09/04/international.jpg", 
             "creation_date": "2008-09-04 00:04:48", 
             "credits": "Ip3Press", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Cki ? Saakachvili"
         }
     }, 
@@ -147,11 +149,12 @@
         "pk": 3, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:05:29", 
+            "category": 4, 
+            "modification_date": "2008-09-05 08:46:46", 
             "image": "critica/upload/2008/09/04/societe.jpg", 
             "creation_date": "2008-09-04 00:05:29", 
             "credits": "MAXPPP", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Cki ? Michel Fourniret"
         }
     }, 
@@ -159,11 +162,12 @@
         "pk": 4, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:06:07", 
+            "category": 5, 
+            "modification_date": "2008-09-05 08:46:29", 
             "image": "critica/upload/2008/09/04/sport.jpg", 
             "creation_date": "2008-09-04 00:06:07", 
             "credits": "Teamshoot", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Cki ? Bruce Mc Laren, pionnier"
         }
     }, 
@@ -171,11 +175,12 @@
         "pk": 5, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:06:47", 
+            "category": 6, 
+            "modification_date": "2008-09-05 08:47:00", 
             "image": "critica/upload/2008/09/04/pipole.jpg", 
             "creation_date": "2008-09-04 00:06:47", 
             "credits": "Alphapress", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Cki ? Sienna Miller"
         }
     }, 
@@ -183,11 +188,12 @@
         "pk": 6, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:07:29", 
+            "category": 7, 
+            "modification_date": "2008-09-05 08:46:23", 
             "image": "critica/upload/2008/09/04/tele.jpg", 
             "creation_date": "2008-09-04 00:07:29", 
             "credits": "Ip3Press", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Cki ? Brigitte Lahaie"
         }
     }, 
@@ -195,11 +201,12 @@
         "pk": 7, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:08:48", 
+            "category": 8, 
+            "modification_date": "2008-09-05 08:47:39", 
             "image": "critica/upload/2008/09/04/bouquin.jpg", 
             "creation_date": "2008-09-04 00:08:48", 
             "credits": "Critic@", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Les ch'tis c'\u00e9tait les clich\u00e9s"
         }
     }, 
@@ -207,11 +214,12 @@
         "pk": 8, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:09:25", 
+            "category": 10, 
+            "modification_date": "2008-09-05 08:47:15", 
             "image": "critica/upload/2008/09/04/insolite.jpg", 
             "creation_date": "2008-09-04 00:09:25", 
             "credits": "ILLU MAXPPP", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "ILLU MAXPPP"
         }
     }, 
@@ -219,11 +227,12 @@
         "pk": 9, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:10:06", 
+            "category": 12, 
+            "modification_date": "2008-09-05 08:47:31", 
             "image": "critica/upload/2008/09/04/voyageingridjouault.jpg", 
             "creation_date": "2008-09-04 00:10:06", 
             "credits": "Ingrid Jouault", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Ingrid Jouault"
         }
     }, 
@@ -231,11 +240,12 @@
         "pk": 10, 
         "model": "journal.illustration", 
         "fields": {
-            "modification_date": "2008-09-04 00:10:57", 
+            "category": 9, 
+            "modification_date": "2008-09-05 08:46:15", 
             "image": "critica/upload/2008/09/04/nana.jpg", 
             "creation_date": "2008-09-04 00:10:57", 
             "credits": "Blog \"Au pays de Candy\"", 
-            "is_generic": 0, 
+            "is_generic": 1, 
             "legend": "Blog \"Au pays de Candy\""
         }
     }, 

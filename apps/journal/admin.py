@@ -50,8 +50,8 @@ class ReportageAdmin(admin.ModelAdmin):
 
 class IllustrationAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Illustration`` model. """
-    list_display = ('image', 'credits', 'legend', 'is_generic')
-    list_filter = ('is_generic',)
+    list_display = ('thumbnail', 'bolded_category', 'credits', 'legend', 'creation_date', 'modification_date', 'is_generic')
+    list_filter = ('is_generic', 'category')
     search_fields = ('image', 'credits', 'legend')
     ordering = ('legend',)
     date_hierarchy = 'creation_date'

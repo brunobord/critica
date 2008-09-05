@@ -153,6 +153,7 @@ class Illustration(models.Model):
     
     """
     image = models.ImageField(upload_to='critica/upload/%Y/%m/%d', max_length=200, help_text=_('Please, select an image to upload'))
+    category = models.ForeignKey(Category, verbose_name=_('category'), null=True, blank=True)
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
     credits = models.CharField(_('credits'), max_length=100, default=_('all rights reserved'), help_text=_('100 characters max.'))
@@ -167,7 +168,17 @@ class Illustration(models.Model):
     def __unicode__(self):
         """ Object human-readable string representation. """
         return u'%s' % self.legend
-        
+    
+    def thumbnail(self):
+        return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, self.image, self.legend)
+    thumbnail.allow_tags = True
+    thumbnail.short_description = _('Illustration')
+    
+    def bolded_category(self):
+        return '<strong>%s</strong>' % (self.category,)
+    bolded_category.allow_tags = True
+    bolded_category.short_description = _('Category')
+    
     def save(self):
         """ Object pre-saving operations. """
         if not self.id:
