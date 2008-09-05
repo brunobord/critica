@@ -112,12 +112,15 @@ class IssueAdmin(admin.ModelAdmin):
         (_('Issue'), {
             'fields': ('number', 'publication_date')
         }),
+        (_('Attach to this issue'), {
+            'fields': ('illustration', 'reportage')
+        }),
         (_('Validation'), {
             'fields': ('is_complete',)
         }),
     )
     
-    list_display = ('number', 'publication_date', 'is_complete')
+    list_display = ('number', 'publication_date', 'illustration', 'reportage', 'is_complete')
     list_filter = ('is_complete',)
     search_fields = ('number',)
     ordering = ('-publication_date',)
@@ -131,7 +134,7 @@ class PageAdmin(admin.ModelAdmin):
             'fields': ('category', 'articles')
         }),
         (_('Attach to this page'), {
-            'fields': ('illustration_of_the_day', 'reportage'),
+            'fields': ('illustration', 'reportage'),
         }),
         (_('Validation'), {
             'fields': ('is_complete',),

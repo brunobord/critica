@@ -238,6 +238,12 @@ class Issue(models.Model):
         publication_date
             The issue publication date.
             
+        illustration
+            The issue's illustration, or the illustration of the day.
+            
+        reportage
+            The issue's reportage.
+            
         is_complete
             Is issue complete? Default to ``False``.
             
@@ -254,6 +260,8 @@ class Issue(models.Model):
     """
     number = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
     publication_date = models.DateTimeField(_('publication date'), null=True, blank=True, help_text=_("Don't forget to adjust the publication date"))
+    illustration = models.ForeignKey(Illustration, null=True, blank=True, verbose_name=_('illustration'), help_text=_('Please, select the illustration of the day.'))
+    reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), null=True, blank=True, help_text=_('Please, select the reportage of the day.'))
     is_complete = models.BooleanField(_('complete'), default=False, db_index=True, help_text=_('Is issue complete'))
 
     class Meta:
@@ -461,12 +469,6 @@ class Page(models.Model):
             
         articles
             The page articles.
-        
-        illustration_of_the_day
-            The illustration of the day to attach to this page.
-        
-        reportage
-            The reportage to attach to attach to this page.
             
         creation_date
             The page creation date.
@@ -488,8 +490,8 @@ class Page(models.Model):
     """
     category = models.ForeignKey(Category, verbose_name=_('category'), help_text=_('Please, select a category.'))
     articles = models.ManyToManyField(Article, verbose_name=_('articles'), help_text=_('Please, select articles to insert in this page.'))
-    illustration_of_the_day = models.ForeignKey(Illustration, null=True, blank=True, verbose_name=_('illustration of the day'), help_text=_('If this page is the cover, you can add the illustration of the day'))
-    reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), null=True, blank=True, help_text=_('If this page is the cover, you can add a reportage'))
+    illustration = models.ForeignKey(Illustration, verbose_name=_('illustration'), null=True, blank=True, help_text=_('Optional'))
+    reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), null=True, blank=True, help_text=_('Optional'))
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
     is_complete = models.BooleanField(_('complete'), default=False, help_text=_('Is page complete?'))
