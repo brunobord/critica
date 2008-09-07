@@ -106,32 +106,11 @@ class ArticleAdmin(admin.ModelAdmin):
         return fieldsets
 
 
-class IssueAdmin(admin.ModelAdmin):
-    """ Administration interface options for ``Issue`` model. """
-    fieldsets = (
-        (_('Issue'), {
-            'fields': ('number', 'publication_date')
-        }),
-        (_('Attach to this issue'), {
-            'fields': ('illustration', 'reportage')
-        }),
-        (_('Validation'), {
-            'fields': ('is_complete',)
-        }),
-    )
-    
-    list_display = ('number', 'publication_date', 'illustration', 'reportage', 'is_complete')
-    list_filter = ('is_complete',)
-    search_fields = ('number',)
-    ordering = ('-publication_date',)
-    date_hierarchy = 'publication_date'
-
-
 class PageAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Page`` model. """
     fieldsets = (
         (_('Page'), {
-            'fields': ('category', 'articles')
+            'fields': ('issue', 'category', 'articles')
         }),
         (_('Attach to this page'), {
             'fields': ('illustration', 'reportage'),
@@ -141,10 +120,28 @@ class PageAdmin(admin.ModelAdmin):
         }),
     )
 
-    list_display = ('category', 'is_complete')
+    list_display = ('issue', 'category', 'is_complete')
+    list_filter = ('is_complete', 'issue')
+
+
+class IssueAdmin(admin.ModelAdmin):
+    """ Administration interface options for ``Issue`` model. """
+    fieldsets = (
+        (_('Issue'), {
+            'fields': ('number', 'publication_date')
+        }),
+        (_('Validation'), {
+            'fields': ('is_complete',)
+        }),
+    )
+    
+    list_display = ('number', 'publication_date', 'is_complete')
     list_filter = ('is_complete',)
-
-
+    search_fields = ('number',)
+    ordering = ('-publication_date',)
+    date_hierarchy = 'publication_date'
+        
+    
 admin.site.unregister(Tag)
 admin.site.unregister(TaggedItem)
 admin.site.register(Category, CategoryAdmin)

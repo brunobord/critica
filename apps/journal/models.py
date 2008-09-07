@@ -226,6 +226,26 @@ class Reportage(models.Model):
     published = ReportageManager()
 
 
+class Type(models.Model):
+    """
+    Journal article type (surtitre).
+    
+    A type is composed of::
+    
+        name
+            The type name.
+            
+    """
+    name = models.CharField(_('name'), max_length=50)
+
+    class Meta:
+        verbose_name = _('type')
+        verbose_name_plural = _('types')
+
+    def __unicode__(self):
+        return u'%s' % self.name
+
+
 class Issue(models.Model):
     """
     Journal issue.
@@ -237,12 +257,6 @@ class Issue(models.Model):
             
         publication_date
             The issue publication date.
-            
-        illustration
-            The issue's illustration, or the illustration of the day.
-            
-        reportage
-            The issue's reportage.
             
         is_complete
             Is issue complete? Default to ``False``.
@@ -260,8 +274,6 @@ class Issue(models.Model):
     """
     number = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
     publication_date = models.DateTimeField(_('publication date'), null=True, blank=True, help_text=_("Don't forget to adjust the publication date"))
-    illustration = models.ForeignKey(Illustration, null=True, blank=True, verbose_name=_('illustration'), help_text=_('Please, select the illustration of the day.'))
-    reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), null=True, blank=True, help_text=_('Please, select the reportage of the day.'))
     is_complete = models.BooleanField(_('complete'), default=False, db_index=True, help_text=_('Is issue complete'))
 
     class Meta:
@@ -295,30 +307,15 @@ class Issue(models.Model):
         if not self.publication_date:
             self.publication_date = datetime.now()
         super(Issue, self).save()
+        # creates pages for this issue
+        categories = Category.objects.all()
+        for category in categories:
+            page = Page(issue=self, category=category)
+            page.save()
         
     # Managers
     objects = models.Manager()
     complete = IssueManager()
-
-
-class Type(models.Model):
-    """
-    Journal article type (surtitre).
-    
-    A type is composed of::
-    
-        name
-            The type name.
-            
-    """
-    name = models.CharField(_('name'), max_length=50)
-
-    class Meta:
-        verbose_name = _('type')
-        verbose_name_plural = _('types')
-
-    def __unicode__(self):
-        return u'%s' % self.name
 
 
 class Article(models.Model):
@@ -464,11 +461,20 @@ class Page(models.Model):
     
     A journal page is composed of::
     
+        issue
+            The page issue.
+    
         category
             The page category.
             
         articles
             The page articles.
+            
+        illustration
+            The page illustration.
+            
+        reportage
+            The page reportage.
             
         creation_date
             The page creation date.
@@ -488,8 +494,9 @@ class Page(models.Model):
             Complete pages.
             
     """
+    issue = models.ForeignKey(Issue, verbose_name=_('issue'), help_text=_('Please, select an issue.'))
     category = models.ForeignKey(Category, verbose_name=_('category'), help_text=_('Please, select a category.'))
-    articles = models.ManyToManyField(Article, verbose_name=_('articles'), help_text=_('Please, select articles to insert in this page.'))
+    articles = models.ManyToManyField(Article, verbose_name=_('articles'), null=True, blank=True, help_text=_('Please, select articles to insert in this page.'))
     illustration = models.ForeignKey(Illustration, verbose_name=_('illustration'), null=True, blank=True, help_text=_('Optional'))
     reportage = models.ForeignKey(Reportage, verbose_name=_('reportage'), null=True, blank=True, help_text=_('Optional'))
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
