@@ -403,6 +403,7 @@ class Article(models.Model):
     category = models.ForeignKey(Category, verbose_name=_('category'), db_index=True, help_text=_('Please, select a category for this article.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     position = models.ForeignKey(Position, verbose_name=_('position'), null=True, blank=True, help_text=_('Please, select a position for this article.'))
+    viewed_count = models.PositiveIntegerField(_('viewed count'), null=True, blank=True, editable=False)
     
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), null=True, blank=True, editable=False)
@@ -524,4 +525,5 @@ class Page(models.Model):
     # Managers
     objects = models.Manager()
     complete = PageManager()
+
 
