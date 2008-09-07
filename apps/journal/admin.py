@@ -124,6 +124,14 @@ class PageAdmin(admin.ModelAdmin):
     list_filter = ('is_complete', 'issue')
 
 
+class PageInline(admin.TabularInline):
+    """ Page inline. """
+    model = Page
+    fk_name = 'issue'
+    count_categories = Category.objects.count()
+    max_num = int(count_categories)
+
+
 class IssueAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Issue`` model. """
     fieldsets = (
@@ -137,11 +145,13 @@ class IssueAdmin(admin.ModelAdmin):
     
     list_display = ('number', 'publication_date', 'is_complete')
     list_filter = ('is_complete',)
+    list_select_related = True
     search_fields = ('number',)
     ordering = ('-publication_date',)
     date_hierarchy = 'publication_date'
-        
-    
+    inlines = [PageInline]
+
+
 admin.site.unregister(Tag)
 admin.site.unregister(TaggedItem)
 admin.site.register(Category, CategoryAdmin)
