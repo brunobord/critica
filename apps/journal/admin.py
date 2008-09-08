@@ -19,8 +19,8 @@ from critica.apps.journal.models import Page
 
 class CategoryAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Category`` model. """
-    list_display = ('name',)
-    search_fields = ('name',)
+    list_display = ('name', 'slug', 'description')
+    search_fields = ('name', 'description')
     ordering = ('name',)
 
 
@@ -59,12 +59,13 @@ class IllustrationAdmin(admin.ModelAdmin):
 
 class TypeAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Type`` model. """
-    pass
-    
+    list_display = ('description', 'title')
+    ordering = ['id']
+
 
 class ArticleAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Article`` model. """
-    list_display = ('issue', 'category', 'title', 'type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'is_reserved', 'viewed_count', 'author')
+    list_display = ('category', 'title', 'type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'is_reserved', 'viewed_count', 'author')
     list_filter = ('author', 'type', 'is_featured', 'is_published', 'is_illustrated', 'category')
     search_fields = ('title', 'summary', 'content', 'citation')
     ordering = ('-publication_date',)

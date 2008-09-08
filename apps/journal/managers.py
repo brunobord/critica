@@ -54,6 +54,18 @@ class ReportageManager(models.Manager):
         return super(ReportageManager, self).get_query_set()
 
 
+class TypeManager(models.Manager):
+    """
+    ``Type`` model manager.
+    By default, retrieves all types.
+    
+    """
+    
+    def get_query_set(self):
+        """ Retrieves all types. """
+        return super(TypeManager, self).get_query_set()
+
+
 class ArticleManager(models.Manager):
     """
     ``Article`` model manager.

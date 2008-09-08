@@ -16,6 +16,7 @@ from critica.apps.journal.managers import CategoryManager
 from critica.apps.journal.managers import PositionManager
 from critica.apps.journal.managers import IllustrationManager
 from critica.apps.journal.managers import ReportageManager
+from critica.apps.journal.managers import TypeManager
 from critica.apps.journal.managers import ArticleManager
 from critica.apps.journal.managers import IssueManager
 from critica.apps.journal.managers import PageManager
@@ -28,11 +29,14 @@ class Category(models.Model):
     A journal category is composed of::
     
         name
-            The category name. Max. 20 characters.
+            The category name.
             Required.
             
         slug
-            The category slug. Max. 40 characters. Must be unique.
+            The category slug.
+            
+        description
+            The category description.
             
     Managers::
         
@@ -45,8 +49,9 @@ class Category(models.Model):
             Returns complete article set.
     
     """
-    name = models.CharField(_('name'), max_length=20, help_text=_('As short as possible. 20 characters max.'))
-    slug = models.SlugField(_('slug'), max_length=40, null=True, blank=True, unique=True, editable=False)
+    name = models.CharField(_('name'), max_length=255, help_text=_('As short as possible.'))
+    slug = models.SlugField(_('slug'), max_length=255, null=True, blank=True, unique=True, editable=False)
+    description = models.CharField(_('description'), max_length=255, null=True, blank=True, help_text=_('A short description of the category. It will not be displayed on the website.'))
     
     class Meta:
         """ Model metadata. """
@@ -232,18 +237,32 @@ class Type(models.Model):
     
     A type is composed of::
     
-        name
-            The type name.
+        title
+            The type title. Displayed on the website.
+        
+        description
+            The type description. Not displayed on the website.
+            
+    Managers::
+    
+        objects
+            All objects.
             
     """
-    name = models.CharField(_('name'), max_length=50)
+    title = models.CharField(_('title'), max_length=100, help_text=_('Please, enter the type title. It will be displayed on the website.'))
+    description = models.CharField(_('description'), max_length=255, help_text=_('Please, enter the type description. It will not be displayed on the website.'))
 
     class Meta:
+        """ Model metadata. """
         verbose_name = _('type')
         verbose_name_plural = _('types')
 
     def __unicode__(self):
-        return u'%s' % self.name
+        """ Object human-readable string representation. """
+        return u'%s' % self.description
+        
+    # Managers
+    objects = TypeManager()
 
 
 class Issue(models.Model):
@@ -399,7 +418,7 @@ class Article(models.Model):
     slug = models.SlugField(_('slug'), max_length=255, blank=True, null=True)
     
     author = models.ForeignKey(User, verbose_name=_('author'), db_index=True, help_text=_('Please, select an author for this article.'))
-    issue = models.ForeignKey(Issue, verbose_name=_('issue'), db_index=True, help_text=_('Please, select an issue.'))
+    issue = models.ManyToManyField(Issue, verbose_name=_('issue(s)'), db_index=True, help_text=_('Please, select one or several issues.'))
     category = models.ForeignKey(Category, verbose_name=_('category'), db_index=True, help_text=_('Please, select a category for this article.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     position = models.ForeignKey(Position, verbose_name=_('position'), null=True, blank=True, help_text=_('Please, select a position for this article.'))
