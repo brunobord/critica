@@ -65,7 +65,7 @@ class Category(models.Model):
     @permalink
     def get_absolute_url(self):
         """ Returns category's absolute URL. """
-        return ('journal_category', (), { 
+        return ('category', (), { 
             'category': self.slug,
         })
 
@@ -133,6 +133,9 @@ class Illustration(models.Model):
             The image file path.
             Required.
             
+        category
+            The image category.
+            
         creation_date
             The image creation date.
             
@@ -140,12 +143,11 @@ class Illustration(models.Model):
             The image modification date.
             
         credits
-            The image credits.
+            The image credits. Default to ``all rights reserved``.
             Required.
             
         legend
             The image legend.
-            Required.
             
         is_generic
             Is image a generic image? Default to ``False``.
@@ -199,7 +201,34 @@ class Illustration(models.Model):
 
 class Reportage(models.Model):
     """
-    A video reportage.
+    Video reportage.
+    
+    A video reportage is composed of::
+    
+        video_name
+            The video name (identifier).
+            Required.
+            
+        video_link
+            The video link.
+            Required.
+            
+        creation_date
+            The video creation date.
+            
+        modification_date
+            The video modification date.
+            
+        is_published
+            Is the video ready to be published? Default to ``False``.
+            
+    Managers::
+    
+        objects
+            All objects.
+            
+        published
+            All reportages ready to be published.
     
     """
     video_name = models.CharField(_('video name'), max_length=255, help_text=_('Please, enter a name for this video.'))
@@ -303,14 +332,6 @@ class Issue(models.Model):
     def __unicode__(self):
         """ Object human-readable string representation. """
         return u'%s' % self.number
-        
-    @permalink
-    def get_absolute_url(self):
-        """ Returns issue's absolute URL. """
-        return ('issue', (), { 
-            'issue': self.number,
-        })
-
 
     def _get_complete_articles(self):
         """
@@ -358,8 +379,8 @@ class Article(models.Model):
             The article author.
             Required.
         
-        issue
-            The article issue.
+        issues
+            The article issues.
             Required.
             
         category
@@ -418,7 +439,7 @@ class Article(models.Model):
     slug = models.SlugField(_('slug'), max_length=255, blank=True, null=True)
     
     author = models.ForeignKey(User, verbose_name=_('author'), db_index=True, help_text=_('Please, select an author for this article.'))
-    issue = models.ManyToManyField(Issue, verbose_name=_('issue(s)'), db_index=True, help_text=_('Please, select one or several issues.'))
+    issues = models.ManyToManyField(Issue, verbose_name=_('issues'), db_index=True, help_text=_('Please, select one or several issues.'))
     category = models.ForeignKey(Category, verbose_name=_('category'), db_index=True, help_text=_('Please, select a category for this article.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     position = models.ForeignKey(Position, verbose_name=_('position'), null=True, blank=True, help_text=_('Please, select a position for this article.'))
@@ -448,16 +469,7 @@ class Article(models.Model):
 
     def __unicode__(self):
         """ Object human-readable string representation. """
-        return u"%s: %s" % (self.issue, self.title)
-        
-    @permalink
-    def get_absolute_url(self):
-        """ Returns article's absolute URL. """
-        return ('article', (), { 
-            'issue': self.issue,
-            'category': self.category,
-            'article': self.slug,
-        })
+        return u"%s: %s" % (self.category, self.title)
     
     def save(self):
         """ Object pre-saving operations. """

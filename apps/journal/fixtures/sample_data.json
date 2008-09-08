@@ -546,5 +546,662 @@
             "description": "R\u00e9gions : R\u00e9union", 
             "title": "R\u00e9union"
         }
+    },
+    {
+        "pk": 1, 
+        "model": "journal.issue", 
+        "fields": {
+            "publication_date": "2008-09-08 11:46:40", 
+            "number": 124, 
+            "is_complete": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "journal.issue", 
+        "fields": {
+            "publication_date": "2008-09-08 11:46:50", 
+            "number": 125, 
+            "is_complete": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "journal.issue", 
+        "fields": {
+            "publication_date": "2008-09-08 11:47:00", 
+            "number": 126, 
+            "is_complete": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 1, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 2, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 3, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 4, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 5, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 6, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 7, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 8, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 9, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 10, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 11, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 12, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 13, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 14, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 15, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:42", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:42", 
+            "illustration": null, 
+            "issue": 1, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 1, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 2, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 3, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 4, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 5, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 6, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 7, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 8, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 9, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 10, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 11, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 12, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 13, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 14, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 15, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:46:52", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:46:52", 
+            "illustration": null, 
+            "issue": 2, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 1, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 2, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 3, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 4, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 5, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 6, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 7, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 8, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 9, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 10, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 11, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 12, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 13, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 14, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "journal.page", 
+        "fields": {
+            "category": 15, 
+            "articles": [], 
+            "modification_date": "2008-09-08 11:47:04", 
+            "reportage": null, 
+            "creation_date": "2008-09-08 11:47:04", 
+            "illustration": null, 
+            "issue": 3, 
+            "is_complete": 0
+        }
     }
 ]

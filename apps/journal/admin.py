@@ -80,7 +80,7 @@ class ArticleAdmin(admin.ModelAdmin):
     def get_fieldsets(self, request, obj=None):
         """ Hook for specifying fieldsets for the add form. """
         fieldsets = [
-            (_('Article'), {'fields': ['author', 'issue', 'category', 'type', 'title', 'tags', 'publication_date', 'summary', 'content']}),
+            (_('Article'), {'fields': ['author', 'issues', 'category', 'type', 'title', 'tags', 'publication_date', 'summary', 'content']}),
             (_('Citation'), {'fields': ['citation']}),
         ]
     
