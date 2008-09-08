@@ -457,7 +457,7 @@ class Article(models.Model):
     is_published = models.BooleanField(_('published'), default=False, help_text=_('Is article published?'))
     is_illustrated = models.BooleanField(_('illustrated'), default=False, help_text=_('Is article illustrated?'))
     
-    summary = models.TextField(_('summary'))
+    summary = models.TextField(_('summary'), null=True, blank=True)
     content = models.TextField(_('content'))
     
     related_articles = models.ManyToManyField('self', verbose_name=('related articles'), null=True, blank=True, help_text=_('You can select some related articles to attach to this one.'))
