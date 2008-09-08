@@ -851,65 +851,225 @@
             "email": "", 
             "date_joined": "2008-09-04 17:14:00"
         }
-    }, 
+    },
     {
         "pk": 2, 
         "model": "auth.user", 
         "fields": {
-            "username": "mdupont", 
-            "first_name": "Marc", 
-            "last_name": "Dupont", 
+            "username": "ghastoy", 
+            "first_name": "Gracianne", 
+            "last_name": "Hastoy", 
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-07 11:50:44", 
+            "last_login": "2008-09-08 11:06:32", 
             "groups": [
                 2
             ], 
             "user_permissions": [], 
-            "password": "sha1$849e0$38a68a908400f038a704c61901b5046c169bb321", 
+            "password": "sha1$dbc3a$5b4a25241399dff795f8cff8072ba9e23579158d", 
             "email": "", 
-            "date_joined": "2008-09-04 17:17:11"
+            "date_joined": "2008-09-08 11:06:32"
         }
     }, 
     {
         "pk": 3, 
         "model": "auth.user", 
         "fields": {
-            "username": "jmartin", 
-            "first_name": "J\u00e9r\u00f4me", 
-            "last_name": "Martin", 
+            "username": "bcavalie", 
+            "first_name": "Bruno", 
+            "last_name": "Cavali\u00e9", 
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-04 17:18:13", 
+            "last_login": "2008-09-08 11:07:15", 
             "groups": [
                 3
             ], 
             "user_permissions": [], 
-            "password": "sha1$09a50$04dbe0702c94c4ea0cda2d70b83b078b65c92089", 
+            "password": "sha1$cc252$dff707cdd7203d392fe337233a304edae464585e", 
             "email": "", 
-            "date_joined": "2008-09-04 17:18:13"
+            "date_joined": "2008-09-08 11:07:15"
         }
     }, 
     {
         "pk": 4, 
         "model": "auth.user", 
         "fields": {
-            "username": "gcarre", 
-            "first_name": "G\u00e9rard", 
-            "last_name": "Carr\u00e9", 
+            "username": "emorin", 
+            "first_name": "Emmanuelle", 
+            "last_name": "Morin", 
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-04 17:19:40", 
+            "last_login": "2008-09-08 11:07:39", 
             "groups": [
-                1
+                3
             ], 
             "user_permissions": [], 
-            "password": "sha1$12212$562ab8e7dae17e8bbdf8a4582bc5e613baec2f3d", 
+            "password": "sha1$f12fa$202b8ba36e5dfde17ea43dd7694e189c271998a9", 
             "email": "", 
-            "date_joined": "2008-09-04 17:19:40"
+            "date_joined": "2008-09-08 11:07:39"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "dpadovani", 
+            "first_name": "Dominique", 
+            "last_name": "Padovani", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:08:22", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$ca318$f45830d0224ad7cc603868e3698b65d1169d1b1f", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:08:22"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "kjouault", 
+            "first_name": "Karen", 
+            "last_name": "Jouault", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:08:48", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$4f0fb$9cd2bd77313e4f7aa4012a4d7f34656a2a58f631", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:08:48"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "cdavid", 
+            "first_name": "Charlotte", 
+            "last_name": "David", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:09:30", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$12a02$01de55e21e320c75f925e2747ca13f815f74411f", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:09:30"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "ndarmagnac", 
+            "first_name": "Nathalie", 
+            "last_name": "d'Armagnac", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:09:48", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$86fd5$c6540dc469b41e915d1bdb47f29d860f3b323bc4", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:09:48"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "dlarue", 
+            "first_name": "Dominique", 
+            "last_name": "Larue", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:10:10", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$51c83$10177e5668199b62994e52c6b960be769237f01a", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:10:10"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "jchalvidant", 
+            "first_name": "Jean", 
+            "last_name": "Chalvidant", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:10:55", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$fd873$5c6dea06cd942bbf1ceeea8b453cab0425f80515", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:10:55"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "ssoumagnas", 
+            "first_name": "S\u00e9bastien", 
+            "last_name": "Soumagnas", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:11:15", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$17622$628e166cedf3d66b04577cc02ffb2e0b95dbf2c1", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:11:15"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "redaction", 
+            "first_name": "La r\u00e9daction Critic@", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-08 11:11:56", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$38ddf$8c8b917d8ecbaf563f455cbf17953af2cdc93eeb", 
+            "email": "", 
+            "date_joined": "2008-09-08 11:11:56"
         }
     }
 ]
