@@ -1,3 +1,255 @@
-{% for article in page.articles.all %}
-    {{ article }}
-{% endfor %}
+{% extends "layout/base.html" %}
+{% block title %}Accueil{% endblock %}
+{% block content %}
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="leftWrap">
+
+	<h2><span><a href="national.html">Actualité française</a></span></h2>
+	<div class="articleSection articleMain">
+
+		<h3><a href="{% url category "national" %}">Christian Clavier, l'enquête corse dont on se serait passé</a></h3>
+		<div class="lead autoClear">
+			<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article1_wide.jpg" title="Nico et son pote Clavier"><img src="{{ MEDIA_URL }}critica/images/article/article1.jpg" alt="article1" /></a></div>
+			<p>Délicat pour moi, vu mon nom et mes attaches, d'être serein dès que j'écris sur la Corse. Le plus beau pays du monde, n'en déplaise aux grincheux et aux sectaires, qui est aussi le théâtre depuis trop longtemps de débordements xénophobes, voire terroristes, qui ne devraient pas exister. Dernier épisode en date : l'occupation pacifique de la villa que possède l'acteur Christian Clavier à Palombaggia, dépendant de Porto-Vecchio, sans doute la plage la plus délicieuse de l'île. Aux dernières nouvelles, une victime, un superflic...</p>
+		</div>
+		<p class="readMore"><a href="{% url category "national" %}">Lire la suite</a></p>
+
+	</div>
+
+	<h2><span><a href="{% url category "international" %}">Actualité internationale</a></span></h2>
+	<div class="articleSection articleMain">
+
+		<h3><a href="{% url category "international" %}" >Saakachvili est un cadavre politique - qui sera le prochain ? </a></h3>
+		<div class="lead autoClear">
+			<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article2_wide.jpg" title="Mikhaïl Saakachvili"><img src="{{ MEDIA_URL }}critica/images/article/article2.jpg" alt="article2" /></a></div>
+			<p>Humiliation ou provocation ? Peu importe la réelle volonté du président russe Dmitri Medvedev, car qualifier son homologue géorgien de "cadavre politique" aura des répercussions, c'est certain. Ca va certes énerver Mikhaïl Saakachvili, qui a tendance à réagir au quart de tour. Mais il se pourrait bien que Medvedev utilise cette expression pour d'autres pays. A moins qu'il s'en tienne au mot "cadavre", sans adjectif.</p>
+		</div>
+		<p class="readMore"><a href="{% url category "international" %}">Lire la suite</a></p>
+	</div>
+
+	<!-- ADD -->
+	<div class="addSection add468">
+		<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+		<p><a href="#">Publicité</a></p>
+	</div>
+	<!-- // ADD -->
+
+	<!-- ARTICLE LIST -->
+	<div class="articleList autoClear">
+
+		<div class="articleSection">
+			<h2><span><a href="{% url category "societe" %}">Société</a></span></h2>
+			<div class="lead autoClear">
+				<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article3_wipe.jpg" title="Michel Fourniret"><img src="{{ MEDIA_URL }}critica/images/article/article3.jpg" alt="article3" /></a></div>
+				<h3><a href="{% url category "societe" %}">Fourniret serait-il encore dans la Mou(i)zin ?</a></h3>
+				<p>Et voilà que l'on pourrait reparler d'une éventuelle implication de Michou le Foufou dans la disparition d'Estelle Mouzin, cette fillette de 9 ans à l'époque, disparue à Guermantes, Seine-et-Marne, en janvier 2003. C'est une étrange affaire de SMS qui a mis la puce (de portable) à l'oreille de la police belge, qui tente à nouveau de vérifier s'il y a une connexion possible entre Fourniret et l'affaire Mouzin.</p>
+			</div>
+			<p class="readMore"><a href="{% url category "societe" %}">Lire la suite</a></p>
+		</div>
+
+		<div class="articleSection">
+			<h2><span><a href="{% url category "nanas" %}">Nanas</a></span></h2>
+			<div class="lead autoClear">
+				<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article4_wipe.jpg" title="Le tregging"><img src="{{ MEDIA_URL }}critica/images/article/article4.jpg" alt="article4" /></a></div>
+				<h3><a href="{% url category "nanas" %}">Le tregging : le nouvel Objet Fashion Non Identifié… et importable </a></h3>
+				<p>Toutes les stars les plus tendance et hype - prononcez "aïep", pour être complètement "in" - le portent. De Rihanna à Agyness Deyn, de Posh à Kylie – ben oui, Minogue, y'en a pas 35 des Kylie ! De quoi je parle ? Mais du tregging, bien sûr ! Vous ne connaissez pas ? Vous n'êtes vraiment pas dans le coup. En même temps, on vous comprend, c'est un peu l'OFNI (Objet Fashion Non Identifié) du siècle… Bon, reprenons depuis le début.</p>
+			</div>
+			<p class="readMore"><a href="{% url category "nanas" %}">Lire la suite</a></p>
+		</div>
+
+		<div class="articleSection">
+			<h2><span><a href="{% url category "sport" %}">Sport</a></span></h2>
+			<div class="lead autoClear">
+				<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article5_wide.jpg" title="Bruce Mc Laren"><img src="{{ MEDIA_URL }}critica/images/article/article5.jpg" alt="article5" /></a></div>
+				<h3><a href="{% url category "sport" %}">F1 : Ne serait-ce Spa-Francorchamps dimanche ?</a></h3>
+				<p>Eh ben si. Ce week-end, nos amis belges vont poursuivre leur histoire d’amour avec la Formule 1 débutée en 1950. Autant dire qu’il s’agit d’une classique, comme dirait le cycliste du plat pays. Les plus grands (pilotes) s’y sont distingués, de Fangio à Raïkkönen. D’ailleurs, celui-ci y a gagné trois fois. Va-t-il passer la 4e ? A moins que le leader Hamilton, ou le dauphin Massa…</p>
+			</div>
+			<p class="readMore"><a href="{% url category "sport" %}">Lire la suite</a></p>
+		</div>
+
+		<div class="articleSection">
+			<h2><span><a href="{% url category "tele" %}">Télé</a></span></h2>
+			<div class="lead autoClear">
+				<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article6_wide.jpg" title="Brigitte Lahaie"><img src="{{ MEDIA_URL }}critica/images/article/article6.jpg" alt="article6" /></a></div>
+				<h3><a href="{% url category "tele" %}">Sex in the Paf ! (et ailleurs...)</a></h3>
+				<p>Au programme du soir, hier, THE question : est-on fait pour vivre en couple ? Et pour trouver la réponse à cette interrogation certainement aussi insoluble que celle de la poule et de l'œuf, on savait que l'on pouvait compter sur les talents de casteuse de Mireille Dumas pour nous fournir les meilleurs experts en la matière. Encore une fois, grâce à notre psy du paf, on en a appris des trucs sur le (dys)fonctionnement homme/femme.</p>
+			</div>
+			<p class="readMore"><a href="{% url category "tele" %}">Lire la suite</a></p>
+		</div>
+
+		<div class="articleSection">
+			<h2><span><a href="{% url category "pipoles" %}">Pipoles</a></span></h2>
+			<div class="lead autoClear">
+				<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article7_wide.jpg" title="Sienna Miller"><img src="{{ MEDIA_URL }}critica/images/article/article7.jpg" alt="article7" /></a></div>
+				<h3><a href="{% url category "pipoles" %}">Sienna Miller : la (presque) interview</a></h3>
+				<p>L'actrice Sienna Miller est l'une des cibles préférées des tabloïds britanniques, pour cause de vie sentimentale très très agitée. Dernier pipole accroché à son tableau de chasse : Balthazar Getty, acteur, millionnaire (jusqu'ici tout va bien), marié, quatre enfants (oups). Curieux de voir le phénomène, nous sommes (presque) allés rencontrer celle que l'on appelle désormais "Serial Miller".</p>
+			</div>
+			<p class="readMore"><a href="{% url category "pipoles" %}">Lire la suite</a></p>
+		</div>
+
+		<div class="articleSection">
+			<h2><span><a href="{% url category "insolites" %}">Insolite</a></h2>
+			<div class="lead autoClear">
+				<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article8_wide.jpg" title="péripatétiputes"><img src="{{ MEDIA_URL }}critica/images/article/article8.jpg" alt="article8" /></a></div>
+				<h3><a href="{% url category "insolites" %}">En Espagne, on se libère grassement les bourses</a></h3>
+				<p>Savez-vous combien de pognon les Ibères vont foutre chaque jour chez les péripatétiputes ? Attention, ça déchire : 50 millions d'euros ! Les régions les plus sensibles à ce genre de pratique se situent du côté de Madrid, de Valence et de l'Andalousie. Et là, forcément, on reste sur le cul… Enqué-quête.</p>
+			</div>
+			<p class="readMore"><a href="{% url category "insolites" %}">Lire la suite</a></p>
+		</div>
+
+	</div>
+	<!-- // ARTICLE LIST -->
+
+	<!-- ADD -->
+	<div class="addSection add468">
+		<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+		<p><a href="#">Publicité</a></p>
+	</div>
+	<!-- // ADD -->
+
+	<!-- ARTICLE LIST -->
+	<div class="articleList autoClear">
+		<div class="articleSection">
+			<h2><span><a href="{% url category "voyages" %}">Voyage</a></span></h2>
+			<div class="lead  autoClear">
+				<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article9_wide.jpg"><img src="{{ MEDIA_URL }}critica/images/article/article9.jpg" alt="article9" /></a></div>
+				<h3><a href="{% url category "voyages" %}">C'est décidé, cet été, je retourne à Belfast !</a></h3>
+				<p>C'est décidé, cet été, je retourne à Belfast ! Regards surpris et visages perplexes - oui, oui, c'est de vous que je parle, je suis sûre que vous me prenez pour une folle ! Dans votre tête, 15.000 images se bousculent : guerre civile, cathos contre protestants, pluie, grisaille, fumée, et caetera, et caetera - que des clichés !</p>
+			</div>
+			<p class="readMore"><a href="{% url category "voyages" %}">Lire la suite</a></p>
+		</div>
+
+		<div class="articleSection" id="epicurien">
+			<h2><span><a href="{% url category "epicurien" %}">L'épicurien</a></span></h2>
+			<div class="lead  autoClear">
+				<ul>
+					<li><h3>Côté fumeur</h3><a href="{% url category "epicurien" %}#">Coupage, allumage, deux opérations à ne pas louper</a></li>
+					<li><h3>Côté gourmet</h3><a href="{% url category "epicurien" %}#">P'tit porc au curry entre amis</a></li>
+					<li><h3>Côté alcools</h3><a href="{% url category "epicurien" %}#">Bowmore 17 ans d'âge</a></li>
+				</ul>
+			</div>
+			<p class="readMore"><a href="{% url category "epicurien" %}">Lire la suite</a></p>
+		</div>
+	</div>
+	<!-- // ARTICLE LIST -->
+
+	<!-- ADD -->
+	<div class="addSection add468">
+		<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/alerte_enlevement.jpg" alt="Alerte en lèvement" /></a>
+		<p><a href="">Alerte enlèvement</a></p>
+	</div>
+	<!-- // ADD -->
+
+</div>
+<!-- // MAIN CONTENT -->
+
+
+<!-- SUB CONTENT -->
+<div class="rightWrap">
+
+	<div class="articleSection articleMain">
+		<h2><span><a href="{% url category "bouquins" %}">Bouquins</a></span></h2>
+		<h3><a href="{% url category "bouquins" %}">Les ch'tis c'était les clichés : qu'est-ce qu'elle leur met !</a></h3>
+		<div class="lead autoClear">
+			<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/article/article10_wide.jpg" title="Les ch'tis c'était les clichés" /><img src="{{ MEDIA_URL }}critica/images/article/article10.jpg" alt="article2" /></a></div>
+			<p>Une jeunette de 28 ans cette Elise Ovart-Baratte qui ose s'insurger contre les idées reçues véhiculées par le succès de "Bienvenue chez les ch'tis" et autres joyeusetés du genre "Au norddddd, c'était les corons" de feu Bachelet. Onze ans qu'elle vit à Lille, et elle défend son Nord avec plus d'âpreté, d'opiniâtreté qu'une native du ch'Nord. Sûr qu'elle ne s'est pas fait que des copains, surtout au PS local où elle est secrétaire de section, tant ses idées vont à l'encontre de l'euphorie générale après la sortie du film qui a détrôné en entrées "La grande vadrouille".</p>
+		</div>
+		<p class="readMore"><a href="{% url category "bouquins" %}">Lire la suite</a></p>
+	</div>
+
+	<div id="newsletterSection">
+		<form action="" method="post">
+			<p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
+			<p class="submit"><input src="{{ MEDIA_URL }}critica/images/ok.png" alt="Valider" type="image" /></p>
+		</form>
+	</div>
+
+	<div id="subContent">
+		<!-- LEFT WRAP -->
+		<div class="leftWrap">
+
+			<!-- ARTICLE LIST -->
+			<div class="articleList">
+				<div class="articleSection" id="coupdegueule">
+					<h2>Coup de gueule</h2>
+					<p>J'en viens à me demander si on n'est pas cernés de grosses feignasses incompétentes, mais je dois faire du mauvais esprit, pensez donc. Et puis l'idée mesquine me taraude : est-ce que les gens ont vraiment envie de bosser dans notre pays ? Est-ce qu'ils ont suffisamment "faim" pour trouver les solutions à nos problèmes quotidiens et se "bouger le cul" en conséquence ? Sûrement. Mais le sentiment général est à la "ertétisation", rappelez lundi, aujourd'hui il est en RTT.</p>
+					<p class="readMore"><a href="{% url category "coup-de-gueule" %}">Lire la suite</a></p>
+				</div>
+			</div>
+			<!-- // ARTICLE LIST -->
+
+			<div class="addSection">
+				<div class="add145 autoClear">
+					<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_145x145.gif" alt="Publicit&eacute;" /></a>
+					<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_145x145.gif" alt="Publicit&eacute;" /></a>
+					<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_145x145.gif" alt="Publicit&eacute;" /></a>
+					<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_145x145.gif" alt="Publicit&eacute;" /></a>
+				</div>
+				<p><a href="#">Publicité</a></p>
+			</div>
+
+			<!-- ARTICLE LIST -->
+			<div class="articleList">
+				<div class="articleSection" id="caricature">
+					<h2>L'illustration du jour</h2>
+					<div class="illustration"><a href="{{ MEDIA_URL }}critica/images/illustration_wide.jpg" title="TAPIE, bientôt (à) nouveau riche !"><img src="{{ MEDIA_URL }}critica/images/illustration.jpg" alt="L'illustration du jour" /></a></div>
+					<p></p>
+					<p class="credits">CLAVIER-SARKO : l'enquête (se) Corse !</p>
+				</div>
+
+				<div class="articleSection" id="reportage">
+					<h2>Reportage</h2>
+					<object width="300" height="241" type="application/x-shockwave-flash" data="http://www.youtube.com/v/0tNdNxvmH-4&hl=en&fs=1&rel=0">
+						<param name="movie" value="http://www.youtube.com/v/0tNdNxvmH-4&hl=en&fs=1&rel=0" />
+						<param value="high" name="quality"/>
+						<param value="false" name="menu"/>
+						<param name="allowFullScreen" value="true" />
+					</object>
+				</div>
+			</div>
+
+		</div>
+		<!-- // LEFT WRAP -->
+
+		<!-- RIGHT WRAP -->
+		<div class="rightWrap">
+
+			<div id="surveySection">
+				<h2><img src="{{ MEDIA_URL }}critica/images/pouroucontre_top.png" alt="Pour ou contre ?" /></h2>
+				<form action="" method="post">
+					<p>SUPPRESSION DU SAMEDI MATIN POUR LES ECOLIERS&nbsp;:</p>
+					<ul class="autoClear">
+						<li><input name="reponse_pourcontre" type="radio" value="Bande de feignasses, les gosses !" /><label>Bande de feignasses, les gosses !</label></li>
+						<li><input name="reponse_pourcontre" type="radio" value="Et un week-end, un, pour les profs et instits !" /><label>Et un week-end, un, pour les profs et instits !</label></li>
+						<li><input name="reponse_pourcontre" type="radio" value="Les journées restent quand même trop longues !" /><label>Les journées restent quand même trop longues !</label></li>
+						<li><input name="reponse_pourcontre" type="radio" value="Et pourquoi pas un jour de RTT aussi, non ?" /><label>Et pourquoi pas un jour de RTT aussi, non ?</label></li>
+						<li><input name="reponse_pourcontre" type="radio" value="M'en fous, j'a pas de gosse(s) !!" /><label>M'en fous, j'a pas de gosse(s) !!</label></li>
+					</ul>
+					<p class="submit"><input src="{{ MEDIA_URL }}critica/images/pouroucontre_valider.jpg" alt="Valider" type="image"/></p>
+				</form>
+			</div>
+
+			<div id="meteo">
+				<p><a href="#"><img src="{{ MEDIA_URL }}critica/images/meteo.jpg" alt="M&eacute;t&eacute;o" /></a></p>
+			</div>
+
+			<div class="addSection">
+				<div class="add130"> <a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_130x600.gif" alt="Publicit&eacute;" /></a></div>
+				<p><a href="">Publicité</a></p>
+			</div>
+
+		</div>
+		<!-- // RIGHT WRAP -->
+
+		<!-- TAG CLOUD -->
+		<div id="tagcloudSection">
+			<h2>Nuage de tags</h2>
+			<p>lorem <span style="font-size: 1.6em;">ipsum</span> dolor <span style="font-size: 1.2em;">sit</span> amet <span style="font-size: 1em;">consectetuer</span> <span style="font-size: 1.5em;">adipiscing adipis</span> dis <span style="font-size: 1.8em;">parturient</span> <span style="font-size: 1em;">montes</span> lorem <span style="font-size: 1em;">ipsum</span> dolor <span style="font-size: 1em;">sit</span> amet <span style="font-size: 1em;">consectetuer</span> <span style="font-size: 1.6em;">piscing</span> ipsum <span style="font-size: 2em;">dolor</span> sit dis <span style="font-size: 0.8em;">parturient</span> montesamet <span style="font-size: 1.4em;">consectetuer</span></p>
+		</div>
+		<!-- TAG CLOUD -->
+
+	</div>
+
+</div>
+<!-- // SUB CONTENT -->
+{% endblock %}

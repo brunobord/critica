@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+	<head>
+		<title>Critica - {% block title %}{% endblock %}</title>
+		<!-- METAS -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<meta name="Expires" content="never" />
+		<meta name="language" content="fr" />
+		<meta name="distribution" content="global" />
+		<meta name="robots" content="index,follow" />
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/general.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/layout.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/kwicks.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/grid.css" type="text/css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/css/fancy.css" media="screen" title="default"/>
+		<!-- JAVASCRIPT -->
+		<script type="text/javascript">
+			// <![CDATA[
+				var offspringConfiguration = {
+				runningMode: "light"
+				};
+			// ]]>
+		</script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/offspring.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/jquery-1.2.6.min.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/jquery.fancybox-1.0.0.js" ></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/kwicks.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/custom.js"></script>
+	</head>
+
+	<body id="home">
+		<div id="bodyWrap">
+
+			<!-- HEADER -->
+			<div id="header">
+				<div class="contentWrap autoClear">
+
+					<!-- LOGO -->
+					<div id="logo">
+						<img src="{{ MEDIA_URL }}critica/images/logo.gif" align="Critica" />
+					</div>
+					<!-- // LOGO -->
+
+					<!-- TOP NAV -->
+					{% block top_navigation %}
+					<ul id="topNav">
+						<li><a href="{% url home %}">Accueil</a></li>
+						<li><a href="#">Archives</a></li>
+						<li><a href="#">Recevoir la newsletter</a></li>
+						<li><a href="#">S'abonner au flux RSS</a></li>
+					</ul>
+					{% endblock %}
+					<!-- TOP NAV -->
+
+					<!-- ADD -->
+					<div class="addSection add728">
+						<a href="#"><img src="{{ MEDIA_URL }}critica/images/add/pub_728x90.gif" alt="Publicit&eacute;" /></a>
+						<p><a href="#">Publicité</a></p>
+					</div>
+					<!-- ADD -->
+
+				</div>
+			</div>
+			<!-- // HEADER -->
+
+			<!-- HEADLINE CONTENT -->
+			<div id="headlineContent">
+				<div class="contentWrap">
+
+					<!-- DATE -->
+					<div id="date">{% block issue_info %}<p>03 septembre 2008&nbsp;|&nbsp;<strong>N°125</strong></p>{% endblock %}
+					</div>
+					<!-- // DATE -->
+
+					<!-- SEARCH -->
+					<div id="search">
+						<form action="" method="post">
+							<p><input name="search" type="text"  value="Rechercher sur Critica.fr" onfocus="this.value=''" size="30" maxlength="40" id="searchTerm" /></p>
+							<p class="submit"><input type="image" src="{{ MEDIA_URL }}critica/images/search.png" alt="Valider" /></p>
+						</form>
+					</div>
+					<!-- // SEARCH -->
+
+				</div>
+			</div>
+			<!-- HEADLINE CONTENT -->
+
+			<!-- MAIN NAV -->
+			<div id="mainNav">
+				<div class="contentWrap">
+
+					<ul class="kwicks" style="display:block; margin:0 auto; width:1000px; height:42px; overflow:hidden;">
+						<li id="kwick1"><a href="{% url category "national" %}">National</a></li>
+						<li id="kwick2"><a href="{% url category "etranger" %}">Etranger</a></li>
+						<li id="kwick3"><a href="{% url category "societe" %}">Societe</a></li>
+						<li id="kwick4"><a href="{% url category "sport" %}">Sport</a></li>
+						<li id="kwick5"><a href="{% url category "pipoles" %}">Pipoles</a></li>
+						<li id="kwick6"><a href="{% url category "tele" %}">Tele</a></li>
+						<li id="kwick7"><a href="{% url category "bouquins" %}">Bouquins</a></li>
+						<li id="kwick8"><a href="{% url category "nanas" %}">Nanas</a></li>
+						<li id="kwick9"><a href="{% url category "insolites" %}">Insolite</a></li>
+						<li id="kwick10"><a href="{% url category "regions" %}">Regions</a></li>
+						<li id="kwick11"><a href="{% url category "voyages" %}">Voyages</a></li>
+						<li id="kwick12"><a href="{% url category "epicurien" %}">Epicurien</a></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- // MAIN NAV -->
+
+			<!-- CONTENT -->
+			<div id="content" class="contentWrap autoClear">
+                {% block content %}{% endblock %}
+			</div>
+			<!-- // CONTENT -->
+
+			<!-- FOOTER -->
+			<div id="footer">
+				<p> &copy; Critic@ </p>
+			</div>
+			<!-- // FOOTER -->
+
+		</div>
+	</body>
+</html>
