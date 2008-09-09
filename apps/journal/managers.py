@@ -17,19 +17,6 @@ class CategoryManager(models.Manager):
         return super(CategoryManager, self).get_query_set()
 
 
-
-class PositionManager(models.Manager):
-    """
-    ``Position`` model manager.
-    By default, retrieves all positions.
-    
-    """
-    
-    def get_query_set(self):
-        """ Retrieves all positions. """
-        return super(PositionManager, self).get_query_set()
-
-
 class IllustrationManager(models.Manager):
     """
     ``Illustration`` model manager.

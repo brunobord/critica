@@ -14,12 +14,10 @@ URLs for ``critica.apps.journal``::
 """
 from django.conf.urls.defaults import *
 from critica.apps.journal.views import home, category
-from critica.apps.journal.views import archives, archives_issue
-from critica.apps.journal.views import archives_issue_category, archives_issue_article
 
 
 urlpatterns = patterns('',
-    url(r'^(?P<category>[\w-]+)/$',
+    url(r'^(?P<category>[-\w]+)/$',
         category,
         name='category'
     ),

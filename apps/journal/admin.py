@@ -8,7 +8,6 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from tagging.models import Tag, TaggedItem
 from critica.apps.journal.models import Category
-from critica.apps.journal.models import Position
 from critica.apps.journal.models import Reportage
 from critica.apps.journal.models import Illustration
 from critica.apps.journal.models import Type
@@ -19,17 +18,10 @@ from critica.apps.journal.models import Page
 
 class CategoryAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Category`` model. """
-    list_display = ('name', 'slug', 'description')
+    list_display = ('id', 'name', 'slug', 'description')
     search_fields = ('name', 'description')
-    ordering = ('name',)
+    ordering = ('id',)
 
-
-class PositionAdmin(admin.ModelAdmin):
-    """ Administration interface options for ``Position`` model. """
-    list_display = ('position', 'description')
-    search_fields = ('description',)
-    ordering = ('position',)
-    
 
 class ReportageAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Reportage`` model. """
@@ -59,16 +51,16 @@ class IllustrationAdmin(admin.ModelAdmin):
 
 class TypeAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Type`` model. """
-    list_display = ('description', 'title')
+    list_display = ('id', 'description', 'title')
     ordering = ['id']
 
 
 class ArticleAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Article`` model. """
-    list_display = ('category', 'title', 'type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'is_reserved', 'viewed_count', 'author')
+    list_display = ('category', 'title', 'bolded_type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'is_reserved', 'viewed_count', 'author_full_name')
     list_filter = ('author', 'type', 'is_featured', 'is_published', 'is_illustrated', 'category')
     search_fields = ('title', 'summary', 'content', 'citation')
-    ordering = ('-publication_date',)
+    ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
     
     class Media:
@@ -156,7 +148,6 @@ class IssueAdmin(admin.ModelAdmin):
 admin.site.unregister(Tag)
 admin.site.unregister(TaggedItem)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Position, PositionAdmin)
 admin.site.register(Reportage, ReportageAdmin)
 admin.site.register(Illustration, IllustrationAdmin)
 admin.site.register(Type, TypeAdmin)

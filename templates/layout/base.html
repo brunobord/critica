@@ -29,7 +29,9 @@
 		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/offspring.js"></script>
 		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/jquery-1.2.6.min.js"></script>
 		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/jquery.fancybox-1.0.0.js" ></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/jquery.accordion.js"></script>
 		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/kwicks.js"></script>
+		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/accordion_init.js"></script>
 		<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/custom.js"></script>
 	</head>
 
@@ -98,7 +100,7 @@
 						<li id="kwick1"><a href="{% url category "national" %}">National</a></li>
 						<li id="kwick2"><a href="{% url category "etranger" %}">Etranger</a></li>
 						<li id="kwick3"><a href="{% url category "societe" %}">Societe</a></li>
-						<li id="kwick4"><a href="{% url category "sport" %}">Sport</a></li>
+						<li id="kwick4"><a href="{% url category "sports" %}">Sport</a></li>
 						<li id="kwick5"><a href="{% url category "pipoles" %}">Pipoles</a></li>
 						<li id="kwick6"><a href="{% url category "tele" %}">Tele</a></li>
 						<li id="kwick7"><a href="{% url category "bouquins" %}">Bouquins</a></li>

@@ -1,0 +1,658 @@
+/********************************************************************/
+/* COMMON															*/
+/********************************************************************/
+
+/* CLASSES -------------------------------------------------------- */
+hr.newSection{ display:none; }
+
+.floatLeft{ float:left; }
+.floatRight{ float:right; }
+
+.autoClear:after{ 
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* html .autoClear{height: 1%;}
+
+/* LINKS ---------------------------------------------------------- */
+a {
+	text-decoration: none;
+	color: #ff0000;
+}
+a:hover, a:focus {
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+
+/* HEADINGS ------------------------------------------------------- */
+h1, h2, h3{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+h1{
+	background: url(img/puce_article.gif) top left no-repeat;
+	font-size: 2em;
+	padding-left: 25px;
+	margin-bottom:20px;
+	text-transform:uppercase;
+	color: #000;
+}
+h2{
+	color: #000;
+	text-transform:uppercase;
+	margin:0 0 4px;
+}
+h2 a { color: #000; }
+h2 span {
+	font-size: .8em;
+	background: url(img/puce.gif) 0 3px no-repeat;
+	padding-left: 11px;
+}
+h3{	color: #ff0000; }
+h3 a{
+	display:block;
+}
+
+/* TEXTS ---------------------------------------------------------- */
+p, ul, address, dl{
+	font-size:1.4em;
+	line-height:1.35em;
+}
+
+dl{
+	margin-bottom:15px;
+}
+
+dd{
+	list-style-type:circle;
+	list-style-position:inside;
+	margin-left:20px;
+}
+
+
+
+/* IMAGES --------------------------------------------------------- */
+img{
+	display:block;
+}
+
+
+/********************************************************************/
+/* LAYOUT															*/
+/********************************************************************/
+
+/* BODY ----------------------------------------------------------- */
+body {
+	background: #FFF;
+	margin: 0; padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #666;
+	font-size: .6em;
+}
+
+/* HEADER --------------------------------------------------------- */
+
+/** HEADER | COMMON **/
+#header{
+	background:#110E12;
+}
+
+/** HEADER | LOGO **/
+#logo{
+	display:block;
+	margin:15px 0; padding:0;
+	float:left;
+}
+
+/** HEADER | TOP NAV **/
+#header ul#topNav {
+	float: right;
+	margin: 3px 0 5px; padding:0;
+	color: #ff0000;
+	display:inline;
+}
+#header ul#topNav li{
+	display:block;
+	float:left;
+	margin-left:5px;
+}
+#header ul#topNav li a{
+	padding:0 5px;
+	color:#FFFFFF;
+	font-size:.85em;
+}
+
+/* HEADLINE CONTENT ------------------------------------------------ */
+
+/** HEADLINE CONTENT | COMMON **/
+#headlineContent{
+	background: url(img/header_bg.gif) repeat-x;
+	overflow:hidden;
+}
+
+/** HEADLINE CONTENT | DATE **/
+#date p{
+	float: left;
+	letter-spacing: 1px;
+	margin: 0; padding:4px 0;
+	font-weight: bold;
+	color: #fff;
+}
+
+/** HEADLINE CONTENT | SEARCH **/
+#search {
+	margin: 2px 0 0;
+	float: right;
+}
+#search input#searchTerm {
+	display:block;
+	height: 16px;
+	width: 160px;
+	color: #c9c9c9;
+	border: 1px solid #cc0000;
+	margin:0 2px 0 0; padding:1px;
+	float:left;
+	font-size:12px;
+}
+#search input#searchTerm:focus {
+	color:#666;
+}
+#search p {
+	display:inline;
+	float:left;
+}
+
+/* MAIN NAV -------------------------------------------------------- */
+#mainNav {
+	margin-top: 3px;
+	margin-bottom:20px;
+	height: 42px;
+	background: url(img/menu_bg.gif) repeat-x;
+}
+
+/* FOOTER ---------------------------------------------------------- */
+#footer {
+	background:#ce0100 url(img/footer_bg.gif) repeat-x;
+	font-weight: bold;
+	color: #fff;
+	padding-top:20px;
+	margin-top:30px;
+}
+#footer p{
+	text-align: center;
+	font-size:.9em; 
+}
+
+
+/********************************************************************/
+/* ARTICLE SECTION 													*/
+/********************************************************************/
+
+/* ARTICLE SECTION | COMMON --------------------------------------- */
+div.articleSection{	
+	padding:6px;
+	margin-bottom:20px;
+	/*background: url(img/une_bg.gif) bottom repeat-x;*/
+}
+div.articleSection .illustration{
+	float:left; display:inline;
+	margin-right:8px;
+}
+div.articleSection .lead{
+	overflow:hidden;
+}
+div.articleSection .readMore {
+	text-align: right;
+	padding: 0; margin:0;
+	font-size:1.15em;
+	font-weight:bold;
+}
+div.articleSection .readMore a{
+	background-color:#FF0000;
+	color:#FFF;
+	padding:2px 4px;
+}
+div.articleSection .readMore a:hover{
+	background-color:#CC0009;
+	text-decoration:none;
+}
+
+/* ARTICLE SECTION | SUB CONTENT ---------------------------------- */
+#subContent .articleSection {
+	width:295px;
+	padding:0 10px 10px;
+	background:none;
+}
+#subContent .articleSection  h2{
+	background:#FF1A00 url(img/rubrique_bg.png) repeat-x bottom;
+	padding: 4px 6px 6px;
+	margin-bottom: 6px;
+	color: #fff;
+	font-size:1.1em;
+	text-align:center;
+	letter-spacing:.1em;
+}
+
+
+/********************************************************************/
+/* ARTICLE MAIN 													*/
+/********************************************************************/
+
+/* ARTICLE MAIN | COMMON ------------------------------------------ */
+.articleMain h3{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 2.4em;
+	line-height:1em;
+	margin-bottom:5px;	
+}
+.articleMain h4{
+	color: #ff0000;
+	font-size:1.4em;
+}	
+.articleMain  p.author {
+	font-weight: bold;
+	font-size: 1em;
+	margin:-5px 0 20px;
+}
+.articleMain p.lead {
+	font-weight: bold;
+	font-size:1.35em;
+}
+
+/* ARTICLE MAIN | ILLUSTRATION ------------------------------------ */
+body.rubrique .articleMain div.illustration{
+	width:202px;
+	border:0px solid #CCC;
+
+}
+.articleMain div.illustration img{
+	width:200px;
+	border:1px solid #FFF;
+}
+.articleMain div.illustration p.credits {
+	background-color: #ccc;
+	font-size: 1.1em;
+	text-align: center;
+	padding:3px 0 0 0; margin:0;
+}
+
+/* ARTICLE MAIN | BLOCKQUOTE -------------------------------------- */
+.articleMain blockquote {
+	display:block;
+	float:right;
+    width:200px;
+    background: url(img/quote_start.gif) no-repeat top left;
+	padding:10px 0 0 40px;
+	margin:20px;
+	font-size:1.2em;
+	text-align:justify;
+}
+.articleMain blockquote p {
+    width:160px;
+    background: url(img/quote_end.gif) no-repeat  bottom right;
+	font-weight:bold;
+	padding:0  40px 10px 0;
+}
+
+/* ARTICLE MAIN | RELATED ARTICLES -------------------------------- */
+.articleMain .relatedArticles {
+	background-color: #F2F2F2;
+	margin: 20px auto;
+	padding: 5px;
+}
+.articleMain .relatedArticles h4{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background:#CCC;
+	color:#FFFFFF;
+	font-size:1.3em;
+	padding:3px;
+	text-transform:uppercase;
+}
+.articleMain .relatedArticles li {
+	list-style: url(img/puce_alireaussi.gif);
+	margin-left: 20px;
+	margin-bottom:2px;
+}
+.articleMain .relatedArticles li h5{
+	margin:0;
+}
+.articleMain .relatedArticles li a {
+	font-weight: bold;
+	color: #666;
+	display:block;
+}
+.articleMain .relatedArticles li a span{
+	font-weight:normal;
+}
+
+/* ARTICLE MAIN | LEFT WRAP ------------------------------------------ */
+.leftWrap .articleMain {
+	padding:0 35px 0;
+	width:458px;
+	background:url(img/mainArticle_bg.jpg) left repeat-y;
+}
+.leftWrap .articleMain h3 {
+	background:url(img/mainArticle_top.jpg) top left no-repeat;
+	margin:0 -35px;
+	padding:40px 35px 5px;
+}
+.leftWrap .articleMain p.readMore {
+	background:url(img/mainArticle_btm.jpg) bottom left no-repeat;
+	margin:0 -35px;
+	padding:0 35px 35px;
+}
+
+body#home .leftWrap .articleMain div.lead{
+	height:130px;
+}
+body#home .leftWrap .articleMain .illustration,
+body#home .leftWrap .articleMain img {
+	width:80px;
+}
+body#home .leftWrap .articleMain div.lead p {
+	margin-left:85px;
+	font-size:1.2em;
+}
+
+/* ARTICLE MAIN | RIGHT WRAP ------------------------------------------ */
+.rightWrap .articleMain{
+	width:378px; height:366px;
+	background:url(img/mainArticle_postIt.jpg) no-repeat;
+	padding:10px 20px 60px 40px;
+}
+
+body#home .rightWrap .articleMain div.lead{
+	height:300px;
+}
+body#home .rightWrap .articleMain .illustration,
+body#home .rightWrap .articleMain img {
+	width:150px;
+}
+body#home .rightWrap .articleMain div.lead p {
+	margin-left:155px;
+}
+
+
+/********************************************************************/
+/* ARTICLE LIST														*/
+/********************************************************************/
+
+/* ARTICLE LIST | COMMON ------------------------------------------ */
+.articleList .articleSection h3{
+	margin-bottom:2px;
+	font-size:1.3em !important;
+}
+
+/* ARTICLE LIST | MAIN CONTENT ------------------------------------ */
+#mainContent .articleList .articleSection {
+	width: 251px;
+	float: left;
+	margin-right:10px;
+	margin-bottom: 5px;
+	display:inline;
+	background:none;
+}
+#mainContent .articleList .articleSection h2{
+	background:url(img/article_top.jpg) bottom no-repeat;
+	height:75px;
+	margin-bottom:0;
+	padding-left:15px;
+}
+#mainContent .articleList .articleSection .lead{
+	background:url(img/article_bg.jpg) no-repeat;
+	height:130px;
+	overflow:hidden;
+	padding:0 15px;
+}
+#mainContent .articleList .articleSection p{
+	font-size:1.15em;
+}
+#mainContent .articleList .articleSection p.readMore{
+	background:url(img/article_btm.jpg) no-repeat;
+	height:50px;
+	padding-right:20px;
+	padding-top:20px;
+}
+
+body#home #mainContent .articleList .articleSection .lead p{
+	margin-left:85px;	
+}
+body#home #mainContent .articleList .articleSection .illustration{
+	width:80px;
+}
+
+/* ARTICLE LIST | SUB CONTENT ------------------------------------- */
+#subContent .articleList{
+	background:url(img/leftWrap_bg.jpg) left top repeat-y;
+}
+#subContent .articleList div.first-child{
+	padding-top:60px;
+	background:url(img/leftWrap_top.jpg) left top no-repeat;
+}
+#subContent .articleList .articleSection .button p{
+	font-weight:bold;
+	margin-bottom:0;
+}
+#subContent .articleList .articleSection .button:hover{
+	cursor:pointer;
+} 
+#subContent .articleList .articleSection .button:hover p{
+	color:#000000;
+}
+
+body.rubrique #subContent .articleList .articleSection p{
+	font-size:1.2em;
+	line-height:1.4em;
+}
+
+
+/********************************************************************/
+/* ARTICLE MISC														*/
+/********************************************************************/
+
+/* ARTICLE MISC | CARICATURE -------------------------------------- */
+#caricature .illustration {
+	display:block;
+	float:none;
+	text-align: center;
+	margin-bottom: 6px;
+	margin:0 0 5px; padding:0;
+	width:auto;
+}
+#caricature .illustration img{
+	margin:0 auto;
+}
+#caricature p {
+	text-align: center;
+	color: #2d2d2d;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin:0;
+}
+#caricature p.credits {
+	font-size: 1.1em;
+	font-weight: normal;
+}
+
+/* ARTICLE MISC | EPICURIEN --------------------------------------- */
+#epicurien ul{
+	margin-left:5px;
+}
+#epicurien li{
+	margin-bottom:8px;
+	padding-bottom:8px;
+	line-height:1em;
+	border-bottom:1px solid #CCC;
+}
+#epicurien li h3{
+	color:#000000;
+	font-size:.75em !important;
+	margin-bottom:-2px;
+}
+#epicurien li a{
+	font-weight:bold;
+	font-size:1em;
+}
+#epicurien .readMore a{
+	display:none;
+}
+
+
+/********************************************************************/
+/* ADD SECTION														*/
+/********************************************************************/
+
+/*  ADD SECTION | COMMON ------------------------------------------ */
+.addSection{
+	margin-bottom:20px;
+}
+.addSection p{
+	text-align:center;
+	margin:0; padding:0;
+	font-size:1em;
+}
+.addSection img, .addSection object{
+	display:block;
+	margin:0 auto; padding:0;
+}
+
+#header .addSection {
+	width: 728px;
+	float: right;
+	padding-bottom: 0;
+	margin-bottom:0;
+}
+#mainContent .leftWrap .addSection{
+	width:526px;
+}
+
+/*  ADD SECTION | 468 --------------------------------------------- */
+.add468 {
+	margin: 20px auto ;
+}
+
+/*  ADD SECTION | 145 --------------------------------------------- */
+.add145 img, .add145 object{
+	height: 145px;
+	width: 145px;
+	float: left;
+	margin: 8px 0 0 8px;
+	overflow:hidden;
+	display:inline;
+}
+
+
+/********************************************************************/
+/* TAGCLOUD	SECTION													*/
+/********************************************************************/
+#tagcloudSection {
+	border: 1px solid #ff0000;
+	padding: 2px 4px 4px 4px;
+	clear:both;
+}
+#tagcloudSection h2{
+	background: url(img/rubrique_bg.png) repeat-x;
+	height: 18px;
+	padding: 1px 0 0 6px;
+	margin-bottom: 6px;
+	color: #fff;
+	font-size:1.1em;
+	font-weight:bold;
+}
+#tagcloudSection p {
+	color: #333;
+	line-height: 1.4em;
+	font-size: 1.5em;
+}
+
+
+/********************************************************************/
+/* NEWSLETTER SECTION												*/
+/********************************************************************/
+#newsletterSection {
+	height: 68px; width:402px;
+	background: url(img/newsletter.jpg) no-repeat;
+	padding: 35px 20px 0 20px;
+	margin:0 auto;
+}
+#newsletterSection form{
+	display:block;
+	margin:0 auto;
+	width:300px;
+}
+#newsletterSection form p {
+	float:left;
+}
+#newsletterSection input#newsletterEmail {
+	display:block;
+	height: 22px; width: 250px;
+	color: #c9c9c9;
+	border: 1px solid #999;
+	margin-top: 1px;
+	font-size:1.3em;
+}
+#newsletterSection input#newsletterEmail:focus {
+	color:#666;
+	font-weight:bold;
+}
+#newsletterSection p.submit{
+	margin-left:5px;
+}
+
+
+/********************************************************************/
+/* SURVEY SECTION 													*/
+/********************************************************************/
+#surveySection {
+	background: url(img/pouroucontre_bottom.png)bottom no-repeat;
+	padding-bottom:20px;
+	margin-bottom:20px;
+}
+#surveySection p{
+	font-size:1.1em;
+	text-align:center;
+	font-weight:bold;
+	padding:6px 0;
+	color: #000;
+}
+#surveySection h2{
+	margin:0 auto; padding:0;
+}
+#surveySection input {
+	margin-bottom: 10px;
+}
+#surveySection form {
+	background: url(img/pouroucontre_bg.png) repeat-y;
+}
+#surveySection form ul {
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0 3px; margin:0;
+}
+#surveySection form li{
+	clear:left;
+}
+#surveySection form li input {
+	display:block;
+	float:left;
+}
+#surveySection form li label{
+	float:left;
+	display:block;
+	width:90px;
+	margin-bottom:5px;
+}
+
+
+/********************************************************************/
+/* METEO SECTION													*/
+/********************************************************************/
+#meteo {
+	margin-bottom: 20px;
+}
+

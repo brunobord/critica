@@ -66,7 +66,11 @@ class Page(models.Model):
     def __unicode__(self):
         """ Object human-readable string representation. """
         return u'%s' % self.title
-        
+    
+    def author_full_name(self):
+        return self.author.get_full_name()
+    author_full_name.short_description = _('author')
+    
     @permalink
     def get_absolute_url(self):
         """ Returns page's absolute URL. """

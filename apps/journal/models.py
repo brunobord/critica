@@ -13,7 +13,6 @@ from django.template.defaultfilters import slugify
 from tagging.models import Tag
 from tagging.fields import TagField
 from critica.apps.journal.managers import CategoryManager
-from critica.apps.journal.managers import PositionManager
 from critica.apps.journal.managers import IllustrationManager
 from critica.apps.journal.managers import ReportageManager
 from critica.apps.journal.managers import TypeManager
@@ -87,42 +86,6 @@ class Category(models.Model):
     objects = CategoryManager()
 
 
-class Position(models.Model):
-    """
-    Article position in the page.
-    
-    A position is composed of::
-    
-        position
-            Position in the page. Must be unique.
-            Required.
-            
-        description
-            Short description of the position. Max. 100 characters.
-            Required.
-            
-    Managers::
-    
-        objects
-            All objects.
-
-    """
-    position = models.PositiveIntegerField(_('position'), unique=True, help_text=_('Hierarchical position in the page.'))
-    description = models.CharField(_('description'), max_length=100, help_text=_('A short description of this position'))
-    
-    class Meta:
-        """ Model metadata. """
-        verbose_name = _('position')
-        verbose_name_plural = _('positions')
-    
-    def __unicode__(self):
-        """ Object human-readable string representation. """
-        return u'%s' % self.position
-        
-    # Managers
-    objects = PositionManager()
-
-
 class Illustration(models.Model):
     """
     Article illustration.
@@ -174,7 +137,7 @@ class Illustration(models.Model):
         
     def __unicode__(self):
         """ Object human-readable string representation. """
-        return u'%s' % self.legend
+        return u'%s' % self.image
     
     def thumbnail(self):
         return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, self.image, self.legend)
@@ -433,7 +396,7 @@ class Article(models.Model):
         complete
             Complete articles.
             
-    """
+    """    
     type = models.ForeignKey(Type, verbose_name=_('type'), help_text=_('Please, select the article type.'))
     title = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
     slug = models.SlugField(_('slug'), max_length=255, blank=True, null=True)
@@ -442,7 +405,6 @@ class Article(models.Model):
     issues = models.ManyToManyField(Issue, verbose_name=_('issues'), db_index=True, help_text=_('Please, select one or several issues.'))
     category = models.ForeignKey(Category, verbose_name=_('category'), db_index=True, help_text=_('Please, select a category for this article.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
-    position = models.ForeignKey(Position, verbose_name=_('position'), null=True, blank=True, help_text=_('Please, select a position for this article.'))
     viewed_count = models.PositiveIntegerField(_('viewed count'), null=True, blank=True, editable=False)
     
     creation_date = models.DateTimeField(_('creation date'), null=True, blank=True, editable=False)
@@ -470,6 +432,22 @@ class Article(models.Model):
     def __unicode__(self):
         """ Object human-readable string representation. """
         return u"%s: %s" % (self.category, self.title)
+        
+    @permalink
+    def get_absolute_url(self):
+        """ Returns article's absolute URL. """
+        return ('category', (), { 
+            'category': self.category.slug,
+        })
+
+    def bolded_type(self):
+        return '<em>%s</em>' % (self.type.title,)
+    bolded_type.allow_tags = True
+    bolded_type.short_description = _('Type')
+    
+    def author_full_name(self):
+        return self.author.get_full_name()
+    author_full_name.short_description = _('author')
     
     def save(self):
         """ Object pre-saving operations. """
@@ -481,6 +459,7 @@ class Article(models.Model):
             self.modification_date = datetime.now()
         self.slug = slugify(self.title)
         super(Article, self).save()
+        
     
     # Managers
     objects = models.Manager()

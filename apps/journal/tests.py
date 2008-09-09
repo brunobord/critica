@@ -7,7 +7,7 @@ from django.test import TestCase
 
 
 class JournalTestCase(TestCase):
-    fixtures = ['test_data']
+    fixtures = ['sample_data']
     
     def test_home(self):
         """
@@ -23,7 +23,7 @@ class JournalTestCase(TestCase):
         Tests a current issue category.
         Should return 200 and use ``journal/category.html`` template.
         """
-        response = self.client.get('/test-category/')
+        response = self.client.get('/national/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'journal/category.html')
         

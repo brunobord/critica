@@ -4,34 +4,39 @@ Views for ``critica.apps.journal``.
 """
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.http import Http404
 from critica.apps.journal.models import Page
 
 
 def home(request):
-    #page = Page.complete.filter(category__pk=1)[0]
+    """
+    Displays the homepage.
+            
+    """
+    page = Page.complete.get(category__pk=1)
+    articles = page.articles.all()
+    
     return render_to_response(
         'journal/home.html', 
-        {}, 
+        {'page': page, 'articles': articles},
         context_instance=RequestContext(request)
     )
-    
+
+
 def category(request, category):
+    """
+    Displays the category page for a given category.
+    
+    """
+    try:
+        page = Page.complete.get(category__slug=category)
+        articles = page.articles.all()
+    except:
+        raise Http404
+        
     return render_to_response(
         'journal/category.html', 
-        {}, 
+        {'page': page, 'articles': articles}, 
         context_instance=RequestContext(request)
     )
-    
-def archives(request):
-    return render_to_response('journal/archives.html', {})
-    
-def archives_issue(request, issue):
-    return render_to_response('journal/archives_issue.html', {})
-    
-def archives_issue_category(request, issue, category):
-    return render_to_response('journal/archives_issue_category.html', {})
-    
-def archives_issue_article(request, issue, category, article):
-    return render_to_response('journal/archives_issue_article.html', {})
-    
 

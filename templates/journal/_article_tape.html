@@ -1,0 +1,5 @@
+<div class="articleSection" id="{{ article.category.slug }}">
+	<h2>{{ article.category.name }}</h2>
+    {{ article.summary|safe }}
+	<p class="readMore"><a href="{{ article.get_absolute_url }}">Lire la suite</a></p>
+</div>

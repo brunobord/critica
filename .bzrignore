@@ -1,7 +1,3 @@
 settings.py
 manage.py
-media/critica
-media/critica/css
-media/critica/js
-media/critica/images
 *.pyc

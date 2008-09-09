@@ -1,0 +1,8 @@
+<h2><span><a href="{{ article.get_absolute_url }}">{{ article.category.name }}</a></span></h2>
+<h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+<div class="lead autoClear">
+    <div class="illustration"><a href="{{ article.illustration.image.url }}" title="{{ article.illustration.legend }}" /><img src="{{ article.illustration.image.url }}" alt="article2" /></a></div>
+    {{ article.summary|safe }}
+</div>
+<p class="readMore"><a href="{{ article.get_absolute_url }}">Lire la suite</a></p>
+

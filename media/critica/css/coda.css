@@ -1,0 +1,55 @@
+#slider{
+	width: 560px;
+	
+}
+.csw {width: 860px;  overflow: hidden; height:350px;}
+.csw .loading {margin: 200px 0 300px 0; text-align: center}
+.stripViewer { /* This is the viewing window */
+	position: relative;
+	overflow: hidden; 
+	margin: auto;
+	width: 860px; /* Also specified in  .stripViewer .panelContainer .panel  below */
+	clear: both;
+}
+.stripViewer .panelContainer { /* This is the big long container used to house your end-to-end divs. Width is calculated and specified by the JS  */
+	position: relative;
+	left: 0; top: 0;
+	width: 860px;
+	list-style-type: none;
+}
+.stripViewer .panelContainer .panel { /* Each panel is arranged end-to-end */
+	float:left;
+	height: 100%;
+	position: relative;
+	width: 860px; /* Also specified in  .stripViewer  above */
+}
+.stripNav{display:none;}
+
+div.stripNavR{
+	position:absolute;
+	right:20px; top:0;
+}
+div.stripNavR a{
+	display:block;
+	width:36px;
+	height:366px;
+	background:url(../img/right_arrow.png) -10px 50% no-repeat;
+	text-indent:-9999px;
+}
+div.stripNavR a:hover{
+	background-position:0 50%;
+}
+div.stripNavL{
+	position:absolute;
+	left:18px; top:0;
+}
+div.stripNavL a{
+	display:block;
+	width:36px;
+	height:366px;
+	background:url(../img/left_arrow.png) 10px 50% no-repeat;
+	text-indent:-9999px;
+}
+div.stripNavL a:hover{
+	background-position:0 50%;
+}

@@ -72,7 +72,7 @@ constant which points to the project root directory::
 Then, add project templates directory::
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_PATH, 'templates'),
+    os.path.join(PROJECT_PATH, 'critica', 'templates'),
 )
 
 Because Critic@-engine uses a auth profile module, you need to indicate it by 

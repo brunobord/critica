@@ -1,0 +1,111 @@
+/* CSS Document */
+
+ .kwicks {  
+     list-style: none;  
+     position: relative;  
+     margin: 0;  
+     padding: 0; 
+	background-image:url(img/no_flicker.jpg); /*some browsers are to slow when aligning the menu items via jQuery and so the background shines through, this prevents this flickering*/
+
+ }  
+ .kwicks li{  
+    display: block;  
+    overflow: hidden;  
+    padding: 0;  
+    cursor: pointer;  
+	float: left;
+	width: 83px;
+	height: 42px;
+	margin-right: 0;
+	background-image:url(img/kwicks_sprite.jpg);
+	background-repeat:no-repeat;
+}
+.kwicks a{
+	display:block;
+	height: 42px;
+	text-indent:-9999px;
+	outline:none;
+}
+
+#kwick1 {
+	background-position:0px 0px;
+}
+#kwick2 {
+	background-position:-113px 0px;
+}
+#kwick3 {
+	background-position:-226px 0px;
+}
+#kwick4 { 
+	background-position:-339px 0px;
+}
+#kwick5 {
+	background-position:-452px 0px;
+}
+#kwick6 {
+	background-position:-565px 0px;
+}
+#kwick7 {
+	background-position:-678px 0px;
+}
+#kwick8 { 
+	background-position:-791px 0px;
+}
+#kwick9 {
+	background-position:-904px 0px;
+}
+#kwick10 {
+	background-position:-1017px 0px;
+}
+#kwick11 { 
+	background-position:-1130px 0px;
+}
+#kwick12 { 
+	background-position:-1243px 0px;
+}
+
+
+#kwick1.active, #kwick1:hover { 
+	background-position: 0 bottom;
+}
+#kwick2.active, #kwick2:hover{
+	background-position: -113px bottom;
+}
+#kwick3.active, #kwick3:hover {
+	background-position: -226px bottom;
+}
+#kwick4.active, #kwick4:hover {
+	background-position: -339px bottom; 
+}
+#kwick5.active, #kwick5:hover { 
+	background-position: -452px bottom;
+}
+#kwick6.active, #kwick6:hover{
+	background-position: -565px bottom;
+}
+#kwick7.active, #kwick7:hover {
+	background-position: -678px bottom;
+}
+#kwick8.active, #kwick8:hover {
+	background-position: -791px bottom; 
+}
+#kwick9.active, #kwick9:hover{
+	background-position: -904px bottom;
+}
+#kwick10.active, #kwick10:hover {
+	background-position: -1017px bottom;
+}
+#kwick11.active, #kwick11:hover {
+	background-position: -1130px bottom; 
+}
+#kwick12.active, #kwick121:hover {
+	background-position: -1243px bottom; 
+}
+/*
+#kwick12 a{
+	background-image:url(end.jpg);
+	background-repeat:no-repeat;
+	background-position: right;
+	padding-right:2px;
+}
+*/

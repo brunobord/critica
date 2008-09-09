@@ -11,7 +11,7 @@ from critica.apps.pages.models import Page
 
 class PageAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Page`` model. """
-    list_display = ('author', 'title', 'creation_date', 'modification_date', 'is_published', 'content')
+    list_display = ('title', 'creation_date', 'modification_date', 'is_published', 'author_full_name')
     search_fields = ('title', 'content')
     list_filter = ('is_published', 'author')
     ordering = ('title',)
