@@ -1,3 +1,5 @@
 settings.py
 manage.py
+media
+media/*
 *.pyc

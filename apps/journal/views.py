@@ -47,9 +47,11 @@ def archives(request):
     Displays archives index page.
     
     """
+    issues = Issue.complete.all()
+    
     return render_to_response(
         'journal/archives.html', 
-        {}, 
+        {'issues': issues}, 
         context_instance=RequestContext(request)
     )
     

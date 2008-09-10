@@ -57,7 +57,7 @@ class TypeAdmin(admin.ModelAdmin):
 
 class ArticleAdmin(admin.ModelAdmin):
     """ Administration interface options for ``Article`` model. """
-    list_display = ('category', 'title', 'bolded_type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'is_reserved', 'viewed_count', 'author_full_name')
+    list_display = ('title', 'category', 'bolded_type', 'publication_date', 'is_featured', 'is_published', 'is_illustrated', 'is_reserved', 'viewed_count', 'author_full_name')
     list_filter = ('author', 'type', 'is_featured', 'is_published', 'is_illustrated', 'category')
     search_fields = ('title', 'summary', 'content', 'citation')
     ordering = ('-publication_date', 'category')
