@@ -1,9 +1,21 @@
 {% extends "layout/base.html" %}
-{% block title %}Archives &raquo; {{ day }}{% endblock %}
+{% block title %}Archives &raquo; {{ day|date:"l d F Y" }}{% endblock %}
 {% block content %}
 <div id="mainContent">
 
-    <h1><span>Archives &raquo; {{ day }}</span></h1>
+    <h1><span>Archives &raquo; {{ day|date:"l d F Y" }}</span></h1>
+    
+    <p>Vous consultez actuellement les archives du {{ day|date:"l d F Y" }}.</p>
+    
+    {% regroup object_list by category as category_list %}
+    {% for category in category_list %}
+        <h2>{{ category.grouper }}</h2>
+        <ul>
+        {% for article in category.list %}
+            <li><a href="#" title="{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}">{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
 
 </div>
 {% endblock %}

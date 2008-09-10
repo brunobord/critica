@@ -4,6 +4,26 @@
 <div id="mainContent">
 
     <h1><span>Archives</span></h1>
+    
+    <p>
+        Vous pouvez consulter les archives de Critic@ par date de publication
+        ou utiliser directement la fonction de recherche du site.
+    </p>
+    
+    {% if issues %}
+        {% regroup issues by publication_date|date:"Y" as year_list %}
+        {% for year in year_list %}
+            <h2><a href="{% url archives_year year.grouper %}" title="Consulter les archives pour l'année {{ year.grouper }}">{{ year.grouper }}</a></h2>
+            {% regroup year.list by publication_date|date:"m" as month_list %}
+            <ul>
+            {% for month in month_list %}
+                <li><a href="{% url archives_month year.grouper,month.grouper %}" title="Consulter les archives de {{ month.list.0.publication_date|date:"F Y" }}">{{ month.list.0.publication_date|date:"F" }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    {% else %}
+        <p>Désolé, aucune archive pour le moment.</p>
+    {% endif %}
 
 </div>
 {% endblock %}

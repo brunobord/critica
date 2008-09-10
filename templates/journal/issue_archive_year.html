@@ -5,6 +5,18 @@
 
     <h1><span>Archives &raquo; {{ year }}</span></h1>
 
+    <p>Vous consultez actuellement les archives pour l'année {{ year }}.</p>
+    
+    {% regroup object_list by publication_date|date:"m" as month_list %}
+    <ul>
+    {% for month in month_list %}
+        <li>
+            <a href="{% url archives_month month.list.0.publication_date|date:"Y",month.grouper %}" title="Consulter les archives de {{ month.list.0.publication_date|date:"F Y" }}">{{ month.list.0.publication_date|date:"F"|capfirst }}</a>
+            ({{ object_list.count }} édtion{{ object_list.count|pluralize }})
+        </li>
+    {% endfor %}
+    <ul>
+
 </div>
 {% endblock %}
 

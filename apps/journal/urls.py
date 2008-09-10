@@ -33,7 +33,7 @@ URLs for ``critica.apps.journal``::
         
 """
 from django.conf.urls.defaults import *
-from critica.apps.journal.models import Issue, Page
+from critica.apps.journal.models import Issue, Page, Article
 
 
 # Archives
@@ -44,9 +44,34 @@ archives_dict = {
 }
 
 urlpatterns = patterns('django.views.generic.date_based',
-    url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', 'archive_day', dict(archives_dict, month_format='%m'), name='archives_day'),
-    url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/$', 'archive_month', dict(archives_dict, month_format='%m'), name='archives_day'),
-    url(r'^archives/(?P<year>\d{4})/$', 'archive_year', dict(archives_dict, make_object_list=True), name='archives_year'),
+    url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', 
+        'archive_day', 
+        dict(
+            queryset=Article.complete.order_by('category'),
+            date_field='publication_date',
+            template_name='journal/issue_archive_day.html',
+            month_format='%m',
+        ), 
+        name='archives_day'
+    ),
+    url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/$', 
+        'archive_month', 
+        dict(
+            queryset=Issue.complete.all(),
+            date_field='publication_date',
+            month_format='%m'
+        ), 
+        name='archives_month',
+    ),
+    url(r'^archives/(?P<year>\d{4})/$', 
+        'archive_year', 
+        dict(
+            queryset=Issue.complete.all(),
+            date_field='publication_date',
+            make_object_list=True,
+        ), 
+        name='archives_year',
+    ),
 )
 
 urlpatterns += patterns('django.views.generic.simple',

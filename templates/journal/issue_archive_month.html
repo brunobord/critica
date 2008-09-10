@@ -1,9 +1,20 @@
 {% extends "layout/base.html" %}
-{% block title %}Archives &raquo; {{ month }}{% endblock %}
+{% block title %}Archives &raquo; {{ month|date:"F Y" }}{% endblock %}
 {% block content %}
 <div id="mainContent">
 
-    <h1><span>Archives &raquo; {{ month }}</span></h1>
+    <h1><span>Archives &raquo; {{ month|date:"F Y" }}</span></h1>
+
+    <p>Vous consultez actuellement les archives de {{ month|date:"F Y" }}.</p>
+    
+    <ul>
+    {% for issue in object_list %}
+        <li>
+            <a href="{% url archives_day issue.publication_date|date:"Y",issue.publication_date|date:"m",issue.publication_date|date:"d" %}" title="Consulter les archives du {{ issue.publication_date|date:"l d F" }}">{{ issue.publication_date|date:"l d F"|capfirst }}</a>
+            ({{ issue.complete_article_set.count }} article{{ issue.complete_article_set.count|pluralize }})
+        </li>
+    {% endfor %}
+    <ul>
 
 </div>
 {% endblock %}
