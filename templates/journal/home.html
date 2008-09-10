@@ -3,6 +3,7 @@
 {% block content %}
 <!-- MAIN CONTENT -->
 <div id="mainContent" class="leftWrap">
+{% with page.articles.all as articles %}
 
     {% for article in articles %}
         {% ifequal article.category.slug "national" %}
@@ -185,7 +186,7 @@
 		<!-- TAG CLOUD -->
 
 	</div>
-	
+{% endwith %}
 </div>
 <!-- // SUB CONTENT -->
 {% endblock %}

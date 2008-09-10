@@ -11,9 +11,9 @@ admin.autodiscover()
 # Applications
 # ------------------------------------------------------------------------------
 urlpatterns = patterns('',
-    (r'^admin/(.*)',  admin.site.root),
+    (r'^admin/(.*)', admin.site.root),
     (r'^pages/', include('critica.apps.pages.urls')),
-    (r'',        include('critica.apps.journal.urls')),
+    (r'', include('critica.apps.journal.urls')),
 )
 
 # Media

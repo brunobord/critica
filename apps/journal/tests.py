@@ -41,58 +41,48 @@ class JournalTestCase(TestCase):
     def test_archives(self):
         """
         Tests archives index.
-        Should returns 200 and use ``journal/archives.html`` template.
+        Should return 200 and use ``journal/issue_archive.html`` template.
         
         """
         response = self.client.get('/archives/')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'journal/archives.html')
+        self.assertTemplateUsed(response, 'journal/issue_archive.html')
         
-    def test_archives_issue(self):
+    def test_archives_year(self):
         """
-        Tests archives for a given issue.
-        Should returns 200 and use ``journal/archives_issue.html`` template.
+        Tests archives for a given year.
+        Should return 200 and use ``journal/issue_archive_year.html`` template.
         
         """
-        response = self.client.get('/archives/124/')
+        response = self.client.get('/archives/2008/')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'journal/archives_issue.html')
+        self.assertTemplateUsed(response, 'journal/issue_archive_year.html')
         
-    def test_archives_issue_not_found(self):
+    def test_archives_year_not_found(self):
         """
-        Tests archives for an unexistent issue.
-        Should returns 404.
+        Tests archives for an unexistent year.
+        Should return 404.
         
         """
-        response = self.client.get('/archives/100/')
+        response = self.client.get('/archives/2002/')
         self.assertEqual(response.status_code, 404)
-
-    def test_archives_issue_category(self):
+        
+    def test_archives_month(self):
         """
-        Tests archives for a given issue and a given category.
-        Should returns 200 and use ``journal/archives_issue_category.html`` template.
+        Tests archives for a given month.
+        Should return 200 and use ``journal/issue_archive_month.html`` template."
         
         """
-        response = self.client.get('/archives/124/national/')
+        response = self.client.get('/archives/2008/09/')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'journal/archives_issue_category.html')
+        self.assertTemplateUsed(response, 'journal/issue_archive_month.html')
         
-    def test_archives_issue_category_not_found(self):
+    def test_archives_month_not_found(self):
         """
-        Tests archives for an unexistent issue category.
-        Should returns 404.
-        
-        """
-        response = self.client.get('/archives/124/doesnotexist/')
-        self.assertEqual(response.status_code, 404)
-
-    def test_archives_bad_issue_with_existent_category(self):
-        """
-        Tests archives for an unexistent issue with an existent issue category.
-        Should returns 404.
+        Tests archives for an unexistent month.
+        Should return 404.
         
         """
-        response = self.client.get('/archives/100/national/')
+        response = self.client.get('/archives/2008/02/')
         self.assertEqual(response.status_code, 404)
         
-

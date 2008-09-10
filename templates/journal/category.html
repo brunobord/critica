@@ -1,11 +1,11 @@
 {% extends "layout/base.html" %}
-{% block title %}{{ page.category.name }}{% endblock %}
+{% block title %}{{ object.category.name }}{% endblock %}
 {% block content %}
 <!-- LEFT WRAP -->
-
 <div id="mainContent" class="leftWrap">
+{% with object.articles.all as articles %}
 
-	<h1>{{ page.category.name }}</h1>
+	<h1>{{ object.category.name }}</h1>
 
 	<div class="articleSection articleMain">
         {% for article in articles %}
@@ -109,6 +109,7 @@
 	</div>
 	<!-- // SUB CONTENT -->
 
+{% endwith %}
 </div>
 <!-- // RIGHT WRAP -->
 {% endblock %}

@@ -1,15 +1,20 @@
 """
 URLs for ``critica.apps.journal``::
-
-    archives_issue_category
-        Journal archives for a given issue and a given category.
-        Sample URL: /archives/124/national/
-        Takes two arguments: issue number and category slug.
+    
+    archives_day
+        Journal archives for a given day.
+        Sample URL: /archives/2008/09/08/
+        Takes three arguments: year, month and day.
         
-    archives_issue
-        Journal archives for a given issue.
-        Sample URL: /archives/124/
-        Takes one argument: issue number.
+    archives_month
+        Journal archives for a given month.
+        Sample URL: /archives/2008/09/
+        Takes two arguments: year and month.
+        
+    archives_year
+        Journal archives for a given year.
+        Sample URL: /archives/2008/
+        Takes one argument: year.
         
     archives
         Journal archives.
@@ -28,33 +33,56 @@ URLs for ``critica.apps.journal``::
         
 """
 from django.conf.urls.defaults import *
-from critica.apps.journal.views import home
-from critica.apps.journal.views import category
-from critica.apps.journal.views import archives
-from critica.apps.journal.views import archives_issue
-from critica.apps.journal.views import archives_issue_category
+from critica.apps.journal.models import Issue, Page
 
 
-urlpatterns = patterns('',
-    url(r'^archives/(?P<issue>\d+)/(?P<category>[-\w]+)/$',
-        archives_issue_category,
-        name='archives_issue_category',
-    ),
-    url(r'^archives/(?P<issue>\d+)/$',
-        archives_issue,
-        name='archives_issue',
-    ),
-    url(r'^archives/$',
-        archives,
+# Archives
+# ------------------------------------------------------------------------------
+archives_dict = {
+    'queryset': Issue.complete.all(), 
+    'date_field': 'publication_date',
+}
+
+urlpatterns = patterns('django.views.generic.date_based',
+    url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', 'archive_day', dict(archives_dict, month_format='%m'), name='archives_day'),
+    url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/$', 'archive_month', dict(archives_dict, month_format='%m'), name='archives_day'),
+    url(r'^archives/(?P<year>\d{4})/$', 'archive_year', dict(archives_dict, make_object_list=True), name='archives_year'),
+)
+
+urlpatterns += patterns('django.views.generic.simple',
+    url(r'^archives/$', 
+        'direct_to_template', 
+        {'template': 'journal/issue_archive.html', 'extra_context': {'issues': Issue.complete.all()}}, 
         name='archives',
     ),
-    url(r'^(?P<category>[-\w]+)/$',
-        category,
-        name='category'
+)
+
+# Category
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('django.views.generic.list_detail',
+    url(r'^(?P<slug>[-\w]+)/$',
+        'object_detail',
+        dict(
+            queryset = Page.complete.all(),
+            slug_field = 'category__slug',
+            template_name = 'journal/category.html',
+        ),
+        name='category',
     ),
-    url(r'^$',
-        home,
-        name='home',
+)
+
+# Homepage
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('django.views.generic.simple',
+    url(r'^$', 
+        'direct_to_template', 
+        {
+            'template': 'journal/home.html',
+            'extra_context': {
+                'page': Page.complete.get(category__pk=1),
+            },
+        },
+        name='home'
     ),
 )
 
