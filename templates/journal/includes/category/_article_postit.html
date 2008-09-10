@@ -1,0 +1,12 @@
+<div class="articleSection articleMain">
+    <h2><span>{{ article.type.title }}</span></h2>
+    <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+    <div class="autoClear">
+    {% if article.summary %}
+        {{ article.summary|safe }}
+    {% else %}
+        {{ article.content|safe }}
+    {% endif %}
+    </div>
+</div>
+

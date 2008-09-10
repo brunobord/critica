@@ -10,7 +10,7 @@
 	<div class="articleSection articleMain">
         {% for article in articles %}
             {% ifequal article.type.id 1 %}
-                {% include "journal/_article_main.html" %}
+                {% include "journal/includes/category/_article_main.html" %}
             {% endifequal %}
         {% endfor %}
 	</div>
@@ -26,16 +26,16 @@
 	<div class="articleList autoClear">
         {% for article in articles %}
             {% ifequal article.type.id 8 %}
-                {% include "journal/category/_article_pushpin.html" %}
+                {% include "journal/includes/category/_article_pushpin.html" %}
             {% endifequal %}
             {% ifequal article.type.id 9 %}
-                {% include "journal/category/_article_pushpin.html" %}
+                {% include "journal/includes/category/_article_pushpin.html" %}
             {% endifequal %}
             {% ifequal article.type.id 10 %}
-                {% include "journal/category/_article_pushpin.html" %}
+                {% include "journal/includes/category/_article_pushpin.html" %}
             {% endifequal %}
             {% ifequal article.type.id 11 %}
-                {% include "journal/category/_article_pushpin.html" %}
+                {% include "journal/includes/category/_article_pushpin.html" %}
             {% endifequal %}
         {% endfor %}
 	</div>
@@ -57,7 +57,7 @@
     
     {% for article in articles %}
         {% ifequal article.type.id 2 %}
-            {% include "journal/category/_article_postit.html" %}
+            {% include "journal/includes/category/_article_postit.html" %}
         {% endifequal %}
     {% endfor %}
 
@@ -76,19 +76,19 @@
 			<div class="articleList autoClear">
                 {% for article in articles %}
                     {% ifequal article.type.id 3 %}
-                        {% include "journal/category/_article_accordion.html" %}
+                        {% include "journal/includes/category/_article_accordion.html" %}
                     {% endifequal %}
                     {% ifequal article.type.id 4 %}
-                        {% include "journal/category/_article_accordion.html" %}
+                        {% include "journal/includes/category/_article_accordion.html" %}
                     {% endifequal %}
                     {% ifequal article.type.id 5 %}
-                        {% include "journal/category/_article_accordion.html" %}
+                        {% include "journal/includes/category/_article_accordion.html" %}
                     {% endifequal %}
                     {% ifequal article.type.id 6 %}
-                        {% include "journal/category/_article_accordion.html" %}
+                        {% include "journal/includes/category/_article_accordion.html" %}
                     {% endifequal %}
                     {% ifequal article.type.id 7 %}
-                        {% include "journal/category/_article_accordion.html" %}
+                        {% include "journal/includes/category/_article_accordion.html" %}
                     {% endifequal %}
                 {% endfor %}
 			</div>

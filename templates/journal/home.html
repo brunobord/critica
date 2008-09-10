@@ -7,10 +7,10 @@
 
     {% for article in articles %}
         {% ifequal article.category.slug "national" %}
-            {% include "journal/_article_frame.html" %}
+            {% include "journal/includes/home/_article_frame.html" %}
 	    {% endifequal %}
 	    {% ifequal article.category.slug "etranger" %}
-            {% include "journal/_article_frame.html" %}
+            {% include "journal/includes/home/_article_frame.html" %}
 	    {% endifequal %}
 	{% endfor %}
 
@@ -25,22 +25,22 @@
 	<div class="articleList autoClear">
         {% for article in articles %}
     	    {% ifequal article.category.slug "societe" %}
-                {% include "journal/_article_pushpin.html" %}
+                {% include "journal/includes/home/_article_pushpin.html" %}
     	    {% endifequal %}
             {% ifequal article.category.slug "nanas" %}
-                {% include "journal/_article_pushpin.html" %}
+                {% include "journal/includes/home/_article_pushpin.html" %}
     	    {% endifequal %}
             {% ifequal article.category.slug "sports" %}
-                {% include "journal/_article_pushpin.html" %}
+                {% include "journal/includes/home/_article_pushpin.html" %}
             {% endifequal %}
             {% ifequal article.category.slug "tele" %}
-                {% include "journal/_article_pushpin.html" %}
+                {% include "journal/includes/home/_article_pushpin.html" %}
             {% endifequal %}
             {% ifequal article.category.slug "pipoles" %}
-                {% include "journal/_article_pushpin.html" %}
+                {% include "journal/includes/home/_article_pushpin.html" %}
             {% endifequal %}
             {% ifequal article.category.slug "insolites" %}
-                {% include "journal/_article_pushpin.html" %}
+                {% include "journal/includes/home/_article_pushpin.html" %}
             {% endifequal %}
 	    {% endfor %}
 	</div>
@@ -57,7 +57,7 @@
 	<div class="articleList autoClear">
 	    {% for article in articles %}
 	        {% ifequal article.category.slug "voyages" %}
-                {% include "journal/_article_pushpin.html" %}
+                {% include "journal/includes/home/_article_pushpin.html" %}
 		    {% endifequal %}
 		{% endfor %}
 		<div class="articleSection" id="epicurien">
@@ -90,7 +90,7 @@
     <div class="articleSection articleMain">
         {% for article in articles %}
             {% ifequal article.category.slug "bouquins" %}
-                {% include "journal/_article_postit.html" %}
+                {% include "journal/includes/home/_article_postit.html" %}
             {% endifequal %}
         {% endfor %}
     </div> 
@@ -109,7 +109,7 @@
 			<div class="articleList">
 			    {% for article in articles %}
 			        {% ifequal article.category.slug "coup-de-gueule" %}
-                        {% include "journal/_article_tape.html" %}
+                        {% include "journal/includes/home/_article_tape.html" %}
 				    {% endifequal %}
 			    {% endfor %}
 			</div>
