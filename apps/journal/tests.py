@@ -18,7 +18,7 @@ class JournalTestCase(TestCase):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'journal/home.html')
-        
+
     def test_category(self):
         """
         Tests a current issue category.

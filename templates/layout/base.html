@@ -75,7 +75,10 @@
 				<div class="contentWrap">
 
 					<!-- DATE -->
-					<div id="date">{% block issue_info %}<p>03 septembre 2008&nbsp;|&nbsp;<strong>N°125</strong></p>{% endblock %}
+					<div id="date">
+					{% block issue_info %}
+					    <p>{{ current_issue.0.publication_date|date:"d F Y" }}&nbsp;|&nbsp;<strong>N°{{ current_issue.0.number }}</strong></p>
+					{% endblock %}
 					</div>
 					<!-- // DATE -->
 
