@@ -3,9 +3,10 @@ Views for ``critica.apps.journal``.
 
 """
 from django.shortcuts import render_to_response
+from django.shortcuts import get_object_or_404, get_list_or_404
 from django.template import RequestContext
 from django.http import Http404
-from critica.apps.journal.models import Page
+from critica.apps.journal.models import Page, Issue, Article
 
 
 def home(request):
@@ -39,4 +40,43 @@ def category(request, category):
         {'page': page, 'articles': articles}, 
         context_instance=RequestContext(request)
     )
+
+
+def archives(request):
+    """
+    Displays archives index page.
+    
+    """
+    return render_to_response(
+        'journal/archives.html', 
+        {}, 
+        context_instance=RequestContext(request)
+    )
+    
+    
+def archives_issue(request, issue):
+    """
+    Displays archives for a given issue.
+    
+    """
+    issue = get_object_or_404(Issue.complete.all(), number=issue)
+    return render_to_response(
+        'journal/archives_issue.html', 
+        {'issue': issue}, 
+        context_instance=RequestContext(request)
+    )
+
+
+def archives_issue_category(request, issue, category):
+    """
+    Displays archives for a given issue and a given category.
+    
+    """
+    articles = get_list_or_404(Article.complete.all(), issues__number=issue, category__slug=category)
+    return render_to_response(
+        'journal/archives_issue_category.html', 
+        {'articles': articles}, 
+        context_instance=RequestContext(request)
+    )
+
 
