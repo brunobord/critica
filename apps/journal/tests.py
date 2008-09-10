@@ -70,7 +70,7 @@ class JournalTestCase(TestCase):
     def test_archives_month(self):
         """
         Tests archives for a given month.
-        Should return 200 and use ``journal/issue_archive_month.html`` template."
+        Should return 200 and use ``journal/issue_archive_month.html`` template.
         
         """
         response = self.client.get('/archives/2008/09/')
@@ -86,3 +86,23 @@ class JournalTestCase(TestCase):
         response = self.client.get('/archives/2008/02/')
         self.assertEqual(response.status_code, 404)
         
+    def test_archives_day(self):
+        """
+        Tests archives for a given day.
+        Should return 200 and use ``journal/issue_archive_day.html`` template.
+        
+        """
+        response = self.client.get('/archives/2008/09/08/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'journal/issue_archive_day.html')
+        
+    def test_archives_day_not_found(self):
+        """
+        Tests archives for an unexistent day.
+        Should return 404.
+        
+        """
+        response = self.client.get('/archives/2008/09/07/')
+        self.assertEqual(response.status_code, 404)
+
+
