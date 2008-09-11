@@ -419,13 +419,25 @@ class Article(models.Model):
         return ('category', (), {
             'category': self.category.slug,
         })
+        
+    @permalink
+    def get_archive_url(self):
+        """ Returns article's archive URL. """
+        return ('archives_article', (), {
+            'year': self.publication_date.strftime('%Y'),
+            'month': self.publication_date.strftime('%m'),
+            'day': self.publication_date.strftime('%d'),
+            'slug': self.slug,
+        })
 
     def bolded_type(self):
+        """ Returns bolded type title for admin list display. """
         return '<em>%s</em>' % (self.type.title,)
     bolded_type.allow_tags = True
     bolded_type.short_description = _('Type')
 
     def author_full_name(self):
+        """ Returns author's full name for admin list display. """
         return self.author.get_full_name()
     author_full_name.short_description = _('author')
 

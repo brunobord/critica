@@ -1,6 +1,11 @@
 """
 URLs for ``critica.apps.journal``::
     
+    archives_article
+        Journal archived article detail.
+        Sample URL: /archives/2008/09/08/this-is-an-archived-article/
+        Takes four arguments: year, month, day and article slug.
+        
     archives_day
         Journal archives for a given day.
         Sample URL: /archives/2008/09/08/
@@ -44,6 +49,16 @@ archives_dict = {
 }
 
 urlpatterns = patterns('django.views.generic.date_based',
+    url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[\w-]+)/$',
+        'object_detail',
+        dict(
+            queryset=Article.complete.all(),
+            date_field='publication_date',
+            month_format='%m',
+            slug_field='slug',
+        ),
+        name='archives_article',
+    ),
     url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', 
         'archive_day', 
         dict(
@@ -52,7 +67,7 @@ urlpatterns = patterns('django.views.generic.date_based',
             template_name='journal/issue_archive_day.html',
             month_format='%m',
         ), 
-        name='archives_day'
+        name='archives_day',
     ),
     url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/$', 
         'archive_month', 

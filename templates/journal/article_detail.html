@@ -1,0 +1,20 @@
+{% extends "layout/base.html" %}
+{% block title %}Archives &raquo; {{ object.title }}{% endblock %}
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Archives &raquo; {{ object.title }}</span></h1>
+    
+    {% if object.illustration %}
+    <div class="illustration">
+        <a href="{{ object.illustration.image.url }}" title="{{ object.illustration.legend }}"><img src="{{ object.illustration.image.url }}" alt="article1" /></a>
+    </div>
+    {% endif %}
+    
+    {{ object.content|safe }}
+    
+    <p class="author">Par {{ object.author.get_full_name }}</p>
+
+</div>
+{% endblock %}
+

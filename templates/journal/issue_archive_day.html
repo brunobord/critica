@@ -12,7 +12,7 @@
         <h2>{{ category.grouper }}</h2>
         <ul>
         {% for article in category.list %}
-            <li><a href="#" title="{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}">{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}</a></li>
+            <li><a href="{{ article.get_archive_url }}" title="{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}">{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}</a></li>
         {% endfor %}
         </ul>
     {% endfor %}

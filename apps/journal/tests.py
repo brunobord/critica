@@ -104,5 +104,24 @@ class JournalTestCase(TestCase):
         """
         response = self.client.get('/archives/2008/09/07/')
         self.assertEqual(response.status_code, 404)
+        
+    def test_archives_article_detail(self):
+        """
+        Tests archived article detail.
+        Should return 200 and use ``journal/article_detail.html`` template.
+        
+        """
+        response = self.client.get('/archives/2008/09/08/des-universites-ou-lon-napprend-rien/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'journal/article_detail.html')
+        
+    def test_archives_article_detail_not_found(self):
+        """
+        Tests an unexistent archived article.
+        Should return 404.
+        
+        """
+        response = self.client.get('/archives/2008/09/08/doesnotexists/')
+        self.assertEqual(response.status_code, 404)
 
 
