@@ -4,6 +4,8 @@ Tests for ``critica.apps.journal``.
 
 """
 from django.test import TestCase
+from tagging.models import Tag
+from django.template.defaultfilters import slugify
 
 
 class JournalTestCase(TestCase):
@@ -122,6 +124,39 @@ class JournalTestCase(TestCase):
         
         """
         response = self.client.get('/archives/2008/09/08/doesnotexists/')
+        self.assertEqual(response.status_code, 404)
+        
+    def test_tags(self):
+        """
+        Tests tags page.
+        Should return 200 and use ``journal/tags.html`` template.
+        
+        """
+        response = self.client.get('/tags/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'journal/tags.html')
+        
+    def test_tag(self):
+        """
+        Tests a tag.
+        Should return 200 and use ``journal/tag.html`` template.
+        
+        """
+        tags = Tag.objects.all()
+        for tag in tags:
+            tag_slug = slugify(tag.name)
+            url = '/tags/%s/' % tag_slug
+            response = self.client.get(url)
+            self.assertEqual(response.status_code, 200)
+            self.assertTemplateUsed(response, 'journal/tag.html')
+            
+    def test_tag_not_found(self):
+        """
+        Tests an unexistent tag.
+        Should return 404.
+        
+        """
+        response = self.client.get('/tags/doesnotexist/')
         self.assertEqual(response.status_code, 404)
 
 

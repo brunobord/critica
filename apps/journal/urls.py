@@ -39,7 +39,7 @@ URLs for ``critica.apps.journal``::
 """
 from django.conf.urls.defaults import *
 from critica.apps.journal.models import Issue, Page, Article
-
+from tagging.models import Tag
 
 # Archives
 # ------------------------------------------------------------------------------
@@ -97,15 +97,40 @@ urlpatterns += patterns('django.views.generic.simple',
     ),
 )
 
+# Tags
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^tags/$', 
+        'django.views.generic.simple.direct_to_template', 
+        {
+            'template': 'journal/tags.html',
+            'extra_context': {
+                'tags': Tag.objects.all(),
+            },
+         },
+         name='tags',
+    ),
+    url(r'^tags/(?P<tag>[^/]+)/$',
+        'tagging.views.tagged_object_list',
+        dict(
+           queryset_or_model=Article.complete.all(), 
+           paginate_by=40, 
+           allow_empty=True,
+           template_name='journal/tag.html',
+        ),
+        name='tag'
+    ),
+)
+
 # Category
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('django.views.generic.list_detail',
     url(r'^(?P<slug>[-\w]+)/$',
         'object_detail',
         dict(
-            queryset = Page.complete.all(),
-            slug_field = 'category__slug',
-            template_name = 'journal/category.html',
+            queryset=Page.complete.all(),
+            slug_field='category__slug',
+            template_name='journal/category.html',
         ),
         name='category',
     ),

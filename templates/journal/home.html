@@ -179,9 +179,13 @@
 		<!-- // RIGHT WRAP -->
 
 		<!-- TAG CLOUD -->
-		<div id="tagcloudSection">
+		<div id="tagcloudSection" style="text-align: center;">
 			<h2>Nuage de tags</h2>
-			<p>lorem <span style="font-size: 1.6em;">ipsum</span> dolor <span style="font-size: 1.2em;">sit</span> amet <span style="font-size: 1em;">consectetuer</span> <span style="font-size: 1.5em;">adipiscing adipis</span> dis <span style="font-size: 1.8em;">parturient</span> <span style="font-size: 1em;">montes</span> lorem <span style="font-size: 1em;">ipsum</span> dolor <span style="font-size: 1em;">sit</span> amet <span style="font-size: 1em;">consectetuer</span> <span style="font-size: 1.6em;">piscing</span> ipsum <span style="font-size: 2em;">dolor</span> sit dis <span style="font-size: 0.8em;">parturient</span> montesamet <span style="font-size: 1.4em;">consectetuer</span></p>
+			{% load tagging_tags %}
+			{% tag_cloud_for_model journal.article as tags with steps=8 distribution=log min_count=2 %}
+			{% for tag in tags %}
+			    <span style="font-size: 1.{{ tag.font_size }}em; padding: 0.2em; line-height: 1.6em;"><a href="{% url tag tag.name|slugify %}" title="Articles taggés {{ tag.name }}">{{ tag.name }}</a></span>
+			{% endfor %}
 		</div>
 		<!-- TAG CLOUD -->
 

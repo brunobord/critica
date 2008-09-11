@@ -1,0 +1,22 @@
+{% extends "layout/base.html" %}
+{% block title %}Articles taggés &laquo; {{ tag.name }} &raquo;{% endblock %}
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Articles taggés &laquo; {{ tag.name }} &raquo;</span></h1>
+    
+    <ul>
+    {% for article in object_list %}
+        <li><a href="{{ article.get_archive_url }}" title="{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}">{% ifnotequal article.type.id 1 %}{{ article.type.title }} - {% endifnotequal %}{{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
+    
+    {% if page_obj.has_next %}
+    <div class="paginator">
+        <a href="/tags/{{ tag.name }}/?page={{ page_obj.next_page_number }}" title="Voir plus d'articles" style="font-size: 1.3em;">&raquo; voir plus d'articles...</a>
+    </div>
+    {% endif %}
+    
+</div>
+{% endblock %}
+

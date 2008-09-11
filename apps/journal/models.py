@@ -69,6 +69,7 @@ class Category(models.Model):
         })
         
     def get_rss_url(self):
+        """ Returns category's RSS feed URL. """
         return u'/rss/rubriques/%s/' % self.slug
 
     def _get_complete_articles(self):
@@ -143,11 +144,13 @@ class Illustration(models.Model):
         return u'%s' % self.image
 
     def thumbnail(self):
+        """ Returns illustration's thumbnail for admin list display. """
         return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, self.image, self.legend)
     thumbnail.allow_tags = True
     thumbnail.short_description = _('Illustration')
 
     def bolded_category(self):
+        """ Returns bolded category name for admin list display. """
         return '<strong>%s</strong>' % (self.category,)
     bolded_category.allow_tags = True
     bolded_category.short_description = _('Category')

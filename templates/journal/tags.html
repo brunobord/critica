@@ -1,0 +1,16 @@
+{% extends "layout/base.html" %}
+{% block title %}Tags{% endblock %}
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Tags</span></h1>
+
+	{% load tagging_tags %}
+	{% tag_cloud_for_model journal.article as tags with steps=8 distribution=log %}
+	{% for tag in tags %}
+		<span style="font-size: 1.{{ tag.font_size }}em; padding: 0.2em; line-height: 1.6em;"><a href="/tags/{{ tag.name|slugify }}" title="Articles taggés {{ tag.name }}">{{ tag.name }}</a></span>
+	{% endfor %}
+
+</div>
+{% endblock %}
+
