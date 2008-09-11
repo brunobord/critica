@@ -13,6 +13,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^admin/(.*)', admin.site.root),
     (r'^pages/', include('critica.apps.pages.urls')),
+    (r'^rss/', include('critica.apps.syndication.urls')),
     (r'', include('critica.apps.journal.urls')),
 )
 

@@ -2,6 +2,7 @@
 Feeds for ``critica``.
 
 """
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.syndication.feeds import Feed
 from django.utils.feedgenerator import Rss201rev2Feed, Atom1Feed
 from django.contrib.sites.models import Site
@@ -10,11 +11,11 @@ from django.utils.translation import ugettext_lazy as _
 from critica.apps.journal.models import Article, Category
 
 
-class RssArticles(Feed):
+class LatestArticles(Feed):
     """ RSS feed: latest articles. """
     feed_type = Rss201rev2Feed
-    title_template = 'feeds/item_title.html'
-    description_template = 'feeds/item_description.html'
+    title_template = 'syndication/feeds/item_title.html'
+    description_template = 'syndication/feeds/item_description.html'
     
     def title(self):
         _site = Site.objects.get_current()
@@ -32,18 +33,19 @@ class RssArticles(Feed):
         }
         
     def items(self):
-        return Article.complete.all().order_by('-publication_date')
+        return Article.complete.all().order_by('-publication_date')[:10]
 
     def item_pubdate(self, obj):
         return obj.publication_date
 
 
-
-class RssArticlesByCategory(RssArticles):
+class LatestArticlesByCategory(LatestArticles):
     """ RSS feed: latest articles published in a given category. """
     
     def get_object(self, bits):
-        return Category.objects.get(slug__exact=bits[1])
+        if len(bits) != 1:
+            raise ObjectDoesNotExist
+        return Category.objects.get(slug__exact=bits[0])
         
     def title(self, obj):
         _site = Site.objects.get_current()
@@ -63,23 +65,9 @@ class RssArticlesByCategory(RssArticles):
         return obj.get_absolute_url()
         
     def items(self, obj):
-        return obj.complete_article_set.all()
+        return obj.complete_article_set.all()[:10]
 
     def item_pubdate(self, obj):
         return obj.publication_date
-
-
-
-class AtomArticles(RssArticles):
-    """ Atom feed: latest articles. """
-    feed_type = Atom1Feed
-    subtitle = RssArticles.description
-
-
-
-class AtomArticlesByCategory(RssArticlesByCategory):
-    """ Atom feed: latest articles published in a given category. """
-    feed_type = Atom1Feed
-    subtitle = RssArticlesByCategory.description
 
 

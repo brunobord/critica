@@ -1,0 +1,44 @@
+{% extends "layout/base.html" %}
+{% block title %}Fils RSS{% endblock %}
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Fils RSS</span></h1>
+    
+    <p>
+        <abbr title="Really Simple Syndication">RSS</abbr> est un format utilisé
+        pour la syndication de contenu Web. On l'utilise le plus souvent pour
+        obtenir les dernières informations publiées sur un site. Par exemple,
+        dès qu'un article a été ajouté ou modifié, le fil <abbr title="Really Simple Syndication">RSS</abbr>
+        contiendra ces modifications. On peut ainsi suivre l'actualités d'un site
+        via ses fils RSS, sans avoir à le visiter (c'est-à-dire, sans devoir aller
+        sur le site et cliquer sur les différentes rubriques et articles).
+    </p>
+    
+    <p>
+        Il existe des logiciels ou applications capables d'enregistrer et traquer 
+        les fils RSS de vos sites favoris. On appelle ce type d'application&nbsp;:
+        aggrégateur. <a href="http://www.google.com/reader" title="Google Reader">Google Reader</a>,
+        <a href="http://www.bloglines.com/" title="Bloglines">Bloglines</a>,
+        <a href="http://www.mozilla-europe.org/fr/firefox/" title="Mozilla Firefox">Mozilla Firefox</a>
+        ou encore <a href="http://www.netvibes.com" title="Netvibes">Netvibes</a>
+        (pour ne citer que quelques uns) proposent ce type de service.
+    </p>
+    
+    <p>
+        En vous abonnant à nos fils RSS, vous pouvez suivre notre journal
+        directement depuis votre aggrégateur. 
+    </p>
+    
+    <ul>
+        <li><a href="/rss/articles/" title="Fil RSS des derniers articles">Fil RSS des derniers articles</a></li>
+    {% for category in categories %}
+        {% ifnotequal category.id 1 %}
+        <li><a href="{{ category.get_rss_url }}" title="Fil RSS de la rubrique {{ category.name }}">Fil RSS de la rubrique {{ category.name }}</a></li>
+        {% endifnotequal %}
+    {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}
+

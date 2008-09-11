@@ -1,0 +1,8 @@
+{% if obj.illustration %}
+    <img src="{{ obj.illustration.image.url }}" alt="{{ obj.illustration.credits }} - {{ obj.illustration.legend }}" />
+    <p><small>{{ obj.illustration.credits }} - {{ obj.illustration.legend }}</small></p>
+{% endif %}
+
+{{ obj.content|safe }}
+
+<p class="author">Par {{ obj.author.get_full_name }}</p>

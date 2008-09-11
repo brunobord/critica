@@ -65,8 +65,11 @@ class Category(models.Model):
     def get_absolute_url(self):
         """ Returns category's absolute URL. """
         return ('category', (), {
-            'category': self.slug,
+            'slug': self.slug,
         })
+        
+    def get_rss_url(self):
+        return u'/rss/rubriques/%s/' % self.slug
 
     def _get_complete_articles(self):
         """
@@ -417,7 +420,7 @@ class Article(models.Model):
     def get_absolute_url(self):
         """ Returns article's absolute URL. """
         return ('category', (), {
-            'category': self.category.slug,
+            'slug': self.category.slug,
         })
         
     @permalink
