@@ -88,6 +88,16 @@ adding the setting ``AUTH_PROFILE_MODULE``::
 
     AUTH_PROFILE_MODULE = 'apps.users.UserProfile'
 
+Critic@-engine uses the ``django-tagging`` application as tag feature. By default, 
+this application is case sensitve. That means tags 'Django' and 'django' are
+differents. It is recommended to turn off case sensitive, forcing all tag names
+to lowercase before they are saved to the database. Add this settings::
+
+    FORCE_LOWERCASE_TAGS = True
+
+A boolean that turns on/off forcing of all tag names to lowercase before
+they are saved to the database.
+
 Replace the value of ``ROOT_URLCONF`` with the appropriate one::
 
     ROOT_URLCONF = 'critica.urls'
