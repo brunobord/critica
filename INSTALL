@@ -104,6 +104,7 @@ And add these applications to your ``INSTALLED_APPS``::
         'critica.apps.journal',
         'critica.apps.newsletter',
         'critica.apps.utils',
+        'critica.apps.syndication',
     )
 
 Voilà! Critic@-engine is ready.
