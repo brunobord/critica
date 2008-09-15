@@ -289,7 +289,7 @@
         "pk": 2, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"Vous saviez ?\"", 
+            "description": "Vous saviez ?", 
             "title": "Vous saviez ?"
         }
     }, 
@@ -297,7 +297,7 @@
         "pk": 3, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"L'info off\"", 
+            "description": "L'info off", 
             "title": "L'info off"
         }
     }, 
@@ -305,7 +305,7 @@
         "pk": 4, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"Fallait s'en douter\"", 
+            "description": "Fallait s'en douter", 
             "title": "Fallait s'en douter"
         }
     }, 
@@ -313,7 +313,7 @@
         "pk": 5, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"Criti...cons\"", 
+            "description": "Criti...cons", 
             "title": "Criti...cons"
         }
     }, 
@@ -321,7 +321,7 @@
         "pk": 6, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"Ca, c'est fait !\"", 
+            "description": "Ca, c'est fait !", 
             "title": "Ca, c'est fait !"
         }
     }, 
@@ -329,7 +329,7 @@
         "pk": 7, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"Aucun int\u00e9r\u00eat\"", 
+            "description": "Aucun int\u00e9r\u00eat", 
             "title": "Aucun int\u00e9r\u00eat"
         }
     }, 
@@ -337,7 +337,7 @@
         "pk": 8, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"Premi\u00e8re nouvelle\"", 
+            "description": "Premi\u00e8re nouvelle", 
             "title": "Premi\u00e8re nouvelle"
         }
     }, 
@@ -345,7 +345,7 @@
         "pk": 9, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"On s\u2019en serait pass\u00e9\"", 
+            "description": "On s\u2019en serait pass\u00e9", 
             "title": "On s\u2019en serait pass\u00e9"
         }
     }, 
@@ -353,7 +353,7 @@
         "pk": 10, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"On en rirait presque\"", 
+            "description": "On en rirait presque", 
             "title": "On en rirait presque"
         }
     }, 
@@ -361,7 +361,7 @@
         "pk": 11, 
         "model": "journal.type", 
         "fields": {
-            "description": "Article du type \"Ils ont os\u00e9\"", 
+            "description": "Ils ont os\u00e9", 
             "title": "Ils ont os\u00e9"
         }
     }, 
@@ -835,7 +835,7 @@
             "is_reserved": 0, 
             "modification_date": "2008-09-09 01:18:43", 
             "author": 9, 
-            "tags": "Swaziland, afrique, fete", 
+            "tags": "swaziland, afrique, fete", 
             "is_illustrated": 1, 
             "illustration": 9, 
             "creation_date": "2008-09-08 16:06:41", 
