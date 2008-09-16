@@ -351,9 +351,6 @@ class Article(models.Model):
         publication_date
             The article publication date.
 
-        citation
-            The article citation.
-
         illustration
             The article illustration (from ``Illustration``).
 
@@ -397,7 +394,6 @@ class Article(models.Model):
     modification_date = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
     publication_date = models.DateTimeField(_('publication date'), blank=True, help_text=_("Don't forget to adjust the publication date."))
 
-    citation = models.TextField(_('citation'), blank=True, help_text=_('Enter a citation which will be attached to this article.'))
     illustration = models.ForeignKey(Illustration, verbose_name=_('illustration'), null=True, blank=True, help_text=_('Please, select an illustration which will be attached to this article.'))
 
     is_reserved = models.BooleanField(_('reserved'), default=False, help_text=_('Is article reserved?'))

@@ -73,7 +73,6 @@ class ArticleAdmin(admin.ModelAdmin):
         """ Hook for specifying fieldsets for the add form. """
         fieldsets = [
             (_('Article'), {'fields': ['author', 'issues', 'category', 'type', 'title', 'tags', 'publication_date', 'summary', 'content']}),
-            (_('Citation'), {'fields': ['citation']}),
         ]
     
         if request.user.has_perm('users.can_illustrate_article'):
