@@ -62,6 +62,9 @@ class Page(models.Model):
         """ Model metadata. """
         verbose_name = _('page')
         verbose_name_plural = _('pages')
+        permissions = (
+            ('can_publish_page', 'Can publish a page'),
+        )
 
     def __unicode__(self):
         """ Object human-readable string representation. """
