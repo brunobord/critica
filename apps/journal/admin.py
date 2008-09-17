@@ -7,55 +7,84 @@ from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from tagging.models import Tag, TaggedItem
-from critica.apps.journal.models import Category
+from critica.apps.journal.models import Category, NoteType
 from critica.apps.journal.models import Reportage, Illustration
 from critica.apps.journal.models import Article, Note
 from critica.apps.journal.models import Issue
 
 
-# Category
-# ------------------------------------------------------------------------------
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'formatted_slug', 'description', 'creation_date', 'modification_date', 'image_thumbnail',)
+    """
+    Administration interface for ``Category`` model.
+    
+    """
+    list_display = ('name', 'slug_ld', 'description', 'creation_date', 'modification_date', 'image_ld')
     search_fields = ('name', 'description')
     ordering = ['name']
 
 
-# Reportage
-# ------------------------------------------------------------------------------
+class NoteTypeAdmin(admin.ModelAdmin):
+    """
+    Administration interface for ``NoteType`` model.
+    
+    """
+    list_display = ('name', 'position_on_page')
+    search_fields = ('name',)
+    ordering = ['name']
+
+
 class ReportageAdmin(admin.ModelAdmin):
+    """
+    Administration interface for ``Reportage`` model.
+    
+    """
     list_display = ('video_name', 'video_link', 'creation_date', 'modification_date', 'is_published')
     search_fields = ('video_name',)
     ordering = ('-creation_date',)
     date_hierarchy = 'creation_date'
     
 
-# Illustration
-# ------------------------------------------------------------------------------
 class IllustrationAdmin(admin.ModelAdmin):
-    list_display = ('thumbnail', 'bolded_category', 'credits', 'legend', 'creation_date', 'modification_date')
+    """
+    Administration interface for ``Illustration`` model.
+    
+    """
+    list_display = ('image_ld', 'category_ld', 'credits', 'legend', 'creation_date', 'modification_date')
     list_filter = ('category',)
     search_fields = ('image', 'credits', 'legend')
     ordering = ['legend', 'creation_date']
     date_hierarchy = 'creation_date'
 
 
-# Articles: article / note
-# ------------------------------------------------------------------------------
 class BaseArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'publication_date', 'is_featured', 'is_reserved', 'view_count', 'author_full_name')
+    """
+    Administration interface for ``BaseArticle`` abstract model.
+    
+    """
+    list_display = ('title', 'category', 'publication_date', 'is_featured', 'is_reserved', 'view_count', 'author_ld')
     list_filter = ('author', 'is_featured', 'is_reserved', 'category')
     search_fields = ('title', 'content')
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
     
     class Media:
+        """
+        Model metadata.
+        
+        """
         js = (
             settings.MEDIA_URL + 'common/js/tiny_mce/tiny_mce.js',
             settings.MEDIA_URL + 'common/js/textarea.js',
         )
         
     def get_form(self, request, obj=None, **kwargs):
+        """
+        Returns a Form class for use in the admin add view. This is used by
+        add_view and change_view.
+        
+        Excludes fields depending on user permissions.
+        
+        """
         exclude = []
         if not request.user.has_perm('users.can_reserve_article'):
             exclude.append('is_reserved')
@@ -67,6 +96,10 @@ class BaseArticleAdmin(admin.ModelAdmin):
 
 
 class ArticleAdmin(BaseArticleAdmin):
+    """
+    Administration interface for ``Article`` model.
+    
+    """
     fieldsets = (
         (_('Headline'), 
             {'fields': ('title', 'opinion', 'is_featured')}
@@ -81,10 +114,10 @@ class ArticleAdmin(BaseArticleAdmin):
             {'fields': ('summary', 'content')}
         ),
         (_('Publication'),
-            {'fields': ('publication_date', 'status', 'is_reserved')}
+            {'fields': ('publication_date', 'is_reserved', 'is_published')}
         ),
     )
-    list_display = ('title', 'category', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_full_name', 'status')
+    list_display = ('title', 'category', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_ld', 'is_published')
     search_fields = ('title', 'summary', 'content')
 
     def get_form(self, request, obj=None, **kwargs):
@@ -97,6 +130,10 @@ class ArticleAdmin(BaseArticleAdmin):
 
 
 class NoteAdmin(BaseArticleAdmin):
+    """
+    Administration interface for ``Note`` model.
+    
+    """
     fieldsets = (
         (_('Headline'), 
             {'fields': ('title', 'type', 'opinion', 'is_featured')}
@@ -108,18 +145,20 @@ class NoteAdmin(BaseArticleAdmin):
             {'fields': ('content',)}
         ),
         (_('Publication'),
-            {'fields': ('publication_date', 'status', 'is_reserved')}
+            {'fields': ('publication_date', 'is_reserved', 'is_published')}
         ),
     )
-    list_display = ('title', 'category', 'bolded_type', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_full_name', 'status')
-    list_filter = ('author', 'is_featured', 'is_reserved', 'status', 'category')
+    list_display = ('title', 'category', 'type_ld', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_ld', 'is_published')
+    list_filter = ('author', 'is_featured', 'is_reserved', 'is_published', 'category')
 
 
-# Issues
-# ------------------------------------------------------------------------------
-class IssueAdmin(admin.ModelAdmin):    
-    list_display = ('number', 'publication_date', 'is_complete')
-    list_filter = ('is_complete',)
+class IssueAdmin(admin.ModelAdmin):
+    """
+    Administration interface for ``Issue`` model.
+    
+    """
+    list_display = ('number', 'publication_date', 'is_complete', 'is_published')
+    list_filter = ('is_complete', 'is_published')
     search_fields = ('number',)
     ordering = ('-publication_date',)
     date_hierarchy = 'publication_date'
@@ -130,6 +169,7 @@ class IssueAdmin(admin.ModelAdmin):
 admin.site.unregister(Tag)
 admin.site.unregister(TaggedItem)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(NoteType, NoteTypeAdmin)
 admin.site.register(Reportage, ReportageAdmin)
 admin.site.register(Illustration, IllustrationAdmin)
 admin.site.register(Article, ArticleAdmin)

@@ -3,27 +3,26 @@ Managers for ``critica.apps.journal`` models.
 
 """
 from django.db import models
-from critica.apps.journal import choices
 
 
-class CategoryManager(models.Manager):
+class PublishedArticleManager(models.Manager):   
     def get_query_set(self):
-        return super(CategoryManager, self).get_query_set()
+        return super(PublishedArticleManager, self).get_query_set().filter(issues__is_complete=True, is_published=True, is_reserved=False)
 
-class IllustrationManager(models.Manager):
-    def get_query_set(self):
-        return super(IllustrationManager, self).get_query_set()
 
-class ReportageManager(models.Manager):
+class CompleteIssueManager(models.Manager):
     def get_query_set(self):
-        return super(ReportageManager, self).get_query_set()
+        return super(CompleteIssueManager, self).get_query_set().filter(is_complete=True)
+        
+    def published(self):
+        return self.get_query_set().filter(is_published=True)
 
-class ArticleManager(models.Manager):   
-    def get_query_set(self):
-        return super(ArticleManager, self).get_query_set().filter(issues__is_complete=True, status=choices.STATUS_PUBLISHED, is_reserved=False)
 
-class IssueManager(models.Manager):
+class PublishedIssueManager(models.Manager):
     def get_query_set(self):
-        return super(IssueManager, self).get_query_set().filter(is_complete=True)
+        return super(PublishedIssueManager, self).get_query_set().filter(is_published=True)
+        
+    def complete(self):
+        return self.get_query_set().filter(is_complete=True)
 
 

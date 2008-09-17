@@ -44,7 +44,7 @@ from tagging.models import Tag
 # Archives
 # ------------------------------------------------------------------------------
 archives_dict = {
-    'queryset': Issue.complete.all(), 
+    'queryset': Issue.complete.published(), 
     'date_field': 'publication_date',
 }
 
@@ -52,7 +52,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<slug>[\w-]+)/$',
         'object_detail',
         dict(
-            queryset=Article.complete.all(),
+            queryset=Article.published.all(),
             date_field='publication_date',
             month_format='%m',
             slug_field='slug',
@@ -62,7 +62,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', 
         'archive_day', 
         dict(
-            queryset=Article.complete.order_by('category'),
+            queryset=Article.published.order_by('category'),
             date_field='publication_date',
             template_name='journal/issue_archive_day.html',
             month_format='%m',
@@ -72,7 +72,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/$', 
         'archive_month', 
         dict(
-            queryset=Issue.complete.all(),
+            queryset=Issue.complete.published(),
             date_field='publication_date',
             month_format='%m'
         ), 
@@ -81,7 +81,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/$', 
         'archive_year', 
         dict(
-            queryset=Issue.complete.all(),
+            queryset=Issue.complete.published(),
             date_field='publication_date',
             make_object_list=True,
         ), 
@@ -92,7 +92,7 @@ urlpatterns = patterns('django.views.generic.date_based',
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^archives/$', 
         'direct_to_template', 
-        {'template': 'journal/issue_archive.html', 'extra_context': {'issues': Issue.complete.all()}}, 
+        {'template': 'journal/issue_archive.html', 'extra_context': {'issues': Issue.complete.published()}}, 
         name='archives',
     ),
 )
@@ -113,7 +113,7 @@ urlpatterns += patterns('',
     url(r'^tags/(?P<tag>[^/]+)/$',
         'tagging.views.tagged_object_list',
         dict(
-           queryset_or_model=Article.complete.all(), 
+           queryset_or_model=Article.published.all(), 
            paginate_by=40, 
            allow_empty=True,
            template_name='journal/tag.html',
