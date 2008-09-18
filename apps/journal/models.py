@@ -279,7 +279,7 @@ class NoteTypeGeneral(BaseNoteType):
         See BaseNoteType.
     
     """
-    position_on_page = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_GENERAL_POSITION_CHOICES, unique=True, db_index=True)
+    position_on_page = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_GENERAL_POSITION_CHOICES, unique=True, blank=True, db_index=True)
     
     class Meta:
         """ 
@@ -319,7 +319,7 @@ class NoteTypeRegion(BaseNoteType):
         See BaseNoteType.
     
     """
-    position_on_page = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_REGION_POSITION_CHOICES, unique=True, db_index=True)
+    position_on_page = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_REGION_POSITION_CHOICES, unique=True, blank=True, db_index=True)
     
     class Meta:
         """ 
