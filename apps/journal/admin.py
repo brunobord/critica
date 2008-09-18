@@ -42,9 +42,9 @@ class NoteTypeRegionAdmin(admin.ModelAdmin):
     Administration interface for ``NoteTypeRegion`` model.
     
     """
-    list_display = ('name', 'position_on_page')
+    list_display = ('name', 'is_featured')
     search_fields = ('name',)
-    ordering = ['position_on_page']
+    ordering = ['name']
 
 
 # ------------------------------------------------------------------------------
@@ -79,9 +79,10 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface for ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'publication_date', 'is_featured', 'is_reserved', 'view_count', 'author_ld')
-    list_filter = ('author', 'is_featured', 'is_reserved', 'category')
+    list_display = ('title', 'category', 'publication_date', 'is_featured', 'status', 'view_count', 'author_ld')
+    list_filter = ('author', 'is_featured', 'category')
     search_fields = ('title', 'content')
+    radio_fields = {'status': admin.VERTICAL}
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
     
@@ -104,8 +105,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
         
         """
         exclude = []
-        if not request.user.has_perm('users.can_reserve_article'):
-            exclude.append('is_reserved')
+        #if not request.user.has_perm('users.can_reserve_article'):
+        #    exclude.append('is_reserved')
         if not request.user.has_perm('users.can_feature_article'):
             exclude.append('is_featured')
         defaults = {'exclude': exclude}
@@ -130,11 +131,11 @@ class BaseNoteAdmin(BaseArticleAdmin):
             {'fields': ('content',)}
         ),
         (_('Publication'),
-            {'fields': ('publication_date', 'is_reserved', 'is_published')}
+            {'fields': ('publication_date', 'status')}
         ),
     )
-    list_display = ('title', 'category', 'type', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_ld', 'is_published')
-    list_filter = ('author', 'is_featured', 'is_reserved', 'is_published', 'category')
+    list_display = ('title', 'category', 'type', 'publication_date', 'opinion', 'is_featured', 'view_count', 'author_ld', 'status')
+    list_filter = ('author', 'is_featured', 'status', 'category')
 
 # ------------------------------------------------------------------------------
 
@@ -157,10 +158,10 @@ class ArticleAdmin(BaseArticleAdmin):
             {'fields': ('summary', 'content')}
         ),
         (_('Publication'),
-            {'fields': ('publication_date', 'is_reserved', 'is_published')}
+            {'fields': ('publication_date', 'status')}
         ),
     )
-    list_display = ('title', 'category', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_ld', 'is_published')
+    list_display = ('title', 'category', 'publication_date', 'opinion', 'is_featured', 'view_count', 'author_ld', 'status')
     search_fields = ('title', 'summary', 'content')
 
     def get_form(self, request, obj=None, **kwargs):

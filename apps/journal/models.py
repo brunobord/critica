@@ -303,23 +303,24 @@ class NoteTypeRegion(BaseNoteType):
         Inherits from BaseNoteType.
         So, all fields of this abstract class and fields below.
             
-        position_on_page
-            * IntegerField
-            * choices: critica.apps.journal.choices.NOTE_TYPE_REGION_POSITION_CHOICES
+        is_featured
+            * BooleanField
+            * Default: False
+            * Is region type featured?
             * Required
             
     Indexes::
     
         BaseNoteType indexes and below.
         
-        * position_on_page
+        * featured
         
     Managers::
     
         See BaseNoteType.
     
     """
-    position_on_page = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_REGION_POSITION_CHOICES, unique=True, blank=True, db_index=True)
+    is_featured = models.BooleanField(_('featured'), default=False, db_index=True)
     
     class Meta:
         """ 
@@ -686,16 +687,11 @@ class BaseArticle(models.Model):
             * Is article featured?
             * Required
             
-        is_reserved
-            * BooleanField
-            * Default: False
-            * Is article reserved?
-            * Required
-            
-        is_published
-            * BooleanField
-            * Default: False
-            * Is article ready to be published?
+        status
+            * PositiveIntegerField
+            * Choices: critica.apps.journal.choices.STATUS_CHOICES
+            * Default: critica.apps.journal.choices.STATUS_DRAFT
+            * The article status
             * Required
             
         content
@@ -712,8 +708,7 @@ class BaseArticle(models.Model):
         * publication_date
         * opinion
         * is_featured
-        * is_reserved
-        * is_published
+        * status
         
     Managers::
     
@@ -737,8 +732,7 @@ class BaseArticle(models.Model):
     publication_date = models.DateField(_('publication date'), blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, blank=True, db_index=True)
     is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is article featured?'))
-    is_reserved = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is article reserved?'))
-    is_published = models.BooleanField(_('published'), default=False, db_index=True, help_text=_('Is article ready to be published?'))
+    status = models.PositiveIntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     content = models.TextField(_('content'))
 
     objects = models.Manager()

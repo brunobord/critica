@@ -3,11 +3,12 @@ Managers for ``critica.apps.journal`` models.
 
 """
 from django.db import models
+from critica.apps.journal import choices
 
 
-class PublishedArticleManager(models.Manager):   
+class PublishedArticleManager(models.Manager):
     def get_query_set(self):
-        return super(PublishedArticleManager, self).get_query_set().filter(issues__is_complete=True, is_published=True, is_reserved=False)
+        return super(PublishedArticleManager, self).get_query_set().filter(issues__is_complete=True, status=choices.STATUS_PUBLISHED)
 
 
 class CompleteIssueManager(models.Manager):
