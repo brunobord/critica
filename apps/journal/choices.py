@@ -81,7 +81,7 @@ CATEGORY_POSITION_CHOICES = (
     (13, 'Scotch'),
 )
 
-TYPE_POSITION_CHOICES = (
+NOTE_TYPE_GENERAL_POSITION_CHOICES = (
     (1, 'Post-it'),
     (2, 'Punaise -- ligne 1 -- gauche'),
     (3, 'Punaise -- ligne 1 -- droite'),
@@ -94,4 +94,31 @@ TYPE_POSITION_CHOICES = (
     (10, 'Accordéon -- ligne 5'),
 )
 
-
+NOTE_TYPE_REGION_POSITION_CHOICES = (
+    (1, '1'),
+    (2, '2'),
+    (3, '3'),
+    (4, '4'),
+    (5, '5'),
+    (6, '6'),
+    (7, '7'),
+    (8, '8'),
+    (9, '9'),
+    (10, '10'),
+    (11, '11'),
+    (12, '12'),
+    (13, '13'),
+    (14, '14'),
+    (15, '15'),
+    (16, '16'),
+    (17, '17'),
+    (18, '18'),
+    (19, '19'),
+    (20, '20'),
+    (21, '21'),
+    (22, '22'),
+    (23, '23'),
+    (24, '24'),
+    (25, '25'),
+    (26, '26'),
+)

@@ -17,6 +17,8 @@ from critica.apps.journal.managers import CompleteIssueManager
 from critica.apps.journal.managers import PublishedIssueManager
 
 
+# ------------------------------------------------------------------------------
+
 class Category(models.Model):
     """
     Category.
@@ -185,15 +187,13 @@ class Category(models.Model):
         self.slug = slugify(self.name)
         super(Category, self).save()
 
-
 # ------------------------------------------------------------------------------
 
-
-class NoteType(models.Model):
+class BaseNoteType(models.Model):
     """
-    Note type.
+    Base note type.
     
-    Database table name: ``journal_note_type``.
+    This is an abstract class.
     
     A note type is composed of::
     
@@ -201,15 +201,18 @@ class NoteType(models.Model):
             * CharField
             * 255 characters max.
             * Required
-            
-        position_on_page
-            * IntegerField
-            * choices: critica.apps.journal.choices.TYPE_POSITION_CHOICES
+        
+        slug
+            * SlugField
+            * 255 characters max.
+            * The region type slug (can be used for CSS or later for URLs) 
+            * Must be unique
+            * No editable
             * Required
             
     Indexes::
     
-        * position_on_page
+        * slug
         
     Managers::
     
@@ -218,7 +221,7 @@ class NoteType(models.Model):
     
     """
     name = models.CharField(_('name'), max_length=255)
-    position_on_page = models.IntegerField(_('position'), choices=choices.TYPE_POSITION_CHOICES, unique=True, db_index=True)
+    slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
     
     objects = models.Manager()
     
@@ -227,8 +230,7 @@ class NoteType(models.Model):
         Model metadata. 
         
         """
-        verbose_name = _('note type')
-        verbose_name_plural = _('note types')
+        abstract = True
         
     def __unicode__(self):
         """ 
@@ -236,10 +238,99 @@ class NoteType(models.Model):
         
         """
         return u'%s' % self.name
-
+        
+    def save(self):
+        """ 
+        Object pre-saving operations:
+        
+        * Generates slug from title
+        * Save note type
+        
+        """
+        self.slug = slugify(self.name)
+        super(BaseNoteType, self).save()
 
 # ------------------------------------------------------------------------------
 
+class NoteTypeGeneral(BaseNoteType):
+    """
+    General note type.
+    
+    Database table name: ``journal_note_type_general``.
+    
+    A general note type is composed of::
+    
+        Inherits from BaseNoteType.
+        So, all fields of this abstract class and fields below.
+            
+        position_on_page
+            * IntegerField
+            * choices: critica.apps.journal.choices.NOTE_TYPE_GENERAL_POSITION_CHOICES
+            * Required
+            
+    Indexes::
+    
+        BaseNoteType indexes and below.
+        
+        * position_on_page
+        
+    Managers::
+    
+        See BaseNoteType.
+    
+    """
+    position_on_page = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_GENERAL_POSITION_CHOICES, unique=True, db_index=True)
+    
+    class Meta:
+        """ 
+        Model metadata. 
+        
+        """
+        db_table = 'journal_note_type_general'
+        verbose_name = _('general note type')
+        verbose_name_plural = _('general note types')
+
+# ------------------------------------------------------------------------------
+
+class NoteTypeRegion(BaseNoteType):
+    """
+    Region note type.
+    
+    Database table name: ``journal_note_type_region``.
+    
+    A region note type is composed of::
+    
+        Inherits from BaseNoteType.
+        So, all fields of this abstract class and fields below.
+            
+        position_on_page
+            * IntegerField
+            * choices: critica.apps.journal.choices.NOTE_TYPE_REGION_POSITION_CHOICES
+            * Required
+            
+    Indexes::
+    
+        BaseNoteType indexes and below.
+        
+        * position_on_page
+        
+    Managers::
+    
+        See BaseNoteType.
+    
+    """
+    position_on_page = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_REGION_POSITION_CHOICES, unique=True, db_index=True)
+    
+    class Meta:
+        """ 
+        Model metadata. 
+        
+        """
+        db_table = 'journal_note_type_region'
+        verbose_name = _('region note type')
+        verbose_name_plural = _('region note types')
+
+# ------------------------------------------------------------------------------
 
 class Illustration(models.Model):
     """
@@ -345,9 +436,7 @@ class Illustration(models.Model):
     category_ld.allow_tags = True
     category_ld.short_description = _('Category')
 
-
 # ------------------------------------------------------------------------------
-
 
 class Reportage(models.Model):
     """
@@ -428,9 +517,7 @@ class Reportage(models.Model):
         """
         return u'%s' % self.video_name
 
-
 # ------------------------------------------------------------------------------
-
 
 class Issue(models.Model):
     """
@@ -521,9 +608,7 @@ class Issue(models.Model):
         return self.article_set.filter(is_published=True, is_reserved=False)
     published_article_set = property(_get_published_article_set)
 
-
 # ------------------------------------------------------------------------------
-
 
 class BaseArticle(models.Model):
     """
@@ -713,9 +798,44 @@ class BaseArticle(models.Model):
         self.slug = slugify(self.title)
         super(BaseArticle, self).save()
 
-
 # ------------------------------------------------------------------------------
 
+class BaseNote(BaseArticle):
+    """
+    Base note.
+    
+    This is an abstract class.
+    
+    A note is composed of::
+    
+        Inherits from BaseArticle.
+        So, all fields of this abstract class and fields below.
+
+    Indexes::
+    
+        BaseArticle indexes and below.
+            
+    Managers::
+    
+        See BaseArticle.
+        
+    Permissions::
+            
+        can_reserve_note
+            Can reserve a note
+            
+        can_feature_note
+            Can feature a note
+    
+    """
+    class Meta:
+        abstract = True
+        permissions = (
+            ('can_reserve_note', 'Can reserve a note'),
+            ('can_feature_note', 'Can feature a note'),
+        )
+
+# ------------------------------------------------------------------------------
 
 class Article(BaseArticle):
     """
@@ -789,63 +909,84 @@ class Article(BaseArticle):
             ('can_feature_article', 'Can feature an article'),
         )
 
-
 # ------------------------------------------------------------------------------
 
-
-class Note(BaseArticle):
+class NoteGeneral(BaseNote):
     """
-    Note.
+    General note.
     
-    Database table name: ``journal_note``.
+    Database table name: ``journal_note_general``.
     
     A note is composed of::
     
-        Inherits from BaseArticle.
+        Inherits from BaseNote.
         So, all fields of this abstract class and fields below.
     
         type
             * ForeignKey(Type)
-            * The note type
+            * The general note type
             * Required
 
     Indexes::
     
-        BaseArticle indexes and below.
+        BaseNote indexes and below.
         
         * type
             
     Managers::
     
-        See BaseArticle.
+        See BaseNote.
         
     Permissions::
-            
-        can_reserve_note
-            Can reserve a note
-            
-        can_feature_note
-            Can feature a note
+    
+        See BaseNote.
     
     """
-    type = models.ForeignKey(NoteType, verbose_name=_('type'), help_text=_('Please, select a note type.'))
+    type = models.ForeignKey(NoteTypeGeneral, verbose_name=_('type'), help_text=_('Please, select a note type.'))
 
     class Meta:
-        db_table = 'journal_note'
-        verbose_name = _('note')
-        verbose_name_plural = _('notes')
-        permissions = (
-            ('can_reserve_note', 'Can reserve a note'),
-            ('can_feature_note', 'Can feature a note'),
-        )
+        db_table = 'journal_note_general'
+        verbose_name = _('general note')
+        verbose_name_plural = _('general notes')
 
-    def type_ld(self):
-        """
-        Formatted type for admin list_display option.
+# ------------------------------------------------------------------------------
+
+class NoteRegion(BaseNote):
+    """
+    Region note.
+    
+    Database table name: ``journal_note_region``.
+    
+    A note is composed of::
+    
+        Inherits from BaseNote.
+        So, all fields of this abstract class and fields below.
+    
+        type
+            * ForeignKey(Type)
+            * The region note type
+            * Required
+
+    Indexes::
+    
+        BaseNote indexes and below.
         
-        """
-        return '<em>%s</em>' % (self.type.title,)
-    type_ld.allow_tags = True
-    type_ld.short_description = _('Type')
+        * type
+            
+    Managers::
+    
+        See BaseNote.
+        
+    Permissions::
+    
+        See BaseNote.
+    
+    """
+    type = models.ForeignKey(NoteTypeRegion, verbose_name=_('type'), help_text=_('Please, select a note type.'))
+
+    class Meta:
+        db_table = 'journal_note_region'
+        verbose_name = _('region note')
+        verbose_name_plural = _('region notes')
 
 

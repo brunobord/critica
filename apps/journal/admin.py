@@ -7,11 +7,14 @@ from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from tagging.models import Tag, TaggedItem
-from critica.apps.journal.models import Category, NoteType
+from critica.apps.journal.models import Category
+from critica.apps.journal.models import NoteTypeGeneral, NoteTypeRegion
 from critica.apps.journal.models import Reportage, Illustration
-from critica.apps.journal.models import Article, Note
+from critica.apps.journal.models import Article, NoteGeneral, NoteRegion
 from critica.apps.journal.models import Issue
 
+
+# ------------------------------------------------------------------------------
 
 class CategoryAdmin(admin.ModelAdmin):
     """
@@ -22,16 +25,29 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description')
     ordering = ['name']
 
+# ------------------------------------------------------------------------------
 
-class NoteTypeAdmin(admin.ModelAdmin):
+class NoteTypeGeneralAdmin(admin.ModelAdmin):
     """
-    Administration interface for ``NoteType`` model.
+    Administration interface for ``NoteTypeGeneral`` model.
     
     """
     list_display = ('name', 'position_on_page')
     search_fields = ('name',)
     ordering = ['position_on_page']
 
+
+class NoteTypeRegionAdmin(admin.ModelAdmin):
+    """
+    Administration interface for ``NoteTypeRegion`` model.
+    
+    """
+    list_display = ('name', 'position_on_page')
+    search_fields = ('name',)
+    ordering = ['position_on_page']
+
+
+# ------------------------------------------------------------------------------
 
 class ReportageAdmin(admin.ModelAdmin):
     """
@@ -43,6 +59,7 @@ class ReportageAdmin(admin.ModelAdmin):
     ordering = ('-creation_date',)
     date_hierarchy = 'creation_date'
     
+# ------------------------------------------------------------------------------
 
 class IllustrationAdmin(admin.ModelAdmin):
     """
@@ -55,6 +72,7 @@ class IllustrationAdmin(admin.ModelAdmin):
     ordering = ['legend', 'creation_date']
     date_hierarchy = 'creation_date'
 
+# ------------------------------------------------------------------------------
 
 class BaseArticleAdmin(admin.ModelAdmin):
     """
@@ -95,6 +113,31 @@ class BaseArticleAdmin(admin.ModelAdmin):
         return super(BaseArticleAdmin, self).get_form(request, obj, **defaults)
 
 
+class BaseNoteAdmin(BaseArticleAdmin):
+    """
+    Administration interface for ``BaseNote`` abstract model.
+    Inherits from ``BaseArticleAdmin``.
+    
+    """
+    fieldsets = (
+        (_('Headline'), 
+            {'fields': ('title', 'type', 'opinion', 'is_featured')}
+        ),
+        (_('Filling'),
+            {'fields': ('issues', 'category', 'tags')}
+        ),
+        (_('Content'),
+            {'fields': ('content',)}
+        ),
+        (_('Publication'),
+            {'fields': ('publication_date', 'is_reserved', 'is_published')}
+        ),
+    )
+    list_display = ('title', 'category', 'type', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_ld', 'is_published')
+    list_filter = ('author', 'is_featured', 'is_reserved', 'is_published', 'category')
+
+# ------------------------------------------------------------------------------
+
 class ArticleAdmin(BaseArticleAdmin):
     """
     Administration interface for ``Article`` model.
@@ -128,29 +171,24 @@ class ArticleAdmin(BaseArticleAdmin):
         defaults.update(kwargs)
         return super(ArticleAdmin, self).get_form(request, obj, **defaults)
 
+# ------------------------------------------------------------------------------
 
-class NoteAdmin(BaseArticleAdmin):
+class NoteGeneralAdmin(BaseNoteAdmin):
     """
-    Administration interface for ``Note`` model.
+    Administration interface for ``NoteGeneral`` model.
     
     """
-    fieldsets = (
-        (_('Headline'), 
-            {'fields': ('title', 'type', 'opinion', 'is_featured')}
-        ),
-        (_('Filling'),
-            {'fields': ('issues', 'category', 'tags')}
-        ),
-        (_('Content'),
-            {'fields': ('content',)}
-        ),
-        (_('Publication'),
-            {'fields': ('publication_date', 'is_reserved', 'is_published')}
-        ),
-    )
-    list_display = ('title', 'category', 'type_ld', 'publication_date', 'opinion', 'is_featured', 'is_reserved', 'view_count', 'author_ld', 'is_published')
-    list_filter = ('author', 'is_featured', 'is_reserved', 'is_published', 'category')
+    pass
+    
 
+class NoteRegionAdmin(BaseNoteAdmin):
+    """
+    Administration interface for ``NoteRegion`` model.
+    
+    """
+    pass
+
+#-------------------------------------------------------------------------------
 
 class IssueAdmin(admin.ModelAdmin):
     """
@@ -162,17 +200,18 @@ class IssueAdmin(admin.ModelAdmin):
     search_fields = ('number',)
     ordering = ('-publication_date',)
     date_hierarchy = 'publication_date'
-    
 
-# Registers
 # ------------------------------------------------------------------------------
+
 admin.site.unregister(Tag)
 admin.site.unregister(TaggedItem)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(NoteType, NoteTypeAdmin)
+admin.site.register(NoteTypeGeneral, NoteTypeGeneralAdmin)
+admin.site.register(NoteTypeRegion, NoteTypeRegionAdmin)
 admin.site.register(Reportage, ReportageAdmin)
 admin.site.register(Illustration, IllustrationAdmin)
 admin.site.register(Article, ArticleAdmin)
-admin.site.register(Note, NoteAdmin)
+admin.site.register(NoteGeneral, NoteGeneralAdmin)
+admin.site.register(NoteRegion, NoteRegionAdmin)
 admin.site.register(Issue, IssueAdmin)
 
