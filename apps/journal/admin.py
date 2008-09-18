@@ -30,7 +30,7 @@ class NoteTypeAdmin(admin.ModelAdmin):
     """
     list_display = ('name', 'position_on_page')
     search_fields = ('name',)
-    ordering = ['name']
+    ordering = ['position_on_page']
 
 
 class ReportageAdmin(admin.ModelAdmin):

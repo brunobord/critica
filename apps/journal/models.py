@@ -106,7 +106,7 @@ class Category(models.Model):
     image = models.ImageField(upload_to='upload/categories/', max_length=200, help_text=_('Please, upload an image for this category (it will be used as default category illustration).'))
     image_credits = models.CharField(_('credits'), max_length=100, default=_('all rights reserved'), help_text=_('100 characters max.'))
     image_legend = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
-    position_on_page = models.IntegerField(_('position'), choices=choices.CATEGORY_POSITION_CHOICES, db_index=True)
+    position_on_page = models.IntegerField(_('position'), choices=choices.CATEGORY_POSITION_CHOICES, unique=True, db_index=True)
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     
@@ -218,7 +218,7 @@ class NoteType(models.Model):
     
     """
     name = models.CharField(_('name'), max_length=255)
-    position_on_page = models.IntegerField(_('position'), choices=choices.TYPE_POSITION_CHOICES, db_index=True)
+    position_on_page = models.IntegerField(_('position'), choices=choices.TYPE_POSITION_CHOICES, unique=True, db_index=True)
     
     objects = models.Manager()
     
