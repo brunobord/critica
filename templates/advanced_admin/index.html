@@ -1,5 +1,90 @@
 {% extends "admin/index.html" %}
+{% load i18n %}
+
 {% block title %}{{ title }} | Administration de Critic@{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}common/css/advanced_admin/screen.css" />
+{% endblock %}
+
 {% block branding %}
 <h1 id="site-name">Administration de Critic@</h1>
 {% endblock %}
+
+{% block coltype %}{% endblock %}
+{% block bodyclass %}{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <div id="content-left-column">
+        <div id="articlemodule">
+            <h2>{% trans "Articles and notes" %}</h2>
+            <h3>{% trans "Add" %}</h3>
+            <ul class="module-actions">
+                <li id="articlemodule-new-article">{% trans "Add a new article" %}</li>
+                <li id="articlemodule-new-general-note">{% trans "Add a new general note" %}</li>
+                <li id="articlemodule-new-region-note">{% trans "Add a new region note" %}</li>
+            </ul>
+            <div style="clear:both">&nbsp;</div>
+            <h3>{% trans "Archive" %}</h3>
+            <ul class="module-actions">
+                <li id="articlemodule-article-archive">{% trans "Article archive" %}</li>
+                <li id="articlemodule-general-note-archive">{% trans "General note archive" %}</li>
+                <li id="articlemodule-region-note-archive">{% trans "Region note archive" %}</li>
+            </ul>
+            <div style="clear:both">&nbsp;</div>
+        </div>
+        <div id="admodule">
+            <h2>{% trans "Ads" %}</h2>
+            <h3>{% trans "Add and manage" %}</h3>
+            <ul class="module-actions">
+                <li id="admodule-new-ad">{% trans "Add a new ad" %}</li>
+                <li id="admodule-manage-ad">{% trans "Manage ads" %}</li>
+            </ul>
+            <div style="clear:both">&nbsp;</div>
+        </div>
+    </div>
+    <div id="content-right-column">
+        <div id="issuemodule">
+            <h2>{% trans "Issues" %}</h2>
+            <h3>{% trans "Add and manage" %}</h3>
+            <ul class="module-actions">
+                <li id="issuemodule-new-issue">{% trans "Add a new issue" %}</li>
+                <li id="issuemodule-manage-issues">{% trans "Manage issues" %}</li>
+            </ul>
+            <h3>{% trans "Organize" %}</h3>
+            <ul class="module-actions">
+                <li id="issuemodule-organize-cover">{% trans "Organize cover" %}</li>
+                <li id="issuemodule-organize-categories">{% trans "Organize categories" %}</li>
+            </ul>
+            <div style="clear:both">&nbsp;</div>
+        </div>
+    </div>
+    <div style="clear:both">&nbsp;</div>
+    <div id="content-bottom">
+        <div id="adminmodule">
+            <h2>{% trans "Administrators" %}</h2>
+            <h3>{% trans "Journal" %}</h3>
+            <ul class="module-actions">
+                <li id="adminmodule-categories">{% trans "Categories" %}</li>
+                <li id="adminmodule-generalnotetypes">{% trans "General note types" %}</li>
+                <li id="adminmodule-regionnotetypes">{% trans "Region note types" %}</li>
+            </ul>
+            <div style="clear:both">&nbsp;</div>
+            <h3>{% trans "Site" %}</h3>
+            <ul class="module-actions">
+                <li id="adminmodule-sites">{% trans "Sites" %}</li>
+            </ul>
+            <div style="clear:both">&nbsp;</div>
+            <h3>{% trans "Users" %}</h3>
+            <ul class="module-actions">
+                <li id="adminmodule-users">{% trans "Users" %}</li>
+                <li id="adminmodule-groups">{% trans "Groups" %}</li>
+            </ul>
+            <div style="clear:both">&nbsp;</div>
+        </div>
+    </div>
+    <div style="clear:both">&nbsp;</div>
+</div>
+{% endblock %}
+{% block sidebar %}{% endblock %}
