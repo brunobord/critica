@@ -477,15 +477,17 @@ class Reportage(models.Model):
             * No editable
             * Required
             
-        is_published
-            * BooleanField
-            * Default: False
+        status
+            * IntegerField
+            * Choices: critica.apps.journal.choices.STATUS_CHOICES
+            * Default: critica.apps.journal.choices.STATUS_NEW
+            * The reportage status
             * Required
     
     Indexes::
     
         * submitter
-        * is_published
+        * status
     
     Managers::
     
@@ -498,7 +500,7 @@ class Reportage(models.Model):
     video_link = models.CharField(_('video link'), max_length=255, help_text=_('Please, enter the video URL.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
-    is_published = models.BooleanField(_('published'), default=False, db_index=True, help_text=_('Is video ready to be published?'))
+    status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     
     objects = models.Manager()
     
@@ -538,16 +540,11 @@ class Issue(models.Model):
             * The issue publication date
             * Optional (can be blank)
             
-        is_complete
-            * BooleanField
-            * Default: False
-            * If issue complete?
-            * Required
-            
-        is_published
-            * BooleanField
-            * Default: False
-            * If issue ready to be published?
+        status
+            * IntegerField
+            * Choices: critica.apps.journal.choices.STATUS_CHOICES
+            * Default: critica.apps.journal.choices.STATUS_NEW
+            * The issue status
             * Required
     
     Indexes::
@@ -577,8 +574,7 @@ class Issue(models.Model):
     """
     number = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
     publication_date = models.DateField(_('publication date'), blank=True, help_text=_("Don't forget to adjust the publication date"))
-    is_complete = models.BooleanField(_('complete'), default=False, db_index=True, help_text=_('Is issue complete'))
-    is_published = models.BooleanField(_('published'), default=False, db_index=True, help_text=_('Is issue ready to be published?'))
+    status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     
     objects = models.Manager()
     complete = CompleteIssueManager()
@@ -605,7 +601,7 @@ class Issue(models.Model):
         Access this through the property ``published_article_set``. 
         
         """
-        return self.article_set.filter(is_published=True, is_reserved=False)
+        return self.article_set.filter(status=choices.STATUS_PUBLISHED)
     published_article_set = property(_get_published_article_set)
 
 # ------------------------------------------------------------------------------
@@ -687,9 +683,9 @@ class BaseArticle(models.Model):
             * Required
             
         status
-            * PositiveIntegerField
+            * IntegerField
             * Choices: critica.apps.journal.choices.STATUS_CHOICES
-            * Default: critica.apps.journal.choices.STATUS_DRAFT
+            * Default: critica.apps.journal.choices.STATUS_NEW
             * The article status
             * Required
             
@@ -731,7 +727,7 @@ class BaseArticle(models.Model):
     publication_date = models.DateField(_('publication date'), blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, blank=True, db_index=True)
     is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is article featured?'))
-    status = models.PositiveIntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
+    status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     content = models.TextField(_('content'))
 
     objects = models.Manager()
