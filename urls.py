@@ -6,12 +6,20 @@ import os.path
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
+from critica.apps.admin.sites import basic_site, advanced_site
+
+# Admin
+# ------------------------------------------------------------------------------
 admin.autodiscover()
+urlpatterns = patterns('',
+    (r'^admin/(.*)', basic_site.root),
+    (r'^advanced-admin/(.*)', advanced_site.root),
+)
+
 
 # Applications
 # ------------------------------------------------------------------------------
-urlpatterns = patterns('',
-    (r'^admin/(.*)', admin.site.root),
+urlpatterns += patterns('',
     (r'^pages/', include('critica.apps.pages.urls')),
     (r'^rss/', include('critica.apps.syndication.urls')),
     (r'', include('critica.apps.journal.urls')),

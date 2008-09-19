@@ -6,16 +6,15 @@ Administration interface options for ``cockatoo.apps.journal`` models.
 from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from tagging.models import Tag, TaggedItem
+from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.journal.models import Category
 from critica.apps.journal.models import NoteTypeGeneral, NoteTypeRegion
 from critica.apps.journal.models import Reportage, Illustration
 from critica.apps.journal.models import Article, NoteGeneral, NoteRegion
 from critica.apps.journal.models import Issue
 
-
+# Category
 # ------------------------------------------------------------------------------
-
 class CategoryAdmin(admin.ModelAdmin):
     """
     Administration interface for ``Category`` model.
@@ -25,8 +24,12 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name', 'description')
     ordering = ['name']
 
-# ------------------------------------------------------------------------------
 
+basic_site.register(Category, CategoryAdmin)
+advanced_site.register(Category, CategoryAdmin)
+
+# General note type
+# ------------------------------------------------------------------------------
 class NoteTypeGeneralAdmin(admin.ModelAdmin):
     """
     Administration interface for ``NoteTypeGeneral`` model.
@@ -37,6 +40,11 @@ class NoteTypeGeneralAdmin(admin.ModelAdmin):
     ordering = ['position_on_page']
 
 
+basic_site.register(NoteTypeGeneral, NoteTypeGeneralAdmin)
+advanced_site.register(NoteTypeGeneral, NoteTypeGeneralAdmin)
+
+# Region note type
+# ------------------------------------------------------------------------------
 class NoteTypeRegionAdmin(admin.ModelAdmin):
     """
     Administration interface for ``NoteTypeRegion`` model.
@@ -47,8 +55,11 @@ class NoteTypeRegionAdmin(admin.ModelAdmin):
     ordering = ['name']
 
 
-# ------------------------------------------------------------------------------
+basic_site.register(NoteTypeRegion, NoteTypeRegionAdmin)
+advanced_site.register(NoteTypeRegion, NoteTypeRegionAdmin)
 
+# Reportage
+# ------------------------------------------------------------------------------
 class ReportageAdmin(admin.ModelAdmin):
     """
     Administration interface for ``Reportage`` model.
@@ -59,9 +70,13 @@ class ReportageAdmin(admin.ModelAdmin):
     ordering = ('-creation_date',)
     radio_fields = {'status': admin.VERTICAL}
     date_hierarchy = 'creation_date'
-    
-# ------------------------------------------------------------------------------
 
+
+basic_site.register(Reportage, ReportageAdmin)
+advanced_site.register(Reportage, ReportageAdmin)
+
+# Illustration
+# ------------------------------------------------------------------------------
 class IllustrationAdmin(admin.ModelAdmin):
     """
     Administration interface for ``Illustration`` model.
@@ -73,8 +88,12 @@ class IllustrationAdmin(admin.ModelAdmin):
     ordering = ['legend', 'creation_date']
     date_hierarchy = 'creation_date'
 
-# ------------------------------------------------------------------------------
 
+basic_site.register(Illustration, IllustrationAdmin)
+advanced_site.register(Illustration, IllustrationAdmin)
+
+# Base article
+# ------------------------------------------------------------------------------
 class BaseArticleAdmin(admin.ModelAdmin):
     """
     Administration interface for ``BaseArticle`` abstract model.
@@ -115,6 +134,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
         return super(BaseArticleAdmin, self).get_form(request, obj, **defaults)
 
 
+# Base note
+# ------------------------------------------------------------------------------
 class BaseNoteAdmin(BaseArticleAdmin):
     """
     Administration interface for ``BaseNote`` abstract model.
@@ -138,8 +159,9 @@ class BaseNoteAdmin(BaseArticleAdmin):
     list_display = ('title', 'category', 'type', 'publication_date', 'opinion', 'is_featured', 'view_count', 'author_ld', 'status')
     list_filter = ('author', 'is_featured', 'status', 'category')
 
-# ------------------------------------------------------------------------------
 
+# Article
+# ------------------------------------------------------------------------------
 class ArticleAdmin(BaseArticleAdmin):
     """
     Administration interface for ``Article`` model.
@@ -173,16 +195,25 @@ class ArticleAdmin(BaseArticleAdmin):
         defaults.update(kwargs)
         return super(ArticleAdmin, self).get_form(request, obj, **defaults)
 
-# ------------------------------------------------------------------------------
 
+basic_site.register(Article, ArticleAdmin)
+advanced_site.register(Article, ArticleAdmin)
+
+# General note
+# ------------------------------------------------------------------------------
 class NoteGeneralAdmin(BaseNoteAdmin):
     """
     Administration interface for ``NoteGeneral`` model.
     
     """
     pass
-    
 
+
+basic_site.register(NoteGeneral, NoteGeneralAdmin)
+advanced_site.register(NoteGeneral, NoteGeneralAdmin)
+
+# Region note
+# ------------------------------------------------------------------------------
 class NoteRegionAdmin(BaseNoteAdmin):
     """
     Administration interface for ``NoteRegion`` model.
@@ -190,8 +221,12 @@ class NoteRegionAdmin(BaseNoteAdmin):
     """
     pass
 
-#-------------------------------------------------------------------------------
 
+basic_site.register(NoteRegion, NoteRegionAdmin)
+advanced_site.register(NoteRegion, NoteRegionAdmin)
+
+# Issue
+#-------------------------------------------------------------------------------
 class IssueAdmin(admin.ModelAdmin):
     """
     Administration interface for ``Issue`` model.
@@ -204,17 +239,8 @@ class IssueAdmin(admin.ModelAdmin):
     radio_fields = {'status': admin.VERTICAL}
     date_hierarchy = 'publication_date'
 
-# ------------------------------------------------------------------------------
 
-admin.site.unregister(Tag)
-admin.site.unregister(TaggedItem)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(NoteTypeGeneral, NoteTypeGeneralAdmin)
-admin.site.register(NoteTypeRegion, NoteTypeRegionAdmin)
-admin.site.register(Reportage, ReportageAdmin)
-admin.site.register(Illustration, IllustrationAdmin)
-admin.site.register(Article, ArticleAdmin)
-admin.site.register(NoteGeneral, NoteGeneralAdmin)
-admin.site.register(NoteRegion, NoteRegionAdmin)
-admin.site.register(Issue, IssueAdmin)
+basic_site.register(Issue, IssueAdmin)
+advanced_site.register(Issue, IssueAdmin)
+
 
