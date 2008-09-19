@@ -44,7 +44,7 @@ from tagging.models import Tag
 # Archives
 # ------------------------------------------------------------------------------
 archives_dict = {
-    'queryset': Issue.complete.published(), 
+    'queryset': Issue.complete.all(), 
     'date_field': 'publication_date',
 }
 
@@ -72,7 +72,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/$', 
         'archive_month', 
         dict(
-            queryset=Issue.complete.published(),
+            queryset=Issue.complete.all(),
             date_field='publication_date',
             month_format='%m'
         ), 
@@ -81,7 +81,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/$', 
         'archive_year', 
         dict(
-            queryset=Issue.complete.published(),
+            queryset=Issue.complete.all(),
             date_field='publication_date',
             make_object_list=True,
         ), 
@@ -92,7 +92,7 @@ urlpatterns = patterns('django.views.generic.date_based',
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^archives/$', 
         'direct_to_template', 
-        {'template': 'journal/issue_archive.html', 'extra_context': {'issues': Issue.complete.published()}}, 
+        {'template': 'journal/issue_archive.html', 'extra_context': {'issues': Issue.complete.all()}}, 
         name='archives',
     ),
 )

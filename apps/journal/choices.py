@@ -6,18 +6,42 @@ Choices of ``critica.apps.journal`` application.
 from django.utils.translation import ugettext_lazy as _
 
 
-# Status
+# Issue status
 # ------------------------------------------------------------------------------
-STATUS_PUBLISHED = 1 
-STATUS_PENDING_PUBLICATION = 2
-STATUS_NEW = 3
-STATUS_RESERVED = 4
+ISSUE_STATUS_COMPLETE = 1
+ISSUE_STATUS_NEW = 2
 
-STATUS_CHOICES = (
-    (STATUS_PUBLISHED, _('Published')),
-    (STATUS_PENDING_PUBLICATION, _('Ready to be published')),
-    (STATUS_NEW, _('New')),
-    (STATUS_RESERVED, _('Reserved')),
+ISSUE_STATUS_CHOICES = (
+    (ISSUE_STATUS_COMPLETE, _('Complete')),
+    (ISSUE_STATUS_NEW, _('New')),
+)
+
+# Reportage status
+# ------------------------------------------------------------------------------
+REPORTAGE_STATUS_PUBLISHED = 1
+REPORTAGE_STATUS_PENDING_PUBLICATION = 2
+REPORTAGE_STATUS_NEW = 3
+REPORTAGE_STATUS_RESERVED = 4
+
+REPORTAGE_STATUS_CHOICES = (
+    (REPORTAGE_STATUS_PUBLISHED, _('Published')),
+    (REPORTAGE_STATUS_PENDING_PUBLICATION, _('Ready to be published')),
+    (REPORTAGE_STATUS_NEW, _('New')),
+    (REPORTAGE_STATUS_RESERVED, _('Reserved')),
+)
+
+# Article status
+# ------------------------------------------------------------------------------
+ARTICLE_STATUS_PUBLISHED = 1 
+ARTICLE_STATUS_PENDING_PUBLICATION = 2
+ARTICLE_STATUS_NEW = 3
+ARTICLE_STATUS_RESERVED = 4
+
+ARTICLE_STATUS_CHOICES = (
+    (ARTICLE_STATUS_PUBLISHED, _('Published')),
+    (ARTICLE_STATUS_PENDING_PUBLICATION, _('Ready to be published')),
+    (ARTICLE_STATUS_NEW, _('New')),
+    (ARTICLE_STATUS_RESERVED, _('Reserved')),
 )
 
 # Opinions

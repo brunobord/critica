@@ -14,7 +14,6 @@ from tagging.fields import TagField
 from critica.apps.journal import choices
 from critica.apps.journal.managers import PublishedArticleManager
 from critica.apps.journal.managers import CompleteIssueManager
-from critica.apps.journal.managers import PublishedIssueManager
 
 
 # ------------------------------------------------------------------------------
@@ -70,7 +69,7 @@ class Category(models.Model):
             * IntegerField
             * The category position on the cover
             * choices: critica.apps.journal.choices.CATEGORY_POSITION_CHOICES
-            * Required
+            * Optional (can be blank)
             
         creation_date
             * DateTimeField
@@ -108,7 +107,7 @@ class Category(models.Model):
     image = models.ImageField(upload_to='upload/categories/', max_length=200, help_text=_('Please, upload an image for this category (it will be used as default category illustration).'))
     image_credits = models.CharField(_('credits'), max_length=100, default=_('all rights reserved'), help_text=_('100 characters max.'))
     image_legend = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
-    position_on_page = models.IntegerField(_('position'), choices=choices.CATEGORY_POSITION_CHOICES, unique=True, db_index=True)
+    position_on_page = models.IntegerField(_('position'), choices=choices.CATEGORY_POSITION_CHOICES, unique=True, blank=True, db_index=True)
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     
@@ -169,10 +168,10 @@ class Category(models.Model):
         
         """
         return self.article_set.filter(
-            issues__is_complete=True, 
-            issues__is_published=True, 
-            status=choices.STATUS_PUBLISHED,
+            issues__status=choices.ISSUE_STATUS_COMPLETE,
+            status=choices.ARTICLE_STATUS_PUBLISHED,
         )
+        
     published_article_set = property(_get_published_article_set)
     
     def save(self):
@@ -479,8 +478,8 @@ class Reportage(models.Model):
             
         status
             * IntegerField
-            * Choices: critica.apps.journal.choices.STATUS_CHOICES
-            * Default: critica.apps.journal.choices.STATUS_NEW
+            * Choices: critica.apps.journal.choices.REPORTAGE_STATUS_CHOICES
+            * Default: critica.apps.journal.choices.REPORTAGE_STATUS_NEW
             * The reportage status
             * Required
     
@@ -500,7 +499,7 @@ class Reportage(models.Model):
     video_link = models.CharField(_('video link'), max_length=255, help_text=_('Please, enter the video URL.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
-    status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
+    status = models.IntegerField(_('status'), choices=choices.REPORTAGE_STATUS_CHOICES, default=choices.REPORTAGE_STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     
     objects = models.Manager()
     
@@ -542,16 +541,15 @@ class Issue(models.Model):
             
         status
             * IntegerField
-            * Choices: critica.apps.journal.choices.STATUS_CHOICES
-            * Default: critica.apps.journal.choices.STATUS_NEW
+            * Choices: critica.apps.journal.choices.ISSUE_STATUS_CHOICES
+            * Default: critica.apps.journal.choices.ISSUE_STATUS_NEW
             * The issue status
             * Required
     
     Indexes::
     
         * number
-        * is_complete
-        * is_published
+        * status
     
     Managers::
     
@@ -560,11 +558,6 @@ class Issue(models.Model):
         
         complete
             Complete issues: critica.apps.journal.managers.CompleteIssueManager()
-            To retrieve complete published issues: Issue.complete.published
-            
-        published
-            Published issues: critica.apps.journal.managers.PublishedIssueManager()
-            To retrieve complete published issues: Issue.published.complete
     
     Properties::
     
@@ -574,11 +567,10 @@ class Issue(models.Model):
     """
     number = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
     publication_date = models.DateField(_('publication date'), blank=True, help_text=_("Don't forget to adjust the publication date"))
-    status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
+    status = models.IntegerField(_('status'), choices=choices.ISSUE_STATUS_CHOICES, default=choices.ISSUE_STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     
     objects = models.Manager()
     complete = CompleteIssueManager()
-    published = PublishedIssueManager()
     
     class Meta:
         """ 
@@ -601,7 +593,7 @@ class Issue(models.Model):
         Access this through the property ``published_article_set``. 
         
         """
-        return self.article_set.filter(status=choices.STATUS_PUBLISHED)
+        return self.article_set.filter(status=choices.ARTICLE_STATUS_PUBLISHED)
     published_article_set = property(_get_published_article_set)
 
 # ------------------------------------------------------------------------------
@@ -684,8 +676,8 @@ class BaseArticle(models.Model):
             
         status
             * IntegerField
-            * Choices: critica.apps.journal.choices.STATUS_CHOICES
-            * Default: critica.apps.journal.choices.STATUS_NEW
+            * Choices: critica.apps.journal.choices.ARTICLE_STATUS_CHOICES
+            * Default: critica.apps.journal.choices.ARTICLE_STATUS_NEW
             * The article status
             * Required
             
@@ -727,7 +719,7 @@ class BaseArticle(models.Model):
     publication_date = models.DateField(_('publication date'), blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, blank=True, db_index=True)
     is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is article featured?'))
-    status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
+    status = models.IntegerField(_('status'), choices=choices.ARTICLE_STATUS_CHOICES, default=choices.ARTICLE_STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     content = models.TextField(_('content'))
 
     objects = models.Manager()

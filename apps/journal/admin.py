@@ -54,9 +54,10 @@ class ReportageAdmin(admin.ModelAdmin):
     Administration interface for ``Reportage`` model.
     
     """
-    list_display = ('video_name', 'video_link', 'creation_date', 'modification_date', 'is_published')
+    list_display = ('video_name', 'video_link', 'creation_date', 'modification_date', 'status')
     search_fields = ('video_name',)
     ordering = ('-creation_date',)
+    radio_fields = {'status': admin.VERTICAL}
     date_hierarchy = 'creation_date'
     
 # ------------------------------------------------------------------------------
@@ -79,7 +80,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface for ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'publication_date', 'is_featured', 'status', 'view_count', 'author_ld')
+    list_display = ('title', 'category', 'publication_date', 'is_featured', 'view_count', 'author_ld', 'status')
     list_filter = ('author', 'is_featured', 'category')
     search_fields = ('title', 'content')
     radio_fields = {'status': admin.VERTICAL}
@@ -196,10 +197,11 @@ class IssueAdmin(admin.ModelAdmin):
     Administration interface for ``Issue`` model.
     
     """
-    list_display = ('number', 'publication_date', 'is_complete', 'is_published')
-    list_filter = ('is_complete', 'is_published')
+    list_display = ('number', 'publication_date', 'status')
+    list_filter = ('status',)
     search_fields = ('number',)
     ordering = ('-publication_date',)
+    radio_fields = {'status': admin.VERTICAL}
     date_hierarchy = 'publication_date'
 
 # ------------------------------------------------------------------------------
