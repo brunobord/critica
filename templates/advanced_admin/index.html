@@ -17,74 +17,69 @@
 {% block content %}
 <div id="content-main">
     <div id="content-left-column">
-        <div id="articlemodule">
+        <div id="articlemodule" class="autoclear">
             <h2>{% trans "Articles and notes" %}</h2>
             <h3>{% trans "Add" %}</h3>
             <ul class="module-actions">
-                <li id="articlemodule-new-article">{% trans "Add a new article" %}</li>
-                <li id="articlemodule-new-general-note">{% trans "Add a new general note" %}</li>
-                <li id="articlemodule-new-region-note">{% trans "Add a new region note" %}</li>
+                <li id="articlemodule-new-article"><a href="journal/article/add/" title="{% trans "Add a new article" %}">{% trans "Add a new article" %}</a></li>
+                <li id="articlemodule-new-general-note"><a href="journal/notegeneral/add/" title="{% trans "Add a new general note" %}">{% trans "Add a new general note" %}</a></li>
+                <li id="articlemodule-new-region-note"><a href="journal/noteregion/add/" title="{% trans "Add a new region note" %}">{% trans "Add a new region note" %}</a></li>
             </ul>
-            <div style="clear:both">&nbsp;</div>
             <h3>{% trans "Archive" %}</h3>
             <ul class="module-actions">
-                <li id="articlemodule-article-archive">{% trans "Article archive" %}</li>
-                <li id="articlemodule-general-note-archive">{% trans "General note archive" %}</li>
-                <li id="articlemodule-region-note-archive">{% trans "Region note archive" %}</li>
+                <li id="articlemodule-article-archive"><a href="journal/article/" title="{% trans "Article archive" %}">{% trans "Article archive" %}</a></li>
+                <li id="articlemodule-general-note-archive"><a href="journal/notegeneral/" title="{% trans "General note archive" %}">{% trans "General note archive" %}</a></li>
+                <li id="articlemodule-region-note-archive"><a href="journal/noteregion/" title="{% trans "Region note archive" %}">{% trans "Region note archive" %}</a></li>
             </ul>
-            <div style="clear:both">&nbsp;</div>
         </div>
-        <div id="admodule">
+        <div id="admodule" class="autoclear">
             <h2>{% trans "Ads" %}</h2>
             <h3>{% trans "Add and manage" %}</h3>
             <ul class="module-actions">
-                <li id="admodule-new-ad">{% trans "Add a new ad" %}</li>
-                <li id="admodule-manage-ad">{% trans "Manage ads" %}</li>
+                <li id="admodule-new-ad"><a href="#" title="{% trans "Add a new add" %}">{% trans "Add a new ad" %}</a></li>
+                <li id="admodule-manage-ad"><a href="#" title="{% trans "Manage ads" %}">{% trans "Manage ads" %}</a></li>
             </ul>
-            <div style="clear:both">&nbsp;</div>
         </div>
     </div>
     <div id="content-right-column">
-        <div id="issuemodule">
+        <div id="issuemodule" class="autoclear">
             <h2>{% trans "Issues" %}</h2>
             <h3>{% trans "Add and manage" %}</h3>
             <ul class="module-actions">
-                <li id="issuemodule-new-issue">{% trans "Add a new issue" %}</li>
-                <li id="issuemodule-manage-issues">{% trans "Manage issues" %}</li>
+                <li id="issuemodule-new-issue"><a href="journal/issue/add/" title="{% trans "Add a new issue" %}">{% trans "Add a new issue" %}</a></li>
+                <li id="issuemodule-manage-issues"><a href="journal/issue/" title="{% trans "Manage issues" %}">{% trans "Manage issues" %}</a></li>
             </ul>
             <h3>{% trans "Organize" %}</h3>
             <ul class="module-actions">
-                <li id="issuemodule-organize-cover">{% trans "Organize cover" %}</li>
-                <li id="issuemodule-organize-categories">{% trans "Organize categories" %}</li>
+                <li id="issuemodule-organize-cover"><a href="#" title="{% trans "Organize cover" %}">{% trans "Organize cover" %}</a></li>
+                <li id="issuemodule-organize-categories"><a href="#" title="{% trans "Organize categories" %}">{% trans "Organize categories" %}</a></li>
             </ul>
-            <div style="clear:both">&nbsp;</div>
         </div>
     </div>
     <div style="clear:both">&nbsp;</div>
     <div id="content-bottom">
-        <div id="adminmodule">
+        <div id="adminmodule" class="autoclear">
             <h2>{% trans "Administrators" %}</h2>
             <h3>{% trans "Journal" %}</h3>
-            <ul class="module-actions">
-                <li id="adminmodule-categories">{% trans "Categories" %}</li>
-                <li id="adminmodule-generalnotetypes">{% trans "General note types" %}</li>
-                <li id="adminmodule-regionnotetypes">{% trans "Region note types" %}</li>
+            <ul class="module-actions" class="autoclear">
+                <li id="adminmodule-categories"><a href="journal/category/" title="{% trans "Categories" %}">{% trans "Categories" %}</a></li>
+                <li id="adminmodule-generalnotetypes"><a href="journal/notetypegeneral/" title="{% trans "General note types" %}">{% trans "General note types" %}</a></li>
+                <li id="adminmodule-regionnotetypes"><a href="journal/notetyperegion/" title="{% trans "Region note types" %}">{% trans "Region note types" %}</a></li>
             </ul>
-            <div style="clear:both">&nbsp;</div>
+            <div class="clear">&nbsp;</div>
             <h3>{% trans "Site" %}</h3>
             <ul class="module-actions">
-                <li id="adminmodule-sites">{% trans "Sites" %}</li>
+                <li id="adminmodule-sites"><a href="sites/site/" title="{% trans "Sites" %}">{% trans "Sites" %}</a></li>
             </ul>
-            <div style="clear:both">&nbsp;</div>
+            <div class="clear">&nbsp;</div>
             <h3>{% trans "Users" %}</h3>
             <ul class="module-actions">
-                <li id="adminmodule-users">{% trans "Users" %}</li>
-                <li id="adminmodule-groups">{% trans "Groups" %}</li>
+                <li id="adminmodule-users"><a href="auth/user/" title="{% trans "Users" %}">{% trans "Users" %}</a></li>
+                <li id="adminmodule-groups"><a href="auth/group/" title="{% trans "Groups" %}">{% trans "Groups" %}</a></li>
             </ul>
-            <div style="clear:both">&nbsp;</div>
         </div>
     </div>
-    <div style="clear:both">&nbsp;</div>
+    <div class="clear">&nbsp;</div>
 </div>
 {% endblock %}
 {% block sidebar %}{% endblock %}
