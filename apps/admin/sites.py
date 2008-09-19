@@ -5,13 +5,13 @@ from django.contrib.admin.sites import AdminSite
 # Basic admin
 # ------------------------------------------------------------------------------
 class BasicAdminSite(AdminSite):
-    pass
+    index_template = 'basic_admin/index.html'
     
 
 # Advanced admin
 # ------------------------------------------------------------------------------    
 class AdvancedAdminSite(AdminSite):
-    pass
+    index_template = 'advanced_admin/index.html'
 
 
 # Sites
