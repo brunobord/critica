@@ -8,10 +8,12 @@ from django.utils.translation import ugettext_lazy as _
 
 # Issue status
 # ------------------------------------------------------------------------------
-ISSUE_STATUS_COMPLETE = 1
-ISSUE_STATUS_NEW = 2
+ISSUE_STATUS_PUBLISHED = 1
+ISSUE_STATUS_COMPLETE = 2
+ISSUE_STATUS_NEW = 3
 
 ISSUE_STATUS_CHOICES = (
+    (ISSUE_STATUS_PUBLISHED, _('Published')),
     (ISSUE_STATUS_COMPLETE, _('Complete')),
     (ISSUE_STATUS_NEW, _('New')),
 )

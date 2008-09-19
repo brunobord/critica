@@ -38,13 +38,13 @@ URLs for ``critica.apps.journal``::
         
 """
 from django.conf.urls.defaults import *
-from critica.apps.journal.models import Issue, Article
+from critica.apps.journal.models import Issue, Article, Category
 from tagging.models import Tag
 
 # Archives
 # ------------------------------------------------------------------------------
 archives_dict = {
-    'queryset': Issue.complete.all(), 
+    'queryset': Issue.published.all(), 
     'date_field': 'publication_date',
 }
 
@@ -72,7 +72,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/(?P<month>\d{2})/$', 
         'archive_month', 
         dict(
-            queryset=Issue.complete.all(),
+            queryset=Issue.published.all(),
             date_field='publication_date',
             month_format='%m'
         ), 
@@ -81,7 +81,7 @@ urlpatterns = patterns('django.views.generic.date_based',
     url(r'^archives/(?P<year>\d{4})/$', 
         'archive_year', 
         dict(
-            queryset=Issue.complete.all(),
+            queryset=Issue.published.all(),
             date_field='publication_date',
             make_object_list=True,
         ), 
@@ -92,7 +92,7 @@ urlpatterns = patterns('django.views.generic.date_based',
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^archives/$', 
         'direct_to_template', 
-        {'template': 'journal/issue_archive.html', 'extra_context': {'issues': Issue.complete.all()}}, 
+        {'template': 'journal/issue_archive.html', 'extra_context': {'issues': Issue.published.all()}}, 
         name='archives',
     ),
 )
@@ -124,33 +124,31 @@ urlpatterns += patterns('',
 
 # Category
 # ------------------------------------------------------------------------------
-"""
 urlpatterns += patterns('django.views.generic.list_detail',
     url(r'^(?P<slug>[-\w]+)/$',
         'object_detail',
         dict(
-            queryset=Article.complete.all(),
-            slug_field='category__slug',
+            queryset=Category.objects.all(),
+            slug_field='slug',
             template_name='journal/category.html',
         ),
         name='category',
     ),
 )
-"""
+
 # Homepage
 # ------------------------------------------------------------------------------
-"""
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^$', 
         'direct_to_template', 
         {
             'template': 'journal/home.html',
             'extra_context': {
-                'page': Article.complete.get(category__pk=1),
+                'issue': Issue.published.all(),
+                'categories': Category.objects.all(),
             },
         },
         name='home'
     ),
 )
-"""
 

@@ -3,13 +3,12 @@
 {% block content %}
 <!-- MAIN CONTENT -->
 <div id="mainContent" class="leftWrap">
-{% with page.articles.all as articles %}
 
     {% for article in articles %}
-        {% ifequal article.category.slug "national" %}
+        {% ifequal article.category.position_on_page 1 %}
             {% include "journal/includes/home/_article_frame.html" %}
 	    {% endifequal %}
-	    {% ifequal article.category.slug "etranger" %}
+	    {% ifequal article.category.position_on_page 2 %}
             {% include "journal/includes/home/_article_frame.html" %}
 	    {% endifequal %}
 	{% endfor %}
@@ -190,7 +189,7 @@
 		<!-- TAG CLOUD -->
 
 	</div>
-{% endwith %}
+
 </div>
 <!-- // SUB CONTENT -->
 {% endblock %}

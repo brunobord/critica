@@ -13,7 +13,7 @@ from tagging.models import Tag
 from tagging.fields import TagField
 from critica.apps.journal import choices
 from critica.apps.journal.managers import PublishedArticleManager
-from critica.apps.journal.managers import CompleteIssueManager
+from critica.apps.journal.managers import PublishedIssueManager
 
 
 # ------------------------------------------------------------------------------
@@ -168,7 +168,7 @@ class Category(models.Model):
         
         """
         return self.article_set.filter(
-            issues__status=choices.ISSUE_STATUS_COMPLETE,
+            issues__status=choices.ISSUE_STATUS_PUBLISHED,
             status=choices.ARTICLE_STATUS_PUBLISHED,
         )
         
@@ -556,8 +556,8 @@ class Issue(models.Model):
         objects
             Default manager: models.Manager()
         
-        complete
-            Complete issues: critica.apps.journal.managers.CompleteIssueManager()
+        published
+            Published issues: critica.apps.journal.managers.PublishedIssueManager()
     
     Properties::
     
@@ -570,7 +570,7 @@ class Issue(models.Model):
     status = models.IntegerField(_('status'), choices=choices.ISSUE_STATUS_CHOICES, default=choices.ISSUE_STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     
     objects = models.Manager()
-    complete = CompleteIssueManager()
+    published = PublishedIssueManager()
     
     class Meta:
         """ 
@@ -704,7 +704,7 @@ class BaseArticle(models.Model):
             
         published
             Published articles: critica.apps.journal.managers.PublishedArticleManager()
-            Note: retrieves published articles of complete and published issues only.
+            Note: retrieves published articles of complete issues only.
 
     """
     author = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this article.'))
