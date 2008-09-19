@@ -171,8 +171,7 @@ class Category(models.Model):
         return self.article_set.filter(
             issues__is_complete=True, 
             issues__is_published=True, 
-            is_published=True, 
-            is_reserved=False
+            status=choices.STATUS_PUBLISHED,
         )
     published_article_set = property(_get_published_article_set)
     
