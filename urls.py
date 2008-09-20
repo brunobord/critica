@@ -16,13 +16,13 @@ urlpatterns = patterns('',
     (r'^advanced-admin/(.*)', advanced_site.root),
 )
 
-
 # Applications
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
+    (r'^archives/', include('critica.apps.archives.urls')),
     (r'^pages/', include('critica.apps.pages.urls')),
     (r'^rss/', include('critica.apps.syndication.urls')),
-    (r'', include('critica.apps.journal.urls')),
+    (r'', include('critica.apps.categories.urls')),
 )
 
 # Media

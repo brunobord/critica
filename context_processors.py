@@ -4,7 +4,7 @@ template context. Each function takes the request object as its only parameter
 and returns a dictionary to add to the context.
 
 """
-from critica.apps.journal.models import Issue
+from critica.apps.issues.models import Issue
 
 
 def current_issue(request):

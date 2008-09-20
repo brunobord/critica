@@ -4,12 +4,11 @@ Models for ``critica.apps.users``.
 
 """
 from django.db import models
-from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
 
 class UserProfile(models.Model):
-    user = models.ForeignKey(User, verbose_name=_('user'), unique=True)
+    user = models.ForeignKey('auth.User', verbose_name=_('user'), unique=True)
     
     class Meta:
         verbose_name = _('user profile')

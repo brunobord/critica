@@ -8,7 +8,8 @@ from django.utils.feedgenerator import Rss201rev2Feed, Atom1Feed
 from django.contrib.sites.models import Site
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.journal.models import Article, Category
+from critica.apps.articles.models import Article
+from critica.apps.categories.models import Category
 
 
 class LatestArticles(Feed):

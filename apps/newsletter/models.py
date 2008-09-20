@@ -6,7 +6,8 @@ Models for ``critica.apps.newsletter``.
 import hashlib
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.journal.models import Article, Category
+from critica.apps.articles.models import Article
+from critica.apps.categories.models import Category
 
 
 class Newsletter(models.Model):

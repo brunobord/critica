@@ -10,7 +10,7 @@ URLs for ``critica.apps.syndication``::
 from django.conf.urls.defaults import *
 from critica.apps.syndication.feeds import LatestArticles
 from critica.apps.syndication.feeds import LatestArticlesByCategory
-from critica.apps.journal.models import Category
+from critica.apps.categories.models import Category
 
 
 # Feeds

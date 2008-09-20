@@ -4,7 +4,7 @@ Tests for ``critica.apps.syndication``.
 
 """
 from django.test import TestCase
-from critica.apps.journal.models import Category
+from critica.apps.categories.models import Category
 
 
 class SyndicationTestCase(TestCase):
