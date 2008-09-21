@@ -30,6 +30,6 @@ class CategoryPositionAdmin(admin.ModelAdmin):
     search_fields = ('issue', 'category', 'position')
     ordering = ['issue']
 
-basic_site.register(CategoryPosition, CategoryPositionAdmin)
-advanced_site.register(CategoryPosition, CategoryPositionAdmin)
+#basic_site.register(CategoryPosition, CategoryPositionAdmin)
+#advanced_site.register(CategoryPosition, CategoryPositionAdmin)
 

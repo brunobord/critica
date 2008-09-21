@@ -32,8 +32,8 @@ class NoteTypePositionAdmin(admin.ModelAdmin):
     search_fields = ('issue', 'type', 'position')
     ordering = ['issue']
 
-basic_site.register(NoteTypePosition, NoteTypePositionAdmin)
-advanced_site.register(NoteTypePosition, NoteTypePositionAdmin)
+#basic_site.register(NoteTypePosition, NoteTypePositionAdmin)
+#advanced_site.register(NoteTypePosition, NoteTypePositionAdmin)
 
 
 class BaseNoteAdmin(BaseArticleAdmin):

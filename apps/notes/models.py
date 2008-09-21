@@ -77,7 +77,7 @@ class NoteType(BaseNoteType):
     """
     Generic note type.
     
-    Database table name: ``notes_note_type``.
+    Database table name: ``notes_notetype``.
     
     A generic note type is composed of::
     
@@ -106,7 +106,7 @@ class NoteType(BaseNoteType):
         Model metadata. 
         
         """
-        db_table = 'notes_note_type'
+        db_table = 'notes_notetype'
         verbose_name = _('note type')
         verbose_name_plural = _('note types')
 
@@ -115,7 +115,7 @@ class NoteTypePosition(models.Model):
     """
     NOte type position.
     
-    Database table name: ``notes_note_type_position``.
+    Database table name: ``notes_notetypeposition``.
     
     A note type position is composed of::
     
@@ -149,7 +149,7 @@ class NoteTypePosition(models.Model):
     
     """
     issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
-    type = models.ForeignKey('categories.Category', verbose_name=_('category'))
+    type = models.ForeignKey('notes.NoteType', verbose_name=_('type'))
     position = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_POSITION_CHOICES, unique=True, db_index=True)
     
     objects = models.Manager()
