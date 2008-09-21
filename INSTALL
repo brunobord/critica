@@ -105,16 +105,19 @@ Replace the value of ``ROOT_URLCONF`` with the appropriate one::
 And add these applications to your ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
-        'django.contrib.admin',
-        'tagging',
-        'critica.apps.pages',
-        'critica.apps.users',
-        'critica.apps.weather',
-        'critica.apps.polls',
-        'critica.apps.journal',
-        'critica.apps.newsletter',
-        'critica.apps.utils',
-        'critica.apps.syndication',
+    'django.contrib.admin',
+    'tagging',
+    'critica.apps.categories',
+    'critica.apps.illustrations',
+    'critica.apps.videos',
+    'critica.apps.issues',
+    'critica.apps.articles',
+    'critica.apps.notes',
+    'critica.apps.notes_region',
+    'critica.apps.pages',
+    'critica.apps.users',
+    'critica.apps.syndication',
+    'critica.apps.newsletter',
     )
 
 Voilà! Critic@-engine is ready.
