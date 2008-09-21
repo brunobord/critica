@@ -58,12 +58,6 @@ class Category(models.Model):
             * The default category illustration legend
             * Required
             
-        position_on_page
-            * IntegerField
-            * The category position on the cover
-            * choices: critica.apps.categories.choices.POSITION_CHOICES
-            * Optional (can be blank)
-            
         creation_date
             * DateTimeField
             * The category creation date
@@ -95,7 +89,6 @@ class Category(models.Model):
     image = models.ImageField(upload_to=categories_settings.IMAGE_UPLOAD_PATH, max_length=200, help_text=_('Please, upload an image for this category (it will be used as default category illustration).'))
     image_credits = models.CharField(_('credits'), max_length=100, default=_('all rights reserved'), help_text=_('100 characters max.'))
     image_legend = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
-    position_on_page = models.IntegerField(_('position'), choices=choices.POSITION_CHOICES, unique=True, blank=True, db_index=True)
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     
@@ -146,4 +139,64 @@ class Category(models.Model):
         """
         self.slug = slugify(self.name)
         super(Category, self).save()
+        
+
+class CategoryPosition(models.Model):
+    """
+    Category position.
+    
+    Database table name: ``categories_category_position``.
+    
+    A category position is composed of::
+    
+        issue
+            * ForeignKey: critica.apps.issues.models.Issue
+            * The issue
+            * Required
+            
+        category
+            * ForeignKey: critica.apps.categories.models.Category
+            * The category
+            * Required
+            
+        position
+            * IntegerField
+            * The category position on the cover
+            * choices: critica.apps.categories.choices.POSITION_CHOICES
+            * Must be unique
+            * Required
+
+    Indexes::
+    
+        * issue
+        * category
+        * position
+
+    Managers::
+    
+        objects
+            Default manager: models.Manager()
+    
+    """
+    issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
+    category = models.ForeignKey('categories.Category', verbose_name=_('category'))
+    position = models.IntegerField(_('position'), choices=choices.POSITION_CHOICES, unique=True, db_index=True)
+    
+    objects = models.Manager()
+    
+    class Meta:
+        """ 
+        Model metadata. 
+        
+        """
+        verbose_name = _('category position')
+        verbose_name_plural = _('category positions')
+
+    def __unicode__(self):
+        """ 
+        Object human-readable string representation. 
+        
+        """
+        return u'%s -- %s -- %s' % (self.issue, self.category, self.position)
+
 
