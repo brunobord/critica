@@ -1,0 +1,178 @@
+[
+    {
+        "pk": 1, 
+        "model": "sites.site", 
+        "fields": {
+            "domain": "critica.fr", 
+            "name": "Critic@"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Actualit\u00e9s nationales", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "image_legend": "Cki ? Jean-Louis Borloo", 
+            "image": "upload/categories/national.jpg", 
+            "creation_date": "2008-09-21 08:28:41", 
+            "image_credits": "MAXPPP", 
+            "slug": "national", 
+            "name": "National"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Actualit\u00e9s internationales", 
+            "modification_date": "2008-09-21 08:29:33", 
+            "image_legend": "Lehman Brothers", 
+            "image": "upload/categories/international.jpg", 
+            "creation_date": "2008-09-21 08:29:33", 
+            "image_credits": "Landov", 
+            "slug": "etranger", 
+            "name": "Etranger"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Soci\u00e9t\u00e9\"", 
+            "modification_date": "2008-09-21 08:32:14", 
+            "image_legend": "", 
+            "image": "upload/categories/societe.jpg", 
+            "creation_date": "2008-09-21 08:32:14", 
+            "image_credits": "ILLU", 
+            "slug": "societe", 
+            "name": "Soci\u00e9t\u00e9"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Sports\"", 
+            "modification_date": "2008-09-21 08:43:19", 
+            "image_legend": "", 
+            "image": "upload/categories/sport.jpg", 
+            "creation_date": "2008-09-21 08:32:50", 
+            "image_credits": "Photoshot", 
+            "slug": "sports", 
+            "name": "Sports"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Pipoles\"", 
+            "modification_date": "2008-09-21 08:33:34", 
+            "image_legend": "Cki ? Meg Ryan", 
+            "image": "upload/categories/pipole.jpg", 
+            "creation_date": "2008-09-21 08:33:34", 
+            "image_credits": "BeiImages", 
+            "slug": "pipoles", 
+            "name": "Pipoles"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"T\u00e9l\u00e9\"", 
+            "modification_date": "2008-09-21 08:34:14", 
+            "image_legend": "", 
+            "image": "upload/categories/tele.jpg", 
+            "creation_date": "2008-09-21 08:34:14", 
+            "image_credits": "Photopqr", 
+            "slug": "tele", 
+            "name": "T\u00e9l\u00e9"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Bouquins\"", 
+            "modification_date": "2008-09-21 08:35:12", 
+            "image_legend": "", 
+            "image": "upload/categories/bouquin.jpg", 
+            "creation_date": "2008-09-21 08:35:12", 
+            "image_credits": "Critic@", 
+            "slug": "bouquins", 
+            "name": "Bouquins"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Nanas\"", 
+            "modification_date": "2008-09-21 08:35:55", 
+            "image_legend": "", 
+            "image": "upload/categories/nana.jpg", 
+            "creation_date": "2008-09-21 08:35:55", 
+            "image_credits": "Photopqr", 
+            "slug": "nanas", 
+            "name": "Nanas"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Insolite\"", 
+            "modification_date": "2008-09-21 08:36:38", 
+            "image_legend": "", 
+            "image": "upload/categories/insolite.jpg", 
+            "creation_date": "2008-09-21 08:36:38", 
+            "image_credits": "Beneluxpix", 
+            "slug": "insolite", 
+            "name": "Insolite"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Voyages\"", 
+            "modification_date": "2008-09-21 08:37:23", 
+            "image_legend": "", 
+            "image": "upload/categories/voyageingridjouault.jpg", 
+            "creation_date": "2008-09-21 08:37:23", 
+            "image_credits": "Ingrid Jouault", 
+            "slug": "voyages", 
+            "name": "Voyages"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"\u00c9picurien\"", 
+            "modification_date": "2008-09-21 08:40:10", 
+            "image_legend": "", 
+            "image": "upload/categories/epicurien.jpg", 
+            "creation_date": "2008-09-21 08:40:10", 
+            "image_credits": "Critic@", 
+            "slug": "epicurien", 
+            "name": "\u00c9picurien"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"R\u00e9gions\"", 
+            "modification_date": "2008-09-21 08:43:04", 
+            "image_legend": "", 
+            "image": "upload/categories/regions.gif", 
+            "creation_date": "2008-09-21 08:42:51", 
+            "image_credits": "Tous droits r\u00e9serv\u00e9s", 
+            "slug": "regions", 
+            "name": "R\u00e9gions"
+        }
+    }
+]

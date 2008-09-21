@@ -88,7 +88,7 @@ class Category(models.Model):
     description = models.CharField(_('description'), max_length=255, blank=True, help_text=_('A short description of the category. It will not be displayed on the website.'))
     image = models.ImageField(upload_to=categories_settings.IMAGE_UPLOAD_PATH, max_length=200, help_text=_('Please, upload an image for this category (it will be used as default category illustration).'))
     image_credits = models.CharField(_('credits'), max_length=100, default=_('all rights reserved'), help_text=_('100 characters max.'))
-    image_legend = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
+    image_legend = models.CharField(_('legend'), max_length=100, blank=True, help_text=_('100 characters max.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     
@@ -116,7 +116,7 @@ class Category(models.Model):
         """
         from django.contrib.sites.models import Site
         site = Site.objects.get_current()
-        return '%s/<strong>%s</strong>/' % (site.domain, self.slug)
+        return 'http://www.%s/<strong>%s</strong>/' % (site.domain, self.slug)
     admin_formatted_slug.allow_tags = True
     admin_formatted_slug.short_description = _('URL')
     
