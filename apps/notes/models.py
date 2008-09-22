@@ -134,7 +134,7 @@ class NoteTypePosition(models.Model):
             * The category position on the cover
             * choices: critica.apps.categories.choices.POSITION_CHOICES
             * Must be unique
-            * Required
+            * Optional (can be blank)
 
     Indexes::
     
@@ -150,7 +150,7 @@ class NoteTypePosition(models.Model):
     """
     issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
     type = models.ForeignKey('notes.NoteType', verbose_name=_('type'))
-    position = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_POSITION_CHOICES, unique=True, db_index=True)
+    position = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_POSITION_CHOICES, null=True, blank=True, unique=True, db_index=True)
     
     objects = models.Manager()
     

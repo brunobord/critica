@@ -180,7 +180,7 @@ class CategoryPosition(models.Model):
     """
     issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
     category = models.ForeignKey('categories.Category', verbose_name=_('category'))
-    position = models.IntegerField(_('position'), choices=choices.POSITION_CHOICES, unique=True, db_index=True)
+    position = models.IntegerField(_('position'), choices=choices.POSITION_CHOICES, null=True, blank=True, unique=True, db_index=True)
     
     objects = models.Manager()
     

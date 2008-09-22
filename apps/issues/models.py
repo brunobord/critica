@@ -70,5 +70,23 @@ class Issue(models.Model):
         
         """
         return u'%s' % self.number
+        
+    def save(self):
+        super(Issue, self).save()
+        from django.conf import settings
+        # Auto-creates categories
+        if 'critica.apps.categories' in settings.INSTALLED_APPS:
+            from critica.apps.categories.models import Category, CategoryPosition
+            categories = Category.objects.all()
+            for category in categories:
+                category_position = CategoryPosition(issue=self, category=category)
+                category_position.save()
+        # Auto-creates note types
+        if 'critica.apps.notes' in settings.INSTALLED_APPS:
+            from critica.apps.notes.models import NoteType, NoteTypePosition
+            note_types = NoteType.objects.all()
+            for note_type in note_types:
+                note_type_position = NoteTypePosition(issue=self, type=note_type)
+                note_type_position.save()
 
 
