@@ -25,6 +25,11 @@ class BaseArticle(models.Model):
             * The article author
             * Required
             
+        author_nickname
+            * ForeignKey: critica.apps.users.models.UserNickname
+            * The author nickname
+            * Optional (can be blank)
+            
         title
             * CharField
             * 255 characters max.
@@ -122,6 +127,7 @@ class BaseArticle(models.Model):
 
     """
     author = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this article.'))
+    author_nickname = models.ForeignKey('users.UserNickname', verbose_name=_('author nickname'), blank=True, help_text=_('If you want to sign this article under a nickname, please select one in the list. If you do not select a nickname, your signature will be your full name.'))
     title = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
     category = models.ForeignKey('categories.Category', verbose_name=_('category'), help_text=_('Please, select a category for this article.'))
