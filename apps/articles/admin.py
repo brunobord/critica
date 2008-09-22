@@ -16,7 +16,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
     
     """
     list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'is_featured', 'ald_author', 'ald_author_nickname', 'view_count', 'status')
-    list_filter = ('author', 'status', 'is_featured', 'category')
+    list_filter = ('author', 'status', 'opinion', 'is_featured', 'category')
     search_fields = ('title', 'content')
     radio_fields = {'status': admin.VERTICAL}
     ordering = ('-publication_date', 'category')
