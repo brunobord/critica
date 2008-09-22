@@ -44,7 +44,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
     """
     fieldsets = (
         (_('Headline'), 
-            {'fields': ('title', 'type', 'opinion', 'is_featured')}
+            {'fields': ('author_nickname', 'title', 'type', 'opinion', 'is_featured')}
         ),
         (_('Filling'),
             {'fields': ('issues', 'category', 'tags')}
@@ -56,8 +56,8 @@ class BaseNoteAdmin(BaseArticleAdmin):
             {'fields': ('publication_date', 'status')}
         ),
     )
-    list_display = ('title', 'category', 'type', 'publication_date', 'opinion', 'is_featured', 'view_count', 'admin_formatted_author', 'status')
-    list_filter = ('author', 'is_featured', 'status', 'category')
+    list_display = ('title', 'ald_issues', 'category', 'type', 'ald_publication_date', 'ald_opinion', 'is_featured', 'view_count', 'ald_author', 'ald_author_nickname', 'status')
+    list_filter = ('author', 'status', 'is_featured', 'type', 'category')
     
 
 class NoteAdmin(BaseNoteAdmin):

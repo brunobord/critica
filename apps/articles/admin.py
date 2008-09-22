@@ -15,12 +15,13 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface for ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'publication_date', 'is_featured', 'view_count', 'admin_formatted_author', 'status')
-    list_filter = ('author', 'is_featured', 'category')
+    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'is_featured', 'ald_author', 'ald_author_nickname', 'view_count', 'status')
+    list_filter = ('author', 'status', 'is_featured', 'category')
     search_fields = ('title', 'content')
     radio_fields = {'status': admin.VERTICAL}
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
+    exclude = ['author']
     
     class Media:
         """
@@ -31,6 +32,15 @@ class BaseArticleAdmin(admin.ModelAdmin):
             settings.MEDIA_URL + 'common/js/tiny_mce/tiny_mce.js',
             settings.MEDIA_URL + 'common/js/textarea.js',
         )
+
+    def save_model(self, request, obj, form, change):
+        """ 
+        Given a model instance save it to the database. 
+        Auto-save author.
+        
+        """
+        obj.author = request.user
+        obj.save()
         
     def get_form(self, request, obj=None, **kwargs):
         """
@@ -72,7 +82,6 @@ class ArticleAdmin(BaseArticleAdmin):
             {'fields': ('publication_date', 'status')}
         ),
     )
-    list_display = ('title', 'category', 'publication_date', 'opinion', 'is_featured', 'view_count', 'admin_formatted_author', 'author_nickname', 'status')
     search_fields = ('title', 'summary', 'content')
 
     def get_form(self, request, obj=None, **kwargs):

@@ -50,7 +50,7 @@ class Issue(models.Model):
 
     """
     number = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
-    publication_date = models.DateField(_('publication date'), blank=True, help_text=_("Don't forget to adjust the publication date"))
+    publication_date = models.DateField(_('publication date'), null=True, blank=True, help_text=_("Don't forget to adjust the publication date"))
     status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     
     objects = models.Manager()

@@ -127,17 +127,17 @@ class BaseArticle(models.Model):
 
     """
     author = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this article.'))
-    author_nickname = models.ForeignKey('users.UserNickname', verbose_name=_('author nickname'), blank=True, help_text=_('If you want to sign this article under a nickname, please select one in the list. If you do not select a nickname, your signature will be your full name.'))
+    author_nickname = models.ForeignKey('users.UserNickname', verbose_name=_('author nickname'), null=True, blank=True, help_text=_('If you want to sign this article under a nickname, please select one in the list. If you do not select a nickname, your signature will be your full name.'))
     title = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
     category = models.ForeignKey('categories.Category', verbose_name=_('category'), help_text=_('Please, select a category for this article.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     issues = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues.'))
-    view_count = models.PositiveIntegerField(_('view count'), blank=True, editable=False)
+    view_count = models.IntegerField(_('view count'), null=True, blank=True, editable=False)
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
-    publication_date = models.DateField(_('publication date'), blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
-    opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, blank=True, db_index=True)
+    publication_date = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
+    opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
     is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is article featured?'))
     status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
     content = models.TextField(_('content'))
@@ -159,14 +159,61 @@ class BaseArticle(models.Model):
         """
         return u"%s" % (self.title)
         
-    def admin_formatted_author(self):
+    def ald_author(self):
         """
         Formatted author for admin list_display option.
         
         """
-        return self.author.get_full_name()
-    admin_formatted_author.short_description = _('author')
+        if self.author.get_full_name():
+            return self.author.get_full_name()
+        else:
+            return self.author
+    ald_author.short_description = _('author')
+    
+    def ald_author_nickname(self):
+        """
+        Formatted author nickname for admin list_display option.
+        
+        """
+        if self.author_nickname:
+            return self.author_nickname
+        else:
+            return self.ald_author()
+    ald_author_nickname.short_description = _('author nickname')
+    
+    def ald_issues(self):
+        """
+        Formatted issue list for admin list_display option."
+        
+        """
+        issues = [issue.number for issue in self.issues.all()]
+        return ', '.join(['%s' % issue for issue in issues])
+    ald_issues.short_description = _('issues')
 
+    def ald_opinion(self):
+        """
+        Formatted opinion for admin list_display option.
+        
+        """
+        if self.opinion:
+            return self.opinion
+        else:
+            return u'<span class="novalue">%s</span>' % _('no opinion')
+    ald_opinion.short_description = _('opinion')
+    ald_opinion.allow_tags = True
+    
+    def ald_publication_date(self):
+        """
+        Formatted publication date for admin list_display option.
+        
+        """
+        if not self.publication_date:
+            return u'<span class="novalue">%s</span>' % _('no publication date')
+        else:
+            return self.publication_date
+    ald_publication_date.short_description = _('publication date')
+    ald_publication_date.allow_tags = True
+    
     def save(self):
         """ 
         Object pre-saving operations:
@@ -236,7 +283,7 @@ class Article(BaseArticle):
     
     
     """
-    illustration = models.ForeignKey('illustrations.Illustration', verbose_name=_('illustration'), blank=True, help_text=_('Please, select an illustration which will be attached to this article.')) 
+    illustration = models.ForeignKey('illustrations.Illustration', verbose_name=_('illustration'), null=True, blank=True, help_text=_('Please, select an illustration which will be attached to this article.')) 
     use_default_illustration = models.BooleanField(_('use default illustration'), default=False, db_index=True, help_text=_('Use the default category illustration to illustrate this article. If you already uploaded an illustration, it will not be used.'))
     is_illustrated = models.BooleanField(_('illustrated'), default=False, db_index=True, help_text=_('Is article illustrated?'))
     summary = models.TextField(_('summary'))
