@@ -49,11 +49,16 @@ class IssueAdmin(admin.ModelAdmin):
     ordering = ('-publication_date',)
     radio_fields = {'status': admin.VERTICAL}
     date_hierarchy = 'publication_date'
-    inlines = [
-        CategoryPositionInline,
-        NoteTypePositionInline,
-        NoteRegionFeaturedInline,
-    ]
+    
+    # Inlines depend of installed applications
+    from django.conf import settings
+    inlines = []
+    if 'critica.apps.categories' in settings.INSTALLED_APPS:
+        inlines.append(CategoryPositionInline)
+    if 'critica.apps.notes' in settings.INSTALLED_APPS:
+        inlines.append(NoteTypePositionInline)
+    if 'critica.apps.notes_region' in settings.INSTALLED_APPS:
+        inlines.append(NoteRegionFeaturedInline)
 
 basic_site.register(Issue, IssueAdmin)
 advanced_site.register(Issue, IssueAdmin)
