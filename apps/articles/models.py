@@ -108,6 +108,7 @@ class BaseArticle(models.Model):
     Indexes::
     
         * author
+        * author_nickname
         * slug
         * category
         * issues
@@ -238,8 +239,6 @@ class Article(BaseArticle):
         verbose_name = _('article')
         verbose_name_plural = _('articles')
         permissions = (
-            ('can_validate_illustration', 'Can validate an illustration'),
-            ('can_reserve_article', 'Can reserve an article'),
             ('can_feature_article', 'Can feature an article'),
         )
 

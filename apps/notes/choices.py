@@ -3,7 +3,11 @@
 Choices of ``critica.apps.notes`` application.
 
 """
+from django.utils.translation import ugettext_lazy as _
 
+
+# Positions
+# ------------------------------------------------------------------------------
 NOTE_TYPE_POSITION_CHOICES = (
     (1, 'Post-it'),
     (2, 'Punaise -- ligne 1 -- gauche'),

@@ -3,7 +3,11 @@
 Choices of ``critica.apps.categories`` application.
 
 """
+from django.utils.translation import ugettext_lazy as _
 
+
+# Positions
+# ------------------------------------------------------------------------------
 POSITION_CHOICES = (
     (1, 'Cadre haut'),
     (2, 'Cadre bas'),

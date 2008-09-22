@@ -29,7 +29,7 @@ class CategoryAdmin(admin.ModelAdmin):
     ald_slug.allow_tags = True
     ald_slug.short_description = _('Slug')
     
-    def ald_image(self):
+    def ald_image(self, obj):
         """ 
         Image thumbnail for admin list_display option. 
         
