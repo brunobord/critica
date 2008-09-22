@@ -34,6 +34,7 @@ class CategoryAdmin(admin.ModelAdmin):
         Image thumbnail for admin list_display option. 
         
         """
+        from django.conf import settings
         return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, obj.image, obj.image_legend)
     ald_image.allow_tags = True
     ald_image.short_description = _('Default illustration')

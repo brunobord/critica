@@ -3,36 +3,37 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 11:43+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2008-09-22 11:06+0200\n"
+"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
 
 #: feeds.py:23
 #, python-format
 msgid "%(site_name)s: latest articles feed"
-msgstr ""
+msgstr "%(site_name)s: fils des derniers articles"
 
 #: feeds.py:32
 #, python-format
 msgid "Recent articles published on %(site_name)s."
-msgstr ""
+msgstr "Derniers articles publiés sur %(site_name)s."
 
 #: feeds.py:53
 #, python-format
 msgid "%(site_name)s: \"%(category)s\" category feed"
-msgstr ""
+msgstr "%(site_name)s: fil de la rubrique \"%(category)s\""
 
 #: feeds.py:60
 #, python-format
 msgid ""
 "Recent articles published in the category \"%(category)s\" on %(site_name)s."
-msgstr ""
+msgstr "Derniers articles publiés dans la rubrique \"%(category)s\" sur %(site_name)s."

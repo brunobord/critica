@@ -3,207 +3,215 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 11:42+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2008-09-22 11:06+0200\n"
+"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
 
-#: admin.py:45 models.py:130
+#: admin.py:45 
+#: models.py:130
 msgid "author"
-msgstr ""
+msgstr "auteur"
 
-#: admin.py:56 models.py:131
+#: admin.py:56
+#: models.py:131
 msgid "author nickname"
-msgstr ""
+msgstr "pseudonyme"
 
-#: admin.py:65 models.py:136
+#: admin.py:65 
+#: models.py:136
 msgid "issues"
-msgstr ""
+msgstr "éditions"
 
 #: admin.py:75
 msgid "no opinion"
-msgstr ""
+msgstr "pas d'opinion"
 
-#: admin.py:76 models.py:141
+#: admin.py:76 
+#: models.py:141
 msgid "opinion"
-msgstr ""
+msgstr "opinion"
 
 #: admin.py:85
 msgid "no publication date"
-msgstr ""
+msgstr "pas de date de publication"
 
-#: admin.py:88 models.py:140
+#: admin.py:88 
+#: models.py:140
 msgid "publication date"
-msgstr ""
+msgstr "date de publication"
 
 #: admin.py:124
 msgid "Headline"
-msgstr ""
+msgstr "En-tête"
 
 #: admin.py:127
 msgid "Filling"
-msgstr ""
+msgstr "Classement"
 
 #: admin.py:130
 msgid "Illustration"
-msgstr ""
+msgstr "Illustration"
 
 #: admin.py:133
 msgid "Content"
-msgstr ""
+msgstr "Contenu"
 
 #: admin.py:136
 msgid "Publication"
-msgstr ""
+msgstr "Publication"
 
 #: choices.py:17
 msgid "Published"
-msgstr ""
+msgstr "Publié"
 
 #: choices.py:18
 msgid "Ready to be published"
-msgstr ""
+msgstr "Prêt à être publié"
 
 #: choices.py:19
 msgid "New"
-msgstr ""
+msgstr "Nouveau"
 
 #: choices.py:20
 msgid "Reserved"
-msgstr ""
+msgstr "Mis au marbre"
 
 #: choices.py:31
 msgid "I like"
-msgstr ""
+msgstr "J'aime"
 
 #: choices.py:32
 msgid "I dislike"
-msgstr ""
+msgstr "J'aime pas"
 
 #: choices.py:33
 msgid "I'm happy"
-msgstr ""
+msgstr "Je suis content"
 
 #: choices.py:34
 msgid "I'm not happy"
-msgstr ""
+msgstr "Je suis pas content"
 
 #: models.py:130
 msgid "Please, select an author for this article."
-msgstr ""
+msgstr "Veuillez sélectionner un auteur pour cet article."
 
 #: models.py:131
 msgid ""
 "If you want to sign this article under a nickname, please select one in the "
 "list. If you do not select a nickname, your signature will be your full name."
-msgstr ""
+msgstr "Si vous voulez signer cet article sous un pseudonyme, sélectionnez-en un dans la liste. "
+"Si vous ne sélectionnez pas de pseudonyme, votre signature sera votre nom complet."
 
 #: models.py:132
 msgid "title"
-msgstr ""
+msgstr "titre"
 
 #: models.py:132
 msgid "255 characters max."
-msgstr ""
+msgstr "255 caractères max."
 
 #: models.py:133
 msgid "slug"
-msgstr ""
+msgstr "slug"
 
 #: models.py:134
 msgid "category"
-msgstr ""
+msgstr "catégorie"
 
 #: models.py:134
 msgid "Please, select a category for this article."
-msgstr ""
+msgstr "Veuillez sélectionner une catégorie pour cet article."
 
 #: models.py:135
 msgid "Please, enter tags separated by commas or spaces."
-msgstr ""
+msgstr "Vous pouvez entrer des tags séparés par des virgules ou des espaces."
 
 #: models.py:136
 msgid "Please, select one or several issues."
-msgstr ""
+msgstr "Sélectionnez une ou plusieurs éditions."
 
 #: models.py:137
 msgid "view count"
-msgstr ""
+msgstr "nombre de vues"
 
 #: models.py:138
 msgid "creation date"
-msgstr ""
+msgstr "date de création"
 
 #: models.py:139
 msgid "modification date"
-msgstr ""
+msgstr "date de modification"
 
 #: models.py:140
 msgid "Don't forget to adjust the publication date."
-msgstr ""
+msgstr "N'oubliez pas d'ajuster la date de publication."
 
 #: models.py:142
 msgid "featured"
-msgstr ""
+msgstr "exclusif"
 
 #: models.py:142
 msgid "Is article featured?"
-msgstr ""
+msgstr "L'article est-il exclusif ?"
 
 #: models.py:143
 msgid "status"
-msgstr ""
+msgstr "état"
 
 #: models.py:143
 msgid "Please, select a status."
-msgstr ""
+msgstr "Sélectionnez un état."
 
 #: models.py:144
 msgid "content"
-msgstr ""
+msgstr "contenu"
 
 #: models.py:232
 msgid "illustration"
-msgstr ""
+msgstr "illustration"
 
 #: models.py:232
 msgid "Please, select an illustration which will be attached to this article."
-msgstr ""
+msgstr "Vous pouvez sélectionner une illustration à insérer dans cet article."
 
 #: models.py:233
 msgid "use default illustration"
-msgstr ""
+msgstr "utiliser l'illustration par défaut"
 
 #: models.py:233
 msgid ""
 "Use the default category illustration to illustrate this article. If you "
 "already uploaded an illustration, it will not be used."
-msgstr ""
+msgstr "Utiliser l'illustration par défaut de la catégorie pour illustrer cet article. "
+"Si vous avez déjà téléchargé une illustration, elle sera ignorée."
 
 #: models.py:234
 msgid "illustrated"
-msgstr ""
+msgstr "illustré"
 
 #: models.py:234
 msgid "Is article illustrated?"
-msgstr ""
+msgstr "L'article est-il illustré ?"
 
 #: models.py:235
 msgid "summary"
-msgstr ""
+msgstr "accroche"
 
 #: models.py:239
 msgid "article"
-msgstr ""
+msgstr "article"
 
 #: models.py:240
 msgid "articles"
-msgstr ""
+msgstr "articles"
