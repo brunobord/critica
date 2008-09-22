@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-22 11:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin.py:30
+msgid "Slug"
+msgstr ""
+
+#: admin.py:39
+msgid "Default illustration"
+msgstr ""
+
+#: models.py:86
+msgid "name"
+msgstr ""
+
+#: models.py:86
+msgid "As short as possible."
+msgstr ""
+
+#: models.py:87
+msgid "URL"
+msgstr ""
+
+#: models.py:88
+msgid "description"
+msgstr ""
+
+#: models.py:88
+msgid ""
+"A short description of the category. It will not be displayed on the website."
+msgstr ""
+
+#: models.py:89
+msgid ""
+"Please, upload an image for this category (it will be used as default "
+"category illustration)."
+msgstr ""
+
+#: models.py:90
+msgid "credits"
+msgstr ""
+
+#: models.py:90
+msgid "all rights reserved"
+msgstr ""
+
+#: models.py:90 models.py:91
+msgid "100 characters max."
+msgstr ""
+
+#: models.py:91
+msgid "legend"
+msgstr ""
+
+#: models.py:92
+msgid "creation date"
+msgstr ""
+
+#: models.py:93
+msgid "modification date"
+msgstr ""
+
+#: models.py:102 models.py:162
+msgid "category"
+msgstr ""
+
+#: models.py:103
+msgid "categories"
+msgstr ""
+
+#: models.py:161
+msgid "issue"
+msgstr ""
+
+#: models.py:163
+msgid "position"
+msgstr ""
+
+#: models.py:172
+msgid "category position"
+msgstr ""
+
+#: models.py:173
+msgid "category positions"
+msgstr ""

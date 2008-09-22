@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-22 11:43+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:41
+msgid "sending date"
+msgstr ""
+
+#: models.py:41
+msgid "The newsletter is sent at this date."
+msgstr ""
+
+#: models.py:42
+msgid "recipient count"
+msgstr ""
+
+#: models.py:43
+msgid "viewed count"
+msgstr ""
+
+#: models.py:44 models.py:104
+msgid "hash code"
+msgstr ""
+
+#: models.py:45
+msgid "published"
+msgstr ""
+
+#: models.py:46
+msgid "sending start at"
+msgstr ""
+
+#: models.py:47
+msgid "sending end at"
+msgstr ""
+
+#: models.py:51 models.py:83
+msgid "newsletter"
+msgstr ""
+
+#: models.py:52
+msgid "newsletters"
+msgstr ""
+
+#: models.py:84 models.py:94
+msgid "order"
+msgstr ""
+
+#: models.py:85
+msgid "article"
+msgstr ""
+
+#: models.py:86
+msgid "clicked count"
+msgstr ""
+
+#: models.py:95
+msgid "category"
+msgstr ""
+
+#: models.py:103
+msgid "email"
+msgstr ""
+
+#: models.py:105
+msgid "subscribing date"
+msgstr ""
+
+#: models.py:106
+msgid "unsubscribing date"
+msgstr ""
+
+#: models.py:107
+msgid "active"
+msgstr ""
+
+#: models.py:108
+msgid "last newsletter"
+msgstr ""
