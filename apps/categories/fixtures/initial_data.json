@@ -174,5 +174,19 @@
             "slug": "regions", 
             "name": "R\u00e9gions"
         }
+    },
+    {
+        "pk": 13, 
+        "model": "categories.category", 
+        "fields": {
+            "description": "Articles de la rubrique \"Coup de gueule\"", 
+            "modification_date": "2008-09-22 17:15:28", 
+            "image_legend": "", 
+            "image": "upload/categories/coup-de-geule.jpg", 
+            "creation_date": "2008-09-22 17:15:28", 
+            "image_credits": "tous droits r\u00e9serv\u00e9s", 
+            "slug": "coup-de-gueule", 
+            "name": "Coup de gueule"
+        }
     }
 ]

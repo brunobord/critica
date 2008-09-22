@@ -8,6 +8,17 @@ from django.utils.translation import ugettext_lazy as _
 
 # Positions
 # ------------------------------------------------------------------------------
+POSITION_POSTIT = 1
+POSITION_PUNAISE_LIGNE1_GAUCHE = 2
+POSITION_PUNAISE_LIGNE1_DROITE = 3
+POSITION_PUNAISE_LIGNE2_GAUCHE = 4
+POSITION_PUNAISE_LIGNE2_DROITE = 5
+POSITION_ACCORDEON_LIGNE1 = 6
+POSITION_ACCORDEON_LIGNE2 = 7
+POSITION_ACCORDEON_LIGNE3 = 8
+POSITION_ACCORDEON_LIGNE4 = 9
+POSITION_ACCORDEON_LIGNE5 = 10
+
 NOTE_TYPE_POSITION_CHOICES = (
     (1, 'Post-it'),
     (2, 'Punaise -- ligne 1 -- gauche'),
