@@ -4,6 +4,7 @@ Administration interface options for ``critica.apps.illustrations`` models.
 
 """
 from django.contrib import admin
+from django.utils.translation import ugettext_lazy as _
 from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.illustrations.models import Illustration
 
