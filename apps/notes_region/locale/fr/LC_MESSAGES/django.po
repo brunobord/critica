@@ -19,11 +19,11 @@ msgstr ""
 
 #: models.py:39
 msgid "region note type"
-msgstr "type de brève régionnale"
+msgstr "type de brève régionale"
 
 #: models.py:40
 msgid "region note types"
-msgstr "types de brève régionnale"
+msgstr "types de brève régionale"
 
 #: models.py:72
 msgid "issue"
@@ -36,11 +36,11 @@ msgstr "type"
 
 #: models.py:82
 msgid "featured region note"
-msgstr "brève régionnale vedette"
+msgstr "brève régionale vedette"
 
 #: models.py:83
 msgid "featured region notes"
-msgstr "brèves régionnales vedette"
+msgstr "brèves régionales vedette"
 
 #: models.py:128
 msgid "Please, select a note type."
@@ -48,8 +48,8 @@ msgstr "Sélectionnez un type de brève."
 
 #: models.py:135
 msgid "region note"
-msgstr "brève régionnale"
+msgstr "brève régionale"
 
 #: models.py:136
 msgid "region notes"
-msgstr "brèves régionnales"
+msgstr "brèves régionales"
