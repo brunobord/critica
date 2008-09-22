@@ -1,0 +1,82 @@
+[
+    {
+        "pk": 1, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "Vous saviez ?", 
+            "slug": "vous-saviez"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "Premi\u00e8re nouvelle", 
+            "slug": "premiere-nouvelle"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "On s\u2019en serait pass\u00e9", 
+            "slug": "on-sen-serait-passe"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "On en rirait presque ", 
+            "slug": "on-en-rirait-presque"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "Ils ont os\u00e9", 
+            "slug": "ils-ont-ose"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "L\u2019info-off", 
+            "slug": "linfo-off"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "Fallait s\u2019en douter", 
+            "slug": "fallait-sen-douter"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "Criti\u2026cons", 
+            "slug": "criticons"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "Ca c\u2019est fait\u00a0! ", 
+            "slug": "ca-cest-fait"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "notes.notetype", 
+        "fields": {
+            "name": "Aucun int\u00e9r\u00eat", 
+            "slug": "aucun-interet"
+        }
+    }
+]
