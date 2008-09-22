@@ -1,0 +1,44 @@
+[
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "gilles", 
+            "first_name": "Gilles", 
+            "last_name": "Fabio", 
+            "is_active": 1, 
+            "is_superuser": 1, 
+            "is_staff": 1, 
+            "last_login": "2008-09-22 14:45:00", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$54747$e56704c6cc26904943ee7f9431aed41c35377793", 
+            "email": "gilles.fabio@gmail.com", 
+            "date_joined": "2008-09-22 14:44:48"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Crocodile Dundee", 
+            "user": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Lou Pantail", 
+            "user": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Djangonaute", 
+            "user": 1
+        }
+    }
+]
