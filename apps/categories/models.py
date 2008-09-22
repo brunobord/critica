@@ -109,7 +109,7 @@ class Category(models.Model):
         """
         return u'%s' % self.name
 
-    def admin_formatted_slug(self):
+    def ald_slug(self):
         """ 
         Formatted slug for admin list_display option. 
         
@@ -117,17 +117,17 @@ class Category(models.Model):
         from django.contrib.sites.models import Site
         site = Site.objects.get_current()
         return 'http://www.%s/<strong>%s</strong>/' % (site.domain, self.slug)
-    admin_formatted_slug.allow_tags = True
-    admin_formatted_slug.short_description = _('URL')
+    ald_slug.allow_tags = True
+    ald_slug.short_description = _('URL')
     
-    def admin_image_thumbnail(self):
+    def ald_image(self):
         """ 
         Image thumbnail for admin list_display option. 
         
         """
         return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, self.image, self.image_legend)
-    admin_image_thumbnail.allow_tags = True
-    admin_image_thumbnail.short_description = _('Default illustration')
+    ald_image.allow_tags = True
+    ald_image.short_description = _('Default illustration')
     
     def save(self):
         """ 

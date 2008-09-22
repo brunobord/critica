@@ -13,7 +13,7 @@ class CategoryAdmin(admin.ModelAdmin):
     Administration interface for ``Category`` model.
     
     """
-    list_display = ('name', 'admin_formatted_slug', 'description', 'creation_date', 'modification_date', 'admin_image_thumbnail')
+    list_display = ('name', 'ald_slug', 'description', 'creation_date', 'modification_date', 'ald_image')
     search_fields = ('name', 'description')
     ordering = ['name']
 
