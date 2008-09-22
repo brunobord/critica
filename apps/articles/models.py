@@ -158,61 +158,6 @@ class BaseArticle(models.Model):
         
         """
         return u"%s" % (self.title)
-        
-    def ald_author(self):
-        """
-        Formatted author for admin list_display option.
-        
-        """
-        if self.author.get_full_name():
-            return self.author.get_full_name()
-        else:
-            return self.author
-    ald_author.short_description = _('author')
-    
-    def ald_author_nickname(self):
-        """
-        Formatted author nickname for admin list_display option.
-        
-        """
-        if self.author_nickname:
-            return self.author_nickname
-        else:
-            return self.ald_author()
-    ald_author_nickname.short_description = _('author nickname')
-    
-    def ald_issues(self):
-        """
-        Formatted issue list for admin list_display option."
-        
-        """
-        issues = [issue.number for issue in self.issues.all()]
-        return ', '.join(['%s' % issue for issue in issues])
-    ald_issues.short_description = _('issues')
-
-    def ald_opinion(self):
-        """
-        Formatted opinion for admin list_display option.
-        
-        """
-        if self.opinion:
-            return self.opinion
-        else:
-            return u'<span class="novalue">%s</span>' % _('no opinion')
-    ald_opinion.short_description = _('opinion')
-    ald_opinion.allow_tags = True
-    
-    def ald_publication_date(self):
-        """
-        Formatted publication date for admin list_display option.
-        
-        """
-        if not self.publication_date:
-            return u'<span class="novalue">%s</span>' % _('no publication date')
-        else:
-            return self.publication_date
-    ald_publication_date.short_description = _('publication date')
-    ald_publication_date.allow_tags = True
     
     def save(self):
         """ 

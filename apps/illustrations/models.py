@@ -94,22 +94,6 @@ class Illustration(models.Model):
         """
         return u'%s' % self.legend
 
-    def image_ld(self):
-        """ 
-        Image thumbnail for admin list_display option. 
-        
-        """
-        return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, self.image, self.legend)
-    image_ld.allow_tags = True
-    image_ld.short_description = _('Illustration')
 
-    def category_ld(self):
-        """
-        Formatted category for admin list_display option.
-        
-        """
-        return '<strong>%s</strong>' % self.category
-    category_ld.allow_tags = True
-    category_ld.short_description = _('Category')
 
 
