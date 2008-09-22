@@ -60,7 +60,7 @@ class IssueAdmin(admin.ModelAdmin):
     if 'critica.apps.notes_region' in settings.INSTALLED_APPS:
         inlines.append(NoteRegionFeaturedInline)
         
-    def save_model(self, request, obj, form, change=False):
+    def save_model(self, request, obj, form, change):
         obj.save()
         from django.conf import settings
         # Auto-creates categories

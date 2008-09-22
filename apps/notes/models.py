@@ -190,19 +190,23 @@ class BaseNote(BaseArticle):
         See BaseArticle.
         
     Permissions::
+
+        can_feature_note
+            Can feature a note
             
         can_reserve_note
             Can reserve a note
             
-        can_feature_note
-            Can feature a note
+        can_publish_note
+            Can publish a note
     
     """
     class Meta:
         abstract = True
         permissions = (
-            ('can_reserve_note', 'Can reserve a note'),
             ('can_feature_note', 'Can feature a note'),
+            ('can_reserve_note', 'Can reserve a note'),
+            ('can_publish_note', 'Can publish a note'),
         )
 
 
@@ -243,5 +247,4 @@ class Note(BaseNote):
         db_table = 'notes_note'
         verbose_name = _('note')
         verbose_name_plural = _('notes')
-
 

@@ -231,7 +231,6 @@ class Article(BaseArticle):
     """
     illustration = models.ForeignKey('illustrations.Illustration', verbose_name=_('illustration'), null=True, blank=True, help_text=_('Please, select an illustration which will be attached to this article.')) 
     use_default_illustration = models.BooleanField(_('use default illustration'), default=False, db_index=True, help_text=_('Use the default category illustration to illustrate this article. If you already uploaded an illustration, it will not be used.'))
-    is_illustrated = models.BooleanField(_('illustrated'), default=False, db_index=True, help_text=_('Is article illustrated?'))
     summary = models.TextField(_('summary'))
 
     class Meta:
@@ -240,5 +239,7 @@ class Article(BaseArticle):
         verbose_name_plural = _('articles')
         permissions = (
             ('can_feature_article', 'Can feature an article'),
+            ('can_reserve_article', 'Can reserve an article'),
+            ('can_publish_article', 'Can publish an article'),
         )
 

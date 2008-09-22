@@ -1,5 +1,1037 @@
 [
     {
+        "pk": 22, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_logentry", 
+            "name": "Can add log entry", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_logentry", 
+            "name": "Can change log entry", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_logentry", 
+            "name": "Can delete log entry", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_article", 
+            "name": "Can add article", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_feature_article", 
+            "name": "Can feature an article", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_publish_article", 
+            "name": "Can publish an article", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_reserve_article", 
+            "name": "Can reserve an article", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_article", 
+            "name": "Can change article", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_article", 
+            "name": "Can delete article", 
+            "content_type": 16
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_group", 
+            "name": "Can add group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_message", 
+            "name": "Can add message", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_permission", 
+            "name": "Can add permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_user", 
+            "name": "Can add user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_group", 
+            "name": "Can change group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_message", 
+            "name": "Can change message", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_permission", 
+            "name": "Can change permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_user", 
+            "name": "Can change user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_group", 
+            "name": "Can delete group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_message", 
+            "name": "Can delete message", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_permission", 
+            "name": "Can delete permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_user", 
+            "name": "Can delete user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_category", 
+            "name": "Can add category", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_categoryposition", 
+            "name": "Can add category position", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_category", 
+            "name": "Can change category", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_categoryposition", 
+            "name": "Can change category position", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_category", 
+            "name": "Can delete category", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_categoryposition", 
+            "name": "Can delete category position", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_contenttype", 
+            "name": "Can add content type", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_contenttype", 
+            "name": "Can change content type", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_contenttype", 
+            "name": "Can delete content type", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_illustration", 
+            "name": "Can add illustration", 
+            "content_type": 13
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_illustration", 
+            "name": "Can change illustration", 
+            "content_type": 13
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_illustration", 
+            "name": "Can delete illustration", 
+            "content_type": 13
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_issue", 
+            "name": "Can add issue", 
+            "content_type": 15
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_issue", 
+            "name": "Can change issue", 
+            "content_type": 15
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_issue", 
+            "name": "Can delete issue", 
+            "content_type": 15
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_defaultnewslettercontent", 
+            "name": "Can add default newsletter content", 
+            "content_type": 28
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_newsletter", 
+            "name": "Can add newsletter", 
+            "content_type": 26
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_newslettercontent", 
+            "name": "Can add newsletter content", 
+            "content_type": 27
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_subscriber", 
+            "name": "Can add subscriber", 
+            "content_type": 29
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_defaultnewslettercontent", 
+            "name": "Can change default newsletter content", 
+            "content_type": 28
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_newsletter", 
+            "name": "Can change newsletter", 
+            "content_type": 26
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_newslettercontent", 
+            "name": "Can change newsletter content", 
+            "content_type": 27
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_subscriber", 
+            "name": "Can change subscriber", 
+            "content_type": 29
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_defaultnewslettercontent", 
+            "name": "Can delete default newsletter content", 
+            "content_type": 28
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_newsletter", 
+            "name": "Can delete newsletter", 
+            "content_type": 26
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_newslettercontent", 
+            "name": "Can delete newsletter content", 
+            "content_type": 27
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_subscriber", 
+            "name": "Can delete subscriber", 
+            "content_type": 29
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_note", 
+            "name": "Can add note", 
+            "content_type": 19
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_notetype", 
+            "name": "Can add note type", 
+            "content_type": 17
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_notetypeposition", 
+            "name": "Can add note type position", 
+            "content_type": 18
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_note", 
+            "name": "Can change note", 
+            "content_type": 19
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_notetype", 
+            "name": "Can change note type", 
+            "content_type": 17
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_notetypeposition", 
+            "name": "Can change note type position", 
+            "content_type": 18
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_note", 
+            "name": "Can delete note", 
+            "content_type": 19
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_notetype", 
+            "name": "Can delete note type", 
+            "content_type": 17
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_notetypeposition", 
+            "name": "Can delete note type position", 
+            "content_type": 18
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_noteregion", 
+            "name": "Can add region note", 
+            "content_type": 22
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_noteregionfeatured", 
+            "name": "Can add featured region note", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_notetyperegion", 
+            "name": "Can add region note type", 
+            "content_type": 20
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_noteregion", 
+            "name": "Can change region note", 
+            "content_type": 22
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_noteregionfeatured", 
+            "name": "Can change featured region note", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_notetyperegion", 
+            "name": "Can change region note type", 
+            "content_type": 20
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_noteregion", 
+            "name": "Can delete region note", 
+            "content_type": 22
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_noteregionfeatured", 
+            "name": "Can delete featured region note", 
+            "content_type": 21
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_notetyperegion", 
+            "name": "Can delete region note type", 
+            "content_type": 20
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_page", 
+            "name": "Can add page", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_publish_page", 
+            "name": "Can publish a page", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_page", 
+            "name": "Can change page", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_page", 
+            "name": "Can delete page", 
+            "content_type": 23
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_session", 
+            "name": "Can add session", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_session", 
+            "name": "Can change session", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_session", 
+            "name": "Can delete session", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_site", 
+            "name": "Can add site", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_site", 
+            "name": "Can change site", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_site", 
+            "name": "Can delete site", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_tag", 
+            "name": "Can add tag", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_taggeditem", 
+            "name": "Can add tagged item", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_tag", 
+            "name": "Can change tag", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_taggeditem", 
+            "name": "Can change tagged item", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_tag", 
+            "name": "Can delete tag", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_taggeditem", 
+            "name": "Can delete tagged item", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_usernickname", 
+            "name": "Can add user nickname", 
+            "content_type": 25
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_userprofile", 
+            "name": "Can add user profile", 
+            "content_type": 24
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_usernickname", 
+            "name": "Can change user nickname", 
+            "content_type": 25
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_userprofile", 
+            "name": "Can change user profile", 
+            "content_type": 24
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_usernickname", 
+            "name": "Can delete user nickname", 
+            "content_type": 25
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_userprofile", 
+            "name": "Can delete user profile", 
+            "content_type": 24
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_video", 
+            "name": "Can add video", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_publish_video", 
+            "name": "Can publish a video", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_reserve_video", 
+            "name": "Can reserve a video", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_video", 
+            "name": "Can change video", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_video", 
+            "name": "Can delete video", 
+            "content_type": 14
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "Administrateurs", 
+            "permissions": [
+                22, 
+                23, 
+                24, 
+                48, 
+                51, 
+                53, 
+                52, 
+                49, 
+                50, 
+                4, 
+                10, 
+                1, 
+                7, 
+                5, 
+                11, 
+                2, 
+                8, 
+                6, 
+                12, 
+                3, 
+                9, 
+                31, 
+                34, 
+                32, 
+                35, 
+                33, 
+                36, 
+                13, 
+                14, 
+                15, 
+                37, 
+                38, 
+                39, 
+                45, 
+                46, 
+                47, 
+                88, 
+                82, 
+                85, 
+                91, 
+                89, 
+                83, 
+                86, 
+                92, 
+                90, 
+                84, 
+                87, 
+                93, 
+                60, 
+                54, 
+                57, 
+                61, 
+                55, 
+                58, 
+                62, 
+                56, 
+                59, 
+                69, 
+                66, 
+                63, 
+                70, 
+                67, 
+                64, 
+                71, 
+                68, 
+                65, 
+                72, 
+                75, 
+                73, 
+                74, 
+                16, 
+                17, 
+                18, 
+                19, 
+                20, 
+                21, 
+                25, 
+                28, 
+                26, 
+                29, 
+                27, 
+                30, 
+                79, 
+                76, 
+                80, 
+                77, 
+                81, 
+                78, 
+                40, 
+                44, 
+                43, 
+                41, 
+                42
+            ]
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "R\u00e9dacteurs en chef", 
+            "permissions": [
+                48, 
+                51, 
+                53, 
+                52, 
+                49, 
+                50, 
+                34, 
+                35, 
+                36, 
+                37, 
+                38, 
+                39, 
+                45, 
+                46, 
+                47, 
+                60, 
+                57, 
+                61, 
+                58, 
+                62, 
+                59, 
+                69, 
+                66, 
+                70, 
+                67, 
+                71, 
+                68, 
+                72, 
+                75, 
+                73, 
+                74, 
+                25, 
+                28, 
+                26, 
+                29, 
+                27, 
+                30, 
+                79, 
+                80, 
+                81, 
+                40, 
+                44, 
+                43, 
+                41, 
+                42
+            ]
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "Journalistes", 
+            "permissions": [
+                48, 
+                49, 
+                34, 
+                35, 
+                36, 
+                37, 
+                38, 
+                60, 
+                61, 
+                69, 
+                70, 
+                72, 
+                73, 
+                25, 
+                28, 
+                26, 
+                29, 
+                27, 
+                30, 
+                79, 
+                80, 
+                81
+            ]
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "Publicitaires", 
+            "permissions": []
+        }
+    }, 
+    {
         "pk": 1, 
         "model": "auth.user", 
         "fields": {
@@ -9,12 +1041,92 @@
             "is_active": 1, 
             "is_superuser": 1, 
             "is_staff": 1, 
-            "last_login": "2008-09-22 14:45:00", 
+            "last_login": "2008-09-22 21:12:23", 
             "groups": [], 
             "user_permissions": [], 
             "password": "sha1$54747$e56704c6cc26904943ee7f9431aed41c35377793", 
             "email": "gilles.fabio@gmail.com", 
             "date_joined": "2008-09-22 14:44:48"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "admin", 
+            "first_name": "Admin", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-22 21:17:53", 
+            "groups": [
+                1
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$d7317$2f8a9063a47a77d26dffca04740e1aa131d291e6", 
+            "email": "", 
+            "date_joined": "2008-09-22 21:17:53"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "journaliste", 
+            "first_name": "Journaliste", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-22 21:18:16", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$a9bfd$70e53770e19b23da434522ec1c0125c7f00f2a58", 
+            "email": "", 
+            "date_joined": "2008-09-22 21:18:16"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "redacchef", 
+            "first_name": "R\u00e9dacteur en chef", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-22 21:18:44", 
+            "groups": [
+                2
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$ad052$83acdfbc3151c1018fe4703c9eb904a87e9f9ad2", 
+            "email": "", 
+            "date_joined": "2008-09-22 21:18:44"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "publicitaire", 
+            "first_name": "Publicitaire", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-09-22 21:19:21", 
+            "groups": [
+                4
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$433c8$b2cd038559d037594e4096b195c05771dad88725", 
+            "email": "", 
+            "date_joined": "2008-09-22 21:19:21"
         }
     },
     {
@@ -39,6 +1151,70 @@
         "fields": {
             "nickname": "Djangonaute", 
             "user": 1
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Super Admin", 
+            "user": 2
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Spider Admin", 
+            "user": 2
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Super Journaliste", 
+            "user": 3
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Spider Journaliste", 
+            "user": 3
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Super Redac'chef", 
+            "user": 4
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Spider R\u00e9dac'chef", 
+            "user": 4
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Super Publicitaire", 
+            "user": 5
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Spider Publicitaire", 
+            "user": 5
         }
     }
 ]

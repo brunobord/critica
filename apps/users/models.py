@@ -107,7 +107,7 @@ class UserNickname(models.Model):
         Object human-readable string representation. 
         
         """
-        return u'%s' % self.nickname
+        return u'%s: %s' % (self.user, self.nickname)
 
 
 
