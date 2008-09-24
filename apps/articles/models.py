@@ -139,8 +139,9 @@ class BaseArticle(models.Model):
     modification_date = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
     publication_date = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
-    is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is article featured?'))
-    status = models.IntegerField(_('status'), choices=choices.STATUS_CHOICES, default=choices.STATUS_NEW, db_index=True, help_text=_('Please, select a status.'))
+    is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))
+    is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to published?'))
+    is_reserved = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
     content = models.TextField(_('content'))
 
     objects = models.Manager()

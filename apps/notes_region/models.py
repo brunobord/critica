@@ -136,3 +136,4 @@ class NoteRegion(BaseNote):
         verbose_name_plural = _('region notes')
 
 
+

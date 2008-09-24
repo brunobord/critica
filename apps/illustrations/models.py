@@ -95,5 +95,32 @@ class Illustration(models.Model):
         return u'%s' % self.legend
 
 
-
+class IllustrationOfTheDay(Illustration):
+    """
+    Illustration of the day.
+    
+    Database table name: ``illustration_illustrationoftheday``.
+    
+    An illlustration of the day is composed of::
+    
+        Inherits from Illustration.
+        So, all fields of this class.
+        
+    Indexes::
+    
+        Illustration indexes.
+            
+    Managers::
+    
+        See Illustration.
+    
+    """
+    class Meta:
+        """
+        Model metadata.
+        
+        """
+        verbose_name = _('illustration of the day')
+        verbose_name_plural = _('illustrations of the day')
+        
 

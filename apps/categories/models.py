@@ -118,6 +118,6 @@ class Category(models.Model):
         """
         self.slug = slugify(self.name)
         super(Category, self).save()
-        
+
 
 

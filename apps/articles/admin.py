@@ -15,10 +15,9 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface for ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'is_featured', 'ald_author', 'ald_author_nickname', 'view_count', 'status')
-    list_filter = ('author', 'status', 'opinion', 'is_featured', 'category')
+    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'is_featured', 'ald_author', 'ald_author_nickname', 'view_count', 'is_ready_to_publish')
+    list_filter = ('author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     search_fields = ('title', 'content')
-    radio_fields = {'status': admin.VERTICAL}
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
     exclude = ['author']
@@ -102,32 +101,41 @@ class ArticleAdmin(BaseArticleAdmin):
     Administration interface for ``Article`` model.
     
     """
-    fieldsets = (
-        (_('Headline'), 
-            {'fields': ('author_nickname', 'title', 'opinion', 'is_featured')}
-        ),
-        (_('Filling'),
-            {'fields': ('issues', 'category', 'tags')},
-        ),
-        (_('Illustration'),
-            {'fields': ('illustration', 'use_default_illustration')}
-        ),
-        (_('Content'),
-            {'fields': ('summary', 'content')}
-        ),
-        (_('Publication'),
-            {'fields': ('publication_date', 'status')}
-        ),
-    )
     search_fields = ('title', 'summary', 'content')
+    
+    def get_fieldsets(self, request, obj=None):
+        """ Hook for specifying fieldsets for the add form. """
+        fieldsets = [
+            (_('Headline'), 
+                {'fields': ('author_nickname', 'title', 'opinion')}
+            ),
+            (_('Filling'),
+                {'fields': ('issues', 'category', 'tags')},
+            ),
+            (_('Illustration'),
+                {'fields': ('illustration', 'use_default_illustration')}
+            ),
+            (_('Content'),
+                {'fields': ('summary', 'content')}
+            ),
+        ]
+            
+        validation_fields = []
+        
+        if request.user.has_perm('articles.can_feature_article'):
+            validation_fields.append('is_featured')
+        if request.user.has_perm('articles.can_reserve_article'):
+            validation_fields.append('is_reserved')
+        if request.user.has_perm('articles.can_publish_article'):
+            validation_fields.append('is_ready_to_publish')
+            
+        if request.user.has_perm('articles.can_reserve_article') \
+            or request.user.has_perm('articles.can_feature_article') \
+            or request.user.has_perm('articles.can_publish_article'):
+            fieldsets += [(_('Publication'), {'fields': validation_fields})]
 
-    def get_form(self, request, obj=None, **kwargs):
-        exclude = []
-        if not request.user.has_perm('users.can_validate_illustration'):
-            exclude.append('is_illustrated')
-        defaults = {'exclude': exclude}
-        defaults.update(kwargs)
-        return super(ArticleAdmin, self).get_form(request, obj, **defaults)
+        return fieldsets
+
 
 basic_site.register(Article, ArticleAdmin)
 advanced_site.register(Article, ArticleAdmin)

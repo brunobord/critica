@@ -70,5 +70,11 @@ class Issue(models.Model):
         
         """
         return u'%s' % self.number
-
-
+        
+    def save(self):
+        super(Issue, self).save()
+        from critica.apps.categories.models import Category
+        from critica.apps.positions.models import CategoryPosition
+        for category in Category.objects.all():
+            p = CategoryPosition(issue=self, category=category)
+            p.save()
