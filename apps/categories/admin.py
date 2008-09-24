@@ -6,7 +6,7 @@ Administration interface options for ``critica.apps.categories`` models.
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.admin.sites import basic_site, advanced_site
-from critica.apps.categories.models import Category, CategoryPosition
+from critica.apps.categories.models import Category
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -42,16 +42,4 @@ class CategoryAdmin(admin.ModelAdmin):
 basic_site.register(Category, CategoryAdmin)
 advanced_site.register(Category, CategoryAdmin)
 
-
-class CategoryPositionAdmin(admin.ModelAdmin):
-    """
-    Administration interface for ``CategoryPosition`` model.
-    
-    """
-    list_display = ('issue', 'category', 'position')
-    search_fields = ('issue', 'category', 'position')
-    ordering = ['issue']
-
-#basic_site.register(CategoryPosition, CategoryPositionAdmin)
-#advanced_site.register(CategoryPosition, CategoryPositionAdmin)
 

@@ -7,7 +7,6 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
-from critica.apps.categories import choices
 from critica.apps.categories import settings as categories_settings
 
 
@@ -120,63 +119,5 @@ class Category(models.Model):
         self.slug = slugify(self.name)
         super(Category, self).save()
         
-
-class CategoryPosition(models.Model):
-    """
-    Category position.
-    
-    Database table name: ``categories_category_position``.
-    
-    A category position is composed of::
-    
-        issue
-            * ForeignKey: critica.apps.issues.models.Issue
-            * The issue
-            * Required
-            
-        category
-            * ForeignKey: critica.apps.categories.models.Category
-            * The category
-            * Required
-            
-        position
-            * IntegerField
-            * The category position on the cover
-            * choices: critica.apps.categories.choices.POSITION_CHOICES
-            * Must be unique
-            * Required
-
-    Indexes::
-    
-        * issue
-        * category
-        * position
-
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-    
-    """
-    issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
-    category = models.ForeignKey('categories.Category', verbose_name=_('category'))
-    position = models.IntegerField(_('position'), choices=choices.POSITION_CHOICES, null=True, blank=True, db_index=True)
-    
-    objects = models.Manager()
-    
-    class Meta:
-        """ 
-        Model metadata. 
-        
-        """
-        verbose_name = _('category position')
-        verbose_name_plural = _('category positions')
-
-    def __unicode__(self):
-        """ 
-        Object human-readable string representation. 
-        
-        """
-        return u'%s -- %s -- %s' % (self.issue, self.category, self.position)
 
 

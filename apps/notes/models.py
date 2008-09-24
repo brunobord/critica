@@ -111,63 +111,7 @@ class NoteType(BaseNoteType):
         verbose_name_plural = _('note types')
 
 
-class NoteTypePosition(models.Model):
-    """
-    NOte type position.
-    
-    Database table name: ``notes_notetypeposition``.
-    
-    A note type position is composed of::
-    
-        issue
-            * ForeignKey: critica.apps.issues.models.Issue
-            * The issue
-            * Required
-            
-        type
-            * ForeignKey: critica.apps.notes.models.NoteType
-            * The note type
-            * Required
-            
-        position
-            * IntegerField
-            * The category position on the cover
-            * choices: critica.apps.categories.choices.POSITION_CHOICES
-            * Must be unique
-            * Optional (can be blank)
 
-    Indexes::
-    
-        * issue
-        * type
-        * position
-
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-    
-    """
-    issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
-    type = models.ForeignKey('notes.NoteType', verbose_name=_('type'))
-    position = models.IntegerField(_('position'), choices=choices.NOTE_TYPE_POSITION_CHOICES, null=True, blank=True, db_index=True)
-    
-    objects = models.Manager()
-    
-    class Meta:
-        """ 
-        Model metadata. 
-        
-        """
-        verbose_name = _('note type position')
-        verbose_name_plural = _('note type positions')
-
-    def __unicode__(self):
-        """ 
-        Object human-readable string representation. 
-        
-        """
-        return u'%s -- %s -- %s' % (self.issue, self.type, self.position)
 
 
 class BaseNote(BaseArticle):
