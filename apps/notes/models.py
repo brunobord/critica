@@ -179,8 +179,13 @@ class BaseNote(BaseArticle):
     A note is composed of::
     
         Inherits from critica.apps.articles.models.BaseArticle.
-        So, all fields of this abstract class.
+        So, all fields of this abstract class and fields below.
 
+        summary
+            * TextField
+            * The note summary
+            * Required
+            
     Indexes::
     
         BaseArticle indexes.
@@ -201,6 +206,8 @@ class BaseNote(BaseArticle):
             Can publish a note
     
     """
+    summary = models.TextField(_('summary'))
+    
     class Meta:
         abstract = True
         permissions = (

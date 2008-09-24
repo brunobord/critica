@@ -96,24 +96,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
         """
         obj.author = request.user
         obj.save()
-        
-    def get_form(self, request, obj=None, **kwargs):
-        """
-        Returns a Form class for use in the admin add view. This is used by
-        add_view and change_view.
-        
-        Excludes fields depending on user permissions.
-        
-        """
-        exclude = []
-        #if not request.user.has_perm('users.can_reserve_article'):
-        #    exclude.append('is_reserved')
-        if not request.user.has_perm('users.can_feature_article'):
-            exclude.append('is_featured')
-        defaults = {'exclude': exclude}
-        defaults.update(kwargs)
-        return super(BaseArticleAdmin, self).get_form(request, obj, **defaults)
-
 
 class ArticleAdmin(BaseArticleAdmin):
     """

@@ -50,7 +50,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
             {'fields': ('issues', 'category', 'tags')}
         ),
         (_('Content'),
-            {'fields': ('content',)}
+            {'fields': ('summary', 'content')}
         ),
         (_('Publication'),
             {'fields': ('publication_date', 'status')}
