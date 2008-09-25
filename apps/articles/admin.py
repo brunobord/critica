@@ -32,6 +32,48 @@ class BaseArticleAdmin(admin.ModelAdmin):
             settings.MEDIA_URL + 'common/js/textarea.js',
         )
 
+    def get_fieldsets(self, request, obj=None):
+        """ Hook for specifying fieldsets for the add form. """
+        fieldsets = [
+            (_('Headline'), 
+                {'fields': ('author_nickname', 'title', 'opinion')}
+            ),
+            (_('Filling'),
+                {'fields': ('issues', 'category', 'tags')},
+            ),
+            (_('Illustration'),
+                {'fields': ('illustration', 'use_default_illustration')}
+            ),
+            (_('Content'),
+                {'fields': ('summary', 'content')}
+            ),
+        ]
+            
+        validation_fields = []
+        
+        if request.user.has_perm('articles.can_feature_article'):
+            validation_fields.append('is_featured')
+        if request.user.has_perm('articles.can_reserve_article'):
+            validation_fields.append('is_reserved')
+        if request.user.has_perm('articles.can_publish_article'):
+            validation_fields.append('is_ready_to_publish')
+            
+        if request.user.has_perm('articles.can_reserve_article') \
+            or request.user.has_perm('articles.can_feature_article') \
+            or request.user.has_perm('articles.can_publish_article'):
+            fieldsets += [(_('Publication'), {'fields': validation_fields})]
+
+        return fieldsets
+
+    def save_model(self, request, obj, form, change):
+        """ 
+        Given a model instance save it to the database. 
+        Auto-save author.
+        
+        """
+        obj.author = request.user
+        obj.save()
+        
     def ald_author(self, obj):
         """
         Formatted author for admin list_display option.
@@ -86,15 +128,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return obj.publication_date
     ald_publication_date.short_description = _('publication date')
     ald_publication_date.allow_tags = True
-    
-    def save_model(self, request, obj, form, change):
-        """ 
-        Given a model instance save it to the database. 
-        Auto-save author.
-        
-        """
-        obj.author = request.user
-        obj.save()
+
 
 class ArticleAdmin(BaseArticleAdmin):
     """
@@ -102,40 +136,6 @@ class ArticleAdmin(BaseArticleAdmin):
     
     """
     search_fields = ('title', 'summary', 'content')
-    
-    def get_fieldsets(self, request, obj=None):
-        """ Hook for specifying fieldsets for the add form. """
-        fieldsets = [
-            (_('Headline'), 
-                {'fields': ('author_nickname', 'title', 'opinion')}
-            ),
-            (_('Filling'),
-                {'fields': ('issues', 'category', 'tags')},
-            ),
-            (_('Illustration'),
-                {'fields': ('illustration', 'use_default_illustration')}
-            ),
-            (_('Content'),
-                {'fields': ('summary', 'content')}
-            ),
-        ]
-            
-        validation_fields = []
-        
-        if request.user.has_perm('articles.can_feature_article'):
-            validation_fields.append('is_featured')
-        if request.user.has_perm('articles.can_reserve_article'):
-            validation_fields.append('is_reserved')
-        if request.user.has_perm('articles.can_publish_article'):
-            validation_fields.append('is_ready_to_publish')
-            
-        if request.user.has_perm('articles.can_reserve_article') \
-            or request.user.has_perm('articles.can_feature_article') \
-            or request.user.has_perm('articles.can_publish_article'):
-            fieldsets += [(_('Publication'), {'fields': validation_fields})]
-
-        return fieldsets
-
 
 admin.site.register(Article, ArticleAdmin)
 basic_site.register(Article, ArticleAdmin)

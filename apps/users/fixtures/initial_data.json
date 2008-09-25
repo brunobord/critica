@@ -324,7 +324,7 @@
         }
     }, 
     {
-        "pk": 97, 
+        "pk": 94, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_defaultnewslettercontent", 
@@ -333,7 +333,7 @@
         }
     }, 
     {
-        "pk": 91, 
+        "pk": 88, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_newsletter", 
@@ -342,7 +342,7 @@
         }
     }, 
     {
-        "pk": 94, 
+        "pk": 91, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_newslettercontent", 
@@ -351,7 +351,7 @@
         }
     }, 
     {
-        "pk": 100, 
+        "pk": 97, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_subscriber", 
@@ -360,7 +360,7 @@
         }
     }, 
     {
-        "pk": 98, 
+        "pk": 95, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_defaultnewslettercontent", 
@@ -369,7 +369,7 @@
         }
     }, 
     {
-        "pk": 92, 
+        "pk": 89, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_newsletter", 
@@ -378,7 +378,7 @@
         }
     }, 
     {
-        "pk": 95, 
+        "pk": 92, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_newslettercontent", 
@@ -387,7 +387,7 @@
         }
     }, 
     {
-        "pk": 101, 
+        "pk": 98, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_subscriber", 
@@ -396,7 +396,7 @@
         }
     }, 
     {
-        "pk": 99, 
+        "pk": 96, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_defaultnewslettercontent", 
@@ -405,7 +405,7 @@
         }
     }, 
     {
-        "pk": 93, 
+        "pk": 90, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_newsletter", 
@@ -414,7 +414,7 @@
         }
     }, 
     {
-        "pk": 96, 
+        "pk": 93, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_newslettercontent", 
@@ -423,7 +423,7 @@
         }
     }, 
     {
-        "pk": 102, 
+        "pk": 99, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_subscriber", 
@@ -447,33 +447,6 @@
             "codename": "add_notetype", 
             "name": "Can add note type", 
             "content_type": 20
-        }
-    }, 
-    {
-        "pk": 69, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "can_feature_note", 
-            "name": "Can feature a note", 
-            "content_type": 21
-        }
-    }, 
-    {
-        "pk": 71, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "can_publish_note", 
-            "name": "Can publish a note", 
-            "content_type": 21
-        }
-    }, 
-    {
-        "pk": 70, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "can_reserve_note", 
-            "name": "Can reserve a note", 
-            "content_type": 21
         }
     }, 
     {
@@ -513,7 +486,7 @@
         }
     }, 
     {
-        "pk": 78, 
+        "pk": 75, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_noteregion", 
@@ -522,7 +495,7 @@
         }
     }, 
     {
-        "pk": 75, 
+        "pk": 72, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_noteregionfeatured", 
@@ -531,7 +504,7 @@
         }
     }, 
     {
-        "pk": 72, 
+        "pk": 69, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_notetyperegion", 
@@ -540,7 +513,7 @@
         }
     }, 
     {
-        "pk": 79, 
+        "pk": 76, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_noteregion", 
@@ -549,7 +522,7 @@
         }
     }, 
     {
-        "pk": 76, 
+        "pk": 73, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_noteregionfeatured", 
@@ -558,7 +531,7 @@
         }
     }, 
     {
-        "pk": 73, 
+        "pk": 70, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_notetyperegion", 
@@ -567,7 +540,7 @@
         }
     }, 
     {
-        "pk": 80, 
+        "pk": 77, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_noteregion", 
@@ -576,7 +549,7 @@
         }
     }, 
     {
-        "pk": 77, 
+        "pk": 74, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_noteregionfeatured", 
@@ -585,7 +558,7 @@
         }
     }, 
     {
-        "pk": 74, 
+        "pk": 71, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_notetyperegion", 
@@ -594,7 +567,7 @@
         }
     }, 
     {
-        "pk": 81, 
+        "pk": 78, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_page", 
@@ -603,7 +576,7 @@
         }
     }, 
     {
-        "pk": 84, 
+        "pk": 81, 
         "model": "auth.permission", 
         "fields": {
             "codename": "can_publish_page", 
@@ -612,7 +585,7 @@
         }
     }, 
     {
-        "pk": 82, 
+        "pk": 79, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_page", 
@@ -621,7 +594,7 @@
         }
     }, 
     {
-        "pk": 83, 
+        "pk": 80, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_page", 
@@ -792,7 +765,7 @@
         }
     }, 
     {
-        "pk": 88, 
+        "pk": 85, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_usernickname", 
@@ -801,7 +774,7 @@
         }
     }, 
     {
-        "pk": 85, 
+        "pk": 82, 
         "model": "auth.permission", 
         "fields": {
             "codename": "add_userprofile", 
@@ -810,7 +783,7 @@
         }
     }, 
     {
-        "pk": 89, 
+        "pk": 86, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_usernickname", 
@@ -819,7 +792,7 @@
         }
     }, 
     {
-        "pk": 86, 
+        "pk": 83, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_userprofile", 
@@ -828,7 +801,7 @@
         }
     }, 
     {
-        "pk": 90, 
+        "pk": 87, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_usernickname", 
@@ -837,7 +810,7 @@
         }
     }, 
     {
-        "pk": 87, 
+        "pk": 84, 
         "model": "auth.permission", 
         "fields": {
             "codename": "delete_userprofile", 
@@ -959,40 +932,37 @@
                 48, 
                 49, 
                 50, 
-                97, 
-                91, 
                 94, 
-                100, 
-                98, 
-                92, 
+                88, 
+                91, 
+                97, 
                 95, 
-                101, 
-                99, 
-                93, 
+                89, 
+                92, 
+                98, 
                 96, 
-                102, 
+                90, 
+                93, 
+                99, 
                 66, 
                 63, 
-                69, 
-                71, 
-                70, 
                 67, 
                 64, 
                 68, 
                 65, 
-                78, 
                 75, 
                 72, 
-                79, 
+                69, 
                 76, 
                 73, 
-                80, 
+                70, 
                 77, 
                 74, 
+                71, 
+                78, 
                 81, 
-                84, 
-                82, 
-                83, 
+                79, 
+                80, 
                 57, 
                 60, 
                 58, 
@@ -1011,12 +981,12 @@
                 29, 
                 27, 
                 30, 
-                88, 
                 85, 
-                89, 
+                82, 
                 86, 
-                90, 
+                83, 
                 87, 
+                84, 
                 40, 
                 45, 
                 44, 
@@ -1050,27 +1020,18 @@
                 49, 
                 50, 
                 66, 
-                63, 
-                69, 
-                71, 
-                70, 
                 67, 
-                64, 
                 68, 
-                65, 
-                78, 
                 75, 
-                72, 
-                79, 
+                69, 
                 76, 
                 73, 
-                80, 
                 77, 
                 74, 
+                78, 
                 81, 
-                84, 
-                82, 
-                83, 
+                79, 
+                80, 
                 57, 
                 60, 
                 58, 
@@ -1083,9 +1044,9 @@
                 29, 
                 27, 
                 30, 
-                88, 
-                89, 
-                90, 
+                85, 
+                86, 
+                87, 
                 40, 
                 45, 
                 44, 
@@ -1104,22 +1065,20 @@
             "name": "Journalistes", 
             "permissions": [
                 51, 
-                55, 
                 52, 
                 34, 
                 66, 
-                70, 
                 67, 
-                78, 
-                79, 
+                72, 
+                76, 
                 25, 
                 28, 
                 26, 
                 29, 
                 27, 
                 30, 
-                88, 
-                89
+                85, 
+                86
             ]
         }
     }, 
@@ -1128,37 +1087,37 @@
         "model": "auth.user", 
         "fields": {
             "username": "gilles", 
-            "first_name": "Gilles", 
-            "last_name": "Fabio", 
+            "first_name": "", 
+            "last_name": "", 
             "is_active": 1, 
             "is_superuser": 1, 
             "is_staff": 1, 
-            "last_login": "2008-09-24 17:53:24", 
+            "last_login": "2008-09-25 12:35:00", 
             "groups": [], 
             "user_permissions": [], 
-            "password": "sha1$b0c9a$7b5560a530c91b0c590993e02bdfd5084e8bb7ec", 
+            "password": "sha1$a32b6$e855d6067596400758d02e4d303ac170e7f3b755", 
             "email": "gilles.fabio@gmail.com", 
-            "date_joined": "2008-09-24 16:57:11"
+            "date_joined": "2008-09-25 12:34:21"
         }
     }, 
     {
         "pk": 2, 
         "model": "auth.user", 
         "fields": {
-            "username": "admin", 
-            "first_name": "Admin", 
+            "username": "administrateur", 
+            "first_name": "Administrateur", 
             "last_name": "", 
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-24 17:00:37", 
+            "last_login": "2008-09-25 12:38:55", 
             "groups": [
                 1
             ], 
             "user_permissions": [], 
-            "password": "sha1$6958c$80cd625b181119446287203de41a82aa3b680b54", 
+            "password": "sha1$71b4b$22c0c0ed94dcb88fc39cfe395c2daad9509431b0", 
             "email": "", 
-            "date_joined": "2008-09-24 17:00:37"
+            "date_joined": "2008-09-25 12:38:55"
         }
     }, 
     {
@@ -1171,14 +1130,14 @@
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-24 17:01:01", 
+            "last_login": "2008-09-25 12:39:16", 
             "groups": [
                 2
             ], 
             "user_permissions": [], 
-            "password": "sha1$b1dd9$1cac7f3fb1230f6bb30fb7a8dff75bf14b393dbe", 
+            "password": "sha1$62cf4$9584cafb5f65e2f52066bcbdc0e8c9f3b7b4b723", 
             "email": "", 
-            "date_joined": "2008-09-24 17:01:01"
+            "date_joined": "2008-09-25 12:39:16"
         }
     }, 
     {
@@ -1191,14 +1150,14 @@
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-24 17:50:43", 
+            "last_login": "2008-09-25 12:39:35", 
             "groups": [
                 3
             ], 
             "user_permissions": [], 
-            "password": "sha1$795ae$d49184a0451c1a602ce7c04cfd017049a8a8dbce", 
+            "password": "sha1$2ae36$d2715eed0b47a765ec7fff3551fed3ad4ce0edb1", 
             "email": "", 
-            "date_joined": "2008-09-24 17:01:26"
+            "date_joined": "2008-09-25 12:39:35"
         }
     }
 ]

@@ -14,10 +14,9 @@ class VideoAdmin(admin.ModelAdmin):
     Administration interface for ``Video`` model.
     
     """
-    list_display = ('name', 'link', 'creation_date', 'modification_date', 'submitter', 'status')
+    list_display = ('name', 'link', 'creation_date', 'modification_date', 'submitter', 'is_reserved', 'is_ready_to_publish')
     search_fields = ('name',)
     ordering = ('-creation_date',)
-    radio_fields = {'status': admin.VERTICAL}
     date_hierarchy = 'creation_date'
 
 admin.site.register(Video, VideoAdmin)

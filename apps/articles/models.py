@@ -131,7 +131,7 @@ class BaseArticle(models.Model):
     author_nickname = models.ForeignKey('users.UserNickname', verbose_name=_('author nickname'), null=True, blank=True, help_text=_('If you want to sign this article under a nickname, please select one in the list. If you do not select a nickname, your signature will be your full name.'))
     title = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
-    category = models.ForeignKey('categories.Category', verbose_name=_('category'), help_text=_('Please, select a category for this article.'))
+    category = models.ForeignKey('categories.Category', verbose_name=_('category'), null=True, blank=True, help_text=_('Please, select a category for this article.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     issues = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues.'))
     view_count = models.IntegerField(_('view count'), null=True, blank=True, editable=False)
@@ -140,7 +140,7 @@ class BaseArticle(models.Model):
     publication_date = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
     is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))
-    is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to published?'))
+    is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be published?'))
     is_reserved = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
     content = models.TextField(_('content'))
 
