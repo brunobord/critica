@@ -120,11 +120,11 @@ msgstr "slug"
 
 #: models.py:134
 msgid "category"
-msgstr "catégorie"
+msgstr "rubrique"
 
 #: models.py:134
 msgid "Please, select a category for this article."
-msgstr "Veuillez sélectionner une catégorie pour cet article."
+msgstr "Veuillez sélectionner une rubrique pour cet article."
 
 #: models.py:135
 msgid "Please, enter tags separated by commas or spaces."
@@ -156,7 +156,7 @@ msgstr "exclusif"
 
 #: models.py:142
 msgid "Is featured?"
-msgstr "exclusif"
+msgstr "Est-il exclusif ?"
 
 #: models.py:143
 msgid "ready to publish"
@@ -164,7 +164,7 @@ msgstr "Prêt à être publié"
 
 #: models.py:143
 msgid "Is ready to published?"
-msgstr "Prêt à être publié"
+msgstr "Est-il prêt à être publié ?"
 
 #: models.py:144
 msgid "reserved"
@@ -195,7 +195,7 @@ msgid ""
 "Use the default category illustration to illustrate this article. If you "
 "already uploaded an illustration, it will not be used."
 msgstr ""
-"Utiliser l'illustration par défaut de la catégorie pour illustrer cet "
+"Utiliser l'illustration par défaut de la rubrique pour illustrer cet "
 "article. Si vous avez déjà téléchargé une illustration, elle sera ignorée."
 
 #: models.py:235
@@ -210,20 +210,3 @@ msgstr "article"
 msgid "articles"
 msgstr "articles"
 
-#~ msgid "Published"
-#~ msgstr "Publié"
-
-#~ msgid "Is article featured?"
-#~ msgstr "L'article est-il exclusif ?"
-
-#~ msgid "status"
-#~ msgstr "état"
-
-#~ msgid "Please, select a status."
-#~ msgstr "Sélectionnez un état."
-
-#~ msgid "illustrated"
-#~ msgstr "illustré"
-
-#~ msgid "Is article illustrated?"
-#~ msgstr "L'article est-il illustré ?"

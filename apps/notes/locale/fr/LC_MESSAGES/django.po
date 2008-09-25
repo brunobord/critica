@@ -69,14 +69,3 @@ msgstr "brève"
 msgid "notes"
 msgstr "brèves"
 
-#~ msgid "issue"
-#~ msgstr "édition"
-
-#~ msgid "position"
-#~ msgstr "position"
-
-#~ msgid "note type position"
-#~ msgstr "position des types de brèves"
-
-#~ msgid "note type positions"
-#~ msgstr "positions des types de brèves"

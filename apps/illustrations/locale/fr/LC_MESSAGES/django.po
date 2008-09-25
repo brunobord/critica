@@ -23,7 +23,7 @@ msgstr "Illustration"
 
 #: admin.py:39
 msgid "Category"
-msgstr "Catégorie"
+msgstr "Rubrique"
 
 #: models.py:72
 msgid "submitter"
@@ -31,7 +31,7 @@ msgstr "auteur"
 
 #: models.py:73
 msgid "category"
-msgstr "catégorie"
+msgstr "rubrique"
 
 #: models.py:74
 msgid "Please, select an image to upload"

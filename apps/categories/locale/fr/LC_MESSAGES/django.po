@@ -43,11 +43,11 @@ msgstr "description"
 
 #: models.py:88
 msgid "A short description of the category. It will not be displayed on the website."
-msgstr "Une courte description de la catégorie. Ne sera pas affiché sur le site."
+msgstr "Une courte description de la rubrique. Ne sera pas affiché sur le site."
 
 #: models.py:89
 msgid "Please, upload an image for this category (it will be used as default category illustration)."
-msgstr "Téléchargez une image pour cette catégorie (elle sera utilisée comme illustration par défaut)."
+msgstr "Téléchargez une image pour cette rubrique (elle sera utilisée comme illustration par défaut)."
 
 #: models.py:90
 msgid "credits"
@@ -75,11 +75,11 @@ msgstr "date de modification"
 
 #: models.py:102 models.py:162
 msgid "category"
-msgstr "catégorie"
+msgstr "rubrique"
 
 #: models.py:103
 msgid "categories"
-msgstr "catégories"
+msgstr "rubriques"
 
 #: models.py:161
 msgid "issue"
@@ -91,8 +91,8 @@ msgstr "position"
 
 #: models.py:172
 msgid "category position"
-msgstr "position d'une catégorie"
+msgstr "position d'une rubrique"
 
 #: models.py:173
 msgid "category positions"
-msgstr "positions des catégories"
+msgstr "positions des rubriques"

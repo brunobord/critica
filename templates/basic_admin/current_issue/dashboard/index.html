@@ -5,7 +5,7 @@
 
     <h1>{% trans "Dashboard" %}</h1>
     
-    <h2>Articles principaux</h2>
+    <h2>La Une</h2>
     
     {% if articles %}
         ARTICLES
@@ -13,7 +13,7 @@
         <p><strong>Pas encore d'articles principaux publiés dans cette édition.</strong></p>
     {% endif %}
 
-    <h2>Par rubrique</h2>
+    <h2>Les rubriques</h2>
     
     {% if articles %}
         {% regroup articles by category as category_list %}
