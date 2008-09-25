@@ -105,19 +105,21 @@ Replace the value of ``ROOT_URLCONF`` with the appropriate one::
 And add these applications to your ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
-    'django.contrib.admin',
-    'tagging',
-    'critica.apps.categories',
-    'critica.apps.illustrations',
-    'critica.apps.videos',
-    'critica.apps.issues',
-    'critica.apps.articles',
-    'critica.apps.notes',
-    'critica.apps.notes_region',
-    'critica.apps.pages',
-    'critica.apps.users',
-    'critica.apps.syndication',
-    'critica.apps.newsletter',
+        'django.contrib.admin',
+        'django.contrib.admin',
+        'tagging',
+        'critica.apps.categories',
+        'critica.apps.illustrations',
+        'critica.apps.videos',
+        'critica.apps.issues',
+        'critica.apps.articles',
+        'critica.apps.positions',
+        'critica.apps.notes',
+        'critica.apps.notes_region',
+        'critica.apps.pages',
+        'critica.apps.users',
+        'critica.apps.syndication',
+        'critica.apps.newsletter',
     )
 
 Voilà! Critic@-engine is ready.
@@ -129,11 +131,6 @@ We need to create the tables in the database. To do that, run the following comm
 into your project root directory::
 
     $ python manage.py syncdb
-    
-At this step, you can run the server but the website will be empty. That's not 
-sexy to play with it and test features. It is recommended to load sample data::
-
-    $ python manage.py loaddata sample_data
     
 Then, have fun::
 
