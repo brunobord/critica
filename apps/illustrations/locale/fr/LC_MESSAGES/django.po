@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 11:06+0200\n"
-"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"POT-Creation-Date: 2008-09-25 09:13+0200\n"
+"PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
 "MIME-Version: 1.0\n"
@@ -45,8 +45,7 @@ msgstr "crédits"
 msgid "all rights reserved"
 msgstr "tous droits réservés"
 
-#: models.py:75 
-#: models.py:76
+#: models.py:75 models.py:76
 msgid "100 characters max."
 msgstr "100 caractères max."
 
@@ -69,3 +68,12 @@ msgstr "illustration"
 #: models.py:88
 msgid "illustrations"
 msgstr "illustrations"
+
+#: models.py:123
+msgid "illustration of the day"
+msgstr "illustration du jour"
+
+#: models.py:124
+msgid "illustrations of the day"
+msgstr "illustrations du jour"
+

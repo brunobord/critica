@@ -148,6 +148,12 @@ class VideoOfTheDay(Video):
         Video Illustration.
     
     """
-    pass
+    class Meta:
+        """ 
+        Model metadata. 
+        
+        """
+        verbose_name = _('video of the day')
+        verbose_name_plural = _('videos of the day')
     
 

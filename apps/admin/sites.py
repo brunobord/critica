@@ -26,40 +26,6 @@ class BasicAdminSite(AdminSite):
             context_instance=RequestContext(request)
         )
 
-    def organize_cover_index(self, request):
-        """
-        Basic admin organize cover view.
-        
-        """
-        from datetime import datetime
-        from critica.apps.positions.models import CategoryPosition
-        from critica.apps.categories.models import Category
-        from critica.apps.issues.models import Issue
-        from django.forms.models import modelformset_factory
-        
-        CategoryPositionFormset = modelformset_factory(CategoryPosition)
-        formset = CategoryPositionFormset(queryset=Category.objects.all())
-        
-        return render_to_response(
-            'basic_admin/current_issue/organize_cover/index.html', 
-            {'formset': formset}, 
-            context_instance=RequestContext(request)
-        )
-        
-    def organize_categories_index(self, request):
-        """
-        Basic admin organize categories view.
-        
-        """
-        from critica.apps.positions.models import NoteTypePosition
-        note_type_positions = NoteTypePosition.objects.all()
-        return render_to_response(
-            'basic_admin/current_issue/organize_categories/change_list.html', 
-            {'note_type_positions': NoteTypePosition}, 
-            context_instance=RequestContext(request)
-        )
-        
-
 # Advanced admin
 # ------------------------------------------------------------------------------    
 class AdvancedAdminSite(AdminSite):

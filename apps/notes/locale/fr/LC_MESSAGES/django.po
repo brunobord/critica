@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 11:06+0200\n"
+"POT-Creation-Date: 2008-09-25 09:20+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,19 +17,19 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:46
+#: admin.py:38
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:49
+#: admin.py:41
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:52
+#: admin.py:44
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:55
+#: admin.py:61
 msgid "Publication"
 msgstr "Publication"
 
@@ -49,35 +49,34 @@ msgstr "type de brève"
 msgid "note types"
 msgstr "types de brève"
 
-#: models.py:151
-msgid "issue"
-msgstr "édition"
+#: models.py:153
+msgid "summary"
+msgstr "accroche"
 
-#: models.py:152 
-#: models.py:240
+#: models.py:195
 msgid "type"
 msgstr "type"
 
-#: models.py:153
-msgid "position"
-msgstr "position"
-
-#: models.py:162
-msgid "note type position"
-msgstr "position des types de brèves"
-
-#: models.py:163
-msgid "note type positions"
-msgstr "positions des types de brèves"
-
-#: models.py:240
+#: models.py:195
 msgid "Please, select a note type."
 msgstr "Sélectionnez un type de brève."
 
-#: models.py:244
+#: models.py:199
 msgid "note"
 msgstr "brève"
 
-#: models.py:245
+#: models.py:200
 msgid "notes"
 msgstr "brèves"
+
+#~ msgid "issue"
+#~ msgstr "édition"
+
+#~ msgid "position"
+#~ msgstr "position"
+
+#~ msgid "note type position"
+#~ msgstr "position des types de brèves"
+
+#~ msgid "note type positions"
+#~ msgstr "positions des types de brèves"

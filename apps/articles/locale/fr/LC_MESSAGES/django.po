@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 11:06+0200\n"
+"POT-Creation-Date: 2008-09-25 09:18+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,88 +17,79 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:45 
-#: models.py:130
+#: admin.py:44 models.py:130
 msgid "author"
 msgstr "auteur"
 
-#: admin.py:56
-#: models.py:131
+#: admin.py:55 models.py:131
 msgid "author nickname"
 msgstr "pseudonyme"
 
-#: admin.py:65 
-#: models.py:136
+#: admin.py:64 models.py:136
 msgid "issues"
 msgstr "éditions"
 
-#: admin.py:75
+#: admin.py:74
 msgid "no opinion"
 msgstr "pas d'opinion"
 
-#: admin.py:76 
-#: models.py:141
+#: admin.py:75 models.py:141
 msgid "opinion"
 msgstr "opinion"
 
-#: admin.py:85
+#: admin.py:84
 msgid "no publication date"
 msgstr "pas de date de publication"
 
-#: admin.py:88 
-#: models.py:140
+#: admin.py:87 models.py:140
 msgid "publication date"
 msgstr "date de publication"
 
-#: admin.py:124
+#: admin.py:109
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:127
+#: admin.py:112
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:130
+#: admin.py:115
 msgid "Illustration"
 msgstr "Illustration"
 
-#: admin.py:133
+#: admin.py:118
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:136
+#: admin.py:135
 msgid "Publication"
 msgstr "Publication"
 
-#: choices.py:17
-msgid "Published"
-msgstr "Publié"
-
-#: choices.py:18
+#: choices.py:16
 msgid "Ready to be published"
 msgstr "Prêt à être publié"
 
-#: choices.py:19
+#: choices.py:17
 msgid "New"
 msgstr "Nouveau"
 
-#: choices.py:20
+#: choices.py:18
 msgid "Reserved"
 msgstr "Mis au marbre"
 
-#: choices.py:31
+#: choices.py:29
 msgid "I like"
 msgstr "J'aime"
 
-#: choices.py:32
+#: choices.py:30
 msgid "I dislike"
 msgstr "J'aime pas"
 
-#: choices.py:33
+#: choices.py:31
 msgid "I'm happy"
 msgstr "Je suis content"
 
-#: choices.py:34
+#: choices.py:32
 msgid "I'm not happy"
 msgstr "Je suis pas content"
 
@@ -110,8 +101,10 @@ msgstr "Veuillez sélectionner un auteur pour cet article."
 msgid ""
 "If you want to sign this article under a nickname, please select one in the "
 "list. If you do not select a nickname, your signature will be your full name."
-msgstr "Si vous voulez signer cet article sous un pseudonyme, sélectionnez-en un dans la liste. "
-"Si vous ne sélectionnez pas de pseudonyme, votre signature sera votre nom complet."
+msgstr ""
+"Si vous voulez signer cet article sous un pseudonyme, sélectionnez-en un "
+"dans la liste. Si vous ne sélectionnez pas de pseudonyme, votre signature "
+"sera votre nom complet."
 
 #: models.py:132
 msgid "title"
@@ -162,47 +155,48 @@ msgid "featured"
 msgstr "exclusif"
 
 #: models.py:142
-msgid "Is article featured?"
-msgstr "L'article est-il exclusif ?"
+msgid "Is featured?"
+msgstr "exclusif"
 
 #: models.py:143
-msgid "status"
-msgstr "état"
+msgid "ready to publish"
+msgstr "Prêt à être publié"
 
 #: models.py:143
-msgid "Please, select a status."
-msgstr "Sélectionnez un état."
+msgid "Is ready to published?"
+msgstr "Prêt à être publié"
 
 #: models.py:144
+msgid "reserved"
+msgstr "Mis au marbre"
+
+#: models.py:144
+msgid "Is reserved?"
+msgstr "Mis au marbre"
+
+#: models.py:145
 msgid "content"
 msgstr "contenu"
 
-#: models.py:232
+#: models.py:233
 msgid "illustration"
 msgstr "illustration"
 
-#: models.py:232
+#: models.py:233
 msgid "Please, select an illustration which will be attached to this article."
 msgstr "Vous pouvez sélectionner une illustration à insérer dans cet article."
 
-#: models.py:233
+#: models.py:234
 msgid "use default illustration"
 msgstr "utiliser l'illustration par défaut"
 
-#: models.py:233
+#: models.py:234
 msgid ""
 "Use the default category illustration to illustrate this article. If you "
 "already uploaded an illustration, it will not be used."
-msgstr "Utiliser l'illustration par défaut de la catégorie pour illustrer cet article. "
-"Si vous avez déjà téléchargé une illustration, elle sera ignorée."
-
-#: models.py:234
-msgid "illustrated"
-msgstr "illustré"
-
-#: models.py:234
-msgid "Is article illustrated?"
-msgstr "L'article est-il illustré ?"
+msgstr ""
+"Utiliser l'illustration par défaut de la catégorie pour illustrer cet "
+"article. Si vous avez déjà téléchargé une illustration, elle sera ignorée."
 
 #: models.py:235
 msgid "summary"
@@ -215,3 +209,21 @@ msgstr "article"
 #: models.py:240
 msgid "articles"
 msgstr "articles"
+
+#~ msgid "Published"
+#~ msgstr "Publié"
+
+#~ msgid "Is article featured?"
+#~ msgstr "L'article est-il exclusif ?"
+
+#~ msgid "status"
+#~ msgstr "état"
+
+#~ msgid "Please, select a status."
+#~ msgstr "Sélectionnez un état."
+
+#~ msgid "illustrated"
+#~ msgstr "illustré"
+
+#~ msgid "Is article illustrated?"
+#~ msgstr "L'article est-il illustré ?"
