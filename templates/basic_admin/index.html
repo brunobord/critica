@@ -1,48 +1,146 @@
 {% extends "admin/index.html" %}
 {% load i18n %}
 {% block title %}{{ title }} | Administration de Critic@{% endblock %}
-{% block extrastyle %}
-<link rel="stylesheet" type="text/css" href="/media/critica/admin/basic/css/custom.css" />
-{% endblock %}
+{% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="/media/critica/admin/basic/css/custom.css" />{% endblock %}
 {% block branding %}
 <h1 id="site-name">Administration de Critic@</h1>
 {% endblock %}
 {% block content %}
 <div id="content-main">
 
-<p class="dashboardlink"><a href="dashboard/">Dashboard</a></p>
-
-{% if app_list %}
-    {% for app in app_list %}
-        <div class="module">
-        <table summary="{% blocktrans with app.name as name %}Models available in the {{ name }} application.{% endblocktrans %}">
-        <caption><a href="{{ app.app_url }}" class="section">{% blocktrans with app.name as name %}{{ name }}{% endblocktrans %}</a></caption>
-        {% for model in app.models %}
+    <p class="dashboardlink"><strong><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a></p>
+    
+    <div class="module">
+        <table summary="Éditions">
+        <caption><a href="issues/" class="section">Éditions</a></caption>
             <tr>
-            {% if model.perms.change %}
-                <th scope="row"><a href="{{ model.admin_url }}">{{ model.name }}</a></th>
-            {% else %}
-                <th scope="row">{{ model.name }}</th>
-            {% endif %}
-
-            {% if model.perms.add %}
-                <td><a href="{{ model.admin_url }}add/" class="addlink">{% trans 'Add' %}</a></td>
-            {% else %}
-                <td>&nbsp;</td>
-            {% endif %}
-
-            {% if model.perms.change %}
-                <td><a href="{{ model.admin_url }}" class="changelink">{% trans 'Change' %}</a></td>
-            {% else %}
-                <td>&nbsp;</td>
-            {% endif %}
+                <th scope="row"><a href="issues/issue/">Éditions</a></th>
+                <td><a href="issues/issue/add/" class="addlink">Ajouter</a></td>
+                <td><a href="issues/issue/" class="changelink">Modifier</a></td>
             </tr>
-        {% endfor %}
         </table>
-        </div>
-    {% endfor %}
-{% else %}
-    <p>{% trans "You don't have permission to edit anything." %}</p>
-{% endif %}
+    </div>
+    
+    <div class="module">
+        <table summary="Articles et brèves">
+        <caption>Articles et brèves</caption>
+            <tr>
+                <th scope="row"><a href="articles/article/">Articles</a></th>
+                <td><a href="articles/article/add/" class="addlink">Ajouter</a></td>
+                <td><a href="articles/article/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes/note/">Brèves</a></th>
+                <td><a href="notes/note/add/" class="addlink">Ajouter</a></td>
+                <td><a href="notes/note/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes_region/noteregion/">Brèves régionales</a></th>
+                <td><a href="notes_region/noteregion/add/" class="addlink">Ajouter</a></td>
+                <td><a href="notes_region/noteregion/" class="changelink">Modifier</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="module">
+        <table summary="Médias">
+        <caption>Médias</caption>
+            <tr>
+                <th scope="row"><a href="illustrations/illustration/">Illustrations</a></th>
+                <td><a href="illustrations/illustration/add/" class="addlink">Ajouter</a></td>
+                <td><a href="illustrations/illustration/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="illustrations/illustrationoftheday/">Illustrations du jour</a></th>
+                <td><a href="illustrations/illustrationoftheday/add/" class="addlink">Ajouter</a></td>
+                <td><a href="illustrations/illustrationoftheday/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="videos/video/">Vidéos</a></th>
+                <td><a href="videos/video/add/" class="addlink">Ajouter</a></td>
+                <td><a href="videos/video/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="videos/videooftheday/">Vidéos du jour</a></th>
+                <td><a href="videos/videooftheday/add/" class="addlink">Ajouter</a></td>
+                <td><a href="videos/videooftheday/" class="changelink">Modifier</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="Rubriques et types de brèves">
+        <caption>Rubriques et types de brèves</caption>
+            <tr>
+                <th scope="row"><a href="categories/category/">Rubriques</a></th>
+                <td><a href="categories/category/add/" class="addlink">Ajouter</a></td>
+                <td><a href="categories/category/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes/notetype/">Types de brèves</a></th>
+                <td><a href="notes/notetype/add/" class="addlink">Ajouter</a></td>
+                <td><a href="notes/notetype/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes_region/notetyperegion/">Types de brèves régionales</a></th>
+                <td><a href="notes_region/notetyperegion/add/" class="addlink">Ajouter</a></td>            
+                <td><a href="notes_region/notetyperegion/" class="changelink">Modifier</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="Positions des rubriques et types de brèves">
+        <caption><a href="positions/" class="section">Positions des rubriques et types de brèves</a></caption>
+            <tr>
+                <th scope="row"><a href="positions/categoryposition/">Positions des catégories</a></th>
+                <td><a href="positions/categoryposition/add/" class="addlink">Ajouter</a></td>
+                <td><a href="positions/categoryposition/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="positions/notetypeposition/">Positions des types de brèves</a></th>
+                <td><a href="positions/notetypeposition/add/" class="addlink">Ajouter</a></td>
+                <td><a href="positions/notetypeposition/" class="changelink">Modifier</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="Utilisateurs">
+        <caption>Utilisateurs</caption>
+            <tr>
+                <th scope="row"><a href="auth/group/">Groupes</a></th>
+                <td><a href="auth/group/add/" class="addlink">Ajouter</a></td>
+                <td><a href="auth/group/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="auth/user/">Utilisateurs</a></th>
+                <td><a href="auth/user/add/" class="addlink">Ajouter</a></td>
+                <td><a href="auth/user/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="users/userprofile/">Profils utilisateurs</a></th>
+                <td><a href="users/userprofile/add/" class="addlink">Ajouter</a></td>
+                <td><a href="users/userprofile/" class="changelink">Modifier</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="users/usernickname/">Pseudonymes utilisateurs</a></th>
+                <td><a href="users/usernickname/add/" class="addlink">Ajouter</a></td>
+                <td><a href="users/usernickname/" class="changelink">Supprimer</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="Sites">
+        <caption><a href="sites" class="section">Site</a></caption>
+            <tr>
+                <th scope="row"><a href="sites/site/">Sites</a></th>
+                <td><a href="sites/site/add/" class="addlink">Ajouter</a></td>
+                <td><a href="sites/site/" class="changelink">Modifier</a></td>
+            </tr>
+        </table>
+    </div>
+
 </div>
 {% endblock %}
