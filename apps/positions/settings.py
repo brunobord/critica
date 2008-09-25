@@ -5,20 +5,39 @@ Settings of ``critica.apps.positions``.
 """
 from critica.apps.positions import choices
 
+# Default category order
+# ------------------------------------------------------------------------------
+CATEGORY_DEFAULT_ORDER = [
+    'national',
+    'etranger',
+    'bouquins',
+    'societe',
+    'nanas',
+    'sports',
+    'tele',
+    'pipoles',
+    'insolite',
+    'regions',
+    'epicurien',
+    'voyages',
+    'coup-de-gueule'
+]
 
 # Default category positions
 # ------------------------------------------------------------------------------
-CATEGORY_DEFAULT_POSITION_NATIONAL = choices.CATEGORY_POSITION_CADRE_HAUT
-CATEGORY_DEFAULT_POSITION_ETRANGER = choices.CATEGORY_POSITION_CADRE_BAS
-CATEGORY_DEFAULT_POSITION_BOUQUINS = choices.CATEGORY_POSITION_POSTIT
-CATEGORY_DEFAULT_POSITION_SOCIETE = choices.CATEGORY_POSITION_PUNAISE_LIGNE1_GAUCHE
-CATEGORY_DEFAULT_POSITION_NANAS = choices.CATEGORY_POSITION_PUNAISE_LIGNE1_DROITE
-CATEGORY_DEFAULT_POSITION_SPORTS = choices.CATEGORY_POSITION_PUNAISE_LIGNE2_GAUCHE
-CATEGORY_DEFAULT_POSITION_TELE = choices.CATEGORY_POSITION_PUNAISE_LIGNE2_DROITE
-CATEGORY_DEFAULT_POSITION_PIPOLE = choices.CATEGORY_POSITION_PUNAISE_LIGNE3_GAUCHE
-CATEGORY_DEFAULT_POSITION_INSOLITE = choices.CATEGORY_POSITION_PUNAISE_LIGNE3_DROITE
-CATEGORY_DEFAULT_POSITION_REGIONS = choices.CATEGORY_POSITION_PUNAISE_LIGNE4_GAUCHE
-CATEGORY_DEFAULT_POSITION_COUP_DE_GUEULE = choices.CATEGORY_POSITION_SCOTCH
+CATEGORY_DEFAULT_POSITION = {
+    'national': choices.CATEGORY_POSITION_CADRE_HAUT,
+    'etranger': choices.CATEGORY_POSITION_CADRE_BAS,
+    'bouquins': choices.CATEGORY_POSITION_POSTIT,
+    'societe': choices.CATEGORY_POSITION_PUNAISE_LIGNE1_GAUCHE,
+    'nanas': choices.CATEGORY_POSITION_PUNAISE_LIGNE1_DROITE,
+    'sports': choices.CATEGORY_POSITION_PUNAISE_LIGNE2_GAUCHE,
+    'tele': choices.CATEGORY_POSITION_PUNAISE_LIGNE2_DROITE,
+    'pipoles': choices.CATEGORY_POSITION_PUNAISE_LIGNE3_GAUCHE,
+    'insolite': choices.CATEGORY_POSITION_PUNAISE_LIGNE3_DROITE,
+    'regions': choices.CATEGORY_POSITION_PUNAISE_LIGNE4_GAUCHE,
+    'coup-de-gueule': choices.CATEGORY_POSITION_SCOTCH,
+}
 
 # Default note type positions
 # ------------------------------------------------------------------------------

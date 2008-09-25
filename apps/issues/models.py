@@ -70,4 +70,28 @@ class Issue(models.Model):
         
         """
         return u'%s' % self.number
+    
+    def save(self):
+        super(Issue, self).save()
+        from django.conf import settings
+        from apps.categories.models import Category
+        from apps.positions.models import CategoryPosition
+        from apps.positions import settings as positions_settings
+        # Auto-creates categories
+        if 'critica.apps.categories' in settings.INSTALLED_APPS:
+            for slug in positions_settings.CATEGORY_DEFAULT_ORDER:
+                # defining default position if it does exist
+                if slug in positions_settings.CATEGORY_DEFAULT_POSITION:
+                    default_position = positions_settings.CATEGORY_DEFAULT_POSITION[slug]
+                else:
+                    default_position = None
+
+                # the category must exist
+                category = Category.objects.get(slug=slug)
+                # create the category
+                position = CategoryPosition(issue=self,
+                    category=category,
+                    position=default_position,
+                )
+                position.save()
 
