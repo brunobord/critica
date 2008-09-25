@@ -6,6 +6,7 @@ Administration interface options for ``cockatoo.apps.pages`` models.
 from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.pages.models import Page
 
 
@@ -33,6 +34,7 @@ class PageAdmin(admin.ModelAdmin):
         
         return fieldsets
 
-
 admin.site.register(Page, PageAdmin)
+basic_site.register(Page, PageAdmin)
+advanced_site.register(Page, PageAdmin)
 

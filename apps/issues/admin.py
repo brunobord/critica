@@ -14,6 +14,7 @@ class CategoryPositionInline(admin.TabularInline):
     Category position inline for ``Issue`` model.
     
     """
+    fk_name = 'issue'
     model = CategoryPosition
     max_num = 13
     
@@ -34,11 +35,11 @@ class IssueAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         obj.save()
         from django.conf import settings
+        from critica.apps.categories.models import Category
+        from critica.apps.positions.models import CategoryPosition
+        from critica.apps.positions import settings as positions_settings
         # Auto-creates categories
         if 'critica.apps.categories' in settings.INSTALLED_APPS:
-            from critica.apps.categories.models import Category
-            from critica.apps.positions.models import CategoryPosition
-            from critica.apps.positions import settings as positions_settings
             # national
             category = Category.objects.get(slug='national')
             position = CategoryPosition(issue=obj, category=category, position=positions_settings.CATEGORY_DEFAULT_POSITION_NATIONAL)
@@ -92,6 +93,7 @@ class IssueAdmin(admin.ModelAdmin):
             position = CategoryPosition(issue=obj, category=category, position=positions_settings.CATEGORY_DEFAULT_POSITION_COUP_DE_GUEULE)
             position.save()
 
+admin.site.register(Issue, IssueAdmin)
 basic_site.register(Issue, IssueAdmin)
 advanced_site.register(Issue, IssueAdmin)
 

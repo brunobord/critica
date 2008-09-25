@@ -6,15 +6,145 @@
 {% endblock %}
 {% block content %}
 <div id="content-main">
+
+    <p class="dashboardlink"><strong><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a></p>
+    <p>&nbsp;</p>
+    
     <div class="module">
-        <table summary="{% blocktrans %}Current issue{% endblocktrans %}">
-        <caption><a href="#" class="section">Current issue</a></caption>
+        <table summary="{% blocktrans %}Issues{% endblocktrans %}">
+        <caption><a href="#" class="section">{% trans "Issues" %}</a></caption>
             <tr>
-                <th scope="row"><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a></td>
-                <td><a href="#" class="changelink">{% trans 'Change' %}</a></td>
+                <th scope="row"><a href="issues/issue/">{% trans "Issues" %}</a></th>
+                <td><a href="issues/issue/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="issues/issue/" class="changelink">{% trans "change" %}</a></td>
             </tr>
         </table>
     </div>
+    
+    <div class="module">
+        <table summary="{% trans "Articles and notes" %}">
+        <caption><a href="#" class="section">{% trans "Articles and notes" %}</a></caption>
+
+            <tr>
+                <th scope="row"><a href="articles/article/">{% trans "Articles" %}</a></th>
+                <td><a href="articles/article/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="articles/article/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes/note/">{% trans "Notes" %}</a></th>
+                <td><a href="notes/note/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="notes/note/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes_region/noteregion/">{% trans "Region notes" %}</a></th>
+                <td><a href="notes_region/noteregion/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="notes_region/noteregion/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="module">
+        <table summary="{% trans "Medias" %}">
+        <caption><a href="#" class="section">{% trans "Medias" %}</a></caption>
+            <tr>
+                <th scope="row"><a href="illustrations/illustration/">{% trans "Illustrations" %}</a></th>
+                <td><a href="illustrations/illustration/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="illustrations/illustration/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="illustrations/illustrationoftheday/">{% trans "Illustrations of the day" %}</a></th>
+                <td><a href="illustrations/illustrationoftheday/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="illustrations/illustrationoftheday/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="videos/video/">{% trans "Videos" %}</a></th>
+                <td><a href="videos/video/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="videos/video/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="videos/videooftheday/">{% trans "Videos of the day" %}</a></th>
+                <td><a href="videos/videooftheday/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="videos/videooftheday/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="{% trans "Categories and types" %}">
+        <caption><a href="#" class="section">{% trans "Categories and types" %}</a></caption>
+            <tr>
+                <th scope="row"><a href="categories/category/">{% trans "Categories" %}</a></th>
+                <td><a href="categories/category/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="categories/category/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes/notetype/">{% trans "Note types" %}</a></th>
+                <td><a href="notes/notetype/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="notes/notetype/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="notes_region/notetyperegion/">{% trans "Region note types" %}</a></th>
+                <td><a href="notes_region/notetyperegion/add/" class="addlink">{% trans "add" %}</a></td>            
+                <td><a href="notes_region/notetyperegion/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="{% trans "Category and type positions" %}">
+        <caption><a href="positions" class="section">{% trans "Category and type positions" %}</a></caption>
+            <tr>
+                <th scope="row"><a href="positions/categoryposition/">{% trans "Category positions" %}</a></th>
+                <td><a href="positions/categoryposition/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="positions/categoryposition/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="positions/notetypeposition/">{% trans "Note type positions" %}</a></th>
+                <td><a href="positions/notetypeposition/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="positions/notetypeposition/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="{% trans "Medias" %}">
+        <caption><a href="#" class="section">{% trans "Users" %}</a></caption>
+            <tr>
+                <th scope="row"><a href="auth/group/">{% trans "Groups" %}</a></th>
+                <td><a href="auth/group/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="auth/group/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="auth/user/">{% trans "Users" %}</a></th>
+                <td><a href="auth/user/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="auth/user/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="users/userprofile/">{% trans "User profiles" %}</a></th>
+                <td><a href="users/userprofile/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="users/userprofile/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+            <tr>
+                <th scope="row"><a href="users/usernickname/">{% trans "User nicknames" %}</a></th>
+                <td><a href="users/usernickname/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="users/usernickname/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="module">
+        <table summary="{% trans "Sites" %}">
+        <caption><a href="sites" class="section">{% trans "Sites" %}</a></caption>
+            <tr>
+                <th scope="row"><a href="sites/site/">{% trans "Sites" %}</a></th>
+                <td><a href="sites/site/add/" class="addlink">{% trans "add" %}</a></td>
+                <td><a href="sites/site/" class="changelink">{% trans "change" %}</a></td>
+            </tr>
+        </table>
+    </div>
+
+
+
 {% if app_list %}
     {% for app in app_list %}
         <div class="module">

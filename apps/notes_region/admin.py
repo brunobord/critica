@@ -18,6 +18,7 @@ class NoteTypeRegionAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     ordering = ['name']
 
+admin.site.register(NoteTypeRegion, NoteTypeRegionAdmin)
 basic_site.register(NoteTypeRegion, NoteTypeRegionAdmin)
 advanced_site.register(NoteTypeRegion, NoteTypeRegionAdmin)
 
@@ -43,6 +44,7 @@ class NoteRegionAdmin(BaseNoteAdmin):
     """
     pass
 
+admin.site.register(NoteRegion, NoteRegionAdmin)
 basic_site.register(NoteRegion, NoteRegionAdmin)
 advanced_site.register(NoteRegion, NoteRegionAdmin)
 

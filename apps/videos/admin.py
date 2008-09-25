@@ -20,6 +20,7 @@ class VideoAdmin(admin.ModelAdmin):
     radio_fields = {'status': admin.VERTICAL}
     date_hierarchy = 'creation_date'
 
+admin.site.register(Video, VideoAdmin)
 basic_site.register(Video, VideoAdmin)
 advanced_site.register(Video, VideoAdmin)
 
@@ -30,7 +31,8 @@ class VideoOfTheDayAdmin(admin.ModelAdmin):
     
     """
     pass
-    
+
+admin.site.register(VideoOfTheDay, VideoOfTheDayAdmin)
 basic_site.register(VideoOfTheDay, VideoOfTheDayAdmin)
 advanced_site.register(VideoOfTheDay, VideoOfTheDayAdmin)
 

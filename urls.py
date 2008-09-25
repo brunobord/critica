@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     (r'^admin/dashboard/', basic_site.dashboard_index),
     (r'^admin/(.*)', basic_site.root),
     (r'^advanced-admin/(.*)', advanced_site.root),
+    (r'^django-admin/(.*)', admin.site.root),
 )
 
 # Applications

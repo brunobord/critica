@@ -11,6 +11,7 @@ from critica.apps.admin.sites import basic_site, advanced_site
 class CategoryPositionAdmin(admin.ModelAdmin):
     pass
     
+admin.site.register(CategoryPosition, CategoryPositionAdmin)
 basic_site.register(CategoryPosition, CategoryPositionAdmin)
 advanced_site.register(CategoryPosition, CategoryPositionAdmin)
 
@@ -18,5 +19,6 @@ advanced_site.register(CategoryPosition, CategoryPositionAdmin)
 class NoteTypePositionAdmin(admin.ModelAdmin):
     pass
     
+admin.site.register(NoteTypePosition, NoteTypePositionAdmin)
 basic_site.register(NoteTypePosition, NoteTypePositionAdmin)
 advanced_site.register(NoteTypePosition, NoteTypePositionAdmin)

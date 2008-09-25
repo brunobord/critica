@@ -15,6 +15,7 @@ class UserProfileAdmin(admin.ModelAdmin):
     """
     pass
 
+admin.site.register(UserProfile, UserProfileAdmin)
 basic_site.register(UserProfile, UserProfileAdmin)
 advanced_site.register(UserProfile, UserProfileAdmin)
 
@@ -29,5 +30,6 @@ class UserNicknameAdmin(admin.ModelAdmin):
     search_fields = ('user', 'nickname')
     ordering = ('user',)
     
+admin.site.register(UserNickname, UserNicknameAdmin)
 basic_site.register(UserNickname, UserNicknameAdmin)
 advanced_site.register(UserNickname, UserNicknameAdmin)

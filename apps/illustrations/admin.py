@@ -38,6 +38,7 @@ class IllustrationAdmin(admin.ModelAdmin):
     ald_category.allow_tags = True
     ald_category.short_description = _('Category')
 
+admin.site.register(Illustration, IllustrationAdmin)
 basic_site.register(Illustration, IllustrationAdmin)
 advanced_site.register(Illustration, IllustrationAdmin)
 
@@ -48,7 +49,8 @@ class IllustrationOfTheDayAdmin(IllustrationAdmin):
     
     """
     pass
-    
+
+admin.site.register(IllustrationOfTheDay, IllustrationOfTheDayAdmin)
 basic_site.register(IllustrationOfTheDay, IllustrationOfTheDayAdmin)
 advanced_site.register(IllustrationOfTheDay, IllustrationOfTheDayAdmin)
 

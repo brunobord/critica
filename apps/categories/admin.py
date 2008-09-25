@@ -39,6 +39,7 @@ class CategoryAdmin(admin.ModelAdmin):
     ald_image.allow_tags = True
     ald_image.short_description = _('Default illustration')
 
+admin.site.register(Category, CategoryAdmin)
 basic_site.register(Category, CategoryAdmin)
 advanced_site.register(Category, CategoryAdmin)
 

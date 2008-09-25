@@ -137,6 +137,7 @@ class ArticleAdmin(BaseArticleAdmin):
         return fieldsets
 
 
+admin.site.register(Article, ArticleAdmin)
 basic_site.register(Article, ArticleAdmin)
 advanced_site.register(Article, ArticleAdmin)
 
