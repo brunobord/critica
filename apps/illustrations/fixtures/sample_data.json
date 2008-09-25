@@ -1,0 +1,183 @@
+[
+    {
+        "pk": 1, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-09-25 17:15:30", 
+            "image": "upload/2008/09/25/national.jpg", 
+            "creation_date": "2008-09-25 17:15:30", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "National"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 2, 
+            "modification_date": "2008-09-25 17:16:33", 
+            "image": "upload/2008/09/25/international.jpg", 
+            "creation_date": "2008-09-25 17:16:33", 
+            "credits": "EPA ", 
+            "submitter": 1, 
+            "legend": "\u00c9tranger"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-09-25 17:17:13", 
+            "image": "upload/2008/09/25/societe.jpg", 
+            "creation_date": "2008-09-25 17:17:13", 
+            "credits": "6PA", 
+            "submitter": 1, 
+            "legend": "Soci\u00e9t\u00e9"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-09-25 17:17:39", 
+            "image": "upload/2008/09/25/sport.jpg", 
+            "creation_date": "2008-09-25 17:17:39", 
+            "credits": "NPO", 
+            "submitter": 1, 
+            "legend": "Sports"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 5, 
+            "modification_date": "2008-09-25 17:21:10", 
+            "image": "upload/2008/09/25/pipoleok.jpg", 
+            "creation_date": "2008-09-25 17:21:10", 
+            "credits": "Mick Jagger, site officiel", 
+            "submitter": 1, 
+            "legend": "Pipoles"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 6, 
+            "modification_date": "2008-09-25 17:21:48", 
+            "image": "upload/2008/09/25/tele.jpg", 
+            "creation_date": "2008-09-25 17:21:48", 
+            "credits": "TF1", 
+            "submitter": 1, 
+            "legend": "Cki ? Christelle, la gagnante"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 7, 
+            "modification_date": "2008-09-25 17:22:25", 
+            "image": "upload/2008/09/25/bouquin.jpg", 
+            "creation_date": "2008-09-25 17:22:25", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "Bouquins"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-09-25 17:23:00", 
+            "image": "upload/2008/09/25/nana.jpg", 
+            "creation_date": "2008-09-25 17:23:00", 
+            "credits": "MAXPPP", 
+            "submitter": 1, 
+            "legend": "Nanas"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-09-25 17:23:31", 
+            "image": "upload/2008/09/25/insolite.jpg", 
+            "creation_date": "2008-09-25 17:23:31", 
+            "credits": "MAXPP", 
+            "submitter": 1, 
+            "legend": "Insolite"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 10, 
+            "modification_date": "2008-09-25 17:24:10", 
+            "image": "upload/2008/09/25/voyageingridjouault.jpg", 
+            "creation_date": "2008-09-25 17:24:10", 
+            "credits": "Ingrid Jouault", 
+            "submitter": 1, 
+            "legend": "Voyages"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 11, 
+            "modification_date": "2008-09-25 17:25:34", 
+            "image": "upload/2008/09/25/cigare002.jpg", 
+            "creation_date": "2008-09-25 17:25:34", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "C\u00f4t\u00e9 Fumeur"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 11, 
+            "modification_date": "2008-09-25 17:26:18", 
+            "image": "upload/2008/09/25/Rgisphotocuisine.jpg", 
+            "creation_date": "2008-09-25 17:26:18", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 1, 
+            "legend": "R\u00e9gis Marcon, chef \u00e9toil\u00e9"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 11, 
+            "modification_date": "2008-09-25 17:27:02", 
+            "image": "upload/2008/09/25/alcool.jpg", 
+            "creation_date": "2008-09-25 17:27:02", 
+            "credits": "MAXPPP", 
+            "submitter": 1, 
+            "legend": "C\u00f4t\u00e9 Bar"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "illustrations.illustrationoftheday", 
+        "fields": {
+            "modification_date": "2008-09-25 17:44:13", 
+            "image": "upload/2008/09/25/caricature____.JPG", 
+            "creation_date": "2008-09-25 17:44:13", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "submitter": 1, 
+            "legend": "50 millions d'euros pris sur le budget d'insertion des handicap\u00e9s !"
+        }
+    }
+]

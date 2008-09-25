@@ -1,0 +1,29 @@
+[
+    {
+        "pk": 1, 
+        "model": "issues.issue", 
+        "fields": {
+            "status": 3, 
+            "publication_date": "2008-09-22", 
+            "number": 135
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "issues.issue", 
+        "fields": {
+            "status": 3, 
+            "publication_date": "2008-09-23", 
+            "number": 136
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "issues.issue", 
+        "fields": {
+            "status": 3, 
+            "publication_date": "2008-09-24", 
+            "number": 137
+        }
+    }
+]
