@@ -106,13 +106,14 @@ And add these applications to your ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
         'django.contrib.admin',
-        'django.contrib.admin',
         'tagging',
         'critica.apps.categories',
         'critica.apps.illustrations',
         'critica.apps.videos',
         'critica.apps.issues',
         'critica.apps.articles',
+        'critica.apps.articles_epicurien',
+        'critica.apps.articles_voyages',
         'critica.apps.positions',
         'critica.apps.notes',
         'critica.apps.notes_region',
@@ -131,6 +132,10 @@ We need to create the tables in the database. To do that, run the following comm
 into your project root directory::
 
     $ python manage.py syncdb
+    
+If you want a preview, load some sample data:
+
+    $ python manage.py loaddata sample_data
     
 Then, have fun::
 
