@@ -32,8 +32,9 @@ class NoteRegionFeaturedAdmin(admin.ModelAdmin):
     search_fields = ('issue', 'type')
     ordering = ['issue']
 
-#basic_site.register(NoteRegionFeatured, NoteRegionFeaturedAdmin)
-#advanced_site.register(NoteRegionFeatured, NoteRegionFeaturedAdmin)
+admin.site.register(NoteRegionFeatured, NoteRegionFeaturedAdmin)
+basic_site.register(NoteRegionFeatured, NoteRegionFeaturedAdmin)
+advanced_site.register(NoteRegionFeatured, NoteRegionFeaturedAdmin)
 
 
 class NoteRegionAdmin(BaseNoteAdmin):
