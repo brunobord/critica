@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1, 
+        "model": "articles_epicurien.articleepicurientype", 
+        "fields": {
+            "name": "C\u00f4t\u00e9 Gourmets", 
+            "slug": "cote-gourmets"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "articles_epicurien.articleepicurientype", 
+        "fields": {
+            "name": "C\u00f4t\u00e9 Bar", 
+            "slug": "cote-bar"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "articles_epicurien.articleepicurientype", 
+        "fields": {
+            "name": "C\u00f4t\u00e9 Fumeurs", 
+            "slug": "cote-fumeurs"
+        }
+    }
+]
