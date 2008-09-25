@@ -3,8 +3,6 @@
 Choices of ``critica.apps.positions`` application.
 
 """
-from django.utils.translation import ugettext_lazy as _
-
 
 # Category positions
 # ------------------------------------------------------------------------------

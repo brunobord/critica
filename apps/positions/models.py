@@ -58,6 +58,7 @@ class CategoryPosition(models.Model):
         """
         verbose_name = _('category position')
         verbose_name_plural = _('category positions')
+        unique_together = (('issue', 'position'),)
 
     def __unicode__(self):
         """ 

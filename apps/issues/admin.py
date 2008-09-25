@@ -14,7 +14,6 @@ class CategoryPositionInline(admin.TabularInline):
     Category position inline for ``Issue`` model.
     
     """
-    fk_name = 'issue'
     model = CategoryPosition
     max_num = 13
     
