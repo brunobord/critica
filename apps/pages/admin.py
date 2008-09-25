@@ -30,7 +30,7 @@ class PageAdmin(admin.ModelAdmin):
         ]
         
         if request.user.has_perm('users.can_publish_page'):
-            fieldsets.append((_('Validation'), {'fields': ['is_published']}))
+            fieldsets.append((_('Publication'), {'fields': ['is_published']}))
         
         return fieldsets
 

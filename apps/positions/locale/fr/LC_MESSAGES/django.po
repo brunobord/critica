@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Critica Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-25 09:13+0200\n"
+"PO-Revision-Date: 2008-09-25 09:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: models.py:48 
+#: models.py:112
+msgid "issue"
+msgstr "édition"
+
+#: models.py:49 
+#: models.py:113
+msgid "category"
+msgstr "rubrique"
+
+#: models.py:50 
+#: models.py:115
+msgid "position"
+msgstr "position"
+
+#: models.py:59
+msgid "category position"
+msgstr "position des catégorie"
+
+#: models.py:60
+msgid "category positions"
+msgstr "positions des catégories"
+
+#: models.py:114
+msgid "type"
+msgstr "type"
+
+#: models.py:124
+msgid "note type position"
+msgstr "position des types de brèves"
+
+#: models.py:125
+msgid "note type positions"
+msgstr "positions des types de brèves"
