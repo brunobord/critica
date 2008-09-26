@@ -55,7 +55,7 @@ msgstr "Classement"
 
 #: admin.py:115
 msgid "Illustration"
-msgstr "Illustration"
+msgstr "Visuel"
 
 #: admin.py:118
 msgid "Content"
@@ -184,19 +184,19 @@ msgstr "visuel"
 
 #: models.py:233
 msgid "Please, select an illustration which will be attached to this article."
-msgstr "Vous pouvez sélectionner une illustration à insérer dans cet article."
+msgstr "Vous pouvez sélectionner un visuel à insérer dans cet article."
 
 #: models.py:234
 msgid "use default illustration"
-msgstr "utiliser l'illustration par défaut"
+msgstr "utiliser le visuel par défaut"
 
 #: models.py:234
 msgid ""
 "Use the default category illustration to illustrate this article. If you "
 "already uploaded an illustration, it will not be used."
 msgstr ""
-"Utiliser l'illustration par défaut de la rubrique pour illustrer cet "
-"article. Si vous avez déjà téléchargé une illustration, elle sera ignorée."
+"Utiliser le visuel par défaut de la rubrique pour illustrer cet "
+"article. Si vous avez déjà téléchargé un visuel, il sera ignoré."
 
 #: models.py:235
 msgid "summary"
