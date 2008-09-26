@@ -180,7 +180,7 @@ msgstr "contenu"
 
 #: models.py:233
 msgid "illustration"
-msgstr "illustration"
+msgstr "visuel"
 
 #: models.py:233
 msgid "Please, select an illustration which will be attached to this article."

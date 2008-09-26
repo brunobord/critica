@@ -23,7 +23,7 @@ msgstr "URL"
 
 #: admin.py:39
 msgid "Default illustration"
-msgstr "Illustration par défaut"
+msgstr "Visuel par défaut"
 
 #: models.py:86
 msgid "name"
@@ -47,7 +47,7 @@ msgstr "Une courte description de la rubrique. Ne sera pas affiché sur le site.
 
 #: models.py:89
 msgid "Please, upload an image for this category (it will be used as default category illustration)."
-msgstr "Téléchargez une image pour cette rubrique (elle sera utilisée comme illustration par défaut)."
+msgstr "Téléchargez une image pour cette rubrique (elle sera utilisée comme visuel par défaut)."
 
 #: models.py:90
 msgid "credits"
