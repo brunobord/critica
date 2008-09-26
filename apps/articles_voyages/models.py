@@ -40,7 +40,7 @@ class ArticleVoyage(Article):
         See BaseArticle.
     
     """
-    localization = models.CharField(_('localization'), max_length=255, db_index=True)
+    localization = models.CharField(_('localization'), max_length=255, db_index=True, help_text=_('Please, enter the localization in this format: city, country (e.g. Paris, France).'))
     
     objects = models.Manager()
 
