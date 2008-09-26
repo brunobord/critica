@@ -128,33 +128,3 @@ class Video(models.Model):
         self.slug = slugify(self.name)
         super(Video, self).save()
 
-
-class VideoOfTheDay(Video):
-    """
-    Illustration of the day.
-    
-    Database table name: ``video_videooftheday``.
-    
-    An video of the day is composed of::
-    
-        Inherits from VideoOfTheDay.
-        So, all fields of this class.
-        
-    Indexes::
-    
-        Video indexes.
-            
-    Managers::
-    
-        Video Illustration.
-    
-    """
-    class Meta:
-        """ 
-        Model metadata. 
-        
-        """
-        verbose_name = _('video of the day')
-        verbose_name_plural = _('videos of the day')
-    
-

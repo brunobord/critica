@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-25 09:17+0200\n"
+"POT-Creation-Date: 2008-09-26 10:51+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -70,25 +70,26 @@ msgid "modification date"
 msgstr "date de modification"
 
 #: models.py:95
-msgid "status"
-msgstr "état"
+msgid "ready to publish"
+msgstr "Prête à être publiée"
 
 #: models.py:95
-msgid "Please, select a status."
-msgstr "Sélectionnez un état."
+msgid "Is ready to be published?"
+msgstr "Prête à être publiée"
 
-#: models.py:105
+#: models.py:96
+msgid "reserved"
+msgstr "Mise au marbre"
+
+#: models.py:96
+msgid "Is reserved?"
+msgstr "Mise au marbre"
+
+#: models.py:106
 msgid "video"
 msgstr "vidéo"
 
-#: models.py:106
+#: models.py:107
 msgid "videos"
 msgstr "vidéos"
 
-#: models.py:156
-msgid "video of the day"
-msgstr "vidéo du jour"
-
-#: models.py:157
-msgid "videos of the day"
-msgstr "vidéos du jour"
