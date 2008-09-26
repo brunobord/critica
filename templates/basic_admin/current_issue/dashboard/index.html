@@ -1,28 +1,213 @@
 {% extends 'admin/base_site.html' %}
 {% load i18n %}
 {% block title %}Dashboard | Administration de Critic@{% endblock %}
+{% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="/media/critica/admin/basic/css/custom.css" />{% endblock %}
 {% block breadcrumbs %}<div class="breadcrumbs"><a href="/admin/">{% trans 'Home' %}</a>{% if title %} &rsaquo; {{ title|escape }}{% endif %}</div>{% endblock %}
 {% block content %}
+<div id="dashboard">
 
     <h1>{% trans "Dashboard" %}</h1>
     
-    <h2>La Une</h2>
-    
-    {% if articles %}
-        ARTICLES
-    {% else %}
-        <p><strong>Pas encore d'articles principaux publiés dans cette édition.</strong></p>
-    {% endif %}
+    <div id="dashboard-welcome">
+        <p>
+            Bienvenue sur le Dashboard. Vous pouvez administrer l'édition du jour en 
+            cours d'élaboration.
+        </p>
+        <p><strong>L'édition du jour : 135 (22 septembre 2008)</strong></p>
+    </div>
 
-    <h2>Les rubriques</h2>
+    <div id="dashboard-status">
+        <h2>État de la Une</h2>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="#">Articles principaux</a></td>
+                    <td>8 / 11</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Région vedette</a></td>
+                    <td><strong>Haute-Normandie</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Détente</a></td>
+                    <td><strong>complète</strong></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Illustration du jour</a></td>
+                    <td><em>manquante</em></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Video</a></td>
+                    <td><strong>présente</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>État des rubriques</h2>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <th>Rubrique</th>
+                    <th>Articles &laquo; Prêts à être publiés &raquo;</th>
+                    <th>Complète</th>
+                    <th>Validée</th>
+                    <th>Positionnée</th>
+                    <th>Publicités</th>
+                    <th>Valider la rubrique</th>
+                <tr>
+                    <td><a href="#">National</a></td>
+                    <td><span class="dashboard-important">14 / 11</span></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><strong>Par défaut</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Étranger</a></td>
+                    <td><span class="dashboard-important">10 / 11</span></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><strong>Par défaut</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Société</a></td>
+                    <td>11 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><strong>Par défaut</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Sports</a></td>
+                    <td>5 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><strong>Par défaut</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Pipoles</a></td>
+                    <td>11 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><strong>Personnalisé</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Télé</a></td>
+                    <td>11 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><strong>Personnalisé</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                <tr>
+                <tr>
+                    <td><a href="#">Bouquins</a></td>
+                    <td>11 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><strong>Personnalisé</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Nanas</a></td>
+                    <td>8 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><strong>Personnalisé</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Insolite</a></td>
+                    <td>10 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><strong>Personnalisé</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Voyage</a></td>
+                    <td>11 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><strong>Personnalisé</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Épicurien</a></td>
+                    <td>11 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><strong>Par défaut</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Régions</a></td>
+                    <td>20 / 26</td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><strong>Par défaut</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td><a href="#">Coup de gueule</a></td>
+                    <td>11 / 11</td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><strong>Par défaut</strong></td>
+                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
+                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: right"><input type="submit" name="option1" value="Valider"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
     
-    {% if articles %}
-        {% regroup articles by category as category_list %}
-        {% for category in category_list %}
-            <h3>{{ category.grouper }}</h3>
-        {% endfor %}
-    {% else %}
-        <p><strong>Pas encore d'articles / brèves publiés dans une rubrique.</strong></p>
-    {% endif %}
-    
+    <div id="dashboard-users">
+        <h2>Derniers utilisateurs connectés</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="#">Jean Chalvidant</a></td>
+                    <td>connecté le 24 septembre 2008 à 10h00</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Karen Jouault</a></td>
+                    <td>connecté le 24 septembre 2008 à 14h32</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Emmanuelle Morin</a></td>
+                    <td>connecté le 23 septembre 2008 à 21h00</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Bruno Cavalié</a></td>
+                    <td>connecté le 23 septembre 2008 à 22h30</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Charlotte David </a></td>
+                    <td>connecté le 23 septembre 2008 à 22h30</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
 {% endblock %}
