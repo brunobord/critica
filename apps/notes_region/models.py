@@ -9,16 +9,17 @@ from critica.apps.notes.models import BaseNoteType, BaseNote
 from critica.apps.notes_region.managers import PublishedNoteRegionManager
 
 
+# Types
+# ------------------------------------------------------------------------------
 class NoteTypeRegion(BaseNoteType):
     """
     Region note type.
     
     Database table name: ``notes_region_notetyperegion``.
     
-    A region note type is composed of::
+    Fields::
     
-        Inherits from critica.apps.notes.models.BaseNoteType.
-        So, all fields of this abstract class.
+        See BaseNoteType.
             
     Indexes::
     
@@ -26,9 +27,12 @@ class NoteTypeRegion(BaseNoteType):
         
     Managers::
     
-        See BaseNoteType.
+        objects
+            Default manager.
+            Manager: models.Manager()
     
     """
+    objects = models.Manager()
     
     class Meta:
         """ 
@@ -46,7 +50,7 @@ class NoteRegionFeatured(models.Model):
     
     Database table name: ``notes_region_noteregionfeatured``.
     
-    A featured note region is composed of::
+    Fields::
     
         issue
             * ForeignKey: critica.apps.issues.models.Issue
@@ -66,7 +70,8 @@ class NoteRegionFeatured(models.Model):
     Managers::
     
         objects
-            Default manager: models.Manager()
+            Default manager.
+            Manager: models.Manager()
     
     """
     issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
@@ -90,16 +95,17 @@ class NoteRegionFeatured(models.Model):
         return u'%s -- %s' % (self.issue, self.type)
 
 
+# Notes
+# ------------------------------------------------------------------------------
 class NoteRegion(BaseNote):
     """
     Region note.
     
     Database table name: ``notes_region_noteregion``.
     
-    A note is composed of::
+    Fields::
     
-        Inherits from critica.apps.notes.models.BaseNote.
-        So, all fields of this abstract class and fields below.
+        See BaseNote. And below.
     
         type
             * ForeignKey: critica.apps.notes_region.models.NoteTypeRegion
@@ -108,21 +114,30 @@ class NoteRegion(BaseNote):
 
     Indexes::
     
-        BaseNote indexes and below.
+        See BaseNote and below.
         
         * type
             
     Managers::
     
         objects
-            Default manager: models.Manager()
+            Default manager.
+            Manager: models.Manager()
             
         published
-            Retrieves only published region notes.   
+            Retrieves only published region notes. 
+            Manager: critica.apps.notes_region.managers.PublishedNoteRegionManager()  
         
     Permissions::
     
-        See BaseNote.
+        can_feature_note
+            Can feature a note
+            
+        can_reserve_note
+            Can reserve a note
+            
+        can_publish_note
+            Can publish a note
     
     """
     type = models.ForeignKey('notes_region.NoteTypeRegion', verbose_name=_('type'), help_text=_('Please, select a note type.'))
@@ -131,9 +146,16 @@ class NoteRegion(BaseNote):
     published = PublishedNoteRegionManager()
     
     class Meta:
+        """ 
+        Model metadata. 
+        
+        """
         db_table = 'notes_region_noteregion'
         verbose_name = _('region note')
         verbose_name_plural = _('region notes')
-
-
+        permissions = (
+            ('can_feature_note', 'Can feature a note'),
+            ('can_reserve_note', 'Can reserve a note'),
+            ('can_publish_note', 'Can publish a note'),
+        )
 

@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-Models of ``critica.apps.articles_voyage`` application.
+Models of ``critica.apps.articles_voyages`` application.
 
 """
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.articles.models import Article
+from critica.apps.articles.models import BaseArticle
+from critica.apps.articles_voyages.managers import PublishedArticleVoyageManager
 
 
-class ArticleVoyage(Article):
+class ArticleVoyage(BaseArticle):
     """
-    Article 'Voyage'.
+    Article Voyage.
     
     Database table name: ``articles_voyages_articlevoyage``.
     
-    An article 'voyage' is composed of::
+    Fields::
     
-        Inherits from BaseArticle.
-        So, all fields of this abstract class and fields below.
+        See BaseArticle. And below.
         
         localization
             * CharField
@@ -27,24 +27,42 @@ class ArticleVoyage(Article):
             
     Indexes::
     
-        BaseArticle indexes and below.
+        See BaseArticle. And below.
         
         * localization
             
     Managers::
     
-        See BaseArticle.
+        objects
+            Default manager.
+            Manager: models.Manager()
         
-    Permissions::
+        published
+            Only returns ready to publish articles.
+            Manager: critica.apps.articles_voyages.managers.PublishedArticleVoyageManager()
     
-        See BaseArticle.
+    Permissions::
+
+        can_feature_article
+            Can feature an article
+
+        can_reserve_article
+            Can reserve an article
+            
+        can_publish_article
+            Can publish an illustration
     
     """
     localization = models.CharField(_('localization'), max_length=255, db_index=True, help_text=_('Please, enter the localization in this format: city, country (e.g. Paris, France).'))
     
     objects = models.Manager()
+    published = PublishedArticleVoyageManager()
 
     class Meta:
+        """ 
+        Model metadata. 
+        
+        """
         db_table = 'articles_voyages_articlevoyage'
         verbose_name = _('article voyage')
         verbose_name_plural = _('articles voyage')
@@ -55,8 +73,16 @@ class ArticleVoyage(Article):
         )
         
     def save(self):
+        """ 
+        Object pre-saving operations:
+        
+        * Auto-save category
+        * Save article
+        
+        """
         from critica.apps.categories.models import Category
         category = Category.objects.get(slug='voyages')
         self.category = category
         super(ArticleVoyage, self).save()
+
 

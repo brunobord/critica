@@ -1,18 +1,26 @@
+# -*- coding: utf-8 -*-
 """
-Managers for ``critica.apps.journal`` models.
+Managers of ``critica.apps.articles`` application.
 
 """
 from django.db import models
-from critica.apps.articles import choices
+from critica.apps.issues import choices as issues_choices
 
 
 class PublishedArticleManager(models.Manager):
+    """
+    Published articles.
+    
+    """
     def get_query_set(self):
-        return super(PublishedArticleManager, self).get_query_set().filter(issues__status=choices.ISSUE_STATUS_COMPLETE, status=choices.ARTICLE_STATUS_PUBLISHED)
-
-
-class PublishedIssueManager(models.Manager):
-    def get_query_set(self):
-        return super(PublishedIssueManager, self).get_query_set().filter(status=choices.ISSUE_STATUS_PUBLISHED)
-
+        """
+        By default, returns only ready to publish and not reserved articles
+        from complete issues.
+        
+        """
+        return super(PublishedArticleManager, self).get_query_set().filter(
+            issues__status=issues_choices.ISSUE_STATUS_COMPLETE, 
+            is_ready_to_publish=True,
+            is_reserved=False
+        )
 

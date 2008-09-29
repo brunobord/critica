@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """ 
-Administration interface options for ``critica.apps.categories`` models. 
+Administration interface options of ``critica.apps.categories`` application.
 
 """
 from django.contrib import admin
@@ -11,7 +11,7 @@ from critica.apps.categories.models import Category
 
 class CategoryAdmin(admin.ModelAdmin):
     """
-    Administration interface for ``Category`` model.
+    Administration interface options of ``Category`` model.
     
     """
     list_display = ('name', 'ald_slug', 'description', 'creation_date', 'modification_date', 'ald_image')

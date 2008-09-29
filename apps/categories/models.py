@@ -16,7 +16,7 @@ class Category(models.Model):
     
     Database table name: ``categories_category``.
     
-    A category is composed of::
+    Fields::
     
         name
             * CharField
@@ -74,7 +74,6 @@ class Category(models.Model):
     Indexes::
     
         * slug
-        * position_on_page
 
     Managers::
     

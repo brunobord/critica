@@ -18,7 +18,7 @@ class BaseArticle(models.Model):
     
     This is an abstract class.
     
-    An article is composed of::
+    Fields::
     
         author
             * ForeignKey: django.contrib.auth.models.User
@@ -86,18 +86,39 @@ class BaseArticle(models.Model):
             * Choices: critica.apps.article.choices.OPINION_CHOICES
             * The article opinion flag
             * Optional (can be blank)
+
+        illustration
+            * ForeignKey: critica.apps.illustrations.models.Illustration
+            * The article illustration
+            * Optional (can be blank)
             
+        use_default_illustration
+            * BooleanField
+            * Default: False
+            * Use the default category illustration?
+            * Required
+
         is_featured
             * BooleanField
             * Default: False
             * Is article featured?
             * Required
             
-        status
-            * IntegerField
-            * Choices: critica.apps.articles.choices.STATUS_CHOICES
-            * Default: critica.apps.articles.choices.STATUS_NEW
-            * The article status
+        is_ready_to_publish
+            * BooleanField
+            * Default: False
+            * Is article ready to publish?
+            * Required
+            
+        is_reserved
+            * BooleanField
+            * Default: False
+            * Is article reserved?
+            * Required
+            
+        summary
+            * TextField
+            * The article summary
             * Required
             
         content
@@ -115,16 +136,8 @@ class BaseArticle(models.Model):
         * publication_date
         * opinion
         * is_featured
-        * status
-        
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-            
-        published
-            Published articles: critica.apps.articles.managers.PublishedArticleManager()
-            Note: retrieves published articles of complete issues only.
+        * is_ready_to_publish
+        * is_reserved
 
     """
     author = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this article.'))
@@ -139,13 +152,13 @@ class BaseArticle(models.Model):
     modification_date = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
     publication_date = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
+    illustration = models.ForeignKey('illustrations.Illustration', verbose_name=_('illustration'), null=True, blank=True, help_text=_('Please, select an illustration which will be attached to this article.')) 
+    use_default_illustration = models.BooleanField(_('use default illustration'), default=False, db_index=True, help_text=_('Use the default category illustration to illustrate this article. If you already uploaded an illustration, it will not be used.'))
     is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))
     is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be publish?'))
     is_reserved = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
+    summary = models.TextField(_('summary'))
     content = models.TextField(_('content'))
-
-    objects = models.Manager()
-    published = PublishedArticleManager()
     
     class Meta:
         """ 
@@ -179,62 +192,44 @@ class Article(BaseArticle):
     
     Database table name: ``articles_article``.
     
-    An article is composed of::
+    Fields::
     
-        Inherits from BaseArticle.
-        So, all fields of this abstract class and fields below.
-        
-        illustration
-            * ForeignKey: critica.apps.illustrations.models.Illustration
-            * The article illustration
-            * Optional (can be blank)
-            
-        use_default_illustration
-            * BooleanField
-            * Default: False
-            * Use the default category illustration?
-            * Required
-            
-        is_illustrated
-            * BooleanField
-            * Default: False
-            * Is article illustrated?
-            * Required
-            
-        summary
-            * TextField
-            * The article summary
-            * Required
+        See BaseArticle.
             
     Indexes::
     
-        BaseArticle indexes and below.
-        
-        * use_default_illustration
-        * is_illustrated
+        See BaseArticle.
             
     Managers::
     
-        See BaseArticle.
+        objects
+            Default manager.
+            Manager: models.Manager()
+        
+        published
+            Only returns ready to publish articles.
+            Manager: critica.apps.articles.managers.PublishedArticleManager()
         
     Permissions::
     
-        can_validate_illustration
-            Can validate an illustration
-            
+        can_feature_article
+            Can feature an article
+
         can_reserve_article
             Can reserve an article
             
-        can_feature_article
-            Can feature an article
-    
-    
+        can_publish_article
+            Can publish an illustration
+            
     """
-    illustration = models.ForeignKey('illustrations.Illustration', verbose_name=_('illustration'), null=True, blank=True, help_text=_('Please, select an illustration which will be attached to this article.')) 
-    use_default_illustration = models.BooleanField(_('use default illustration'), default=False, db_index=True, help_text=_('Use the default category illustration to illustrate this article. If you already uploaded an illustration, it will not be used.'))
-    summary = models.TextField(_('summary'))
+    objects = models.Manager()
+    published = PublishedArticleManager()
 
     class Meta:
+        """ 
+        Model metadata. 
+        
+        """
         db_table = 'articles_article'
         verbose_name = _('article')
         verbose_name_plural = _('articles')
@@ -243,4 +238,5 @@ class Article(BaseArticle):
             ('can_reserve_article', 'Can reserve an article'),
             ('can_publish_article', 'Can publish an article'),
         )
+
 

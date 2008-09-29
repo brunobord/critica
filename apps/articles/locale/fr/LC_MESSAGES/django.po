@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-26 10:35+0200\n"
+"POT-Creation-Date: 2008-09-29 12:18+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,92 +17,80 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:38
+#: admin.py:41
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:41
+#: admin.py:42
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:44
+#: admin.py:43
 msgid "Illustration"
 msgstr "Visuel"
 
-#: admin.py:47
+#: admin.py:44
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:64
+#: admin.py:59
 msgid "Publication"
 msgstr "Publication"
 
-#: admin.py:86 
-#: models.py:130
+#: admin.py:81 
+#: models.py:143
 msgid "author"
 msgstr "auteur"
 
-#: admin.py:97 
-#: models.py:131
+#: admin.py:92 
+#: models.py:144
 msgid "author nickname"
 msgstr "pseudonyme"
 
-#: admin.py:106 
-#: models.py:136
+#: admin.py:101 
+#: models.py:149
 msgid "issues"
 msgstr "éditions"
 
-#: admin.py:116
+#: admin.py:111
 msgid "no opinion"
 msgstr "pas d'opinion"
 
-#: admin.py:117 
-#: models.py:141
+#: admin.py:112 
+#: models.py:154
 msgid "opinion"
 msgstr "opinion"
 
-#: admin.py:126
+#: admin.py:121
 msgid "no publication date"
 msgstr "pas de date de publication"
 
-#: admin.py:129 
-#: models.py:140
+#: admin.py:124 
+#: models.py:153
 msgid "publication date"
 msgstr "date de publication"
 
-#: choices.py:16
-msgid "Ready to be published"
-msgstr "Prêt à être publié"
-
 #: choices.py:17
-msgid "New"
-msgstr "Nouveau"
-
-#: choices.py:18
-msgid "Reserved"
-msgstr "Mis au marbre"
-
-#: choices.py:29
 msgid "I like"
 msgstr "J'aime"
 
-#: choices.py:30
+#: choices.py:18
 msgid "I dislike"
 msgstr "J'aime pas"
 
-#: choices.py:31
+#: choices.py:19
 msgid "I'm happy"
 msgstr "Je suis content"
 
-#: choices.py:32
+#: choices.py:20
 msgid "I'm not happy"
 msgstr "Je suis pas content"
 
-#: models.py:130
+#: models.py:143
 msgid "Please, select an author for this article."
 msgstr "Veuillez sélectionner un auteur pour cet article."
 
-#: models.py:131
+#: models.py:144
 msgid ""
 "If you want to sign this article under a nickname, please select one in the "
 "list. If you do not select a nickname, your signature will be your full name."
@@ -111,91 +99,63 @@ msgstr ""
 "dans la liste. Si vous ne sélectionnez pas de pseudonyme, votre signature "
 "sera votre nom complet."
 
-#: models.py:132
+#: models.py:145
 msgid "title"
 msgstr "titre"
 
-#: models.py:132
+#: models.py:145
 msgid "255 characters max."
 msgstr "255 caractères max."
 
-#: models.py:133
+#: models.py:146
 msgid "slug"
 msgstr "URL"
 
-#: models.py:134
+#: models.py:147
 msgid "category"
 msgstr "rubrique"
 
-#: models.py:134
+#: models.py:147
 msgid "Please, select a category for this article."
 msgstr "Veuillez sélectionner une rubrique pour cet article."
 
-#: models.py:135
+#: models.py:148
 msgid "Please, enter tags separated by commas or spaces."
 msgstr "Vous pouvez entrer des tags séparés par des virgules ou des espaces."
 
-#: models.py:136
+#: models.py:149
 msgid "Please, select one or several issues."
 msgstr "Sélectionnez une ou plusieurs éditions."
 
-#: models.py:137
+#: models.py:150
 msgid "view count"
 msgstr "nombre de vues"
 
-#: models.py:138
+#: models.py:151
 msgid "creation date"
 msgstr "date de création"
 
-#: models.py:139
+#: models.py:152
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:140
+#: models.py:153
 msgid "Don't forget to adjust the publication date."
 msgstr "N'oubliez pas d'ajuster la date de publication."
 
-#: models.py:142
-msgid "featured"
-msgstr "exclusif"
-
-#: models.py:142
-msgid "Is featured?"
-msgstr "Est-il exclusif ?"
-
-#: models.py:143
-msgid "ready to publish"
-msgstr "Prêt à être publié"
-
-#: models.py:143
-msgid "Is ready to be publish?"
-msgstr "Est-il prêt à être publié ?"
-
-#: models.py:144
-msgid "reserved"
-msgstr "Mis au marbre"
-
-#: models.py:144
-msgid "Is reserved?"
-msgstr "Mis au marbre"
-
-#: models.py:145
-msgid "content"
-msgstr "contenu"
-
-#: models.py:233
+#: models.py:155
 msgid "illustration"
 msgstr "visuel"
 
-#: models.py:233
+#: models.py:155
 msgid "Please, select an illustration which will be attached to this article."
 msgstr "Vous pouvez sélectionner un visuel à insérer dans cet article."
 
-#: models.py:234
+#: models.py:156
 msgid "use default illustration"
 msgstr "utiliser le visuel par défaut"
 
-#: models.py:234
+#: models.py:156
 msgid ""
 "Use the default category illustration to illustrate this article. If you "
 "already uploaded an illustration, it will not be used."
@@ -203,14 +163,43 @@ msgstr ""
 "Utiliser le visuel par défaut de la rubrique pour illustrer cet article. Si "
 "vous avez déjà téléchargé un visuel, il sera ignoré."
 
-#: models.py:235
+#: models.py:157
+msgid "featured"
+msgstr "exclusif"
+
+#: models.py:157
+msgid "Is featured?"
+msgstr "Est-il exclusif ?"
+
+#: models.py:158
+msgid "ready to publish"
+msgstr "Prêt à être publié"
+
+#: models.py:158
+msgid "Is ready to be publish?"
+msgstr "Est-il prêt à être publié ?"
+
+#: models.py:159
+msgid "reserved"
+msgstr "Mis au marbre"
+
+#: models.py:159
+msgid "Is reserved?"
+msgstr "Mis au marbre"
+
+#: models.py:160
 msgid "summary"
 msgstr "accroche"
 
-#: models.py:239
+#: models.py:161
+msgid "content"
+msgstr "contenu"
+
+#: models.py:234
 msgid "article"
 msgstr "article"
 
-#: models.py:240
+#: models.py:235
 msgid "articles"
 msgstr "articles"
+

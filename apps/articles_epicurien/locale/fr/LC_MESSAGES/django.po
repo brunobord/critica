@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-29 12:22+0200\n"
+"POT-Creation-Date: 2008-09-29 12:18+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,40 +17,50 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:28
+#: admin.py:36
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:29
+#: admin.py:37
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:30
+#: admin.py:38
 msgid "Illustration"
 msgstr "Visuel"
 
-#: admin.py:31
+#: admin.py:39
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:46
+#: admin.py:54
 msgid "Publication"
 msgstr "Publication"
 
-#: models.py:56
-msgid "localization"
-msgstr "lieu"
+#: models.py:45
+msgid "name"
+msgstr "nom"
+
+#: models.py:46
+msgid "URL"
+msgstr "URL"
+
+#: models.py:55
+msgid "article epicurien type"
+msgstr "type d'article épicurien"
 
 #: models.py:56
-msgid ""
-"Please, enter the localization in this format: city, country (e.g. Paris, "
-"France)."
-msgstr "Entrez un lieu sous ce format : ville, pays (exemple : Paris, France)."
+msgid "article epicurien types"
+msgstr "types d'article épicurien"
 
-#: models.py:67
-msgid "article voyage"
-msgstr "article voyage"
+#: models.py:121
+msgid "type"
+msgstr "type"
 
-#: models.py:68
-msgid "articles voyage"
-msgstr "articles voyage"
+#: models.py:132
+msgid "article epicurien"
+msgstr "article épicurien"
+
+#: models.py:133
+msgid "articles epicurien"
+msgstr "articles épicurien"

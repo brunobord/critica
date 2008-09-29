@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-25 09:20+0200\n"
+"POT-Creation-Date: 2008-09-29 12:23+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,55 +17,185 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:38
+#: admin.py:56
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:41
+#: admin.py:57
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:44
+#: admin.py:58
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:61
+#: admin.py:73
 msgid "Publication"
 msgstr "Publication"
 
-#: models.py:45
+#: admin.py:95 
+#: models.py:225
+msgid "author"
+msgstr "auteur"
+
+#: admin.py:106 
+#: models.py:226
+msgid "author nickname"
+msgstr "pseudonyme"
+
+#: admin.py:115 
+#: models.py:231
+msgid "issues"
+msgstr "éditions"
+
+#: admin.py:125
+msgid "no opinion"
+msgstr "pas d'opinion"
+
+#: admin.py:126 
+#: models.py:236
+msgid "opinion"
+msgstr "opinion"
+
+#: admin.py:135
+msgid "no publication date"
+msgstr "pas de date de publication"
+
+#: admin.py:138 
+#: models.py:235
+msgid "publication date"
+msgstr "date de publication"
+
+#: choices.py:17
+msgid "I like"
+msgstr "J'aime"
+
+#: choices.py:18
+msgid "I dislike"
+msgstr "Je n'aime pas"
+
+#: choices.py:19
+msgid "I'm happy"
+msgstr "Je suis content"
+
+#: choices.py:20
+msgid "I'm not happy"
+msgstr "Je ne suis pas content"
+
+#: models.py:43
 msgid "name"
 msgstr "nom"
 
-#: models.py:46
+#: models.py:44 
+#: models.py:228
 msgid "slug"
-msgstr "slug"
+msgstr "URL"
 
-#: models.py:110
+#: models.py:102
 msgid "note type"
 msgstr "type de brève"
 
-#: models.py:111
+#: models.py:103
 msgid "note types"
 msgstr "types de brève"
 
-#: models.py:153
+#: models.py:225
+msgid "Please, select an author for this note."
+msgstr "Sélectionnez un type de brève."
+
+#: models.py:226
+msgid ""
+"If you want to sign this note under a nickname, please select one in the "
+"list. If you do not select a nickname, your signature will be your full name."
+msgstr "Si vous voulez signer cet brève sous un pseudonyme, sélectionnez-en un "
+"dans la liste. Si vous ne sélectionnez pas de pseudonyme, votre signature "
+"sera votre nom complet."
+
+#: models.py:227
+msgid "title"
+msgstr "titre"
+
+#: models.py:227
+msgid "255 characters max."
+msgstr "255 caractères max."
+
+#: models.py:229
+msgid "category"
+msgstr "catégorie"
+
+#: models.py:229
+#, fuzzy
+msgid "Please, select a category for this note."
+msgstr "Sélectionnez un type de brève."
+
+#: models.py:230
+msgid "Please, enter tags separated by commas or spaces."
+msgstr "Vous pouvez entrer des tags séparés par des virgules ou des espaces."
+
+#: models.py:231
+msgid "Please, select one or several issues."
+msgstr "Sélectionnez un type de brève."
+
+#: models.py:232
+msgid "view count"
+msgstr "nombre de vues"
+
+#: models.py:233
+msgid "creation date"
+msgstr "date de creation"
+
+#: models.py:234
+msgid "modification date"
+msgstr "date de modification"
+
+#: models.py:235
+msgid "Don't forget to adjust the publication date."
+msgstr "N'oubliez pas d'ajuster la date de publication."
+
+#: models.py:237
+msgid "featured"
+msgstr "exclusif"
+
+#: models.py:237
+msgid "Is featured?"
+msgstr "Est-elle exclusive ?"
+
+#: models.py:238
+msgid "ready to publish"
+msgstr "Prête à être publiée"
+
+#: models.py:238
+msgid "Is ready to be publish?"
+msgstr "Est-elle prête à être publiée ?"
+
+#: models.py:239
+msgid "reserved"
+msgstr "mise au marbre"
+
+#: models.py:239
+msgid "Is reserved?"
+msgstr "Doit-elle être mise au marbre ?"
+
+#: models.py:240
 msgid "summary"
 msgstr "accroche"
 
-#: models.py:195
+#: models.py:241
+msgid "content"
+msgstr "contenu"
+
+#: models.py:312
 msgid "type"
 msgstr "type"
 
-#: models.py:195
+#: models.py:312
 msgid "Please, select a note type."
 msgstr "Sélectionnez un type de brève."
 
-#: models.py:199
+#: models.py:319
 msgid "note"
 msgstr "brève"
 
-#: models.py:200
+#: models.py:320
 msgid "notes"
 msgstr "brèves"
-

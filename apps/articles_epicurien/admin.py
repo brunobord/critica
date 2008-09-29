@@ -11,6 +11,10 @@ from critica.apps.articles_epicurien.models import ArticleEpicurien, ArticleEpic
 
 
 class ArticleEpicurienTypeAdmin(admin.ModelAdmin):
+    """
+    Administration interface options of ``ArticleEpicurienType`` model.
+    
+    """
     list_display = ('name', 'slug')
     
 admin.site.register(ArticleEpicurienType, ArticleEpicurienTypeAdmin)
@@ -20,43 +24,34 @@ advanced_site.register(ArticleEpicurienType, ArticleEpicurienTypeAdmin)
 
 class ArticleEpicurienAdmin(BaseArticleAdmin):
     """
-    Administration interface for ``Article`` model.
+    Administration interface options of ``Article`` model.
     
     """
-    list_display = ('title', 'category', 'type', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'is_featured', 'ald_author', 'ald_author_nickname', 'view_count', 'is_ready_to_publish')
-    list_filter = ('author', 'type', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured')
-    search_fields = ('title', 'summary', 'content')
-    
     def get_fieldsets(self, request, obj=None):
-        """ Hook for specifying fieldsets for the add form. """
+        """ 
+        Hook for specifying fieldsets for the add form. 
+        
+        """
         fieldsets = [
-            (_('Headline'), 
-                {'fields': ('author_nickname', 'title', 'opinion')}
-            ),
-            (_('Filling'),
-                {'fields': ('issues', 'type', 'tags')},
-            ),
-            (_('Illustration'),
-                {'fields': ('illustration', 'use_default_illustration')}
-            ),
-            (_('Content'),
-                {'fields': ('summary', 'content')}
-            ),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion')}),
+            (_('Filling'), {'fields': ('issues', 'type', 'tags')}),
+            (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
+            (_('Content'), {'fields': ('summary', 'content')}),
         ]
             
-        validation_fields = []
+        publication_fields = []
         
-        if request.user.has_perm('articles.can_feature_article'):
-            validation_fields.append('is_featured')
-        if request.user.has_perm('articles.can_reserve_article'):
-            validation_fields.append('is_reserved')
-        if request.user.has_perm('articles.can_publish_article'):
-            validation_fields.append('is_ready_to_publish')
+        if request.user.has_perm('articles_epicurien.can_feature_article'):
+            publication_fields.append('is_featured')
+        if request.user.has_perm('articles_epicurien.can_reserve_article'):
+            publication_fields.append('is_reserved')
+        if request.user.has_perm('articles_epicurien.can_publish_article'):
+            publication_fields.append('is_ready_to_publish')
             
-        if request.user.has_perm('articles.can_reserve_article') \
-            or request.user.has_perm('articles.can_feature_article') \
-            or request.user.has_perm('articles.can_publish_article'):
-            fieldsets += [(_('Publication'), {'fields': validation_fields})]
+        if request.user.has_perm('articles_epicurien.can_reserve_article') \
+            or request.user.has_perm('articles_epicurien.can_feature_article') \
+            or request.user.has_perm('articles_epicurien.can_publish_article'):
+            fieldsets += [(_('Publication'), {'fields': publication_fields})]
 
         return fieldsets
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """ 
-Administration interface options for ``critica.apps.articles`` models. 
+Administration interface options of ``critica.apps.articles`` application.
 
 """
 from django.conf import settings
@@ -12,12 +12,12 @@ from critica.apps.articles.models import Article
 
 class BaseArticleAdmin(admin.ModelAdmin):
     """
-    Administration interface for ``BaseArticle`` abstract model.
+    Administration interface options of ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'is_featured', 'ald_author', 'ald_author_nickname', 'view_count', 'is_ready_to_publish')
+    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
     list_filter = ('author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
-    search_fields = ('title', 'content')
+    search_fields = ('title', 'summary', 'content')
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
     exclude = ['author']
@@ -33,36 +33,31 @@ class BaseArticleAdmin(admin.ModelAdmin):
         )
 
     def get_fieldsets(self, request, obj=None):
-        """ Hook for specifying fieldsets for the add form. """
+        """ 
+        Hook for specifying fieldsets for the add form. 
+        
+        """
         fieldsets = [
-            (_('Headline'), 
-                {'fields': ('author_nickname', 'title', 'opinion')}
-            ),
-            (_('Filling'),
-                {'fields': ('issues', 'category', 'tags')},
-            ),
-            (_('Illustration'),
-                {'fields': ('illustration', 'use_default_illustration')}
-            ),
-            (_('Content'),
-                {'fields': ('summary', 'content')}
-            ),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion')}),
+            (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
+            (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
+            (_('Content'), {'fields': ('summary', 'content')}),
         ]
-            
-        validation_fields = []
+        
+        publication_fields = []
         
         if request.user.has_perm('articles.can_feature_article'):
-            validation_fields.append('is_featured')
+            publication_fields.append('is_featured')
         if request.user.has_perm('articles.can_reserve_article'):
-            validation_fields.append('is_reserved')
+            publication_fields.append('is_reserved')
         if request.user.has_perm('articles.can_publish_article'):
-            validation_fields.append('is_ready_to_publish')
+            publication_fields.append('is_ready_to_publish')
             
         if request.user.has_perm('articles.can_reserve_article') \
             or request.user.has_perm('articles.can_feature_article') \
             or request.user.has_perm('articles.can_publish_article'):
-            fieldsets += [(_('Publication'), {'fields': validation_fields})]
-
+            fieldsets += [(_('Publication'), {'fields': publication_fields})]
+        
         return fieldsets
 
     def save_model(self, request, obj, form, change):
@@ -132,10 +127,10 @@ class BaseArticleAdmin(admin.ModelAdmin):
 
 class ArticleAdmin(BaseArticleAdmin):
     """
-    Administration interface for ``Article`` model.
+    Administration interface options of ``Article`` model.
     
     """
-    search_fields = ('title', 'summary', 'content')
+    pass
 
 admin.site.register(Article, ArticleAdmin)
 basic_site.register(Article, ArticleAdmin)
