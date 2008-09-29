@@ -52,7 +52,7 @@ class NoteRegionAdmin(BaseNoteAdmin):
         fieldsets = [
             (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion')}),
             (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
-            (_('Content'), {'fields': ('summary', 'content')}),
+            (_('Content'), {'fields': ('content',)}),
         ]
         
         publication_fields = []

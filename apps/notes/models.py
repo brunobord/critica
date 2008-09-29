@@ -198,11 +198,6 @@ class BaseNote(models.Model):
             * Is note reserved?
             * Required
             
-        summary
-            * TextField
-            * The note summary
-            * Required
-            
         content
             * TextField
             * The note content
@@ -237,7 +232,6 @@ class BaseNote(models.Model):
     is_featured = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))
     is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be publish?'))
     is_reserved = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
-    summary = models.TextField(_('summary'))
     content = models.TextField(_('content'))
     
     class Meta:
