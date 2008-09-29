@@ -39,7 +39,7 @@
     </div>
     {% endif %}
     
-    {% if perms.articles.add_article or perms.articles.change_article or perms.articles_epicurien.add_articleepicurien or perms.articles_epicurien.change_articleepicurien or perms.articles_voyages.add_articlevoyage or perms.articles_voyages.change_articlevoyage or perms.notes.add_note or perms.notes.change_note or perms.notes_region.add_noteregion or perms.notes_region.change_noteregion %}
+    {% if perms.articles.add_article or perms.articles.change_article or perms.epicurien.add_epicurienarticle or perms.epicurien.change_epicurienarticle or perms.voyages.add_voyagesarticle or perms.voyages.change_voyagesarticle or perms.notes.add_note or perms.notes.change_note or perms.regions.add_regionnote or perms.regions.change_regionnote %}
     <div class="module">
         <table summary="Articles et brèves">
         <caption>Articles et brèves</caption>
@@ -62,38 +62,38 @@
             </tr>
             {% endif %}
             
-            {% if perms.articles_epicurien.add_articleepicurien or perms.articles_epicurien.change_articleepicurien %}
+            {% if perms.epicurien.add_epicurienarticle or perms.epicurien.change_epicurienarticle %}
             <tr>
                 <th scope="row">
-                    {% if perms.articles_epicurien.change_articleepicurien %}
-                    <a href="articles_epicurien/articleepicurien/">Articles &laquo; Épicurien &raquo;</a>
+                    {% if perms.epicurien.change_epicurienarticle %}
+                    <a href="epicurien/epicurienarticle/">Articles &laquo; Épicurien &raquo;</a>
                     {% else %}
                     Articles &laquo; Épicurien &raquo;
                     {% endif %}
                 </th>
-                {% if perms.articles_epicurien.add_articleepicurien %}
-                <td><a href="articles_epicurien/articleepicurien/add/" class="addlink">Ajouter</a></td>
+                {% if perms.epicurien.add_epicurienarticle %}
+                <td><a href="epicurien/epicurienarticle/add/" class="addlink">Ajouter</a></td>
                 {% endif %}
-                {% if perms.articles_epicurien.change_articleepicurien %}
-                <td><a href="articles_epicurien/articleepicurien/" class="changelink">Modifier</a></td>
+                {% if perms.epicurien.change_epicurienarticle %}
+                <td><a href="epicurien/epicurienarticle/" class="changelink">Modifier</a></td>
                 {% endif %}
             </tr>
             {% endif %}
             
-            {% if perms.articles_voyages.add_articlevoyage or perms.articles_voyages.change_articlevoyage %}
+            {% if perms.voyages.add_voyagesarticle or perms.voyages.change_voyagesarticle %}
             <tr>
                 <th scope="row">
-                    {% if perms.articles_voyages.change_articlevoyage %}
-                    <a href="articles_voyages/articlevoyage/">Articles &laquo; Voyages &raquo;</a>
+                    {% if perms.voyages.change_voyagesarticle %}
+                    <a href="voyages/voyagesarticle/">Articles &laquo; Voyages &raquo;</a>
                     {% else %}
                     Articles &laquo; Voyages &raquo;
                     {% endif %}
                 </th>
-                {% if perms.articles_voyages.add_articlevoyage %}
-                <td><a href="articles_voyages/articlevoyage/add/" class="addlink">Ajouter</a></td>
+                {% if perms.voyages.add_voyagesarticle %}
+                <td><a href="voyages/voyagesarticle/add/" class="addlink">Ajouter</a></td>
                 {% endif %}
-                {% if perms.articles_voyages.change_articlevoyage %}
-                <td><a href="articles_voyages/articlevoyage/" class="changelink">Modifier</a></td>
+                {% if perms.voyages.change_voyagesarticle %}
+                <td><a href="voyages/voyagesarticle/" class="changelink">Modifier</a></td>
                 {% endif %}
             </tr>
             {% endif %}
@@ -116,20 +116,20 @@
             </tr>
             {% endif %}
             
-            {% if perms.notes_region.add_noteregion or perms.notes_region.change_noteregion %}
+            {% if perms.regions.add_regionnote or perms.regions.change_regionnote %}
             <tr>
                 <th scope="row">
-                    {% if perms.notes_region.change_noteregion %}
-                    <a href="notes_region/noteregion/">Brèves régionales</a>
+                    {% if perms.regions.change_regionnote %}
+                    <a href="regions/regionnote/">Brèves régionales</a>
                     {% else %}
                     Brèves régionales
                     {% endif %}
                 </th>
-                {% if perms.notes_region.add_noteregion %}
-                <td><a href="notes_region/noteregion/add/" class="addlink">Ajouter</a></td>
+                {% if perms.regions.add_regionnote %}
+                <td><a href="regions/regionnote/add/" class="addlink">Ajouter</a></td>
                 {% endif %}
-                {% if perms.notes_region.change_noteregion %}
-                <td><a href="notes_region/noteregion/" class="changelink">Modifier</a></td>
+                {% if perms.regions.change_regionnote %}
+                <td><a href="regions/regionnote/" class="changelink">Modifier</a></td>
                 {% endif %}
             </tr>
             {% endif %}
@@ -199,7 +199,7 @@
     </div>
     {% endif %}
 
-    {% if perms.categories.add_category or perms.categories.change_category or perms.notes.add_notetype or perms.notes.change_notetype or perms.notes_region.add_notetyperegion or perms.notes_region.change_notetyperegion or perms.notes_region.add_noteregionfeatured or perms.notes_region.change_noteregionfeatured %}
+    {% if perms.categories.add_category or perms.categories.change_category or perms.notes.add_notetype or perms.notes.change_notetype or perms.regions.add_region or perms.regions.change_region or perms.regions.add_featuredregions or perms.regions.change_featuredregion %}
     <div class="module">
         <table summary="Rubriques et types de brèves">
         <caption>Rubriques et types de brèves</caption>
@@ -240,38 +240,38 @@
             </tr>
             {% endif %}
             
-            {% if perms.notes_region.add_notetyperegion or perms.notes_region.change_notetyperegion %}
+            {% if perms.regions.add_region or perms.regions.change_region %}
             <tr>
                 <th scope="row">
-                    {% if perms.notes_region.change_notetyperegion %}
-                    <a href="notes_region/notetyperegion/">Types de brèves régionales</a>
+                    {% if perms.regions.change_region %}
+                    <a href="regions/region/">Types de brèves régionales</a>
                     {% else %}
                     Types de brèves régionales 
                     {% endif %}
                 </th>
-                {% if perms.notes_region.add_notetyperegion %}
-                <td><a href="notes_region/notetyperegion/add/" class="addlink">Ajouter</a></td>
+                {% if perms.regions.add_region %}
+                <td><a href="regions/region/add/" class="addlink">Ajouter</a></td>
                 {% endif %}
-                {% if perms.notes_region.change_notetyperegion %}            
-                <td><a href="notes_region/notetyperegion/" class="changelink">Modifier</a></td>
+                {% if perms.regions.change_region %}            
+                <td><a href="regions/region/" class="changelink">Modifier</a></td>
                 {% endif %}
             </tr>
             {% endif %}
             
-            {% if perms.notes_region.add_noteregionfeatured or perms.notes_region.change_noteregionfeatured %}
+            {% if perms.regions.add_featuredregion or perms.regions.change_featuredregion %}
             <tr>
                 <th scope="row">
-                    {% if perms.notes_region.change_noteregionfeatured %}
-                    <a href="notes_region/noteregionfeatured/">Brèves régionales vedette</a>
+                    {% if perms.regions.change_featuredregion %}
+                    <a href="regions/featuredregion/">Brèves régionales vedette</a>
                     {% else %}
                     Brèves régionales vedette
                     {% endif %}
                 </th>
-                {% if perms.notes_region.add_noteregionfeatured %}
-                <td><a href="notes_region/noteregionfeatured/add/" class="addlink">Ajouter</a></td>
+                {% if perms.regions.add_featuredregion %}
+                <td><a href="regions/featuredregion/add/" class="addlink">Ajouter</a></td>
                 {% endif %}
-                {% if perms.notes_region.change_noteregionfeatured %}
-                <td><a href="notes_region/noteregionfeatured/" class="changelink">Modifier</a></td>
+                {% if perms.regions.change_featuredregion %}
+                <td><a href="regions/featuredregion/" class="changelink">Modifier</a></td>
                 {% endif %}
             </tr>
             {% endif %}

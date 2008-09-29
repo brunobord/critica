@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Critica Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-29 12:18+0200\n"
+"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: admin.py:36
+msgid "Headline"
+msgstr "En-tête"
+
+#: admin.py:37
+msgid "Filling"
+msgstr "Classement"
+
+#: admin.py:38
+msgid "Illustration"
+msgstr "Visuel"
+
+#: admin.py:39
+msgid "Content"
+msgstr "Contenu"
+
+#: admin.py:54
+msgid "Publication"
+msgstr "Publication"
+
+#: models.py:45
+msgid "name"
+msgstr "nom"
+
+#: models.py:46
+msgid "URL"
+msgstr "URL"
+
+#: models.py:55
+msgid "article epicurien type"
+msgstr "type d'article épicurien"
+
+#: models.py:56
+msgid "article epicurien types"
+msgstr "types d'article épicurien"
+
+#: models.py:121
+msgid "type"
+msgstr "type"
+
+#: models.py:132
+msgid "article epicurien"
+msgstr "article épicurien"
+
+#: models.py:133
+msgid "articles epicurien"
+msgstr "articles épicurien"
