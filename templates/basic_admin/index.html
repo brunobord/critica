@@ -7,154 +7,426 @@
 {% endblock %}
 {% block content %}
 <div id="content-main">
-
+    
+    {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition or perms.positions.add_notetypeposition or perms.positions.change_notetypeposition %}
     <div class="toplink">
         <strong><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a><br/>
         <strong><a href="#">Organiser la Une</a><br />
         <strong><a href="#">Organiser les rubriques</a><br />
     </div>
+    {% endif %}
     
+    {% if perms.issues.add_issue or perms.issues.change_issue %}
     <div class="module">
         <table summary="Éditions">
-        <caption><a href="issues/" class="section">Éditions</a></caption>
+        <caption>Éditions</caption>
             <tr>
-                <th scope="row"><a href="issues/issue/">Éditions</a></th>
+                <th scope="row">
+                    {% if perms.issues.change_issue %}
+                    <a href="issues/issue/">Éditions</a>
+                    {% else %}
+                    Éditions
+                    {% endif %}
+                </th>
+                {% if perms.issues.add_issue %}
                 <td><a href="issues/issue/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.issues.change_issue %}
                 <td><a href="issues/issue/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
         </table>
     </div>
+    {% endif %}
     
+    {% if perms.articles.add_article or perms.articles.change_article or perms.articles_epicurien.add_articleepicurien or perms.articles_epicurien.change_articleepicurien or perms.articles_voyages.add_articlevoyage or perms.articles_voyages.change_articlevoyage or perms.notes.add_note or perms.notes.change_note or perms.notes_region.add_noteregion or perms.notes_region.change_noteregion %}
     <div class="module">
         <table summary="Articles et brèves">
         <caption>Articles et brèves</caption>
+        
+            {% if perms.articles.add_article or perms.articles.change_article %}
             <tr>
-                <th scope="row"><a href="articles/article/">Articles</a></th>
+                <th scope="row">
+                    {% if perms.articles.change_article %}
+                    <a href="articles/article/">Articles</a>
+                    {% else %}
+                    Articles
+                    {% endif %}
+                </th>
+                {% if perms.articles.add_article %}
                 <td><a href="articles/article/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.articles.change_article %}
                 <td><a href="articles/article/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.articles_epicurien.add_articleepicurien or perms.articles_epicurien.change_articleepicurien %}
             <tr>
-                <th scope="row"><a href="articles_epicurien/articleepicurien/">Articles &laquo; Épicurien &raquo;</a></th>
+                <th scope="row">
+                    {% if perms.articles_epicurien.change_articleepicurien %}
+                    <a href="articles_epicurien/articleepicurien/">Articles &laquo; Épicurien &raquo;</a>
+                    {% else %}
+                    Articles &laquo; Épicurien &raquo;
+                    {% endif %}
+                </th>
+                {% if perms.articles_epicurien.add_articleepicurien %}
                 <td><a href="articles_epicurien/articleepicurien/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.articles_epicurien.change_articleepicurien %}
                 <td><a href="articles_epicurien/articleepicurien/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.articles_voyages.add_articlevoyage or perms.articles_voyages.change_articlevoyage %}
             <tr>
-                <th scope="row"><a href="articles_voyages/articlevoyage/">Articles &laquo; Voyages &raquo;</a></th>
+                <th scope="row">
+                    {% if perms.articles_voyages.change_articlevoyage %}
+                    <a href="articles_voyages/articlevoyage/">Articles &laquo; Voyages &raquo;</a>
+                    {% else %}
+                    Articles &laquo; Voyages &raquo;
+                    {% endif %}
+                </th>
+                {% if perms.articles_voyages.add_articlevoyage %}
                 <td><a href="articles_voyages/articlevoyage/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.articles_voyages.change_articlevoyage %}
                 <td><a href="articles_voyages/articlevoyage/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.notes.add_note or perms.notes.change_note %}
             <tr>
-                <th scope="row"><a href="notes/note/">Brèves</a></th>
+                <th scope="row">
+                    {% if perms.notes.change_note %}
+                    <a href="notes/note/">Brèves</a>
+                    {% else %}
+                    Brèves
+                    {% endif %}
+                </th>
+                {% if perms.notes.add_note %}
                 <td><a href="notes/note/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.notes.change_note %}
                 <td><a href="notes/note/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.notes_region.add_noteregion or perms.notes_region.change_noteregion %}
             <tr>
-                <th scope="row"><a href="notes_region/noteregion/">Brèves régionales</a></th>
+                <th scope="row">
+                    {% if perms.notes_region.change_noteregion %}
+                    <a href="notes_region/noteregion/">Brèves régionales</a>
+                    {% else %}
+                    Brèves régionales
+                    {% endif %}
+                </th>
+                {% if perms.notes_region.add_noteregion %}
                 <td><a href="notes_region/noteregion/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.notes_region.change_noteregion %}
                 <td><a href="notes_region/noteregion/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
         </table>
     </div>
+    {% endif %}
     
+    {% if perms.illustrations.add_illustration or perms.illustrations.change_illustration or perms.illustrations.add_illustrationoftheday or perms.illustrations.change_illustrationfotheday or perms.videos.add_video or perms.videos.change_video %}
     <div class="module">
         <table summary="Médias">
         <caption>Médias</caption>
+        
+            {% if perms.illustrations.add_illustration or perms.illustrations.change_illustration %}
             <tr>
-                <th scope="row"><a href="illustrations/illustration/">Visuels</a></th>
+                <th scope="row">
+                    {% if perms.illustrations.change_illustration %}
+                    <a href="illustrations/illustration/">Visuels</a>
+                    {% else %}
+                    Visuels
+                    {% endif %}
+                </th>
+                {% if perms.illustrations.add_illustration %}
                 <td><a href="illustrations/illustration/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.illustrations.change_illustration %}
                 <td><a href="illustrations/illustration/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.illustrations.add_illustrationoftheday or perms.illustrations.change_illustrationoftheday %}
             <tr>
-                <th scope="row"><a href="illustrations/illustrationoftheday/">Illustrations du jour</a></th>
+                <th scope="row">
+                    {% if perms.illustrations.change_illustrationoftheday %}
+                    <a href="illustrations/illustrationoftheday/">Illustrations du jour</a>
+                    {% else %}
+                    Illustration du jour
+                    {% endif %}
+                </th>
+                {% if perms.illustrations.add_illustrationoftheday %}
                 <td><a href="illustrations/illustrationoftheday/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.illustrations.change_illustrationoftheday %}
                 <td><a href="illustrations/illustrationoftheday/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.videos.add_video or perms.videos.change_video %}
             <tr>
-                <th scope="row"><a href="videos/video/">Vidéos</a></th>
+                <th scope="row">
+                    {% if perms.videos.change_video %}
+                    <a href="videos/video/">Vidéos</a>
+                    {% else %}
+                    Vidéos
+                    {% endif %}
+                </th>
+                {% if perms.videos.add_video %}
                 <td><a href="videos/video/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.videos.change_video %}
                 <td><a href="videos/video/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
         </table>
     </div>
+    {% endif %}
 
+    {% if perms.categories.add_category or perms.categories.change_category or perms.notes.add_notetype or perms.notes.change_notetype or perms.notes_region.add_notetyperegion or perms.notes_region.change_notetyperegion or perms.notes_region.add_noteregionfeatured or perms.notes_region.change_noteregionfeatured %}
     <div class="module">
         <table summary="Rubriques et types de brèves">
         <caption>Rubriques et types de brèves</caption>
+        
+            {% if perms.categories.add_category or perms.categories.change_category %}
             <tr>
-                <th scope="row"><a href="categories/category/">Rubriques</a></th>
+                <th scope="row">
+                    {% if perms.categories.change_category %}
+                    <a href="categories/category/">Rubriques</a>
+                    {% else %}
+                    Rubriques
+                    {% endif %}
+                </th>
+                {% if perms.categories.add_category %}
                 <td><a href="categories/category/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.categories.change_category %}
                 <td><a href="categories/category/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.notes.add_notetype or perms.notes.change_notetype %}
             <tr>
-                <th scope="row"><a href="notes/notetype/">Types de brèves</a></th>
+                <th scope="row">
+                    {% if perms.notes.change_notetype %}
+                    <a href="notes/notetype/">Types de brèves</a>
+                    {% else %}
+                    Types de brèves 
+                    {% endif %}
+                </th>
+                {% if perms.notes.add_notetype %}
                 <td><a href="notes/notetype/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.notes.change_notetype %}
                 <td><a href="notes/notetype/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.notes_region.add_notetyperegion or perms.notes_region.change_notetyperegion %}
             <tr>
-                <th scope="row"><a href="notes_region/notetyperegion/">Types de brèves régionales</a></th>
-                <td><a href="notes_region/notetyperegion/add/" class="addlink">Ajouter</a></td>            
+                <th scope="row">
+                    {% if perms.notes_region.change_notetyperegion %}
+                    <a href="notes_region/notetyperegion/">Types de brèves régionales</a>
+                    {% else %}
+                    Types de brèves régionales 
+                    {% endif %}
+                </th>
+                {% if perms.notes_region.add_notetyperegion %}
+                <td><a href="notes_region/notetyperegion/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.notes_region.change_notetyperegion %}            
                 <td><a href="notes_region/notetyperegion/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.notes_region.add_noteregionfeatured or perms.notes_region.change_noteregionfeatured %}
             <tr>
-                <th scope="row"><a href="notes_region/noteregionfeatured/">Brèves régionales vedette</a></th>
+                <th scope="row">
+                    {% if perms.notes_region.change_noteregionfeatured %}
+                    <a href="notes_region/noteregionfeatured/">Brèves régionales vedette</a>
+                    {% else %}
+                    Brèves régionales vedette
+                    {% endif %}
+                </th>
+                {% if perms.notes_region.add_noteregionfeatured %}
                 <td><a href="notes_region/noteregionfeatured/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.notes_region.change_noteregionfeatured %}
                 <td><a href="notes_region/noteregionfeatured/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
         </table>
     </div>
+    {% endif %}
 
+    {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition or perms.positions.add_notetypeposition or perms.positions.change_notetypeposition %}
     <div class="module">
         <table summary="Positions des rubriques et types de brèves">
         <caption><a href="positions/" class="section">Positions des rubriques et types de brèves</a></caption>
+            {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition %}
             <tr>
-                <th scope="row"><a href="positions/categoryposition/">Positions des catégories</a></th>
+                <th scope="row">
+                    {% if perms.positions.change_categoryposition %}
+                    <a href="positions/categoryposition/">Positions des catégories</a>
+                    {% else %}
+                    Positions des catégories
+                    {% endif %}
+                </th>
+                {% if perms.positions.add_categoryposition %}
                 <td><a href="positions/categoryposition/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.positions.change_categoryposition %}
                 <td><a href="positions/categoryposition/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.positions.add_notetypeposition or perms.positions.change_notetypeposition %}
             <tr>
-                <th scope="row"><a href="positions/notetypeposition/">Positions des types de brèves</a></th>
+                <th scope="row">
+                    {% if perms.positions.change_notetypeposition %}
+                    <a href="positions/notetypeposition/">Positions des types de brèves</a>
+                    {% else %}
+                    Positions des types de brèves
+                    {% endif %}
+                </th>
+                {% if perms.positions.add_notetypeposition %}
                 <td><a href="positions/notetypeposition/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.positions.change_notetypeposition %}
                 <td><a href="positions/notetypeposition/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
         </table>
     </div>
+    {% endif %}
 
+    {% if perms.auth.add_group or perms.auth.change_group or perms.auth.add_user or perms.auth.change_user or perms.users.add_userprofile or perms.users.change_userprofile or perms.users.add_usernickname or perms.users.change_usernickname %}
     <div class="module">
         <table summary="Utilisateurs">
         <caption>Utilisateurs</caption>
+            
+            {% if perms.auth.add_group or perms.auth.change_group %}
             <tr>
-                <th scope="row"><a href="auth/group/">Groupes</a></th>
+                <th scope="row">
+                    {% if perms.auth.change_group %}
+                    <a href="auth/group/">Groupes</a>
+                    {% else %}
+                    Groupes
+                    {% endif %}
+                </th>
+                {% if perms.auth.add_group %}
                 <td><a href="auth/group/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.auth.change_group %}
                 <td><a href="auth/group/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.auth.add_user or perms.auth.change_user %}
             <tr>
-                <th scope="row"><a href="auth/user/">Utilisateurs</a></th>
+                <th scope="row">
+                    {% if perms.auth.change_user %}
+                    <a href="auth/user/">Utilisateurs</a>
+                    {% else %}
+                    Utilisateurs
+                    {% endif %}
+                </th>
+                {% if perms.auth.add_user %}
                 <td><a href="auth/user/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.auth.change_user %}
                 <td><a href="auth/user/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.users.add_userprofile or perms.users.change_userprofile %}
             <tr>
-                <th scope="row"><a href="users/userprofile/">Profils utilisateurs</a></th>
+                <th scope="row">
+                    {% if perms.users.change_userprofile %}
+                    <a href="users/userprofile/">Profils utilisateurs</a>
+                    {% else %}
+                    Profils utilisateurs
+                    {% endif %}
+                </th>
+                {% if perms.users.add_userprofile %}
                 <td><a href="users/userprofile/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.users.change_userprofile %}
                 <td><a href="users/userprofile/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
+            {% if perms.users.add_usernickname or perms.users.change_usernickname %}
             <tr>
-                <th scope="row"><a href="users/usernickname/">Pseudonymes utilisateurs</a></th>
+                <th scope="row">
+                    {% if perms.users.change_usernickname %}
+                    <a href="users/usernickname/">Pseudonymes utilisateurs</a>
+                    {% else %}
+                    Pseudonymes utilisateurs
+                    {% endif %}
+                </th>
+                {% if perms.users.add_usernickname %}
                 <td><a href="users/usernickname/add/" class="addlink">Ajouter</a></td>
-                <td><a href="users/usernickname/" class="changelink">Supprimer</a></td>
+                {% endif %}
+                {% if perms.users.change_usernickname %}
+                <td><a href="users/usernickname/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
+            {% endif %}
+            
         </table>
     </div>
+    {% endif %}
 
+    {% if perms.sites.add_site or perms.sites.change_site %}
     <div class="module">
         <table summary="Sites">
         <caption><a href="sites" class="section">Site</a></caption>
             <tr>
-                <th scope="row"><a href="sites/site/">Sites</a></th>
+                <th scope="row">
+                    {% if perms.site.change_site %}
+                    <a href="sites/site/">Sites</a>
+                    {% else %}
+                    Sites
+                    {% endif %}
+                </th>
+                {% if perms.site.add_site %}
                 <td><a href="sites/site/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.site.change_site %}
                 <td><a href="sites/site/" class="changelink">Modifier</a></td>
+                {% endif %}
             </tr>
         </table>
     </div>
+    {% endif %}
 
 </div>
 {% endblock %}
