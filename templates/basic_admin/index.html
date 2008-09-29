@@ -198,6 +198,29 @@
         </table>
     </div>
     {% endif %}
+    
+    {% if perms.pages.add_page or perms.pages.change_page %}
+    <div class="module">
+        <table summary="Pages">
+        <caption>Pages</caption>
+            <tr>
+                <th scope="row">
+                    {% if perms.pages.change_page %}
+                    <a href="pages/page/">Pages</a>
+                    {% else %}
+                    Pages
+                    {% endif %}
+                </th>
+                {% if perms.pages.add_page %}
+                <td><a href="pages/page/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.pages.change_page %}
+                <td><a href="pages/page/" class="changelink">Modifier</a></td>
+                {% endif %}
+            </tr>
+        </table>
+    </div>
+    {% endif %}
 
     {% if perms.categories.add_category or perms.categories.change_category or perms.notes.add_notetype or perms.notes.change_notetype or perms.regions.add_region or perms.regions.change_region or perms.regions.add_featuredregions or perms.regions.change_featuredregion %}
     <div class="module">

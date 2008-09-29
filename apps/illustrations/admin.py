@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """ 
-Administration interface options for ``critica.apps.illustrations`` models. 
+Administration interface options of ``critica.apps.illustrations`` models. 
 
 """
 from django.contrib import admin

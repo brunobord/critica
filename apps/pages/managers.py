@@ -1,19 +1,22 @@
+# -*- coding: utf-8 -*-
 """
-Managers for ``critica.apps.pages`` models.
+Managers of ``critica.apps.pages`` models.
 
 """
 from django.db import models
 
 
-class PageManager(models.Manager):
+class PublishedPageManager(models.Manager):
     """
-    ``Page`` model manager.
-    By default, retrieves published pages.
+    Published pages.
     
     """
     
     def get_query_set(self):
-        """ Retrieves published pages. """
-        return super(PageManager, self).get_query_set().filter(is_published=True)
+        """ 
+        Retrieves published pages. 
+        
+        """
+        return super(PublishedPageManager, self).get_query_set().filter(is_published=True)
 
 

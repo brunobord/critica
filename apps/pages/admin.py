@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Administration interface options for ``cockatoo.apps.pages`` models.
+Administration interface options of ``critica.apps.pages`` models.
 
 """
 from django.conf import settings
@@ -11,11 +11,15 @@ from critica.apps.pages.models import Page
 
 
 class PageAdmin(admin.ModelAdmin):
-    """ Administration interface options for ``Page`` model. """
-    list_display = ('title', 'creation_date', 'modification_date', 'is_published', 'author_full_name')
+    """ 
+    Administration interface options of ``Page`` model. 
+    
+    """
+    list_display = ('title', 'ald_slug', 'creation_date', 'modification_date', 'is_published', 'ald_author')
     search_fields = ('title', 'content')
     list_filter = ('is_published', 'author')
-    ordering = ('title',)
+    ordering = ['title']
+    exclude = ['author']
     
     class Media:
         js = (
@@ -23,16 +27,48 @@ class PageAdmin(admin.ModelAdmin):
             settings.MEDIA_URL + 'common/js/textarea.js',
         )
         
+    def ald_slug(self, obj):
+        """ 
+        Formatted slug for admin list_display option. 
+        
+        """
+        from django.contrib.sites.models import Site
+        site = Site.objects.get_current()
+        return 'http://www.%s/pages/<strong>%s</strong>/' % (site.domain, obj.slug)
+    ald_slug.allow_tags = True
+    ald_slug.short_description = _('URL')
+    
+    def ald_author(self, obj):
+        """
+        Formatted author for admin list_display option.
+        
+        """
+        if obj.author.get_full_name():
+            return obj.author.get_full_name()
+        else:
+            return obj.author
+    ald_author.short_description = _('author')
+    
     def get_fieldsets(self, request, obj=None):
-        """ Hook for specifying fieldsets for the add form. """
+        """ 
+        Hook for specifying fieldsets for the add form. 
+        
+        """
         fieldsets = [
-            (None, {'fields': ['author', 'title', 'content']}),
+            (None, {'fields': ['title', 'content']}),
         ]
-        
-        if request.user.has_perm('users.can_publish_page'):
+        if request.user.has_perm('pages.can_publish_page'):
             fieldsets.append((_('Publication'), {'fields': ['is_published']}))
-        
         return fieldsets
+        
+    def save_model(self, request, obj, form, change):
+        """ 
+        Given a model instance save it to the database. 
+        Auto-save author.
+        
+        """
+        obj.author = request.user
+        obj.save()
 
 admin.site.register(Page, PageAdmin)
 basic_site.register(Page, PageAdmin)

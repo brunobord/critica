@@ -1,63 +1,90 @@
 # -*- coding: utf-8 -*-
 """
-Models for ``critica.apps.pages``.
+Models of ``critica.apps.pages`` application.
 
 """
-from datetime import datetime
 from django.db import models
 from django.db.models import permalink
-from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
-from critica.apps.pages.managers import PageManager
+from critica.apps.pages.managers import PublishedPageManager
 
 
 class Page(models.Model):
     """
     Page.
 
-    A page is composed of::
-
-        title
-            The page title. Max. 255 characters.
-            Required.
-
-        slug
-            The page slug. Max. 255 characters.
-            Required.
+    Fields::
 
         author
-            The page author (derived from ``django.contrib.auth.models.User``).
+            * ForeignKey: django.contrib.auth.models.User
+            * The page's author
+            * Required
+            
+        title
+            * CharField
+            * 255 characters max.
+            * The page's title
+            * Required
+
+        slug
+            * SlugField
+            * 255 characters max.
+            * The page's slug
+            * Must be unique
+            * Required (auto-generated)
 
         creation_date
-            The page creation date.
-
+            * DateTimeField
+            * auto_now_add
+            * The page's creation date
+            * Required
+            
         modification_date
-            The page modification date.
-
+            * DateTimeField
+            * auto_now
+            * The page's modification date
+            * Required
+            
         is_published
-            Is page published? Default to ``False``.
-
+            * BooleanField
+            * Is page published?
+            * Default: False
+            * Required
+            
         content
-            The page content.
+            * TextField
+            * The page's content
+            * Required
 
     Managers::
 
         objects
-            All objects.
+            Default manager.
+            Manager: models.Manager()
 
         published
-            Published pages.
+            Only returns published pages.
+            Manager: critica.apps.pages.managers.PublishedPageManager()
+            
+    Indexes::
+    
+        * author
+        * slug
+        * is_published
 
     """
+    author = models.ForeignKey('auth.User', verbose_name=_('author'))
     title = models.CharField(_('title'), max_length=255)
     slug  = models.SlugField(_('slug'), max_length=255, unique=True, editable=False)
-    author = models.ForeignKey(User, verbose_name=_('author'))
-    creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
-    is_published = models.BooleanField(_('published'), default=False)
+    creation_date = models.DateTimeField(_('creation date'), auto_now_add=True)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True)
+    is_published = models.BooleanField(_('published'), default=False, db_index=True)
     content = models.TextField(_('content'))
-
+    
+    objects = models.Manager()
+    published = PublishedPageManager()
+    
     class Meta:
         """ Model metadata. """
         verbose_name = _('page')
@@ -85,9 +112,5 @@ class Page(models.Model):
         """ Object pre-saving operations. """
         self.slug = slugify(self.title)
         super(Page, self).save()
-
-    # Managers
-    objects = models.Manager()
-    published = PageManager()
 
 
