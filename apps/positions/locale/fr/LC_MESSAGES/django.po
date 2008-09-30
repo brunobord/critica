@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-25 09:13+0200\n"
+"POT-Creation-Date: 2008-09-30 17:26+0200\n"
 "PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -34,11 +34,11 @@ msgstr "position"
 
 #: models.py:59
 msgid "category position"
-msgstr "position des catégorie"
+msgstr "position de rubrique"
 
 #: models.py:60
 msgid "category positions"
-msgstr "positions des catégories"
+msgstr "positions de rubrique"
 
 #: models.py:114
 msgid "type"

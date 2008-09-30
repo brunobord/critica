@@ -9,7 +9,9 @@ from critica.apps.admin.sites import basic_site, advanced_site
 
 
 class CategoryPositionAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('issue', 'category', 'position')
+    list_filter = ('category', 'position')
+    search_fields = ('issue', 'category', 'position')
     
 admin.site.register(CategoryPosition, CategoryPositionAdmin)
 basic_site.register(CategoryPosition, CategoryPositionAdmin)
@@ -17,7 +19,9 @@ advanced_site.register(CategoryPosition, CategoryPositionAdmin)
 
 
 class NoteTypePositionAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('issue', 'category', 'type', 'position')
+    list_filter = ('category', 'type', 'position')
+    search_fields = ('issue', 'category', 'type', 'position')
     
 admin.site.register(NoteTypePosition, NoteTypePositionAdmin)
 basic_site.register(NoteTypePosition, NoteTypePositionAdmin)
