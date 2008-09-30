@@ -290,24 +290,6 @@
             </tr>
             {% endif %}
             
-            {% if perms.regions.add_featuredregion or perms.regions.change_featuredregion %}
-            <tr>
-                <th scope="row">
-                    {% if perms.regions.change_featuredregion %}
-                    <a href="regions/featuredregion/">Brèves régionales vedette</a>
-                    {% else %}
-                    Brèves régionales vedette
-                    {% endif %}
-                </th>
-                {% if perms.regions.add_featuredregion %}
-                <td><a href="regions/featuredregion/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.regions.change_featuredregion %}
-                <td><a href="regions/featuredregion/" class="changelink">Modifier</a></td>
-                {% endif %}
-            </tr>
-            {% endif %}
-            
         </table>
     </div>
     {% endif %}
