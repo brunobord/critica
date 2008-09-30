@@ -10,9 +10,18 @@
     
     {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition or perms.positions.add_notetypeposition or perms.positions.change_notetypeposition %}
     <div class="toplink">
+        {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition %}
         <strong><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a><br/>
-        <strong><a href="#">Organiser la Une</a><br />
-        <strong><a href="#">Organiser les rubriques</a><br />
+        {% endif %}
+        {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition %}
+        <strong><a href="positions/categoryposition/">Organiser la Une</a><br />
+        {% endif %}
+        {% if perms.positions.add_notetypeposition or perms.change_notetypeposition %}
+        <strong><a href="positions/notetypeposition/">Organiser les rubriques</a><br />
+        {% endif %}
+        {% if perms.regions.add_featuredregion or perms.regions.change_featuredregion %}
+        <strong><a href="regions/featuredregion/">Gérer les régions vedettes</a><br />
+        {% endif %}
     </div>
     {% endif %}
     
@@ -295,50 +304,6 @@
                 {% endif %}
                 {% if perms.regions.change_featuredregion %}
                 <td><a href="regions/featuredregion/" class="changelink">Modifier</a></td>
-                {% endif %}
-            </tr>
-            {% endif %}
-            
-        </table>
-    </div>
-    {% endif %}
-
-    {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition or perms.positions.add_notetypeposition or perms.positions.change_notetypeposition %}
-    <div class="module">
-        <table summary="Positions des rubriques et types de brèves">
-        <caption><a href="positions/" class="section">Positions des rubriques et types de brèves</a></caption>
-            {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition %}
-            <tr>
-                <th scope="row">
-                    {% if perms.positions.change_categoryposition %}
-                    <a href="positions/categoryposition/">Positions des catégories</a>
-                    {% else %}
-                    Positions des catégories
-                    {% endif %}
-                </th>
-                {% if perms.positions.add_categoryposition %}
-                <td><a href="positions/categoryposition/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.positions.change_categoryposition %}
-                <td><a href="positions/categoryposition/" class="changelink">Modifier</a></td>
-                {% endif %}
-            </tr>
-            {% endif %}
-            
-            {% if perms.positions.add_notetypeposition or perms.positions.change_notetypeposition %}
-            <tr>
-                <th scope="row">
-                    {% if perms.positions.change_notetypeposition %}
-                    <a href="positions/notetypeposition/">Positions des types de brèves</a>
-                    {% else %}
-                    Positions des types de brèves
-                    {% endif %}
-                </th>
-                {% if perms.positions.add_notetypeposition %}
-                <td><a href="positions/notetypeposition/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.positions.change_notetypeposition %}
-                <td><a href="positions/notetypeposition/" class="changelink">Modifier</a></td>
                 {% endif %}
             </tr>
             {% endif %}

@@ -1270,11 +1270,8 @@
                 78, 
                 82, 
                 79, 
-                69, 
                 72, 
-                70, 
                 73, 
-                71, 
                 74, 
                 90, 
                 94, 
@@ -1301,7 +1298,7 @@
             "is_active": 1, 
             "is_superuser": 1, 
             "is_staff": 1, 
-            "last_login": "2008-09-29 19:48:05", 
+            "last_login": "2008-09-30 17:13:18", 
             "groups": [], 
             "user_permissions": [], 
             "password": "sha1$c9782$9386bc13dbc5f3c69cd636fb551a70795fc3a021", 
@@ -1339,7 +1336,7 @@
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-29 19:53:26", 
+            "last_login": "2008-09-30 17:16:36", 
             "groups": [
                 2
             ], 
@@ -1359,7 +1356,7 @@
             "is_active": 1, 
             "is_superuser": 0, 
             "is_staff": 1, 
-            "last_login": "2008-09-29 19:53:42", 
+            "last_login": "2008-09-30 17:18:30", 
             "groups": [
                 3
             ], 
