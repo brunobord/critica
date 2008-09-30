@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.notes.models import NoteType, Note
 from critica.apps.articles.admin import BaseArticleAdmin
-
+from critica.apps.users.models import UserNickname
 
 class NoteTypeAdmin(admin.ModelAdmin):
     """
@@ -46,6 +46,24 @@ class BaseNoteAdmin(BaseArticleAdmin):
             settings.MEDIA_URL + 'common/js/tiny_mce/tiny_mce.js',
             settings.MEDIA_URL + 'common/js/textarea.js',
         )
+
+    def __call__(self, request, url):
+        self.request = request
+        return super(BaseNoteAdmin, self).__call__(request, url)
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(BaseNoteAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'author_nickname': 
+            my_choices = [('', '---------')]
+            my_choices.extend(UserNickname.objects.filter(user=self.request.user).values_list('id','nickname'))
+            print my_choices
+            field.choices = my_choices
+        return field
 
     def get_fieldsets(self, request, obj=None):
         """ 

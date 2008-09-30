@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Administration interface options for ``cockatoo.apps.users`` models.
+Administration interface options of ``critica.apps.users`` models.
 
 """
 from django.contrib import admin
@@ -10,7 +10,7 @@ from critica.apps.admin.sites import basic_site, advanced_site
 
 class UserProfileAdmin(admin.ModelAdmin):
     """ 
-    Administration interface options for ``UserProfile`` model. 
+    Administration interface options of ``UserProfile`` model. 
     
     """
     pass
@@ -22,13 +22,13 @@ advanced_site.register(UserProfile, UserProfileAdmin)
 
 class UserNicknameAdmin(admin.ModelAdmin):
     """
-    Administration interface for ``UserNickname`` model.
+    Administration interface of ``UserNickname`` model.
     
     """
     list_display = ('user', 'nickname')
     list_filter = ('user',)
     search_fields = ('user', 'nickname')
-    ordering = ('user',)
+    ordering = ['user']
     
 admin.site.register(UserNickname, UserNicknameAdmin)
 basic_site.register(UserNickname, UserNicknameAdmin)

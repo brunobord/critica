@@ -8,6 +8,8 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.articles.models import Article
+from critica.apps.users.models import UserNickname
+from critica.apps.illustrations.models import Illustration
 
 
 class BaseArticleAdmin(admin.ModelAdmin):
@@ -32,6 +34,33 @@ class BaseArticleAdmin(admin.ModelAdmin):
             settings.MEDIA_URL + 'common/js/textarea.js',
         )
 
+    def __call__(self, request, url):
+        self.request = request
+        return super(BaseArticleAdmin, self).__call__(request, url)
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(BaseArticleAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        current_user = self.request.user
+        if db_field.name == 'author_nickname': 
+            my_choices = [('', '---------')]
+            my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
+            print my_choices
+            field.choices = my_choices
+        if db_field.name == 'illustration':
+            my_choices = [('', '---------')]
+            if 'illustrations.delete_illustration' in current_user.get_all_permissions():
+                my_choices.extend(Illustration.objects.all().values_list('id','legend'))
+            else:
+                my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','legend'))
+            print my_choices
+            field.choices = my_choices
+        return field
+        
     def get_fieldsets(self, request, obj=None):
         """ 
         Hook for specifying fieldsets for the add form. 
@@ -43,9 +72,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
             (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
             (_('Content'), {'fields': ('summary', 'content')}),
         ]
-        
         publication_fields = []
-        
         if request.user.has_perm('articles.can_feature_article'):
             publication_fields.append('is_featured')
         if request.user.has_perm('articles.can_reserve_article'):
@@ -57,8 +84,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
             or request.user.has_perm('articles.can_feature_article') \
             or request.user.has_perm('articles.can_publish_article'):
             fieldsets += [(_('Publication'), {'fields': publication_fields})]
-        
         return fieldsets
+
 
     def save_model(self, request, obj, form, change):
         """ 
