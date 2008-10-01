@@ -160,7 +160,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
         if not obj.publication_date:
             return u'<span class="novalue">%s</span>' % _('no publication date')
         else:
-            return obj.publication_date
+            return obj.publication_date.strftime('%Y/%m/%d')
     ald_publication_date.short_description = _('publication date')
     ald_publication_date.allow_tags = True
     

@@ -3,6 +3,7 @@
 Models of ``critica.apps.notes`` application.
 
 """
+import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
@@ -256,6 +257,8 @@ class BaseNote(models.Model):
         * Save note
         
         """
+        if not self.id:
+            self.publication_date = datetime.date.today()
         self.slug = slugify(self.title)
         super(BaseNote, self).save()
 

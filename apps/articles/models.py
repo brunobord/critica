@@ -3,6 +3,7 @@
 Models of ``critica.apps.articles`` application.
 
 """
+import datetime
 from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
@@ -178,10 +179,13 @@ class BaseArticle(models.Model):
         """ 
         Object pre-saving operations:
         
+        * By default, sets publication date to today
         * Generates slug from title
         * Save article
         
         """
+        if not self.id:
+            self.publication_date = datetime.date.today()
         self.slug = slugify(self.title)
         super(BaseArticle, self).save()
 

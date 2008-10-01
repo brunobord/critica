@@ -39,7 +39,7 @@ class EpicurienArticleAdmin(BaseArticleAdmin):
         
         """
         fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion')}),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'type', 'tags')}),
             (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
             (_('Content'), {'fields': ('summary', 'content')}),

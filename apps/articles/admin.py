@@ -74,7 +74,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
         
         """
         fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion')}),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
             (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
             (_('Content'), {'fields': ('summary', 'content')}),
@@ -154,7 +154,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
         if not obj.publication_date:
             return u'<span class="novalue">%s</span>' % _('no publication date')
         else:
-            return obj.publication_date
+            return obj.publication_date.strftime('%Y/%m/%d')
     ald_publication_date.short_description = _('publication date')
     ald_publication_date.allow_tags = True
     

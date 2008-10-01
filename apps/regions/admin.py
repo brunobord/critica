@@ -57,7 +57,7 @@ class RegionNoteAdmin(BaseNoteAdmin):
         
         """
         fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion')}),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'region', 'tags')}),
             (_('Content'), {'fields': ('content',)}),
         ]

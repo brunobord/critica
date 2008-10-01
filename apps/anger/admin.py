@@ -26,7 +26,7 @@ class AngerArticleAdmin(BaseArticleAdmin):
         
         """
         fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title')}),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'tags')}),
             (_('Content'), {'fields': ('summary', 'content')}),
         ]
