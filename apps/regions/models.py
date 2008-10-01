@@ -154,4 +154,17 @@ class RegionNote(BaseNote):
             ('can_reserve_note', 'Can reserve a note'),
             ('can_publish_note', 'Can publish a note'),
         )
+        
+    def save(self):
+        """ 
+        Object pre-saving operations:
+        
+        * Auto-save category
+        * Save article
+        
+        """
+        from critica.apps.categories.models import Category
+        category = Category.objects.get(slug='regions')
+        self.category = category
+        super(RegionNote, self).save()
 
