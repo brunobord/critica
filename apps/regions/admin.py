@@ -31,7 +31,7 @@ class FeaturedRegionAdmin(admin.ModelAdmin):
     """
     list_display = ('issue', 'region')
     search_fields = ('issue', 'region')
-    ordering = ['issue']
+    ordering = ['-issue']
 
 admin.site.register(FeaturedRegion, FeaturedRegionAdmin)
 basic_site.register(FeaturedRegion, FeaturedRegionAdmin)

@@ -1,0 +1,34 @@
+[
+    {
+        "pk": 1, 
+        "model": "regions.featuredregion", 
+        "fields": {
+            "region": 1, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "regions.featuredregion", 
+        "fields": {
+            "region": 2, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "regions.featuredregion", 
+        "fields": {
+            "region": 3, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "regions.featuredregion", 
+        "fields": {
+            "region": 4, 
+            "issue": 4
+        }
+    }
+]

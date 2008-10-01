@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-Tests for ``critica.apps.pages``.
+Tests of ``critica.apps.pages`` application.
 
 """
 from django.test import TestCase
 
 
 class PagesTestCase(TestCase):
+    """
+    Pages test case.
+    
+    """
     fixtures = ['sample_data']
     
     def test_published_page(self):

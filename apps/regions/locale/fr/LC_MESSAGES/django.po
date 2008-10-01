@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 11:06+0200\n"
+"POT-Creation-Date: 2008-10-01 09:55+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,39 +17,53 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: models.py:39
-msgid "region note type"
-msgstr "type de brève régionale"
+#: admin.py:53
+msgid "Headline"
+msgstr "En-tête"
 
-#: models.py:40
-msgid "region note types"
-msgstr "types de brève régionale"
+#: admin.py:54
+msgid "Filling"
+msgstr "Classement"
 
-#: models.py:72
+#: admin.py:55
+msgid "Content"
+msgstr "Contenu"
+
+#: admin.py:70
+msgid "Publication"
+msgstr "Publication"
+
+#: models.py:41 
+#: models.py:76 
+#: models.py:139
+msgid "region"
+msgstr "région"
+
+#: models.py:42
+msgid "regions"
+msgstr "régions"
+
+#: models.py:75
 msgid "issue"
 msgstr "édition"
 
-#: models.py:73 
-#: models.py:128
-msgid "type"
-msgstr "type"
-
-#: models.py:82
-msgid "featured region note"
+#: models.py:85
+msgid "featured region"
 msgstr "brève régionale vedette"
 
-#: models.py:83
-msgid "featured region notes"
+#: models.py:86
+msgid "featured regions"
 msgstr "brèves régionales vedette"
 
-#: models.py:128
-msgid "Please, select a note type."
+#: models.py:139
+msgid "Please, select a region."
 msgstr "Sélectionnez un type de brève."
 
-#: models.py:135
+#: models.py:150
 msgid "region note"
 msgstr "brève régionale"
 
-#: models.py:136
+#: models.py:151
 msgid "region notes"
 msgstr "brèves régionales"
+
