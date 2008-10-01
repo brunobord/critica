@@ -74,24 +74,32 @@ class Issue(models.Model):
     def save(self):
         super(Issue, self).save()
         from django.conf import settings
-        from apps.categories.models import Category
-        from apps.positions.models import CategoryPosition
-        from apps.positions import settings as positions_settings
-        # Auto-creates categories
+        from critica.apps.positions import settings as positions_settings
+        from critica.apps.categories.models import Category
         if 'critica.apps.categories' in settings.INSTALLED_APPS:
+            from critica.apps.positions.models import CategoryPosition
             for slug in positions_settings.CATEGORY_DEFAULT_ORDER:
                 # defining default position if it does exist
                 if slug in positions_settings.CATEGORY_DEFAULT_POSITION:
                     default_position = positions_settings.CATEGORY_DEFAULT_POSITION[slug]
                 else:
                     default_position = None
-
                 # the category must exist
                 category = Category.objects.get(slug=slug)
                 # create the category
-                position = CategoryPosition(issue=self,
-                    category=category,
-                    position=default_position,
-                )
+                position = CategoryPosition(issue=self, category=category, position=default_position)
                 position.save()
+        if 'critica.apps.notes' in settings.INSTALLED_APPS: 
+            from critica.apps.notes.models import NoteType
+            from critica.apps.positions.models import NoteTypePosition
+            categories = Category.objects.exclude(slug__in=positions_settings.EXCLUDED_CATEGORIES)
+            for category in categories:
+                for slug in positions_settings.NOTE_TYPE_DEFAULT_ORDER:
+                    if slug in positions_settings.NOTE_TYPE_DEFAULT_POSITION:
+                        default_position = positions_settings.NOTE_TYPE_DEFAULT_POSITION[slug]
+                    else:
+                        default_position = None
+                    note_type = NoteType.objects.get(slug=slug)
+                    position = NoteTypePosition(issue=self, category=category, type=note_type, position=default_position)
+                    position.save()
 

@@ -1,0 +1,4070 @@
+[
+    {
+        "pk": 1, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 1, 
+            "position": 1, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 2, 
+            "position": 2, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 7, 
+            "position": 3, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 3, 
+            "position": 4, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 8, 
+            "position": 5, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 4, 
+            "position": 6, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 6, 
+            "position": 7, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 5, 
+            "position": 8, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 9, 
+            "position": 9, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 12, 
+            "position": 10, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 11, 
+            "position": null, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 10, 
+            "position": null, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 13, 
+            "position": 12, 
+            "issue": 1
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 1, 
+            "position": 1, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 2, 
+            "position": 2, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 7, 
+            "position": 3, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 3, 
+            "position": 4, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 8, 
+            "position": 5, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 4, 
+            "position": 6, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 6, 
+            "position": 7, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 5, 
+            "position": 8, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 9, 
+            "position": 9, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 12, 
+            "position": 10, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 11, 
+            "position": null, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 10, 
+            "position": null, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 13, 
+            "position": 12, 
+            "issue": 2
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 1, 
+            "position": 1, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 2, 
+            "position": 2, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 7, 
+            "position": 3, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 3, 
+            "position": 4, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 8, 
+            "position": 5, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 4, 
+            "position": 6, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 6, 
+            "position": 7, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 5, 
+            "position": 8, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 9, 
+            "position": 9, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 12, 
+            "position": 10, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 11, 
+            "position": null, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 10, 
+            "position": null, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 13, 
+            "position": 12, 
+            "issue": 3
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 1, 
+            "position": 1, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 2, 
+            "position": 2, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 7, 
+            "position": 3, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 3, 
+            "position": 4, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 8, 
+            "position": 5, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 4, 
+            "position": 6, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 6, 
+            "position": 7, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 5, 
+            "position": 8, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 9, 
+            "position": 9, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 12, 
+            "position": 10, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 11, 
+            "position": null, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 10, 
+            "position": null, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "positions.categoryposition", 
+        "fields": {
+            "category": 13, 
+            "position": 12, 
+            "issue": 4
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 1, 
+            "issue": 1, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 2, 
+            "issue": 1, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 3, 
+            "issue": 1, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 4, 
+            "issue": 1, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 5, 
+            "issue": 1, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 6, 
+            "issue": 1, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 7, 
+            "issue": 1, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 8, 
+            "issue": 1, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 9, 
+            "issue": 1, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 10, 
+            "issue": 1, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 134, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 135, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 137, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 138, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 140, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 141, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 142, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 143, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 144, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 145, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 146, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 147, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 148, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 149, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 150, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 151, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 152, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 153, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 154, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 155, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 156, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 157, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 158, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 159, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 160, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 161, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 162, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 163, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 164, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 165, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 166, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 167, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 168, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 169, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 170, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 171, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 1, 
+            "issue": 2, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 172, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 2, 
+            "issue": 2, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 173, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 3, 
+            "issue": 2, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 174, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 4, 
+            "issue": 2, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 175, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 5, 
+            "issue": 2, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 176, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 6, 
+            "issue": 2, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 177, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 7, 
+            "issue": 2, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 178, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 8, 
+            "issue": 2, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 179, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 9, 
+            "issue": 2, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 180, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 10, 
+            "issue": 2, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 181, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 182, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 183, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 184, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 185, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 186, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 187, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 188, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 189, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 190, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 191, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 192, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 193, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 194, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 195, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 196, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 197, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 198, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 199, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 200, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 201, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 202, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 203, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 204, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 205, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 206, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 207, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 208, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 209, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 210, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 211, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 212, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 213, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 214, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 215, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 216, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 217, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 218, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 219, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 220, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 221, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 222, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 223, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 224, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 225, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 226, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 227, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 228, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 229, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 230, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 231, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 232, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 233, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 234, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 235, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 236, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 237, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 238, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 239, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 240, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 241, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 242, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 243, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 244, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 245, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 246, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 247, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 248, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 249, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 250, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 251, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 252, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 253, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 254, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 255, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 256, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 257, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 258, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 259, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 260, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 261, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 1, 
+            "issue": 3, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 262, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 2, 
+            "issue": 3, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 263, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 3, 
+            "issue": 3, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 264, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 4, 
+            "issue": 3, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 265, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 5, 
+            "issue": 3, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 266, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 6, 
+            "issue": 3, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 267, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 7, 
+            "issue": 3, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 268, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 8, 
+            "issue": 3, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 269, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 9, 
+            "issue": 3, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 270, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 10, 
+            "issue": 3, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 271, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 272, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 273, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 274, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 275, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 276, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 277, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 278, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 279, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 280, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 1, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 281, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 282, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 283, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 284, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 285, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 286, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 287, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 288, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 289, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 290, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 2, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 291, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 292, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 293, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 294, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 295, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 296, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 297, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 298, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 299, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 300, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 3, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 301, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 302, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 303, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 304, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 305, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 306, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 307, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 308, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 309, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 310, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 4, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 311, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 312, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 313, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 314, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 315, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 316, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 317, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 318, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 319, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 320, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 5, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 321, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 322, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 323, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 324, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 325, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 326, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 327, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 328, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 329, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 330, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 6, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 331, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 332, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 333, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 334, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 335, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 336, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 337, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 338, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 339, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 340, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 7, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 341, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 342, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 343, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 344, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 345, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 346, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 347, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 348, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 349, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 350, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 8, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }, 
+    {
+        "pk": 351, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 1, 
+            "issue": 4, 
+            "position": 1
+        }
+    }, 
+    {
+        "pk": 352, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 2, 
+            "issue": 4, 
+            "position": 2
+        }
+    }, 
+    {
+        "pk": 353, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 3, 
+            "issue": 4, 
+            "position": 3
+        }
+    }, 
+    {
+        "pk": 354, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 4, 
+            "issue": 4, 
+            "position": 4
+        }
+    }, 
+    {
+        "pk": 355, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 5, 
+            "issue": 4, 
+            "position": 5
+        }
+    }, 
+    {
+        "pk": 356, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 6, 
+            "issue": 4, 
+            "position": 6
+        }
+    }, 
+    {
+        "pk": 357, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 7, 
+            "issue": 4, 
+            "position": 7
+        }
+    }, 
+    {
+        "pk": 358, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 8, 
+            "issue": 4, 
+            "position": 8
+        }
+    }, 
+    {
+        "pk": 359, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 9, 
+            "issue": 4, 
+            "position": 9
+        }
+    }, 
+    {
+        "pk": 360, 
+        "model": "positions.notetypeposition", 
+        "fields": {
+            "category": 9, 
+            "type": 10, 
+            "issue": 4, 
+            "position": 10
+        }
+    }
+]

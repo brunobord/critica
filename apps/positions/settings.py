@@ -39,15 +39,42 @@ CATEGORY_DEFAULT_POSITION = {
     'coup-de-gueule': choices.CATEGORY_POSITION_SCOTCH,
 }
 
+# Excluded categories
+# ------------------------------------------------------------------------------
+EXCLUDED_CATEGORIES = [
+    'regions',
+    'epicurien',
+    'voyages',
+    'coup-de-gueule',
+]
+
+# Default note type order
+# ------------------------------------------------------------------------------
+NOTE_TYPE_DEFAULT_ORDER = [
+    'vous-saviez',
+    'premiere-nouvelle',
+    'on-sen-serait-passe',
+    'on-en-rirait-presque',
+    'ils-ont-ose',
+    'linfo-off',
+    'fallait-sen-douter',
+    'criticons',
+    'ca-cest-fait',
+    'aucun-interet',
+]
+
 # Default note type positions
 # ------------------------------------------------------------------------------
-NOTE_TYPE_DEFAULT_POSITION_VOUS_SAVIEZ = choices.NOTE_TYPE_POSITION_POSTIT
-NOTE_TYPE_DEFAULT_POSITION_PREMIERE_NOUVELLE = choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE1_GAUCHE
-NOTE_TYPE_DEFAULT_POSITION_ON_SEN_SERAIT_PASSE = choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE1_DROITE
-NOTE_TYPE_DEFAULT_POSITION_ON_EN_RIRAIT_PRESQUE = choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE2_GAUCHE
-NOTE_TYPE_DEFAULT_POSITION_ILS_ONT_OSE = choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE2_DROITE
-NOTE_TYPE_DEFAULT_POSITION_LINFO_OFF = choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE1
-NOTE_TYPE_DEFAULT_POSITION_FALLAIT_SEN_DOUTER = choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE2
-NOTE_TYPE_DEFAULT_POSITION_CRITICONS = choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE3
-NOTE_TYPE_DEFAULT_POSITION_CA_CEST_FAIT = choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE4
-NOTE_TYPE_DEFAULT_POSITION_AUCUN_INTERET = choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE5
+NOTE_TYPE_DEFAULT_POSITION = {
+    'vous-saviez': choices.NOTE_TYPE_POSITION_POSTIT,
+    'premiere-nouvelle': choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE1_GAUCHE,
+    'on-sen-serait-passe': choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE1_DROITE,
+    'on-en-rirait-presque': choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE2_GAUCHE,
+    'ils-ont-ose': choices.NOTE_TYPE_POSITION_PUNAISE_LIGNE2_DROITE,
+    'linfo-off': choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE1,
+    'fallait-sen-douter': choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE2,
+    'criticons': choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE3,
+    'ca-cest-fait': choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE4,
+    'aucun-interet': choices.NOTE_TYPE_POSITION_ACCORDEON_LIGNE5,
+}
+

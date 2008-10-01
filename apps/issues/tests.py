@@ -18,3 +18,4 @@ class IssueTestCase(TestCase):
             self.assertEquals(len(positions), 1)
             if slug in positions_settings.CATEGORY_DEFAULT_POSITION:
                 self.assertEquals(positions[0].position, positions_settings.CATEGORY_DEFAULT_POSITION[slug])
+                

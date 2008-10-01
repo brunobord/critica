@@ -4,8 +4,8 @@
         "model": "issues.issue", 
         "fields": {
             "status": 3, 
-            "publication_date": "2008-09-22", 
-            "number": 135
+            "publication_date": "2008-09-23", 
+            "number": 136
         }
     }, 
     {
@@ -13,8 +13,8 @@
         "model": "issues.issue", 
         "fields": {
             "status": 3, 
-            "publication_date": "2008-09-23", 
-            "number": 136
+            "publication_date": "2008-09-24", 
+            "number": 137
         }
     }, 
     {
@@ -22,8 +22,17 @@
         "model": "issues.issue", 
         "fields": {
             "status": 3, 
-            "publication_date": "2008-09-24", 
-            "number": 137
+            "publication_date": "2008-09-29", 
+            "number": 138
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "issues.issue", 
+        "fields": {
+            "status": 3, 
+            "publication_date": "2008-09-30", 
+            "number": 139
         }
     }
 ]
