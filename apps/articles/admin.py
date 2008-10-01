@@ -19,7 +19,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface options of ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
+    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish', 'ald_illustration')
     list_filter = ('author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     search_fields = ('title', 'summary', 'content')
     ordering = ('-publication_date', 'category')
@@ -157,6 +157,19 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return obj.publication_date
     ald_publication_date.short_description = _('publication date')
     ald_publication_date.allow_tags = True
+    
+    def ald_illustration(self, obj):
+        """
+        Illustration thumbnail for admin list_display option.
+        
+        """
+        if obj.use_default_illustration:
+            thumb = '<img src="%s%s" alt="%s" height="50" class="default-illustration" />' % (settings.MEDIA_URL, obj.category.image, obj.category.image_legend)
+        else:
+            thumb = '<img src="%s%s" alt="%s" height="50" />' % (settings.MEDIA_URL, obj.illustration.image, obj.illustration.legend)
+        return thumb
+    ald_illustration.allow_tags = True
+    ald_illustration.short_description = _('Illustration')
 
 
 class ArticleAdmin(BaseArticleAdmin):

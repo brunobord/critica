@@ -27,6 +27,12 @@ class EpicurienArticleAdmin(BaseArticleAdmin):
     Administration interface options of ``EpicurienArticle`` model.
     
     """
+    list_display = ('title', 'type', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish', 'ald_illustration')
+    list_filter = ('author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'type')
+    search_fields = ('title', 'summary', 'content')
+    ordering = ('-publication_date', 'category')
+    date_hierarchy = 'publication_date'
+
     def get_fieldsets(self, request, obj=None):
         """ 
         Hook for specifying fieldsets for the add form. 

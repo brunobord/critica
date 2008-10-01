@@ -44,8 +44,8 @@ class RegionNoteAdmin(BaseNoteAdmin):
     Inherits from ``critica.apps.notes.admin.BaseNoteAdmin``.
     
     """
-    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
-    list_filter = ('author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured')
+    list_display = ('title', 'region', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
+    list_filter = ('author', 'region', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured')
     search_fields = ('title', 'content')
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'

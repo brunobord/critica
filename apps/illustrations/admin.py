@@ -22,7 +22,7 @@ class IllustrationAdmin(admin.ModelAdmin):
     list_display = ('ald_image', 'ald_category', 'credits', 'legend', 'creation_date', 'modification_date', 'submitter')
     list_filter = ('category',)
     search_fields = ('image', 'credits', 'legend')
-    ordering = ['legend', 'creation_date']
+    ordering = ['-creation_date']
     date_hierarchy = 'creation_date'
 
     def ald_image(self, obj):

@@ -167,7 +167,124 @@
             "submitter": 1, 
             "legend": "C\u00f4t\u00e9 Bar"
         }
-    },
+    }, 
+    {
+        "pk": 14, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-10-01 15:17:24", 
+            "image": "upload/2008/09/23/national.jpg", 
+            "creation_date": "2008-10-01 15:17:24", 
+            "credits": "Wostok Press", 
+            "submitter": 1, 
+            "legend": "Cki ? S\u00e9gol\u00e8ne Royal"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 2, 
+            "modification_date": "2008-10-01 15:18:49", 
+            "image": "upload/2008/09/23/international.jpg", 
+            "creation_date": "2008-10-01 15:18:46", 
+            "credits": "Photoshot", 
+            "submitter": 1, 
+            "legend": "Ckoi ? Suite \u00e0 l'attentat..."
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-10-01 15:19:23", 
+            "image": "upload/2008/09/23/societe.jpg", 
+            "creation_date": "2008-10-01 15:19:23", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "Cki ? Karim Achoui"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-10-01 15:19:51", 
+            "image": "upload/2008/09/23/sport.jpg", 
+            "creation_date": "2008-10-01 15:19:51", 
+            "credits": "DPA", 
+            "submitter": 1, 
+            "legend": "Cki ? Paolo Bettini"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 6, 
+            "modification_date": "2008-10-01 15:20:23", 
+            "image": "upload/2008/09/23/tele.jpg", 
+            "creation_date": "2008-10-01 15:20:23", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "Cki ? Yves R\u00e9nier"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 5, 
+            "modification_date": "2008-10-01 15:21:14", 
+            "image": "upload/2008/09/23/pipole.jpg", 
+            "creation_date": "2008-10-01 15:21:14", 
+            "credits": "DanaPress", 
+            "submitter": 1, 
+            "legend": "George Michael"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-01 15:22:00", 
+            "image": "upload/2008/09/23/nana.jpg", 
+            "creation_date": "2008-10-01 15:22:00", 
+            "credits": "ILLU", 
+            "submitter": 1, 
+            "legend": "Nanas"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 7, 
+            "modification_date": "2008-10-01 15:22:32", 
+            "image": "upload/2008/09/23/bouquin.jpg", 
+            "creation_date": "2008-10-01 15:22:32", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "On envoie DIEU se faire voir ailleurs !"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-01 15:23:33", 
+            "image": "upload/2008/09/23/insolite.jpg", 
+            "creation_date": "2008-10-01 15:23:33", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "L'accumulateur de particules"
+        }
+    }, 
     {
         "pk": 1, 
         "model": "illustrations.illustrationoftheday", 
