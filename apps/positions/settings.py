@@ -3,7 +3,8 @@
 Settings of ``critica.apps.positions``.
 
 """
-from critica.apps.positions import choices
+from apps.positions import choices
+
 
 # Default category order
 # ------------------------------------------------------------------------------
