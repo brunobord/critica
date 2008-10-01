@@ -33,8 +33,8 @@ class BaseNoteAdmin(BaseArticleAdmin):
     Administration interface options of ``BaseNote`` abstract model.
     
     """
-    list_display = ('title', 'category', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
-    list_filter = ('author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
+    list_display = ('title', 'category', 'type', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
+    list_filter = ('author', 'type', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     search_fields = ('title', 'content')
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
@@ -79,8 +79,8 @@ class BaseNoteAdmin(BaseArticleAdmin):
         
         """
         fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion')}),
-            (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
+            (_('Filling'), {'fields': ('issues', 'category', 'type', 'tags')}),
             (_('Content'), {'fields': ('content',)}),
         ]
         

@@ -1980,5 +1980,655 @@
                 2
             ]
         }
+    }, 
+    {
+        "pk": 79, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:15:22", 
+            "title": "Pauvre gosse !", 
+            "region": 1, 
+            "tags": "betise", 
+            "author_nickname": null, 
+            "content": "<p><span>Le gamin n'est pas encore n&eacute; qu'il part d&eacute;j&agrave; avec un handicap ! Val&eacute;rie Mamy, sa future m&egrave;re n'y est pas pour rien ! C'est papa qui va &ecirc;tre content ! Il doit encore se demander pourquoi sa femme a &eacute;t&eacute; assez conne pour annoncer ce genre de nouvelle... En effet, le 25 septembre dernier, le nouveau pont mobile Gustave Flaubert de Rouen a ouvert. Et il se trouve que Val&eacute;rie a &eacute;t&eacute; la premi&egrave;re &agrave; inaugurer l'&eacute;difice avec sa caisse. Un grand moment pour elle, qui aurait pu le rester aussi pour son futur gosse et son mari si elle n'avait pas dit &agrave; la presse : <em>\"Si c'est un gar&ccedil;on, je l'appellerai Gustave !\"</em>. Eh ben, bon courage... Gustave !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:15:22", 
+            "slug": "pauvre-gosse", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:17:21", 
+            "title": "Pr\u00e9curseurs en mati\u00e8re de chasse \u00e9colo", 
+            "region": 2, 
+            "tags": "chasse", 
+            "author_nickname": null, 
+            "content": "<p><span>Bon les gars, z'&ecirc;tes par&eacute;s ? Je ne vais pas vous refaire la totale cette ann&eacute;e, &ccedil;a fait maintenant deux ans que vous connaissez le syst&egrave;me ! Pour les nouveaux, la r&eacute;gion Lorraine a lanc&eacute; en 2006 une op&eacute;ration pilote, concernant le tri s&eacute;lectif ! Alors, on r&eacute;capitule... Vous avez les bottes, les fusils, les cartouches ? Bien ! Alors Ren&eacute; va vous distribuer deux sacs, un rouge et un jaune. Ainsi, &agrave; chaque fois que vous tirez, vous ramassez votre douille et la placez dans un des deux sacs ! Le jaune pour les douilles en laiton,et le rouge pour les munitions en plastique et m&eacute;tal. Allez hop ! Action !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:17:21", 
+            "slug": "precurseurs-en-matiere-de-chasse-ecolo", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:19:29", 
+            "title": "Dick ressort les griffes !  ", 
+            "region": 3, 
+            "tags": "griffes", 
+            "author_nickname": null, 
+            "content": "<p><span>Dick Rivers, rockeur, ancien leader des Chats Sauvages, a les oreilles en arri&egrave;re ! Et croyez-nous, cela ne pr&eacute;sage rien de bon ! Et il a la banane ! Oui, mais &ccedil;a ne va pas du tout non plus ! Alors qu'il vit tranquille avec Babette dans le quartier Amiraux-Simplon, dans le 18&egrave;me arrondissement de Paris, voil&agrave; qu'un organisme veut installer dans sa rue des maisons-relais pour des personnes en situation de tr&egrave;s grande pr&eacute;carit&eacute; ! Le f&eacute;lin ne l'entend pas de cette oreille et compte bien miauler son m&eacute;contentement &agrave; Bertrand Delano&euml;, courant novembre ! Un Chat Sauvage contre une chatte... L&agrave;, il cherche la merde...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:19:29", 
+            "slug": "dick-ressort-les-griffes", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:22:22", 
+            "title": "Un miracle \u00e0 Toulouse ! ", 
+            "region": 4, 
+            "tags": "miracle", 
+            "author_nickname": null, 
+            "content": "<p><span>Alors que je conduisais mon TER sur la voie ferr&eacute;e, avenue Crampel, j'ai vu un jeune homme d'une vingtaine d'ann&eacute;e d&eacute;bouler devant moi. Roulant &agrave; plus de 90 km/h, je n'ai bien &eacute;videmment pas pu freiner ! J'ai entendu le choc et ai stopp&eacute; le train 300 m plus loin. Avec les k&eacute;pis, on a fouill&eacute; les environs toute la matin&eacute;e, &agrave; la recherche d'un corps... Mais rien ! Finalement les flics ont r&eacute;ussi &agrave; retrouver le gonze, qui s'&eacute;tait r&eacute;fugi&eacute; chez lui. Bless&eacute; superficiellement au visage et au bras, il s'est miraculeusement sorti du face &agrave; face avec mon train... Il devrait reprendre d'ici quelques jours son train-train quotidien...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:22:22", 
+            "slug": "un-miracle-a-toulouse", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:23:17", 
+            "title": "Quand on s\u00e8me le vin, on r\u00e9colte...  ", 
+            "region": 5, 
+            "tags": "tourisme", 
+            "author_nickname": null, 
+            "content": "<p><span>En f&egrave;teuh, on est plus habituu&eacute; &agrave; manier le sabre que le s&eacute;cateur ! Au Djapon, nous sommeuh tr&egrave;s friands de la Gastronomieuh frantsaiseuh ! Aloreuh quand on a des vacanceuh, on conitueuh de travailler ! Venus dans le Minervois pour faire du tourismeuh, nous nous tommes dit qu'il serait int&eacute;ressant de faire les vendangeuh des vignes de Jean-Louis Poudoux. La r&eacute;colteuh devrait durer jusqu'&agrave; la fin de la premi&egrave;reuh semaineuh d'octobreuh ! Si c'est pas dg&eacute;nialeuh de passer tes vacanceuh dans la vigneuh, sous le cagnard ! L'an prochain, dilection le Calvados pour la r&eacute;colte tes pommeuh !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:23:17", 
+            "slug": "quand-on-seme-le-vin-on-recolte", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:24:20", 
+            "title": "Une bombe \u00e0 Neuville !", 
+            "region": 6, 
+            "tags": "concours", 
+            "author_nickname": null, 
+            "content": "<p><span>Les chiffres parlent d'eux-m&ecirc;me... 1m77, 78-58-88 ! Une bombaaaaaaaaaasse ! Mais que se passe-t-il dans le Nord ? D&eacute;j&agrave; l'ann&eacute;e derni&egrave;re, la laur&eacute;ate du concours Elite Model Look &eacute;tait une tourquennoise. Et voici donc Victoria Tuaz, de Neuville en Ferrain, du haut de ses 17 ans, qui s'en va d&eacute;fier les plus belles filles de la plan&egrave;te en Chine, &agrave; la finale internationale du concours de mannequins ! Mais maintenant, c'est du s&eacute;rieux, du lourd ! Enfin, pas tant que &ccedil;a... Fini les tartines de Nutella 4 fois par jour ! Ainsi au Nord, il n'y a pas que les corons, il y a aussi des corps sublimes !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:24:20", 
+            "slug": "une-bombe-a-neuville", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:25:39", 
+            "title": "Balle perdue...", 
+            "region": 7, 
+            "tags": "chasse", 
+            "author_nickname": null, 
+            "content": "<p><span>Mais qu'il est con, ce chasseuuuuuuuur ! Putain ! J'ai 53 ans, &ccedil;a fait 37 ans que je pratique la chasse et j'ai encore jamais eu affaire &agrave; pareil cr&eacute;tin ! Pourtant, je me faisais une joie de faire cette battue aux sangliers ce dimanche &agrave; Bessines ! Et voil&agrave; que l'autre andouille voit un animal passer devant lui, il tire &agrave; l'aveuglette et manque son coup ! Et moi, j'&eacute;tais derri&egrave;re... J'ai donc pris la balle dans la jambe. Eh oui, parce que pour ce genre de gibier, on utilise des bastos ! Voil&agrave; ! Maintenant je suis clou&eacute; au lit dans une chambre du CHU de Limoges, au lieu de traquer le sanglier en for&ecirc;t ! A cause d'un trou de balle, moi aussi j'en ai un !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:25:39", 
+            "slug": "balle-perdue", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:26:33", 
+            "title": "Il est marteau, le gars ! ", 
+            "region": 8, 
+            "tags": "violence", 
+            "author_nickname": null, 
+            "content": "<p><span>Etre maire d'une commune n'est pas de tout repos ! Et ce n'est pas le maire du Mans qui vous dira le contraire ! Alors que ce dernier effectuait vendredi dernier une visite de quartier, un jeune passait et repassait, faisant p&eacute;tarader son deux-roues. D'un calme olympien, monsieur le maire lui a gentiment expliqu&eacute; qu'avec son comportement, il troublait la tranquillit&eacute; de ses voisins. Le gonze est descendu de son cyclo, a saisi un marteau dans sa bo&icirc;te &agrave; outils et s'est approch&eacute; du maire pour le frapper. Ce dernier doit son salut &agrave; la m&egrave;re du jeune homme qui s'est interpos&eacute;e... Puis, les flics sont arriv&eacute;s pour le remettre dans les clous !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:26:33", 
+            "slug": "il-est-marteau-le-gars", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:27:26", 
+            "title": "Attention ! Un nouveau chef... Ca pue !", 
+            "region": 9, 
+            "tags": "piscine", 
+            "author_nickname": null, 
+            "content": "<p><span>Ben fallait que &ccedil;a tombe sur nous, un truc pareil ! On &eacute;tait content que la piscine rouvre, mais l&agrave;, y a un nouveau chef de bassin ! Laurent Misiurny, qu'il s'appelle ! Et il vient de la piscine ludique de Munster... Ca sent pas bon &ccedil;a ! Cernay est pourtant une ville tranquille... Ah c'est s&ucirc;r qu'on plonge tout de suite dans le grand bain avec le grand bal&egrave;ze aux claquettes ! Il est bard&eacute; de dipl&ocirc;mes, le gars, il coule tout le monde ! Inutile de vous dire qu'apr&egrave;s le p&eacute;diluve, si on a oubli&eacute; les lunettes et le bonnet de bain, il va nous faire ouvrir les yeux sous l'eau, le p&egrave;re Lolo ! L&agrave;, on a remport&eacute; la palme !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:27:26", 
+            "slug": "attention-un-nouveau-chef-ca-pue", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:28:10", 
+            "title": "Une belle de Bagnoles !", 
+            "region": 10, 
+            "tags": "concours", 
+            "author_nickname": null, 
+            "content": "<p><span>Celle-ci est bien car&eacute;n&eacute;e, pourvue d'une calandre qui ne passe pas inaper&ccedil;ue et beaucoup d'hommes l'astiquerait volontiers ! Ag&eacute;e de 19 ans, la nouvelle Miss Orne 2008 a &eacute;t&eacute; &eacute;lue samedi soir &agrave; Bellou en Houlme. Sa prochaine &eacute;tape, vous vous en doutez, est le d&eacute;fil&eacute; du concours Miss France qui aura lieu en d&eacute;cembre. La belle blonde s'appelle Laura Maurey, habite Bagnoles de l'Orne et est dot&eacute;e d'un physique qui vaut de l'Orne ! Il ne reste plus qu'aux paparazzi &agrave; aller fouiller dans le pass&eacute; de la donzelle pour voir si une ou deux photos de cul ne tra&icirc;neraient pas dans les tiroirs d'un photographe du coin...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:28:10", 
+            "slug": "une-belle-de-bagnoles", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:29:09", 
+            "title": "Gu\u00e9thary, Gu\u00e9tharyiiiiiiiiiih, sous ton soleeeeeil...", 
+            "region": 11, 
+            "tags": "histoire", 
+            "author_nickname": null, 
+            "content": "<div class=\"TEXTE\"><span>\r\n<p>Non mais c'&eacute;tait quoi ce boxon ! Alors moi, j'me suis point&eacute; &agrave; Gu&eacute;thary, pensant couler des jours paisibles, loin des affres de la ville, et voil&agrave; que vendredi soir, sans crier gare, une bande de Mexicains, pas des gai-tar&eacute;s, s'est mis dans l'id&eacute;e d'entonner &agrave; tue-t&ecirc;te la c&eacute;l&egrave;bre chanson de Mariano. Coiff&eacute;s d'un sombrero et habill&eacute;s couleur locale, je me suis dit, le temps d'aller faire Titi-caca (c'est pas vraiment au m&ecirc;me endroit mais bon...), et &ccedil;a sera pli&eacute; ! Dans To-luca, je pourrai dormir. Grave erreur ! Z'&eacute;taient tous burritos, la Pina Colada et Margarita aidant, et z'ont fini tr&egrave;s tard dans la nuit ! Et j'me disais, c'est Can-cun patrouille va d&eacute;barquer ?</p>\r\n</span></div>\r\n<h4></h4>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:29:09", 
+            "slug": "guethary-guetharyiiiiiiiiiih-sous-ton-soleeeeeil", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:29:53", 
+            "title": "Ils sortaient peut-\u00eatre de Montbard ?", 
+            "region": 12, 
+            "tags": "accident", 
+            "author_nickname": null, 
+            "content": "<p><span>Boudiou ! Ch'sais pas ce qui nous est arriv&eacute;, mais nous avons &eacute;t&eacute; secou&eacute;s s&eacute;v&egrave;rement ! Papy et moi &eacute;tions tranquillement en train de rouler &agrave; bord de notre camionnette C5 (ndlr : Citro&euml;n) sur la D905 qui relie Marmagne &agrave; Fain L&egrave;s Montbard, lorsque le choc s'est produit. Il semblerait qu'on se soit mang&eacute; une Seat Ibiza mais on a vraiment du mal &agrave; se souvenir... Tout ce qu'on sait pour le moment, c'est qu'on a d&ucirc; &ecirc;tre d&eacute;sincarc&eacute;r&eacute;, et qu'on a les jambes en compote ! L&agrave;, je vous &eacute;cris de mon lit d'h&ocirc;pital &agrave; Semur en Auxois, il fait beau dehors, Papy est &agrave; c&ocirc;t&eacute; de moi, et on est tous les deux dans le p&acirc;t&eacute;... </span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:29:53", 
+            "slug": "ils-sortaient-peut-etre-de-montbard", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:30:36", 
+            "title": "Un chameau en Auvergne !", 
+            "region": 13, 
+            "tags": "kamel", 
+            "author_nickname": null, 
+            "content": "<p><span>Salut, moi c'est Kamel ! Kamel Ouali ! Ca vous dit toujours rien ?! La <em>Star Ac'</em> ! Les mises en sc&egrave;ne improbables, les chor&eacute;graphies du futur ! Ah &ccedil;a y est, l&agrave; tout de suite, &ccedil;a vous parle... Alors, en fait, j'ai vu que les com&eacute;dies musicales, &ccedil;a ramassait un max de thunes et j'me suis dit : <em>\"Kamel, pourquoi pas toi ?\"</em>. Ainsi, apr&egrave;s avoir dirig&eacute; les danseurs des autres com&eacute;dies musicales, j'ai d&eacute;cid&eacute; d'en faire une moi aussi. Et fin 2009, chers clermontois, je me pointe au Z&eacute;nith d'Auvergne ! J'ai rep&eacute;r&eacute; le coin, la ville de Clermont-Ferrand, les volcans, j'ai demand&eacute; les clefs au p&acirc;tre et vous allez bouffer de la Reine d'Egypte ! L&agrave;, j'ai eu le nez !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:30:36", 
+            "slug": "un-chameau-en-auvergne", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:31:18", 
+            "title": "Le chasseur rate sa cible...", 
+            "region": 14, 
+            "tags": "chasse", 
+            "author_nickname": null, 
+            "content": "<p><span>Eh ben moi, j'&eacute;tais en train de me promener dimanche matin, aux alentours de 10h30 &agrave; Kerlouan, lorsque je me suis pris une rafale de plombs dans le buffet ! Et &ccedil;a venait d'un chasseur &acirc;g&eacute; de 66 ans, \"exp&eacute;riment&eacute;\" qu'ils disent, et&nbsp;qui aurait rat&eacute; la perdrix sur laquelle il tirait. Et bien &eacute;videmment, j'&eacute;tais dans le champ... Ca fait un moment que j'entend parler d'accidents de chasse (on se demande bien o&ugrave; ?) et l&agrave;, cette fois-ci, ce fut pour moi ! Du coup, j'ai eu droit &agrave; un bapt&ecirc;me de l'air en h&eacute;lico au dessus du Finist&egrave;re-Nord pour rejoindre l'h&ocirc;pital de Brest... Le chasseur est dans la ligne de mire de la justice...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:31:18", 
+            "slug": "le-chasseur-rate-sa-cible", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:31:50", 
+            "title": "La chasse, \u00e7a co\u00fbte Cher !", 
+            "region": 15, 
+            "tags": "chasse", 
+            "author_nickname": null, 
+            "content": "<p><span>Dans le Cher, on est 14.000 chasseurs ! Imaginez un peu le nombre de passionn&eacute;s qui tirent &agrave; droite &agrave; gauche ! Mais attention, la chasse n'est pas &agrave; la port&eacute;e de toutes les bourses ! Faut les avoir bien remplies, croyez-moi ! Et alors ! Comptez le prix du permis de chasse d&eacute;partemental, environ 134 &euro;, auquel vous ajoutez 500 &euro; de v&ecirc;tements et 1.200 &euro; de fusil, et &ccedil;a vous donne une id&eacute;e du prix de notre passion... Bon, quand on aime, on ne compte pas, mais sachez quand m&ecirc;me qu'avant de partir &agrave; la chasse, vous risquez de perdre votre place d'une part, mais surtout la vie aussi ! Ca fait cher pour tirer quelques coups...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:31:50", 
+            "slug": "la-chasse-ca-coute-cher", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:32:31", 
+            "title": "Pouliche en lice", 
+            "region": 16, 
+            "tags": "concours", 
+            "author_nickname": null, 
+            "content": "<p><span>Qu'elle est belle ! Elle habite Saint Quentin les Marais et vient de remporter le concours de beaut&eacute; dans la cat&eacute;gorie jeunes espoirs. De la graine de Miss France, avec son joli dos, son allure impressionnante de puissance, et elle est si bien membr&eacute;e... Eh oui ! Ros&eacute;e des Marais, c'est son p'tit nom, est une pouliche de 3 ans qui a remport&eacute; le concours national de trait ardennais. Elle fait la fiert&eacute; de Laurent Gauvain, son propri&eacute;taire... Et ce cheval alezan va avoir une carri&egrave;re bien remplie, puisque Ros&eacute;e des Marais va &ecirc;tre utilis&eacute;e pour la reproduction ! Puis lorsque la croupe est pleine, on remplit &agrave; nouveau...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:32:31", 
+            "slug": "pouliche-en-lice", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:33:20", 
+            "title": "Des CRS en ligne de mire...", 
+            "region": 17, 
+            "tags": "police", 
+            "author_nickname": null, 
+            "content": "<p><span>En fait, on &eacute;tait avec les gars dans le car des Cresses, avenue de la Lib&eacute;ration &agrave; Bastia, dans la nuit de samedi &agrave; dimanche, lorsqu'on a vu ces deux petits cons sur leurs deux-roues ! Ah ben ils ont eu chaud les mecs ! On aurait pu sortir les p&eacute;tards et les plomber ! De retour de la f&ecirc;te foraine o&ugrave; ils venaient de gagner des pistolets en plastique, ils ont eu la bonne id&eacute;e de nous viser en passant devant nous ! R&eacute;sultat, on les a mis en garde &agrave; vue, mais ils ont &eacute;chapp&eacute;, au pire ces gamins de 18 piges ! Moi, j'ai failli d&eacute;gainer ! Ah les jeunes de maintenant, ils n'ont pas beaucoup de plomb dans la cervelle, mais l&agrave;, ils ont bien failli en prendre !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:33:20", 
+            "slug": "des-crs-en-ligne-de-mire", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:34:17", 
+            "title": "Il a bien failli ne pas passer le cap des 2 ans !", 
+            "region": 18, 
+            "tags": "accident", 
+            "author_nickname": null, 
+            "content": "<p><span>Samedi soir, &agrave; Belfort, aux alentours de 19h, un b&eacute;b&eacute; de 22 mois a eu la mauvaise id&eacute;e d'escalader des objets et se d&eacute;fenestrer du 3&egrave;me &eacute;tage de son immeuble, boulevard Renaud de Bourgogne. Peut-&ecirc;tre a-t-il tent&eacute; de v&eacute;rifier la th&eacute;orie de Newton, nous l'ignorons encore, mais force est de constater qu'Isaac avait raison ! Il s'est &eacute;cras&eacute; 3 &eacute;tages plus bas, et ne doit pas &ecirc;tre tr&egrave;s loin du record de fractures aux membres et au visage. Malgr&eacute; tout, il s'en sort bien puisque son pronostic vital n'est pas engag&eacute;. Il a &eacute;t&eacute; transf&eacute;r&eacute;, ironie du sort, au CHU de Hautepierre...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:34:17", 
+            "slug": "il-a-bien-failli-ne-pas-passer-le-cap-des-2-ans", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:34:53", 
+            "title": "Rachida attaque les mineurs !", 
+            "region": 19, 
+            "tags": "dati", 
+            "author_nickname": null, 
+            "content": "<p><span>Rassurez-vous, Rachida ch&eacute;rie ne fait pas du d&eacute;tournement de mineurs, mais plut&ocirc;t de l'incarc&eacute;ration. Notre ministre qui en a plein la jupe est bien d&eacute;cid&eacute;e &agrave; donner un monde meilleur &agrave; son futur lardon. Et pour &ccedil;a, il faut s&eacute;vir ! Serrer les boulons ! Elle a d&eacute;barqu&eacute; &agrave; Beauvais en fin de semaine derni&egrave;re dans un centre d'insertion, qui devrait permettre aux d&eacute;linquants mineurs de r&eacute;int&eacute;grer le milieu scolaire ou professionnel. Sa politique ? Infraction = r&eacute;ponse p&eacute;nale ! Et en Picardie, le taux de r&eacute;ponses p&eacute;nales frise les 90%. Le coup de grisou de Rachida ch&eacute;rie va faire p&acirc;lir les mineurs !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:34:53", 
+            "slug": "rachida-attaque-les-mineurs", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:35:34", 
+            "title": "Ciel charg\u00e9 sur Poitiers", 
+            "region": 20, 
+            "tags": "sport", 
+            "author_nickname": null, 
+            "content": "<p><span>Des heures de bouchons pour assister &agrave; des heures de vol ! C'est ce qu'ont d&ucirc; subir tous les passionn&eacute;s d'a&eacute;ronautique pour rejoindre l'a&eacute;roport de Poitiers-Biard. En effet, hier apr&egrave;s-midi, pas moins de 15.000 visiteurs se sont bouscul&eacute;s pour assister &agrave; la cl&ocirc;ture du salon A&eacute;rotop. Un meeting dont la vedette fut sans conteste le Mirage 2000, qui faisait d'ailleurs ses adieux, puisqu'il sera remplac&eacute; l'an prochain par le Rafale. Le pilote de l'avion de chasse a d'ailleurs ponctu&eacute; sa prestation d'un passage dans la foule &agrave; plus de 1.000 km/h ! Impressionnant ! De la haute voltige supersonique...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:35:34", 
+            "slug": "ciel-charge-sur-poitiers", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:36:30", 
+            "title": "Monsieur D is back !", 
+            "region": 21, 
+            "tags": "greve", 
+            "author_nickname": null, 
+            "content": "<p><span>Ah non ! On ne veut pas de lui ! Okay, on est l&agrave; pour sauver des gens, les soigner et tout et tout... Mais pas non plus &agrave; nos risques et p&eacute;rils ! Le gonze mesure 2m04, p&egrave;se 140 kg, a une force de taureau et ne supporte pas la frustration... Alors merci ! Sans fa&ccedil;on ! Il y a 5 ans, il cassait tout, y compris des soignants ! Une fois, on s'est mis &agrave; 19 pour le ma&icirc;triser ! Une autre, ce sont deux infirmi&egrave;res qui ont saut&eacute; par la fen&ecirc;tre pour lui &eacute;chapper... Non, non, non ! Nous ne voulons pas de Monsieur D chez nous ! Gr&egrave;ve illimit&eacute;e &agrave; la Conception &agrave; Marseille ! Trouvez une autre solution... Un syst&egrave;me D !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:36:30", 
+            "slug": "monsieur-d-is-back", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:39:07", 
+            "title": "Un chasseur bourr\u00e9 ?", 
+            "region": 22, 
+            "tags": "accident", 
+            "author_nickname": null, 
+            "content": "<p><span>L&agrave;, il a mis toutes les chances de son c&ocirc;t&eacute;, le gonze ! Deux fr&egrave;res d'une cinquantaine d'ann&eacute;es habitant &agrave; Saint Bonnet le Courreau d&eacute;cident hier d'aller chasser. L'un des deux frangins, visiblement press&eacute; d'aller d&eacute;souder du gibier, a une bonne quanrataine de m&egrave;tres d'avance. C'est &agrave; ce moment l&agrave; que le trainard, encore sur le chemin, juste devant la maison, glisse et se casse la gueule. Dans sa chute, le coup part et tue son fr&eacute;rot, 40 m plus loin souvenez-vous, d'une balle en pleine t&ecirc;te ! R&eacute;sumons : un mec bourr&eacute;, arm&eacute; d'un fusil se vautre, tire involontairement, et explose le caisson de son fr&eacute;rot &agrave; une telle distance ?! Chance ou pas de chance ?</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:39:07", 
+            "slug": "un-chasseur-bourre", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:40:00", 
+            "title": "On appelle \u00e7a une d\u00e9rouill\u00e9e !", 
+            "region": 23, 
+            "tags": "sport", 
+            "author_nickname": null, 
+            "content": "<p><span>Super, les gars ! Apr&egrave;s notre d&eacute;faite contre la Martinique dans cette Coupe de l'Outre Mer, la rencontre contre la Nouvelle-Cal&eacute;donie s'est plut&ocirc;t bien pass&eacute;e. L&agrave;, vous les avez litt&eacute;ralement ratatin&eacute;s ! 4-0 ! Les Polyn&eacute;siens n'ont pas vu le jour ! Maintenant, notre sort est entre les mains du destin ! Ben oui, il faudrait que les Martiniquais, qui nous ont battus je vous le rappelle, perdent contre la Nouvelle-Cal&eacute;donie, ceux qu'on vient de tauler. Autant vous dire que c'est pas gagn&eacute; ! Donc, si parmi vous, vous avez de la famille qui pratique le vaudou, c'est peut-&ecirc;tre notre seule chance d'&ecirc;tre qualifi&eacute;s ! S'effondrer si pr&egrave;s du but... C'est dommage !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:40:00", 
+            "slug": "on-appelle-ca-une-derouillee", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:40:54", 
+            "title": "En selle !", 
+            "region": 24, 
+            "tags": "police", 
+            "author_nickname": null, 
+            "content": "<p><span>Garde &agrave; vouuuuuus ! Repos ! Je me pr&eacute;sente : je suis l'adjudant Pascal Goffette, et je viens d'&ecirc;tre nomm&eacute; &agrave; la t&ecirc;te de la Brigade motoris&eacute;e (BMO) de Saint Laurent du Maroni, qui va remettre de l'ordre sur le territoire ! Je sais que nous ne sommes que cinq motards, mais on fera ce qu'on peut, avec les moyens du bord ! On va s'occuper de tous ces d&eacute;linquants de la route ! Notre mission principale, les gars : le non port du casque et l'absence d'immatriculation pour les scooters ! Et si on a encore du temps, on s'occupera des probl&egrave;mes d'assurances des v&eacute;hicules ! En avant ! Marche ! Euh... pardon... Roule !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:40:54", 
+            "slug": "en-selle", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:41:29", 
+            "title": "Une CHU-te de cheval", 
+            "region": 25, 
+            "tags": "chute", 
+            "author_nickname": null, 
+            "content": "<p><span>Lorsque vous &ecirc;tes cavalier, vous avez beau &ecirc;tre le prince ou le King Charle, vous n'en &ecirc;tes pas pour autant &agrave; l'abri des chutes ! M&ecirc;me Superman ne s'en est pas sorti ! Et cette femme d'une cinquantaine d'ann&eacute;es, partie en balade &eacute;questre hier au Fran&ccedil;ois, a s&eacute;v&egrave;rement morfl&eacute; ! En pleine excursion, son cheval s'est brusquement cabr&eacute; puis s'est &eacute;cras&eacute; sur sa cavali&egrave;re. La pauvre femme a &eacute;t&eacute; transport&eacute; dans un &eacute;tat critique au CHU de la Meynard. Elle est atteinte d'un traumatisme cr&acirc;nien s&eacute;rieux, et de troubles respiratoires. En tout cas, une chose est s&ucirc;re, ce n'est pas demain qu'elle retournera &agrave; la selle !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:41:29", 
+            "slug": "une-chu-te-de-cheval", 
+            "issues": [
+                3
+            ]
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:42:15", 
+            "title": "Inch Halal !", 
+            "region": 26, 
+            "tags": "picard", 
+            "author_nickname": null, 
+            "content": "<p><span>C'est comme &ccedil;a ! Vous les chr&eacute;tiens, vous avez Picard, et nous les musulmans, maintenant nous avons Al Halal ! Alors qu'&agrave; Saint Denis, ce magasin de surgel&eacute;s exclusivement halal existe depuis bient&ocirc;t un an, Cr&ecirc;te d'Or a lanc&eacute; une marque de volaille pour nous satisfaire, nous, les 70.000 musulmans qui vivent sur l'&icirc;le ! Et comme un cadeau n'arrive jamais seul (le proverbe se d&eacute;cline aussi au Maghreb), la banque BFCOI vient de sortir un support d'assurance vie 100% charia compatible ! Et l'id&eacute;e fait un tabac ! D&eacute;j&agrave; plus de 15 millions d'euros r&eacute;colt&eacute;s ! Halal-a ! Moi, tchador...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-29", 
+            "creation_date": "2008-10-01 23:42:15", 
+            "slug": "inch-halal", 
+            "issues": [
+                3
+            ]
+        }
     }
 ]

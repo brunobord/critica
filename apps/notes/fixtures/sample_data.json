@@ -1,0 +1,502 @@
+[
+    {
+        "pk": 1, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:23:11", 
+            "title": "Un roitelet \u00e0 New York", 
+            "tags": "national, sarkozy, new_york", 
+            "author_nickname": null, 
+            "content": "<p>Entre deux joggings et le shopping sur Madison Avenue, Nicolas n'a pas une minute &agrave; lui. Heureusement, Belle des Chants est &agrave; ses c&ocirc;t&eacute;s, avec son maquilleur, sa coiffeuse et son paparazzo pr&eacute;f&eacute;r&eacute;, Pascal Rostain. Lors d'un d&icirc;ner (de Gala, bien s&ucirc;r) Notre Pr&eacute;sident y est all&eacute; de son analyse &eacute;conomique : <em>\"Aujourd'hui, des millions de gens &agrave; travers le monde ont peur pour leurs &eacute;conomies&hellip; Notre devoir est de leur apporter des r&eacute;ponses&hellip; Il faut pouvoir expliquer qui est responsable du d&eacute;sastre et que ceux qui sont responsables soient sanctionn&eacute;s et rendent des comptes.\"</em> Est-ce vraiment leur pr&eacute;occupation principale ?</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:23:11", 
+            "type": 1, 
+            "slug": "un-roitelet-a-new-york", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:25:27", 
+            "title": "La marche de Rudetzki", 
+            "tags": "national", 
+            "author_nickname": null, 
+            "content": "<p>Le 23 d&eacute;cembre 1983, Fran&ccedil;oise Rudetzki f&ecirc;te ses 10 ans de mariage au Grand V&eacute;four, quand une bombe d'Action directe explose, la blessant gravement aux jambes ; elle subira 60 op&eacute;rations et ne marchera dor&eacute;navant qu'aid&eacute;e d'une canne. Face &agrave; l'indiff&eacute;rence, elle monte SOS Attentats, regroupant quelques 3.000 victimes (rue Marbeuf, rue des Rosiers, Orly, Galeries Lafayette, rue de Rennes, Gibert-Jeune et Claridge). Gr&acirc;ce &agrave; elle, le statut de victime civile de guerre sera instaur&eacute; et un fonds de garantie cr&eacute;&eacute;. Toujours gr&acirc;ce &agrave; elle, SOS Attentats sera autoris&eacute; &agrave; se porter partie civile. Estimant sa t&acirc;che accomplie, et un peu &eacute;coeur&eacute;e aussi face &agrave; l'inaction des pouvoirs publics, elle vient de dissoudre le coeur gros son association. Chapeau et merci, Madame.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:25:27", 
+            "type": 6, 
+            "slug": "la-marche-de-rudetzki", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:26:47", 
+            "title": "Le journal de Tonton", 
+            "tags": "national", 
+            "author_nickname": null, 
+            "content": "<p><span style=\"color: red;\">Si je me passionne pour le congr&egrave;s de Reims ? Non, pas du tout. J'ai m&ecirc;me l&eacute;g&egrave;rement la trouille que cela vire &agrave; la Foire du tr&ocirc;ne, ce qui en cette ville serait somme toute normal. Que voulez-vous, ces gens-l&agrave; ne s'aiment pas. Et faute d'un leader dot&eacute; d'un charisme exceptionnel, d'une intelligence hors du commun, quelqu'un comme moi, quoi, chacun se monte le bourrichon et se croit choisi par le Cr&eacute;ateur pour sauver la France. C'est d'un risible ! Avoir &agrave; choisir entre Delano&euml;, Aubry et Royal, c'est d&eacute;solant. Et pendant ce temps-l&agrave;, que fait mon Jospin ? O&ugrave; est-il pass&eacute;, le tristounet ? Pile quand on aurait eu besoin de lui. Tontonnement v&ocirc;tre.</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:26:47", 
+            "type": 7, 
+            "slug": "le-journal-de-tonton", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:27:52", 
+            "title": "Le d\u00e9ficit de l'Etat se creuse davantage", 
+            "tags": "national", 
+            "author_nickname": null, 
+            "content": "<p>Les chiffres sont implacables. Et c'est notre confr&egrave;re des <em>Echos</em> qui les r&eacute;v&egrave;lent : <em>\"Le d&eacute;ficit du budget de l'Etat va fortement se creuser cette ann&eacute;e.\" </em>Renseignements pris, il s'&eacute;levait l'an pass&eacute; &agrave; 38,4 milliards d'euros. Une paille ! Maintenant, attachez vos ceintures : il devrait s'&eacute;lever, &agrave; la fin de cette ann&eacute;e, &agrave;&hellip; 47 ou 48 milliards. Naturellement, ce n'est pas la faute des politiques, ils font ce qu'ils peuvent, vous savez et sont plein de bonne volont&eacute;, mais de \"la crise\", qui entra&icirc;ne moins de rentr&eacute;es fiscales. Un cr&eacute;tin des Alpes r&eacute;pondrait que s'il y a moins de rentr&eacute;es, c'est que les Fran&ccedil;ais gagnent moins d'argent. A part &ccedil;a, Nicolas a per&ccedil;u son nouvel avion.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:27:52", 
+            "type": 8, 
+            "slug": "le-deficit-de-letat-se-creuse-davantage", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:28:50", 
+            "title": "Au S\u00e9nat, on sort les \u00e9p\u00e9es", 
+            "tags": "national, raffarin", 
+            "author_nickname": null, 
+            "content": "<p>Avec le renouvellement partiel du S&eacute;nat, on y voit d&eacute;sormais plus clair. Premier &eacute;v&eacute;nement, Jean-Pierre Raffarin a annonc&eacute; son intention de se pr&eacute;senter au plateau. Comme scoop, il y a mieux. Deuxi&egrave;me info, Christian Poncelet ne se repr&eacute;sentera pas. En guise de remerciement pour sa brillante prestation, la deuxi&egrave;me Chambre lui a m&ecirc;me accord&eacute; d'occuper &agrave; vie son appartement de 200m2 dans la luxueuse rue Bonaparte, o&ugrave; il est install&eacute; (en plus de sa r&eacute;sidence du S&eacute;nat) depuis 2004. On sait bien que le terme \"&agrave; vie\", quand on a 80 ans, est assez r&eacute;ducteur, mais on se demande la raison de ce passe-droit. Indigne ? Scandaleux ? Les deux.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:28:50", 
+            "type": 9, 
+            "slug": "au-senat-on-sort-les-epees", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:29:56", 
+            "title": "Nicolas a amen\u00e9 Darcos \u00e0 NY. Un signe ?", 
+            "tags": "national, darcos, education, fillon, sarkozy", 
+            "author_nickname": null, 
+            "content": "<p>Curieux, &ccedil;a : Xavier Darcos (et Madame), notre ministre de l'Education nationale, est du voyage pr&eacute;sidentiel &agrave; New York. Alors qu'aucun motif officiel ne justifie sa pr&eacute;sence, si ce n'est une vague signature concernant la mise en place du Bac franco-am&eacute;ricain au Lyc&eacute;e fran&ccedil;ais de NY et la visite d'&eacute;coles en Louisiane et en Nouvelle-Orl&eacute;ans. Ce qui ressort du foutage de gueule. Mais comme rien n'est anodin en Sarkozie, on peut en conclure que Xavier, consid&eacute;r&eacute; comme le meilleur (ou le moins mauvais) ministre de la classe, passe d&eacute;sormais comme le favori pour succ&eacute;der &agrave; Fillon. Sans doute dans les premiers jours de janvier.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:29:56", 
+            "type": 10, 
+            "slug": "nicolas-a-amene-darcos-a-ny-un-signe", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:31:53", 
+            "title": "Les petites phrases de la semaine", 
+            "tags": "national, de_villiers, mpf, borloo, sarkozy", 
+            "author_nickname": null, 
+            "content": "<p>Commen&ccedil;ons par le vicomte&nbsp;Philippe de Villiers qui lors de son Universit&eacute; d'&eacute;t&eacute; du MPF, qui s'est tenue &agrave; Paris ce week-end, y est all&eacute; de sa saillie concernant Jean-Louis Borloo et sa taxe sur les gobelets en plastique : <em>\"Borloo, il s'en fout, lui, il boit au goulot !\"</em> Ce qui est d'une kolossale finesse et enrichit le d&eacute;bat politique. Dans le m&ecirc;me genre et dans le m&ecirc;me temps, cette fois &agrave; Bercy, le groupe de rap NTM (\"Nique ta m&egrave;re\" pour ceux qui auraient oubli&eacute;) a os&eacute; taxer Carlita de <em>\"tassep&eacute;\"</em> (p&eacute;tasse en verlan), tandis que dans la salle retentissaient les cris <em>\"Nique Sarko\".</em> On attend les poursuites pour injures au chef de l'Etat. Et &agrave; Belle des Chants.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:31:53", 
+            "type": 2, 
+            "slug": "les-petites-phrases-de-la-semaine", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:33:06", 
+            "title": "MAM porte plainte contre Achoui", 
+            "tags": "achoui, national, assassinat", 
+            "author_nickname": null, 
+            "content": "<p>Karim Achoui (voir article Soci&eacute;t&eacute;)&nbsp;est cet avocat sulfureux qui avait &eacute;t&eacute; victime d'une tentative d'assassinat en juin 2007. Teigneux comme pas permis, il s'est mis &agrave; la recherche des auteurs du forfait, et dans une interview &agrave; <em>France Soir</em> le 10 septembre dernier, il citait nomm&eacute;ment le tireur, Rudy Terranova et un commissaire de la BREC, la Brigade r&eacute;gionale d'enqu&ecirc;te et de coordination, de Versailles, comme &eacute;tant le commanditaire. Remont&eacute;e comme pas deux, MAM vient de porter plainte contre le bavard, pour <em>\"diffamation envers la Police nationale\". </em>Une merveilleuse rampe de lancement pour le bouquin d'Achoui, qui sort dans deux jours.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:33:06", 
+            "type": 3, 
+            "slug": "mam-porte-plainte-contre-achoui", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:34:15", 
+            "title": "Une autre motion au PS", 
+            "tags": "royal, national, ps, politique, ecologie", 
+            "author_nickname": null, 
+            "content": "<p>C'est vrai, &ccedil;a, on ne parle que des motions de S&eacute;gol&egrave;ne, de Bertrand ou de Martine. Mais dans l'ombre, &ccedil;a remue, &ccedil;a bouge, &ccedil;a ferraille. C'est ainsi qu'un certain \"p&ocirc;le &eacute;cologique<span>&nbsp; </span>du PS\", inconnu jusqu'alors au bataillon, entend d&eacute;poser au congr&egrave;s de Reims une <em>\"motion de conviction\"</em> (comme si les autres n'en &eacute;taient pas). Les signataires ? Hormis Christophe Caresche, d'illustres inconnus : Nicole Bricq, Patrice Deghilem, Genevi&egrave;ve Gaillard, Jean Launay, Philippe Plisson, Philippe Tourtelier, etc. Si l'on sait bien compter, avec l'option M&eacute;lanchon encore possible&nbsp;et le courant Utopia (un remarquable 1,2% en 2005), cela nous fera 6 motions &agrave; Reims. 5 de trop. Bertrand, tu peux dormir tranquille !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:34:15", 
+            "type": 4, 
+            "slug": "une-autre-motion-au-ps", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:35:16", 
+            "title": "Perpignan et P\u00e9rigueux invalid\u00e9es ?", 
+            "tags": "national, perpignan, elections, darcos", 
+            "author_nickname": null, 
+            "content": "<p>C'est aujourd'hui que l'on saura si les &eacute;lections des maires de Perpignan et de P&eacute;rigueux seront invalid&eacute;es. Dans la cit&eacute; catalane, un homme avait &eacute;t&eacute; trouv&eacute; avec des bulletins de vote plein ses chaussettes, alors que le r&eacute;sultat s'&eacute;tait jou&eacute; &agrave; quelques voix. A P&eacute;rigueux, 113 voix s&eacute;paraient Xavier Darcos de son adversaire socialiste Michel Moyrand et il avait &eacute;t&eacute; prouv&eacute; qu'un tract diffamatoire avait &eacute;t&eacute; distribu&eacute;, des aides financi&egrave;res propos&eacute;es &agrave; des indigents en &eacute;change de leur vote. Bref, la ratatouille &eacute;lectoraliste dans toute sa splendeur. Mais si on revote &agrave; P&eacute;rigueux et que Darcos, le nouveau chouchou de Nicolas gagne, Matignon lui tendra les bras.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:35:16", 
+            "type": 5, 
+            "slug": "perpignan-et-perigueux-invalidees", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:37:03", 
+            "title": "Des scores dignes d'une dictature", 
+            "tags": "etranger, poutine, medvedev, georgie", 
+            "author_nickname": null, 
+            "content": "<p><span>Poutine et Medvedev ont atteint des scores de popularit&eacute; records. Apr&egrave;s le conflit arm&eacute; en G&eacute;orgie, ils enregistraient respectivement des cotes &agrave; 88% et 83%. Et c'est surtout la marionnette qui en b&eacute;n&eacute;ficie le plus, puisqu'elle a gagn&eacute; 10 points en un mois. Mais dites-moi, ce sont des chiffres dignes d'une vraie dictature, tout &ccedil;a<span>&nbsp; </span>! Ah oui, c'est vrai, excusez-moi, j'avais momentan&eacute;ment oubli&eacute; que Poutine &amp; Co n'avaient certes pas (encore) le titre respectable de dictateurs, mais que cela ne les emp&ecirc;chait pas de se comporter comme tels.</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:37:03", 
+            "type": 1, 
+            "slug": "des-scores-dignes-dune-dictature", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:38:09", 
+            "title": "Avis \u00e0 tous les patrons occidentaux", 
+            "tags": "etranger, pdg, automobile, inde", 
+            "author_nickname": null, 
+            "content": "<p><span>Le PDG d'une filiale indienne d'un &eacute;quipementier automobile italien a &eacute;t&eacute; lynch&eacute; &agrave; mort par des dizaines d'anciens employ&eacute;s, pas contents d'avoir &eacute;t&eacute; licenci&eacute;s. Le PDG a &eacute;t&eacute; mortellement battu en pleine journ&eacute;e, sans que personne n'intervienne, dans la banlieue industrielle de New Delhi, non loin du si&egrave;ge de la soci&eacute;t&eacute;. Aux Occidentaux qui voudraient se faire du pognon sur le dos des Indiens, vous savez maintenant que vous ne pouvez plus les exploiter ! Cela vous servira sans doute de le&ccedil;on !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:38:09", 
+            "type": 6, 
+            "slug": "avis-a-tous-les-patrons-occidentaux", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:39:18", 
+            "title": "Le journal de Georgie Deubeulyou", 
+            "tags": "etranger", 
+            "author_nickname": null, 
+            "content": "<p><span style=\"color: red;\"><em>Hey mon diary, tu devineras jamais &agrave; quel point Johnny-la-frite est stupid. Non seulement il se vante de poss&eacute;der 7 houses alors que la plupart de nos compatriotes ont perdu la leur - z'avaient qu'&agrave; avoir de meilleurs conseillers financiers, moi j'ai rien perdu par exemple ! - mais en plus le syndicat de l'automobile vient de r&eacute;v&eacute;ler que Johnny poss&egrave;de 13 voitures, dont plusieurs mod&egrave;les ne sont m&ecirc;me pas made in America ! Il veut les gagner ou quoi ces &eacute;lections ? Va falloir qu'il change de conseillers, c'est pas &agrave; moi que &ccedil;a serait arriver ce genre de choses. Because moi, j'ai les meilleurs conseillers du world, car je suis le meilleur President of the United States du monde !</em></span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:39:18", 
+            "type": 7, 
+            "slug": "le-journal-de-georgie-deubeulyou", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:40:25", 
+            "title": "Encore une boulette du gouvernement britannique", 
+            "tags": "etranger, britannique, poutine, elections", 
+            "author_nickname": null, 
+            "content": "<p><span>Le ministre de l'Economie britannique, Alistair Darling, ne va pas &ecirc;tre le ch&eacute;ri de ces compatriotes. Il a annonc&eacute; hier &agrave; la conf&eacute;rence travailliste qu'il fallait s'attendre &agrave; emprunter une route &eacute;conomique cahoteuse pour les mois &agrave; venir. Il a en plus d&eacute;clar&eacute; qu'il refusait d'abandonner la possibilit&eacute; d'une hausse des imp&ocirc;ts. Nos voisins britanniques vont raquer et &ccedil;a ne va s&ucirc;rement pas leur plaire ! D&eacute;j&agrave; que le boss Gordon Brown est loin d'&ecirc;tre au top dans les sondages - faudrait qu'il prenne des le&ccedil;ons avec Poutine &amp; Co ( voir Vous saviez ?) -, une telle annonce va encore faire chuter sa cote de popularit&eacute;. En m&ecirc;me temps, &ccedil;a fait d&eacute;j&agrave; un p'tit moment qu'il se d&eacute;brouille tr&egrave;s bien tout seul pour se tirer des balles dans le pied. C'est quand les prochaines &eacute;lections, d&eacute;j&agrave; ? </span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:40:25", 
+            "type": 8, 
+            "slug": "encore-une-boulette-du-gouvernement-britannique", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:41:33", 
+            "title": "Des CV excellents pour faire partie des Farc", 
+            "tags": "etranger, guerilleros, colombie, farcs", 
+            "author_nickname": null, 
+            "content": "<p><span>Encore un joli tr&eacute;sor de guerre pour l'arm&eacute;e colombienne. Elle a d&eacute;couvert dans un ordinateur portable, r&eacute;cup&eacute;r&eacute; apr&egrave;s des affrontements avec les Farc en f&eacute;vrier dernier, les CV de&hellip; 9.387 gu&eacute;rilleros ! Bonne pioche ! Forc&eacute;ment le parquet s'appr&ecirc;te &agrave; lancer des poursuites. Les documents contiennent non seulement des donn&eacute;es personnelles sur les combattants des Farc (noms, num&eacute;ros de pi&egrave;ces d'identit&eacute;, parcours acad&eacute;miques ou photos), mais aussi les alias et les fronts auxquels ils appartiennent - ou appartenaient ! Vous voyez, m&ecirc;me les Farc organisent des entretiens d'embauche : il faut d'ailleurs un bon CV pour pouvoir y rentrer !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:41:33", 
+            "type": 9, 
+            "slug": "des-cv-excellents-pour-faire-partie-des-farc", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:42:50", 
+            "title": "Les G\u00e9orgiens cherchent la petite b\u00eate russe", 
+            "tags": "etranger, georgie, russie", 
+            "author_nickname": null, 
+            "content": "<p><span>La G&eacute;orgie a d&eacute;clar&eacute; avoir shoot&eacute; un drone russe qui survolait son territoire - ils n'ont pas froid aux yeux, les G&eacute;orgiens ! La Russie n'a pas fait de commentaires et n'a pas (encore) envoy&eacute; quelques missiles - d'ailleurs, elle risque d'abord d'envoyer un missile sur la gueule des G&eacute;orgiens et puis de faire un commentaire ! Quant &agrave; la G&eacute;orgie, elle n'a pas fourni de preuves concernant&nbsp;ce drone abattu. Ca sert &agrave; quoi de faire de telles annonces sans preuves ? A &eacute;nerver les ours mal l&eacute;ch&eacute;s russes pour revoir les chars&nbsp;? Que d'la gueule, les G&eacute;orgiens !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:42:50", 
+            "type": 10, 
+            "slug": "les-georgiens-cherchent-la-petite-bete-russe", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:44:41", 
+            "title": "9.002 prisonniers non politiques lib\u00e9r\u00e9s ", 
+            "tags": "elections, etranger, birmanie", 
+            "author_nickname": null, 
+            "content": "<p><span>Dans un &eacute;lan de g&eacute;n&eacute;rosit&eacute; qu'on ne leur connaissait pas, la junte birmane a annonc&eacute; la&nbsp;lib&eacute;ration de&nbsp;9.002 prisonniers. Mais ce n'est pas innocent. En 2010 se tient un semblant d'&eacute;lections l&eacute;gislatives - honn&ecirc;tes, nous pr&eacute;cise le journal officiel New Light of Myanmar, mais bien s&ucirc;r&hellip; -, et les taulards pourront ainsi servir les int&eacute;r&ecirc;ts de la nation ! Faut pas se faire d'illusions pour autant, les prisonniers politiques, dont Aung San Suu Kyi, la dirigeante d'opposition assign&eacute;e &agrave; r&eacute;sidence, ne sont pas concern&eacute;s. <em>\"Pas suffisamment manipulables\"</em>, ont dit les militaires !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:44:41", 
+            "type": 2, 
+            "slug": "9002-prisonniers-non-politiques-liberes", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:46:04", 
+            "title": "Libres ou pas libres ? Pas libres, en fait", 
+            "tags": "etranger, soudan, egypte", 
+            "author_nickname": null, 
+            "content": "<p><span>Bon alors, ils sont libres ou pas les 19 touristes enlev&eacute;s vendredi au Soudan ? Le chef de la diplomatie &eacute;gyptienne a annonc&eacute; leur lib&eacute;ration en grandes pompe et devant Condoleezza Rice&hellip; avant de revenir sur ses d&eacute;clarations ! C'est bien de faire des annonces tonitruantes pour essayer d'impressionner Condie, mais il faut s'assurer de la v&eacute;racit&eacute; des informations. Or l'Italie et l'Allemagne, dont des citoyens font partie des otages, se sont empress&eacute;s de le faire. R&eacute;sultat : c'est m&ecirc;me pas vrai ! Condie devait &ecirc;tre super impressionn&eacute;e&hellip;</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:46:04", 
+            "type": 3, 
+            "slug": "libres-ou-pas-libres-pas-libres-en-fait", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:47:07", 
+            "title": "Karza\u00ef s'en va, les Talibans en profitent", 
+            "tags": "etranger, talibans", 
+            "author_nickname": null, 
+            "content": "<p><span>C'est bien connu, quand le chat dort, les souris dansent. Et les Talibans ont mis ce proverbe en pratique ! En l'absence d'Hamid Karzai, le pr&eacute;sident afghan en visite officielle aux States, ils en ont profit&eacute; pour lancer des attaques et enlever des personnes plus ou moins influentes. Depuis le d&eacute;part du pr&eacute;sident hier, un consul g&eacute;n&eacute;ral et 156 ouvriers ont &eacute;t&eacute; pris en otage. Sans oublier deux attaques qui auraient fait six victimes parmi les civils, et dix c&ocirc;t&eacute; arm&eacute;e. Le pire, c'est que ce n'est m&ecirc;me pas s&ucirc;r que les souris vont se calmer quand le chat reviendra !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:47:07", 
+            "type": 4, 
+            "slug": "karzai-sen-va-les-talibans-en-profitent", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-01 23:48:11", 
+            "title": "Le pirate, fils d'un\u2026 d\u00e9mocrate", 
+            "tags": "etranger, fbi, sarah_palin", 
+            "author_nickname": null, 
+            "content": "<p><span>Ca y est, ils l'ont trouv&eacute; ! Le FBI pense avoir mis la main sur le pirate qui a consult&eacute; la bo&icirc;te mail perso de Sarah Palin. Il s'agit d'un &eacute;tudiant de 20 ans, David Kernell. Quoi, mais ce n'est qu'un gamin ! Un sale gosse qui voulait faire une blague, en plus ! Et dire que le FBI a &eacute;t&eacute; sollicit&eacute;&hellip; Sauf que le p&egrave;re du sale gosse, un avocat, est un des repr&eacute;sentants d&eacute;mocrates de l'Etat du Tennessee et soutient Obama. Oups, la boulette ! En tout cas, le jeune pirate pourra compter sur son papounet pour le sortir de cette mauvaise passe. Ou pas !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-01 23:48:11", 
+            "type": 5, 
+            "slug": "le-pirate-fils-dun-democrate", 
+            "issues": [
+                1
+            ]
+        }
+    }
+]

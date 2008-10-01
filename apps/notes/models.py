@@ -257,8 +257,6 @@ class BaseNote(models.Model):
         * Save note
         
         """
-        if not self.id:
-            self.publication_date = datetime.date.today()
         self.slug = slugify(self.title)
         super(BaseNote, self).save()
 

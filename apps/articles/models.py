@@ -179,13 +179,10 @@ class BaseArticle(models.Model):
         """ 
         Object pre-saving operations:
         
-        * By default, sets publication date to today
         * Generates slug from title
         * Save article
         
         """
-        if not self.id:
-            self.publication_date = datetime.date.today()
         self.slug = slugify(self.title)
         super(BaseArticle, self).save()
 
