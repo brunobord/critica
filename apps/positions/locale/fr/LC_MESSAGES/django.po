@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-30 17:26+0200\n"
+"POT-Creation-Date: 2008-10-01 11:35+0200\n"
 "PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Poedit-Country: FRANCE\n"
 
 #: models.py:48 
-#: models.py:112
+#: models.py:113
 msgid "issue"
 msgstr "édition"
 
 #: models.py:49 
-#: models.py:113
+#: models.py:114
 msgid "category"
 msgstr "rubrique"
 
 #: models.py:50 
-#: models.py:115
+#: models.py:116
 msgid "position"
 msgstr "position"
 
@@ -40,14 +40,14 @@ msgstr "position de rubrique"
 msgid "category positions"
 msgstr "positions de rubrique"
 
-#: models.py:114
+#: models.py:115
 msgid "type"
 msgstr "type"
 
-#: models.py:124
+#: models.py:125
 msgid "note type position"
 msgstr "position des types de brèves"
 
-#: models.py:125
+#: models.py:126
 msgid "note type positions"
 msgstr "positions des types de brèves"

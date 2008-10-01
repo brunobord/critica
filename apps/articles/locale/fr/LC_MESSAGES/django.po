@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-29 12:18+0200\n"
+"POT-Creation-Date: 2008-10-01 11:33+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,55 +17,55 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:41
+#: admin.py:77
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:42
+#: admin.py:78
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:43
+#: admin.py:79
 msgid "Illustration"
 msgstr "Visuel"
 
-#: admin.py:44
+#: admin.py:80
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:59
+#: admin.py:93
 msgid "Publication"
 msgstr "Publication"
 
-#: admin.py:81 
+#: admin.py:115 
 #: models.py:143
 msgid "author"
 msgstr "auteur"
 
-#: admin.py:92 
+#: admin.py:126 
 #: models.py:144
 msgid "author nickname"
 msgstr "pseudonyme"
 
-#: admin.py:101 
+#: admin.py:135 
 #: models.py:149
 msgid "issues"
 msgstr "éditions"
 
-#: admin.py:111
+#: admin.py:145
 msgid "no opinion"
 msgstr "pas d'opinion"
 
-#: admin.py:112 
+#: admin.py:146 
 #: models.py:154
 msgid "opinion"
 msgstr "opinion"
 
-#: admin.py:121
+#: admin.py:155
 msgid "no publication date"
 msgstr "pas de date de publication"
 
-#: admin.py:124 
+#: admin.py:158 
 #: models.py:153
 msgid "publication date"
 msgstr "date de publication"
@@ -169,23 +169,23 @@ msgstr "exclusif"
 
 #: models.py:157
 msgid "Is featured?"
-msgstr "Est-il exclusif ?"
+msgstr "Est-il/elle exclusif ?"
 
 #: models.py:158
 msgid "ready to publish"
-msgstr "Prêt à être publié"
+msgstr "Prêt(e) à être publié(e)"
 
 #: models.py:158
 msgid "Is ready to be publish?"
-msgstr "Est-il prêt à être publié ?"
+msgstr "Est-il/elle prêt(e) à être publié(e) ?"
 
 #: models.py:159
 msgid "reserved"
-msgstr "Mis au marbre"
+msgstr "Mis(e) au marbre"
 
 #: models.py:159
 msgid "Is reserved?"
-msgstr "Mis au marbre"
+msgstr "Doit-il/elle mis(e) au marbre ?"
 
 #: models.py:160
 msgid "summary"
@@ -202,4 +202,3 @@ msgstr "article"
 #: models.py:235
 msgid "articles"
 msgstr "articles"
-

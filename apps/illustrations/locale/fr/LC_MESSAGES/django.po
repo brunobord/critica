@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-25 09:13+0200\n"
+"POT-Creation-Date: 2008-10-01 11:29+0200\n"
 "PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,15 +17,17 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:30
+#: admin.py:35 
+#: admin.py:81
 msgid "Illustration"
 msgstr "Visuel"
 
-#: admin.py:39
+#: admin.py:44
 msgid "Category"
 msgstr "Rubrique"
 
-#: models.py:72
+#: models.py:72 
+#: models.py:153
 msgid "submitter"
 msgstr "auteur"
 
@@ -33,31 +35,40 @@ msgstr "auteur"
 msgid "category"
 msgstr "rubrique"
 
-#: models.py:74
+#: models.py:74 
+#: models.py:154
 msgid "Please, select an image to upload"
 msgstr "Sélectionnez une image à télécharger"
 
-#: models.py:75
+#: models.py:75 
+#: models.py:155
 msgid "credits"
 msgstr "crédits"
 
-#: models.py:75
+#: models.py:75 
+#: models.py:155
 msgid "all rights reserved"
 msgstr "tous droits réservés"
 
-#: models.py:75 models.py:76
+#: models.py:75 
+#: models.py:76 
+#: models.py:155 
+#: models.py:156
 msgid "100 characters max."
 msgstr "100 caractères max."
 
-#: models.py:76
+#: models.py:76 
+#: models.py:156
 msgid "legend"
 msgstr "légende"
 
-#: models.py:77
+#: models.py:77 
+#: models.py:157
 msgid "creation date"
 msgstr "date de création"
 
-#: models.py:78
+#: models.py:78 
+#: models.py:158
 msgid "modification date"
 msgstr "date de modification"
 
@@ -69,11 +80,10 @@ msgstr "visuel"
 msgid "illustrations"
 msgstr "visuels"
 
-#: models.py:123
+#: models.py:167
 msgid "illustration of the day"
 msgstr "illustration du jour"
 
-#: models.py:124
+#: models.py:168
 msgid "illustrations of the day"
 msgstr "illustrations du jour"
-

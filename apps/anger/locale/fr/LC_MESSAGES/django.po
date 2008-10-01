@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-29 12:18+0200\n"
+"POT-Creation-Date: 2008-10-01 11:32+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,19 +17,19 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:25
+#: admin.py:29
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:26
+#: admin.py:30
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:27
+#: admin.py:31
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:42
+#: admin.py:46
 msgid "Publication"
 msgstr "Publication"
 

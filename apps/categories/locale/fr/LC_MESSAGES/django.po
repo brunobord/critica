@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 11:06+0200\n"
+"POT-Creation-Date: 2008-10-01 11:28+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -21,78 +21,70 @@ msgstr ""
 msgid "Slug"
 msgstr "URL"
 
-#: admin.py:39
+#: admin.py:40
 msgid "Default illustration"
 msgstr "Visuel par défaut"
 
-#: models.py:86
+#: models.py:84
 msgid "name"
 msgstr "nom"
 
-#: models.py:86
+#: models.py:84
 msgid "As short as possible."
 msgstr "Aussi court que possible."
 
-#: models.py:87
+#: models.py:85
 msgid "URL"
 msgstr "URL"
 
-#: models.py:88
+#: models.py:86
 msgid "description"
 msgstr "description"
 
+#: models.py:86
+msgid ""
+"A short description of the category. It will not be displayed on the website."
+msgstr ""
+"Une courte description de la rubrique. Ne sera pas affiché sur le site."
+
+#: models.py:87
+msgid ""
+"Please, upload an image for this category (it will be used as default "
+"category illustration)."
+msgstr ""
+"Téléchargez une image pour cette rubrique (elle sera utilisée comme visuel "
+"par défaut)."
+
 #: models.py:88
-msgid "A short description of the category. It will not be displayed on the website."
-msgstr "Une courte description de la rubrique. Ne sera pas affiché sur le site."
-
-#: models.py:89
-msgid "Please, upload an image for this category (it will be used as default category illustration)."
-msgstr "Téléchargez une image pour cette rubrique (elle sera utilisée comme visuel par défaut)."
-
-#: models.py:90
 msgid "credits"
 msgstr "crédits"
 
-#: models.py:90
+#: models.py:88
 msgid "all rights reserved"
 msgstr "tous droits réservés"
 
-#: models.py:90 models.py:91
+#: models.py:88 
+#: models.py:89
 msgid "100 characters max."
 msgstr "100 caractères max."
 
-#: models.py:91
+#: models.py:89
 msgid "legend"
 msgstr "légende"
 
-#: models.py:92
+#: models.py:90
 msgid "creation date"
 msgstr "date de création"
 
-#: models.py:93
+#: models.py:91
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:102 models.py:162
+#: models.py:100
 msgid "category"
 msgstr "rubrique"
 
-#: models.py:103
+#: models.py:101
 msgid "categories"
 msgstr "rubriques"
 
-#: models.py:161
-msgid "issue"
-msgstr "édition"
-
-#: models.py:163
-msgid "position"
-msgstr "position"
-
-#: models.py:172
-msgid "category position"
-msgstr "position d'une rubrique"
-
-#: models.py:173
-msgid "category positions"
-msgstr "positions des rubriques"

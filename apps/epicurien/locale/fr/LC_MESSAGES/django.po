@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-29 12:18+0200\n"
+"POT-Creation-Date: 2008-10-01 11:34+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -45,22 +45,22 @@ msgstr "nom"
 msgid "URL"
 msgstr "URL"
 
-#: models.py:55
+#: models.py:56
 msgid "article epicurien type"
 msgstr "type d'article épicurien"
 
-#: models.py:56
+#: models.py:57
 msgid "article epicurien types"
 msgstr "types d'article épicurien"
 
-#: models.py:121
+#: models.py:122
 msgid "type"
 msgstr "type"
 
-#: models.py:132
+#: models.py:133
 msgid "article epicurien"
 msgstr "article épicurien"
 
-#: models.py:133
+#: models.py:134
 msgid "articles epicurien"
 msgstr "articles épicurien"

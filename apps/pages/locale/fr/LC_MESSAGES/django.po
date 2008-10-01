@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-25 11:19+0200\n"
+"POT-Creation-Date: 2008-10-01 11:30+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,43 +17,48 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:33
-msgid "Publication"
-msgstr "Publication"
-
-#: models.py:53
-msgid "title"
-msgstr "titre"
-
-#: models.py:54
-msgid "slug"
+#: admin.py:39
+msgid "URL"
 msgstr "URL"
 
-#: models.py:55 
-#: models.py:75
+#: admin.py:50 
+#: models.py:77 
+#: models.py:102
 msgid "author"
 msgstr "auteur"
 
-#: models.py:56
+#: admin.py:61
+msgid "Publication"
+msgstr "Publication"
+
+#: models.py:78
+msgid "title"
+msgstr "titre"
+
+#: models.py:79
+msgid "slug"
+msgstr "URL"
+
+#: models.py:80
 msgid "creation date"
 msgstr "date de création"
 
-#: models.py:57
+#: models.py:81
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:58
+#: models.py:82
 msgid "published"
 msgstr "publiée"
 
-#: models.py:59
+#: models.py:83
 msgid "content"
 msgstr "contenu"
 
-#: models.py:63
+#: models.py:90
 msgid "page"
 msgstr "page"
 
-#: models.py:64
+#: models.py:91
 msgid "pages"
 msgstr "pages"
