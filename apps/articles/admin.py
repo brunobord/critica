@@ -9,7 +9,9 @@ from django.utils.translation import ugettext_lazy as _
 from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.articles.models import Article
 from critica.apps.users.models import UserNickname
+from critica.apps.categories.models import Category
 from critica.apps.illustrations.models import Illustration
+from critica.apps.articles import settings as articles_settings
 
 
 class BaseArticleAdmin(admin.ModelAdmin):
@@ -57,6 +59,11 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 my_choices.extend(Illustration.objects.all().values_list('id','legend'))
             else:
                 my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','legend'))
+            print my_choices
+            field.choices = my_choices
+        if db_field.name == 'category':
+            my_choices = [('', '---------')]
+            my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
         return field

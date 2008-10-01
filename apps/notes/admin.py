@@ -10,6 +10,9 @@ from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.notes.models import NoteType, Note
 from critica.apps.articles.admin import BaseArticleAdmin
 from critica.apps.users.models import UserNickname
+from critica.apps.categories.models import Category
+from critica.apps.notes import settings as notes_settings
+
 
 class NoteTypeAdmin(admin.ModelAdmin):
     """
@@ -61,6 +64,11 @@ class BaseNoteAdmin(BaseArticleAdmin):
         if db_field.name == 'author_nickname': 
             my_choices = [('', '---------')]
             my_choices.extend(UserNickname.objects.filter(user=self.request.user).values_list('id','nickname'))
+            print my_choices
+            field.choices = my_choices
+        if db_field.name == 'category':
+            my_choices = [('', '---------')]
+            my_choices.extend(Category.objects.exclude(slug__in=notes_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
         return field

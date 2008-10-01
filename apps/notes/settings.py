@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
+"""
+Settings of ``critica.apps.notes`` application.
+
+"""
 from critica.apps.notes import choices
 
-# Default positions
-DEFAULT_POSITION_VOUS_SAVIEZ = choices.POSITION_POSTIT
-DEFAULT_POSITION_PREMIERE_NOUVELLE = choices.POSITION_PUNAISE_LIGNE1_GAUCHE
-DEFAULT_POSITION_ON_SEN_SERAIT_PASSE = choices.POSITION_PUNAISE_LIGNE1_DROITE
-DEFAULT_POSITION_ON_EN_RIRAIT_PRESQUE = choices.POSITION_PUNAISE_LIGNE2_GAUCHE
-DEFAULT_POSITION_ILS_ONT_OSE = choices.POSITION_PUNAISE_LIGNE2_DROITE
-DEFAULT_POSITION_LINFO_OFF = choices.POSITION_ACCORDEON_LIGNE1
-DEFAULT_POSITION_FALLAIT_SEN_DOUTER = choices.POSITION_ACCORDEON_LIGNE2
-DEFAULT_POSITION_CRITICONS = choices.POSITION_ACCORDEON_LIGNE3
-DEFAULT_POSITION_CA_CEST_FAIT = choices.POSITION_ACCORDEON_LIGNE4
-DEFAULT_POSITION_AUCUN_INTERET = choices.POSITION_ACCORDEON_LIGNE5
+
+# Excluded categories
+# ------------------------------------------------------------------------------
+EXCLUDED_CATEGORIES = [
+    'epicurien',
+    'voyages',
+    'regions',
+    'coup-de-gueule',
+]
+
