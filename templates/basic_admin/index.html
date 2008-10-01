@@ -48,7 +48,7 @@
     </div>
     {% endif %}
     
-    {% if perms.articles.add_article or perms.articles.change_article or perms.epicurien.add_epicurienarticle or perms.epicurien.change_epicurienarticle or perms.voyages.add_voyagesarticle or perms.voyages.change_voyagesarticle or perms.notes.add_note or perms.notes.change_note or perms.regions.add_regionnote or perms.regions.change_regionnote %}
+    {% if perms.articles.add_article or perms.articles.change_article or perms.epicurien.add_epicurienarticle or perms.epicurien.change_epicurienarticle or perms.voyages.add_voyagesarticle or perms.voyages.change_voyagesarticle or perms.notes.add_note or perms.notes.change_note or perms.regions.add_regionnote or perms.regions.change_regionnote or perms.anger.add_angerarticle or perms.anger.change_angerarticle %}
     <div class="module">
         <table summary="Articles et brèves">
         <caption>Articles et brèves</caption>
@@ -103,6 +103,24 @@
                 {% endif %}
                 {% if perms.voyages.change_voyagesarticle %}
                 <td><a href="voyages/voyagesarticle/" class="changelink">Modifier</a></td>
+                {% endif %}
+            </tr>
+            {% endif %}
+            
+            {% if perms.anger.add_angerarticle or perms.anger.change_angerarticle %}
+            <tr>
+                <th scope="row">
+                    {% if perms.anger.change_angerarticle %}
+                    <a href="anger/angerarticle/">Articles &laquo; Coup de Gueule &raquo;</a>
+                    {% else %}
+                    Articles &laquo; Coup de Gueule &raquo;
+                    {% endif %}
+                </th>
+                {% if perms.anger.add_angerarticle %}
+                <td><a href="anger/angerarticle/add/" class="addlink">Ajouter</a></td>
+                {% endif %}
+                {% if perms.anger.change_angerarticle %}
+                <td><a href="anger/angerarticle/" class="changelink">Modifier</a></td>
                 {% endif %}
             </tr>
             {% endif %}

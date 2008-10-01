@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Critica Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-09-29 12:18+0200\n"
+"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: admin.py:25
+msgid "Headline"
+msgstr "En-tête"
+
+#: admin.py:26
+msgid "Filling"
+msgstr "Classement"
+
+#: admin.py:27
+msgid "Content"
+msgstr "Contenu"
+
+#: admin.py:42
+msgid "Publication"
+msgstr "Publication"
+
+#: models.py:57
+msgid "article anger"
+msgstr "article coup de gueule"
+
+#: models.py:58
+msgid "articles anger"
+msgstr "articles coup de geule"

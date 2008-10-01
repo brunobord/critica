@@ -27,6 +27,60 @@
         }
     }, 
     {
+        "pk": 118, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_angerarticle", 
+            "name": "Can add article anger", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_feature_article", 
+            "name": "Can feature an article", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_publish_article", 
+            "name": "Can publish an article", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "can_reserve_article", 
+            "name": "Can reserve an article", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_angerarticle", 
+            "name": "Can change article anger", 
+            "content_type": 34
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_angerarticle", 
+            "name": "Can delete article anger", 
+            "content_type": 34
+        }
+    }, 
+    {
         "pk": 48, 
         "model": "auth.permission", 
         "fields": {
@@ -1061,6 +1115,12 @@
                 22, 
                 23, 
                 24, 
+                118, 
+                121, 
+                123, 
+                122, 
+                119, 
+                120, 
                 48, 
                 51, 
                 53, 
@@ -1184,6 +1244,12 @@
         "fields": {
             "name": "R\u00e9dacteurs en chef", 
             "permissions": [
+                118, 
+                121, 
+                123, 
+                122, 
+                119, 
+                120, 
                 48, 
                 51, 
                 53, 
@@ -1259,6 +1325,9 @@
         "fields": {
             "name": "Journalistes", 
             "permissions": [
+                118, 
+                122, 
+                119, 
                 48, 
                 52, 
                 49, 
@@ -1298,7 +1367,7 @@
             "is_active": 1, 
             "is_superuser": 1, 
             "is_staff": 1, 
-            "last_login": "2008-09-30 17:13:18", 
+            "last_login": "2008-10-01 09:59:29", 
             "groups": [], 
             "user_permissions": [], 
             "password": "sha1$c9782$9386bc13dbc5f3c69cd636fb551a70795fc3a021", 
