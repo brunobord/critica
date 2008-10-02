@@ -498,5 +498,1755 @@
                 1
             ]
         }
+    }, 
+    {
+        "pk": 21, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:00:06", 
+            "title": "Rose : la bouture ne prenait pas", 
+            "tags": "societe", 
+            "author_nickname": null, 
+            "content": "<p>Enterr&eacute;e ce lundi en France, o&ugrave; vit son p&egrave;re, la petite Rose, disparue en Isra&euml;l et dont le corps a &eacute;t&eacute; retrouv&eacute; le 11 septembre dernier dans un fleuve, a rejoint sa derni&egrave;re demeure sans un adieu de sa m&egrave;re. Et pour cause : Marie-Charlotte Renaud<span>&nbsp; </span>et son compagnon, Ronny Ron, le grand-p&egrave;re de la petite, ont &eacute;t&eacute; inculp&eacute;s pour son assassinat. Si Ronny avait avou&eacute; avoir battu Rose &agrave; mort, Marie-Charlotte, elle, nie toujours toute implication dans le meurtre de sa fille de 4 ans. Le couple se serait \"s&eacute;par&eacute;\" de Rose parce qu'il ne parvenait pas &agrave; l'int&eacute;grer dans sa nouvelle petite famille (ils ont eu deux filles ensemble). Qu'est-ce que vous voulez, les boutures, c'est toujours d&eacute;licat, et la main verte, on l'a ou on ne l'a pas&hellip;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:00:06", 
+            "type": 1, 
+            "slug": "rose-la-bouture-ne-prenait-pas", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:01:13", 
+            "title": "Pas de veine pour les toxicos", 
+            "tags": "societe, drogue", 
+            "author_nickname": null, 
+            "content": "<p>Dimanche, &agrave; Li&egrave;ge. Un dealer aper&ccedil;oit la police au bout de la rue. Dans l'espoir de ne pas se faire prendre en flag', le vendeur de mauvais r&ecirc;ves<span> </span>ravale sa fiert&eacute; et plusieurs boulettes d'h&eacute;ro&iuml;ne. Pas assez discret ! Les flics flairent le gros coup et d&eacute;cident d'accompagner le drogu&eacute;, quelque peu ballonn&eacute;, &agrave; l'endroit o&ugrave; il vit. Sur place, les fonctionnaires trouvent trois autres personnes en possession de coca&iuml;ne et d'h&eacute;ro&iuml;ne. Les quatre toxicos, tous en s&eacute;jour ill&eacute;gal, ont &eacute;t&eacute; arr&ecirc;t&eacute;s et d&eacute;f&eacute;r&eacute;s devant le parquet. Ils vont certainement gagner un trip simple vers leur pays d'origine sur le premier vol de ligne. Avouez que pour des h&eacute;ro&iuml;nomanes, c'est pas de veine.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:01:13", 
+            "type": 6, 
+            "slug": "pas-de-veine-pour-les-toxicos", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:02:06", 
+            "title": "Le Journal de Pierrot", 
+            "tags": "societe", 
+            "author_nickname": null, 
+            "content": "<div class=\"TEXTE\">\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; color: red;\"><em>Bonjour, je m'appelle Pierre Bodein, mais tout le monde m'appelle Pierrot le Fou, rapport &agrave; mes selles habitudes en taule - j'adoooore me barbouiller avec mon caca&hellip; Je vais vous dire un truc : je le crois moi, ce Kernoa, quand il se d&eacute;crit comme quelqu'un d'ordinaire et sans histoire. Bon, depuis qu'il a &eacute;t&eacute; confondu comme &eacute;tant le meurtrier de la jeune Mathilde, lors du Teknival de Carno&euml;t en 2005, &ccedil;a lui en fait une, d'histoire, mais sans &ccedil;a, je vois pas pourquoi on cherche &agrave; le faire passer pour fou. Tout &ccedil;a parce qu'il s'est acharn&eacute; sur sa victime en la lardant de 18 coups de couteau. Croyez-moi, c'est pas parce qu'on a un penchant certain pour les jeux de lames que l'on est n&eacute;cessairement tar&eacute;. Regardez-moi, je suis quelqu'un de tout &agrave; fait normal. Je passe mon temps &agrave; vous le r&eacute;p&eacute;ter.</em></p>\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt; color: red;\"><em>Bien &agrave; vous, votre ami Pierrot</em></p>\r\n</div>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:02:06", 
+            "type": 7, 
+            "slug": "le-journal-de-pierrot", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:02:49", 
+            "title": "Rafale de baffes", 
+            "tags": "societe, education", 
+            "author_nickname": null, 
+            "content": "<p>C'est ce que l'on appelle la loi des s&eacute;ries. Apr&egrave;s l'affaire du prof qui a pris 500 euros d'amende pour avoir baff&eacute; un p'tit morveux qui l'avait trait&eacute; de connard ; apr&egrave;s le suicide d'un autre enseignant qui aurait flanqu&eacute; son poing dans la gueule &agrave; un coll&eacute;gien, on apprend aujourd'hui que le 13 septembre, un p&egrave;re d'&eacute;l&egrave;ve a port&eacute; plainte contre un instit' de Dijon qui aurait gifl&eacute; son fils, en classe &eacute;l&eacute;mentaire. C'est alors qu'il intervenait pour s&eacute;parer des mioches qui se battaient que le prof des &eacute;coles en aurait align&eacute; une au gamin de 10 ans. L'inspecteur d'acad&eacute;mie local d&eacute;fend l'enseignant : <em>\"il est intervenu pour ma&icirc;triser l'un d'entre eux, car il est de son devoir de prot&eacute;ger leur int&eacute;grit&eacute; physique\"</em>. Au lieu de distribuer des m&eacute;dailles aux bacheliers, Darcos devrait filer un Taser &agrave; chaque enseignant : cela leur &eacute;viterait d'en venir aux mains.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:02:49", 
+            "type": 8, 
+            "slug": "rafale-de-baffes", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:04:22", 
+            "title": "C'est un suicide, c'est Net", 
+            "tags": "societe, accident", 
+            "author_nickname": null, 
+            "content": "<p>Samedi, les corps de deux jeunes filles de 21 et 22 ans ont &eacute;t&eacute; retrouv&eacute;s sur un passage &agrave; niveaux de Meurthe-et-Moselle. Au d&eacute;part, les enqu&ecirc;teurs ont pens&eacute; &agrave; un dramatique accident de plus. Mais en fait, il s'agit d'un double suicide. Les victimes, Assina et Anne, qui ne se connaissaient pas quelques jours avant les faits, avaient planifi&eacute; leur mort sur un forum de discussion via Internet. Toutes les deux avaient d&eacute;j&agrave; tent&eacute; de mettre fin &agrave; leurs jours auparavant. Anne en se jetant du troisi&egrave;me &eacute;tage d'un immeuble, et Anissa en se gazant dans une bagnole avec trois autres jeunes. C'est un b&ucirc;cheron qui avait emp&ecirc;ch&eacute; le drame in extremis. Cette fois, les deux filles n'ont pas loup&eacute; le train de la mort. C'est clair et&hellip; Net.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:04:22", 
+            "type": 9, 
+            "slug": "cest-un-suicide-cest-net", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:05:27", 
+            "title": "Et Tchuuuuus, le train", 
+            "tags": "societe, accident, train", 
+            "author_nickname": null, 
+            "content": "<p>Vous connaissez l'histoire de \"Tchuuuuus, le train\" ? Alors voil&agrave; : lundi, une mamie allemande faisait une petite balade pour sortir son chien, en compagnie de sa petite-fille de douze ans et une copine &agrave; elle. Tout ce petit monde longeait tranquillement la voie ferr&eacute;e de Ludwigshafen, quand le toutou a rip&eacute; sur les rails. Inqui&egrave;te pour son fid&egrave;le compagnon, la sexag&eacute;naire a&nbsp;voulu aller le secourir. Elle aussi devait avoir un petit probl&egrave;me de vue, et en tous cas, un s&eacute;rieux probl&egrave;me d'oreille, car elle n'a rien vu ni entendu venir et&hellip; Tchuuuus, le train ! (Le chien, lui, va bien, merCri)</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:05:27", 
+            "type": 10, 
+            "slug": "et-tchuuuuus-le-train", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:06:39", 
+            "title": "Oh, non ! Le train", 
+            "tags": "societe, train", 
+            "author_nickname": null, 
+            "content": "<p>Vous connaissez l'histoire de \"Oh, non ! Le train\" ? (Oui, oui, on vous en fait des wagons aujourd'hui). Bon, alors, vous la connaissez ? Non ? Alors voil&agrave; : deux amouweux fous d&eacute; Kinross, wouille d&eacute; la prowouince de Mpumalanga (Afouique du Soud), l&agrave; dis-donc, awouaient une enwouie prouessante d&eacute; faire l'amour, l&agrave; dis-donc, tout d&eacute; swouite, l&agrave; maint&eacute;nant. Alors, n'&eacute;coutant qu&eacute; leur instinct, ils commencent &agrave; baiser sans s&eacute; soucier d&eacute; se qui se pwasse autour d'weux. L&eacute; probl&egrave;me, l&agrave; dis-donc, c'est qu'ils &eacute;taient prwou&eacute;sent&eacute;ment en train d&eacute; s'enwouayer en l'air sur une woua f&eacute;wr&eacute;e. Tout a leur affwouaire ils n'ont rien vu v&eacute;nir. Woual&agrave; &agrave; peu pwr&eacute;s c&eacute; que &ccedil;a a donn&eacute; : <em>\"Oh, oui ! Oh, oui ! Oooohhh, oui !\"</em>&hellip; Et pouis</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:06:39", 
+            "type": 2, 
+            "slug": "oh-non-le-train", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:07:29", 
+            "title": "Scooter, toujours pr\u00eat", 
+            "tags": "societe, alpes-maritimes, accident", 
+            "author_nickname": null, 
+            "content": "<p>Samedi, un enfant de neuf ans&nbsp;a trouv&eacute; la mort au large de Beaulieu-sur-Mer, dans les Alpes- Maritimes. Le moutard s'est violemment crash&eacute; sur la coque d'un yacht alors qu'il &eacute;tait en train de faire le foufou au volant d'un puissant scooter des mers, sous les yeux de son p&egrave;re qui, lui, &eacute;tait sur un engin du m&ecirc;me acabit avec son autre fils de cinq ans sur les genoux. Laisser un m&ocirc;me de 9 ans conduire une b&eacute;cane pareille, une attitude irresponsable ? Vous y allez un peu fort ! C'est quand m&ecirc;me pas comparable au fait de laisser un enfant en plein soleil dans une bagnole, par exemple. L&agrave;, il ne risquait pas la d&eacute;shydratation, le petit.&hellip;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:07:29", 
+            "type": 3, 
+            "slug": "scooter-toujours-pret", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:09:05", 
+            "title": "Le type \u00e9tait compl\u00e8tement charrette", 
+            "tags": "societe, police", 
+            "author_nickname": null, 
+            "content": "<p>L'anecdote se d&eacute;roule &agrave; Anvers, samedi matin, sur&nbsp; les coups (&agrave; boire) de 7 heures. Intrigu&eacute;s par la d&eacute;marche chaloup&eacute;e d'un homme qui pousse une charrette charg&eacute;e (elle aussi) par un objet non identifi&eacute;, les policiers l'interpellent. En s'approchant, les flics s'aper&ccedil;oivent que le type transporte en r&eacute;alit&eacute; un f&ucirc;t de bi&egrave;re&nbsp;de cinquante litres. Quand ils ont voulu en savoir un peu plus, impossible de comprendre quoi que ce soit au charabia alambiqu&eacute; du gars. Sans h&eacute;sitation, l'ivrogne a &eacute;t&eacute; conduit dans une cellule de d&eacute;grisement du commissariat : il &eacute;tait plein comme une barrique.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:09:05", 
+            "type": 4, 
+            "slug": "le-type-etait-completement-charrette", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 3, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:10:12", 
+            "title": "Crash de la Caravelle : une plainte, 40 ans apr\u00e8s", 
+            "tags": "societe, caravelle, nice, crash", 
+            "author_nickname": null, 
+            "content": "<p>Louis et Mathieu Paoli, des proches des victimes du crash de la Caravelle Ajaccio-Nice qui avait fait 95 morts le 11 septembre 1968 au large du cap d'Antibes, n'ont jamais cru &agrave; la th&egrave;se officielle d'un d&eacute;part de feu qui aurait provoqu&eacute; la perte de contr&ocirc;le fatale de l'avion. Hier, forts de nouveaux t&eacute;moignages allant dans le sens de leur version des faits (selon eux, c'est un missile sol-air qui aurait accidentellement d&eacute;truit la Caravelle), ils ont port&eacute; plainte contre X afin que la justice rouvre le dossier. Si on osait, on dirait que, 40 ans apr&egrave;s les faits, il &eacute;tait temps qu'ils atterrissent.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:10:12", 
+            "type": 5, 
+            "slug": "crash-de-la-caravelle-une-plainte-40-ans-apres", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:12:16", 
+            "title": "Dur m\u00e9tier", 
+            "tags": "pipoles, ronaldo, foot", 
+            "author_nickname": null, 
+            "content": "<p>Apr&egrave;s Ronaldo se fait avoir par une fausse prostitu&eacute;e mais v&eacute;ritable travelo et ma&icirc;tre chanteur, voil&agrave; que l'on apprend que l'autre Ronaldo, Cristiano de son pr&eacute;nom, a entretenu pendant plusieurs mois une liaison avec Fernanda, call-girl de luxe&nbsp;exer&ccedil;ant pour le compte de l'une des plus grandes agences d'escort girls de Londres. Son prix ? 2.500 euros la nuit. Dans le d&eacute;tail ? Pr&egrave;s de 600 euros pour une relation sexuelle compl&egrave;te, et un bonus de 150 euros pour deux grammes de coke. Comment on le sait ? Gr&acirc;ce &agrave; l'enqu&ecirc;te d'un journaliste du tr&egrave;s s&eacute;rieux (pffff) News of the world, qui a manifestement pris son pied&hellip; euh, son r&ocirc;le tr&egrave;s &agrave; c&oelig;ur, vu qu'il est all&eacute; rencontrer la dame en se faisant passer pour un client. Il pr&eacute;tend qu'il n'a pas consomm&eacute;. Et menteur, avec &ccedil;a.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:12:16", 
+            "type": 1, 
+            "slug": "dur-metier", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:13:08", 
+            "title": "Sa femme est une actrice", 
+            "tags": "pipoles", 
+            "author_nickname": null, 
+            "content": "<p>La premi&egrave;re repr&eacute;sentation de la pi&egrave;ce <em>All My Sons</em> d'Arthur Miller a eu lieu &agrave; Broadway en fin de semaine derni&egrave;re, et contrairement &agrave; ce que l'on pouvait craindre, le pire n'est pas arriv&eacute; pour Katie Holmes, femme de. Madame Cruise connaissait son texte, elle s'est pas vautr&eacute;e sur sc&egrave;ne, etc. Bref, les critiques new-yorkais ne tarissent pas d'&eacute;loges &agrave; propos de sa prestation, et on doit dire&nbsp;qu'on trouve &ccedil;a&nbsp;tr&egrave;s suspect. Si vous pensez que Tom Cruise a savonn&eacute; la planche de sa femme avant les repr&eacute;sentations mais qu'elle est vraiment bonne com&eacute;dienne, tapez 1 ; si vous pensez qu'elle est tr&egrave;s mauvaise et qu'il a arros&eacute; les critiques pour pas qu'elle d&eacute;prime encore plus, tapez 2&nbsp;;&nbsp;si vous voulez en avoir le c&oelig;ur net, la premi&egrave;re publique de la pi&egrave;ce aura lieu le 16 octobre.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:13:08", 
+            "type": 6, 
+            "slug": "sa-femme-est-une-actrice", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:14:04", 
+            "title": "The Britney's Diary", 
+            "tags": "pipoles, britney_spears", 
+            "author_nickname": null, 
+            "content": "<p><em style=\"color: red;\">Hello journal&nbsp;! Pfff, la barbe, come dirais une cop&rsquo;s &agrave; moi&hellip; Paskeu je doit reviendre au tribunal le 15 octobre prochin. Le juge de L.A., y veut me voir pour conduite sans permi valide. Tout &ccedil;a paskeu j&rsquo;ai plant&eacute; la bagnole d&rsquo;un mec et que ch&rsquo;uis parti sans rien dire&nbsp;! Alors le proprio, il est pas contant, et demende du pognon, &eacute;vidament. Alors la, j&rsquo;ai grave les boule bicause d&egrave;s que ch&rsquo;uis popstar, cops de Madona et que ch&rsquo;uis en tore, on me charge de tous les mot de la terre. Mais tu veras, le 2 d&eacute;cenbre, quand j&rsquo;aurai sorti mon albaum Circus, y seront tous simpa avec moi&hellip; Ouais je sais, ch&rsquo;uis g&eacute;niale. Des fois&hellip; Allez, t&rsquo;embrasse&nbsp;!</em></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:14:04", 
+            "type": 7, 
+            "slug": "the-britneys-diary", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:15:04", 
+            "title": "Tu ne coucheras point", 
+            "tags": "pipoles", 
+            "author_nickname": null, 
+            "content": "<p>La semaine derni&egrave;re, nous vous parlions ici m&ecirc;me des Jonas Brothers, le groupe de rock estampill&eacute; Disney qui d&eacute;fend les valeurs chr&eacute;tiennes, et dont les trois membres (ils sont fr&egrave;res, comme leur nom l'indique) portent une bague de puret&eacute; pour confirmer leur voeu de chastet&eacute; avant le mariage. Mais faut pas croire, les Jonas sont des ados comme les autres, et c'est pas parce qu'ils veulent rester purs pour la-femme-de-leur-vie qu'ils vont se priver des avantages de la c&eacute;l&eacute;brit&eacute;. Enfin, \"avantages\", c'est vite dit, vu qu'il y a quelques jours, lors d'un chat sur leur site Internet, les rockeurs chr&eacute;tiens se plaignaient du fait que <em>\"le plus difficile, c'est de trouver un endroit o&ugrave; avoir un peu d'intimit&eacute; pour apprendre &agrave; conna&icirc;tre quelqu'un\"</em>. On a bien un endroit &agrave; leur sugg&eacute;rer, mais il para&icirc;t que c'est p&eacute;ch&eacute;.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:15:04", 
+            "type": 8, 
+            "slug": "tu-ne-coucheras-point", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:15:58", 
+            "title": "La brochette historique", 
+            "tags": "pipoles", 
+            "author_nickname": null, 
+            "content": "<p>Elles &eacute;taient grandes, elles &eacute;taient belles, et &ccedil;a valait mieux pour elles car elles &eacute;taient&nbsp;top models, la cr&egrave;me de la cr&egrave;me, l'&eacute;lite des mannequins. C'&eacute;tait les ann&eacute;es 90, et Naomi Campbell, Cindy Crawford, Linda Evangelista, Claudia Schiffer, Stephanie Seymour et Christy Turlington dominaient le monde de la mode. Des ann&eacute;es plus tard, le photographe p&eacute;ruvien Mario Testino les a r&eacute;unies le temps d'une photo pour le dernier Vanity Fair, et force est de constater que chez elles, le temps n'a fait de ravages ni sur leur visage, ni sur le reste (elles posent &agrave; poil). Mais la brochette est incompl&egrave;te. Manquent Kate Moss (trop ravag&eacute;e ?) et&hellip; Carla Bruni (m&ecirc;me si cette derni&egrave;re a sa tronche en couverture du magazine). On se demande bien pourquoi.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:15:58", 
+            "type": 9, 
+            "slug": "la-brochette-historique", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:18:06", 
+            "title": "Telle soeur, telle soeur", 
+            "tags": "pipoles, britney_spears", 
+            "author_nickname": null, 
+            "content": "<p>Jamie Lynn Spears, s&oelig;ur de, n'a jamais port&eacute; de bague de puret&eacute;. Et vu qu'elle a accouch&eacute; de son premier enfant &agrave; 17 ans, et hors mariage, on se dit qu'elle ne sera jamais prise en flagrant d&eacute;lit de reniement de ses principes, m&ecirc;me si elle compte bient&ocirc;t &eacute;pouser le p&egrave;re de sa gamine, parce qu'on a sa dignit&eacute;. Mais celle-ci est mise &agrave; mal depuis qu'un petit malin travaillant dans labo photo o&ugrave; le futur monsieur Spears avait d&eacute;pos&eacute; des photos intimes, en a profit&eacute; pour faire des tirages suppl&eacute;mentaires, et tente maintenant de les vendre &agrave; des magazines. Intimes, mais pas bien m&eacute;chantes, puisqu'on y voit Jamie Lynn donner le sein &agrave; la petite. Mais vu qu'elle est mineure, cet acte pourrait s'apparenter &agrave; de la pornographie juv&eacute;nile. Bon sein ne saurait mentir, Jamie Lynn est une vraie Spears.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:18:06", 
+            "type": 10, 
+            "slug": "telle-soeur-telle-soeur", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:19:16", 
+            "title": "Addict \u00e0 Kate", 
+            "tags": "pipoles, pete_doherty, kate_moss", 
+            "author_nickname": null, 
+            "content": "<p>Pete Doherty est accro. Aux drogues et &agrave; son ex Kate Moss, qui semble avoir quitt&eacute; pour de bon le guitariste des Kills, Jamie Hince. A peine l'annonce de leur (quatri&egrave;me) s&eacute;paration officialis&eacute;e, Pete est reparti en croisade pour reconqu&eacute;rir le c&oelig;ur de la Brindille, &agrave; coup d'appels sur le portable et de SMS, les &eacute;quivalents modernes des lettres d'amo&ucirc;&ucirc;&ucirc;&ucirc;r et du gravage d'initiales sur un tronc d'arbre. Et pendant ce temps-l&agrave;, Kate fait du shopping &agrave; Paris, avec un milliardaire de ses amis. Comprendre : Pete, arr&ecirc;te de t'acharner, &ccedil;a devient path&eacute;tique.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:19:16", 
+            "type": 2, 
+            "slug": "addict-a-kate", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:20:17", 
+            "title": "D\u00e9ception", 
+            "tags": "pipoles, david_beckham", 
+            "author_nickname": null, 
+            "content": "<p>Celles et ceux qui ne se sont toujours pas remis de la campagne de pub pour les cale&ccedil;ons Giorgio Armani, avantageusement mis en valeur par les bijoux de famille de David Beckham, vont &ecirc;tre d&eacute;&ccedil;us, mais alors, d&eacute;&ccedil;us ! Car sur les photos de son calendrier 2009, on le voit faisant du cheval d'ar&ccedil;on, encha&icirc;n&eacute; &agrave; des cordes, assis sur un banc de muscu, ou boxant dans le vide, le tout avec un regard de bad boy tr&egrave;s grrrrr. Sur le papier, c'est plut&ocirc;t engageant. Mais alors, pourquoi c'est d&eacute;cevant ? Mais parce qu'il est habill&eacute;, pardi !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:20:17", 
+            "type": 3, 
+            "slug": "deception", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:21:19", 
+            "title": "Miley, 15 ans", 
+            "tags": "pipoles, disney", 
+            "author_nickname": null, 
+            "content": "<p>La galaxie Disney Channel est depuis toujours une grande pourvoyeuse de cr&eacute;tins &agrave; m&egrave;che (voir Criti&hellip;cons) et de pouff' en puissance. Il y en a qui durent (Brit Brit, Christina Aguilera, Justin Timberlake&hellip;), et d'autres pas. Et comme il faut bien renouveler le cheptel, tous les ans ou presque, la cha&icirc;ne &agrave; Mickey nous sort une nouveaut&eacute; pour pas qu'on s'ennuie. Derni&egrave;re petite prot&eacute;g&eacute;e en date, Demi Lovato, qui du m&ecirc;me coup prend la place de Miley Cyrus, laquelle a d&eacute;j&agrave; commenc&eacute; &agrave; cracher son venin sur la nouvelle.&nbsp;D&eacute;j&agrave; milliardaire, mais surtout&nbsp;ado.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:21:19", 
+            "type": 4, 
+            "slug": "miley-15-ans", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:22:07", 
+            "title": "Gwyneth, arr\u00eate !", 
+            "tags": "pipoles, bouffe", 
+            "author_nickname": null, 
+            "content": "<p>Manifestement, Gwyneth Paltrow s'ennuie. Tous les jours, elle nous dispense ses conseils : si c'est pas le sport, c'est la bouffe ; si c'est pas la bouffe, c'est les fringues ; si c'est pas les fringues, c'est comment &eacute;lever ses gosses ; et si c'est pas comment &eacute;lever ses gosses, c'est comment rendre heureux son homme. La mauvaise nouvelle, c'est qu'elle n'a pas fini de nous gonfler avec sa \"way of life\" bobo&iuml;chiante, vu qu'elle vient de lancer un site Internet o&ugrave; elle compile tous ses bons conseils. Gwyneth, on peut se tutoyer ? T'es lourde.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:22:07", 
+            "type": 5, 
+            "slug": "gwyneth-arrete", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:23:35", 
+            "title": "La Formule 1, ce jeu vid\u00e9o", 
+            "tags": "sports, formule1", 
+            "author_nickname": null, 
+            "content": "<p>M&ecirc;me en Formule 1, les choses peuvent tra&icirc;ner, tra&icirc;ner&hellip; Illustration avec la Cour d'appel de la F&eacute;d&eacute; mondiale (FIA), r&eacute;unie hier pour &eacute;tudier la contestation de l'&eacute;curie McLaren-Mercedes. Demande datant du 7 septembre, quand le British Lewis Hamilton prit 25 secondes de p&eacute;nalit&eacute;s bicause il n&rsquo;avait pas bien doubl&eacute; au Grand Prix des Belges. R&eacute;trograd&eacute; de la 1&egrave;re &agrave; la 3e place, il ne compte qu&rsquo;un point d&rsquo;avance sur le Br&eacute;silien Felipe Massa, le doubl&eacute; de chez Ferrari justement. Quinze jours apr&egrave;s, il faut patienter vingt-quatre heures de plus pour le verdict&hellip; Si analyser des images para&icirc;t si compliqu&eacute; aux yeux des imminents commissaires grassement pay&eacute;s (ou soudoy&eacute;s&nbsp;?), on peut faire comme au foot&nbsp;: pas d&rsquo;analyse vid&eacute;o.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:23:35", 
+            "type": 1, 
+            "slug": "la-formule-1-ce-jeu-video", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:24:28", 
+            "title": "Peugeot, hybride abattue", 
+            "tags": "sports, peugeot", 
+            "author_nickname": null, 
+            "content": "<p>Euh pardon, &agrave; bride abattue. Mais avec une bagnole au moteur hybride quand m&ecirc;me. En effet, Peugeot envisage de se taper les 24 heures du Mans avec une 908 d&eacute;riv&eacute;e de celles qui ont fini 2e et 3e en juin dernier. Une grande premi&egrave;re via un moteur-g&eacute;n&eacute;rateur &eacute;lectrique de 60 kilowatts &agrave; la place du d&eacute;marreur, de dix ensembles de batteries lithium-ion de 600 cellules et d&rsquo;un syst&egrave;me &eacute;lectronique. Comme les hybrides classiques, elle recharge ses batteries au freinage, roule sur son moteur thermique ou puise l'&eacute;nergie &eacute;lectrique, toute seule ou en buvant du gasoil. Auquel cas, ce surplus d'&eacute;nergie lui permet d&rsquo;augmenter sa puissance de 80 chevaux sur une acc&eacute;l&eacute;ration pouvant durer 20 secondes. Mais l&rsquo;Audi, gagnante du Mans 2008, avait termin&eacute; avec plus de 4 minutes d&rsquo;avance&hellip;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:24:28", 
+            "type": 6, 
+            "slug": "peugeot-hybride-abattue", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:25:15", 
+            "title": "El diario de Diego Maindedieu", 
+            "tags": "sports", 
+            "author_nickname": null, 
+            "content": "<p><em style=\"color: red;\">Hola diario mio&nbsp;! Ma dis donc&nbsp;! N&rsquo;est-c&eacute; pas auyourd&rsquo;hui qu&eacute; l&eacute; foutebol franc&egrave;ss youe aux 16e d&eacute; final&eacute; d&eacute; sa Copa de la Liga&nbsp;? Ah, y&eacute; m&eacute; disais aussi&hellip; Alor&eacute;, keskona au m&eacute;nou du your&nbsp;? C&eacute; soir, d&eacute;bout d&eacute; la comp&egrave;t&eacute;, avec deux cloubs d&eacute; Ligu&eacute;1, Auxerre-Toulouse. Et pouis, l'affich&eacute; Monaco-P&eacute;h&egrave;ss&eacute;g&eacute;&hellip; Quand y&eacute; pens&eacute; qu&eacute; les Parisiennes, ils ont failli &ecirc;tr&eacute; vir&eacute;s &agrave; caus&eacute; d&eacute; la band&eacute;rol&eacute; anti-ch'ti, alors qu&rsquo;ils sont t&eacute;nants dou titr&eacute;&hellip; Gracias la youstic&eacute;, ma, vou d&eacute; l&rsquo;&eacute;tranger, &ccedil;a fait vilain comm&eacute; affair&eacute;. Et puis l&rsquo;Ohaim&eacute; s&eacute; prend Sochaux l&eacute; dernier dou championnat. Y&rsquo;os&eacute; esp&eacute;rer qu&eacute; les Marseillais vont gagner cett&eacute; fois&nbsp;! Pendant est&eacute; tiempo, Lyone et Bordeaux, ils youent pas. Exempt&eacute; porqu&eacute; ils sont camp&eacute;on et s&eacute;gone. Ma, c&rsquo;est touyours les plous gros qui sont avantag&eacute;s l&agrave; aussi&nbsp;! Si, si, y&eacute; sais : soy g&eacute;nial&hellip; Adios !</em></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:25:15", 
+            "type": 7, 
+            "slug": "el-diario-de-diego-maindedieu", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:26:13", 
+            "title": "Tiger Woods, m\u00e9daille de l'argent", 
+            "tags": "sports, forbes", 
+            "author_nickname": null, 
+            "content": "<p>Chaque &eacute;t&eacute;, le tablo&iuml;d am&eacute;ricain <em>Forbes</em> fait r&ecirc;ver ses lecteurs. Un voyage &agrave; gagner&nbsp;? Des mecs et des nanas &agrave; poil&nbsp;? Non, juste le top 10 des stars \"<em>les plus influentes</em>\" au monde, &eacute;tabli selon deux crit&egrave;res intimement li&eacute;s&nbsp;- revenus annuels et visibilit&eacute; m&eacute;diatique. En t&ecirc;te de liste&nbsp;: Oprah Winfrey, meneuse de revue t&eacute;l&eacute; &agrave; la con. Et puis, m&eacute;daille d&rsquo;argent&nbsp;: Tiger Woods, n&deg;1 mondial du golf. Qui combine&nbsp;: 74 millions&nbsp;d'euros de salaire&nbsp;(7e)&nbsp;; passage sur Internet (12e)&nbsp;; dans la presse&nbsp;(1er)&nbsp;; &agrave; la radio et la t&eacute;l&eacute;&nbsp;(3e). Aussi, le sponsoring l&rsquo;aide bien dans sa t&acirc;che&nbsp;: American Express, Nike, Gillette, Gatorade&hellip; David Beckham enfile le num&eacute;ro 5 : 32 millions d'euros (16e)&nbsp;; Internet&nbsp;(10e), dans la presse&nbsp;(3e)&nbsp;; &agrave; la radio et la t&eacute;l&eacute;&nbsp;(18e). Voil&agrave;, fini de r&ecirc;ver, retournez au boulot. <em>Mer-cri</em> <em>Forbes</em>.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:26:13", 
+            "type": 8, 
+            "slug": "tiger-woods-medaille-de-largent", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:27:09", 
+            "title": "Carter le cas catalan", 
+            "tags": "sports, rugby", 
+            "author_nickname": null, 
+            "content": "<p>Depuis hier, l&rsquo;ouvreur all black Dan Carter visite Perpignan. Accueilli comme une star, le rugbyman a fait croire qu&rsquo;il signait au club local, et pouss&eacute; le bouchon en enfilant le maillot bleu ciel de l&rsquo;USAP au stade Aim&eacute;-Giral. Autour de lui, une horde de journaleux en premi&egrave;re ligne, des supporteurs juste derri&egrave;re. Puis il dit bonjour au staff et aux joueurs du cru. Premi&egrave;re journ&eacute;e et premi&egrave;re phrase&nbsp;: Je me sens bien ici. D&eacute;j&agrave;&nbsp;! Mais voil&agrave;, Dan doit repartir jeudi. La faut &agrave; deux semaines de vacances et &agrave; la pr&eacute;paration n&eacute;o-z&eacute;landaise pour la future tourn&eacute;e sur le vieux continent&hellip; Mais avant de nous quitter, Dan assure qu&rsquo;il viendra en d&eacute;cembre pour le match de Coupe d'Europe contre Leiscester. Mais bien s&ucirc;r... Son compatriote Byron Kelleher avait d&eacute;j&agrave; fait le coup &agrave; Toulouse. Quoi&nbsp;?&nbsp;Byron joue &agrave; Toulouse&nbsp;!</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:27:09", 
+            "type": 9, 
+            "slug": "carter-le-cas-catalan", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:28:11", 
+            "title": "Quand Gitana fait du vent", 
+            "tags": "sports, gitana", 
+            "author_nickname": null, 
+            "content": "<p><em>Gitana 13</em> se trouve dans le Golfe de Gascogne. Donc il voit presque nos c&ocirc;tes atlantiques. Faut dire&nbsp;: le maxi-catamaran de 33 m&egrave;tres modestement &eacute;quip&eacute; par le Baron Benjamin de Rothschild se trimbale Lionel Lemonchois et son &eacute;quipage depuis le 14 ao&ucirc;t &agrave; Hong-Kong et le d&eacute;part de la Route du Th&eacute;. Et depuis, on en tire profit pour rejoindre Londres au plus vite, demain soir ou jeudi matin, si possible. Enfin, si le temps le permet. Hier soir, <em>Gitana 13</em> a d&eacute;pass&eacute; le point 44&deg;15.97 N/07&deg;10.80 W, c&rsquo;est-&agrave;-dire les 590 milles nautiques qui la s&eacute;pare de la Tamise et du bridge of Ze Quouine Babeth 2. Ce qui doit faire 45 jours pour 12.921,3 milles. Du coup, avec leurs 67 jours de 1991, <em>Elle-et-Vire</em> et Philippe Monnet prendraient un sacr&eacute; vent.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:28:11", 
+            "type": 10, 
+            "slug": "quand-gitana-fait-du-vent", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:29:12", 
+            "title": "Alpes du Sud 2018...", 
+            "tags": "sports, jo", 
+            "author_nickname": null, 
+            "content": "<p>Jeux olympiques d&rsquo;hiver, Alpes du Sud 2018&hellip; Mouais, &ccedil;a sonne pas trop mal. On verra bien demain midi si notre Comit&eacute; olympique accepte que l&rsquo;on se porte candidat &agrave; l&rsquo;organisation des J.O. de dans dix ans. Si tel est le cas, on nous pr&eacute;cise que bon nombre de politiques, d&rsquo;acteurs &eacute;conomiques et d&rsquo;habitants du coin sont fin pr&ecirc;ts &agrave; se retrousser les manches. Et ce&nbsp;: \"<em>de Gap &agrave; Brian&ccedil;on en passant par Embruns, Serre-Chevallier... !</em> \"&nbsp;D&eacute;j&agrave; quatre ans qu&rsquo;ils attendent &ccedil;a autour de l&rsquo;initiateur Jean-Marc Passeron et des skieurs Luc Alphand et Carole Merle, avec une orientation 100 % \"<em>d&eacute;veloppement durable, &eacute;conome, humaniste</em>\". A quand les m&eacute;dailles vertes&nbsp;?</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:29:12", 
+            "type": 2, 
+            "slug": "alpes-du-sud-2018", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:30:26", 
+            "title": "M.U. et les 7 mercenaires", 
+            "tags": "sports, manchester, foot", 
+            "author_nickname": null, 
+            "content": "<p>Manchester United tire la gueule. Bicause prendre une amende de 25.000 livres sterling (30.000 euros chez nous), pour seulement sept cartons jaunes, eh ben, c&rsquo;est un tacle s&eacute;v&egrave;re aux finances de ce modeste club de foot anglais. Les faits remontent &agrave; dimanche, quand les &eacute;l&egrave;ves de Sir Alex Ferguson sont all&eacute;s &agrave; Chelsea pour la 5e journ&eacute;e de championnat. R&eacute;sultat&nbsp;: 1 partout. Mais surtout&nbsp;: 7 avertissements &agrave; 1 pour les Reds. Paul Scholes, Rio Ferdinand, Gary Neville, Dimitar Berbatov, Wayne Rooney, Cristiano Ronaldo et Patrice Evra&nbsp;en ont pris&nbsp;en moins d&rsquo;une heure de jeu, dont trois pour avoir gueul&eacute; contre M. Riley&hellip; Chapeau les champions.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:30:26", 
+            "type": 3, 
+            "slug": "mu-et-les-7-mercenaires", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:31:43", 
+            "title": "On rebalance Armstrong", 
+            "tags": "sports, lance_armstrong, cyclisme", 
+            "author_nickname": null, 
+            "content": "<p>Lance Armstrong persiste et signe. En tout cas, les rumeurs enflent &agrave; la vitesse d&rsquo;une foulure. Le septuple vainqueur du Tour de France veut se rapprocher un peu plus de l&rsquo;&eacute;dition 2009. Pour gagner une huiti&egrave;me fois&nbsp;? Pas si s&ucirc;r. Le Ricain de 37 ans aurait d&eacute;cid&eacute; de racheter la soci&eacute;t&eacute; Amaury Sport Organisation&hellip; Oui, ASO, qui g&egrave;re le Tour de France&nbsp;! Enfin, c&rsquo;est ce que balance le&nbsp;quotidien australien <em>The Sydney Morning Herald</em>, qui annonce de surcro&icirc;t un partenariat de l&rsquo;ex-champion avec l&rsquo;UCI, via le vice-pr&eacute;si Hein Verbruggen. Leur mission&nbsp;: \"<em>changer le cyclisme en profondeur</em>\"... Ce qui risque de piquer certains, jusqu'aux nerfs. Non, on n'a pas fini de se poiler.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:31:43", 
+            "type": 4, 
+            "slug": "on-rebalance-armstrong", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:33:01", 
+            "title": "Le Vid\u00e9otrocad\u00e9ro", 
+            "tags": "sports, foot, basket, jeux_video", 
+            "author_nickname": null, 
+            "content": "<p>Demain, le footballeur Karim Benzema, le basketteur Tony Parker et l&rsquo;athl&egrave;te Ladji Doucour&eacute; vont se croiser &agrave; Paris, place du Trocad&eacute;ro. Pendant ce temps, tout plein de djeun&rsquo;s s&rsquo;amasseront autour d&rsquo;eux. Une id&eacute;e sign&eacute;e EA Sports (<em>it&rsquo;s in the game</em>) et la NBA (<em>basket of Iou&egrave;ssay</em>). Belle op&eacute;ration marketing pour le leader mondial des jeux vid&eacute;o, dont l&rsquo;ambition est de rapprocher les mondes du sport et des parties virtuelles. Aussi, des gagnants de jeux-concours s&rsquo;affronteront par paire sur 3 ateliers&nbsp;: foot, basket, jeux vid&eacute;o. Le duo gagnant aura la chance de tripoter la manette avec la doublette Benzema-Parker. Allez, tous au Trocad&eacute;ro demain, &agrave; 14h !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:33:01", 
+            "type": 5, 
+            "slug": "le-videotrocadero", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:34:28", 
+            "title": "Nouvelle Star : \u00e0 vos marques, pr\u00eats\u2026 Chantez !", 
+            "tags": "tele, m6", 
+            "author_nickname": null, 
+            "content": "<p>Hier, chez une copine qui a une ado : <em>\"Aaaaaaahhhh !!!! Ca y'est ! Oh l&agrave;, l&agrave; ! Oh l&agrave;, l&agrave; ! Mamaaaaaaannnn ! Tu pourras me faire un mot d'absence le jour du brevet des coll&egrave;ges ? T'auras qu'&agrave; dire que 'je suis malaaaadeuh, compl&egrave;tement malaaadeuh !', ou alors, je vais dans le bureau du dirlo pour lui annoncer : 'je suis venue te dire que je m'en vais, et tes heures de colle n'y pourront rien changer&hellip;\". Parce que tu comprends, faut absolument que je passe le casting de Nouvelle Star, c'est (Sin)clair. Quoi ? Je peux pas ?\"</em>. <em>\"Ben non, ma ch&eacute;rie, faut avoir au moins 16 ans&hellip; Par contre, moi&hellip;\"</em>. <em>\"Aaaah ! Euhhhh ! L'autre ! Y prennent pas les vieux !\"</em>. <em>\"Certes, mais j'ai encore un an devant moi&hellip; Jusqu'&agrave; 34 ans, c'est bon !\"</em>.<em> </em>C'te claque !... Dates, villes et inscriptions sur <a href=\"http://www.m6.fr/\" target=\"_blank\">www.m6.fr</a>.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:34:28", 
+            "type": 1, 
+            "slug": "nouvelle-star-a-vos-marques-prets-chantez", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:35:07", 
+            "title": "Un d\u00eener presque parfait, une fois", 
+            "tags": "tele, belgique, m6", 
+            "author_nickname": null, 
+            "content": "<p>Apr&egrave;s le camping, la Belgique ! La production d'<em>Un d&icirc;ner presque parfait</em> sur M6 se lance dans le tournage d'une &eacute;mission 100 % belge. L'&eacute;mission devrait &ecirc;tre mise en bo&icirc;te &agrave; partir du 13 octobre, &agrave; Bruxelles. On esp&egrave;re franchement que M6 va r&eacute;ussir &agrave; nous d&eacute;goter de chouettes con-vives, comme &ccedil;a, pour une fois, on aurait <em>Un d&icirc;ner presque parfait</em> et <em>Strip Tease</em> en m&ecirc;me temps. Tadam tadam tam tam, Tadam tadam tam tam&hellip; Pour nos lecteurs belges (si si, on en a des fois, enfin, une fois!), inscriptions &agrave; l'adresse suivante: <a href=\"mailto:dinerbruxelles@gmail.com\" target=\"_blank\">dinerbruxelles@gmail.com</a></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:35:07", 
+            "type": 6, 
+            "slug": "un-diner-presque-parfait-une-fois", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:36:47", 
+            "title": "Le Journal du petit bonhomme en mousse", 
+            "tags": "tele, ppda, audience", 
+            "author_nickname": null, 
+            "content": "<p><em>Ah ! Mes enfants&hellip; J'en reviens pas comme PPD continue de s'accrocher &agrave; ses chiffres d'audience. Un vrai trap&eacute;ziste, le gonze : il veut pas l&acirc;cher la barre ! Fallait le voir en face de Thomas Hugues, avec son petit graphique des parts de march&eacute; sous les yeux, en train de bien insister : \"le m&ecirc;me jeudi de l'ann&eacute;e derni&egrave;re, je faisais mieux qu'elle, les chiffres sont t&ecirc;tus\". Ouais, ben lui aussi ! D'autant que l'ex de Lolo, il l&acirc;chait pas le morceau non plus, en d&eacute;fendant sa blonde aupr&egrave;s de qui il ne lui fait plus bon dormir. Et l&agrave;, on sentait bien que le PPD n'avait qu'une seule envie&hellip; Il sait pas chanter, mais on va le faire pour lui. Allez ! Tous avec moi : \"Ah ! Si tu pouvais fermer ta gueule, &ccedil;a nous ferait des vacances !\"</em></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:36:47", 
+            "type": 7, 
+            "slug": "le-journal-du-petit-bonhomme-en-mousse", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:37:42", 
+            "title": "Hondelatte : profil bas", 
+            "tags": "tele, france2, hondelatte", 
+            "author_nickname": null, 
+            "content": "<p>&Ccedil;a latte sec sur France 2 ! Faut dire que tout le monde commence &agrave; perdre patience face au cyclothymique Christophe Hondelatte qui, non content de se vexer comme un pou &agrave; la moindre allusion qui ne lui est pas adress&eacute;e (mais comme dit Desproges : <em>\"c'est pas parce que je suis parano qu'ils sont pas tous apr&egrave;s moi\"</em>), fait le beau alors que son &eacute;mission du vendredi ne dit &agrave; personne (encore&nbsp;- 300.000 t&eacute;l&eacute;spectateurs pour la derni&egrave;re). Ruquier, au moins, ne fait pas le faux cul : <em>\"son &eacute;mission, c'est une catastrophe. Avant la premi&egrave;re, il &eacute;tait trop pr&eacute;tentieux, en disant que j'avais laiss&eacute; la case dans un mauvais &eacute;tat, alors qu'il aurait d&ucirc; faire profil bas\"</em> . Nous, on pense qu'il va surtout (pro)filer du vendredi soir, le Christophe.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:37:42", 
+            "type": 8, 
+            "slug": "hondelatte-profil-bas", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:39:08", 
+            "title": "Star Ac' : vite fait\u2026 mais fait", 
+            "tags": "tele, starac", 
+            "author_nickname": null, 
+            "content": "<p>M&ecirc;me pas une semaine que les &eacute;l&egrave;ves sont install&eacute;s dans leur toute nouvelle acad&eacute;mie qu'ils&nbsp;prennent d&eacute;j&agrave;&nbsp;le chemin des studios pour enregistrer leur premier titre, le fameux truc \"cacochant&eacute;\" &agrave; plusieurs qui leur servira d'hymne jusqu'&agrave; la fin de l'&eacute;mission. La tradition veut que la chanson choisie ait trait &agrave; la musique, ou &agrave; la chanson (&eacute;tonnant, non ?) Donc, et de m&eacute;moire, apr&egrave;s <em>Musique</em> (France Gall) ou <em>La musique</em> (Nicoletta), la <em>Star Ac'</em> reste dans cette veine avant-gardiste en reprenant, en VF, le tube des Carpenters : <em>\"Sing\"</em>, autrement dit :\"chante\". Pour l'ann&eacute;e prochaine, on sugg&egrave;re <em>La chance aux chansons</em>, parce que jusqu'&agrave; pr&eacute;sent, les candidats ne leur ont laiss&eacute; aucune chance justement &hellip; aux chansons.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:39:08", 
+            "type": 9, 
+            "slug": "star-ac-vite-fait-mais-fait", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:40:06", 
+            "title": "Ferrari en perte de vitesse", 
+            "tags": "tele, ferrari, pernault, tf1", 
+            "author_nickname": null, 
+            "content": "<p>Dans un sondage publi&eacute; hier dans le dernier num&eacute;ro de T&eacute;l&eacute; 2 semaines, on apprend, &ocirc; surprise,&nbsp;que Jean-Pierre Pernault est le pr&eacute;sentateur de JT pr&eacute;f&eacute;r&eacute; des Fran&ccedil;ais (vive la France !), juste devant Claire Chazal (avec soutien-gorge) et Harry Roselmack (la b&ecirc;te noire des maris des m&eacute;nag&egrave;res de moins de 50 ans). Dans le m&ecirc;me sondage, on d&eacute;couvre que le remplacement de PPDA par Lolo Ferrari est per&ccedil;u comme un \"mauvais choix\".&nbsp;Ben si on &eacute;tait TF1, on mettrait Pernault au 20 heures (&agrave; l'heure de l'ap&eacute;ro, &ccedil;a colle), Claire et Harry au 13 heures (c'est transg&eacute;n&eacute;rationnel) et Ferrari&hellip; Euh&hellip; Ferrari&hellip; Ben, au garage, tiens !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:40:06", 
+            "type": 10, 
+            "slug": "ferrari-en-perte-de-vitesse", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:41:02", 
+            "title": "France 2 : c'est vraiment la panique", 
+            "tags": "tele, france2", 
+            "author_nickname": null, 
+            "content": "<p><em>Panique dans l'oreillette</em>,<em>&nbsp;</em>la nouvelle &eacute;mission de Fr&eacute;d&eacute;ric Lopez sur France 2, ne pouvait pas mieux porter son nom ! Car vu les scores d'audience, y'a pas que dans l'oreillette que c'est la panique. Samedi, l'&eacute;mission, dont Marianne James &eacute;tait l'invit&eacute;e, a encore perdu 150.000 t&eacute;l&eacute;spectateurs par rapport &agrave; la semaine pr&eacute;c&eacute;dente. Si l'on dresse un rapide bilan des nouveaux programmes de France 2, c'est vraiment la panique : Hondelatte fait un bide, Lopez, un flop et Picouly se noie dans sa tasse &agrave; caf&eacute; litt&eacute;raire. Euh&hellip; sinon, quoi de neuf ?</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:41:02", 
+            "type": 2, 
+            "slug": "france-2-cest-vraiment-la-panique", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:41:49", 
+            "title": "Docu au Br\u00e9sil : M6 tendue comme un string", 
+            "tags": "tele, m6, bresil", 
+            "author_nickname": null, 
+            "content": "<p>En mars dernier, <em>Enqu&ecirc;te exclusive</em>, sur M6, diffusait un reportage intitul&eacute; <em>La face cach&eacute;e de Rio</em>, qui suivait les troupes d'&eacute;lite de la police br&eacute;silienne, dans les favelas notamment. Apr&egrave;s la France, le docu a &eacute;t&eacute; achet&eacute; par une cha&icirc;ne portugaise, puis br&eacute;silienne. Sauf qu'entre temps, il a &eacute;t&eacute; tronqu&eacute; et truqu&eacute;. Du coup, les Br&eacute;siliens n'ont vu que 7 minutes d'une charge violente contre les violences polici&egrave;res, et &agrave; la suite de sa diffusion, des policiers ont &eacute;t&eacute; poursuivis par la police. Upside TV, qui avait produit le reportage pour M6, porte plainte contre la t&eacute;l&eacute; br&eacute;silienne pour \"utilisation abusive et d&eacute;tourn&eacute;e des images du reportage\".</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:41:49", 
+            "type": 3, 
+            "slug": "docu-au-bresil-m6-tendue-comme-un-string", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:42:47", 
+            "title": "Dechavanne, b\u00eate \u00e0 con-cours", 
+            "tags": "tele, tf1, dechavanne", 
+            "author_nickname": null, 
+            "content": "<p>En avril dernier, TF1 lan&ccedil;ait une nouvelle &eacute;mission avec Monsieur Coucougnettes aux manettes : <em>Qui sera le meilleur&hellip; sosie ?</em>. Le 4 octobre prochain, le programme revient &agrave; la Une, version \"artistes de music hall\". &Ccedil;a s'appellera <em>Qui sera le meilleur&hellip; ce soir ?</em>, et les candidats, tous des amateurs, devront convaincre un jury de c&eacute;l&eacute;brit&eacute;s (qui ne sert &agrave; rien puisque c'est le public qui vote), avec des num&eacute;ros de danse, chant, com&eacute;die, ou encore humour. Cette fois, c'est une sorte d'hybride entre <em>Dance Floor</em> et <em>Le plus grand cabaret du monde</em>, et apr&egrave;s on aura droit &agrave; quoi ? Un truc sportif ? Genre <em>Qui sera le meilleur&hellip; con(m)-p&eacute;titeur </em>?</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:42:47", 
+            "type": 4, 
+            "slug": "dechavanne-bete-a-con-cours", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 6, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:43:51", 
+            "title": "NRJ 12 : 5 Frenchies \u00e0 Rio\u2026 ou Mexico", 
+            "tags": "tele, nrj12, bresil", 
+            "author_nickname": null, 
+            "content": "<p>Pour une nouvelle, en voil&agrave; une bonne nouvelle ! On s'en voulait vachement beaucoup d'avoir loup&eacute; la premi&egrave;re de <em>5 Frenchies &agrave; Miami</em>, l'&eacute;mission d'NRJ 12 dont le concept &eacute;tait de l&acirc;cher 5 m&acirc;les fran&ccedil;ais, sans rien dans les bourses, dans la jungle miamienne (pas la tienne, hein !), pour chasser un max de femelles ricaines pr&ecirc;tes &agrave; leur rouler des pelles. Heureusement, la cha&icirc;ne, ravie des audiences de la premi&egrave;re &eacute;mission, a d&eacute;cid&eacute; de renouveler l'exp&eacute;rience. Cette fois, le concours de galoches sauvages sera tourn&eacute; au Br&eacute;sil (si les travelos comptent, z'ont peut-&ecirc;tre des chances les p'tits fran&ccedil;ais) ou au Mexique (pour les \"sombreros de la l&egrave;che\").</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:43:51", 
+            "type": 5, 
+            "slug": "nrj-12-5-frenchies-a-rio-ou-mexico", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:45:09", 
+            "title": "Paradis pour Crumley", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>Hipps, euh, z'est zizi, hihihi, c'est zissi chez Zaint-Pierre ? Hippssss, rhooooo, &ccedil;a rigole pas hein. Bon, alors moi z'est James hips Crumley. Kouaaaaa ? Tu me reconnais pas, hips ? Eh ohhh, je te ferais dire que j'&eacute;tais zuper c&eacute;l&egrave;bre en bas (ouhhh, &ccedil;a tourne !). M&ecirc;me que j'&eacute;tais publi&eacute; en France, chez Christian Bourgois, puis Fayard et Albin Michel, hein. Oh, za calme de suite ! Et hips, j'&eacute;tais un ma&icirc;tre de la s&eacute;rie noire. Noirrrr, c'est noirrrrrrrr ! Koiiii, y a pas le droit de chanter, non plus ?&nbsp;Ouhhhh ze que vous z&ecirc;tes coinc&eacute;s. Voui madame, euh non monsieur, voui je suis mort d'abus d'alcool et de drogues, et z'alors ? Hein ? Pas zizi ? En zenfer ? Rhoooo, t'es dr&ocirc;le Zaint-Pierre. Allez, fais p&eacute;ter le pastis et les cahou&egrave;tes&hellip;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:45:09", 
+            "type": 1, 
+            "slug": "paradis-pour-crumley", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:45:52", 
+            "title": "Le parrain, revu et corrig\u00e9\u2026", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>Et apr&egrave;s on te dira qu'&eacute;crivain, c'est pas un m&eacute;tier &agrave; risques. Vois Sudhir Venkatesh. Le type, il y va &agrave; fond. Genre, quand il &eacute;crit un bouquin qui s'intitule \"<em><span style=\"color: #ff6600;\">Gang leader : dans la peau d'un chef de gang</span></em>\", qui sortira le 2 octobre chez Scali, ben il infiltre carr&eacute;ment un gang de Chicago. Pour de vrai. Et en prend les commandes pendant une journ&eacute;e. Ouais, il est comme &ccedil;a Sudhir ! A fond dans le taf, investi, consciencieux, et&hellip; ouais, un peu inconscient, on est d'accord ! Bon, en m&ecirc;me temps, tant qu'il se met pas dans la t&ecirc;te de conna&icirc;tre les joies de l'enfantement ou autres conneries du genre&hellip;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:45:52", 
+            "type": 6, 
+            "slug": "le-parrain-revu-et-corrige", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:46:35", 
+            "title": "Le journal d'Am\u00e9lie Nippon (dis, ch\u00e9ri\u2026)", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p><em style=\"color: red;\">Dis ch&eacute;ri, je vais finir par me vexer pour de bon. Le jury du prix France T&eacute;l&eacute;visions a &eacute;tabli sa premi&egrave;re s&eacute;lection de 6 romans pour son prix de mer&hellip; euh, son prix quoi. Ben &ccedil;a recommence : je suis toujours pas dedans. Ah &ccedil;a, Fred Vargas, Annie Ernaux, Jean-Marie Blas de Robl&egrave;s, Mathias Enard, Christian Oster ou Yasmina Khadra, ah &ccedil;a, ils y sont hein. Mais moi, moiiiiii qui suis g&eacute;ni&acirc;&acirc;&acirc;&acirc;le, rien de rien, nothing, nicht, nada. A quoi &ccedil;a sert que je roupille que 4 heures par nuit pour tant d'ingratitude ? Hein, hein ? Bon ok, j'y retourne, j'ai mes 64, 65 et 66<sup>&egrave;me</sup> romans &agrave; &eacute;crire, MOI !</em></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:46:35", 
+            "type": 7, 
+            "slug": "le-journal-damelie-nippon-dis-cheri", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:47:28", 
+            "title": "Faut-il menacer Menacer ?", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>Deux fois en une semaine qu'on les &eacute;pingle : Melik Menacer et ses relations publiques &agrave; la noix vont peut-&ecirc;tre comprendre qu'on les a d&eacute;masqu&eacute;s, eux et leurs bouquins en auto-&eacute;dition ! Parce qu'on se mouche pas du coude chez Menacer ! Jugez plut&ocirc;t : \"<em>Il y a longtemps. Le roman d'amour de la rentr&eacute;e sign&eacute; Pascal Marmet, d&eacute;j&agrave; vendu &agrave; pr&egrave;s de 6.000 exemplaires</em>\". Bou diou, si tous les bouquins qui se vendent &agrave; 6.000 exemplaires &eacute;taient LES romans de la rentr&eacute;e, on n'en sortirait plus. Et puis si au passage vous pouviez nous expliquer votre phrase, l&agrave; : \"<em>Une histoire d'amour avec une dualit&eacute; d'&eacute;criture in&eacute;dite</em>\". Vous voyez, nous yen a pas assez intelligents pour vous comprendre. Alors, vous yen &agrave; nous oublier, d'accord ? Et vite !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:47:28", 
+            "type": 8, 
+            "slug": "faut-il-menacer-menacer", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:48:21", 
+            "title": "Etroite collaboration", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>Ca doit pas &ecirc;tre simple tous les jours d'&ecirc;tre fils d'un collabo&hellip; Non, on te dit &ccedil;a, pas que &ccedil;a nous emp&ecirc;che de dormir la nuit, mais apparemment ce n'est pas le cas de tout le monde, et notamment de l'acad&eacute;micien Dominique Fernandez. Il peaufine sa \"<em><span style=\"color: #ff6600;\">Biographie litt&eacute;raire et intime</span></em>\" d&eacute;di&eacute;e &agrave; son papounet, Ramon Fernandez. En effet, y a de quoi se poser des questions, car comment expliquer que cet &eacute;crivain d'origine mexicaine, homme de gauche en admiration devant Proust, ait pu se retrouver pendant l'Occupation au PPF, le parti de Jacques Doriot ? Ben pour la r&eacute;ponse, faudra attendre janvier 2009 et une publication chez Grasset. Ah &ccedil;a, depuis que publier un livre est devenu moins on&eacute;reux qu'une th&eacute;rapie, on ne nous &eacute;pargne plus rien&hellip;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:48:21", 
+            "type": 9, 
+            "slug": "etroite-collaboration", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:49:12", 
+            "title": "Gagatages divers", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>Attends, je te dis pas l'&eacute;motion en recevant ce courrier &eacute;lectronique sign&eacute; Jean-Jacques Pauvert. Comment ? Tu ne le connais pas ? Mais si voyons, THE &eacute;diteur qui, le premier a publi&eacute; Sade sous son vrai nom. Donc vraiment grand honneur de recevoir un mail de lui. Mais c'est bien beau de nous balancer un truc titr&eacute; \"<em><span style=\"color: #ff6600;\">Instruction libertine ou dialogues entre Charles et Justine, sur la th&eacute;orie physique de l'amour et les diverses mani&egrave;res de s'en procurer les plaisirs mat&eacute;riels</span></em>\", (inspirez, respirez, ouffffff), il n'en reste pas moins qu'on n'y comprend rien. Ca sort o&ugrave;, quand ? Parce que nous titiller en disant que \"<em>ce volume est simplement l'&eacute;rotique le plus rare au monde, inconnu &agrave; la BnF</em>\", c'est gentillet, mais &ccedil;a ne r&eacute;sout pas notre probl&egrave;me. Alors, Pauvert, un chti coup d'alzeimer ?</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:49:12", 
+            "type": 10, 
+            "slug": "gagatages-divers", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:50:05", 
+            "title": "Courage, fuyez !", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>Si par le plus grand des hasards, tu te trouvais &agrave; New York entre le 27 septembre et le 4 octobre, et que tu pensais &ecirc;tre atteint d'une maladie grave, parce que tu croises des pouet-pouet de partout, rassure-toi ! Ce n'est pas irr&eacute;m&eacute;diable. Tu es juste face &agrave; la cinqui&egrave;me &eacute;dition de \"<em>Po&egrave;tes &agrave; New York</em>\", qui autorise des types &agrave; d&eacute;clamer dans la rue et les centres culturels, accompagn&eacute;s de musique. D'accord, on en convient, &ccedil;a fait chier. Mais bon, en m&ecirc;me temps, on t'aura pr&eacute;venu et du coup, tu peux reporter ta s&eacute;ance de shopping ou la signature du contrat du si&egrave;cle. Allez, &ccedil;a fait longtemps : merci Cri ? Merci Critic@.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:50:05", 
+            "type": 2, 
+            "slug": "courage-fuyez", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:50:47", 
+            "title": "Ker ki ya encore ? ", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>Jean Ker est l'auteur du \"<em><span style=\"color: #ff6600;\">Fou de Bruay</span></em>\" et on apprend chez Morandini qu'il est furax apr&egrave;s la diffusion du film sur la Une, hier soir, because il jure que les auteurs du t&eacute;l&eacute;film ont pomp&eacute; tout son bouquin, et qu'en plus, ils ont cr&eacute;&eacute; son propre sosie. Sans son autorisation, s'entend. C&ocirc;t&eacute; production, on ne d&eacute;ment pas, on louvoie (une seconde nature pour TF1) : \"<em>On s'est bas&eacute; sur le dossier d'instruction. Jean Ker aurait peut-&ecirc;tre voulu travailler au sc&eacute;nario ? Avec son assignation, il est content, on va parler de lui&hellip;</em>\" C'est sympa cette bonne ambiance g&eacute;n&eacute;rale qui transpire, d&egrave;s qu'on prononce le mot magique de TF1 !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:50:47", 
+            "type": 3, 
+            "slug": "ker-ki-ya-encore", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:51:31", 
+            "title": "On verra Puttar, beaucoup Puttar\u2026", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p><span>My name is Puttar. Hari Puttar. </span>Comment &ccedil;a, &ccedil;a vous rappelle quelqu'un ? Ah mais vous n'allez pas vous y mettre, vous aussi. D&eacute;j&agrave; que chez Warner, ils trouvent que &ccedil;a leur rappelle un vague sorcier qu'ils aiment beaucoup parce qu'il leur rapporte plein de sousous. Ils viennent de piquer une grosse col&egrave;re apr&egrave;s une soci&eacute;t&eacute; de production indienne qui a ainsi nomm&eacute; le h&eacute;ros de son film. Pourtant rien &agrave; voir avec Harry Potter se d&eacute;fend-on, c&ocirc;t&eacute; Indiens,&nbsp;en expliquant&nbsp;que Hari est un pr&eacute;nom banal chez eux et que Puttar signifie \"fils\" en panjabi. Ca ne marche pas. Et d'ailleurs, Adava Kedavra, ce serait-t'y pas de l'indien ? Hein, hein, qu'on est trop forts ?</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:51:31", 
+            "type": 4, 
+            "slug": "on-verra-puttar-beaucoup-puttar", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 7, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:52:22", 
+            "title": "Qui s'y frotte s'y pique...", 
+            "tags": "bouquins", 
+            "author_nickname": null, 
+            "content": "<p>C'est quoi le probl&egrave;me avec vous les Rosbifs ? On croyait que l'humour anglais n'&eacute;tait pas un vain mythe. A priori, on s'est gourr&eacute;s. Alors que, tout contents de nous, on vous pr&ecirc;te le talent de Muriel Barbery, et que vos &eacute;ditions Gallic Books acceptent de traduire le somptueux \"<em><span style=\"color: #ff6600;\">L'&eacute;l&eacute;gance du h&eacute;risson</span></em>\", on apprend que vous pourriez bouder le livre sous pr&eacute;texte que vous &ecirc;tes habitu&eacute;s aux livres &agrave; intrigues. Quoi ? La philosophie et la sociologie, c'est pas votre truc ? Ah, nous, on l'a pas dit hein&hellip; c'est The Guardian, un truc bien de chez vous qui l'affirme. Apr&egrave;s tout, si vous voulez vous ridiculiser, &agrave; vous de voir. On n'est plus &agrave; une fois pr&egrave;s&hellip;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:52:22", 
+            "type": 5, 
+            "slug": "qui-sy-frotte-sy-pique", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:53:36", 
+            "title": "Plus d'IVG dans le sud-est et dans les DOM", 
+            "tags": "nanas, ivg", 
+            "author_nickname": null, 
+            "content": "<p><span>Une &eacute;tude de la Direction de la recherche, des &eacute;tudes, de l'&eacute;valuation et des statistiques - tu parles d'un nom &agrave; rallonge&nbsp;! - a r&eacute;v&eacute;l&eacute; qu'en 2006, les trois quarts des IVG concernaient de jeunes nanas de 18 &agrave; 35 ans. De deux choses l'une : soit les nanas prennent moins la pilule, soit la capote craque et l&agrave;, c'est le drame ! Et il semblerait qu'il y ait une &eacute;pid&eacute;mie de craquage involontaire de capote dans le sud-est, ce qui conduit &agrave; 18 IVG pour 1000 femmes (contre 12 pour 1000 sur l'ensemble du territoire), ainsi que dans les DOM, o&ugrave; l'avortement est deux fois plus pratiqu&eacute; qu'en m&eacute;tropole. Faudrait penser &agrave; leur filer des pr&eacute;servatifs qui r&eacute;sistent mieux - ou &agrave; leur montrer comment les utiliser ?</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:53:36", 
+            "type": 1, 
+            "slug": "plus-divg-dans-le-sud-est-et-dans-les-dom", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:54:49", 
+            "title": "Un autre soin top secret de chez YSL", 
+            "tags": "nanas, esthetique, ysl", 
+            "author_nickname": null, 
+            "content": "<p><span>D&eacute;cid&eacute;ment, ils sont vraiment super sympas chez Yves Saint Laurent ! Apr&egrave;s le Gloss Pur Noir hier, voici un autre secret des tops :&nbsp;<a href=\"http://www.ysl-topsecrets.com/\" target=\"_blank\">Top Secrets</a> - on ne pouvait pas mieux trouver comme nom ! - encore appel&eacute; le Soin Pinceau Eclat Instantan&eacute; - c'est moins bandant ! D'un seul coup de pinceau, votre peau est plus lisse, plus hydrat&eacute;e et plus lumineuse. En plus, ce produit est hyper pratique car pinceau et tube ne font qu'un. Whaouh ! C'est LE soin utilis&eacute; par les pros. Mais faut pas r&ecirc;ver, c'est pas avec &ccedil;a que vous serez la future Kate Moss.</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:54:49", 
+            "type": 6, 
+            "slug": "un-autre-soin-top-secret-de-chez-ysl", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:55:41", 
+            "title": "Le Dr Constance d'Hypocrite vous r\u00e9pond", 
+            "tags": "nanas", 
+            "author_nickname": null, 
+            "content": "<p><em><span style=\"text-decoration: underline;\">Question de lectrice :</span> Ma petite fleur est tr&egrave;s irrit&eacute;e, et je ne sais pas quoi faire pour l'apaiser. Ana&iuml;s</em> <em><strong>Dr :</strong> Ch&egrave;re Ana&iuml;s, vous ne pouvez pas appeler un chat un chat - en l'occurrence, une chatte -, comme tout le monde ? Bon, on vous conseille d'abord Derm'Intim des laboratoires Ducray dont la formule &agrave; base d'avoine Rh&eacute;alba apaise les irritations et soulage les d&eacute;mangeaisons d&egrave;s la deuxi&egrave;me utilisation. Et puis, vous allez troquer votre jeans contre des sarouels pendant quelques jours, &ccedil;a vous &eacute;vitera d'empirer les choses ! Si &ccedil;a dure, mieux vaut contacter votre gyn&eacute;co : c'est peut-&ecirc;tre un champignon et c'est plus grave que vous ne le pensez. Enfin, vous allez revoir votre vocabulaire : on peut dire sexe, ce n'est pas un gros mot, ou parler de muqueuses g&eacute;nitales, si vous voulez vous la p&eacute;ter !</em></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:55:41", 
+            "type": 7, 
+            "slug": "le-dr-constance-dhypocrite-vous-repond", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:56:39", 
+            "title": "La cliente est reine (des connes)", 
+            "tags": "nanas", 
+            "author_nickname": null, 
+            "content": "<p><span>Pas besoin de faire de grandes &eacute;tudes pour se rendre compte que les stylistes n'ont pas invent&eacute; la poudre - &agrave; joues, bien s&ucirc;r. Mais l&agrave;, Reiss d&eacute;passe les bornes. La cha&icirc;ne british de pr&ecirc;t-&agrave;-porter a mis en rayon des fringues&hellip; taille z&eacute;ro ! Et pourquoi, je vous le demande ? Parce que des clientes, de plus en plus nombreuses, ont r&eacute;clam&eacute; des v&ecirc;tements de cette taille. Et c'est vraiment une mauvaise excuse d'invoquer les demandes stupides de clientes pour proposer de telles sapes. Le client est roi, mais faut quand m&ecirc;me pas d&eacute;conner ! Faut pas bon plus les habituer &agrave; obtenir tout ce qu'elles veulent - &ccedil;a va faire des clientes pourries g&acirc;t&eacute;es ! D&eacute;j&agrave; que c'&eacute;tait inqui&eacute;tant de voir les mannequins squelettiques en porter, si, en plus, on doit s'habituer &agrave; voir des nanas,<span>&nbsp; </span>m&ecirc;me pas mod&egrave;les mais tout aussi d&eacute;charn&eacute;es, r&eacute;clamer des sapes taille z&eacute;ro, on n'a pas fini de combattre les troubles de l'alimentation ! </span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:56:39", 
+            "type": 8, 
+            "slug": "la-cliente-est-reine-des-connes", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:57:32", 
+            "title": "Dormir\u2026 d'une narine !", 
+            "tags": "nanas, recherche", 
+            "author_nickname": null, 
+            "content": "<p><span>Une quinzaine de nanas ont particip&eacute; &agrave; une recherche sur les r&ecirc;ves. Les chercheurs voulaient savoir comment les odeurs pouvaient influencer notre sommeil de Belle au bois dormant. Y'a pas trop de surprise : si on vous met une odeur d'&oelig;ufs pourris dans les narines pendant votre gros dodo, vos &eacute;motions oniriques seront plut&ocirc;t n&eacute;gatives ; en revanche, si vous &ecirc;tes expos&eacute;es &agrave; la douce fragrance des roses, vos r&ecirc;ves n'en seront que plus beaux. Ce qui prouve que notre odorat, les filles, ne dort pas ! On disait \"dormir d'un oeil\", on peut maintenant dire \"dormir d'une narine\" !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:57:32", 
+            "type": 9, 
+            "slug": "dormir-dune-narine", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:58:22", 
+            "title": "Question de priorit\u00e9", 
+            "tags": "nanas", 
+            "author_nickname": null, 
+            "content": "<p><span>C'est &agrave; n'y rien comprendre ! On nous bassine avec la baisse du pouvoir d'achat, et pourtant des nanas, loin d'&ecirc;tre millionnaires, n'h&eacute;sitent pas &agrave; investir dans du maquillage tr&egrave;&egrave;&egrave;&egrave;s cher. Les rouges &agrave; l&egrave;vres Est&eacute;e Lauder, Lanc&ocirc;me ou Chanel ont connu une augmentation de leurs ventes de 20% depuis le d&eacute;but de l'ann&eacute;e. C'est pas parce qu'on peut &agrave; peine se payer &agrave; bouffer qu'on doit sacrifier notre beaut&eacute; ! Y'a des priorit&eacute;s dans la vie&hellip;</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:58:22", 
+            "type": 10, 
+            "slug": "question-de-priorite", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 08:59:08", 
+            "title": "Poisson ou Big Mac ?", 
+            "tags": "nanas", 
+            "author_nickname": null, 
+            "content": "<p><span>Aux States, les nanas enceintes sont particuli&egrave;rement soucieuses de leur alimentation. Aussi, par crainte d'ing&eacute;rer du mercure, elles ont cess&eacute; d'acheter du thon en conserve. On pourrait se dire que c'est une bonne initiative. Au moins pour le rejeton. Sauf que, pour les familles &agrave; bas revenus, le thon en bo&icirc;te est le seul poisson consomm&eacute;, et il se trouve que c'est une excellente source d'om&eacute;ga 3, essentiel pour le d&eacute;veloppement du b&eacute;b&eacute;. On esp&egrave;re qu'elles ont remplac&eacute; le thon par le saumon ou un autre poisson, mais on pense qu'elles ont pr&eacute;f&eacute;r&eacute; augmenter leur consommation de Bic Mac et autre Coca XXL...</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 08:59:08", 
+            "type": 2, 
+            "slug": "poisson-ou-big-mac", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:00:31", 
+            "title": "Miroir, mon beau miroir ", 
+            "tags": "nanas", 
+            "author_nickname": null, 
+            "content": "<p><span><a href=\"http://www.bracelook.com/\" target=\"_blank\"><span>Bracelook</span></a>, vous connaissez ? Ce bracelet, qui&nbsp;a vu le jour en 2006, a &eacute;t&eacute; cr&eacute;&eacute; par Gilles Neveu, ancien styliste de Dior, et Jacques Pary, un journaliste. Aujourd'hui, certaines &eacute;ditions, limit&eacute;es bien s&ucirc;r, sont dessin&eacute;es par des stylistes de renom : Etsuko Yamada, Christine Laaban de Babylone et bient&ocirc;t Chantal Thomass. Ce bijou est compos&eacute; du corps du bracelet, d'un miroir et de l'encadrement du miroir. Miroir, vous avez dit miroir ? Non seulement on&nbsp;voit notre r&eacute;flexion, pas toujours terrible, tous les matins dans celui de la salle de bains, mais en plus on nous propose d'en porter un au poignet toute la journ&eacute;e. Ah, &ccedil;a non alors !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:00:31", 
+            "type": 3, 
+            "slug": "miroir-mon-beau-miroir", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:01:16", 
+            "title": "T\u00e9l\u00e9commander les spermatozo\u00efdes", 
+            "tags": "nanas", 
+            "author_nickname": null, 
+            "content": "<p><span>On parle peu de la contraception masculine, et pourtant, elle existe ! Y'a bien s&ucirc;r la vasectomie, mais c'est un peu radical comme solution, et la capote, mais certaines craquent (voir Vous saviez ?). Alors les chercheurs travaillent sur de nouvelles m&eacute;thodes : des implants qui d&eacute;tournent les spermatozo&iuml;des de leur destination initiale ; des composants qui bloquent leur arriv&eacute;e, ou encore des ultrasons. Le probl&egrave;me, c'est que nos mecs aiment beaucoup les petits gadgets high tech, alors pourquoi ne pas inventer un appareil qui emp&ecirc;che ou permet le passage des spermatozo&iuml;des gr&acirc;ce &agrave; une petite t&eacute;l&eacute;commande. Ca, &ccedil;a leur plairait !</span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:01:16", 
+            "type": 4, 
+            "slug": "telecommander-les-spermatozoides", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:03:05", 
+            "title": "Comment sont faits les b\u00e9b\u00e9s ?", 
+            "tags": "nanas", 
+            "author_nickname": null, 
+            "content": "<div class=\"TEXTE\">\r\n<p class=\"MsoNormal\" style=\"margin: 0cm 0cm 0pt;\"><span>Le planning familial british a publi&eacute; un manuel sur l'&eacute;ducation sexuelle destin&eacute;e aux enfants de 6 ans, afin d'encourager les discussions. Cela a donn&eacute; l'id&eacute;e &agrave; un journaliste du Times de poser quelques questions sur ce th&egrave;me &agrave; des m&ocirc;mes. Certains pensent que Dieu est l'origine des grossesses - il joue aux d&eacute;s et si le nombre obtenu est le v&ocirc;tre, madame, vous &ecirc;tes enceinte ! D'autres croient que c'est en mangeant &eacute;quilibr&eacute;, et notamment en ing&eacute;rant 18 brocolis par semaine - ne me demandez pas o&ugrave; ils sont all&eacute;s chercher ce chiffre - que vous aurez un b&eacute;b&eacute; ! Allez, demandez &agrave; vos gamins ce qu'ils en pense et tenez au courant, je suis s&ucirc;re qu'ils ont autant d'imagination !<br /></span></p>\r\n</div>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:03:05", 
+            "type": 5, 
+            "slug": "comment-sont-faits-les-bebes", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:04:48", 
+            "title": "In the taille with diamond", 
+            "tags": "insolite, lesotho", 
+            "author_nickname": null, 
+            "content": "<p>Au Lesotho, petite enclave sud-africaine, on vient d&rsquo;extraire un diamant brut de 478 carats. Au sein de&nbsp;la compagnie <em>Gem Diamonds</em>, qui exploite avec la complicit&eacute; de l&rsquo;Etat la mine de Letseng (together), on a forc&eacute;ment les yeux qui brillent&nbsp;: il s&rsquo;agit du vingti&egrave;me plus gros caillou recens&eacute;. Plus blanc que blanc, mais toujours sans nom, il se fera donc tailler avec une grande dext&eacute;rit&eacute;, comme les autres. Pas de quoi baver cependant&nbsp;compar&eacute; au \"Cullinan\", au poids record de 3.106 carats et trouv&eacute; en 1905 en Afrique du Sud. Trop imposant, il fut cass&eacute; en plusieurs morceaux, dont un de 530 carats qui se dore la pilule sur le sceptre de la Quouine des Angliches. Qui doit &ecirc;tre tr&egrave;s riche.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:04:48", 
+            "type": 1, 
+            "slug": "in-the-taille-with-diamond", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:05:42", 
+            "title": "L'\u00eele de la tentation", 
+            "tags": "insolite, irak, tourisme", 
+            "author_nickname": null, 
+            "content": "<p>Le Comit&eacute; irakien du Tourisme aurait la ferme intention de faire revivre \"Jazirat al-A&rsquo;arass\". Qui ne signifie pas <em>Festival de jazz &agrave; Arras</em>, mais <em>&Icirc;le aux Mariages</em>. A priori, ce petit bout de terre de 2 hectares pos&eacute; en plein milieu du fleuve Tigre, au sud de Bagdad, d&eacute;tient \"<em>le potentiel pour devenir l'une des attractions touristiques principales</em>\" de la ville. Mais la construction d&rsquo;un tel complexe (h&ocirc;tel de luxe, &eacute;quipements baln&eacute;aires, golf, villas, restos&hellip;) n&eacute;cessite entre 1 et 3 milliards de dollars. Un appel d&rsquo;offres international est donc lanc&eacute; aupr&egrave;s des investisseurs - m&ecirc;me am&eacute;ricains&nbsp;? - qui devront alors respecter le style traditionnel ottoman. On nous infirme que Deubeuliou, paysagiste r&eacute;put&eacute; pour ses cr&eacute;ations abstraites, ne tiendrai pas la corde.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:05:42", 
+            "type": 6, 
+            "slug": "lile-de-la-tentation", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:06:39", 
+            "title": "P\u00e9assoname ! Le taureau", 
+            "tags": "insolite, rodeo", 
+            "author_nickname": null, 
+            "content": "<p>Connaissez-vous l&rsquo;histoire de P&eacute;assoname, le taureau&nbsp;? Alors voil&agrave;&nbsp;: il &eacute;tait une fois un charpent&eacute; taurillon qui voulait se faire aussi gros qu&rsquo;un b&oelig;uf&hellip; Euh, pardon, qui voulait se faire un concours de rod&eacute;o. Un peu comme ses cong&eacute;n&egrave;res latinos dans les ar&egrave;nes, sauf que lui, vivant pr&egrave;s de Nouille Orque, il suivit la mode du coin. Alors un jour, le bestio s&rsquo;&eacute;chappa dans le quartier du Queens. Donc peur sur la ville, donc pimpon sur les bagnoles des flics, qui tent&egrave;rent de le repousser vers des rues secondaires. Et boum&nbsp;! Apr&egrave;s avoir cogn&eacute; une patrouille, il se fit choper par le lasso d&rsquo;un cowboy en tenue, avant de faire un gros dodo via un s&eacute;datif. Mais les v&eacute;tos ne pig&egrave;rent pas pourquoi, une fois transf&eacute;r&eacute; dans un centre pour animaux, il ne se r&eacute;veilla jamais. Et l&agrave;&nbsp;: P&eacute;assoname&nbsp;! Le taureau.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:06:39", 
+            "type": 7, 
+            "slug": "peassoname-le-taureau", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:07:36", 
+            "title": "Terry le terrible", 
+            "tags": "insolite, ben_laden, afghanistan", 
+            "author_nickname": null, 
+            "content": "<p>Avouez qu&rsquo;il faut &ecirc;tre tordu pour se d&eacute;guiser en Ben Laden. Surtout quand on est flic, et qu&rsquo;on est formateur europ&eacute;en de la police en Afghanistan. Et pourtant&nbsp;: vous en r&ecirc;viez, Colin Terry l&rsquo;a fait. C&rsquo;&eacute;tait chez lui, au carnaval de Grampound, le 6 septembre dernier. Pas fin, l&rsquo;officier angliche se fait d&eacute;j&agrave; remarquer en enfilant une robe et un masque d&rsquo;Oussama. Pas fine, la presse du pays ne manque pas de publier sa tronche, pile poil le jour du 11 septembre... Sept ans apr&egrave;s les attentats, et une semaine apr&egrave;s son exploit, le Foreign Office du Devon et de Cornouaille d&eacute;cide de bl&acirc;mer son divisionnaire. Oui&nbsp;: m&ecirc;me s&rsquo;il reconna&icirc;t sa grosse&nbsp;\"<em>erreur de jugement</em>\", Terry doit passer deux tours (de garde) avant de rejouer.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:07:36", 
+            "type": 8, 
+            "slug": "terry-le-terrible", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:08:37", 
+            "title": "La guerre des moutons", 
+            "tags": "insolite, ministere, armee", 
+            "author_nickname": null, 
+            "content": "<p>En France, le minist&egrave;re de la D&eacute;fense poss&egrave;de 50.000 hectares de terrains un peu particuliers. En effet, les militaires n&rsquo;y l&acirc;chent pas trop d&rsquo;obus, une riche faune et flore ayant d&eacute;j&agrave; install&eacute; son camp de base. Exemple &agrave; Sissonne (tu r&eacute;ponds), dans le d&eacute;partement de l&rsquo;Aisne. Cr&eacute;&eacute; en 1895, on peut s&rsquo;&eacute;clater la gueule sur ce morceau picard de 5.900 hectares, mais sans l&acirc;cher de produits chimiques. Et vu que des conventions locales sign&eacute;es entre l'arm&eacute;e et les protecteurs des sites naturels obligent &agrave; pr&eacute;server la biodiversit&eacute;, les deux parties ont trouv&eacute; LA solution&nbsp;: engager des moutons pour d&eacute;broussailler les lieux. Une bien b&ecirc;&ecirc;&ecirc;&ecirc;&ecirc;lle mission que voil&agrave;.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:08:37", 
+            "type": 9, 
+            "slug": "la-guerre-des-moutons", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:09:32", 
+            "title": "Les Stones \u00e0 Chambord", 
+            "tags": "insolite, patrimoine", 
+            "author_nickname": null, 
+            "content": "<p>Perdu&nbsp;! A tous ceux qui pensaient un instant que les Rolling Stones allaient se taper un concert au ch&acirc;teau de Fran&ccedil;ois Un&nbsp;: vous vous m&eacute;prenez. Mais, d&rsquo;une certaine fa&ccedil;on, ils sont pr&eacute;sents sur le domaine. En fait, deux artistes en herbe de Tours y exposent un <em>land art</em> sur la verte esplanade, reproduisant la langue baladeuse de Mick Jagger. Une &oelig;uvre tondue de 810 m2 que l&rsquo;on peut admirer depuis les terrasses du ch&acirc;teau, mais pas depuis les 365 fen&ecirc;tres, &eacute;videmment. Claire Trottignon et Nils Guadajin, 25 et 23 ans, se veulent \"<em>&agrave; la fois impertinents et dr&ocirc;les en mettant en parall&egrave;le les deux mythes, l'un historique, l'autre musical</em>\". Con&ccedil;u pour les 25e Journ&eacute;es europ&eacute;ennes du Patrimoine, ce week-end, le relief tiendra jusqu&rsquo;&agrave; la prochaine tonte.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:09:32", 
+            "type": 10, 
+            "slug": "les-stones-a-chambord", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:10:19", 
+            "title": "GRB 080913 s\u2019\u00e9clate", 
+            "tags": "insolite", 
+            "author_nickname": null, 
+            "content": "<p>De m&eacute;moire d&rsquo;homme, et m&ecirc;me d&rsquo;&eacute;l&eacute;phant, on n&rsquo;avait jamais vu un sursaut gamma aussi lointain. <em>Mer-cri</em> au satellite am&eacute;ricain Swift, qui vient de surprendre une &eacute;toile se p&eacute;ter la gueule bien que situ&eacute;e &agrave; 12,8 milliards d&rsquo;ann&eacute;es-lumi&egrave;re. Son explosion, baptis&eacute;e \"GRB 080913\", nous est parvenue depuis le bord de l'Univers visible&hellip; Et vu que la lumi&egrave;re se d&eacute;place &agrave; une vitesse limit&eacute;e, regarder tout l&agrave;-bas au&nbsp;fond signifie remonter le temps. D&rsquo;apr&egrave;s nos calculs&hellip; enfin, ceux des astronomes, le <em>prout</em> g&eacute;ant date de l&rsquo;an 825 millions de notre galaxie. Donc, la luisante est morte quand l'Univers n'avait qu'un septi&egrave;me de son &acirc;ge actuel. GRB 080913&nbsp;? CQFD.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:10:19", 
+            "type": 2, 
+            "slug": "grb-080913-seclate", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:11:12", 
+            "title": "Du water-baby-foot", 
+            "tags": "insolite, allemagne", 
+            "author_nickname": null, 
+            "content": "<p>Kassel, charmante cit&eacute; de 200.000 habitants plant&eacute;e en plein c&oelig;ur de l&rsquo;Allemagne, est connue pour &ecirc;tre la premi&egrave;re du pays &agrave; se fournir en &eacute;lectricit&eacute; verte. Et ce, gr&acirc;ce &agrave; des centrales hydrauliques scandinaves. Mais pas seulement&hellip; Kassel, charmante cit&eacute; de 200.000 habitants plant&eacute;e en plein c&oelig;ur de l&rsquo;Allemagne, est &eacute;galement connue pour &ecirc;tre la premi&egrave;re du pays &agrave; abriter un tournoi de baby-foot&hellip; sous l&rsquo;eau. Elle doit cet exploit &agrave; son club de plong&eacute;e, le <em>Scuba Diving Club Delphin</em>, qui vient de battre le record du monde de la plus longue partie de baby-foot aquatique&nbsp;: 120 personnes se sont relay&eacute;es pendant 30 heures. Autant dire que Kassel se retrouve au fond du seau.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:11:12", 
+            "type": 3, 
+            "slug": "du-water-baby-foot", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:12:19", 
+            "title": "Du petit bras (de mer)", 
+            "tags": "insolite", 
+            "author_nickname": null, 
+            "content": "<p>Demain, si le temps le permet, le pilote suisse Yves Rossy tentera de survoler la Manche avec son sac &agrave; dos &agrave; r&eacute;action (lire Critic@ du 22 septembre). Nous lui souhaitons plus de veine que Stefan Van Audenhove. Ce jeune belge l&rsquo;avait devanc&eacute; dans sa tentative de joindre Douvres au Cap Gris-Nez, vendredi dernier, apr&egrave;s une ann&eacute;e d&rsquo;entra&icirc;nement intensif. Sauf que lui, c&rsquo;&eacute;tait &agrave; la nage. Sauf que lui, il s&rsquo;est retrouv&eacute; en grande difficult&eacute; pendant de longues heures, jusqu&rsquo;&agrave; ce qu&rsquo;il stoppe son effort, &agrave; seulement 10 bornes des c&ocirc;tes fran&ccedil;aises. Mais voil&agrave;&nbsp;: forte houle, mer agit&eacute;e, visibilit&eacute; nulle. Alors Stefan, il&nbsp;s'est chop&eacute;&nbsp;le mal de mer&hellip; Oui, on sait&nbsp;: c&rsquo;est tr&egrave;s con comme histoire.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:12:19", 
+            "type": 4, 
+            "slug": "du-petit-bras-de-mer", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 9, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 1, 
+            "modification_date": "2008-10-02 09:13:05", 
+            "title": "Sans dessus-dessous", 
+            "tags": "insolite", 
+            "author_nickname": null, 
+            "content": "<p>Arrestation&nbsp;peu banale&nbsp;dans un bar du sud de l'Illinois. Selon les flics de ce coin quelque peu recul&eacute;, la miss Janet Brannon, 33 balais toute mouill&eacute;e, servait les clients de la taverne <em>Cabin</em> (mais pas d'essayage), &agrave; Delhi. Bon. Mais cette nuit-l&agrave;, le bruit&nbsp;fila si vite qu&rsquo;ils sont all&eacute;s la chercher avec les menottes, pour la tenir au trou jusqu&rsquo;au petit matin.&nbsp;D&eacute;bandade chez&nbsp;les buveurs locaux. Vu qu&rsquo;elle demeure la seule employ&eacute;e en fonction &agrave; ces heures tardives, la taverne a d&ucirc; baisser&nbsp;le rideau. Puis Janet a retrouv&eacute; sa libert&eacute;, apr&egrave;s avoir vers&eacute; une caution de 8.000 dollars. Faut dire aussi que Janet avait sorti le grand jeu&nbsp;: ce soir-l&agrave;, pour se faire le sou du saoul, elle servait compl&egrave;tement &agrave; poil.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-09-23", 
+            "creation_date": "2008-10-02 09:13:05", 
+            "type": 5, 
+            "slug": "sans-dessus-dessous", 
+            "issues": [
+                1
+            ]
+        }
     }
 ]
