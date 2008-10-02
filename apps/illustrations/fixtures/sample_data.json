@@ -286,6 +286,123 @@
         }
     }, 
     {
+        "pk": 23, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-10-02 09:39:02", 
+            "image": "upload/2008/09/24/national.jpg", 
+            "creation_date": "2008-10-02 09:39:02", 
+            "credits": "Zuma Press", 
+            "submitter": 1, 
+            "legend": "Nicolas Sarkozy et Carla Bruni-Sarkozy"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 2, 
+            "modification_date": "2008-10-02 09:39:33", 
+            "image": "upload/2008/09/24/international.jpg", 
+            "creation_date": "2008-10-02 09:39:33", 
+            "credits": "AtlasPress", 
+            "submitter": 1, 
+            "legend": "Cki ? Sarah Palin"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-10-02 09:40:45", 
+            "image": "upload/2008/09/24/societe.jpg", 
+            "creation_date": "2008-10-02 09:40:45", 
+            "credits": "MV Photos", 
+            "submitter": 1, 
+            "legend": "Soci\u00e9t\u00e9 (Massacre \u00e0 l'\u00e9cole)"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-02 09:41:50", 
+            "image": "upload/2008/09/24/nanas1.jpg", 
+            "creation_date": "2008-10-02 09:41:50", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "Sauve qui poux !"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-10-02 09:42:26", 
+            "image": "upload/2008/09/24/sport.jpg", 
+            "creation_date": "2008-10-02 09:42:26", 
+            "credits": "Teamshoot", 
+            "submitter": 1, 
+            "legend": "Cki ? Le B.O."
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": null, 
+            "modification_date": "2008-10-02 09:43:16", 
+            "image": "upload/2008/09/24/tele.jpg", 
+            "creation_date": "2008-10-02 09:43:16", 
+            "credits": "Maxppp", 
+            "submitter": 1, 
+            "legend": "Enqu\u00eate d'action sur W9 : bravo, les affaires !"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": null, 
+            "modification_date": "2008-10-02 09:44:07", 
+            "image": "upload/2008/09/24/pipole.jpg", 
+            "creation_date": "2008-10-02 09:44:07", 
+            "credits": "BEIimages", 
+            "submitter": 1, 
+            "legend": "Cki ? Gwyneth Paltrow"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 7, 
+            "modification_date": "2008-10-02 09:44:47", 
+            "image": "upload/2008/09/24/bouquin1.jpg", 
+            "creation_date": "2008-10-02 09:44:47", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "Rupture, mode d'emploi"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-02 09:45:34", 
+            "image": "upload/2008/09/24/insolite.jpg", 
+            "creation_date": "2008-10-02 09:45:34", 
+            "credits": "6PA", 
+            "submitter": 1, 
+            "legend": "On tire le vin, mais on le retire aussi"
+        }
+    }, 
+    {
         "pk": 1, 
         "model": "illustrations.illustrationoftheday", 
         "fields": {
