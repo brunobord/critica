@@ -22,6 +22,12 @@
         {% if perms.regions.add_featuredregion or perms.regions.change_featuredregion %}
         <strong><a href="regions/featuredregion/">Gérer les régions vedettes</a><br />
         {% endif %}
+        {% if perms.quotas.add_defaultcategoryquota or perms.quotas.change_defaultcategoryquota %}
+        <strong><a href="quotas/categoryquota/">Modifier les quotas d'articles par défaut</a><br />
+        {% endif %}
+        {% if perms.quotas.add_categoryquota or perms.quotas.change_categoryquota %}
+        <strong><a href="quotas/categoryquota/">Ajuster les quotas d'articles pour chaque catégorie</a><br />
+        {% endif %}
     </div>
     {% endif %}
     

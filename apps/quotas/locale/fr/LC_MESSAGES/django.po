@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Critica Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-02 16:31+0200\n"
+"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: models.py:38 models.py:96
+msgid "category"
+msgstr "rubrique"
+
+#: models.py:38
+msgid "Please, select a category."
+msgstr "Sélectionnez une rubrique"
+
+#: models.py:39 models.py:97
+msgid "quota"
+msgstr "quota"
+
+#: models.py:39
+msgid "Please, enter the default quota for this category."
+msgstr "Entrez le quota d'articles par défaut pour cette rubrique."
+
+#: models.py:49
+msgid "default category quota"
+msgstr "Quota de rubrique par défaut"
+
+#: models.py:50
+msgid "default category quotas"
+msgstr "Quotas de rubrique par défaut"
+
+#: models.py:95
+msgid "issue"
+msgstr "édition"
+
+#: models.py:97
+msgid "Please, enter the article quota for this category."
+msgstr "Entrez le quota d'articles pour cette rubrique."
+
+#: models.py:107
+msgid "category quota"
+msgstr "quota de rubrique"
+
+#: models.py:108
+msgid "category quotas"
+msgstr "quotas de rubrique"

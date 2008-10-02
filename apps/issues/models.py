@@ -76,6 +76,7 @@ class Issue(models.Model):
         from django.conf import settings
         from critica.apps.positions import settings as positions_settings
         from critica.apps.categories.models import Category
+        
         if 'critica.apps.categories' in settings.INSTALLED_APPS:
             from critica.apps.positions.models import CategoryPosition
             for slug in positions_settings.CATEGORY_DEFAULT_ORDER:
@@ -89,6 +90,7 @@ class Issue(models.Model):
                 # create the category
                 position = CategoryPosition(issue=self, category=category, position=default_position)
                 position.save()
+                
         if 'critica.apps.notes' in settings.INSTALLED_APPS: 
             from critica.apps.notes.models import NoteType
             from critica.apps.positions.models import NoteTypePosition
@@ -102,4 +104,14 @@ class Issue(models.Model):
                     note_type = NoteType.objects.get(slug=slug)
                     position = NoteTypePosition(issue=self, category=category, type=note_type, position=default_position)
                     position.save()
+                    
+        if 'critica.apps.quotas' in settings.INSTALLED_APPS:
+            from critica.apps.quotas.models import DefaultCategoryQuota
+            from critica.apps.quotas.models import CategoryQuota
+            default_quotas = DefaultCategoryQuota.objects.all()
+            for default_quota in default_quotas:
+                category = Category.objects.get(slug=default_quota.category.slug)
+                category_quota = CategoryQuota(issue=self, category=category, quota=default_quota.quota)
+                category_quota.save()
+
 

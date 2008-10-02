@@ -1,0 +1,106 @@
+[
+    {
+        "pk": 1, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 3, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 4, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 5, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 6, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 7, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 8, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 9, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 10, 
+            "quota": 1
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 11, 
+            "quota": 3
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 12, 
+            "quota": 26
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "quotas.defaultcategoryquota", 
+        "fields": {
+            "category": 13, 
+            "quota": 1
+        }
+    }
+]
