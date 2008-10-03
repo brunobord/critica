@@ -3,7 +3,7 @@
         "pk": 1, 
         "model": "issues.issue", 
         "fields": {
-            "status": 3, 
+            "is_published": 1, 
             "publication_date": "2008-09-23", 
             "number": 136
         }
@@ -12,7 +12,7 @@
         "pk": 2, 
         "model": "issues.issue", 
         "fields": {
-            "status": 3, 
+            "is_published": 1, 
             "publication_date": "2008-09-24", 
             "number": 137
         }
@@ -21,7 +21,7 @@
         "pk": 3, 
         "model": "issues.issue", 
         "fields": {
-            "status": 3, 
+            "is_published": 1, 
             "publication_date": "2008-09-29", 
             "number": 138
         }
@@ -30,7 +30,7 @@
         "pk": 4, 
         "model": "issues.issue", 
         "fields": {
-            "status": 3, 
+            "is_published": 1, 
             "publication_date": "2008-09-30", 
             "number": 139
         }

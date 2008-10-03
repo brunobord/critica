@@ -17,196 +17,101 @@
     </div>
 
     <div id="dashboard-status">
-        <h2>État de la Une</h2>
+        
+        <h2>État des rubriques standards</h2>
 
         <table>
             <tbody>
                 <tr>
-                    <td><a href="#">Articles principaux</a></td>
-                    <td>8 / 11</td>
+                    <th>Rubrique</th>
+                    <th>Total articles et brèves</th>
+                    <th>Total brèves</th>
+                    <th>Positionnée</th>
+                    <th>Complète</th>
                 </tr>
+                {% for std_category in std_categories %}
                 <tr>
-                    <td><a href="#">Région vedette</a></td>
-                    <td><strong>Haute-Normandie</strong></td>
+                    <td class="category"><a href="/admin/articles/article/?category__id__exact={{ std_category.0.id }}">{{ std_category.0.name }}</a></td>
+                    <td class="count-all">
+                        {{ std_category.1 }} / {{ std_category.3 }}
+                    </td>
+                    <td class="count-notes">
+                        {{ std_category.2 }} / {{ std_category.4 }}
+                    </td>
+                    <td class="position">Par défaut</td>
+                    <td class="complete">
+                        {% if std_category.5 %}
+                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
                 </tr>
-                <tr>
-                    <td><a href="#">Détente</a></td>
-                    <td><strong>complète</strong></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Illustration du jour</a></td>
-                    <td><em>manquante</em></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Video</a></td>
-                    <td><strong>présente</strong></td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
         
-        <h2>État des rubriques</h2>
+        <h2>États des autres rubriques</h2>
         
         <table>
             <tbody>
                 <tr>
                     <th>Rubrique</th>
-                    <th>Articles &laquo; Prêts à être publiés &raquo;</th>
-                    <th>Complète</th>
-                    <th>Validée</th>
+                    <th>Total articles</th>
                     <th>Positionnée</th>
-                    <th>Publicités</th>
-                    <th>Valider la rubrique</th>
-                <tr>
-                    <td><a href="#">National</a></td>
-                    <td><span class="dashboard-important">14 / 11</span></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><strong>Par défaut</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                    <th>Complète</th>
                 </tr>
                 <tr>
-                    <td><a href="#">Étranger</a></td>
-                    <td><span class="dashboard-important">10 / 11</span></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><strong>Par défaut</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                    <td class="category"><a href="#">Régions</a></td>
+                    <td class="count-all">{{ regions_count }} / {{ regions_quota }}</td>
+                    <td class="position"><strong>Par défaut</strong></td>
+                    <td class="complete">
+                        {% if regions_complete %}
+                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="#">Société</a></td>
-                    <td>11 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><strong>Par défaut</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                    <td class="category"><a href="#">Voyages</a></td>
+                    <td class="count-all">{{ voyages_count }} / {{ voyages_quota }}</td>
+                    <td class="position"><strong>Par défaut</strong></td>
+                    <td class="complete">
+                        {% if voyages_complete %}
+                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="#">Sports</a></td>
-                    <td>5 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><strong>Par défaut</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
+                    <td class="category"><a href="#">Épicurien</a></td>
+                    <td class="count-all">{{ epicurien_count }} / {{ epicurien_quota }}</td>
+                    <td class="position"><strong>Par défaut</strong></td>
+                    <td class="complete">
+                        {% if epicurien_complete %}
+                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
                 </tr>
                 <tr>
-                    <td><a href="#">Pipoles</a></td>
-                    <td>11 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><strong>Personnalisé</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td><a href="#">Télé</a></td>
-                    <td>11 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><strong>Personnalisé</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                <tr>
-                <tr>
-                    <td><a href="#">Bouquins</a></td>
-                    <td>11 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><strong>Personnalisé</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td><a href="#">Nanas</a></td>
-                    <td>8 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><strong>Personnalisé</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td><a href="#">Insolite</a></td>
-                    <td>10 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><strong>Personnalisé</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td><a href="#">Voyage</a></td>
-                    <td>11 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><strong>Personnalisé</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td><a href="#">Épicurien</a></td>
-                    <td>11 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><strong>Par défaut</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td><a href="#">Régions</a></td>
-                    <td>20 / 26</td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><strong>Par défaut</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/stop.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td><a href="#">Coup de gueule</a></td>
-                    <td>11 / 11</td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><strong>Par défaut</strong></td>
-                    <td><img src="/media/critica/admin/basic/images/tick.png" /></td>
-                    <td><input type="checkbox" name="option1" value="Milk"></td> 
-                </tr>
-                <tr>
-                    <td colspan="7" style="text-align: right"><input type="submit" name="option1" value="Valider"></td>
+                    <td class="category"><a href="#">Coup de Gueule</a></td>
+                    <td class="count-all">{{ anger_count }} / {{ anger_quota }}</td>
+                    <td class="position"><strong>Par défaut</strong></td>
+                    <td class="complete">
+                        {% if anger_complete %}
+                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
                 </tr>
             </tbody>
         </table>
 
-    </div>
-    
-    <div id="dashboard-users">
-        <h2>Derniers utilisateurs connectés</h2>
-        <table>
-            <tbody>
-                <tr>
-                    <td><a href="#">Jean Chalvidant</a></td>
-                    <td>connecté le 24 septembre 2008 à 10h00</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Karen Jouault</a></td>
-                    <td>connecté le 24 septembre 2008 à 14h32</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Emmanuelle Morin</a></td>
-                    <td>connecté le 23 septembre 2008 à 21h00</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Bruno Cavalié</a></td>
-                    <td>connecté le 23 septembre 2008 à 22h30</td>
-                </tr>
-                <tr>
-                    <td><a href="#">Charlotte David </a></td>
-                    <td>connecté le 23 septembre 2008 à 22h30</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
 </div>

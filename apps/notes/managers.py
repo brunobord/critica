@@ -19,7 +19,7 @@ class PublishedNoteManager(models.Manager):
         
         """
         return super(PublishedNoteManager, self).get_query_set().filter(
-            issues__status=issues_choices.STATUS_COMPLETE, 
+            issues__is_published=True, 
             is_ready_to_publish=True,
             is_reserved=False,
         )
