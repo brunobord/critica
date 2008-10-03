@@ -6,14 +6,23 @@
 {% block content %}
 <div id="dashboard">
 
-    <h1>{% trans "Dashboard" %}</h1>
+    <h1><a href="/admin/dashboard/">Dashboard</a>{% if specific_issue %} / Édition {{ current_issue.number }}{% endif %}</h1>
     
     <div id="dashboard-welcome">
         <p>
-            Bienvenue sur le Dashboard. Vous pouvez administrer l'édition du jour en 
-            cours d'élaboration.
+            <strong>
+                Bienvenue sur le Dashboard. Vous contrôlez actuellement l'édition : 
+                <a href="/admin/issues/issue/{{ current_issue.id }}">{{ current_issue.number }}</a>.
+            </strong>
         </p>
-        <p><strong>L'édition du jour : 135 (22 septembre 2008)</strong></p>
+        <p>
+            Vous pouvez contrôler une édition particulière&nbsp;:
+        </p>
+        <ul>
+        {% for issue in issues %}
+            <li><a href="/admin/dashboard/{{ issue.number }}/" title="Accéder au contrôl de l'édition {{ issue.number }}">{{ issue.number }}</a></li>
+        {% endfor %}
+        </ul>
     </div>
 
     <div id="dashboard-status">
@@ -24,18 +33,18 @@
             <tbody>
                 <tr>
                     <th>Rubrique</th>
-                    <th>Total articles et brèves</th>
-                    <th>Total brèves</th>
+                    <th>Quota articles</th>
+                    <th>Quota brèves</th>
                     <th>Positionnée</th>
                     <th>Complète</th>
                 </tr>
                 {% for std_category in std_categories %}
                 <tr>
                     <td class="category"><a href="/admin/articles/article/?category__id__exact={{ std_category.0.id }}">{{ std_category.0.name }}</a></td>
-                    <td class="count-all">
+                    <td class="quota-articles">
                         {{ std_category.1 }} / {{ std_category.3 }}
                     </td>
-                    <td class="count-notes">
+                    <td class="quota-notes">
                         {{ std_category.2 }} / {{ std_category.4 }}
                     </td>
                     <td class="position">Par défaut</td>
@@ -57,13 +66,13 @@
             <tbody>
                 <tr>
                     <th>Rubrique</th>
-                    <th>Total articles</th>
+                    <th>Quota articles</th>
                     <th>Positionnée</th>
                     <th>Complète</th>
                 </tr>
                 <tr>
                     <td class="category"><a href="#">Régions</a></td>
-                    <td class="count-all">{{ regions_count }} / {{ regions_quota }}</td>
+                    <td class="quota-articles">{{ regions_count }} / {{ regions_quota }}</td>
                     <td class="position"><strong>Par défaut</strong></td>
                     <td class="complete">
                         {% if regions_complete %}
