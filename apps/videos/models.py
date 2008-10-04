@@ -105,10 +105,6 @@ class Video(models.Model):
         """
         verbose_name = _('video')
         verbose_name_plural = _('videos')
-        permissions = (
-            ('can_reserve_video', 'Can reserve a video'),
-            ('can_publish_video', 'Can publish a video'),
-        )
 
     def __unicode__(self):
         """ 

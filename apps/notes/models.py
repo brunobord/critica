@@ -275,12 +275,6 @@ class Note(BaseNote):
             * ForeignKey: critica.apps.notes.models.NoteType
             * The note type
             * Required
-
-    Indexes::
-    
-        See BaseNote. And below.
-        
-        * type
             
     Managers::
     
@@ -291,17 +285,12 @@ class Note(BaseNote):
         published
             Only returns ready to publish notes.
             Manager: critica.apps.notes.managers.PublishedNoteManager()
-
-    Permissions::
-
-        can_feature_note
-            Can feature a note
             
-        can_reserve_note
-            Can reserve a note
-            
-        can_publish_note
-            Can publish a note
+    Indexes::
+    
+        See BaseNote. And below.
+        
+        * type
     
     """
     type = models.ForeignKey('notes.NoteType', verbose_name=_('type'), help_text=_('Please, select a note type.'))
@@ -313,9 +302,4 @@ class Note(BaseNote):
         db_table = 'notes_note'
         verbose_name = _('note')
         verbose_name_plural = _('notes')
-        permissions = (
-            ('can_feature_note', 'Can feature a note'),
-            ('can_reserve_note', 'Can reserve a note'),
-            ('can_publish_note', 'Can publish a note'),
-        )
 

@@ -19,10 +19,6 @@ class AngerArticle(BaseArticle):
     
         See BaseArticle.
             
-    Indexes::
-    
-        See BaseArticle.
-            
     Managers::
     
         objects
@@ -32,17 +28,10 @@ class AngerArticle(BaseArticle):
         published
             Only returns ready to publish articles.
             Manager: critica.apps.anger.managers.PublishedArticleManager()
+
+    Indexes::
     
-    Permissions::
-
-        can_feature_article
-            Can feature an article
-
-        can_reserve_article
-            Can reserve an article
-            
-        can_publish_article
-            Can publish an illustration
+        See BaseArticle.
     
     """
     objects = models.Manager()
@@ -56,11 +45,6 @@ class AngerArticle(BaseArticle):
         db_table = 'anger_article'
         verbose_name = _('article anger')
         verbose_name_plural = _('articles anger')
-        permissions = (
-            ('can_feature_article', 'Can feature an article'),
-            ('can_reserve_article', 'Can reserve an article'),
-            ('can_publish_article', 'Can publish an article'),
-        )
         
     def save(self):
         """ 

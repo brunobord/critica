@@ -57,8 +57,10 @@ class PageAdmin(admin.ModelAdmin):
         fieldsets = [
             (None, {'fields': ['title', 'content']}),
         ]
-        if request.user.has_perm('pages.can_publish_page'):
+        
+        if request.user.has_perm('userprofile.is_editor'):
             fieldsets.append((_('Publication'), {'fields': ['is_published']}))
+        
         return fieldsets
         
     def save_model(self, request, obj, form, change):

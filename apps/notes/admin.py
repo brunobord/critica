@@ -86,16 +86,15 @@ class BaseNoteAdmin(BaseArticleAdmin):
         
         publication_fields = []
         
-        if request.user.has_perm('notes.can_feature_note'):
-            publication_fields.append('is_featured')
-        if request.user.has_perm('notes.can_reserve_note'):
+        publication_fields.append('is_featured')
+        
+        if request.user.has_perm('userprofile.is_editor'):
             publication_fields.append('is_reserved')
-        if request.user.has_perm('notes.can_publish_note'):
+            
+        if request.user.has_perm('userprofile.is_editor'):
             publication_fields.append('is_ready_to_publish')
             
-        if request.user.has_perm('notes.can_reserve_note') \
-            or request.user.has_perm('notes.can_feature_note') \
-            or request.user.has_perm('notes.can_publish_note'):
+        if request.user.has_perm('userprofile.is_editor'):
             fieldsets += [(_('Publication'), {'fields': publication_fields})]
         
         return fieldsets

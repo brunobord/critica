@@ -13,23 +13,23 @@ class UserProfile(models.Model):
     
     Database table name: ``users.userprofile``.
     
-    A user profile is composed of::
+    Fields::
     
         user
             * ForeignKey: django.contrib.auth.models.User
             * The user
             * Must be unique
             * Required
-
-    Indexes::
-    
-        * user
         
     Managers::
     
         objects
             Default manager: models.Manager()
+
+    Indexes::
     
+        * user
+
     """
     user = models.ForeignKey('auth.User', verbose_name=_('user'), unique=True)
     
@@ -42,6 +42,12 @@ class UserProfile(models.Model):
         """
         verbose_name = _('user profile')
         verbose_name_plural = _('user profiles')
+        permissions = (
+            ('is_administrator', 'User is administrator'),
+            ('is_editor', 'User is editor'),
+            ('is_journalist', 'User is journalist'),
+            ('is_advertiser', 'User is advertiser'),
+        )
     
     def __unicode__(self):
         """ 
@@ -108,7 +114,5 @@ class UserNickname(models.Model):
         
         """
         return u'%s: %s' % (self.user, self.nickname)
-
-
 
 

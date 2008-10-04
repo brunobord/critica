@@ -33,16 +33,15 @@ class VoyagesArticleAdmin(BaseArticleAdmin):
             
         publication_fields = []
         
-        if request.user.has_perm('voyages.can_feature_article'):
-            publication_fields.append('is_featured')
-        if request.user.has_perm('voyages.can_reserve_article'):
+        publication_fields.append('is_featured')
+        
+        if request.user.has_perm('userprofile.is_editor'):
             publication_fields.append('is_reserved')
-        if request.user.has_perm('voyages.can_publish_article'):
+            
+        if request.user.has_perm('userprofile.is_editor'):
             publication_fields.append('is_ready_to_publish')
             
-        if request.user.has_perm('voyages.can_reserve_article') \
-            or request.user.has_perm('voyages.can_feature_article') \
-            or request.user.has_perm('voyages.can_publish_article'):
+        if request.user.has_perm('voyages.can_reserve_article'):
             fieldsets += [(_('Publication'), {'fields': publication_fields})]
 
         return fieldsets

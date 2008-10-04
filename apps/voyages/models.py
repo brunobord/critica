@@ -41,17 +41,6 @@ class VoyagesArticle(BaseArticle):
             Only returns ready to publish articles.
             Manager: critica.apps.voyages.managers.PublishedArticleManager()
     
-    Permissions::
-
-        can_feature_article
-            Can feature an article
-
-        can_reserve_article
-            Can reserve an article
-            
-        can_publish_article
-            Can publish an illustration
-    
     """
     localization = models.CharField(_('localization'), max_length=255, db_index=True, help_text=_('Please, enter the localization in this format: city, country (e.g. Paris, France).'))
     
@@ -66,11 +55,6 @@ class VoyagesArticle(BaseArticle):
         db_table = 'voyages_article'
         verbose_name = _('article voyage')
         verbose_name_plural = _('articles voyage')
-        permissions = (
-            ('can_feature_article', 'Can feature an article'),
-            ('can_reserve_article', 'Can reserve an article'),
-            ('can_publish_article', 'Can publish an article'),
-        )
         
     def save(self):
         """ 

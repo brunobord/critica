@@ -123,17 +123,6 @@ class RegionNote(BaseNote):
         published
             Retrieves only published region notes. 
             Manager: critica.apps.regions.managers.PublishedNoteManager()  
-        
-    Permissions::
-    
-        can_feature_note
-            Can feature a note
-            
-        can_reserve_note
-            Can reserve a note
-            
-        can_publish_note
-            Can publish a note
     
     """
     region = models.ForeignKey('regions.Region', verbose_name=_('region'), help_text=_('Please, select a region.'))
@@ -149,11 +138,6 @@ class RegionNote(BaseNote):
         db_table = 'regions_note'
         verbose_name = _('region note')
         verbose_name_plural = _('region notes')
-        permissions = (
-            ('can_feature_note', 'Can feature a note'),
-            ('can_reserve_note', 'Can reserve a note'),
-            ('can_publish_note', 'Can publish a note'),
-        )
         
     def save(self):
         """ 

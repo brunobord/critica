@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-01 11:35+0200\n"
+"POT-Creation-Date: 2008-10-04 09:36+0200\n"
 "PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,37 +17,76 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: models.py:48 
-#: models.py:113
-msgid "issue"
-msgstr "édition"
+#: models.py:45 models.py:99
+msgid "name"
+msgstr "nom"
 
-#: models.py:49 
-#: models.py:114
-msgid "category"
-msgstr "rubrique"
+#: models.py:46 
+#: models.py:100
+msgid "slug"
+msgstr "slug"
 
-#: models.py:50 
-#: models.py:116
-msgid "position"
-msgstr "position"
-
-#: models.py:59
+#: models.py:55
 msgid "category position"
 msgstr "position de rubrique"
 
-#: models.py:60
+#: models.py:56
 msgid "category positions"
 msgstr "positions de rubrique"
 
-#: models.py:115
+#: models.py:109
+msgid "note position"
+msgstr "position de brève"
+
+#: models.py:110
+msgid "note positions"
+msgstr "positions de brève"
+
+#: models.py:152 models.py:205 models.py:266 models.py:330
+msgid "category"
+msgstr "rubrique"
+
+#: models.py:153 models.py:206 models.py:332
+msgid "position"
+msgstr "position"
+
+#: models.py:162
+msgid "default category position"
+msgstr "position de rubrique par défaut"
+
+#: models.py:163
+msgid "default category positions"
+msgstr "positions de rubrique par défaut"
+
+#: models.py:215
+msgid "default note position"
+msgstr "position de brève par défaut"
+
+#: models.py:216
+msgid "default note positions"
+msgstr "positions de brève par défaut"
+
+#: models.py:265 models.py:329
+msgid "issue"
+msgstr "édition"
+
+#: models.py:276
+msgid "issue category position"
+msgstr "position de rubrique par édition"
+
+#: models.py:277
+msgid "issue category positions"
+msgstr "positions de rubrique par édition"
+
+#: models.py:331
 msgid "type"
 msgstr "type"
 
-#: models.py:125
-msgid "note type position"
-msgstr "position des types de brèves"
+#: models.py:341
+msgid "issue note position"
+msgstr "position de brèves par édition"
 
-#: models.py:126
-msgid "note type positions"
-msgstr "positions des types de brèves"
+#: models.py:342
+msgid "issue note positions"
+msgstr "positions de brèves par édition"
+

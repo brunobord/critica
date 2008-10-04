@@ -55,7 +55,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
             field.choices = my_choices
         if db_field.name == 'illustration':
             my_choices = [('', '---------')]
-            if 'illustrations.delete_illustration' in current_user.get_all_permissions():
+            if 'userprofile.is_editor' in current_user.get_all_permissions():
                 my_choices.extend(Illustration.objects.all().values_list('id','legend'))
             else:
                 my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','legend'))
@@ -79,18 +79,20 @@ class BaseArticleAdmin(admin.ModelAdmin):
             (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
             (_('Content'), {'fields': ('summary', 'content')}),
         ]
+        
         publication_fields = []
-        if request.user.has_perm('articles.can_feature_article'):
-            publication_fields.append('is_featured')
-        if request.user.has_perm('articles.can_reserve_article'):
+        
+        publication_fields.append('is_featured')
+        
+        if request.user.has_perm('userprofile.is_editor'):
             publication_fields.append('is_reserved')
-        if request.user.has_perm('articles.can_publish_article'):
+            
+        if request.user.has_perm('userprofile.is_editor'):
             publication_fields.append('is_ready_to_publish')
             
-        if request.user.has_perm('articles.can_reserve_article') \
-            or request.user.has_perm('articles.can_feature_article') \
-            or request.user.has_perm('articles.can_publish_article'):
+        if request.user.has_perm('userprofile.is_editor'):
             fieldsets += [(_('Publication'), {'fields': publication_fields})]
+        
         return fieldsets
 
 

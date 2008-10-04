@@ -197,10 +197,6 @@ class Article(BaseArticle):
     
         See BaseArticle.
             
-    Indexes::
-    
-        See BaseArticle.
-            
     Managers::
     
         objects
@@ -210,17 +206,10 @@ class Article(BaseArticle):
         published
             Only returns ready to publish articles.
             Manager: critica.apps.articles.managers.PublishedArticleManager()
-        
-    Permissions::
-    
-        can_feature_article
-            Can feature an article
-
-        can_reserve_article
-            Can reserve an article
             
-        can_publish_article
-            Can publish an illustration
+    Indexes::
+    
+        See BaseArticle.
             
     """
     objects = models.Manager()
@@ -234,10 +223,5 @@ class Article(BaseArticle):
         db_table = 'articles_article'
         verbose_name = _('article')
         verbose_name_plural = _('articles')
-        permissions = (
-            ('can_feature_article', 'Can feature an article'),
-            ('can_reserve_article', 'Can reserve an article'),
-            ('can_publish_article', 'Can publish an article'),
-        )
 
 

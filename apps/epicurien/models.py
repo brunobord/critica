@@ -30,16 +30,16 @@ class EpicurienArticleType(models.Model):
             * Must be unique
             * No editable
             * Required
-            
-    Indexes::
-    
-        * slug
         
     Managers::
     
         objects
             Default manager.
             Manager: models.Manager()
+            
+    Indexes::
+    
+        * slug
     
     """
     name = models.CharField(_('name'), max_length=255)
@@ -91,12 +91,6 @@ class EpicurienArticle(BaseArticle):
             * The article type
             * Required
             
-    Indexes::
-    
-        See BaseArticle. And below.
-        
-        * type
-            
     Managers::
     
         objects
@@ -106,17 +100,12 @@ class EpicurienArticle(BaseArticle):
         published
             Only returns ready to publish articles.
             Manager: critica.apps.epicurien.managers.PublishedArticleManager()
-    
-    Permissions::
-
-        can_feature_article
-            Can feature an article
-
-        can_reserve_article
-            Can reserve an article
             
-        can_publish_article
-            Can publish an illustration
+    Indexes::
+    
+        See BaseArticle. And below.
+        
+        * type
     
     """
     type = models.ForeignKey('epicurien.EpicurienArticleType', verbose_name=_('type'))
@@ -132,11 +121,6 @@ class EpicurienArticle(BaseArticle):
         db_table = 'epicurien_article'
         verbose_name = _('article epicurien')
         verbose_name_plural = _('articles epicurien')
-        permissions = (
-            ('can_feature_article', 'Can feature an article'),
-            ('can_reserve_article', 'Can reserve an article'),
-            ('can_publish_article', 'Can publish an article'),
-        )
 
     def save(self):
         """ 

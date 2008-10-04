@@ -25,6 +25,7 @@ class IssueAdmin(admin.ModelAdmin):
             from django.conf import settings
             from critica.apps.positions import settings as positions_settings
             from critica.apps.categories.models import Category
+            """
             if 'critica.apps.categories' in settings.INSTALLED_APPS:
                 from critica.apps.positions.models import CategoryPosition
                 for slug in positions_settings.CATEGORY_DEFAULT_ORDER:
@@ -51,6 +52,7 @@ class IssueAdmin(admin.ModelAdmin):
                         note_type = NoteType.objects.get(slug=slug)
                         position = NoteTypePosition(issue=obj, category=category, type=note_type, position=default_position)
                         position.save() 
+            """
             if 'critica.apps.quotas' in settings.INSTALLED_APPS:
                 from critica.apps.quotas.models import DefaultCategoryQuota
                 from critica.apps.quotas.models import CategoryQuota

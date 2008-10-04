@@ -150,12 +150,15 @@ def basic_dashboard(request, issue=None):
     context['anger_quota'] = anger_quota.quota
     context['anger_complete'] = anger_complete
 
+    # Positions checking
+    # --------------------------------------------------------------------------
+    
+    
     return render_to_response(
         'basic_admin/current_issue/dashboard/index.html', 
         context, 
         context_instance=RequestContext(request)
     )
-
-
+    
 
 
