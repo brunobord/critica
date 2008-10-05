@@ -45,7 +45,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
             field.choices = my_choices
         if db_field.name == 'illustration':
             my_choices = [('', '---------')]
-            if 'userprofile.is_editor' in current_user.get_all_permissions():
+            if 'users.is_editor' in current_user.get_all_permissions():
                 my_choices.extend(Illustration.objects.all().values_list('id','legend'))
             else:
                 my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','legend'))
