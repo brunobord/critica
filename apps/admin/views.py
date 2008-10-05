@@ -21,6 +21,10 @@ from critica.apps.anger.models import AngerArticle
 from critica.apps.notes.models import Note
 from critica.apps.regions.models import RegionNote
 from critica.apps.quotas.models import CategoryQuota
+from critica.apps.positions.models import DefaultCategoryPosition
+from critica.apps.positions.models import IssueCategoryPosition
+from critica.apps.positions.models import DefaultNotePosition
+from critica.apps.positions.models import IssueNotePosition
 
 
 @login_required
@@ -77,6 +81,16 @@ def basic_dashboard(request, issue=None):
             is_complete = True
         else:
             is_complete = False
+        # position checking
+        position_changed = False
+        issue_positions = IssueNotePosition.objects.filter(issue=current_issue, category=category)
+        default_positions = DefaultNotePosition.objects.filter(category=category)
+        for issue_position in issue_positions:
+            for default_position in default_positions:
+                if issue_position.type == default_position.type:
+                    if issue_position.position != default_position.position:
+                        position_changed = True
+                    
         std_categories.append(
             [
                 category, 
@@ -84,6 +98,7 @@ def basic_dashboard(request, issue=None):
                 notes_count, 
                 category_quota.quota,
                 notes_quota,
+                position_changed,
                 is_complete,
             ]
         )
@@ -152,10 +167,6 @@ def basic_dashboard(request, issue=None):
     context['anger_count'] = anger_count
     context['anger_quota'] = anger_quota.quota
     context['anger_complete'] = anger_complete
-
-    # Positions checking
-    # --------------------------------------------------------------------------
-    
     
     return render_to_response(
         'basic_admin/current_issue/dashboard/index.html', 

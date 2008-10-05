@@ -7,7 +7,7 @@
 <div id="dashboard">
 
     <h1><a href="/admin/dashboard/">Dashboard</a>{% if specific_issue %} / Édition {{ current_issue.number }}{% endif %}</h1>
-    
+
     <div id="dashboard-welcome">
         <p>
             <strong>
@@ -26,6 +26,44 @@
     </div>
 
     <div id="dashboard-status">
+    
+        <h2>État de la Une</h2>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Articles principaux</td>
+                    <td> OK ou 8 / 9</td>
+                </tr>
+                <tr>
+                    <td>Illustration du jour</td>
+                    <td>légende ou <span class="warning">Manquante</span></td>
+                </tr>
+                <tr>
+                    <td>Vidéo reportage</td>
+                    <td>nom ou <span class="warning">Manquante</span></p>
+                </tr>
+                <tr>
+                    <td>Coup de Gueule</td>
+                    <td>titre ou <span class="warning">Manquant</span></p>
+                </tr>
+                <tr>
+                    <td>Détente</td>
+                    <td>
+                        <ul>
+                            <li>Voyages : titre ou <span class="warning">manquant</span></li>
+                            <li>Côté fumeur : titre ou <span class="warning">manquant</span></li>
+                            <li>Côté gourmet : titre ou <span class="warning">manquant</span></li>
+                            <li>Côté bar: titre ou <span class="warning">manquant</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Régions</td>
+                    <td>nom région vedette ou <span class="warning">manquante</span></td>
+                </tr>
+            </tbody>
+        </table>
         
         <h2>État des rubriques standards</h2>
 
@@ -47,9 +85,15 @@
                     <td class="quota-notes">
                         {{ std_category.2 }} / {{ std_category.4 }}
                     </td>
-                    <td class="position">Par défaut</td>
-                    <td class="complete">
+                    <td class="position">
                         {% if std_category.5 %}
+                            <span class="warning">Personnalisé</span>
+                        {% else %}
+                            Par défaut
+                        {% endif %}
+                    </td>
+                    <td class="complete">
+                        {% if std_category.6 %}
                         <img src="/media/critica/admin/basic/images/tick.png" />
                         {% else %}
                         <img src="/media/critica/admin/basic/images/stop.png" />
@@ -67,13 +111,11 @@
                 <tr>
                     <th>Rubrique</th>
                     <th>Quota articles</th>
-                    <th>Positionnée</th>
                     <th>Complète</th>
                 </tr>
                 <tr>
-                    <td class="category"><a href="#">Régions</a></td>
+                    <td class="category"><a href="/admin/regions/regionnote/?issues__id__exact={{ current_issue.id }}">Régions</a></td>
                     <td class="quota-articles">{{ regions_count }} / {{ regions_quota }}</td>
-                    <td class="position"><strong>Par défaut</strong></td>
                     <td class="complete">
                         {% if regions_complete %}
                         <img src="/media/critica/admin/basic/images/tick.png" />
@@ -83,9 +125,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="category"><a href="#">Voyages</a></td>
+                    <td class="category"><a href="/admin/voyages/voyagesarticle/?issues__id__exact={{ current_issue.id }}">Voyages</a></td>
                     <td class="count-all">{{ voyages_count }} / {{ voyages_quota }}</td>
-                    <td class="position"><strong>Par défaut</strong></td>
                     <td class="complete">
                         {% if voyages_complete %}
                         <img src="/media/critica/admin/basic/images/tick.png" />
@@ -95,9 +136,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="category"><a href="#">Épicurien</a></td>
+                    <td class="category"><a href="/admin/epicurien/epicurienarticle/?issues__id__exact={{ current_issue.id }}">Épicurien</a></td>
                     <td class="count-all">{{ epicurien_count }} / {{ epicurien_quota }}</td>
-                    <td class="position"><strong>Par défaut</strong></td>
                     <td class="complete">
                         {% if epicurien_complete %}
                         <img src="/media/critica/admin/basic/images/tick.png" />
@@ -107,9 +147,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="category"><a href="#">Coup de Gueule</a></td>
+                    <td class="category"><a href="/admin/anger/angerarticle/?issues__id__exact={{ current_issue.id }}">Coup de Gueule</a></td>
                     <td class="count-all">{{ anger_count }} / {{ anger_quota }}</td>
-                    <td class="position"><strong>Par défaut</strong></td>
                     <td class="complete">
                         {% if anger_complete %}
                         <img src="/media/critica/admin/basic/images/tick.png" />
