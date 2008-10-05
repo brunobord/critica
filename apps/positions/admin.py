@@ -65,7 +65,7 @@ class IssueCategoryPositionAdmin(admin.ModelAdmin):
     list_display = ('issue', 'category', 'position')
     list_filter = ('issue', 'category', 'position')
     search_fields = ('issue__number', 'category__name', 'position')
-    
+        
 admin.site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
 basic_site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
 advanced_site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)

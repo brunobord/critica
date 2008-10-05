@@ -108,6 +108,11 @@ class IllustrationOfTheDay(models.Model):
             * User who submitted the illustration
             * Required
             
+        issues
+            * ManyToManyField: critica.apps.issues.models.Issue
+            * The illustration of the day issues
+            * Optional (can be blank)
+            
         image
             * ImageField (critica.apps.illustrations.settings.IMAGE_UPLOAD_PATH)
             * 200 characters max.
@@ -151,6 +156,7 @@ class IllustrationOfTheDay(models.Model):
     
     """
     submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
+    issues = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues to associate to this illustration.'))
     image = models.ImageField(upload_to=illustrations_settings.IMAGE_UPLOAD_PATH, max_length=200, help_text=_('Please, select an image to upload'))
     credits = models.CharField(_('credits'), max_length=100, default=_('all rights reserved'), help_text=_('100 characters max.'))
     legend = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))

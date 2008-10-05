@@ -63,14 +63,27 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
     
     """
     fieldsets = [
-        (None, {'fields': ('image', 'credits', 'legend')}),
+        (None, {'fields': ('issues', 'image', 'credits', 'legend')}),
     ]
     
-    list_display = ('ald_image', 'credits', 'legend', 'creation_date', 'modification_date', 'submitter')
-    search_fields = ('image', 'credits', 'legend')
-    ordering = ['legend', 'creation_date']
+    list_display = ('ald_image', 'ald_issues', 'credits', 'legend', 'creation_date', 'modification_date', 'submitter')
+    list_filter = ('issues',)
+    search_fields = ('image', 'credits', 'legend', 'issues__number')
+    ordering = ['issues', 'legend', 'creation_date']
     date_hierarchy = 'creation_date'
-
+    
+    def ald_issues(self, obj):
+        """
+        Formatted issue list for admin list_display option."
+        
+        """
+        if obj.issues.all():
+            issues = [issue.number for issue in obj.issues.all()]
+            return ', '.join(['%s' % issue for issue in issues])
+        else:
+            return _('no issues')
+    ald_issues.short_description = _('issues')
+    
     def ald_image(self, obj):
         """ 
         Image thumbnail for admin list_display option. 
