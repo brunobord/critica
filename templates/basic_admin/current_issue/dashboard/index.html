@@ -33,34 +33,111 @@
             <tbody>
                 <tr>
                     <td>Articles principaux</td>
-                    <td> OK ou 8 / 9</td>
-                </tr>
-                <tr>
-                    <td>Illustration du jour</td>
-                    <td>légende ou <span class="warning">Manquante</span></td>
-                </tr>
-                <tr>
-                    <td>Vidéo reportage</td>
-                    <td>nom ou <span class="warning">Manquante</span></p>
-                </tr>
-                <tr>
-                    <td>Coup de Gueule</td>
-                    <td>titre ou <span class="warning">Manquant</span></p>
-                </tr>
-                <tr>
-                    <td>Détente</td>
+                    <td>{{ cover_articles_count }} / {{ cover_articles_quota }}</td>
                     <td>
-                        <ul>
-                            <li>Voyages : titre ou <span class="warning">manquant</span></li>
-                            <li>Côté fumeur : titre ou <span class="warning">manquant</span></li>
-                            <li>Côté gourmet : titre ou <span class="warning">manquant</span></li>
-                            <li>Côté bar: titre ou <span class="warning">manquant</span></li>
-                        </ul>
+                        {% if cover_articles_complete %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
                     </td>
                 </tr>
                 <tr>
-                    <td>Régions</td>
-                    <td>nom région vedette ou <span class="warning">manquante</span></td>
+                    <td>Illustration du jour</td>
+                    <td>
+                        {% if cover_illustration %}
+                            <a href="/admin/illustrations/illustrationoftheday/?issues__id__exact={{ current_issue.id }}">{{ cover_illustration.legend }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_illustration %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coup de Gueule</td>
+                    <td>
+                        {% if cover_anger %}
+                            <a href="/admin/anger/angerarticle/?issues__id__exact={{ current_issue.id }}">{{ cover_anger.title }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_illustration %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voyages</td>
+                    <td>
+                        {% if cover_voyages %}
+                            <a href="/admin/voyages/voyagesarticle/?issues__id__exact={{ current_issue.id }}">{{ cover_voyages.title }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_voyages %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Épicurien</td>
+                    <td>
+                        <ul>
+                        {% if cover_epicurien_cotegourmets %}
+                            <li><strong>Côté Gourmets : </strong><a href="/admin/epicurien/epicurienarticle/?issues__number__exact={{ current_issue.number }}&type__id__exact={{ cover_epicurien_cotegourmets.type.id }}">{{ cover_epicurien_cotegourmets.title }}</a></li>
+                        {% else %}
+                            <li><strong>Côté Gourmets : </strong><span class="warning">non défini</span></li>
+                        {% endif %}
+                        {% if cover_epicurien_cotebar %}
+                            <li><strong>Côté Bar : </strong><a href="/admin/epicurien/epicurienarticle/?issues__number__exact={{ current_issue.number }}&type__id__exact={{ cover_epicurien_cotebar.type.id }}">{{ cover_epicurien_cotebar.title }}</a></li>
+                        {% else %}
+                            <li><strong>Côté Bar : </strong><span class="warning">non défini</span></li>
+                        {% endif %}
+                        {% if cover_epicurien_cotefumeurs %}
+                            <li><strong>Côté Fumeurs : </strong><a href="/admin/epicurien/epicurienarticle/?issues__number__exact={{ current_issue.number }}&type__id__exact={{ cover_epicurien_cotefumeurs.type.id }}">{{ cover_epicurien_cotefumeurs.title }}</a></li>
+                        {% else %}
+                            <li><strong>Côté Fumeurs : </strong><span class="warning">non défini</span></li>
+                        {% endif %}
+                        </ul>
+                    </td>
+                    <td>
+                        {% if cover_epicurien_cotegourmets and cover_epicurien_cotebar and cover_epicurien_cotefumeurs %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Région vedette</td>
+                    <td>
+                        {% if cover_featured_region %}
+                            <a href="/admin/regions/regionnote/?region__id__exact={{ cover_featured_region.region.id }}&issues__id__exact={{ current_issue.id }}">{{ cover_featured_region.region.name }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_featured_region %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -94,9 +171,9 @@
                     </td>
                     <td class="complete">
                         {% if std_category.6 %}
-                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
                         {% else %}
-                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
                         {% endif %}
                     </td>
                 </tr>
@@ -118,9 +195,9 @@
                     <td class="quota-articles">{{ regions_count }} / {{ regions_quota }}</td>
                     <td class="complete">
                         {% if regions_complete %}
-                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
                         {% else %}
-                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
                         {% endif %}
                     </td>
                 </tr>
@@ -129,9 +206,9 @@
                     <td class="count-all">{{ voyages_count }} / {{ voyages_quota }}</td>
                     <td class="complete">
                         {% if voyages_complete %}
-                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
                         {% else %}
-                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
                         {% endif %}
                     </td>
                 </tr>
@@ -140,9 +217,9 @@
                     <td class="count-all">{{ epicurien_count }} / {{ epicurien_quota }}</td>
                     <td class="complete">
                         {% if epicurien_complete %}
-                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
                         {% else %}
-                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
                         {% endif %}
                     </td>
                 </tr>
@@ -151,9 +228,9 @@
                     <td class="count-all">{{ anger_count }} / {{ anger_quota }}</td>
                     <td class="complete">
                         {% if anger_complete %}
-                        <img src="/media/critica/admin/basic/images/tick.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
                         {% else %}
-                        <img src="/media/critica/admin/basic/images/stop.png" />
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
                         {% endif %}
                     </td>
                 </tr>

@@ -120,7 +120,8 @@ And add these applications to your ``INSTALLED_APPS``::
         'critica.apps.pages',
         'critica.apps.users',
         'critica.apps.syndication',
-        'critica.apps.newsletter',
+        'critica.apps.anger',
+        'critica.apps.quotas',
     )
 
 Voilà! Critic@-engine is ready.

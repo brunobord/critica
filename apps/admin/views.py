@@ -17,9 +17,12 @@ from critica.apps.categories.models import Category
 from critica.apps.articles.models import Article
 from critica.apps.voyages.models import VoyagesArticle
 from critica.apps.epicurien.models import EpicurienArticle
+from critica.apps.epicurien.models import EpicurienArticleType
 from critica.apps.anger.models import AngerArticle
 from critica.apps.notes.models import Note
 from critica.apps.regions.models import RegionNote
+from critica.apps.regions.models import FeaturedRegion
+from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.quotas.models import CategoryQuota
 from critica.apps.positions.models import DefaultCategoryPosition
 from critica.apps.positions.models import IssueCategoryPosition
@@ -54,9 +57,67 @@ def basic_dashboard(request, issue=None):
     # --------------------------------------------------------------------------
     context['issues'] = Issue.objects.all().order_by('-number')
     
-    # Standard categories
+    # Excluded categories
     # --------------------------------------------------------------------------
     EXCLUDED_CATEGORIES = ['epicurien', 'voyages', 'coup-de-gueule', 'regions']
+    
+    # Cover
+    # --------------------------------------------------------------------------
+    cover_articles_quota = Category.objects.exclude(slug__in=EXCLUDED_CATEGORIES).count()
+    cover_articles_count = Article.objects.filter(issues__id=current_issue.id).count()
+    if cover_articles_count >= cover_articles_count:
+        cover_articles_complete = True
+    context['cover_articles_quota'] = cover_articles_quota
+    context['cover_articles_count'] = cover_articles_count
+    context['cover_articles_complete'] = cover_articles_complete
+    
+    try:
+        cover_illustration = IllustrationOfTheDay.objects.get(issues__id=current_issue.id)
+        context['cover_illustration'] = cover_illustration
+    except ObjectDoesNotExist:
+        context['cover_illustration'] = False
+        
+    try:
+        cover_anger = AngerArticle.objects.get(issues__id=current_issue.id)
+        context['cover_anger'] = cover_anger
+    except ObjectDoesNotExist:
+        context['cover_anger'] = False
+        
+    try:
+        cover_voyages = VoyagesArticle.objects.get(issues__id=current_issue.id)
+        context['cover_voyages'] = cover_voyages
+    except ObjectDoesNotExist:
+        context['cover_voyages'] = False
+        
+    try:
+        epicurien_type = EpicurienArticleType.objects.get(pk=1)
+        cover_epicurien_cotegourmets = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type)
+        context['cover_epicurien_cotegourmets'] = cover_epicurien_cotegourmets
+    except:
+        context['cover_epicurien_cotegourmets'] = False
+        
+    try:
+        epicurien_type = EpicurienArticleType.objects.get(pk=2)
+        cover_epicurien_cotebar = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type)
+        context['cover_epicurien_cotebar'] = cover_epicurien_cotebar
+    except:
+        context['cover_epicurien_cotebar'] = False
+        
+    try:
+        epicurien_type = EpicurienArticleType.objects.get(pk=3)
+        cover_epicurien_cotefumeurs = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type)
+        context['cover_epicurien_cotefumeurs'] = cover_epicurien_cotefumeurs
+    except:
+        context['cover_epicurien_cotefumeurs'] = False
+        
+    try:
+        cover_featured_region = FeaturedRegion.objects.get(issue=current_issue)
+        context['cover_featured_region'] = cover_featured_region
+    except:
+        context['cover_featured_region'] = False
+        
+    # Standard categories
+    # --------------------------------------------------------------------------
     categories = Category.objects.exclude(slug__in=EXCLUDED_CATEGORIES)
     std_categories = []
     for category in categories:
