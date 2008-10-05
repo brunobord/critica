@@ -16,7 +16,7 @@ class AngerArticleAdmin(BaseArticleAdmin):
     
     """
     list_display = ('title', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
-    list_filter = ('author', 'is_ready_to_publish', 'is_reserved', 'is_featured')
+    list_filter = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'is_featured')
     search_fields = ('title', 'summary', 'content')
     ordering = ['-publication_date']
     
