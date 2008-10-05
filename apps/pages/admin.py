@@ -54,13 +54,13 @@ class PageAdmin(admin.ModelAdmin):
         Hook for specifying fieldsets for the add form. 
         
         """
+        publication_fields = []
+        if request.user.has_perm('users.is_editor'):
+            publication_fields.append('is_published')
         fieldsets = [
             (None, {'fields': ['title', 'content']}),
+            (_('Publication'), {'fields': publication_fields}),
         ]
-        
-        if request.user.has_perm('userprofile.is_editor'):
-            fieldsets.append((_('Publication'), {'fields': ['is_published']}))
-        
         return fieldsets
         
     def save_model(self, request, obj, form, change):

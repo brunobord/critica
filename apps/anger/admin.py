@@ -25,25 +25,17 @@ class AngerArticleAdmin(BaseArticleAdmin):
         Hook for specifying fieldsets for the add form. 
         
         """
+        publication_fields = []
+        publication_fields.append('is_featured')
+        publication_fields.append('is_reserved')
+        if request.user.has_perm('users.is_editor'):
+            publication_fields.append('is_ready_to_publish')
         fieldsets = [
             (_('Headline'), {'fields': ('author_nickname', 'title', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'tags')}),
             (_('Content'), {'fields': ('summary', 'content')}),
+            (_('Publication'), {'fields': publication_fields}),
         ]
-            
-        publication_fields = []
-        
-        publication_fields.append('is_featured')
-        
-        if request.user.has_perm('userprofile.is_editor'):
-            publication_fields.append('is_reserved')
-            
-        if request.user.has_perm('userprofile.is_editor'):
-            publication_fields.append('is_ready_to_publish')
-            
-        if request.user.has_perm('userprofile.is_editor'):
-            fieldsets += [(_('Publication'), {'fields': publication_fields})]
-
         return fieldsets
 
 admin.site.register(AngerArticle, AngerArticleAdmin)
