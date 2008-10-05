@@ -307,7 +307,7 @@ class IssueCategoryPosition(models.Model):
         """
         verbose_name = _('issue category position')
         verbose_name_plural = _('issue category positions')
-        unique_together = (('issue', 'category', 'position'),)
+        unique_together = (('issue', 'position'),)
 
     def __unicode__(self):
         """ 
@@ -372,7 +372,7 @@ class IssueNotePosition(models.Model):
         """
         verbose_name = _('issue note position')
         verbose_name_plural = _('issue note positions')
-        unique_together = (('issue', 'category', 'type', 'position'),)
+        unique_together = (('issue', 'category', 'position'),)
 
     def __unicode__(self):
         """ 
