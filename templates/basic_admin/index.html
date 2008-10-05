@@ -7,416 +7,216 @@
 {% endblock %}
 {% block content %}
 <div id="content-main">
-    
-    {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition or perms.positions.add_notetypeposition or perms.positions.change_notetypeposition %}
+
+    {% if perms.users.is_editor or perms.users.is_journalist %}
     <div class="toplink">
-        {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition %}
+        {% if perms.users.is_editor %}
         <strong><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a><br/>
         {% endif %}
-        {% if perms.positions.add_categoryposition or perms.positions.change_categoryposition %}
-        <strong><a href="positions/categoryposition/">Organiser la Une</a><br />
+        {% if perms.users.is_editor %}
+        <strong><a href="positions/issuecategoryposition/">Organiser la Une</a><br />
         {% endif %}
-        {% if perms.positions.add_notetypeposition or perms.change_notetypeposition %}
-        <strong><a href="positions/notetypeposition/">Organiser les rubriques</a><br />
+        {% if perms.users.is_editor or perms.users.is_journalist %}
+        <strong><a href="positions/issuenoteposition/">Organiser les rubriques</a><br />
         {% endif %}
-        {% if perms.regions.add_featuredregion or perms.regions.change_featuredregion %}
+        {% if perms.users.is_editor %}
         <strong><a href="regions/featuredregion/">Gérer les régions vedettes</a><br />
         {% endif %}
-        {% if perms.quotas.add_defaultcategoryquota or perms.quotas.change_defaultcategoryquota %}
+        {% if perms.users.is_editor %}
         <strong><a href="quotas/categoryquota/">Modifier les quotas d'articles par défaut</a><br />
         {% endif %}
-        {% if perms.quotas.add_categoryquota or perms.quotas.change_categoryquota %}
+        {% if perms.users.is_editor %}
         <strong><a href="quotas/categoryquota/">Ajuster les quotas d'articles pour chaque catégorie</a><br />
         {% endif %}
     </div>
     {% endif %}
     
-    {% if perms.issues.add_issue or perms.issues.change_issue %}
+    {% if perms.users.is_editor %}
     <div class="module">
         <table summary="Éditions">
         <caption>Éditions</caption>
             <tr>
-                <th scope="row">
-                    {% if perms.issues.change_issue %}
-                    <a href="issues/issue/">Éditions</a>
-                    {% else %}
-                    Éditions
-                    {% endif %}
-                </th>
-                {% if perms.issues.add_issue %}
+                <th scope="row"><a href="issues/issue/">Éditions</a></th>
                 <td><a href="issues/issue/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.issues.change_issue %}
                 <td><a href="issues/issue/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
         </table>
     </div>
     {% endif %}
     
-    {% if perms.articles.add_article or perms.articles.change_article or perms.epicurien.add_epicurienarticle or perms.epicurien.change_epicurienarticle or perms.voyages.add_voyagesarticle or perms.voyages.change_voyagesarticle or perms.notes.add_note or perms.notes.change_note or perms.regions.add_regionnote or perms.regions.change_regionnote or perms.anger.add_angerarticle or perms.anger.change_angerarticle %}
+    {% if perms.users.is_editor or perms.users.is_journalist %}
     <div class="module">
         <table summary="Articles et brèves">
         <caption>Articles et brèves</caption>
-        
-            {% if perms.articles.add_article or perms.articles.change_article %}
             <tr>
-                <th scope="row">
-                    {% if perms.articles.change_article %}
-                    <a href="articles/article/">Articles</a>
-                    {% else %}
-                    Articles
-                    {% endif %}
-                </th>
-                {% if perms.articles.add_article %}
+                <th scope="row"><a href="articles/article/">Articles</a></th>
                 <td><a href="articles/article/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.articles.change_article %}
                 <td><a href="articles/article/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.epicurien.add_epicurienarticle or perms.epicurien.change_epicurienarticle %}
             <tr>
-                <th scope="row">
-                    {% if perms.epicurien.change_epicurienarticle %}
-                    <a href="epicurien/epicurienarticle/">Articles &laquo; Épicurien &raquo;</a>
-                    {% else %}
-                    Articles &laquo; Épicurien &raquo;
-                    {% endif %}
-                </th>
-                {% if perms.epicurien.add_epicurienarticle %}
+                <th scope="row"><a href="epicurien/epicurienarticle/">Articles &laquo; Épicurien &raquo;</a></th>
                 <td><a href="epicurien/epicurienarticle/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.epicurien.change_epicurienarticle %}
                 <td><a href="epicurien/epicurienarticle/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.voyages.add_voyagesarticle or perms.voyages.change_voyagesarticle %}
             <tr>
-                <th scope="row">
-                    {% if perms.voyages.change_voyagesarticle %}
-                    <a href="voyages/voyagesarticle/">Articles &laquo; Voyages &raquo;</a>
-                    {% else %}
-                    Articles &laquo; Voyages &raquo;
-                    {% endif %}
-                </th>
-                {% if perms.voyages.add_voyagesarticle %}
+                <th scope="row"><a href="voyages/voyagesarticle/">Articles &laquo; Voyages &raquo;</a></th>
                 <td><a href="voyages/voyagesarticle/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.voyages.change_voyagesarticle %}
                 <td><a href="voyages/voyagesarticle/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.anger.add_angerarticle or perms.anger.change_angerarticle %}
             <tr>
-                <th scope="row">
-                    {% if perms.anger.change_angerarticle %}
-                    <a href="anger/angerarticle/">Articles &laquo; Coup de Gueule &raquo;</a>
-                    {% else %}
-                    Articles &laquo; Coup de Gueule &raquo;
-                    {% endif %}
-                </th>
-                {% if perms.anger.add_angerarticle %}
+                <th scope="row"><a href="anger/angerarticle/">Articles &laquo; Coup de Gueule &raquo;</a></th>
                 <td><a href="anger/angerarticle/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.anger.change_angerarticle %}
                 <td><a href="anger/angerarticle/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.notes.add_note or perms.notes.change_note %}
             <tr>
-                <th scope="row">
-                    {% if perms.notes.change_note %}
-                    <a href="notes/note/">Brèves</a>
-                    {% else %}
-                    Brèves
-                    {% endif %}
-                </th>
-                {% if perms.notes.add_note %}
+                <th scope="row"><a href="notes/note/">Brèves</a></th>
                 <td><a href="notes/note/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.notes.change_note %}
                 <td><a href="notes/note/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.regions.add_regionnote or perms.regions.change_regionnote %}
             <tr>
-                <th scope="row">
-                    {% if perms.regions.change_regionnote %}
-                    <a href="regions/regionnote/">Brèves régionales</a>
-                    {% else %}
-                    Brèves régionales
-                    {% endif %}
-                </th>
-                {% if perms.regions.add_regionnote %}
+                <th scope="row"><a href="regions/regionnote/">Brèves régionales</a></th>
                 <td><a href="regions/regionnote/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.regions.change_regionnote %}
                 <td><a href="regions/regionnote/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
         </table>
     </div>
     {% endif %}
     
-    {% if perms.illustrations.add_illustration or perms.illustrations.change_illustration or perms.illustrations.add_illustrationoftheday or perms.illustrations.change_illustrationfotheday or perms.videos.add_video or perms.videos.change_video %}
+    {% if perms.users.is_editor or perms.user.is_journalist %}
     <div class="module">
         <table summary="Médias">
         <caption>Médias</caption>
-        
-            {% if perms.illustrations.add_illustration or perms.illustrations.change_illustration %}
             <tr>
-                <th scope="row">
-                    {% if perms.illustrations.change_illustration %}
-                    <a href="illustrations/illustration/">Visuels</a>
-                    {% else %}
-                    Visuels
-                    {% endif %}
-                </th>
-                {% if perms.illustrations.add_illustration %}
+                <th scope="row"><a href="illustrations/illustration/">Visuels</a></th>
                 <td><a href="illustrations/illustration/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.illustrations.change_illustration %}
                 <td><a href="illustrations/illustration/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
             
-            {% if perms.illustrations.add_illustrationoftheday or perms.illustrations.change_illustrationoftheday %}
+            {% if perms.users.is_editor %}
             <tr>
-                <th scope="row">
-                    {% if perms.illustrations.change_illustrationoftheday %}
-                    <a href="illustrations/illustrationoftheday/">Illustrations du jour</a>
-                    {% else %}
-                    Illustration du jour
-                    {% endif %}
-                </th>
-                {% if perms.illustrations.add_illustrationoftheday %}
+                <th scope="row"><a href="illustrations/illustrationoftheday/">Illustrations du jour</a></th>
                 <td><a href="illustrations/illustrationoftheday/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.illustrations.change_illustrationoftheday %}
                 <td><a href="illustrations/illustrationoftheday/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
             {% endif %}
             
-            {% if perms.videos.add_video or perms.videos.change_video %}
+            {% if perms.users.is_editor %}
             <tr>
-                <th scope="row">
-                    {% if perms.videos.change_video %}
-                    <a href="videos/video/">Vidéos</a>
-                    {% else %}
-                    Vidéos
-                    {% endif %}
-                </th>
-                {% if perms.videos.add_video %}
+                <th scope="row"><a href="videos/video/">Vidéos</a></th>
                 <td><a href="videos/video/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.videos.change_video %}
                 <td><a href="videos/video/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
             {% endif %}
         </table>
     </div>
     {% endif %}
     
-    {% if perms.pages.add_page or perms.pages.change_page %}
+    {% if perms.users.is_editor %}
+    <div class="module">
+        <table summary="Positions">
+        <caption>Positions</caption>
+            {% if perms.users.is_administrator %}
+            <tr>
+                <th scope="row"><a href="positions/categoryposition/">Positions de rubrique</a></th>
+                <td><a href="positions/categoryposition/add/" class="addlink">Ajouter</a></td>
+                <td><a href="positions/categoryposition/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            <tr>
+                <th scope="row"><a href="positions/defaultcategoryposition/">Positions de rubrique par défaut</a></th>
+                <td><a href="positions/defaultcategoryposition/add/" class="addlink">Ajouter</a></td>
+                <td><a href="positions/defaultcategoryposition/" class="changelink">Modifier</a></td>
+            </tr>
+            {% if perms.users.is_administrator %}
+            <tr>
+                <th scope="row"><a href="positions/noteposition/">Positions de brève</a></th>
+                <td><a href="positions/noteposition/add/" class="addlink">Ajouter</a></td>
+                <td><a href="positions/noteposition/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            <tr>
+                <th scope="row"><a href="positions/defaultnoteposition/">Positions de brève par défaut</a></th>
+                <td><a href="positions/defaultnoteposition/add/" class="addlink">Ajouter</a></td>
+                <td><a href="positions/defaultnoteposition/" class="changelink">Modifier</a></td>
+            </tr>
+        </table>
+    </div>
+    {% endif %}
+    
+    {% if perms.users.is_editor %}
     <div class="module">
         <table summary="Pages">
         <caption>Pages</caption>
             <tr>
-                <th scope="row">
-                    {% if perms.pages.change_page %}
-                    <a href="pages/page/">Pages</a>
-                    {% else %}
-                    Pages
-                    {% endif %}
-                </th>
-                {% if perms.pages.add_page %}
+                <th scope="row"><a href="pages/page/">Pages</a></th>
                 <td><a href="pages/page/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.pages.change_page %}
                 <td><a href="pages/page/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
         </table>
     </div>
     {% endif %}
 
-    {% if perms.categories.add_category or perms.categories.change_category or perms.notes.add_notetype or perms.notes.change_notetype or perms.regions.add_region or perms.regions.change_region or perms.regions.add_featuredregions or perms.regions.change_featuredregion %}
+    {% if perms.users.is_administrator %}
     <div class="module">
         <table summary="Rubriques et types de brèves">
         <caption>Rubriques et types de brèves</caption>
-        
-            {% if perms.categories.add_category or perms.categories.change_category %}
             <tr>
-                <th scope="row">
-                    {% if perms.categories.change_category %}
-                    <a href="categories/category/">Rubriques</a>
-                    {% else %}
-                    Rubriques
-                    {% endif %}
-                </th>
-                {% if perms.categories.add_category %}
+                <th scope="row"><a href="categories/category/">Rubriques</a></th>
                 <td><a href="categories/category/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.categories.change_category %}
                 <td><a href="categories/category/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.notes.add_notetype or perms.notes.change_notetype %}
             <tr>
-                <th scope="row">
-                    {% if perms.notes.change_notetype %}
-                    <a href="notes/notetype/">Types de brèves</a>
-                    {% else %}
-                    Types de brèves 
-                    {% endif %}
-                </th>
-                {% if perms.notes.add_notetype %}
+                <th scope="row"><a href="notes/notetype/">Types de brèves</a></th>
                 <td><a href="notes/notetype/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.notes.change_notetype %}
                 <td><a href="notes/notetype/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.regions.add_region or perms.regions.change_region %}
             <tr>
-                <th scope="row">
-                    {% if perms.regions.change_region %}
-                    <a href="regions/region/">Types de brèves régionales</a>
-                    {% else %}
-                    Types de brèves régionales 
-                    {% endif %}
-                </th>
-                {% if perms.regions.add_region %}
-                <td><a href="regions/region/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.regions.change_region %}            
+                <th scope="row"><a href="regions/region/">Types de brèves régionales</a></th>
+                <td><a href="regions/region/add/" class="addlink">Ajouter</a></td>         
                 <td><a href="regions/region/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
         </table>
     </div>
     {% endif %}
 
-    {% if perms.auth.add_group or perms.auth.change_group or perms.auth.add_user or perms.auth.change_user or perms.users.add_userprofile or perms.users.change_userprofile or perms.users.add_usernickname or perms.users.change_usernickname %}
+    {% if perms.users.is_administrator %}
     <div class="module">
         <table summary="Utilisateurs">
         <caption>Utilisateurs</caption>
-            
-            {% if perms.auth.add_group or perms.auth.change_group %}
             <tr>
-                <th scope="row">
-                    {% if perms.auth.change_group %}
-                    <a href="auth/group/">Groupes</a>
-                    {% else %}
-                    Groupes
-                    {% endif %}
-                </th>
-                {% if perms.auth.add_group %}
+                <th scope="row"><a href="auth/group/">Groupes</a></th>
                 <td><a href="auth/group/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.auth.change_group %}
                 <td><a href="auth/group/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.auth.add_user or perms.auth.change_user %}
             <tr>
-                <th scope="row">
-                    {% if perms.auth.change_user %}
-                    <a href="auth/user/">Utilisateurs</a>
-                    {% else %}
-                    Utilisateurs
-                    {% endif %}
-                </th>
-                {% if perms.auth.add_user %}
+                <th scope="row"><a href="auth/user/">Utilisateurs</a></th>
                 <td><a href="auth/user/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.auth.change_user %}
                 <td><a href="auth/user/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.users.add_userprofile or perms.users.change_userprofile %}
             <tr>
-                <th scope="row">
-                    {% if perms.users.change_userprofile %}
-                    <a href="users/userprofile/">Profils utilisateurs</a>
-                    {% else %}
-                    Profils utilisateurs
-                    {% endif %}
-                </th>
-                {% if perms.users.add_userprofile %}
+                <th scope="row"><a href="users/userprofile/">Profils utilisateurs</a></th>
                 <td><a href="users/userprofile/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.users.change_userprofile %}
                 <td><a href="users/userprofile/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
-            {% endif %}
-            
-            {% if perms.users.add_usernickname or perms.users.change_usernickname %}
+            {% if perms.users.is_administrator or perms.users.is_editor %}
             <tr>
-                <th scope="row">
-                    {% if perms.users.change_usernickname %}
-                    <a href="users/usernickname/">Pseudonymes utilisateurs</a>
-                    {% else %}
-                    Pseudonymes utilisateurs
-                    {% endif %}
-                </th>
-                {% if perms.users.add_usernickname %}
+                <th scope="row"><a href="users/usernickname/">Pseudonymes utilisateurs</a></th>
                 <td><a href="users/usernickname/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.users.change_usernickname %}
                 <td><a href="users/usernickname/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
             {% endif %}
-            
         </table>
     </div>
     {% endif %}
 
-    {% if perms.sites.add_site or perms.sites.change_site %}
+    {% if perms.users.is_administrator %}
     <div class="module">
         <table summary="Sites">
         <caption><a href="sites" class="section">Site</a></caption>
             <tr>
-                <th scope="row">
-                    {% if perms.site.change_site %}
-                    <a href="sites/site/">Sites</a>
-                    {% else %}
-                    Sites
-                    {% endif %}
-                </th>
-                {% if perms.site.add_site %}
+                <th scope="row"><a href="sites/site/">Sites</a></th>
                 <td><a href="sites/site/add/" class="addlink">Ajouter</a></td>
-                {% endif %}
-                {% if perms.site.change_site %}
                 <td><a href="sites/site/" class="changelink">Modifier</a></td>
-                {% endif %}
             </tr>
         </table>
     </div>

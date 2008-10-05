@@ -10,6 +10,7 @@ from django.template import RequestContext
 from django.utils.translation import ugettext_lazy, ugettext as _
 from django.views.decorators.cache import never_cache
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import permission_required
 from django.core.exceptions import ObjectDoesNotExist
 from critica.apps.issues.models import Issue
 from critica.apps.categories.models import Category
@@ -23,6 +24,8 @@ from critica.apps.quotas.models import CategoryQuota
 
 
 @login_required
+@permission_required('users.is_administrator')
+@permission_required('users.is_editor')
 @never_cache
 def basic_dashboard(request, issue=None):
     """
