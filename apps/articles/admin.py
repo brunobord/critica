@@ -26,16 +26,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
     date_hierarchy = 'publication_date'
     exclude = ['author']
     
-    class Media:
-        """
-        Model metadata.
-        
-        """
-        js = (
-            settings.MEDIA_URL + 'common/js/tiny_mce/tiny_mce.js',
-            settings.MEDIA_URL + 'common/js/textarea.js',
-        )
-
     def __call__(self, request, url):
         self.request = request
         return super(BaseArticleAdmin, self).__call__(request, url)

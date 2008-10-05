@@ -1,0 +1,10 @@
+{% extends "django_admin/change_form.html" %}
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ MEDIA_URL }}common/js/tiny_mce/tiny_mce.js"></script>
+    {% if perms.users.is_editor %}
+    <script type="text/javascript" src="{{ MEDIA_URL }}common/js/textarea_superuser.js"></script>
+    {% else %}
+    <script type="text/javascript" src="{{ MEDIA_URL }}common/js/textarea.js"></script>
+    {% endif %}
+{% endblock %}
