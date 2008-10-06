@@ -3,7 +3,6 @@ Managers for ``critica.apps.issues`` models.
 
 """
 from django.db import models
-from critica.apps.issues import choices
 
 
 class PublishedIssueManager(models.Manager):

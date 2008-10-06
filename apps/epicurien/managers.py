@@ -4,7 +4,6 @@ Managers of ``critica.apps.epicurien`` application.
 
 """
 from django.db import models
-from critica.apps.issues import choices as issues_choices
 
 
 class PublishedArticleManager(models.Manager):

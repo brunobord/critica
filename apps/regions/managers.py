@@ -4,7 +4,6 @@ Managers of ``critica.apps.notes_region`` application.
 
 """
 from django.db import models
-from critica.apps.issues import choices as issues_choices
 
 
 class PublishedNoteManager(models.Manager):
