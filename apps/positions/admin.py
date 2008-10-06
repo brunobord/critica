@@ -4,6 +4,7 @@ Administration interface options of ``critica.apps.positions`` models.
 
 """
 from django.contrib import admin
+from django.conf import settings
 from critica.apps.categories.models import Category
 from critica.apps.positions.models import CategoryPosition, NotePosition
 from critica.apps.positions.models import DefaultCategoryPosition, DefaultNotePosition
