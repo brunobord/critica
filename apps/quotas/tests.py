@@ -41,27 +41,3 @@ class DefaultCategoryQuotaTestCase(TestCase):
         self.assertRaises(IntegrityError, default_quota.save)
 
 
-class CategoryQuotaTestCase(TestCase):
-    """
-    Category quota test case.
-    
-    """
-    def test_issue_category_quotas(self):
-        """
-        Tests issue category quotas.
-        
-        """
-        # Creates an issue.
-        issue = Issue(number=10, publication_date=datetime.date.today(), status=1)
-        issue.save()
-        # Gets quotas for this issue and checks if quotas have been created for each category.
-        quotas_for_issue = CategoryQuota.objects.filter(issue=issue)
-        count_categories = Category.objects.count()
-        count_quotas = quotas_for_issue.count()
-        self.assertEquals(count_categories, count_quotas)
-        # Tests default category quotas
-        for quota in quotas_for_issue:
-            default_quota = DefaultCategoryQuota.objects.get(category=quota.category)
-            self.assertEquals(default_quota.quota, quota.quota)
-
-
