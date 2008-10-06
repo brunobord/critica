@@ -64,9 +64,14 @@ def basic_dashboard(request, issue=None):
     # Cover
     # --------------------------------------------------------------------------
     cover_articles_quota = Category.objects.exclude(slug__in=EXCLUDED_CATEGORIES).count()
-    cover_articles_count = Article.objects.filter(issues__id=current_issue.id).count()
-    if cover_articles_count >= cover_articles_count:
+    cover_articles_count = Article.objects.filter(
+        issues__id=current_issue.id,
+        is_ready_to_publish=True,
+        is_reserved=False).count()
+    if cover_articles_count >= cover_articles_quota:
         cover_articles_complete = True
+    else:
+        cover_articles_complete = False
     context['cover_articles_quota'] = cover_articles_quota
     context['cover_articles_count'] = cover_articles_count
     context['cover_articles_complete'] = cover_articles_complete
