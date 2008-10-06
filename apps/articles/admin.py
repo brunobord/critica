@@ -11,6 +11,7 @@ from critica.apps.articles.models import Article
 from critica.apps.users.models import UserNickname
 from critica.apps.categories.models import Category
 from critica.apps.illustrations.models import Illustration
+from critica.apps.issues.models import Issue
 from critica.apps.articles import settings as articles_settings
 
 
@@ -21,6 +22,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
     """
     list_display = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish', 'ald_illustration')
     list_filter = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
+    filter_horizontal = ('issues',)
     search_fields = ('title', 'summary', 'content')
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
@@ -43,12 +45,17 @@ class BaseArticleAdmin(admin.ModelAdmin):
             my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
             print my_choices
             field.choices = my_choices
+        if db_field.name == 'issues': 
+            my_choices = []
+            my_choices.extend(Issue.objects.all().values_list('id','number')[:15])
+            print my_choices
+            field.choices = my_choices
         if db_field.name == 'illustration':
             my_choices = [('', '---------')]
             if 'users.is_editor' in current_user.get_all_permissions():
-                my_choices.extend(Illustration.objects.all().values_list('id','legend'))
+                my_choices.extend(Illustration.objects.all().values_list('id','image')[:20])
             else:
-                my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','legend'))
+                my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','image')[:20])
             print my_choices
             field.choices = my_choices
         if db_field.name == 'category':

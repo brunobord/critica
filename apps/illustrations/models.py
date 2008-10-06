@@ -92,7 +92,7 @@ class Illustration(models.Model):
         Object human-readable string representation. 
         
         """
-        return u'%s' % self.legend
+        return u'%s' % self.image
 
 
 class IllustrationOfTheDay(models.Model):

@@ -11,6 +11,7 @@ from critica.apps.notes.models import NoteType, Note
 from critica.apps.articles.admin import BaseArticleAdmin
 from critica.apps.users.models import UserNickname
 from critica.apps.categories.models import Category
+from critica.apps.issues.models import Issue
 from critica.apps.notes import settings as notes_settings
 
 
@@ -35,6 +36,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
     """
     list_display = ('title', 'category', 'type', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish')
     list_filter = ('issues', 'author', 'type', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
+    filter_horizontal = ('issues',)
     search_fields = ('title', 'content')
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
@@ -64,6 +66,11 @@ class BaseNoteAdmin(BaseArticleAdmin):
         if db_field.name == 'author_nickname': 
             my_choices = [('', '---------')]
             my_choices.extend(UserNickname.objects.filter(user=self.request.user).values_list('id','nickname'))
+            print my_choices
+            field.choices = my_choices
+        if db_field.name == 'issues': 
+            my_choices = []
+            my_choices.extend(Issue.objects.all().values_list('id','number')[:15])
             print my_choices
             field.choices = my_choices
         if db_field.name == 'category':
