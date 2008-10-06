@@ -1,10 +1,96 @@
 {% extends "django_admin/change_form.html" %}
 {% block extrahead %}
     {{ block.super }}
+    
     <script type="text/javascript" src="{{ MEDIA_URL }}common/js/tiny_mce/tiny_mce.js"></script>
+    
     {% if perms.users.is_editor %}
-    <script type="text/javascript" src="{{ MEDIA_URL }}common/js/textarea_superuser.js"></script>
+    
+    <script type="text/javascript">
+        tinyMCE.init({
+            width: "800",
+            height: "400",
+        	mode : "exact",
+        	elements: "id_content",
+        	language: "fr",
+        	theme : "advanced",
+        	theme_advanced_toolbar_location : "top",
+        	theme_advanced_toolbar_align : "left",
+        	theme_advanced_buttons1 : "pasteword,separator,bold,italic,underline,strikethrough,separator,bullist,numlist,outdent,indent,separator,undo,redo,separator,link,unlink,anchor,separator,styleselect,separator,forecolor,backcolor,separator,spellchecker,separator,image",
+        	theme_advanced_buttons2 : "",
+        	theme_advanced_buttons3 : "",
+        	auto_cleanup_word : true,
+        	plugins : "spellchecker,table,save,advhr,advimage,advlink,emotions,iespell,paste,insertdatetime,preview,zoom,flash,searchreplace,print,contextmenu,fullscreen",
+        	plugin_insertdate_dateFormat : "%m/%d/%Y",
+        	plugin_insertdate_timeFormat : "%H:%M:%S",
+        	extended_valid_elements : "a[name|href|target=_blank|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",
+        });
+    </script>
+    
+    <script type="text/javascript">
+        tinyMCE.init({
+            width: "800",
+            height: "120",
+        	mode : "exact",
+        	elements: "id_summary",
+        	language: "fr",
+        	theme : "advanced",
+        	theme_advanced_toolbar_location : "top",
+        	theme_advanced_toolbar_align : "left",
+        	theme_advanced_buttons1 : "pasteword,separator,bold,italic,underline,strikethrough,separator,bullist,numlist,outdent,indent,separator,undo,redo,separator,link,unlink,anchor,separator,styleselect,separator,forecolor,backcolor,separator,spellchecker,separator,image",
+        	theme_advanced_buttons2 : "",
+        	theme_advanced_buttons3 : "",
+        	auto_cleanup_word : true,
+        	plugins : "spellchecker,table,save,advhr,advimage,advlink,emotions,iespell,paste,insertdatetime,preview,zoom,flash,searchreplace,print,contextmenu,fullscreen",
+        	plugin_insertdate_dateFormat : "%m/%d/%Y",
+        	plugin_insertdate_timeFormat : "%H:%M:%S",
+        	extended_valid_elements : "a[name|href|target=_blank|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",
+        });
+    </script>
+    
     {% else %}
-    <script type="text/javascript" src="{{ MEDIA_URL }}common/js/textarea.js"></script>
+    
+    <script type="text/javascript">
+        tinyMCE.init({
+            width: "800",
+            height: "400",
+        	mode : "exact",
+        	elements: "id_content",
+        	language: "fr",
+        	theme : "advanced",
+        	theme_advanced_toolbar_location : "top",
+        	theme_advanced_toolbar_align : "left",
+        	theme_advanced_buttons1 : "pasteword,separator,bold,italic,underline,strikethrough,separator,bullist,numlist,outdent,indent,separator,undo,redo,separator,link,unlink,anchor,separator,styleselect,separator,forecolor,backcolor,separator,spellchecker",
+        	theme_advanced_buttons2 : "",
+        	theme_advanced_buttons3 : "",
+        	auto_cleanup_word : true,
+        	plugins : "spellchecker,table,save,advhr,advimage,advlink,emotions,iespell,paste,insertdatetime,preview,zoom,flash,searchreplace,print,contextmenu,fullscreen",
+        	plugin_insertdate_dateFormat : "%m/%d/%Y",
+        	plugin_insertdate_timeFormat : "%H:%M:%S",
+        	extended_valid_elements : "a[name|href|target=_blank|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",
+        });
+    </script>
+    
+    <script type="text/javascript">
+        tinyMCE.init({
+            width: "800",
+            height: "120",
+        	mode : "exact",
+        	elements: "id_summary",
+        	language: "fr",
+        	theme : "advanced",
+        	theme_advanced_toolbar_location : "top",
+        	theme_advanced_toolbar_align : "left",
+        	theme_advanced_buttons1 : "pasteword,separator,bold,italic,underline,strikethrough,separator,bullist,numlist,outdent,indent,separator,undo,redo,separator,link,unlink,anchor,separator,styleselect,separator,forecolor,backcolor,separator,spellchecker",
+        	theme_advanced_buttons2 : "",
+        	theme_advanced_buttons3 : "",
+        	auto_cleanup_word : true,
+        	plugins : "spellchecker,table,save,advhr,advimage,advlink,emotions,iespell,paste,insertdatetime,preview,zoom,flash,searchreplace,print,contextmenu,fullscreen",
+        	plugin_insertdate_dateFormat : "%m/%d/%Y",
+        	plugin_insertdate_timeFormat : "%H:%M:%S",
+        	extended_valid_elements : "a[name|href|target=_blank|title|onclick],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name],hr[class|width|size|noshade],font[face|size|color|style],span[class|align|style]",
+        });
+    </script>
+    
     {% endif %}
 {% endblock %}
