@@ -24,17 +24,15 @@ class Video(models.Model):
             * User who submitted the video
             * Required
             
+        issues
+            * ManyToManyField: critica.apps.issues.models.Issue
+            * The video issues
+            * Optional (can be blank)
+            
         name
             * CharField
             * 255 characters max.
             * The video name
-            * Required
-
-        slug
-            * SlugField
-            * 255 characters max.
-            * The video slug (URL)
-            * No editable
             * Required
             
         link
@@ -62,17 +60,26 @@ class Video(models.Model):
             * No editable
             * Required
             
-        status
-            * IntegerField
-            * Choices: critica.apps.videos.choices.STATUS_CHOICES
-            * Default: critica.apps.videos.choices.STATUS_NEW
-            * The video status
+        is_ready_to_publish
+            * BooleanField
+            * Default: False
+            * Is video ready to publish?
+            * Required
+            
+        is_reserved
+            * BooleanField
+            * Default: False
+            * Is video reserved?
             * Required
     
     Indexes::
     
         * submitter
-        * status
+        * issues
+        * name
+        * tags
+        * is_ready_to_publish
+        * is_reserved
     
     Managers::
     
@@ -83,12 +90,10 @@ class Video(models.Model):
             Retrieves only published videos.
     
     """
-
-    
     submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
-    name = models.CharField(_('name'), max_length=255, help_text=_('Please, enter a name for this video.'))
-    slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
-    link = models.CharField(_('link'), max_length=255, help_text=_('Please, enter the video URL.'))
+    issues = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues to associate to this video.'))
+    name = models.CharField(_('name'), max_length=255, help_text=_('Please, enter a name for this video.'), unique=True)
+    link = models.URLField(_('link'), max_length=255, help_text=_('Please, enter the video URL.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
@@ -112,15 +117,4 @@ class Video(models.Model):
         
         """
         return u'%s' % self.name
-
-    def save(self):
-        """ 
-        Object pre-saving operations:
-        
-        * Generates slug from name
-        * Save video
-        
-        """
-        self.slug = slugify(self.name)
-        super(Video, self).save()
 
