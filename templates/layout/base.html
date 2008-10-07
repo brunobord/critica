@@ -30,18 +30,19 @@
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/jquery.fancybox-1.0.0.js" ></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/kwicks.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/custom.js"></script>
+        {% block extra_head %}{% endblock %}
     </head>
-    <body id="{% block body_id %}home{% endblock %}">
+    <body id="{% block body_id %}home{% endblock %}" class="{% block body_class %}{% endblock %}">
         <div id="bodyWrap">
             <!-- HEADER -->
             <div id="header">
                 <div class="contentWrap autoClear">
                     <!-- LOGO -->
-                        <div id="logo"><a href="/" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a></div>
+                        <div id="logo"><a href="{% url home %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a></div>
                     <!-- // LOGO -->
                     <!-- TOP NAV -->
                     <ul id="topNav">
-                        <li><a href="#">Accueil</a></li>
+                        <li><a href="{% url home %}">Accueil</a></li>
                         <li><a href="#">Archives</a></li>
                         <li><a href="#">Recevoir la newsletter</a></li>
                         <li><a href="#">S'abonner au flux RSS</a></li>
@@ -91,18 +92,18 @@
             <div id="mainNav">
                 <div class="contentWrap">
                     <ul class="kwicks" style="display:block; margin:0 auto; width:1000px; height:42px; overflow:hidden;">
-                        <li id="kwick1"><a href="national.html">National</a></li>
-                        <li id="kwick2"><a href="etranger.html">Etranger</a></li>
-                        <li id="kwick3"><a href="societe.html">Societe</a></li>
-                        <li id="kwick4"><a href="sport.html">Sport</a></li>
-                        <li id="kwick5"><a href="pipoles.html">Pipoles</a></li>
-                        <li id="kwick6"><a href="tele.html">Tele</a></li>
-                        <li id="kwick7"><a href="bouquins.html">Bouquins</a></li>
-                        <li id="kwick8"><a href="nanas.html">Nanas</a></li>
-                        <li id="kwick9"><a href="insolite.html">Insolite</a></li>
-                        <li id="kwick10"><a href="regions.html">Regions</a></li>
-                        <li id="kwick11"><a href="voyages.html">Voyages</a></li>
-                        <li id="kwick12"><a href="epicurien.html">Epicurien</a></li>
+                        <li id="kwick1"><a href="{% url category "national" %}">National</a></li>
+                        <li id="kwick2"><a href="{% url category "etranger" %}">Etranger</a></li>
+                        <li id="kwick3"><a href="{% url category "societe" %}">Societe</a></li>
+                        <li id="kwick4"><a href="{% url category "sports" %}">Sport</a></li>
+                        <li id="kwick5"><a href="{% url category "pipoles" %}">Pipoles</a></li>
+                        <li id="kwick6"><a href="{% url category "tele" %}">Tele</a></li>
+                        <li id="kwick7"><a href="{% url category "bouquins" %}">Bouquins</a></li>
+                        <li id="kwick8"><a href="{% url category "nanas" %}">Nanas</a></li>
+                        <li id="kwick9"><a href="{% url category "insolite" %}">Insolite</a></li>
+                        <li id="kwick10"><a href="{% url category "regions" %}">Regions</a></li>
+                        <li id="kwick11"><a href="{% url category "voyages" %}">Voyages</a></li>
+                        <li id="kwick12"><a href="{% url category "epicurien" %}">Epicurien</a></li>
                     </ul>
                 </div>
             </div>

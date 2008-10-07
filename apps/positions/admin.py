@@ -23,7 +23,7 @@ basic_site.register(CategoryPosition, CategoryPositionAdmin)
 advanced_site.register(CategoryPosition, CategoryPositionAdmin)
 
 class NotePositionAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug')
+    list_display = ('id', 'name', 'slug')
     
 admin.site.register(NotePosition, NotePositionAdmin)
 basic_site.register(NotePosition, NotePositionAdmin)

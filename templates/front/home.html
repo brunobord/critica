@@ -300,23 +300,13 @@
 										<a href="{{ voyages_article.get_absolute_url }}">{{ voyages_article.title }}</a>
 									</li>
 									{% endif %}
-									{% if epicurien_cotefumeur_article %}
-									<li>
-										<h3>Côté fumeur</h3>
-										<a href="{{ epicurien_cotefumeur_article.get_absolute_url }}">{{ epicurien_cotefumeur_article.title }}</a>
-									</li>
-									{% endif %}
-									{% if epicurien_cotegourmet_article %}
-									<li>
-										<h3>Côté gourmet</h3>
-										<a href="{{ epicurien_cotegourmet_article.get_absolute_url }}">{{ epicurien_cotegourmet_article.title }}</a>
-									</li>
-									{% endif %}
-									{% if epicurien_cotebar_article %}
-									<li>
-										<h3>Côté Bar</h3>
-										<a href="{{ epicurien_cotebar_article.get_absolute_url }}">{{ epicurien_cotebar_article.title }}</a>
-									</li>
+									{% if epicurien_articles %}
+									    {% for article in epicurien_articles %}
+									        <li>
+										        <h3>{{ article.type.name }}</h3>
+										        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+									        </li>
+									    {% endfor %}
 									{% endif %}
 								</ul>
 							</div>

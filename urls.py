@@ -22,6 +22,7 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
+    url(r'^(?P<category_slug>[-\w]+)/$', 'critica.apps.front.views.category', name='category'),
     url(r'^$', 'critica.apps.front.views.home', name='home'),
 )
 
