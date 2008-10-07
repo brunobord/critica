@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 URLs of ``critica`` project.
 
@@ -20,14 +21,16 @@ urlpatterns = patterns('',
     (r'^django-admin/(.*)', admin.site.root),
 )
 
-# Applications
-# ------------------------------------------------------------------------------
 urlpatterns += patterns('',
+    url(r'^$', 'critica.apps.front.views.home', name='home'),
+)
+
+#urlpatterns += patterns('',
     #(r'^archives/', include('critica.apps.archives.urls')),
-    (r'^pages/', include('critica.apps.pages.urls')),
+    #(r'^pages/', include('critica.apps.pages.urls')),
     #(r'^rss/', include('critica.apps.syndication.urls')),
     #(r'', include('critica.apps.categories.urls')),
-)
+#)
 
 # Media
 # ------------------------------------------------------------------------------

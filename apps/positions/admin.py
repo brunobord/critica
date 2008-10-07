@@ -16,7 +16,7 @@ from critica.apps.admin.sites import basic_site, advanced_site
 # Positions
 # ------------------------------------------------------------------------------
 class CategoryPositionAdmin(admin.ModelAdmin):
-    list_display = ('name', 'slug')
+    list_display = ('id', 'name', 'slug')
     
 admin.site.register(CategoryPosition, CategoryPositionAdmin)
 basic_site.register(CategoryPosition, CategoryPositionAdmin)
