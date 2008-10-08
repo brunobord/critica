@@ -22,6 +22,7 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
+    url(r'^coup-de-gueule/$', 'critica.apps.front.views.anger', name='category_anger'),
     url(r'^epicurien/$', 'critica.apps.front.views.epicurien', name='category_epicurien'),
     url(r'^voyages/$', 'critica.apps.front.views.voyages', name='category_voyages'),
     url(r'^regions/$', 'critica.apps.front.views.regions', name='category_regions'),

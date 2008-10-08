@@ -298,3 +298,32 @@ def epicurien(request):
         context,
         context_instance=RequestContext(request))
 
+     
+def anger(request):
+    """
+    Displays "Anger" (Coup de Gueule) category page.
+    
+    """
+    issue = _get_current_issue()
+    context = {}
+    
+    try:
+        context['article'] = AngerArticle.objects.get(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False)
+    except ObjectDoesNotExist:
+        context['article'] = False
+        
+    try:
+        context['archives'] = AngerArticle.objects.filter(
+            is_ready_to_publish=True,
+            is_reserved=False)
+    except ObjectDoesNotExist:
+        context['archives'] = False
+        
+    return render_to_response(
+        'front/anger.html',
+        context,
+        context_instance=RequestContext(request))
+
