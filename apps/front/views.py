@@ -194,10 +194,15 @@ def voyages(request):
     """
     issue = _get_current_issue()
     context = {}
+    
     context['article'] = VoyagesArticle.objects.get(
         issues__id=issue.id,
         is_ready_to_publish=True,
-        is_reserved=False) 
+        is_reserved=False)
+        
+    context['archives'] = VoyagesArticle.objects.filter(
+        is_ready_to_publish=True,
+        is_reserved=False).order_by('-publication_date')[:2]
 
     return render_to_response(
         'front/voyages.html',
