@@ -13,8 +13,8 @@
         <h3>{{ article.title }}</h3>
         <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
         <div class="illustration">
-            <img src="" width="237px" height="335px" alt="Une image type pour coup de gueule" />
-			<p class="credits">Photo : ??</p>
+            <img src="{{ article.category.image.url }}" alt="{{ article.category.image_legend }}" />
+			<p class="credits">Photo : {{ article.category.image_credits }}</p>
         </div>
         {{ article.summary|safe }}
 		<p class="readMore slick-show"><a href="#">Lire la suite</a></p>

@@ -47,8 +47,13 @@
         <h3>{{ article.title }}</h3>
     	<p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
     	<div class="illustration">
-    	    <img src="{{ article.illustration.image.url }}" alt="{{ article.illustration.legend }}" />
-    		<p class="credits">Photo : {{ article.illustration.credits }}</p>
+    	    {% if article.use_default_illustration %}
+    	        <img src="{{ article.category.image.url }}" alt="{{ article.category.image_legend }}" />
+    		    <p class="credits">Photo : {{ article.category.image_credits }}</p>
+            {% else %}
+    	        <img src="{{ article.illustration.image.url }}" alt="{{ article.illustration.legend }}" />
+    		    <p class="credits">Photo : {{ article.illustration.credits }}</p>
+    	    {% endif %}
     	</div>
     	<p class="lead">{{ article.title }}</p>
         {{ article.summary|safe }}

@@ -167,7 +167,13 @@
 					<div class="articleSection articleMain">
 						<h3><a href="#">{{ article_1.title }}</a></h3>
 						<div class="lead autoClear">
-							<div class="illustration"><a href="{{ article_1.illustration.image.url }}" title="{{ article_1.illustration.legend }}"><img src="{{ article_1.illustration.image.url }}" alt="{{ article_1.illustration.legend }}" /></a></div>
+							<div class="illustration">
+							    {% if article_1.use_default_illustration %}
+							        <a href="{{ article_1.category.image.url }}" title="{{ article_1.category.image_legend }}"><img src="{{ article_1.category.image.url }}" alt="{{ article_1.category.image_legend }}" /></a>
+							    {% else %}
+							        <a href="{{ article_1.illustration.image.url }}" title="{{ article_1.illustration.legend }}"><img src="{{ article_1.illustration.image.url }}" alt="{{ article_1.illustration.legend }}" /></a>
+							    {% endif %}
+							 </div>
                             {{ article_1.summary|safe }}
 						</div>
 						<p class="readMore"><a href="{{ article_1.get_absolute_url }}">Lire la suite</a></p>
@@ -179,7 +185,13 @@
 					<div class="articleSection articleMain">
 						<h3><a href="#">{{ article_2.title }}</a></h3>
 						<div class="lead autoClear">
-							<div class="illustration"><a href="{{ article_2.illustration.image.url }}" title="{{ article_2.illustration.legend }}"><img src="{{ article_2.illustration.image.url }}" alt="{{ article_2.illustration.legend }}" /></a></div>
+							<div class="illustration">
+							    {% if article_2.use_default_illustration %}
+							        <a href="{{ article_2.category.image.url }}" title="{{ article_2.category.image_legend }}"><img src="{{ article_2.category.image.url }}" alt="{{ article_2.category.image_legend }}" /></a>
+							    {% else %}
+							        <a href="{{ article_2.illustration.image.url }}" title="{{ article_2.illustration.legend }}"><img src="{{ article_2.illustration.image.url }}" alt="{{ article_2.illustration.legend }}" /></a>
+							    {% endif %}
+							 </div>
                             {{ article_2.summary|safe }}
 						</div>
 						<p class="readMore"><a href="{{ article_2.get_absolute_url }}">Lire la suite</a></p>
@@ -187,7 +199,7 @@
 					{% endif %}
 					
                     <!-- ADD -->
-                    <div class="addSection add468"> <a href="#"><img src="img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+                    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
                         <p><a href="#">Publicité</a></p>
                     </div>
                     <!-- // ADD -->
@@ -199,7 +211,13 @@
 						<div class="articleSection">
 							<h2><span><a href="{{ article_4.get_absolute_url }}">{{ article_4.category.name }}</a></span></h2>
 							<div class="lead autoClear">
-								<div class="illustration"><a href="{{ article_4.illustration.image.url }}" title="{{ article_4.illustration.legend }}"><img src="{{ article_4.illustration.image.url }}" alt="{{ article_4.illustration.legend }}" width="80" /></a></div>
+							<div class="illustration">
+							    {% if article_4.use_default_illustration %}
+							        <a href="{{ article_4.category.image.url }}" title="{{ article_4.category.image_legend }}"><img src="{{ article_4.category.image.url }}" alt="{{ article_4.category.image_legend }}" width="80" /></a>
+							    {% else %}
+							        <a href="{{ article_4.illustration.image.url }}" title="{{ article_4.illustration.legend }}"><img src="{{ article_4.illustration.image.url }}" alt="{{ article_4.illustration.legend }}" width="80" /></a>
+							    {% endif %}
+							 </div>
 								<h3><a href="{{ article_4.get_absolute_url }}">{{ article_4.title }}</a></h3>
                                 {{ article_4.summary|safe }}
 							</div>
@@ -211,7 +229,13 @@
 						<div class="articleSection">
 							<h2><span><a href="{{ article_5.get_absolute_url }}">{{ article_5.category.name }}</a></span></h2>
 							<div class="lead autoClear">
-								<div class="illustration"><a href="{{ article_5.illustration.image.url }}" title="{{ article_5.illustration.legend }}"><img src="{{ article_5.illustration.image.url }}" alt="{{ article_5.illustration.legend }}" width="80" /></a></div>
+							<div class="illustration">
+							    {% if article_5.use_default_illustration %}
+							        <a href="{{ article_5.category.image.url }}" title="{{ article_5.category.image_legend }}"><img src="{{ article_5.category.image.url }}" alt="{{ article_5.category.image_legend }}" width="80" /></a>
+							    {% else %}
+							        <a href="{{ article_5.illustration.image.url }}" title="{{ article_5.illustration.legend }}"><img src="{{ article_5.illustration.image.url }}" alt="{{ article_5.illustration.legend }}" width="80" /></a>
+							    {% endif %}
+							 </div>
 								<h3><a href="{{ article_5.get_absolute_url }}">{{ article_5.title }}</a></h3>
                                 {{ article_5.summary|safe }}
 							</div>
@@ -223,7 +247,13 @@
 						<div class="articleSection">
 							<h2><span><a href="{{ article_6.get_absolute_url }}">{{ article_6.category.name }}</a></span></h2>
 							<div class="lead autoClear">
-								<div class="illustration"><a href="{{ article_6.illustration.image.url }}" title="{{ article_6.illustration.legend }}"><img src="{{ article_6.illustration.image.url }}" alt="{{ article_6.illustration.legend }}" width="80" /></a></div>
+							<div class="illustration">
+							    {% if article_6.use_default_illustration %}
+							        <a href="{{ article_6.category.image.url }}" title="{{ article_6.category.image_legend }}"><img src="{{ article_6.category.image.url }}" alt="{{ article_6.category.image_legend }}" width="80" /></a>
+							    {% else %}
+							        <a href="{{ article_6.illustration.image.url }}" title="{{ article_6.illustration.legend }}"><img src="{{ article_6.illustration.image.url }}" alt="{{ article_6.illustration.legend }}" width="80" /></a>
+							    {% endif %}
+							 </div>
 								<h3><a href="{{ article_6.get_absolute_url }}">{{ article_6.title }}</a></h3>
                                 {{ article_6.summary|safe }}
 							</div>
@@ -235,7 +265,13 @@
 						<div class="articleSection">
 							<h2><span><a href="{{ article_7.get_absolute_url }}">{{ article_7.category.name }}</a></span></h2>
 							<div class="lead autoClear">
-								<div class="illustration"><a href="{{ article_7.illustration.image.url }}" title="{{ article_7.illustration.legend }}"><img src="{{ article_7.illustration.image.url }}" alt="{{ article_7.illustration.legend }}" width="80" /></a></div>
+							<div class="illustration">
+							    {% if article_7.use_default_illustration %}
+							        <a href="{{ article_7.category.image.url }}" title="{{ article_7.category.image_legend }}"><img src="{{ article_7.category.image.url }}" alt="{{ article_7.category.image_legend }}" width="80" /></a>
+							    {% else %}
+							        <a href="{{ article_7.illustration.image.url }}" title="{{ article_7.illustration.legend }}"><img src="{{ article_7.illustration.image.url }}" alt="{{ article_7.illustration.legend }}" width="80" /></a>
+							    {% endif %}
+							 </div>
 								<h3><a href="{{ article_7.get_absolute_url }}">{{ article_7.title }}</a></h3>
                                 {{ article_7.summary|safe }}
 							</div>
@@ -247,7 +283,13 @@
 						<div class="articleSection">
 							<h2><span><a href="{{ article_8.get_absolute_url }}">{{ article_8.category.name }}</a></span></h2>
 							<div class="lead autoClear">
-								<div class="illustration"><a href="{{ article_8.illustration.image.url }}" title="{{ article_8.illustration.legend }}"><img src="{{ article_8.illustration.image.url }}" alt="{{ article_8.illustration.legend }}" width="80" /></a></div>
+							<div class="illustration">
+							    {% if article_8.use_default_illustration %}
+							        <a href="{{ article_8.category.image.url }}" title="{{ article_8.category.image_legend }}"><img src="{{ article_8.category.image.url }}" alt="{{ article_8.category.image_legend }}" width="80" /></a>
+							    {% else %}
+							        <a href="{{ article_8.illustration.image.url }}" title="{{ article_8.illustration.legend }}"><img src="{{ article_8.illustration.image.url }}" alt="{{ article_8.illustration.legend }}" width="80" /></a>
+							    {% endif %}
+							 </div>
 								<h3><a href="{{ article_8.get_absolute_url }}">{{ article_8.title }}</a></h3>
                                 {{ article_8.summary|safe }}
 							</div>
@@ -259,7 +301,13 @@
 						<div class="articleSection">
 							<h2><span><a href="{{ article_9.get_absolute_url }}">{{ article_9.category.name }}</a></span></h2>
 							<div class="lead autoClear">
-								<div class="illustration"><a href="{{ article_9.illustration.image.url }}" title="{{ article_9.illustration.legend }}"><img src="{{ article_9.illustration.image.url }}" alt="{{ article_9.illustration.legend }}" width="80" /></a></div>
+							<div class="illustration">
+							    {% if article_9.use_default_illustration %}
+							        <a href="{{ article_9.category.image.url }}" title="{{ article_9.category.image_legend }}"><img src="{{ article_9.category.image.url }}" alt="{{ article_9.category.image_legend }}" width="80" /></a>
+							    {% else %}
+							        <a href="{{ article_9.illustration.image.url }}" title="{{ article_9.illustration.legend }}"><img src="{{ article_9.illustration.image.url }}" alt="{{ article_9.illustration.legend }}" width="80" /></a>
+							    {% endif %}
+							 </div>
 								<h3><a href="{{ article_9.get_absolute_url }}">{{ article_9.title }}</a></h3>
                                 {{ article_9.summary|safe }}
 							</div>
@@ -333,7 +381,13 @@
 						<h2><span><a href="{{ article_3.get_absolute_url }}">{{ article_3.category.name }}</a></span></h2>
 						<h3><a href="{{ article_3.title }}">{{ article_3.title }}</a></h3>
 						<div class="lead autoClear">
-							<div class="illustration"><a href="{{ article_3.illustration.image.url }}" title="{{ article_3.illustration.legend }}" /><img src="{{ article_3.illustration.image.url }}" alt="{{ article_3.illustration.legend }}" /></a></div>
+							<div class="illustration">
+							    {% if article_3.use_default_illustration %}
+							        <a href="{{ article_3.category.image.url }}" title="{{ article_3.category.image_legend }}"><img src="{{ article_3.category.image.url }}" alt="{{ article_3.category.image_legend }}" /></a>
+							    {% else %}
+							        <a href="{{ article_3.illustration.image.url }}" title="{{ article_3.illustration.legend }}"><img src="{{ article_3.illustration.image.url }}" alt="{{ article_3.illustration.legend }}" /></a>
+							    {% endif %}
+							 </div>
                             {{ article_3.summary|safe }}
 						</div>
 						<p class="readMore"><a href="{{ article_3.get_absolute_url }}">Lire la suite</a></p>
@@ -342,12 +396,8 @@
 					
                     <div id="newsletterSection">
                         <form action="" method="post">
-                            <p>
-                                <input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" />
-                            </p>
-                            <p class="submit">
-                                <input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" />
-                            </p>
+                            <p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
+                            <p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
                         </form>
                     </div>
                     
