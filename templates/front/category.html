@@ -1,12 +1,5 @@
 {% extends "layout/base.html" %}
 {% block title %}{{ category.name }}{% endblock %}
-{% block extra_head %}
-<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery-easing.1.2.pack.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery-easing-compatibility.1.2.pack.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery.dimensions.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/jquery.accordion.js"></script>
-<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/accordion_init.js"></script>
-{% endblock %}
 {% block body_id %}{{ category.slug }}{% endblock %}
 {% block body_class %}rubrique{% endblock %}
 {% block content %}
@@ -18,14 +11,7 @@
     {% if article %}
     <div class="articleSection articleMain">
         <h3>{{ article.title }}</h3>
-        <p class="author">
-            Par 
-            {% if article.author_nickname %}
-                {{ article.author_nickname }}
-            {% else %}
-                {{ article.author.get_full_name }}
-            {% endif %}
-        </p>
+        <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
         <div class="illustration">
             <img src="{{ article.illustration.image.url }}" alt="{{ article.illustration.legend }}" />
             <p class="credits">Photo : {{ article.illustration.credits }} - {{ article.illustration.legend }}</p>
@@ -137,52 +123,42 @@
             <div class="articleList autoClear">
             
             {% if note_6 %}
-            <div class="articleSection">
-                <h2>{{ note_6.type.name }}</h2>
-                <div class="articleButton">
-                    <h3>{{ note_6.title }}</h3>
-                    {{ note_6.content|safe }}
-				</div>
+            <h2>{{ note_6.type.name }}</h2>
+            <div>
+                <h3>{{ note_6.title }}</h3>
+			    {{ note_6.content|safe }}
 			</div>
 		    {% endif %}
 		    
             {% if note_7 %}
-            <div class="articleSection">
-                <h2>{{ note_7.type.name }}</h2>
-                <div class="articleButton">
-                    <h3>{{ note_7.title }}</h3>
-                    {{ note_7.content|safe }}
-				</div>
+            <h2>{{ note_7.type.name }}</h2>
+            <div>
+                <h3>{{ note_7.title }}</h3>
+			    {{ note_7.content|safe }}
 			</div>
 		    {% endif %}
 		    
             {% if note_8 %}
-            <div class="articleSection">
-                <h2>{{ note_8.type.name }}</h2>
-                <div class="articleButton">
-                    <h3>{{ note_8.title }}</h3>
-                    {{ note_8.content|safe }}
-				</div>
+            <h2>{{ note_8.type.name }}</h2>
+            <div>
+                <h3>{{ note_8.title }}</h3>
+			    {{ note_8.content|safe }}
 			</div>
 		    {% endif %}
 		    
             {% if note_9 %}
-            <div class="articleSection">
-                <h2>{{ note_9.type.name }}</h2>
-                <div class="articleButton">
-                    <h3>{{ note_9.title }}</h3>
-                    {{ note_9.content|safe }}
-				</div>
+            <h2>{{ note_9.type.name }}</h2>
+            <div>
+                <h3>{{ note_9.title }}</h3>
+			    {{ note_9.content|safe }}
 			</div>
 		    {% endif %}
 		    
             {% if note_10 %}
-            <div class="articleSection">
-                <h2>{{ note_10.type.name }}</h2>
-                <div class="articleButton">
-                    <h3>{{ note_10.title }}</h3>
-                    {{ note_10.content|safe }}
-				</div>
+            <h2>{{ note_10.type.name }}</h2>
+            <div>
+                <h3>{{ note_10.title }}</h3>
+			    {{ note_10.content|safe }}
 			</div>
 		    {% endif %}
         </div>
@@ -193,8 +169,8 @@
     <div class="rightWrap">
         <div class="addSection">
             <div class="add130">
-                <object data="img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
-                    <param name="movie" value="img/add/pub_130x600.swf"/>
+                <object data="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
+                    <param name="movie" value="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf"/>
                     <param name="quality" value="high"/>
                     <param name="menu" value="false"/>
                 </object>
@@ -209,12 +185,8 @@
 <!-- NEWSLETTER SECTION -->
 <div id="newsletterSection">
     <form action="" method="post">
-        <p>
-            <input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" />
-        </p>
-		<p class="submit">
-		    <input src="img/ok.png" alt="Valider" type="image" />
-		</p>
+        <p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
+		<p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
 	</form>
 </div>
 <!-- // NEWSLETTER SECTION -->
