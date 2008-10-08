@@ -5,6 +5,7 @@ Models of ``critica.apps.articles`` application.
 """
 import datetime
 from django.db import models
+from django.db.models import permalink
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
@@ -174,7 +175,15 @@ class BaseArticle(models.Model):
         
         """
         return u"%s" % (self.title)
-    
+
+    @permalink
+    def get_absolute_url(self):
+        """
+        Returns absolute URL.
+        
+        """
+        return ('category', (), {'category_slug': self.category.slug})
+        
     def save(self):
         """ 
         Object pre-saving operations:
