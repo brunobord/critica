@@ -33,11 +33,11 @@
 </style>
 <!-- BLOC DEMO EASY VOYAGES -->
 
-<script type="text/javascript" src="js/lib/jquery-easing.1.2.pack.js"></script>
-<script type="text/javascript" src="js/lib/jquery-easing-compatibility.1.2.pack.js"></script>
-<script type="text/javascript" src="js/lib/jquery.dimensions.js"></script>
-<script type="text/javascript" src="js/plugins/jquery.accordion.js"></script>
-<script type="text/javascript" src="js/plugins/accordion_init.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery-easing.1.2.pack.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery-easing-compatibility.1.2.pack.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery.dimensions.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/jquery.accordion.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/accordion_init.js"></script>
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/fr_moteur.css" media="screen"><!-- JAVASCRIPT -->
 {% endblock %}
 {% block body_id %}voyages{% endblock %}
@@ -94,6 +94,21 @@
                 </div>
 			 </div>
             <div class="leftWrap"><!-- LEFT WRAP -->
+                <div id="archivesBar" class="articleList autoClear">
+                    <div>
+                        <h2>ARCHIVES VOYAGES</h2>
+                        {% if archives %}
+                            {% for article in archives %}
+                            <div class="articleButton">
+                                <h3>{{ article.title }}</h3>
+                            </div>
+							<div>
+                                {{ article.summary|safe }}
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
                 <div class="addSection">
                 	<div class="add-300x90 autoClear">
                 		<a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>

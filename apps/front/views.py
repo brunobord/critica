@@ -164,19 +164,25 @@ def regions(request):
     """
     issue = _get_current_issue()
     context = {}
+    
+    # Featured region
+    # --------------------------------------------------------------------------
     featured_region = FeaturedRegion.objects.get(issue=issue)
+    context['featured_region'] = featured_region
+    
     featured_region_note = RegionNote.objects.get(
         issues__id=issue.id,
         is_ready_to_publish=True,
         is_reserved=False,
         region=featured_region.region)
+    context['featured_region_note'] = featured_region_note
+    
+    # Regions notes
+    # --------------------------------------------------------------------------
     regions_notes = RegionNote.objects.filter(
         issues__id=issue.id,
         is_ready_to_publish=True, 
         is_reserved=False).exclude(id=featured_region.id).order_by('region__name')
-    
-    context['featured_region'] = featured_region
-    context['featured_region_note'] = featured_region_note
     context['regions_notes_1'] = regions_notes[0:10]
     context['regions_notes_2'] = regions_notes[10:20]
     context['regions_notes_3'] = regions_notes[20:]
@@ -203,6 +209,13 @@ def voyages(request):
     except ObjectDoesNotExist:
         context['article'] = False
         
+    try:
+        context['archives'] = VoyagesArticle.objects.filter(
+            is_ready_to_publish=True,
+            is_reserved=False).order_by('-publication_date')[:10]
+    except ObjectDoesNotExist:
+        context['archives'] = False
+        
     return render_to_response(
         'front/voyages.html',
         context,
@@ -217,6 +230,8 @@ def epicurien(request):
     issue = _get_current_issue()
     context = {}
     
+    # Types
+    # --------------------------------------------------------------------------
     type_cotefumeurs = EpicurienArticleType.objects.get(slug='cote-fumeurs')
     type_cotegourmets = EpicurienArticleType.objects.get(slug='cote-gourmets')
     type_cotebar = EpicurienArticleType.objects.get(slug='cote-bar')
@@ -234,10 +249,9 @@ def epicurien(request):
         
     try:
         context['archives_cotefumeurs'] = EpicurienArticle.objects.filter(
-            issues__id=issue.id,
             is_ready_to_publish=True,
             is_reserved=False,
-            type=type_cotefumeurs)[:10]
+            type=type_cotefumeurs).order_by('-publication_date')[:10]
     except ObjectDoesNotExist:
         context['archives_cotefumeurs'] = False
     
@@ -254,10 +268,9 @@ def epicurien(request):
         
     try:
         context['archives_cotegourmets'] = EpicurienArticle.objects.filter(
-            issues__id=issue.id,
             is_ready_to_publish=True,
             is_reserved=False,
-            type=type_cotegourmets)[:10]
+            type=type_cotegourmets).order_by('-publication_date')[:10]
     except ObjectDoesNotExist:
         context['archives_cotegourmets'] = False
     
@@ -274,10 +287,9 @@ def epicurien(request):
         
     try:
         context['archives_cotebar'] = EpicurienArticle.objects.filter(
-            issues__id=issue.id,
             is_ready_to_publish=True,
             is_reserved=False,
-            type=type_cotebar)[:10]
+            type=type_cotebar).order_by('-publication_date')[:10]
     except ObjectDoesNotExist:
         context['archives_cotebar'] = False
 
