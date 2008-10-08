@@ -46,6 +46,7 @@
 <!-- LEFT WRAP -->
 <div id="mainContent" class="leftWrap">
     <h1>Voyages</h1>
+    {% if article %}
     <div class="articleSection articleMain">
         <h3>{{ article.title }}</h3>
     	<p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
@@ -69,6 +70,7 @@
     	</div>
     	<!-- // SLICKBOX -->
     </div>
+    {% endif %}
     <!-- ADD -->
     <div class="addSection add468">
         <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
