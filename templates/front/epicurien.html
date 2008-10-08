@@ -1,0 +1,251 @@
+{% extends "layout/base.html" %}
+{% block title %}Épicurien{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/coda.css" type="text/css" media="screen" />
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery-easing.1.2.pack.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery-easing-compatibility.1.2.pack.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lib/jquery.dimensions.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/jquery.accordion.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/accordion_init.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/coda-slider.1.1.1.js"></script>
+<script type="text/javascript">
+	jQuery(window).bind("load", function() {
+		jQuery("div#slider").codaSlider()
+	});
+</script>
+{% endblock %}
+{% block body_id %}epicurien{% endblock %}
+{% block body_class %}rubrique{% endblock %}
+{% block content %}
+<!-- LEFT WRAP -->
+<div id="mainContent" class="leftWrap">
+    <h1>Épicurien</h1>
+    <!-- STRIPNAV -->
+    <noscript>
+        <div class="stripNav">
+            <ul>
+                <li><a href="#gourmets">Côté gourmets</a></li>
+                <li><a href="#alcools">Côté bar</a></li>
+                <li><a href="#fumeur">Côté fumeur</a></li>
+            </ul>
+        </div>
+    </noscript><!-- // STRIPNAV -->
+	<!-- SLIDER -->
+	<div id="slider" class="csw">
+	    <div class="panelContainer"><!-- PANEL GOURMETS -->
+	        <div class="panel" title="Côté Gourmets" id="gourmets">
+	            <div class="pannel-right">
+	                <div class="rightWrap"><!-- RIGHT WRAP -->
+	                    <div class="subContent"><!-- SUB CONTENT -->
+	                        <div class="leftWrap"><!-- LEFT WRAP -->
+	                            <div id="archivesBar" class="articleList autoClear">
+	                                <div>
+	                                    <h2>ARCHIVES COT&Eacute; GOURMETS</h2>
+	                                    
+	                                    {% if archives_cotegourmets %}
+    	                                    {% for article in archives_cotegourmets %}
+    										<div class="articleButton">
+    											<h3>{{ article.title }}</h3>
+    										</div>
+    										<div>
+                                                {{ article.summary|safe }}
+    										</div>
+    										{% endfor %}
+                                        {% endif %}
+									</div>
+								</div>
+                                <div class="addSection">
+                                    <div class="add-300x90 autoClear">
+                                        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
+                                        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
+                                    </div>
+                                    <p><a href="#">Publicité</a></p>
+                                </div>
+                            </div><!-- // LEFT WRAP -->
+                        </div><!-- // SUB CONTENT -->
+                    </div><!-- // RIGHT WRAP -->
+                </div><!-- // PANNEL RIGHT -->
+                
+                {% if article_cotegourmets %}
+                <div class="articleSection articleMain">
+                    <h3>{{ article_cotegourmets.title }}</h3>
+                    <p class="author">Par {% if article_cotegourmets.author_nickname %}{{ article_cotegourmets.author_nickname }}{% else %}{{ article_cotegourmets.author.get_full_name }}{% endif %}</p>
+					<div class="illustration">
+					    <img src="{{ article_cotegourmets.illustration.image.url }}" alt="{{ article_cotegourmets.illustration.legend }}" />
+						<p class="credits">Photo : {{ article_cotegourmets.illustration.credits }}</p>
+                    </div>
+                    {{ article_cotegourmets.summary|safe }}
+                    <p class="readMore slick-show"><a href="#">Lire la suite</a></p>
+					<!-- SLICKBOX -->
+					<div class="slickbox" style="display:block;">
+                        {{ article_cotegourmets.content|safe }}
+						<div class="relatedArticles">
+					        <h4>A lire aussi</h4>
+					        <ul>
+					            <li><h5><a href="#">Pascal n'a plus d'idées <span>(n°284 - 12.08.2008)</span></a></h5></li>
+                            </ul>
+                        </div>
+                        <p class="readMore slick-hide"><a href="#">Masquer</a></p>
+                    </div>
+                    <!-- // SLICKBOX -->
+                    </div>
+                    <div class="addSection add468">
+                        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+                        <p><a href="#">Publicité</a></p>
+                    </div>
+                </div>
+                {% endif %}
+                <!-- // PANEL GOURMETS -->
+                <!-- PANEL ALCOOLS -->
+                <div class="panel" title="Côté Bar" id="alcools">
+                    <div class="pannel-right">
+                        <div class="rightWrap"><!-- RIGHT WRAP -->
+                            <div class="subContent"><!-- SUB CONTENT -->
+                                <div class="leftWrap"><!-- LEFT WRAP -->
+                                    <div id="archivesBar" class="articleList autoClear">
+                                        <div>
+                                            <h2>ARCHIVES COT&Eacute; BAR</h2>
+                                            
+                                            {% if archives_cotebar %}
+                                                {% for article in archives_cotebar %}
+    											<div class="articleButton">
+    												<h3>{{ article.title }}</h3>
+    											</div>
+    											<div>
+                                                    {{ article.summary|safe }}
+    											</div>
+    											{% endfor %}
+    										{% endif %}
+										</div>
+									</div>
+									<div class="addSection">
+									    <div class="add-300x90 autoClear">
+									        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
+									        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
+									    </div>
+									    <p><a href="#">Publicité</a></p>
+								    </div>
+								</div><!-- // LEFT WRAP -->
+							</div><!-- // SUB CONTENT -->
+						</div><!-- // RIGHT WRAP -->
+					</div>
+					{% if article_cotebar %}
+					<div class="articleSection articleMain">
+					    <h3>{{ article_cotebar.title }}</h3>
+					    <p class="author" >Par {% if article_cotebar.author_nickname %}{{ article_cotebar.author_nickname }}{% else %}{{ article_cotebar.author.get_full_name }}{% endif %}</p>
+                        <p><i>A consommer avec modération</i></p>
+                        <div class="illustration">
+                            <img src="{{ article_cotebar.illustration.image.url }}" alt="{{ article_cotebar.illustration.legend }}" />
+                            <p class="credits">Photo : {{ article_cotebar.illustration.credits }}</p>
+                        </div>
+                        {{ article_cotebar.summary|safe }}
+                        <p class="readMore slick-show"><a href="#">Lire la suite</a></p>
+						<!-- SLICKBOX -->
+						<div class="slickbox" style="display:block;">
+                            {{ article_cotebar.content|safe }}
+                            <div class="relatedArticles">
+                                <h4>A lire aussi</h4>
+                                <ul>
+                                    <li><h5><a href="#">Pascal n'a plus d'idées <span>(n°284 - 12.08.2008)</span></a></h5></li>
+							    </ul>
+                            </div>
+                            <p class="readMore slick-hide"><a href="#">Masquer</a></p>
+					    </div>
+					    <!-- // SLICKBOX -->
+					</div>
+					{% endif %}
+					<div class="addSection add468">
+					    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+                        <p><a href="#">Publicité</a></p>
+                    </div>
+                </div><!-- // PANEL ALCOOLS -->
+                <!-- PANEL FUMEUR -->
+                <div class="panel" title="Côté Fumeur" id="fumeur">
+                    <div class="pannel-right">
+                        <!-- RIGHT WRAP -->
+                        <div class="rightWrap">
+                            <!-- SUB CONTENT -->
+                            <div class="subContent">
+                                <!-- LEFT WRAP -->
+                                <div class="leftWrap">
+                                    <div id="archivesFumeur" class="articleList autoClear">
+                                        <div>
+    										<h2>ARCHIVES COT&Eacute; FUMEUR</h2>
+    										
+    										{% if archives_cotefumeurs %}
+        										{% for article in archives_cotefumeurs %}
+        										<div class="articleButton">
+        											<h3>{{ article.title }}</h3>
+        										</div>
+        										<div>
+                                                    {{ article.summary|safe }}
+        										</div>
+        										{% endfor %}
+        								    {% endif %}
+    									</div>
+    								</div>
+    								<div class="addSection">
+    								    <div class="add-300x90 autoClear">
+    								        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
+    								        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
+    								    </div>
+    								    <p><a href="#">Publicité</a></p>
+    								</div>
+    							</div>
+    							<!-- // LEFT WRAP -->
+    						    </div>
+    						<!-- // SUB CONTENT -->
+    					    </div>
+    					<!-- // RIGHT WRAP -->
+    				    </div>
+    				    
+    				    {% if article_cotefumeurs %}
+    				    <div class="articleSection articleMain">
+    				        <h3>{{ article_cotefumeurs.title }}</h3>
+							<p class="author">Par {% if article_cotefumeurs.author_nickname %}{{ article_cotefumeurs.author_nickname }}{% else %}{{ article_cotefumeurs.author.get_full_name }}{% endif %}</p>
+							<div class="illustration">
+								<img src="{{ article_cotefumeurs.illustration.image.url }}" alt="{{ article_cotefumeurs.illustration.legend }}" />
+								<p class="credits">Photo : {{ article_cotefumeurs.illustration.credits }}</p>
+							</div>
+                            {{ article_cotefumeurs.summary|safe }}
+							<p class="readMore slick-show"><a href="#">Lire la suite</a></p>
+							<!-- SLICKBOX -->
+							<div class="slickbox" style="display:block;">
+                                {{ article_cotefumeurs.content|safe }}
+								<!-- RELATED -->
+								<div class="relatedArticles">
+									<h4>A lire aussi</h4>
+									<ul>
+						                <li><h5><a href="#">Pascal n'a plus d'idées <span>(n°284 - 12.08.2008)</span></a></h5></li>
+									</ul>
+								</div>
+								<!-- // RELATED -->
+								<p class="readMore slick-hide"><a href="#">Masquer</a></p>
+							</div><!-- // SLICKBOX -->
+						</div>
+						{% endif %}
+					    <div class="addSection add468">
+					        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+					        <p><a href="#">Publicité</a></p>
+                        </div>
+                    </div><!-- // PANEL FUMEUR -->
+                </div><!-- // PANEL CONTAINER -->
+            </div><!-- // SLIDER -->
+        </div><!-- // MAIN CONTENT -->
+        <div class="subContent">
+            <div class="rightWrap">
+                <div class="addSection">
+                    <div class="add130">
+                        <object data="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
+                            <param name="movie" value="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf"/>
+                            <param name="quality" value="high"/>
+                            <param name="menu" value="false"/>
+                        </object>
+                    </div>
+                    <p><a href="">Publicité</a></p>
+                </div>
+            </div>
+        </div><!-- // SUBCONTENT -->
+    </div>
+</div>
+{% endblock %}

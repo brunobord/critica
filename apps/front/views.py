@@ -210,6 +210,79 @@ def voyages(request):
 
 
 def epicurien(request):
-    pass
+    """
+    Displays "Epicurien" category page.
     
+    """
+    issue = _get_current_issue()
+    context = {}
     
+    type_cotefumeurs = EpicurienArticleType.objects.get(slug='cote-fumeurs')
+    type_cotegourmets = EpicurienArticleType.objects.get(slug='cote-gourmets')
+    type_cotebar = EpicurienArticleType.objects.get(slug='cote-bar')
+    
+    # Côté fumeurs
+    # --------------------------------------------------------------------------
+    try:
+        context['article_cotefumeurs'] = EpicurienArticle.objects.get(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotefumeurs)
+    except ObjectDoesNotExist:
+        context['article_cotefumeurs'] = False
+        
+    try:
+        context['archives_cotefumeurs'] = EpicurienArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotefumeurs)[:10]
+    except ObjectDoesNotExist:
+        context['archives_cotefumeurs'] = False
+    
+    # Côté Gourmets
+    # --------------------------------------------------------------------------
+    try:
+        context['article_cotegourmets'] = EpicurienArticle.objects.get(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotegourmets)
+    except ObjectDoesNotExist:
+        context['article_cotegourmets'] = False
+        
+    try:
+        context['archives_cotegourmets'] = EpicurienArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotegourmets)[:10]
+    except ObjectDoesNotExist:
+        context['archives_cotegourmets'] = False
+    
+    # Côté Bar
+    # --------------------------------------------------------------------------
+    try:
+        context['article_cotebar'] = EpicurienArticle.objects.get(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotebar)
+    except ObjectDoesNotExist:
+        context['article_cotebar'] = False
+        
+    try:
+        context['archives_cotebar'] = EpicurienArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotebar)[:10]
+    except ObjectDoesNotExist:
+        context['archives_cotebar'] = False
+
+    return render_to_response(
+        'front/epicurien.html',
+        context,
+        context_instance=RequestContext(request))
+
