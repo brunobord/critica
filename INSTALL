@@ -23,6 +23,10 @@ Critic@-engine uses the latest development version of django-tagging
 (http://code.google.com/p/django-tagging/) as tagging system. So you need to 
 download and install this Django application.
 
+Critic@-engine uses the latest version of django-imagethumbnail 
+(http://www.interfaceip.org/django-imagethumbnail/) for generating thumbnails.
+So you need to download and install this application.
+
 Installation
 ------------
 
@@ -107,6 +111,8 @@ And add these applications to your ``INSTALLED_APPS``::
     INSTALLED_APPS = (
         'django.contrib.admin',
         'tagging',
+        'imagethumbnail',
+        'critica.apps.front',
         'critica.apps.categories',
         'critica.apps.illustrations',
         'critica.apps.videos',

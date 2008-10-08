@@ -1,4 +1,5 @@
 {% extends "layout/base.html" %}
+{% load image_thumbnail %}
 {% block title %}Épicurien{% endblock %}
 {% block extra_head %}
 <link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/coda.css" type="text/css" media="screen" />
@@ -67,10 +68,10 @@
                     <p class="author">Par {% if article_cotegourmets.author_nickname %}{{ article_cotegourmets.author_nickname }}{% else %}{{ article_cotegourmets.author.get_full_name }}{% endif %}</p>
 					<div class="illustration">
 					    {% if article_cotegourmets.use_default_illustration %}
-					        <img src="{{ article_cotegourmets.category.image.url }}" alt="{{ article_cotegourmets.category.image_legend }}" />
+					        <img src="{{ article_cotegourmets.category.image|thumbnail:"200,0" }}" alt="{{ article_cotegourmets.category.image_legend }}" />
 					        <p class="credits">Photo : {{ article_cotegourmets.category.image_credits }}</p>
 				        {% else %}
-					        <img src="{{ article_cotegourmets.illustration.image.url }}" alt="{{ article_cotegourmets.illustration.legend }}" />
+					        <img src="{{ article_cotegourmets.illustration.image|thumbnail:"200,0" }}" alt="{{ article_cotegourmets.illustration.legend }}" />
 						    <p class="credits">Photo : {{ article_cotegourmets.illustration.credits }}</p>
                         {% endif %}
                     </div>
@@ -136,10 +137,10 @@
                         <p><i>A consommer avec modération</i></p>
                         <div class="illustration">
 					        {% if article_cotebar.use_default_illustration %}
-					            <img src="{{ article_cotebar.category.image.url }}" alt="{{ article_cotebar.category.image_legend }}" />
+					            <img src="{{ article_cotebar.category.image|thumbnail:"200,0" }}" alt="{{ article_cotebar.category.image_legend }}" />
 					            <p class="credits">Photo : {{ article_cotebar.category.image_credits }}</p>
 				            {% else %}
-                                <img src="{{ article_cotebar.illustration.image.url }}" alt="{{ article_cotebar.illustration.legend }}" />
+                                <img src="{{ article_cotebar.illustration.image|thumbnail:"200,0" }}" alt="{{ article_cotebar.illustration.legend }}" />
                                 <p class="credits">Photo : {{ article_cotebar.illustration.credits }}</p>
                             {% endif %}
                         </div>
@@ -210,10 +211,10 @@
 							<p class="author">Par {% if article_cotefumeurs.author_nickname %}{{ article_cotefumeurs.author_nickname }}{% else %}{{ article_cotefumeurs.author.get_full_name }}{% endif %}</p>
 							<div class="illustration">
 					            {% if article_cotefumeurs.use_default_illustration %}
-					                <img src="{{ article_cotefumeurs.category.image.url }}" alt="{{ article_cotefumeurs.category.image_legend }}" />
+					                <img src="{{ article_cotefumeurs.category.image|thumbnail:"200,0" }}" alt="{{ article_cotefumeurs.category.image_legend }}" />
 					                <p class="credits">Photo : {{ article_cotefumeurs.category.image_credits }}</p>
 				                {% else %}
-								    <img src="{{ article_cotefumeurs.illustration.image.url }}" alt="{{ article_cotefumeurs.illustration.legend }}" />
+								    <img src="{{ article_cotefumeurs.illustration.image|thumbnail:"200,0" }}" alt="{{ article_cotefumeurs.illustration.legend }}" />
 								    <p class="credits">Photo : {{ article_cotefumeurs.illustration.credits }}</p>
 							    {% endif %}
 							</div>
