@@ -188,8 +188,22 @@ def regions(request):
 
 
 def voyages(request):
-    pass
+    """
+    Displays "Voyages" category page.
     
+    """
+    issue = _get_current_issue()
+    context = {}
+    context['article'] = VoyagesArticle.objects.get(
+        issues__id=issue.id,
+        is_ready_to_publish=True,
+        is_reserved=False) 
+
+    return render_to_response(
+        'front/voyages.html',
+        context,
+        context_instance=RequestContext(request))
+
 
 def epicurien(request):
     pass
