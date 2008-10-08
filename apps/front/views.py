@@ -129,17 +129,12 @@ def category(request, category_slug):
     Displays the given category page.
     
     """
-    # Gets the current issue
     issue = _get_current_issue()
-    
-    # Initializes context dictionary
     context = {}
     
-    # Checks if category exists, otherwise returns 404
     category = get_object_or_404(Category, slug=category_slug)
     context['category'] = category
-    
-    # Populates context
+
     note_positions = IssueNotePosition.objects.filter(issue=issue, category=category)
     for note_position in note_positions:
         if note_position.position is not None:
@@ -163,9 +158,35 @@ def category(request, category_slug):
         
         
 def regions(request):
-    pass
+    """
+    Displays "Regions" category page.
     
+    """
+    issue = _get_current_issue()
+    context = {}
+    featured_region = FeaturedRegion.objects.get(issue=issue)
+    featured_region_note = RegionNote.objects.get(
+        issues__id=issue.id,
+        is_ready_to_publish=True,
+        is_reserved=False,
+        region=featured_region.region)
+    regions_notes = RegionNote.objects.filter(
+        issues__id=issue.id,
+        is_ready_to_publish=True, 
+        is_reserved=False).exclude(id=featured_region.id).order_by('region__name')
     
+    context['featured_region'] = featured_region
+    context['featured_region_note'] = featured_region_note
+    context['regions_notes_1'] = regions_notes[0:10]
+    context['regions_notes_2'] = regions_notes[10:20]
+    context['regions_notes_3'] = regions_notes[20:]
+    
+    return render_to_response(
+        'front/regions.html',
+        context,
+        context_instance=RequestContext(request))
+
+
 def voyages(request):
     pass
     
