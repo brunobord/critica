@@ -51,6 +51,24 @@ class RegionNoteAdmin(BaseNoteAdmin):
     date_hierarchy = 'publication_date'
     exclude = ['author']
     
+    def __call__(self, request, url):
+        self.request = request
+        return super(RegionNoteAdmin, self).__call__(request, url)
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(RegionNoteAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'region': 
+            my_choices = [('', '---------')]
+            my_choices.extend(Region.objects.order_by('name').values_list('id','name'))
+            print my_choices
+            field.choices = my_choices
+        return field
+        
     def get_fieldsets(self, request, obj=None):
         """ 
         Hook for specifying fieldsets for the add form. 
