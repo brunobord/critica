@@ -44,11 +44,7 @@ def _get_current_issue(issue_number=None):
             raise Http404
     else:
         try:
-            # Uncomment this line and comment the next one when the site will be 
-            # ready to publish. We do this to have some content by default.
-            #
-            #issue = Issue.objects.filter(is_published=True)[0]
-            issue = Issue.objects.get(id=1)
+            issue = Issue.objects.filter(is_published=True)[0]
         except ObjectDoesNotExist:
             raise Http404
     return issue

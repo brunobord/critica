@@ -16,7 +16,7 @@
             "publication_date": "2008-09-24", 
             "secret_key": "MTM3", 
             "number": 137, 
-            "is_published": 1
+            "is_published": 0
         }
     }, 
     {
@@ -26,7 +26,7 @@
             "publication_date": "2008-09-29", 
             "secret_key": "MTM4", 
             "number": 138, 
-            "is_published": 1
+            "is_published": 0
         }
     }, 
     {
@@ -36,7 +36,7 @@
             "publication_date": "2008-09-30", 
             "secret_key": "MTM5", 
             "number": 139, 
-            "is_published": 1
+            "is_published": 0
         }
     }
 ]
