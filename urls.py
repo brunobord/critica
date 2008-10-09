@@ -21,6 +21,19 @@ urlpatterns = patterns('',
     (r'^django-admin/(.*)', admin.site.root),
 )
 
+# Issue preview
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^preview/(?P<issue_key>[-\w]+)/coup-de-gueule/$', 'critica.apps.front.views.issuepreview_anger', name='issuepreview_category_anger'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/epicurien/$', 'critica.apps.front.views.issuepreview_epicurien', name='issuepreview_category_epicurien'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/voyages/$', 'critica.apps.front.views.issuepreview_voyages', name='issuepreview_category_voyages'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/regions/$', 'critica.apps.front.views.issuepreview_regions', name='issuepreview_category_regions'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/(?P<category_slug>[-\w]+)/$', 'critica.apps.front.views.issuepreview_category', name='issuepreview_category'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/$', 'critica.apps.front.views.issuepreview_home', name='issuepreview_home'),
+)
+
+# Home and categories
+# ------------------------------------------------------------------------------
 urlpatterns += patterns('',
     url(r'^coup-de-gueule/$', 'critica.apps.front.views.anger', name='category_anger'),
     url(r'^epicurien/$', 'critica.apps.front.views.epicurien', name='category_epicurien'),

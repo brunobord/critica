@@ -3,6 +3,8 @@
 Views of ``critica.apps.front`` application.
 
 """
+from django.conf import settings
+from django.http import Http404
 from django.shortcuts import render_to_response
 from django.shortcuts import get_object_or_404
 from django.template import RequestContext
@@ -21,8 +23,11 @@ from critica.apps.regions.models import RegionNote
 from critica.apps.regions.models import FeaturedRegion
 from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.videos.models import Video
+from critica.apps.utils import urlbase64
 
 
+# Home and categories
+# ------------------------------------------------------------------------------
 def _get_current_issue():
     """
     Gets the current issue.
@@ -33,19 +38,29 @@ def _get_current_issue():
     return issue
 
 
-def home(request):
+
+def home(request, issue=None, is_preview=False):
     """
     Displays the homepage.
     
     """
     # Gets the current issue
-    issue = _get_current_issue()
+    if issue is None:
+        issue = _get_current_issue()
     
     # Initializes context dictionary
     context = {}
+    
+    # Issue
+    context['issue'] = issue
+    
+    # Is a preview
+    if is_preview:
+        context['is_preview'] = True
+    else:
+        context['is_preview'] = False
 
     # Generic articles
-    # --------------------------------------------------------------------------
     category_positions = IssueCategoryPosition.objects.filter(issue=issue)
     for category_position in category_positions:
         if category_position.position is not None:
@@ -61,7 +76,6 @@ def home(request):
                 context[varname] = False
 
     # Regions
-    # --------------------------------------------------------------------------
     try:
         featured = FeaturedRegion.objects.get(issue=issue)
         context['region_note'] = RegionNote.objects.get(
@@ -73,7 +87,6 @@ def home(request):
         context['region_note'] = False
 
     # Voyages
-    # --------------------------------------------------------------------------
     try:
         context['voyages_article'] = VoyagesArticle.objects.get(
             issues__id=issue.id, 
@@ -83,7 +96,6 @@ def home(request):
         context['voyages_article'] = False
     
     # Epicurien
-    # --------------------------------------------------------------------------
     try:
         context['epicurien_articles'] = EpicurienArticle.objects.filter(
             issues__id=issue.id, 
@@ -93,7 +105,6 @@ def home(request):
         context['epicurien_articles'] = False
     
     # Anger ("Coup de Gueule")
-    # --------------------------------------------------------------------------
     try:
         context['anger_article'] = AngerArticle.objects.get(
             issues__id=issue.id, 
@@ -103,7 +114,6 @@ def home(request):
         context['anger_article'] = False
     
     # Illustration of the day
-    # --------------------------------------------------------------------------
     try:
         context['illustration'] = IllustrationOfTheDay.objects.get(
             issues__id=issue.id)
@@ -111,7 +121,6 @@ def home(request):
         context['illustration'] = False
 
     # Video (reportage)
-    # --------------------------------------------------------------------------
     try:
         context['video'] = Video.objects.get(issues__id=issue.id)
     except ObjectDoesNotExist:
@@ -124,13 +133,24 @@ def home(request):
 
 
 
-def category(request, category_slug):
+def category(request, category_slug, issue=None, is_preview=False):
     """
     Displays the given category page.
     
     """
-    issue = _get_current_issue()
+    if not issue:
+        issue = _get_current_issue()
+    
     context = {}
+    
+    # Issue
+    context['issue'] = issue
+    
+    # Is a preview
+    if is_preview:
+        context['is_preview'] = True
+    else:
+        context['is_preview'] = False
     
     category = get_object_or_404(Category, slug=category_slug)
     context['category'] = category
@@ -149,43 +169,62 @@ def category(request, category_slug):
                 context[varname] = note
             except ObjectDoesNotExist:
                 context[varname] = False
-    context['article'] = Article.objects.get(issues__id=issue.id, category__slug=category_slug)
-    
+    try:
+        context['article'] = Article.objects.get(issues__id=issue.id, category__slug=category_slug)
+    except ObjectDoesNotExist:
+        context['article'] = False
+        
     return render_to_response(
         'front/category.html', 
         context,
         context_instance=RequestContext(request))
-        
-        
-def regions(request):
+
+
+
+def regions(request, issue=None, is_preview=False):
     """
     Displays "Regions" category page.
     
     """
-    issue = _get_current_issue()
+    if not issue:
+        issue = _get_current_issue()
+    
     context = {}
     
-    # Featured region
-    # --------------------------------------------------------------------------
-    featured_region = FeaturedRegion.objects.get(issue=issue)
-    context['featured_region'] = featured_region
+    # Issue
+    context['issue'] = issue
     
-    featured_region_note = RegionNote.objects.get(
-        issues__id=issue.id,
-        is_ready_to_publish=True,
-        is_reserved=False,
-        region=featured_region.region)
-    context['featured_region_note'] = featured_region_note
+    # Is a preview
+    if is_preview:
+        context['is_preview'] = True
+    else:
+        context['is_preview'] = False
+    
+    # Featured region
+    try:
+        featured_region = FeaturedRegion.objects.get(issue=issue)
+        featured_region_note = RegionNote.objects.get(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            region=featured_region.region)
+        context['featured_region_note'] = featured_region_note
+    except ObjectDoesNotExist:
+        context['featured_region_note'] = False
     
     # Regions notes
-    # --------------------------------------------------------------------------
-    regions_notes = RegionNote.objects.filter(
-        issues__id=issue.id,
-        is_ready_to_publish=True, 
-        is_reserved=False).exclude(id=featured_region.id).order_by('region__name')
-    context['regions_notes_1'] = regions_notes[0:10]
-    context['regions_notes_2'] = regions_notes[10:20]
-    context['regions_notes_3'] = regions_notes[20:]
+    try:
+        regions_notes = RegionNote.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True, 
+            is_reserved=False).exclude(id=featured_region.id).order_by('region__name')
+        context['regions_notes_1'] = regions_notes[0:10]
+        context['regions_notes_2'] = regions_notes[10:20]
+        context['regions_notes_3'] = regions_notes[20:]
+    except ObjectDoesNotExist:
+        context['regions_notes_1'] = False
+        context['regions_notes_2'] = False
+        context['regions_notes_3'] = False
     
     return render_to_response(
         'front/regions.html',
@@ -193,13 +232,25 @@ def regions(request):
         context_instance=RequestContext(request))
 
 
-def voyages(request):
+
+def voyages(request, issue=None, is_preview=False):
     """
     Displays "Voyages" category page.
     
     """
-    issue = _get_current_issue()
+    if not issue:
+        issue = _get_current_issue()
+    
     context = {}
+    
+    # Issue
+    context['issue'] = issue
+    
+    # Is a preview
+    if is_preview:
+        context['is_preview'] = True
+    else:
+        context['is_preview'] = False
     
     try:
         context['article'] = VoyagesArticle.objects.get(
@@ -222,22 +273,32 @@ def voyages(request):
         context_instance=RequestContext(request))
 
 
-def epicurien(request):
+
+def epicurien(request, issue=None, is_preview=False):
     """
     Displays "Epicurien" category page.
     
     """
-    issue = _get_current_issue()
+    if not issue:
+        issue = _get_current_issue()
+    
     context = {}
     
+    # Issue
+    context['issue'] = issue
+    
+    # Is a preview
+    if is_preview:
+        context['is_preview'] = True
+    else:
+        context['is_preview'] = False
+    
     # Types
-    # --------------------------------------------------------------------------
     type_cotefumeurs = EpicurienArticleType.objects.get(slug='cote-fumeurs')
     type_cotegourmets = EpicurienArticleType.objects.get(slug='cote-gourmets')
     type_cotebar = EpicurienArticleType.objects.get(slug='cote-bar')
     
     # Côté fumeurs
-    # --------------------------------------------------------------------------
     try:
         context['article_cotefumeurs'] = EpicurienArticle.objects.get(
             issues__id=issue.id,
@@ -256,7 +317,6 @@ def epicurien(request):
         context['archives_cotefumeurs'] = False
     
     # Côté Gourmets
-    # --------------------------------------------------------------------------
     try:
         context['article_cotegourmets'] = EpicurienArticle.objects.get(
             issues__id=issue.id,
@@ -275,7 +335,6 @@ def epicurien(request):
         context['archives_cotegourmets'] = False
     
     # Côté Bar
-    # --------------------------------------------------------------------------
     try:
         context['article_cotebar'] = EpicurienArticle.objects.get(
             issues__id=issue.id,
@@ -298,15 +357,27 @@ def epicurien(request):
         context,
         context_instance=RequestContext(request))
 
-     
-def anger(request):
+
+
+def anger(request, issue=None, is_preview=False):
     """
     Displays "Anger" (Coup de Gueule) category page.
     
     """
-    issue = _get_current_issue()
+    if not issue:
+        issue = _get_current_issue()
+    
     context = {}
     
+    # Issue
+    context['issue'] = issue
+    
+    # Is a preview
+    if is_preview:
+        context['is_preview'] = True
+    else:
+        context['is_preview'] = False
+        
     try:
         context['article'] = AngerArticle.objects.get(
             issues__id=issue.id,
@@ -326,4 +397,78 @@ def anger(request):
         'front/anger.html',
         context,
         context_instance=RequestContext(request))
+
+
+
+# Issue preview
+# ------------------------------------------------------------------------------
+def _get_decoded_issue(issue_key):
+    try:
+        issue_number = int(urlbase64.uri_b64decode(str(issue_key)))
+        issue = Issue.objects.get(number=issue_number)
+    except:
+        raise Http404
+    return issue
+
+
+
+def issuepreview_home(request, issue_key):
+    """
+    Displays home preview of a given issue.
+    
+    """
+    issue = _get_decoded_issue(issue_key)
+    return home(request, issue=issue, is_preview=True)
+
+
+
+def issuepreview_category(request, issue_key, category_slug):
+    """
+    Displays category preview of a given issue.
+    
+    """
+    issue = _get_decoded_issue(issue_key)
+    return category(request, category_slug=category_slug, issue=issue, is_preview=True)
+
+
+
+def issuepreview_regions(request, issue_key):
+    """
+    Displays "Regions" category of a given issue.
+    
+    """
+    issue = _get_decoded_issue(issue_key)
+    return regions(request, issue=issue, is_preview=True)
+    
+    
+    
+def issuepreview_voyages(request, issue_key):
+    """
+    Displays "Voyages" category of a given issue.
+    
+    """
+    issue = _get_decoded_issue(issue_key)
+    return voyages(request, issue=issue, is_preview=True)
+    
+    
+
+def issuepreview_epicurien(request, issue_key):
+    """
+    Displays "Epicurien" category of a given issue.
+    
+    """
+    issue = _get_decoded_issue(issue_key)
+    return epicurien(request, issue=issue, is_preview=True)
+    
+    
+
+def issuepreview_anger(request, issue_key):
+    """
+    Displays "Anger" category of a given issue.
+    
+    """
+    issue = _get_decoded_issue(issue_key)
+    return anger(request, issue=issue, is_preview=True)
+
+
 

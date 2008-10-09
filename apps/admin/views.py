@@ -12,6 +12,7 @@ from django.views.decorators.cache import never_cache
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import permission_required
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.sites.models import Site
 from critica.apps.issues.models import Issue
 from critica.apps.categories.models import Category
 from critica.apps.articles.models import Article
@@ -52,6 +53,11 @@ def basic_dashboard(request, issue=None):
         except ObjectDoesNotExist:
             current_issue = Issue.objects.get(pk=1)
     context['current_issue'] = current_issue
+    
+    # Current site
+    # --------------------------------------------------------------------------
+    site = Site.objects.get_current()
+    context['site_url'] = 'http://' + site.domain
     
     # All issues
     # --------------------------------------------------------------------------

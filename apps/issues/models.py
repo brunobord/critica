@@ -4,8 +4,10 @@ Models of ``critica.apps.issues`` application.
 
 """
 from django.db import models
+from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.issues.managers import PublishedIssueManager
+from critica.apps.utils import urlbase64
 
 
 class Issue(models.Model):
@@ -27,6 +29,11 @@ class Issue(models.Model):
             * The issue publication date
             * Optional (can be blank)
             
+        secret_key
+            * CharField
+            * The issue secret key
+            * Optional (can be blank)
+            
         is_published
             * BooleanField
             * Default: False
@@ -36,6 +43,7 @@ class Issue(models.Model):
     Indexes::
     
         * number
+        * secret_key
         * is_published
     
     Managers::
@@ -49,6 +57,7 @@ class Issue(models.Model):
     """
     number = models.PositiveIntegerField(_('number'), unique=True, help_text=_("Please, enter the issue's number."))
     publication_date = models.DateField(_('publication date'), null=True, blank=True, help_text=_("Don't forget to adjust the publication date"))
+    secret_key = models.CharField(_('secret key'), max_length=30, blank=True, db_index=True, editable=False)
     is_published = models.BooleanField(_('published'), default=False)
     
     objects = models.Manager()
@@ -68,5 +77,16 @@ class Issue(models.Model):
         
         """
         return u'%s' % self.number
+        
+    def save(self):
+        """ 
+        Object pre-saving operations:
+        
+        * Generates "secret" key
+        * Save issue
+        
+        """
+        self.secret_key = urlbase64.uri_b64encode(str(self.number))
+        super(Issue, self).save()
 
 

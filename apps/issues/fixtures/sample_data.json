@@ -3,36 +3,40 @@
         "pk": 1, 
         "model": "issues.issue", 
         "fields": {
-            "is_published": 1, 
             "publication_date": "2008-09-23", 
-            "number": 136
+            "secret_key": "MTM2", 
+            "number": 136, 
+            "is_published": 1
         }
     }, 
     {
         "pk": 2, 
         "model": "issues.issue", 
         "fields": {
-            "is_published": 1, 
             "publication_date": "2008-09-24", 
-            "number": 137
+            "secret_key": "MTM3", 
+            "number": 137, 
+            "is_published": 1
         }
     }, 
     {
         "pk": 3, 
         "model": "issues.issue", 
         "fields": {
-            "is_published": 1, 
             "publication_date": "2008-09-29", 
-            "number": 138
+            "secret_key": "MTM4", 
+            "number": 138, 
+            "is_published": 1
         }
     }, 
     {
         "pk": 4, 
         "model": "issues.issue", 
         "fields": {
-            "is_published": 1, 
             "publication_date": "2008-09-30", 
-            "number": 139
+            "secret_key": "MTM5", 
+            "number": 139, 
+            "is_published": 1
         }
     }
 ]

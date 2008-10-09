@@ -164,9 +164,9 @@
                 <div id="mainContent" class="leftWrap">
 
                     {% if article_1 %}
-					<h2><span><a href="{{ article_1.get_absolute_url }}">{{ article_1.category.name }}</a></span></h2>
+				    <h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_1.category.slug %}{% else %}{{ article_1.get_absolute_url }}{% endif %}">{{ article_1.category.name }}</a></span></h2>
 					<div class="articleSection articleMain">
-						<h3><a href="#">{{ article_1.title }}</a></h3>
+						<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_1.category.slug %}{% else %}{{ article_1.get_absolute_url }}{% endif %}">{{ article_1.title }}</a></h3>
 						<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_1.use_default_illustration %}
@@ -177,14 +177,14 @@
 							 </div>
                             {{ article_1.summary|safe }}
 						</div>
-						<p class="readMore"><a href="{{ article_1.get_absolute_url }}">Lire la suite</a></p>
+						<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_1.category.slug %}{% else %}{{ article_1.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 					</div>
 					{% endif %}
 					
 					{% if article_2 %}
-					<h2><span><a href="{{ article_2.get_absolute_url }}">{{ article_2.category.name }}</a></span></h2>
+					<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_2.category.slug %}{% else %}{{ article_2.get_absolute_url }}{% endif %}">{{ article_2.category.name }}</a></span></h2>
 					<div class="articleSection articleMain">
-						<h3><a href="#">{{ article_2.title }}</a></h3>
+						<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_2.category.slug %}{% else %}{{ article_2.get_absolute_url }}{% endif %}">{{ article_2.title }}</a></h3>
 						<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_2.use_default_illustration %}
@@ -195,7 +195,7 @@
 							 </div>
                             {{ article_2.summary|safe }}
 						</div>
-						<p class="readMore"><a href="{{ article_2.get_absolute_url }}">Lire la suite</a></p>
+						<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_2.category.slug %}{% else %}{{ article_2.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 					</div>
 					{% endif %}
 					
@@ -210,7 +210,7 @@
 						
 						{% if article_4 %}
 						<div class="articleSection">
-							<h2><span><a href="{{ article_4.get_absolute_url }}">{{ article_4.category.name }}</a></span></h2>
+							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_4.category.slug %}{% else %}{{ article_4.get_absolute_url }}{% endif %}">{{ article_4.category.name }}</a></span></h2>
 							<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_4.use_default_illustration %}
@@ -219,16 +219,16 @@
 							        <a href="{{ article_4.illustration.image.url }}" title="{{ article_4.illustration.legend }}"><img src="{{ article_4.illustration.image|thumbnail:"80,0" }}" alt="{{ article_4.illustration.legend }}" /></a>
 							    {% endif %}
 							 </div>
-								<h3><a href="{{ article_4.get_absolute_url }}">{{ article_4.title }}</a></h3>
+								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_4.category.slug %}{% else %}{{ article_4.get_absolute_url }}{% endif %}">{{ article_4.title }}</a></h3>
                                 {{ article_4.summary|safe }}
 							</div>
-							<p class="readMore"><a href="{{ article_4.get_absolute_url }}">Lire la suite</a></p>
+							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_4.category.slug %}{% else %}{{ article_4.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 						</div>
 						{% endif %}
 
 						{% if article_5 %}
 						<div class="articleSection">
-							<h2><span><a href="{{ article_5.get_absolute_url }}">{{ article_5.category.name }}</a></span></h2>
+							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_5.category.slug %}{% else %}{{ article_5.get_absolute_url }}{% endif %}">{{ article_5.category.name }}</a></span></h2>
 							<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_5.use_default_illustration %}
@@ -237,16 +237,16 @@
 							        <a href="{{ article_5.illustration.image.url }}" title="{{ article_5.illustration.legend }}"><img src="{{ article_5.illustration.image|thumbnail:"80,0" }}" alt="{{ article_5.illustration.legend }}" /></a>
 							    {% endif %}
 							 </div>
-								<h3><a href="{{ article_5.get_absolute_url }}">{{ article_5.title }}</a></h3>
+								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_5.category.slug %}{% else %}{{ article_5.get_absolute_url }}{% endif %}">{{ article_5.title }}</a></h3>
                                 {{ article_5.summary|safe }}
 							</div>
-							<p class="readMore"><a href="{{ article_5.get_absolute_url }}">Lire la suite</a></p>
+							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_5.category.slug %}{% else %}{{ article_5.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 						</div>
 						{% endif %}
 
 						{% if article_6 %}
 						<div class="articleSection">
-							<h2><span><a href="{{ article_6.get_absolute_url }}">{{ article_6.category.name }}</a></span></h2>
+							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_6.category.slug %}{% else %}{{ article_6.get_absolute_url }}{% endif %}">{{ article_6.category.name }}</a></span></h2>
 							<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_6.use_default_illustration %}
@@ -255,16 +255,16 @@
 							        <a href="{{ article_6.illustration.image.url }}" title="{{ article_6.illustration.legend }}"><img src="{{ article_6.illustration.image|thumbnail:"80,0" }}" alt="{{ article_6.illustration.legend }}" /></a>
 							    {% endif %}
 							 </div>
-								<h3><a href="{{ article_6.get_absolute_url }}">{{ article_6.title }}</a></h3>
+								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_6.category.slug %}{% else %}{{ article_6.get_absolute_url }}{% endif %}">{{ article_6.title }}</a></h3>
                                 {{ article_6.summary|safe }}
 							</div>
-							<p class="readMore"><a href="{{ article_6.get_absolute_url }}">Lire la suite</a></p>
+							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_6.category.slug %}{% else %}{{ article_6.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 						</div>
 						{% endif %}
 
 						{% if article_7 %}
 						<div class="articleSection">
-							<h2><span><a href="{{ article_7.get_absolute_url }}">{{ article_7.category.name }}</a></span></h2>
+							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_7.category.slug %}{% else %}{{ article_7.get_absolute_url }}{% endif %}">{{ article_7.category.name }}</a></span></h2>
 							<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_7.use_default_illustration %}
@@ -273,16 +273,16 @@
 							        <a href="{{ article_7.illustration.image.url }}" title="{{ article_7.illustration.legend }}"><img src="{{ article_7.illustration.image|thumbnail:"80,0" }}" alt="{{ article_7.illustration.legend }}" /></a>
 							    {% endif %}
 							 </div>
-								<h3><a href="{{ article_7.get_absolute_url }}">{{ article_7.title }}</a></h3>
+								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_7.category.slug %}{% else %}{{ article_7.get_absolute_url }}{% endif %}">{{ article_7.title }}</a></h3>
                                 {{ article_7.summary|safe }}
 							</div>
-							<p class="readMore"><a href="{{ article_7.get_absolute_url }}">Lire la suite</a></p>
+							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_7.category.slug %}{% else %}{{ article_7.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 						</div>
 						{% endif %}
 						
 						{% if article_8 %}
 						<div class="articleSection">
-							<h2><span><a href="{{ article_8.get_absolute_url }}">{{ article_8.category.name }}</a></span></h2>
+							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_8.category.slug %}{% else %}{{ article_8.get_absolute_url }}{% endif %}">{{ article_8.category.name }}</a></span></h2>
 							<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_8.use_default_illustration %}
@@ -291,16 +291,16 @@
 							        <a href="{{ article_8.illustration.image.url }}" title="{{ article_8.illustration.legend }}"><img src="{{ article_8.illustration.image|thumbnail:"80,0" }}" alt="{{ article_8.illustration.legend }}" /></a>
 							    {% endif %}
 							 </div>
-								<h3><a href="{{ article_8.get_absolute_url }}">{{ article_8.title }}</a></h3>
+								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_8.category.slug %}{% else %}{{ article_8.get_absolute_url }}{% endif %}">{{ article_8.title }}</a></h3>
                                 {{ article_8.summary|safe }}
 							</div>
-							<p class="readMore"><a href="{{ article_8.get_absolute_url }}">Lire la suite</a></p>
+							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_8.category.slug %}{% else %}{{ article_8.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 						</div>
 						{% endif %}
 						
 						{% if article_9 %}
 						<div class="articleSection">
-							<h2><span><a href="{{ article_9.get_absolute_url }}">{{ article_9.category.name }}</a></span></h2>
+							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_9.category.slug %}{% else %}{{ article_9.get_absolute_url }}{% endif %}">{{ article_9.category.name }}</a></span></h2>
 							<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_9.use_default_illustration %}
@@ -309,10 +309,10 @@
 							        <a href="{{ article_9.illustration.image.url }}" title="{{ article_9.illustration.legend }}"><img src="{{ article_9.illustration.image|thumbnail:"80,0" }}" alt="{{ article_9.illustration.legend }}" /></a>
 							    {% endif %}
 							 </div>
-								<h3><a href="{{ article_9.get_absolute_url }}">{{ article_9.title }}</a></h3>
+								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_9.category.slug %}{% else %}{{ article_9.get_absolute_url }}{% endif %}">{{ article_9.title }}</a></h3>
                                 {{ article_9.summary|safe }}
 							</div>
-							<p class="readMore"><a href="{{ article_9.get_absolute_url }}">Lire la suite</a></p>
+							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_9.category.slug %}{% else %}{{ article_9.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 						</div>
 						{% endif %}
 						
@@ -330,12 +330,12 @@
 
                         {% if region_note %}
                         <div class="articleSection regionSection">
-							<h2><span><a href="{{ region_note.get_absolute_url }}">Régions</a></span></h2>
+							<h2><span><a href="{% if is_preview %}{% url issuepreview_category_regions issue.secret_key %}{% else %}{{ region_note.get_absolute_url }}{% endif %}">Régions</a></span></h2>
 							    <div class="lead  autoClear">
-							    	<h3><a href="{{ region_note.get_absolute_url }}">{{ region_note.region.name }}</a></h3>
+							    	<h3><a href="{% if is_preview %}{% url issuepreview_category_regions issue.secret_key %}{% else %}{{ region_note.get_absolute_url }}{% endif %}">{{ region_note.region.name }}</a></h3>
                                     {{ region_note.content|safe|truncatewords:60 }}
 							    </div>
-							    <p class="readMore"><a href="{{ region_note.get_absolute_url }}">Lire la suite</a></p>
+							    <p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category_regions issue.secret_key %}{% else %}{{ region_note.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 						</div>
 						{% endif %}
 						
@@ -346,14 +346,14 @@
 								    {% if voyages_article %}
 									<li>
 										<h3>Voyages</h3>
-										<a href="{{ voyages_article.get_absolute_url }}">{{ voyages_article.title }}</a>
+										<a href="{% if is_preview %}{% url issuepreview_category_voyages issue.secret_key %}{% else %}{{ voyages_article.get_absolute_url }}{% endif %}">{{ voyages_article.title }}</a>
 									</li>
 									{% endif %}
 									{% if epicurien_articles %}
 									    {% for article in epicurien_articles %}
 									        <li>
 										        <h3>{{ article.type.name }}</h3>
-										        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+										        <a href="{% if is_preview %}{% url issuepreview_category_epicurien issue.secret_key %}{% else %}{{ article.get_absolute_url }}{% endif %}">{{ article.title }}</a>
 									        </li>
 									    {% endfor %}
 									{% endif %}
@@ -379,8 +379,8 @@
                     
                     {% if article_3 %}
 					<div class="articleSection articleMain">
-						<h2><span><a href="{{ article_3.get_absolute_url }}">{{ article_3.category.name }}</a></span></h2>
-						<h3><a href="{{ article_3.title }}">{{ article_3.title }}</a></h3>
+						<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_3.category.slug %}{% else %}{{ article_3.get_absolute_url }}{% endif %}">{{ article_3.category.name }}</a></span></h2>
+						<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_3.category.slug %}{% else %}{{ article_3.get_absolute_url }}{% endif %}">{{ article_3.title }}</a></h3>
 						<div class="lead autoClear">
 							<div class="illustration">
 							    {% if article_3.use_default_illustration %}
@@ -391,7 +391,7 @@
 							 </div>
                             {{ article_3.summary|safe }}
 						</div>
-						<p class="readMore"><a href="{{ article_3.get_absolute_url }}">Lire la suite</a></p>
+						<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_3.category.slug %}{% else %}{{ article_3.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 					</div>
 					{% endif %}
 					
@@ -412,7 +412,7 @@
 								<div class="articleSection" id="coupdegueule">
 									<h2>Coup de Gueule</h2>
                                     {{ anger_article.summary|safe }}
-									<p class="readMore"><a href="{{ anger_article.get_absolute_url }}">Lire la suite</a></p>
+									<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category_anger issue.secret_key %}{% else %}{{ anger_article.get_absolute_url }}{% endif %}">Lire la suite</a></p>
 								</div>
 								{% endif %}
 								

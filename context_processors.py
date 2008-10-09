@@ -8,9 +8,9 @@ from critica.apps.issues.models import Issue
 
 
 def current_issue(request):
-    """ Returns the current complete issue object. """
-    context_extras = {}
+    """ Returns the current issue object. """
+    context = {}
     current_issue = Issue.published.all()[0:1]
-    context_extras['current_issue'] = current_issue
-    return context_extras
+    context['current_issue'] = current_issue
+    return context
 
