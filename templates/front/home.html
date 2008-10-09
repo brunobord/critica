@@ -441,12 +441,9 @@
 								
                                 <div class="articleSection" id="reportage">
                                     <h2>Critic@ TV</h2>
-                                    <object width="300" height="241" type="application/x-shockwave-flash" data="http://www.youtube.com/v/0tNdNxvmH-4&hl=en&fs=1&rel=0">
-                                        <param name="movie" value="http://www.youtube.com/v/0tNdNxvmH-4&hl=en&fs=1&rel=0" />
-                                        <param value="high" name="quality"/>
-                                        <param value="false" name="menu"/>
-                                        <param name="allowFullScreen" value="true" />
-                                    </object>
+                                    {% if video %}
+                                        {{ video.widget|safe }}
+                                    {% endif %}
                                 </div>
 
                             </div>

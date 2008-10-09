@@ -7,7 +7,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from tagging.fields import TagField
-from critica.apps.videos import choices
+from critica.apps.videos.utils import resize_video
 #from critica.apps.videos.managers import PublishedVideoManager
 
 
@@ -35,10 +35,9 @@ class Video(models.Model):
             * The video name
             * Required
             
-        link
-            * CharField
-            * 255 characters max.
-            * The video link
+        widget
+            * TextField
+            * The video widget
             * Required
 
         tags
@@ -93,7 +92,7 @@ class Video(models.Model):
     submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
     issues = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues to associate to this video.'))
     name = models.CharField(_('name'), max_length=255, help_text=_('Please, enter a name for this video.'), unique=True)
-    link = models.URLField(_('link'), max_length=255, help_text=_('Please, enter the video URL.'))
+    widget = models.TextField(_('widget'), help_text=_('Please, copy-paste the widget here. Do not modify it.'))
     tags = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
@@ -117,4 +116,16 @@ class Video(models.Model):
         
         """
         return u'%s' % self.name
+        
+    def save(self):
+        """ 
+        Object pre-saving operations:
+        
+        * Resize video
+        * Save video
+        
+        """
+        new_widget = resize_video(self.widget)
+        self.widget = new_widget
+        super(Video, self).save()
 

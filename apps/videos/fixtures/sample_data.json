@@ -3,13 +3,13 @@
         "pk": 1, 
         "model": "videos.video", 
         "fields": {
+            "widget": "<object width=\"300\" height=\"241\"><param name=\"movie\" value=\"http://www.youtube.com/v/hSyy3hEpmS8&hl=fr&fs=1&rel=0\"></param><param name=\"allowFullScreen\" value=\"true\"></param><embed src=\"http://www.youtube.com/v/hSyy3hEpmS8&hl=fr&fs=1&rel=0\" type=\"application/x-shockwave-flash\" allowfullscreen=\"true\" width=\"300\" height=\"241\"></embed></object>", 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
-            "name": "DjangoCon 2008 Keynote: Mark Ramm", 
-            "modification_date": "2008-10-06 16:08:12", 
-            "tags": "django, djangocon", 
-            "creation_date": "2008-10-06 16:07:55", 
-            "link": "http://fr.youtube.com/watch?v=fipFKyW2FA4", 
+            "name": "Inspector Gadget theme song, solo acoustic guitar", 
+            "modification_date": "2008-10-09 15:04:19", 
+            "tags": "guitar", 
+            "creation_date": "2008-10-09 15:00:46", 
             "submitter": 1, 
             "issues": [
                 1
@@ -20,34 +20,16 @@
         "pk": 2, 
         "model": "videos.video", 
         "fields": {
+            "widget": "<div><object width=\"300\" height=\"241\"><param name=\"movie\" value=\"http://www.dailymotion.com/swf/k1UM1G7CzEFBKjcEPI&related=1\"></param><param name=\"allowFullScreen\" value=\"true\"></param><param name=\"allowScriptAccess\" value=\"always\"></param><embed src=\"http://www.dailymotion.com/swf/k1UM1G7CzEFBKjcEPI&related=1\" type=\"application/x-shockwave-flash\" width=\"300\" height=\"241\" allowFullScreen=\"true\" allowScriptAccess=\"always\"></embed></object><br /><b><a href=\"http://www.dailymotion.com/video/x1snuu_andy-mckee-africa_music\">Andy McKee - Africa</a></b><br /><i>envoy\u00e9 par <a href=\"http://www.dailymotion.com/Frencheese\">Frencheese</a></i></div>", 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
-            "name": "DjangoCon 2008 Keynote: Cal Henderson", 
-            "modification_date": "2008-10-06 16:09:25", 
-            "tags": "django, djangocon", 
-            "creation_date": "2008-10-06 16:09:25", 
-            "link": "http://fr.youtube.com/watch?v=i6Fr65PFqfk", 
+            "name": "Andy McKee - Africa", 
+            "modification_date": "2008-10-09 15:06:59", 
+            "tags": "guitar", 
+            "creation_date": "2008-10-09 15:06:59", 
             "submitter": 1, 
             "issues": [
                 2
-            ]
-        }
-    }, 
-    {
-        "pk": 3, 
-        "model": "videos.video", 
-        "fields": {
-            "is_ready_to_publish": 1, 
-            "is_reserved": 0, 
-            "name": "DjangoCon 2008 Keynote: Guido van Rossum", 
-            "modification_date": "2008-10-06 16:10:42", 
-            "tags": "django, djangocon", 
-            "creation_date": "2008-10-06 16:10:30", 
-            "link": "http://fr.youtube.com/watch?v=CmyFcChTc4M", 
-            "submitter": 1, 
-            "issues": [
-                3, 
-                4
             ]
         }
     }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-01 11:36+0200\n"
+"POT-Creation-Date: 2008-10-09 15:13+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,78 +17,79 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: choices.py:13
-msgid "Published"
-msgstr "Publiée"
+#: admin.py:19
+msgid "Video"
+msgstr "vidéo"
 
-#: choices.py:14
-msgid "Ready to be published"
-msgstr "Prête à être publiée"
+#: admin.py:20
+msgid "Filling"
+msgstr "Classement"
 
-#: choices.py:15
-msgid "New"
-msgstr "Nouvelle"
+#: admin.py:21
+msgid "Publication"
+msgstr "Publication"
 
-#: choices.py:16
-msgid "Reserved"
-msgstr "Mise au marbre"
-
-#: models.py:88
+#: admin.py:67 models.py:92
 msgid "submitter"
 msgstr "auteur"
 
-#: models.py:89
+#: admin.py:76 models.py:93
+msgid "issues"
+msgstr "éditions"
+
+#: models.py:93
+msgid "Please, select one or several issues to associate to this video."
+msgstr "Sélectionnez une ou plusieurs éditions."
+
+#: models.py:94
 msgid "name"
 msgstr "nom"
 
-#: models.py:89
+#: models.py:94
 msgid "Please, enter a name for this video."
 msgstr "Entrez un nom pour cette vidéo."
 
-#: models.py:90
-msgid "slug"
-msgstr "slug"
+#: models.py:95
+msgid "widget"
+msgstr "widget"
 
-#: models.py:91
-msgid "link"
-msgstr "lien"
+#: models.py:95
+msgid "Please, copy-paste the widget here. Do not modify it."
+msgstr "Copiez-collez le widget ici. Ne pas modifier."
 
-#: models.py:91
-msgid "Please, enter the video URL."
-msgstr "Entrez l'adresse de la vidéo."
-
-#: models.py:92
+#: models.py:96
 msgid "Please, enter tags separated by commas or spaces."
 msgstr "Entrez des tags séparés par des virgules ou des espaces."
 
-#: models.py:93
+#: models.py:97
 msgid "creation date"
 msgstr "date de création"
 
-#: models.py:94
+#: models.py:98
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:95
+#: models.py:99
 msgid "ready to publish"
 msgstr "Prête à être publiée"
 
-#: models.py:95
+#: models.py:99
 msgid "Is ready to be published?"
 msgstr "Est-elle prête à être publiée ?"
 
-#: models.py:96
+#: models.py:100
 msgid "reserved"
 msgstr "Mise au marbre"
 
-#: models.py:96
+#: models.py:100
 msgid "Is reserved?"
-msgstr "Mise au marbre"
+msgstr "Doit-elle être mise au marbre ?"
 
-#: models.py:106
+#: models.py:110
 msgid "video"
 msgstr "vidéo"
 
-#: models.py:107
+#: models.py:111
 msgid "videos"
 msgstr "vidéos"
+

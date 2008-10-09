@@ -16,7 +16,7 @@ class VideoAdmin(admin.ModelAdmin):
     
     """
     fieldsets = (
-        (_('Video'), {'fields': ('name', 'link')}),
+        (_('Video'), {'fields': ('name', 'widget')}),
         (_('Filling'), {'fields': ('issues', 'tags')}),
         (_('Publication'), {'fields': ('is_reserved', 'is_ready_to_publish')}),
     )
