@@ -179,25 +179,31 @@
     </div>
     {% endif %}
 
-    {% if perms.users.is_administrator %}
+    {% if perms.users.is_administrator or perms.users.is_editor %}
     <div class="module">
         <table summary="Utilisateurs">
         <caption>Utilisateurs</caption>
+            {% if perms.users.is_administrator %}
             <tr>
                 <th scope="row"><a href="auth/group/">Groupes</a></th>
                 <td><a href="auth/group/add/" class="addlink">Ajouter</a></td>
                 <td><a href="auth/group/" class="changelink">Modifier</a></td>
             </tr>
+            {% endif %}
+            {% if perms.users.is_administrator or perms.users.is_editor %}
             <tr>
                 <th scope="row"><a href="auth/user/">Utilisateurs</a></th>
                 <td><a href="auth/user/add/" class="addlink">Ajouter</a></td>
                 <td><a href="auth/user/" class="changelink">Modifier</a></td>
             </tr>
+            {% endif %}
+            {% if perms.users.is_administrator %}
             <tr>
                 <th scope="row"><a href="users/userprofile/">Profils utilisateurs</a></th>
                 <td><a href="users/userprofile/add/" class="addlink">Ajouter</a></td>
                 <td><a href="users/userprofile/" class="changelink">Modifier</a></td>
             </tr>
+            {% endif %}
             {% if perms.users.is_administrator or perms.users.is_editor %}
             <tr>
                 <th scope="row"><a href="users/usernickname/">Pseudonymes utilisateurs</a></th>
