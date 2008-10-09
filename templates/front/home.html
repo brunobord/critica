@@ -160,363 +160,228 @@
 </div>
 <!-- // LAUNCH-UNIT -->
 
-                <!-- MAIN CONTENT -->
-                <div id="mainContent" class="leftWrap">
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="leftWrap">
 
-                    {% if article_1 %}
-				    <h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_1.category.slug %}{% else %}{{ article_1.get_absolute_url }}{% endif %}">{{ article_1.category.name }}</a></span></h2>
-					<div class="articleSection articleMain">
-						<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_1.category.slug %}{% else %}{{ article_1.get_absolute_url }}{% endif %}">{{ article_1.title }}</a></h3>
-						<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_1.use_default_illustration %}
-							        <a href="{{ article_1.category.image.url }}" title="{{ article_1.category.image_legend }}"><img src="{{ article_1.category.image|thumbnail:"80,0" }}" alt="{{ article_1.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_1.illustration.image.url }}" title="{{ article_1.illustration.legend }}"><img src="{{ article_1.illustration.image|thumbnail:"80,0" }}" alt="{{ article_1.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-                            {{ article_1.summary|safe }}
-						</div>
-						<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_1.category.slug %}{% else %}{{ article_1.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-					</div>
-					{% endif %}
-					
-					{% if article_2 %}
-					<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_2.category.slug %}{% else %}{{ article_2.get_absolute_url }}{% endif %}">{{ article_2.category.name }}</a></span></h2>
-					<div class="articleSection articleMain">
-						<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_2.category.slug %}{% else %}{{ article_2.get_absolute_url }}{% endif %}">{{ article_2.title }}</a></h3>
-						<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_2.use_default_illustration %}
-							        <a href="{{ article_2.category.image.url }}" title="{{ article_2.category.image_legend }}"><img src="{{ article_2.category.image|thumbnail:"80,0" }}" alt="{{ article_2.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_2.illustration.image.url }}" title="{{ article_2.illustration.legend }}"><img src="{{ article_2.illustration.image|thumbnail:"80,0" }}" alt="{{ article_2.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-                            {{ article_2.summary|safe }}
-						</div>
-						<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_2.category.slug %}{% else %}{{ article_2.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-					</div>
-					{% endif %}
-					
-                    <!-- ADD -->
-                    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-                        <p><a href="#">Publicité</a></p>
-                    </div>
-                    <!-- // ADD -->
-                    
-                    <!-- ARTICLE LIST -->
-                    <div class="articleList autoClear">
-						
-						{% if article_4 %}
-						<div class="articleSection">
-							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_4.category.slug %}{% else %}{{ article_4.get_absolute_url }}{% endif %}">{{ article_4.category.name }}</a></span></h2>
-							<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_4.use_default_illustration %}
-							        <a href="{{ article_4.category.image.url }}" title="{{ article_4.category.image_legend }}"><img src="{{ article_4.category.image|thumbnail:"80,0" }}" alt="{{ article_4.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_4.illustration.image.url }}" title="{{ article_4.illustration.legend }}"><img src="{{ article_4.illustration.image|thumbnail:"80,0" }}" alt="{{ article_4.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_4.category.slug %}{% else %}{{ article_4.get_absolute_url }}{% endif %}">{{ article_4.title }}</a></h3>
-                                {{ article_4.summary|safe }}
-							</div>
-							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_4.category.slug %}{% else %}{{ article_4.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-						</div>
-						{% endif %}
+    {% if article_1 %}
+        {% with article_1 as article %}
+            {% include "front/includes/home_article_main.html" %}
+        {% endwith %}
+    {% endif %}
+	
+	{% if article_2 %}
+        {% with article_2 as article %}
+            {% include "front/includes/home_article_main.html" %}
+        {% endwith %}
+	{% endif %}
+	
+    <!-- ADD -->
+    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+        <p><a href="#">Publicité</a></p>
+    </div>
+    <!-- // ADD -->
+    
+    <!-- ARTICLE LIST -->
+    <div class="articleList autoClear">
+		
+		{% if article_4 %}
+            {% with article_4 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% endif %}
 
-						{% if article_5 %}
-						<div class="articleSection">
-							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_5.category.slug %}{% else %}{{ article_5.get_absolute_url }}{% endif %}">{{ article_5.category.name }}</a></span></h2>
-							<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_5.use_default_illustration %}
-							        <a href="{{ article_5.category.image.url }}" title="{{ article_5.category.image_legend }}"><img src="{{ article_5.category.image|thumbnail:"80,0" }}" alt="{{ article_5.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_5.illustration.image.url }}" title="{{ article_5.illustration.legend }}"><img src="{{ article_5.illustration.image|thumbnail:"80,0" }}" alt="{{ article_5.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_5.category.slug %}{% else %}{{ article_5.get_absolute_url }}{% endif %}">{{ article_5.title }}</a></h3>
-                                {{ article_5.summary|safe }}
-							</div>
-							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_5.category.slug %}{% else %}{{ article_5.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-						</div>
-						{% endif %}
+		{% if article_5 %}
+            {% with article_5 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% endif %}
 
-						{% if article_6 %}
-						<div class="articleSection">
-							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_6.category.slug %}{% else %}{{ article_6.get_absolute_url }}{% endif %}">{{ article_6.category.name }}</a></span></h2>
-							<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_6.use_default_illustration %}
-							        <a href="{{ article_6.category.image.url }}" title="{{ article_6.category.image_legend }}"><img src="{{ article_6.category.image|thumbnail:"80,0" }}" alt="{{ article_6.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_6.illustration.image.url }}" title="{{ article_6.illustration.legend }}"><img src="{{ article_6.illustration.image|thumbnail:"80,0" }}" alt="{{ article_6.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_6.category.slug %}{% else %}{{ article_6.get_absolute_url }}{% endif %}">{{ article_6.title }}</a></h3>
-                                {{ article_6.summary|safe }}
-							</div>
-							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_6.category.slug %}{% else %}{{ article_6.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-						</div>
-						{% endif %}
+		{% if article_6 %}
+            {% with article_6 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% endif %}
 
-						{% if article_7 %}
-						<div class="articleSection">
-							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_7.category.slug %}{% else %}{{ article_7.get_absolute_url }}{% endif %}">{{ article_7.category.name }}</a></span></h2>
-							<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_7.use_default_illustration %}
-							        <a href="{{ article_7.category.image.url }}" title="{{ article_7.category.image_legend }}"><img src="{{ article_7.category.image|thumbnail:"80,0" }}" alt="{{ article_7.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_7.illustration.image.url }}" title="{{ article_7.illustration.legend }}"><img src="{{ article_7.illustration.image|thumbnail:"80,0" }}" alt="{{ article_7.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_7.category.slug %}{% else %}{{ article_7.get_absolute_url }}{% endif %}">{{ article_7.title }}</a></h3>
-                                {{ article_7.summary|safe }}
-							</div>
-							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_7.category.slug %}{% else %}{{ article_7.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-						</div>
-						{% endif %}
-						
-						{% if article_8 %}
-						<div class="articleSection">
-							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_8.category.slug %}{% else %}{{ article_8.get_absolute_url }}{% endif %}">{{ article_8.category.name }}</a></span></h2>
-							<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_8.use_default_illustration %}
-							        <a href="{{ article_8.category.image.url }}" title="{{ article_8.category.image_legend }}"><img src="{{ article_8.category.image|thumbnail:"80,0" }}" alt="{{ article_8.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_8.illustration.image.url }}" title="{{ article_8.illustration.legend }}"><img src="{{ article_8.illustration.image|thumbnail:"80,0" }}" alt="{{ article_8.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_8.category.slug %}{% else %}{{ article_8.get_absolute_url }}{% endif %}">{{ article_8.title }}</a></h3>
-                                {{ article_8.summary|safe }}
-							</div>
-							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_8.category.slug %}{% else %}{{ article_8.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-						</div>
-						{% endif %}
-						
-						{% if article_9 %}
-						<div class="articleSection">
-							<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_9.category.slug %}{% else %}{{ article_9.get_absolute_url }}{% endif %}">{{ article_9.category.name }}</a></span></h2>
-							<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_9.use_default_illustration %}
-							        <a href="{{ article_9.category.image.url }}" title="{{ article_9.category.image_legend }}"><img src="{{ article_9.category.image|thumbnail:"80,0" }}" alt="{{ article_9.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_9.illustration.image.url }}" title="{{ article_9.illustration.legend }}"><img src="{{ article_9.illustration.image|thumbnail:"80,0" }}" alt="{{ article_9.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-								<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_9.category.slug %}{% else %}{{ article_9.get_absolute_url }}{% endif %}">{{ article_9.title }}</a></h3>
-                                {{ article_9.summary|safe }}
-							</div>
-							<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_9.category.slug %}{% else %}{{ article_9.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-						</div>
-						{% endif %}
-						
-                    </div>
-                    <!-- // ARTICLE LIST -->
-                    
-                    <!-- ADD -->
-                    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-                        <p><a href="#">Publicité</a></p>
-                    </div>
-                    <!-- // ADD -->
-                    
-                    <!-- ARTICLE LIST -->
-                    <div class="articleList autoClear">
+		{% if article_7 %}
+            {% with article_7 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% endif %}
+		
+		{% if article_8 %}
+            {% with article_8 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% endif %}
+		
+		{% if article_9 %}
+            {% with article_9 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% endif %}
+		
+    </div>
+    <!-- // ARTICLE LIST -->
+    
+    <!-- ADD -->
+    <div class="addSection add468">
+        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
+        <p><a href="#">Publicité</a></p>
+    </div>
+    <!-- // ADD -->
+    
+    <!-- ARTICLE LIST -->
+    <div class="articleList autoClear">
 
-                        {% if region_note %}
-                        <div class="articleSection regionSection">
-							<h2><span><a href="{% if is_preview %}{% url issuepreview_category_regions issue.secret_key %}{% else %}{{ region_note.get_absolute_url }}{% endif %}">Régions</a></span></h2>
-							    <div class="lead  autoClear">
-							    	<h3><a href="{% if is_preview %}{% url issuepreview_category_regions issue.secret_key %}{% else %}{{ region_note.get_absolute_url }}{% endif %}">{{ region_note.region.name }}</a></h3>
-                                    {{ region_note.content|safe|truncatewords:60 }}
-							    </div>
-							    <p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category_regions issue.secret_key %}{% else %}{{ region_note.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-						</div>
-						{% endif %}
-						
-						<div class="articleSection" id="detenteSection">
-							<h2><span>Détente</span></h2>
-							<div class="lead  autoClear">
-								<ul>
-								    {% if voyages_article %}
-									<li>
-										<h3>Voyages</h3>
-										<a href="{% if is_preview %}{% url issuepreview_category_voyages issue.secret_key %}{% else %}{{ voyages_article.get_absolute_url }}{% endif %}">{{ voyages_article.title }}</a>
-									</li>
-									{% endif %}
-									{% if epicurien_articles %}
-									    {% for article in epicurien_articles %}
-									        <li>
-										        <h3>{{ article.type.name }}</h3>
-										        <a href="{% if is_preview %}{% url issuepreview_category_epicurien issue.secret_key %}{% else %}{{ article.get_absolute_url }}{% endif %}">{{ article.title }}</a>
-									        </li>
-									    {% endfor %}
-									{% endif %}
-								</ul>
-							</div>
-							<p class="readMore"><a href="#">Lire la suite</a></p>
-						</div>
-						
-                    </div>
-                    <!-- // ARTICLE LIST -->
-					
-                    <!-- ADD -->
-                    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/alerte_enlevement.jpg" alt="Alerte en lèvement" /></a>
-                        <p><a href="">Alerte enlèvement</a></p>
-                    </div>
-                    <!-- // ADD -->
+        {% if region_note %}
+            {% with region_note as article %}
+                {% include "front/includes/home_region.html" %}
+            {% endwith %}
+		{% endif %}
+		
+        {% include "front/includes/home_detente.html" %}
+		
+    </div>
+    <!-- // ARTICLE LIST -->
+	
+    <!-- ADD -->
+    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/alerte_enlevement.jpg" alt="Alerte en lèvement" /></a>
+        <p><a href="">Alerte enlèvement</a></p>
+    </div>
+    <!-- // ADD -->
+
+</div>
+<!-- // MAIN CONTENT -->
+
+<!-- SUB CONTENT -->
+<div class="rightWrap">
+    
+    {% if article_3 %}
+        {% with article_3 as article %}
+            {% include "front/includes/home_article_main.html" %}
+        {% endwith %}
+	{% endif %}
+	
+    <div id="newsletterSection">
+        <form action="" method="post">
+            <p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
+            <p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
+        </form>
+    </div>
+    
+    <div id="subContent">
+        <!-- LEFT WRAP -->
+        <div class="leftWrap">
+            <!-- ARTICLE LIST -->
+            <div class="articleList">
+
+                {% if anger_article %}
+                    {% with anger_article as article %}
+                        {% include "front/includes/home_anger.html" %}
+				    {% endwith %}
+				{% endif %}
 				
+			</div>
+		    <!-- // ARTICLE LIST -->
+
+            <div class="addSection">
+                <div class="add-300x90 autoClear">
+                    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
+                    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
                 </div>
-                <!-- // MAIN CONTENT -->
+                <p><a href="#">Publicité</a></p>
+            </div>
+			
+            <!-- ARTICLE LIST -->
+            <div class="articleList">
+            
+                {% if illustration %}
+                <div class="articleSection" id="caricature">
+                    <h2>L'illustration du jour</h2>
+                    <div class="illustration"><a href="{{ illustration.image.url }}" title="{{ illustration.legend }}"><img src="{{ illustration.image|thumbnail:"200,0" }}" alt="{{ illustration.legend }}" /></a></div>
+                    <p></p>
+                    <p class="credits">{{ illustration.legend }} - {{ illustration.credits }}</p>
+                </div>
+                {% endif %}
 				
-                <!-- SUB CONTENT -->
-                <div class="rightWrap">
-                    
-                    {% if article_3 %}
-					<div class="articleSection articleMain">
-						<h2><span><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_3.category.slug %}{% else %}{{ article_3.get_absolute_url }}{% endif %}">{{ article_3.category.name }}</a></span></h2>
-						<h3><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_3.category.slug %}{% else %}{{ article_3.get_absolute_url }}{% endif %}">{{ article_3.title }}</a></h3>
-						<div class="lead autoClear">
-							<div class="illustration">
-							    {% if article_3.use_default_illustration %}
-							        <a href="{{ article_3.category.image.url }}" title="{{ article_3.category.image_legend }}"><img src="{{ article_3.category.image|thumbnail:"200,0" }}" alt="{{ article_3.category.image_legend }}" /></a>
-							    {% else %}
-							        <a href="{{ article_3.illustration.image.url }}" title="{{ article_3.illustration.legend }}"><img src="{{ article_3.illustration.image|thumbnail:"200,0" }}" alt="{{ article_3.illustration.legend }}" /></a>
-							    {% endif %}
-							 </div>
-                            {{ article_3.summary|safe }}
-						</div>
-						<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category issue.secret_key,article_3.category.slug %}{% else %}{{ article_3.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-					</div>
-					{% endif %}
-					
-                    <div id="newsletterSection">
-                        <form action="" method="post">
-                            <p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
-                            <p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
-                        </form>
-                    </div>
-                    
-                    <div id="subContent">
-                        <!-- LEFT WRAP -->
-                        <div class="leftWrap">
-                            <!-- ARTICLE LIST -->
-                            <div class="articleList">
-
-                                {% if anger_article %}
-								<div class="articleSection" id="coupdegueule">
-									<h2>Coup de Gueule</h2>
-                                    {{ anger_article.summary|safe }}
-									<p class="readMore"><a href="{% if is_preview %}{% url issuepreview_category_anger issue.secret_key %}{% else %}{{ anger_article.get_absolute_url }}{% endif %}">Lire la suite</a></p>
-								</div>
-								{% endif %}
-								
-							</div>
-						    <!-- // ARTICLE LIST -->
-
-                            <div class="addSection">
-                                <div class="add-300x90 autoClear">
-                                    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
-                                    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
-                                </div>
-                                <p><a href="#">Publicité</a></p>
-                            </div>
-							
-                            <!-- ARTICLE LIST -->
-                            <div class="articleList">
-                            
-                                {% if illustration %}
-                                <div class="articleSection" id="caricature">
-                                    <h2>L'illustration du jour</h2>
-                                    <div class="illustration"><a href="{{ illustration.image.url }}" title="{{ illustration.legend }}"><img src="{{ illustration.image|thumbnail:"200,0" }}" alt="{{ illustration.legend }}" /></a></div>
-                                    <p></p>
-                                    <p class="credits">{{ illustration.legend }} - {{ illustration.credits }}</p>
-                                </div>
-                                {% endif %}
-								
-                                <div class="articleSection" id="reportage">
-                                    <h2>Critic@ TV</h2>
-                                    {% if video %}
-                                        {{ video.widget|safe }}
-                                    {% endif %}
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- // LEFT WRAP -->
-
-                        <!-- RIGHT WRAP -->
-                        <div class="rightWrap">
-                            <div id="surveySection">
-                                <h2><img src="{{ MEDIA_URL }}critica/img/pouroucontre_top.png" alt="Pour ou contre ?" /></h2>
-                                <form action="" method="post">
-                                    <p>SUPPRESSION DU SAMEDI MATIN POUR LES ECOLIERS&nbsp;:</p>
-
-                                    <ul class="autoClear">
-                                        <li>
-                                        	<input name="reponse_pourcontre" type="radio" value="Bande de feignasses, les gosses !" />
-                                        	<label>Bande de feignasses, les gosses !</label>
-                                        </li>
-                                        <li>
-                                        	<input name="reponse_pourcontre" type="radio" value="Et un week-end, un, pour les profs et instits !" />
-                                        	<label>Et un week-end, un, pour les profs et instits !</label>
-
-                                        </li>
-                                        <li>
-                                        	<input name="reponse_pourcontre" type="radio" value="Les journées restent quand même trop longues !" />
-                                        	<label>Les journées restent quand même trop longues !</label>
-                                        </li>
-                                        <li>
-                                        	<input name="reponse_pourcontre" type="radio" value="Et pourquoi pas un jour de RTT aussi, non ?" />
-                                        	<label>Et pourquoi pas un jour de RTT aussi, non ?</label>
-
-                                        </li>
-                                        <li>
-                                        	<input name="reponse_pourcontre" type="radio" value="M'en fous, j'a pas de gosse(s) !!" />
-                                        	<label>M'en fous, j'a pas de gosse(s) !!</label>
-                                        </li>
-									</ul>
-                                    <p class="submit">
-                                        <input src="{{ MEDIA_URL }}critica/img/pouroucontre_valider.jpg" alt="Valider" type="image"/>
-                                    </p>
-                                </form>
-                            </div>
-                            
-                            <div id="meteo">
-                                <p><a href="#"><img src="{{ MEDIA_URL }}critica/img/meteo.jpg" alt="M&eacute;t&eacute;o" /></a></p>
-                            </div>
-                            
-                            <div class="addSection">
-                                <div class="add130">
-                                    <object data="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
-										<param name="movie" value="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf"/>
-										<param name="quality" value="high"/>
-										<param name="menu" value="false"/>
-									</object>
-								</div>
-							    <p><a href="">Publicité</a></p>
-							</div>
-						</div>
-
-						<!-- // RIGHT WRAP -->
-						
-                        <!-- TAG CLOUD -->
-                		<div id="tagcloudSection" style="text-align: center;">
-                			<h2>Nuage de tags</h2>
-			                {% load tagging_tags %}
-			                {% tag_cloud_for_model notes.note as tags with steps=8 distribution=log min_count=2 %}
-                			{% for tag in tags %}
-                			    <span style="font-size: 1.{{ tag.font_size }}em; padding: 0.2em; line-height: 1.6em;"><a href="" title="Articles taggés {{ tag.name }}">{{ tag.name }}</a></span>
-                			{% endfor %}
-                		</div>
-                        <!-- TAG CLOUD -->
-                        
-                    </div>
+                <div class="articleSection" id="reportage">
+                    <h2>Critic@ TV</h2>
+                    {% if video %}
+                        {{ video.widget|safe }}
+                    {% endif %}
                 </div>
-                <!-- // SUB CONTENT -->
+
+            </div>
+        </div>
+        <!-- // LEFT WRAP -->
+
+        <!-- RIGHT WRAP -->
+        <div class="rightWrap">
+            <div id="surveySection">
+                <h2><img src="{{ MEDIA_URL }}critica/img/pouroucontre_top.png" alt="Pour ou contre ?" /></h2>
+                <form action="" method="post">
+                    <p>SUPPRESSION DU SAMEDI MATIN POUR LES ECOLIERS&nbsp;:</p>
+
+                    <ul class="autoClear">
+                        <li>
+                        	<input name="reponse_pourcontre" type="radio" value="Bande de feignasses, les gosses !" />
+                        	<label>Bande de feignasses, les gosses !</label>
+                        </li>
+                        <li>
+                        	<input name="reponse_pourcontre" type="radio" value="Et un week-end, un, pour les profs et instits !" />
+                        	<label>Et un week-end, un, pour les profs et instits !</label>
+
+                        </li>
+                        <li>
+                        	<input name="reponse_pourcontre" type="radio" value="Les journées restent quand même trop longues !" />
+                        	<label>Les journées restent quand même trop longues !</label>
+                        </li>
+                        <li>
+                        	<input name="reponse_pourcontre" type="radio" value="Et pourquoi pas un jour de RTT aussi, non ?" />
+                        	<label>Et pourquoi pas un jour de RTT aussi, non ?</label>
+
+                        </li>
+                        <li>
+                        	<input name="reponse_pourcontre" type="radio" value="M'en fous, j'a pas de gosse(s) !!" />
+                        	<label>M'en fous, j'a pas de gosse(s) !!</label>
+                        </li>
+					</ul>
+                    <p class="submit">
+                        <input src="{{ MEDIA_URL }}critica/img/pouroucontre_valider.jpg" alt="Valider" type="image"/>
+                    </p>
+                </form>
+            </div>
+            
+            <div id="meteo">
+                <p><a href="#"><img src="{{ MEDIA_URL }}critica/img/meteo.jpg" alt="M&eacute;t&eacute;o" /></a></p>
+            </div>
+            
+            <div class="addSection">
+                <div class="add130">
+                    <object data="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
+						<param name="movie" value="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf"/>
+						<param name="quality" value="high"/>
+						<param name="menu" value="false"/>
+					</object>
+				</div>
+			    <p><a href="">Publicité</a></p>
+			</div>
+		</div>
+
+		<!-- // RIGHT WRAP -->
+		
+        <!-- TAG CLOUD -->
+		<div id="tagcloudSection" style="text-align: center;">
+			<h2>Nuage de tags</h2>
+            {% load tagging_tags %}
+            {% tag_cloud_for_model notes.note as tags with steps=8 distribution=log min_count=2 %}
+			{% for tag in tags %}
+			    <span style="font-size: 1.{{ tag.font_size }}em; padding: 0.2em; line-height: 1.6em;"><a href="" title="Articles taggés {{ tag.name }}">{{ tag.name }}</a></span>
+			{% endfor %}
+		</div>
+        <!-- TAG CLOUD -->
+        
+    </div>
+</div>
+<!-- // SUB CONTENT -->
 {% endblock %}

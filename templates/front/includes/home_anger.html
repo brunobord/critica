@@ -1,0 +1,12 @@
+<div class="articleSection" id="coupdegueule">
+    <h2>Coup de Gueule</h2>
+    {{ article.summary|safe }} 
+    {% if is_preview %}
+	    <p class="readMore"><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">Lire la suite</a></p>
+	{% endif %}
+	{% if is_archive %}
+	    <p class="readMore"><a href="{% url issuearchive_category issue.number,article.category.slug %}">Lire la suite</a></p>
+	{% else %}
+	    <p class="readMore"><a href="{{ article.get_absolute_url }}">Lire la suite</a></p>
+    {% endif %}   
+</div>

@@ -21,6 +21,18 @@ urlpatterns = patterns('',
     (r'^django-admin/(.*)', admin.site.root),
 )
 
+# Archives
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^archives/(?P<issue_number>\d+)/coup-de-gueule/$', 'critica.apps.front.views.issuearchive_anger', name='issuearchive_category_anger'),
+    url(r'^archives/(?P<issue_number>\d+)/epicurien/$', 'critica.apps.front.views.issuearchive_epicurien', name='issuearchive_category_epicurien'),
+    url(r'^archives/(?P<issue_number>\d+)/voyages/$', 'critica.apps.front.views.issuearchive_voyages', name='issuearchive_category_voyages'),
+    url(r'^archives/(?P<issue_number>\d+)/regions/$', 'critica.apps.front.views.issuearchive_regions', name='issuearchive_category_regions'),
+    url(r'^archives/(?P<issue_number>\d+)/(?P<category_slug>[-\w]+)/$', 'critica.apps.front.views.issuearchive_category', name='issuearchive_category'),
+    url(r'^archives/(?P<issue_number>\d+)/$', 'critica.apps.front.views.issuearchive_home', name='issuearchive_home'),
+    url(r'^archives/$', 'critica.apps.front.views.archives', name='archives'),
+)
+
 # Issue preview
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',

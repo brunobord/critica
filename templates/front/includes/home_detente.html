@@ -1,0 +1,36 @@
+<div class="articleSection" id="detenteSection">
+    <h2><span>Détente</span></h2>
+    <div class="lead  autoClear">
+        <ul>
+        {% if voyages_article %}
+			<li>
+			    <h3>Voyages</h3>
+                {% if is_preview %}
+                    <a href="{% url issuepreview_category issue.secret_key,voyages_article.category.slug %}">{{ voyages_article.category.name }}</a>
+                {% endif %}
+                {% if is_archive %}
+                    <a href="{% url issuearchive_category issue.number,voyages_article.category.slug %}">{{ voyages_article.category.name }}</a></span></h2>
+                {% else %}
+                    <a href="{{ voyages_article.get_absolute_url }}">{{ voyages_article.category.name }}</a>
+                {% endif %}
+            </li>
+		{% endif %}
+		{% if epicurien_articles %}
+		    {% for article in epicurien_articles %}
+		        <li>
+		            <h3>{{ article.type.name }}</h3>
+                    {% if is_preview %}
+                        <a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a>
+                    {% endif %}
+                    {% if is_archive %}
+                        <a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.title }}</a></span></h2>
+                    {% else %}
+                        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                    {% endif %}
+				</li>
+			{% endfor %}
+		{% endif %}
+	    </ul>
+	</div>
+	<p class="readMore"><a href="#">Lire la suite</a></p>
+</div>

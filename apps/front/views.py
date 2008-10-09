@@ -26,20 +26,48 @@ from critica.apps.videos.models import Video
 from critica.apps.utils import urlbase64
 
 
-# Home and categories
+# Issue getters
 # ------------------------------------------------------------------------------
-def _get_current_issue():
+def _get_current_issue(issue_number=None):
     """
-    Gets the current issue.
+    Gets the current issue (object).
+    
+    If parameter ``issue_number`` is defined, returns the issue object or 404
+    if it does not exist. If parameter ``issue_number`` is not defined, returns
+    the latest published issue object or 404 if there's no issue yet. 
     
     """
-    issues = Issue.objects.filter(is_published=True)[:1]
-    issue = Issue.objects.get(id=1)
+    if issue_number is not None:
+        try:
+            issue = Issue.objects.get(number=issue_number)
+        except ObjectDoesNotExist:
+            raise Http404
+    else:
+        try:
+            # Uncomment this line and comment the next one when the site will be 
+            # ready to publish. We do this to have some content by default.
+            #
+            #issue = Issue.objects.filter(is_published=True)[0]
+            issue = Issue.objects.get(id=1)
+        except ObjectDoesNotExist:
+            raise Http404
     return issue
 
 
 
-def home(request, issue=None, is_preview=False):
+def _get_encoded_issue(issue_key):
+    """
+    Gets issue number from issue key and returns ``_get_current_issue()``.
+    
+    """
+    issue_number = int(urlbase64.uri_b64decode(str(issue_key)))
+    return _get_current_issue(issue_number=issue_number)
+
+
+
+# Home and categories
+# ------------------------------------------------------------------------------
+def home(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays the homepage.
     
@@ -59,6 +87,12 @@ def home(request, issue=None, is_preview=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+        
+    # Is an archive
+    if is_archive:
+        context['is_archive'] = True
+    else:
+        context['is_archive'] = False
 
     # Generic articles
     category_positions = IssueCategoryPosition.objects.filter(issue=issue)
@@ -133,7 +167,7 @@ def home(request, issue=None, is_preview=False):
 
 
 
-def category(request, category_slug, issue=None, is_preview=False):
+def category(request, category_slug, issue=None, is_preview=False, is_archive=False):
     """
     Displays the given category page.
     
@@ -151,6 +185,12 @@ def category(request, category_slug, issue=None, is_preview=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+        
+    # Is an archive
+    if is_archive:
+        context['is_archive'] = True
+    else:
+        context['is_archive'] = False
     
     category = get_object_or_404(Category, slug=category_slug)
     context['category'] = category
@@ -181,7 +221,7 @@ def category(request, category_slug, issue=None, is_preview=False):
 
 
 
-def regions(request, issue=None, is_preview=False):
+def regions(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Regions" category page.
     
@@ -199,6 +239,12 @@ def regions(request, issue=None, is_preview=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+        
+    # Is an archive
+    if is_archive:
+        context['is_archive'] = True
+    else:
+        context['is_archive'] = False
     
     # Featured region
     try:
@@ -233,7 +279,7 @@ def regions(request, issue=None, is_preview=False):
 
 
 
-def voyages(request, issue=None, is_preview=False):
+def voyages(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Voyages" category page.
     
@@ -251,6 +297,12 @@ def voyages(request, issue=None, is_preview=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+        
+    # Is an archive
+    if is_archive:
+        context['is_archive'] = True
+    else:
+        context['is_archive'] = False
     
     try:
         context['article'] = VoyagesArticle.objects.get(
@@ -274,7 +326,7 @@ def voyages(request, issue=None, is_preview=False):
 
 
 
-def epicurien(request, issue=None, is_preview=False):
+def epicurien(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Epicurien" category page.
     
@@ -292,6 +344,12 @@ def epicurien(request, issue=None, is_preview=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+        
+    # Is an archive
+    if is_archive:
+        context['is_archive'] = True
+    else:
+        context['is_archive'] = False
     
     # Types
     type_cotefumeurs = EpicurienArticleType.objects.get(slug='cote-fumeurs')
@@ -359,7 +417,7 @@ def epicurien(request, issue=None, is_preview=False):
 
 
 
-def anger(request, issue=None, is_preview=False):
+def anger(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Anger" (Coup de Gueule) category page.
     
@@ -377,6 +435,12 @@ def anger(request, issue=None, is_preview=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+        
+    # Is an archive
+    if is_archive:
+        context['is_archive'] = True
+    else:
+        context['is_archive'] = False
         
     try:
         context['article'] = AngerArticle.objects.get(
@@ -400,24 +464,98 @@ def anger(request, issue=None, is_preview=False):
 
 
 
+# Issue archive
+# ------------------------------------------------------------------------------
+def archives(request):
+    """
+    Displays archive list.
+    
+    """
+    issue = _get_current_issue()
+    context = {}   
+    
+    context['issue'] = issue
+    
+    try:
+        context['issues'] = Issue.objects.filter(is_published=True).order_by('-publication_date')
+    except ObjectDoesNotExist:
+        context['issues'] = False
+    
+    return render_to_response(
+        'front/archives.html',
+        context,
+        context_instance=RequestContext(request))
+
+
+
+def issuearchive_home(request, issue_number):
+    """
+    Displays home archive of a given issue.
+    
+    """
+    issue = _get_current_issue(issue_number=issue_number)
+    return home(request, issue=issue, is_archive=True)
+
+
+
+def issuearchive_category(request, issue_number, category_slug):
+    """
+    Displays category archive of a given issue.
+    
+    """
+    issue = _get_current_issue(issue_number=issue_number)
+    return category(request, issue=issue, is_archive=True)
+
+
+
+def issuearchive_regions(request, issue_number):
+    """
+    Displays "Regions" category of a given issue.
+    
+    """
+    issue = _get_current_issue(issue_number=issue_number)
+    return regions(request, issue=issue, is_archive=True)
+
+
+
+def issuearchive_voyages(request, issue_number):
+    """
+    Displays "Voyages" category of a given issue.
+    
+    """
+    issue = _get_current_issue(issue_number=issue_number)
+    return voyages(request, issue=issue, is_archive=True)
+
+
+
+def issuearchive_epicurien(request, issue_number):
+    """
+    Displays "Epicurien" category of a given issue.
+    
+    """
+    issue = _get_current_issue(issue_number=issue_number)
+    return epicurien(request, issue=issue, is_archive=True)
+
+
+
+def issuearchive_anger(request, issue_number):
+    """
+    Displays "Anger" category of a given issue.
+    
+    """
+    issue = _get_current_issue(issue_number=issue_number)
+    return anger(request, issue=issue, is_archive=True)
+
+
+
 # Issue preview
 # ------------------------------------------------------------------------------
-def _get_decoded_issue(issue_key):
-    try:
-        issue_number = int(urlbase64.uri_b64decode(str(issue_key)))
-        issue = Issue.objects.get(number=issue_number)
-    except:
-        raise Http404
-    return issue
-
-
-
 def issuepreview_home(request, issue_key):
     """
     Displays home preview of a given issue.
     
     """
-    issue = _get_decoded_issue(issue_key)
+    issue = _get_encoded_issue(issue_key)
     return home(request, issue=issue, is_preview=True)
 
 
@@ -427,7 +565,7 @@ def issuepreview_category(request, issue_key, category_slug):
     Displays category preview of a given issue.
     
     """
-    issue = _get_decoded_issue(issue_key)
+    issue = _get_encoded_issue(issue_key)
     return category(request, category_slug=category_slug, issue=issue, is_preview=True)
 
 
@@ -437,7 +575,7 @@ def issuepreview_regions(request, issue_key):
     Displays "Regions" category of a given issue.
     
     """
-    issue = _get_decoded_issue(issue_key)
+    issue = _get_encoded_issue(issue_key)
     return regions(request, issue=issue, is_preview=True)
     
     
@@ -447,7 +585,7 @@ def issuepreview_voyages(request, issue_key):
     Displays "Voyages" category of a given issue.
     
     """
-    issue = _get_decoded_issue(issue_key)
+    issue = _get_encoded_issue(issue_key)
     return voyages(request, issue=issue, is_preview=True)
     
     
@@ -457,7 +595,7 @@ def issuepreview_epicurien(request, issue_key):
     Displays "Epicurien" category of a given issue.
     
     """
-    issue = _get_decoded_issue(issue_key)
+    issue = _get_encoded_issue(issue_key)
     return epicurien(request, issue=issue, is_preview=True)
     
     
@@ -467,7 +605,7 @@ def issuepreview_anger(request, issue_key):
     Displays "Anger" category of a given issue.
     
     """
-    issue = _get_decoded_issue(issue_key)
+    issue = _get_encoded_issue(issue_key)
     return anger(request, issue=issue, is_preview=True)
 
 
