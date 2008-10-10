@@ -1238,5 +1238,17 @@
             "name": "Publicitaires", 
             "permissions": []
         }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.group", 
+        "fields": {
+            "name": "Vid\u00e9o", 
+            "permissions": [
+                40, 
+                41, 
+                42
+            ]
+        }
     }
 ]
