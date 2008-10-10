@@ -647,4 +647,26 @@ def tags_tag(request, tag):
         context_instance=RequestContext(request))
 
 
+# RSS
+# ------------------------------------------------------------------------------
+def rss_index(request):
+    """
+    Displays RSS index page.
+    
+    """
+    issue = _get_current_issue()
+    context = {}
+    
+    context['issue'] = issue
+    
+    try:
+        context['categories'] = Category.objects.all()
+    except ObjectDoesNotExist:
+        context['categories'] = False
+        
+    return render_to_response(
+        'front/rss_index.html',
+        context,
+        context_instance=RequestContext(request))
+
 

@@ -1,0 +1,189 @@
+[
+    {
+        "pk": 1, 
+        "model": "ads.adtype", 
+        "fields": {
+            "name": "Payante", 
+            "modification_date": "2008-10-10 18:23:00", 
+            "creation_date": "2008-10-10 18:23:00"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adtype", 
+        "fields": {
+            "name": "Titre gracieux", 
+            "modification_date": "2008-10-10 18:23:11", 
+            "creation_date": "2008-10-10 18:23:11"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adtype", 
+        "fields": {
+            "name": "Autopromotion", 
+            "modification_date": "2008-10-10 18:23:20", 
+            "creation_date": "2008-10-10 18:23:20"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:24:58", 
+            "name": "Portail", 
+            "modification_date": "2008-10-10 18:24:58", 
+            "slug": "portail"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:25:11", 
+            "name": "National", 
+            "modification_date": "2008-10-10 18:25:11", 
+            "slug": "national"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:25:23", 
+            "name": "\u00c9tranger", 
+            "modification_date": "2008-10-10 18:25:23", 
+            "slug": "etranger"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:25:27", 
+            "name": "Soci\u00e9t\u00e9", 
+            "modification_date": "2008-10-10 18:25:27", 
+            "slug": "societe"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:25:47", 
+            "name": "Nanas", 
+            "modification_date": "2008-10-10 18:25:47", 
+            "slug": "nanas"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:25:51", 
+            "name": "Insolite", 
+            "modification_date": "2008-10-10 18:25:51", 
+            "slug": "insolite"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:25:55", 
+            "name": "R\u00e9gions", 
+            "modification_date": "2008-10-10 18:25:55", 
+            "slug": "regions"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:26:05", 
+            "name": "Voyages", 
+            "modification_date": "2008-10-10 18:26:05", 
+            "slug": "voyages"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:26:14", 
+            "name": "Sports", 
+            "modification_date": "2008-10-10 18:26:14", 
+            "slug": "sports"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:26:18", 
+            "name": "Pipoles", 
+            "modification_date": "2008-10-10 18:26:18", 
+            "slug": "pipoles"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:26:21", 
+            "name": "T\u00e9l\u00e9", 
+            "modification_date": "2008-10-10 18:26:21", 
+            "slug": "tele"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:26:30", 
+            "name": "Bouquins", 
+            "modification_date": "2008-10-10 18:26:30", 
+            "slug": "bouquins"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:26:54", 
+            "name": "\u00c9picurien : Gourmets", 
+            "modification_date": "2008-10-10 18:26:54", 
+            "slug": "epicurien-gourmets"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:27:01", 
+            "name": "\u00c9picurien : C\u00f4te Bar", 
+            "modification_date": "2008-10-10 18:27:01", 
+            "slug": "epicurien-cote-bar"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:27:11", 
+            "name": "\u00c9picurien : Fumeurs", 
+            "modification_date": "2008-10-10 18:27:11", 
+            "slug": "epicurien-fumeurs"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "ads.adpage", 
+        "fields": {
+            "creation_date": "2008-10-10 18:27:19", 
+            "name": "Coup de Gueule", 
+            "modification_date": "2008-10-10 18:27:19", 
+            "slug": "coup-de-gueule"
+        }
+    }
+]

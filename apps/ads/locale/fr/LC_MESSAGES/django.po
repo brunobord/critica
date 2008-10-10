@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Critica Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-10 19:37+0200\n"
+"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: admin.py:71
+msgid "Customer"
+msgstr "client"
+
+#: admin.py:74
+msgid "Banner"
+msgstr "bannière"
+
+#: admin.py:77
+msgid "Location"
+msgstr "emplacement"
+
+#: admin.py:80
+msgid "Offer by period"
+msgstr "offre par période"
+
+#: admin.py:83
+msgid "Offer by issue"
+msgstr "offre par édition"
+
+#: models.py:13 models.py:29 models.py:45 models.py:63 models.py:78
+#: models.py:98
+msgid "name"
+msgstr "nom"
+
+#: models.py:13
+msgid "Please, enter the customer name."
+msgstr "Entrez un nom pour ce client."
+
+#: models.py:14 models.py:30 models.py:48 models.py:64 models.py:80
+#: models.py:100 models.py:149
+msgid "creation date"
+msgstr "date de création"
+
+#: models.py:15 models.py:31 models.py:49 models.py:65 models.py:81
+#: models.py:101 models.py:150
+msgid "modification date"
+msgstr "date de modification"
+
+#: models.py:20 models.py:28 models.py:134
+msgid "customer"
+msgstr "client"
+
+#: models.py:21
+msgid "customers"
+msgstr "clients"
+
+#: models.py:28
+msgid "Please, select or add a customer."
+msgstr "Sélectionnez un client."
+
+#: models.py:29
+msgid "Please, enter the campaign name."
+msgstr "Entrez un nom pour cette campagne."
+
+#: models.py:36 models.py:135
+msgid "campaign"
+msgstr "campagne"
+
+#: models.py:37
+msgid "campaigns"
+msgstr "campagnes"
+
+#: models.py:45
+msgid "Please, enter a name for this format."
+msgstr "Entrez un nom pour ce format."
+
+#: models.py:46
+msgid "width"
+msgstr "largeur"
+
+#: models.py:46
+msgid "Please, enter the format width."
+msgstr "Entrez la largeur de ce format."
+
+#: models.py:47
+msgid "height"
+msgstr "hauteur"
+
+#: models.py:47
+msgid "Please, enter the format height."
+msgstr "Entrez la hauteur de ce format."
+
+#: models.py:54 models.py:132
+msgid "format"
+msgstr "format"
+
+#: models.py:55
+msgid "formats"
+msgstr "formats"
+
+#: models.py:63
+msgid "Please, enter a name for this type."
+msgstr "Entrez un nom pour ce type."
+
+#: models.py:70 models.py:137
+msgid "type"
+msgstr "type"
+
+#: models.py:71
+msgid "types"
+msgstr "types"
+
+#: models.py:78
+msgid "Please, enter a name for this page."
+msgstr "Entrez un nom pour cette page."
+
+#: models.py:79 models.py:99
+msgid "slug"
+msgstr "slug"
+
+#: models.py:86 models.py:138
+msgid "page"
+msgstr "page"
+
+#: models.py:87
+msgid "pages"
+msgstr "pages"
+
+#: models.py:98
+msgid "Please, enter a name for this location."
+msgstr "Entrez un nom pour cet emplacement."
+
+#: models.py:106 models.py:139
+msgid "location"
+msgstr "emplacement"
+
+#: models.py:107
+msgid "locations"
+msgstr "emplacements"
+
+#: models.py:124
+msgid "By day"
+msgstr "Par jour"
+
+#: models.py:125
+msgid "By week"
+msgstr "Par semaine"
+
+#: models.py:126
+msgid "By month"
+msgstr "Par mois"
+
+#: models.py:127
+msgid "By trimester"
+msgstr "Par trimestre"
+
+#: models.py:128
+msgid "By year"
+msgstr "Par année"
+
+#: models.py:131
+msgid "banner"
+msgstr "bannière"
+
+#: models.py:131
+msgid "Please, select a banner to upload."
+msgstr "Sélectionnez une bannière à télécharger."
+
+#: models.py:132
+msgid "Please, select the format of your banner."
+msgstr "Sélectionnez le format de votre bannière."
+
+#: models.py:133
+msgid "submitter"
+msgstr "auteur"
+
+#: models.py:134
+msgid "Please, select a customer."
+msgstr "Sélectionnez un client."
+
+#: models.py:135
+msgid "Please, select a campaign."
+msgstr "Sélectionnez une campagne."
+
+#: models.py:136
+msgid "issues"
+msgstr "éditions"
+
+#: models.py:136
+msgid "Please, select one or several issues."
+msgstr "Sélectionnez une ou plusieurs éditions."
+
+#: models.py:137
+msgid "Please, select a ad type."
+msgstr "Sélectionnez un type de publicité."
+
+#: models.py:138
+msgid "Please, select a page where to display the ad."
+msgstr "Sélectionnez une page où afficher la bannière."
+
+#: models.py:139
+msgid "Please, select a location for this ad."
+msgstr "Sélectionnez un emplacement pour cette publicité."
+
+#: models.py:140
+msgid "description"
+msgstr "description"
+
+#: models.py:140
+msgid "You can enter a short description (optional)."
+msgstr "Vous pouvez entrer une courte description (optionnel)."
+
+#: models.py:141
+msgid "link"
+msgstr "lien"
+
+#: models.py:141
+msgid ""
+"When people will click on this ad, they will be redirected to this link "
+"(optional)."
+msgstr ""
+"Quand les internautes cliqueront sur cette publicité, ils seront redirigés "
+"vers ce lien."
+
+#: models.py:142
+msgid "offer by period"
+msgstr "offre par période"
+
+#: models.py:142
+msgid "Is offer period-based?"
+msgstr "Est-ce une offre périodique ?"
+
+#: models.py:143
+msgid "offer period type"
+msgstr "type de période"
+
+#: models.py:143
+msgid "If offer is period-based, please select a period type."
+msgstr "Dans le cas d'une offre périodique, sélectionnez le type de période."
+
+#: models.py:144
+msgid "offer period during"
+msgstr "durée de la période"
+
+#: models.py:144
+msgid "If offer is period-based, please enter its during."
+msgstr "Dans le cas d'une offre périodique, entrez la durée de la période."
+
+#: models.py:145
+msgid "offer by issue"
+msgstr "offre par édition"
+
+#: models.py:145
+msgid "Is offer issue-based?"
+msgstr "Est-ce une offre par édition ?"
+
+#: models.py:146
+msgid "offer number of issues"
+msgstr "nombre d'éditions"
+
+#: models.py:146
+msgid "If offer is issue-based, enter the number of issues."
+msgstr ""
+"Dans le cas d'une offre par édition, entrez le nombre d'éditions pour cette "
+"offre."
+
+#: models.py:147
+msgid "price per issue"
+msgstr "prix par édition"
+
+#: models.py:148
+msgid "global price"
+msgstr "prix global"
+
+#: models.py:155
+msgid "ad"
+msgstr "publicité"
+
+#: models.py:156
+msgid "ads"
+msgstr "publicités"

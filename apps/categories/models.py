@@ -7,6 +7,7 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
+from django.contrib.sites.models import Site
 from critica.apps.categories import settings as categories_settings
 
 
@@ -106,7 +107,16 @@ class Category(models.Model):
         
         """
         return u'%s' % self.name
-    
+        
+    def get_rss_url(self):
+        """
+        Returns category RSS feed URL.
+        
+        """
+        site = Site.objects.get_current()
+        url = 'http://%s/rss/rubriques/%s' % (site.domain, self.slug)
+        return url
+        
     def save(self):
         """ 
         Object pre-saving operations:

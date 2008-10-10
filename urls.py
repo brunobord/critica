@@ -9,6 +9,9 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 from critica.apps.admin.sites import basic_site, advanced_site
 from critica.apps.admin.views import basic_dashboard
+from critica.apps.syndication.feeds import LatestRss
+from critica.apps.syndication.feeds import LatestByCategoryRss
+
 
 # Admin
 # ------------------------------------------------------------------------------
@@ -19,6 +22,18 @@ urlpatterns = patterns('',
     (r'^admin/(.*)', basic_site.root),
     (r'^advanced-admin/(.*)', advanced_site.root),
     (r'^django-admin/(.*)', admin.site.root),
+)
+
+# Syndication
+# ------------------------------------------------------------------------------
+feeds = {
+    'articles': LatestRss,
+    'rubriques': LatestByCategoryRss,
+}
+
+urlpatterns += patterns('',
+    (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
+    url(r'^rss/$', 'critica.apps.front.views.rss_index', name='rss'),
 )
 
 # Tags

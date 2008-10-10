@@ -9,6 +9,11 @@ from django.contrib.sites.models import Site
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.articles.models import Article
+from critica.apps.voyages.models import VoyagesArticle
+from critica.apps.epicurien.models import EpicurienArticle
+from critica.apps.anger.models import AngerArticle
+from critica.apps.notes.models import Note
+from critica.apps.regions.models import RegionNote
 from critica.apps.categories.models import Category
 
 
@@ -37,27 +42,47 @@ class LatestRss(Feed):
         }
         
     def items(self):
-        all_articles = []
+        all_items = []
         
-        articles = Article.object.filter(
+        # Articles standard categories
+        articles = Article.objects.filter(
             issues__is_published=True,
             is_ready_to_publish=True,
-            is_reserved=False)[:10]
-        all_articles.append(articles)
+            is_reserved=False)[:9]
+        for a in articles:
+            all_items.append((a.id, a))
         
+        # Voyages
         articles_voyages = VoyagesArticle.objects.filter(
             issues__is_published=True,
             is_ready_to_publish=True,
-            is_reserved=False)[:5]
-        all_articles.append(articles_voyages)
+            is_reserved=False)[:1]
+        for a in articles_voyages:
+            all_items.append((a.id, a))
             
-        return Article.complete.all().order_by('-publication_date')[:10]
+        # Epicurien
+        articles_epicurien = EpicurienArticle.objects.filter(
+            issues__is_published=True,
+            is_ready_to_publish=True,
+            is_reserved=False)[:3]
+        for a in articles_epicurien:
+            all_items.append((a.id, a))
+            
+        # Anger
+        articles_anger = AngerArticle.objects.filter(
+            issues__is_published=True,
+            is_ready_to_publish=True,
+            is_reserved=False)[:1]
+        for a in articles_anger:
+            all_items.append((a.id, a))
+        
+        items = [item for k, item in all_items]
+        
+        return items
 
-    def item_pubdate(self, obj):
-        return obj.publication_date
 
 
-class LatestArticlesByCategory(LatestArticles):
+class LatestByCategoryRss(LatestRss):
     """ RSS feed: latest articles published in a given category. """
     
     def get_object(self, bits):
