@@ -37,10 +37,20 @@ class LatestRss(Feed):
         }
         
     def items(self):
+        all_articles = []
+        
         articles = Article.object.filter(
             issues__is_published=True,
             is_ready_to_publish=True,
-            is_reserved=False)
+            is_reserved=False)[:10]
+        all_articles.append(articles)
+        
+        articles_voyages = VoyagesArticle.objects.filter(
+            issues__is_published=True,
+            is_ready_to_publish=True,
+            is_reserved=False)[:5]
+        all_articles.append(articles_voyages)
+            
         return Article.complete.all().order_by('-publication_date')[:10]
 
     def item_pubdate(self, obj):
