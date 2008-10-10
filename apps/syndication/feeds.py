@@ -12,11 +12,14 @@ from critica.apps.articles.models import Article
 from critica.apps.categories.models import Category
 
 
-class LatestArticles(Feed):
-    """ RSS feed: latest articles. """
+class LatestRss(Feed):
+    """ 
+    RSS feed of latest articles / notes.
+    
+    """
     feed_type = Rss201rev2Feed
-    title_template = 'syndication/feeds/item_title.html'
-    description_template = 'syndication/feeds/item_description.html'
+    title_template = 'front/feeds/item_title.html'
+    description_template = 'front/feeds/item_description.html'
     
     def title(self):
         _site = Site.objects.get_current()
@@ -29,11 +32,15 @@ class LatestArticles(Feed):
         
     def description(self):
         _site = Site.objects.get_current()
-        return _('Recent articles published on %(site_name)s.') % {
+        return _('Recent articles and notes published on %(site_name)s.') % {
             'site_name': _site.name,
         }
         
     def items(self):
+        articles = Article.object.filter(
+            issues__is_published=True,
+            is_ready_to_publish=True,
+            is_reserved=False)
         return Article.complete.all().order_by('-publication_date')[:10]
 
     def item_pubdate(self, obj):

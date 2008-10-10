@@ -82,7 +82,7 @@
     </div>
     {% endif %}
     
-    {% if perms.users.is_editor or perms.user.is_journalist %}
+    {% if perms.users.is_editor or perms.users.is_journalist %}
     <div class="module">
         <table summary="Médias">
         <caption>Médias</caption>
@@ -100,7 +100,7 @@
             </tr>
             {% endif %}
             
-            {% if perms.videos.add_video and perms.videos.change_video %}
+            {% if perms.videos.add_video or perms.videos.change_video %}
             <tr>
                 <th scope="row"><a href="videos/video/">Vidéos</a></th>
                 <td><a href="videos/video/add/" class="addlink">Ajouter</a></td>
