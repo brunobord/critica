@@ -2,23 +2,17 @@
 {% block title %}Archives{% endblock %}
 {% block body_id %}archives{% endblock %}
 {% block content %}
-
-<h1>Archives</h1>
-
-{% if issues %}
-
-    <p>Vous pouvez consulter les archives du journal par édition et par ordre chronologique.</p>
-    
-    <ul>
-    {% for issue in issues %}
-        <li><a href="{% url issuearchive_home issue.number %}" title="Édition {{ issue.number }} - publiée le {{ issue.publication_date|date:"Y/m/d" }}">{{ issue.publication_date|date:"l d F Y"|capfirst }}</a></li>
-    {% endfor %}
-    </ul>
-    
-{% else %}
-
-    <p><strong>Désolé, aucune édition archivée pour le moment.</strong></p>
-
-{% endif %}
-
+<div id="mainContent">
+    <h1>Archives</h1>
+    {% if issues %}
+        <p>Vous pouvez consulter les archives du journal par édition et par ordre chronologique.</p>
+        <ul>
+        {% for issue in issues %}
+            <li><a href="{% url issuearchive_home issue.number %}" title="Édition {{ issue.number }} - publiée le {{ issue.publication_date|date:"Y/m/d" }}">{{ issue.publication_date|date:"l d F Y"|capfirst }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p><strong>Désolé, aucune édition archivée pour le moment.</strong></p>
+    {% endif %}
+</div>
 {% endblock %}

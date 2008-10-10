@@ -1,0 +1,13 @@
+{% extends "layout/base.html" %}
+{% block title %}Tags{% endblock %}
+{% block body_id %}tags{% endblock %}
+{% block content %}
+<div id="mainContent">
+    <h1>Tags</h1>
+    {% if tags %}
+        {{ tags }}
+    {% else %}
+        <p><strong>Aucun article taggé pour le moment.</strong></p>
+    {% endif %}
+</div>
+{% endblock %}

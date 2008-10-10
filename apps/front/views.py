@@ -24,6 +24,8 @@ from critica.apps.regions.models import FeaturedRegion
 from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.videos.models import Video
 from critica.apps.utils import urlbase64
+from tagging.models import Tag
+from tagging.utils import calculate_cloud
 
 
 # Issue getters
@@ -603,6 +605,46 @@ def issuepreview_anger(request, issue_key):
     """
     issue = _get_encoded_issue(issue_key)
     return anger(request, issue=issue, is_preview=True)
+
+
+
+# Tags
+# ------------------------------------------------------------------------------
+def tags(request):
+    """
+    Displays all tags as tag cloud.
+    
+    """
+    issue = _get_current_issue()
+    context = {}
+    
+    context['issue'] = issue
+    
+    try:
+        tags = Tag.objects.all()
+        context['tags'] = calculate_cloud(tags)
+    except ObjectDoesNotExist:
+        context['tags'] = False
+        
+    return render_to_response(
+        'front/tags.html',
+        context,
+        context_instance=RequestContext(request))
+
+
+    
+def tags_tag(request, tag):
+    """
+    Displays articles / notes tagged with a given tag.
+    
+    """
+    issue = _get_current_issue()
+    context = {}
+    context['issue'] = issue
+    return render_to_response(
+        'front/tags_tag.html',
+        context,
+        context_instance=RequestContext(request))
 
 
 

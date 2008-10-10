@@ -21,6 +21,13 @@ urlpatterns = patterns('',
     (r'^django-admin/(.*)', admin.site.root),
 )
 
+# Tags
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^tags/(?P<tag>[-\w]+)/$', 'critica.apps.front.views.tags_tag', name='tags_tag'),
+    url(r'^tags/$', 'critica.apps.front.views.tags', name='tags'),
+)
+
 # Archives
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
