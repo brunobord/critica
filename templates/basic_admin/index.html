@@ -44,6 +44,63 @@
     </div>
     {% endif %}
     
+    {% if perms.ads.add_customer or perms.ads.add_adcampaign or perms.ads.add_ad or perms.ads.add_adtype or perms.ads.add_adformat or perms.ads.add_adpage or perms.ads.add_adlocation %}
+    <div class="module">
+        <table summary="Publicités">
+        <caption>Publicités</caption>
+            {% if perms.ads.add_customer %}
+            <tr>
+                <th scope="row"><a href="ads/customer/">Clients</a></th>
+                <td><a href="ads/customer/add/" class="addlink">Ajouter</a></td>
+                <td><a href="ads/customer/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            {% if perms.ads.add_adcampaign %}
+            <tr>
+                <th scope="row"><a href="ads/adcampaign/">Campagnes</a></th>
+                <td><a href="ads/adcampaign/add/" class="addlink">Ajouter</a></td>
+                <td><a href="ads/adcampaign/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            {% if perms.ads.add_ad %}
+            <tr>
+                <th scope="row"><a href="ads/ad/">Publicités</a></th>
+                <td><a href="ads/ad/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/ad/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            {% if perms.users.is_administrator %}
+            <tr>
+                <th scope="row"><a href="ads/adtype/">Types de publicité</a></th>
+                <td><a href="ads/adtype/add/" class="addlink">Ajouter</a></td>
+                <td><a href="ads/adtype/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            {% if perms.users.is_administrator %}
+            <tr>
+                <th scope="row"><a href="ads/adformat/">Formats de publicité</a></th>
+                <td><a href="ads/adformat/add/" class="addlink">Ajouter</a></td>
+                <td><a href="ads/adformat/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            {% if perms.users.is_administrator %}
+            <tr>
+                <th scope="row"><a href="ads/adpage/">Types de page</a></th>
+                <td><a href="ads/adpage/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adpage/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            {% if perms.users.is_administrator %}
+            <tr>
+                <th scope="row"><a href="ads/adlocation/">Emplacements de publicité</a></th>
+                <td><a href="ads/adlocation/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adlocation/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    {% endif %}
+    
     {% if perms.users.is_editor or perms.users.is_journalist %}
     <div class="module">
         <table summary="Articles et brèves">

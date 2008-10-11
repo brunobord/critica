@@ -43,6 +43,7 @@ class AdCampaign(models.Model):
 
 class AdFormat(models.Model):
     name = models.CharField(_('name'), max_length=255, help_text=_('Please, enter a name for this format.'), unique=True)
+    slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
     width = models.IntegerField(_('width'), help_text=_('Please, enter the format width.'))
     height = models.IntegerField(_('height'), help_text=_('Please, enter the format height.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
@@ -57,6 +58,10 @@ class AdFormat(models.Model):
         
     def __unicode__(self):
         return u'%s - %sx%s' % (self.name, self.width, self.height)
+        
+    def save(self):
+        self.slug = slugify(self.name)
+        super(AdFormat, self).save()
 
 
 class AdType(models.Model):
@@ -75,8 +80,16 @@ class AdType(models.Model):
 
     
 class AdPage(models.Model):
+    PAGE_TYPE_HOME = 1
+    PAGE_TYPE_CATEGORY = 2
+    PAGE_TYPE_CHOICES = (
+        (PAGE_TYPE_HOME, _('Home')),
+        (PAGE_TYPE_CATEGORY, _('Category')),
+    )
     name = models.CharField(_('name'), max_length=255, help_text=_('Please, enter a name for this page.'), unique=True)
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
+    type = models.IntegerField(_('type'), choices=PAGE_TYPE_CHOICES, default=PAGE_TYPE_CATEGORY, help_text=_('Select the page type. Is the homepage? Is a category page?'))
+    category = models.ForeignKey('categories.Category', verbose_name=_('category'), null=True, blank=True, help_text=_('If this page belongs to a category, please select this category.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
 
@@ -97,6 +110,7 @@ class AdPage(models.Model):
 class AdLocation(models.Model):
     name = models.CharField(_('name'), max_length=255, help_text=_('Please, enter a name for this location.'), unique=True)
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
+    position = models.DecimalField(_('position'), max_digits=2, decimal_places=1, help_text=_('Please, enter a numerical position.'), unique=True)
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     

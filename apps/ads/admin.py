@@ -33,7 +33,8 @@ advanced_site.register(AdCampaign, AdCampaignAdmin)
 
 
 class AdFormatAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'slug', 'width', 'height')
+    ordering = ['width']
     
 admin.site.register(AdFormat, AdFormatAdmin)
 basic_site.register(AdFormat, AdFormatAdmin)
@@ -49,7 +50,7 @@ advanced_site.register(AdType, AdTypeAdmin)
 
 
 class AdPageAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'slug')
+    list_display = ('id', 'name', 'slug', 'type')
     list_display_links = ('id', 'name')
     ordering = ['id']
     
@@ -59,7 +60,8 @@ advanced_site.register(AdPage, AdPageAdmin)
 
 
 class AdLocationAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'position')
+    ordering = ['position']
     
 admin.site.register(AdLocation, AdLocationAdmin)
 basic_site.register(AdLocation, AdLocationAdmin)
@@ -69,7 +71,7 @@ advanced_site.register(AdLocation, AdLocationAdmin)
 class AdAdmin(admin.ModelAdmin):
     fieldsets = (
         (_('Customer'), {
-            'fields': ('submitter', 'customer', 'campaign', 'type'),
+            'fields': ('customer', 'campaign', 'type'),
         }),
         (_('Banner'), {
             'fields': ('banner', 'format', 'description', 'link'),
@@ -84,6 +86,10 @@ class AdAdmin(admin.ModelAdmin):
             'fields': ('offer_by_issue', 'offer_issue_number'),
         }),
     )
+    
+    def save_model(self, request, obj, form, change):
+        obj.author = request.user
+        obj.save()
     
 admin.site.register(Ad, AdAdmin)
 basic_site.register(Ad, AdAdmin)

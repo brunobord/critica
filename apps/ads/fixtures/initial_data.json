@@ -1,6 +1,78 @@
 [
     {
         "pk": 1, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Launch Unit", 
+            "modification_date": "2008-10-11 08:27:14", 
+            "height": 440, 
+            "width": 1000, 
+            "creation_date": "2008-10-11 07:45:32", 
+            "slug": "launch-unit"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Pav\u00e9", 
+            "modification_date": "2008-10-11 08:27:28", 
+            "height": 250, 
+            "width": 300, 
+            "creation_date": "2008-10-11 07:45:49", 
+            "slug": "pave"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Carr\u00e9", 
+            "modification_date": "2008-10-11 08:27:33", 
+            "height": 250, 
+            "width": 250, 
+            "creation_date": "2008-10-11 07:46:01", 
+            "slug": "carre"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Banni\u00e8re", 
+            "modification_date": "2008-10-11 08:27:23", 
+            "height": 60, 
+            "width": 468, 
+            "creation_date": "2008-10-11 07:46:19", 
+            "slug": "banniere"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Large banni\u00e8re", 
+            "modification_date": "2008-10-11 08:27:19", 
+            "height": 90, 
+            "width": 728, 
+            "creation_date": "2008-10-11 07:46:42", 
+            "slug": "large-banniere"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Skyscraper", 
+            "modification_date": "2008-10-11 08:27:38", 
+            "height": 600, 
+            "width": 160, 
+            "creation_date": "2008-10-11 07:47:16", 
+            "slug": "skyscraper"
+        }
+    }, 
+    {
+        "pk": 1, 
         "model": "ads.adtype", 
         "fields": {
             "name": "Payante", 
@@ -30,9 +102,11 @@
         "pk": 1, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:24:58", 
+            "category": null, 
             "name": "Portail", 
-            "modification_date": "2008-10-10 18:24:58", 
+            "modification_date": "2008-10-11 07:32:51", 
+            "creation_date": "2008-10-10 18:24:58", 
+            "type": 1, 
             "slug": "portail"
         }
     }, 
@@ -40,9 +114,11 @@
         "pk": 2, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:25:11", 
+            "category": 1, 
             "name": "National", 
-            "modification_date": "2008-10-10 18:25:11", 
+            "modification_date": "2008-10-11 07:33:40", 
+            "creation_date": "2008-10-10 18:25:11", 
+            "type": 2, 
             "slug": "national"
         }
     }, 
@@ -50,9 +126,11 @@
         "pk": 3, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:25:23", 
+            "category": 2, 
             "name": "\u00c9tranger", 
-            "modification_date": "2008-10-10 18:25:23", 
+            "modification_date": "2008-10-11 07:33:45", 
+            "creation_date": "2008-10-10 18:25:23", 
+            "type": 2, 
             "slug": "etranger"
         }
     }, 
@@ -60,9 +138,11 @@
         "pk": 4, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:25:27", 
+            "category": 3, 
             "name": "Soci\u00e9t\u00e9", 
-            "modification_date": "2008-10-10 18:25:27", 
+            "modification_date": "2008-10-11 07:33:53", 
+            "creation_date": "2008-10-10 18:25:27", 
+            "type": 2, 
             "slug": "societe"
         }
     }, 
@@ -70,9 +150,11 @@
         "pk": 5, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:25:47", 
+            "category": 8, 
             "name": "Nanas", 
-            "modification_date": "2008-10-10 18:25:47", 
+            "modification_date": "2008-10-11 07:34:02", 
+            "creation_date": "2008-10-10 18:25:47", 
+            "type": 2, 
             "slug": "nanas"
         }
     }, 
@@ -80,9 +162,11 @@
         "pk": 6, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:25:51", 
+            "category": 9, 
             "name": "Insolite", 
-            "modification_date": "2008-10-10 18:25:51", 
+            "modification_date": "2008-10-11 07:34:12", 
+            "creation_date": "2008-10-10 18:25:51", 
+            "type": 2, 
             "slug": "insolite"
         }
     }, 
@@ -90,9 +174,11 @@
         "pk": 7, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:25:55", 
+            "category": 12, 
             "name": "R\u00e9gions", 
-            "modification_date": "2008-10-10 18:25:55", 
+            "modification_date": "2008-10-11 07:34:21", 
+            "creation_date": "2008-10-10 18:25:55", 
+            "type": 2, 
             "slug": "regions"
         }
     }, 
@@ -100,9 +186,11 @@
         "pk": 8, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:26:05", 
+            "category": 10, 
             "name": "Voyages", 
-            "modification_date": "2008-10-10 18:26:05", 
+            "modification_date": "2008-10-11 07:34:31", 
+            "creation_date": "2008-10-10 18:26:05", 
+            "type": 2, 
             "slug": "voyages"
         }
     }, 
@@ -110,9 +198,11 @@
         "pk": 9, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:26:14", 
+            "category": 4, 
             "name": "Sports", 
-            "modification_date": "2008-10-10 18:26:14", 
+            "modification_date": "2008-10-11 07:34:37", 
+            "creation_date": "2008-10-10 18:26:14", 
+            "type": 2, 
             "slug": "sports"
         }
     }, 
@@ -120,9 +210,11 @@
         "pk": 10, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:26:18", 
+            "category": 5, 
             "name": "Pipoles", 
-            "modification_date": "2008-10-10 18:26:18", 
+            "modification_date": "2008-10-11 07:34:50", 
+            "creation_date": "2008-10-10 18:26:18", 
+            "type": 2, 
             "slug": "pipoles"
         }
     }, 
@@ -130,9 +222,11 @@
         "pk": 11, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:26:21", 
+            "category": 6, 
             "name": "T\u00e9l\u00e9", 
-            "modification_date": "2008-10-10 18:26:21", 
+            "modification_date": "2008-10-11 07:34:56", 
+            "creation_date": "2008-10-10 18:26:21", 
+            "type": 2, 
             "slug": "tele"
         }
     }, 
@@ -140,9 +234,11 @@
         "pk": 12, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:26:30", 
+            "category": 7, 
             "name": "Bouquins", 
-            "modification_date": "2008-10-10 18:26:30", 
+            "modification_date": "2008-10-11 07:35:03", 
+            "creation_date": "2008-10-10 18:26:30", 
+            "type": 2, 
             "slug": "bouquins"
         }
     }, 
@@ -150,9 +246,11 @@
         "pk": 13, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:26:54", 
+            "category": 11, 
             "name": "\u00c9picurien : Gourmets", 
-            "modification_date": "2008-10-10 18:26:54", 
+            "modification_date": "2008-10-11 07:35:10", 
+            "creation_date": "2008-10-10 18:26:54", 
+            "type": 2, 
             "slug": "epicurien-gourmets"
         }
     }, 
@@ -160,9 +258,11 @@
         "pk": 14, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:27:01", 
+            "category": 11, 
             "name": "\u00c9picurien : C\u00f4te Bar", 
-            "modification_date": "2008-10-10 18:27:01", 
+            "modification_date": "2008-10-11 07:35:45", 
+            "creation_date": "2008-10-10 18:27:01", 
+            "type": 2, 
             "slug": "epicurien-cote-bar"
         }
     }, 
@@ -170,9 +270,11 @@
         "pk": 15, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:27:11", 
+            "category": 11, 
             "name": "\u00c9picurien : Fumeurs", 
-            "modification_date": "2008-10-10 18:27:11", 
+            "modification_date": "2008-10-11 07:35:51", 
+            "creation_date": "2008-10-10 18:27:11", 
+            "type": 2, 
             "slug": "epicurien-fumeurs"
         }
     }, 
@@ -180,10 +282,111 @@
         "pk": 16, 
         "model": "ads.adpage", 
         "fields": {
-            "creation_date": "2008-10-10 18:27:19", 
+            "category": 13, 
             "name": "Coup de Gueule", 
-            "modification_date": "2008-10-10 18:27:19", 
+            "modification_date": "2008-10-11 07:35:57", 
+            "creation_date": "2008-10-10 18:27:19", 
+            "type": 2, 
             "slug": "coup-de-gueule"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "1.0", 
+            "creation_date": "2008-10-11 08:21:02", 
+            "name": "1 - En-t\u00eate", 
+            "modification_date": "2008-10-11 08:21:02", 
+            "slug": "1-en-tete"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "1.1", 
+            "creation_date": "2008-10-11 08:21:18", 
+            "name": "Launch Unit", 
+            "modification_date": "2008-10-11 08:21:18", 
+            "slug": "launch-unit"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "2.0", 
+            "creation_date": "2008-10-11 08:21:30", 
+            "name": "2 - Colonne gauche", 
+            "modification_date": "2008-10-11 08:21:30", 
+            "slug": "2-colonne-gauche"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "3.0", 
+            "creation_date": "2008-10-11 08:21:46", 
+            "name": "3 - Colonne gauche", 
+            "modification_date": "2008-10-11 08:21:46", 
+            "slug": "3-colonne-gauche"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "3.1", 
+            "creation_date": "2008-10-11 08:22:02", 
+            "name": "3 (bis) - Colonne gauche", 
+            "modification_date": "2008-10-11 08:22:02", 
+            "slug": "3-bis-colonne-gauche"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "4.0", 
+            "creation_date": "2008-10-11 08:22:21", 
+            "name": "4 - Colonne droite", 
+            "modification_date": "2008-10-11 08:22:21", 
+            "slug": "4-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "5.0", 
+            "creation_date": "2008-10-11 08:22:36", 
+            "name": "5 - Colonne droite", 
+            "modification_date": "2008-10-11 08:22:36", 
+            "slug": "5-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "5.1", 
+            "creation_date": "2008-10-11 08:22:55", 
+            "name": "5 (bis) - Colonne droite", 
+            "modification_date": "2008-10-11 08:22:55", 
+            "slug": "5-bis-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "6.0", 
+            "creation_date": "2008-10-11 08:23:07", 
+            "name": "6 - Colonne droite", 
+            "modification_date": "2008-10-11 08:23:07", 
+            "slug": "6-colonne-droite"
         }
     }
 ]
