@@ -41,16 +41,6 @@ class BaseNoteAdmin(BaseArticleAdmin):
     ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
     exclude = ['author']
-    
-    class Media:
-        """
-        Model metadata.
-        
-        """
-        js = (
-            settings.MEDIA_URL + 'common/js/tiny_mce/tiny_mce.js',
-            settings.MEDIA_URL + 'common/js/textarea.js',
-        )
 
     def __call__(self, request, url):
         self.request = request

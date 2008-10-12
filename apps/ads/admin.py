@@ -71,7 +71,7 @@ advanced_site.register(AdLocation, AdLocationAdmin)
 class AdAdmin(admin.ModelAdmin):
     fieldsets = (
         (_('Customer'), {
-            'fields': ('customer', 'campaign', 'type'),
+            'fields': ('customer', 'campaign', 'type', 'price_global'),
         }),
         (_('Banner'), {
             'fields': ('banner', 'format', 'description', 'link'),
@@ -86,9 +86,19 @@ class AdAdmin(admin.ModelAdmin):
             'fields': ('offer_by_issue', 'offer_issue_number'),
         }),
     )
+    list_display = ('customer', 'campaign', 'type', 'format', 'page', 'location', 'offer_by_period', 'offer_by_issue', 'ald_price_per_issue', 'ald_price_global')
+    list_filter = ('customer', 'campaign', 'type', 'format', 'page', 'location', 'offer_by_period', 'offer_by_issue')
+    
+    def ald_price_per_issue(self, obj):
+        return '%s euro' % obj.price_per_issue
+    ald_price_per_issue.short_description = _('price per issue')
+
+    def ald_price_global(self, obj):
+        return '%s euro' % obj.price_global
+    ald_price_global.short_description = _('price global')
     
     def save_model(self, request, obj, form, change):
-        obj.author = request.user
+        obj.submitter = request.user
         obj.save()
     
 admin.site.register(Ad, AdAdmin)
