@@ -115,7 +115,7 @@ class AdBannerAdmin(admin.ModelAdmin):
     )
     list_display = ('customer', 'campaign', 'type', 'ad', 'starting_date', 'ending_date')
     list_filter = ('customer', 'campaign', 'type', 'ad')
-    
+         
     def save_model(self, request, obj, form, change):
         obj.submitter = request.user
         obj.save()
