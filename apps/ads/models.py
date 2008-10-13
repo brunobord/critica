@@ -128,34 +128,11 @@ class AdLocation(models.Model):
         super(AdLocation, self).save()
 
 
-AD_PERIOD_DAY = 1
-AD_PERIOD_WEEK = 2
-AD_PERIOD_MONTH = 3
-AD_PERIOD_TRIMESTER = 4
-AD_PERIOD_YEAR = 5
-AD_PERIOD_CHOICES = (
-    (AD_PERIOD_DAY, _('By day')),
-    (AD_PERIOD_WEEK, _('By week')),
-    (AD_PERIOD_MONTH, _('By month')),
-    (AD_PERIOD_TRIMESTER, _('By trimester')),
-    (AD_PERIOD_YEAR, _('By year')),
-)
 class Ad(models.Model):    
-    banner = models.ImageField(upload_to=ads_settings.IMAGE_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload.'))
     format = models.ForeignKey('ads.AdFormat', verbose_name=_('format'), help_text=_('Please, select the format of your banner.'))
-    submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
-    customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
-    campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
-    starting_date = models.DateField(_('starting date'))
-    ending_date = models.DateField(_('ending date'))
-    type = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
     page = models.ForeignKey('ads.AdPage', verbose_name=_('page'), help_text=_('Please, select a page where to display the ad.'))
-    location = models.ForeignKey('ads.ADLocation', verbose_name=_('location'), help_text=_('Please, select a location for this ad.'))
-    description = models.TextField(_('description'), blank=True, help_text=_('You can enter a short description (optional).'))
-    link = models.URLField(_('link'), blank=True, help_text=_('When people will click on this ad, they will be redirected to this link (optional).'))
-    offer_period_type = models.IntegerField(_('offer period type'), choices=AD_PERIOD_CHOICES, null=True, blank=True, help_text=_('If offer is period-based, please select a period type.'))
-    offer_period_during = models.IntegerField(_('offer period during'), null=True, blank=True, help_text=_('If offer is period-based, please enter its during.'))
-    price_global = models.DecimalField(_('global price'), max_digits=10, decimal_places=2, null=True, blank=True)
+    location = models.ForeignKey('ads.AdLocation', verbose_name=_('location'), help_text=_('Please, select a location for this ad.'))
+    price = models.DecimalField(_('price'), max_digits=10, decimal_places=2, null=True, blank=True, help_text=_('Please, enter its price by month.'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     
@@ -167,5 +144,30 @@ class Ad(models.Model):
         unique_together = (('page', 'location'),)
         
     def __unicode__(self):
-        return u'%s - %s - %s' % (self.customer, self.page, self.location)
+        return u'%s - %s (%s)' % (self.page, self.location, self.format)
+
+
+class AdBanner(models.Model):
+    banner = models.ImageField(upload_to=ads_settings.IMAGE_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload.'))
+    submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
+    customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
+    campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
+    type = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
+    ad = models.ForeignKey('ads.Ad', verbose_name=_('ad'), unique=True, help_text=_('Please, select a ad.'))
+    description = models.TextField(_('description'), blank=True, help_text=_('You can enter a short description (optional).'))
+    link = models.URLField(_('link'), blank=True, help_text=_('When people will click on this ad, they will be redirected to this link (optional).'))
+    starting_date = models.DateField(_('starting date'))
+    ending_date = models.DateField(_('ending date'))
+    creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    
+    objects = models.Manager()
+
+    class Meta:
+        verbose_name = _('banner')
+        verbose_name_plural = _('banners')
+        
+    def __unicode__(self):
+        return u'%s' % (self.ad)
+    
 

@@ -14,6 +14,7 @@ from critica.apps.ads.models import AdType
 from critica.apps.ads.models import AdPage
 from critica.apps.ads.models import AdLocation
 from critica.apps.ads.models import Ad
+from critica.apps.ads.models import AdBanner
 
 
 class CustomerAdmin(admin.ModelAdmin):
@@ -70,38 +71,55 @@ advanced_site.register(AdLocation, AdLocationAdmin)
 
 class AdAdmin(admin.ModelAdmin):
     fieldsets = (
-        (_('Customer'), {
-            'fields': ('customer', 'campaign', 'type', 'price_global'),
-        }),
-        (_('Banner'), {
-            'fields': ('banner', 'format', 'description', 'link'),
-        }),
-        (_('Location'), {
-            'fields': ('page', 'location'),
-        }),
-        (_('Offer by period'), {
-            'fields': ('offer_by_period', 'offer_period_type', 'offer_period_during'),
-        }),
-        (_('Offer by issue'), {
-            'fields': ('offer_by_issue', 'offer_issue_number'),
+        (None, {
+            'fields': ('page', 'format', 'location', 'price'),
         }),
     )
-    list_display = ('customer', 'campaign', 'type', 'format', 'page', 'location', 'offer_by_period', 'offer_by_issue', 'ald_price_per_issue', 'ald_price_global')
-    list_filter = ('customer', 'campaign', 'type', 'format', 'page', 'location', 'offer_by_period', 'offer_by_issue')
+    list_display = ('format', 'page', 'location', 'price')
+    list_filter = ('format', 'page', 'location', 'price')
     
-    def ald_price_per_issue(self, obj):
-        return '%s euro' % obj.price_per_issue
-    ald_price_per_issue.short_description = _('price per issue')
+    def __call__(self, request, url):
+        self.request = request
+        return super(AdAdmin, self).__call__(request, url)
 
-    def ald_price_global(self, obj):
-        return '%s euro' % obj.price_global
-    ald_price_global.short_description = _('price global')
-    
-    def save_model(self, request, obj, form, change):
-        obj.submitter = request.user
-        obj.save()
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(AdAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'location': 
+            my_choices = [('', '---------')]
+            my_choices.extend(AdLocation.objects.order_by('position').values_list('id','name'))
+            print my_choices
+            field.choices = my_choices
+        return field
     
 admin.site.register(Ad, AdAdmin)
 basic_site.register(Ad, AdAdmin)
 advanced_site.register(Ad, AdAdmin)
 
+
+class AdBannerAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (_('Customer'), {
+            'fields': ('customer', 'campaign', 'type'),
+        }),
+        (_('Banner'), {
+            'fields': ('banner', 'ad', 'link', 'description'),
+        }),
+        (_('During'), {
+            'fields': ('starting_date', 'ending_date'),
+        }),
+    )
+    list_display = ('customer', 'campaign', 'type', 'ad', 'starting_date', 'ending_date')
+    list_filter = ('customer', 'campaign', 'type', 'ad')
+    
+    def save_model(self, request, obj, form, change):
+        obj.submitter = request.user
+        obj.save()
+    
+admin.site.register(AdBanner, AdBannerAdmin)
+basic_site.register(AdBanner, AdBannerAdmin)
+advanced_site.register(AdBanner, AdBannerAdmin)

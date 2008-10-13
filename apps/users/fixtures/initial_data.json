@@ -36,6 +36,15 @@
         }
     }, 
     {
+        "pk": 134, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_adbanner", 
+            "name": "Can add banner", 
+            "content_type": 44
+        }
+    }, 
+    {
         "pk": 116, 
         "model": "auth.permission", 
         "fields": {
@@ -99,6 +108,15 @@
         }
     }, 
     {
+        "pk": 135, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_adbanner", 
+            "name": "Can change banner", 
+            "content_type": 44
+        }
+    }, 
+    {
         "pk": 117, 
         "model": "auth.permission", 
         "fields": {
@@ -159,6 +177,15 @@
             "codename": "delete_ad", 
             "name": "Can delete ad", 
             "content_type": 43
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_adbanner", 
+            "name": "Can delete banner", 
+            "content_type": 44
         }
     }, 
     {
@@ -1448,12 +1475,15 @@
             "name": "Publicit\u00e9", 
             "permissions": [
                 131, 
+                134, 
                 116, 
                 113, 
                 132, 
+                135, 
                 117, 
                 114, 
                 133, 
+                136, 
                 118, 
                 115
             ]

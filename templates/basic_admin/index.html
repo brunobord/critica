@@ -62,6 +62,13 @@
                 <td><a href="ads/adcampaign/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
+            {% if perms.ads.add_adbanner %}
+            <tr>
+                <th scope="row"><a href="ads/adbanner/">Bannières</a></th>
+                <td><a href="ads/adbanner/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adbanner/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
             {% if perms.ads.add_ad %}
             <tr>
                 <th scope="row"><a href="ads/ad/">Publicités</a></th>
@@ -69,28 +76,28 @@
                 <td><a href="ads/ad/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
-            {% if perms.users.is_administrator %}
+            {% if perms.users.add_adtype %}
             <tr>
                 <th scope="row"><a href="ads/adtype/">Types de publicité</a></th>
                 <td><a href="ads/adtype/add/" class="addlink">Ajouter</a></td>
                 <td><a href="ads/adtype/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
-            {% if perms.users.is_administrator %}
+            {% if perms.users.add_adformat %}
             <tr>
                 <th scope="row"><a href="ads/adformat/">Formats de publicité</a></th>
                 <td><a href="ads/adformat/add/" class="addlink">Ajouter</a></td>
                 <td><a href="ads/adformat/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
-            {% if perms.users.is_administrator %}
+            {% if perms.users.add_adpage %}
             <tr>
                 <th scope="row"><a href="ads/adpage/">Types de page</a></th>
                 <td><a href="ads/adpage/add" class="addlink">Ajouter</a></td>         
                 <td><a href="ads/adpage/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
-            {% if perms.users.is_administrator %}
+            {% if perms.users.add_adlocation %}
             <tr>
                 <th scope="row"><a href="ads/adlocation/">Emplacements de publicité</a></th>
                 <td><a href="ads/adlocation/add" class="addlink">Ajouter</a></td>         
