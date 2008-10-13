@@ -20,7 +20,7 @@ class NoteTypeAdmin(admin.ModelAdmin):
     Administration interface options of ``NoteType`` model.
     
     """
-    list_display = ('name', 'slug')
+    list_display = ('id', 'name', 'slug')
     search_fields = ('name',)
     ordering = ['name']
 
@@ -158,8 +158,21 @@ class NoteAdmin(BaseNoteAdmin):
     Administration interface options of ``Note`` model.
     
     """
-    pass
-
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(NoteAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'type': 
+            my_choices = [('', '---------')]
+            type_order = notes_settings.TYPE_ORDER
+            for slug in type_order:
+                my_choices.extend(NoteType.objects.filter(slug=slug).values_list('id','name'))
+            print my_choices
+            field.choices = my_choices
+        return field
 
 admin.site.register(Note, NoteAdmin)
 basic_site.register(Note, NoteAdmin)
