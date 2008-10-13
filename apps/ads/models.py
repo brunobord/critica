@@ -171,3 +171,42 @@ class AdBanner(models.Model):
         return u'%s' % (self.ad)
     
 
+class AdCarouselBanner(models.Model):
+    banner = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload.'))
+    submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
+    description = models.TextField(_('description'), blank=True, help_text=_('You can enter a short description (optional).'))
+    creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    
+    objects = models.Manager()
+
+    class Meta:
+        verbose_name = _('carousel banner')
+        verbose_name_plural = _('carousel banners')
+        
+    def __unicode__(self):
+        return u'%s' % (self.banner)
+        
+        
+class AdCarousel(models.Model):
+    xml = models.FileField(upload_to=ads_settings.CAROUSEL_XML_UPLOAD_PATH, verbose_name=_('XML file'), help_text=_('Please, upload the Carousel XML file.'))
+    banners = models.ManyToManyField('ads.AdCarouselBanner', verbose_name=_('banners'), help_text=_('Please, select banners to include in the Carousel.'))
+    submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
+    customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
+    campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
+    type = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
+    ads = models.ManyToManyField('ads.Ad', verbose_name=_('ad'), help_text=_('Please, select a ad.'))
+    starting_date = models.DateField(_('starting date'))
+    ending_date = models.DateField(_('ending date'))
+    creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    
+    objects = models.Manager()
+
+    class Meta:
+        verbose_name = _('carousel')
+        verbose_name_plural = _('carousels')
+        
+    def __unicode__(self):
+        return u'%s - %s - %s' % (self.customer, self.campaign, self.xml)
+

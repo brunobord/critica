@@ -15,6 +15,8 @@ from critica.apps.ads.models import AdPage
 from critica.apps.ads.models import AdLocation
 from critica.apps.ads.models import Ad
 from critica.apps.ads.models import AdBanner
+from critica.apps.ads.models import AdCarouselBanner
+from critica.apps.ads.models import AdCarousel
 
 
 class CustomerAdmin(admin.ModelAdmin):
@@ -124,3 +126,41 @@ class AdBannerAdmin(admin.ModelAdmin):
 admin.site.register(AdBanner, AdBannerAdmin)
 basic_site.register(AdBanner, AdBannerAdmin)
 advanced_site.register(AdBanner, AdBannerAdmin)
+
+
+class AdCarouselBannerAdmin(admin.ModelAdmin):
+    list_display = ('banner', 'description', 'submitter')
+    list_filter = ['submitter']
+         
+    def save_model(self, request, obj, form, change):
+        obj.submitter = request.user
+        obj.save()
+    
+admin.site.register(AdCarouselBanner, AdCarouselBannerAdmin)
+basic_site.register(AdCarouselBanner, AdCarouselBannerAdmin)
+advanced_site.register(AdCarouselBanner, AdCarouselBannerAdmin)
+
+
+class AdCarouselAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (_('Customer'), {
+            'fields': ('customer', 'campaign', 'type'),
+        }),
+        (_('Carousel'), {
+            'fields': ('xml', 'banners', 'ads'),
+        }),
+        (_('During'), {
+            'fields': ('starting_date', 'ending_date'),
+        }),
+    )
+    list_display = ('customer', 'campaign', 'type', 'starting_date', 'ending_date')
+    list_filter = ('customer', 'campaign', 'type')
+    filter_vertical = ['ads', 'banners']
+         
+    def save_model(self, request, obj, form, change):
+        obj.submitter = request.user
+        obj.save()
+    
+admin.site.register(AdCarousel, AdCarouselAdmin)
+basic_site.register(AdCarousel, AdCarouselAdmin)
+advanced_site.register(AdCarousel, AdCarouselAdmin)
