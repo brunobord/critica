@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 15:34+0200\n"
+"POT-Creation-Date: 2008-10-13 17:13+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,19 +17,19 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:106 admin.py:144
+#: admin.py:108 admin.py:146
 msgid "Customer"
 msgstr "Client"
 
-#: admin.py:109
+#: admin.py:111
 msgid "Banner"
 msgstr "Bannière"
 
-#: admin.py:112 admin.py:150
+#: admin.py:114 admin.py:152
 msgid "During"
 msgstr "Durée"
 
-#: admin.py:147
+#: admin.py:149
 msgid "Carousel"
 msgstr "Carousel"
 
@@ -158,7 +158,7 @@ msgstr "pages"
 msgid "Please, enter a name for this location."
 msgstr "Entrez un nom pour cet emplacement."
 
-#: models.py:113
+#: models.py:113 models.py:142
 msgid "position"
 msgstr "position"
 
@@ -194,13 +194,9 @@ msgstr "prix"
 msgid "Please, enter its price by month."
 msgstr "Entrez son prix au mois."
 
-#: models.py:142 models.py:156 models.py:198
-msgid "ad"
-msgstr "publicité"
-
-#: models.py:143
-msgid "ads"
-msgstr "publicités"
+#: models.py:143 models.py:156
+msgid "positions"
+msgstr "position"
 
 #: models.py:151 models.py:167 models.py:175
 msgid "banner"
@@ -226,9 +222,10 @@ msgstr "Sélectionnez une campagne."
 msgid "Please, select a ad type."
 msgstr "Sélectionnez un type de publicité."
 
-#: models.py:156 models.py:198
-msgid "Please, select a ad."
-msgstr "Sélectionnez une publicité."
+#: models.py:156
+#, fuzzy
+msgid "Please, select one or several positions."
+msgstr "Entrez une position numérique."
 
 #: models.py:157 models.py:177
 msgid "description"
@@ -282,6 +279,14 @@ msgstr "Téléchargez le fichier XML du Carousel."
 msgid "Please, select banners to include in the Carousel."
 msgstr "Sélectionnez les bannières à inclure dans le Carousel."
 
+#: models.py:198
+msgid "ad"
+msgstr "publicité"
+
+#: models.py:198
+msgid "Please, select a ad."
+msgstr "Sélectionnez une publicité."
+
 #: models.py:207
 msgid "carousel"
 msgstr "carousel"
@@ -289,3 +294,4 @@ msgstr "carousel"
 #: models.py:208
 msgid "carousels"
 msgstr "carousels"
+
