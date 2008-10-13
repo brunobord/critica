@@ -49,7 +49,8 @@
                             {% endif %}
                             {% if is_archive %}
                                 <a href="{% url issuearchive_home issue.number %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
-                            {% else %}
+                            {% endif %}
+                            {% if is_current %}
                                 <a href="{% url home %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
                             {% endif %}
                         </div>
@@ -133,7 +134,8 @@
                             <li id="kwick10"><a href="{% url issuearchive_category_regions issue.number %}">Regions</a></li>
                             <li id="kwick11"><a href="{% url issuearchive_category_voyages issue.number %}">Voyages</a></li>
                             <li id="kwick12"><a href="{% url issuearchive_category_epicurien issue.number %}" %}">Epicurien</a></li>
-                        {% else %}
+                        {% endif %}
+                        {% if is_current %}
                             <li id="kwick1"><a href="{% url category "national" %}">National</a></li>
                             <li id="kwick2"><a href="{% url category "etranger" %}">Etranger</a></li>
                             <li id="kwick3"><a href="{% url category "societe" %}">Societe</a></li>

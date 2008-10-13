@@ -91,6 +91,12 @@ def home(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = True
     else:
         context['is_archive'] = False
+        
+    # Is current
+    if not is_preview or is_archive:
+        context['is_current'] = True
+    else:
+        context['is_current'] = False
 
     # Generic articles
     category_positions = IssueCategoryPosition.objects.filter(issue=issue)
@@ -189,6 +195,12 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
         context['is_archive'] = True
     else:
         context['is_archive'] = False
+        
+    # Is current
+    if not is_preview or is_archive:
+        context['is_current'] = True
+    else:
+        context['is_current'] = False
     
     category = get_object_or_404(Category, slug=category_slug)
     context['category'] = category
@@ -243,6 +255,12 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = True
     else:
         context['is_archive'] = False
+        
+    # Is current
+    if not is_preview or is_archive:
+        context['is_current'] = True
+    else:
+        context['is_current'] = False
     
     # Featured region
     try:
@@ -301,6 +319,12 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = True
     else:
         context['is_archive'] = False
+        
+    # Is current
+    if not is_preview or is_archive:
+        context['is_current'] = True
+    else:
+        context['is_current'] = False
     
     try:
         context['article'] = VoyagesArticle.objects.get(
@@ -348,6 +372,12 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = True
     else:
         context['is_archive'] = False
+        
+    # Is current
+    if not is_preview or is_archive:
+        context['is_current'] = True
+    else:
+        context['is_current'] = False
     
     # Types
     type_cotefumeurs = EpicurienArticleType.objects.get(slug='cote-fumeurs')
@@ -439,6 +469,12 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = True
     else:
         context['is_archive'] = False
+        
+    # Is current
+    if is_current:
+        context['is_current'] = True
+    else:
+        context['is_current'] = False
         
     try:
         context['article'] = AngerArticle.objects.get(

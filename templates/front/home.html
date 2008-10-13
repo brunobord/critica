@@ -167,14 +167,18 @@
         {% with article_1 as article %}
             {% include "front/includes/home_article_main.html" %}
         {% endwith %}
+    {% else %}
+        {% include "front/includes/home_article_main_empty.html" %}
     {% endif %}
 	
 	{% if article_2 %}
         {% with article_2 as article %}
             {% include "front/includes/home_article_main.html" %}
         {% endwith %}
-	{% endif %}
-	
+	{% else %}
+        {% include "front/includes/home_article_main_empty.html" %}
+    {% endif %}
+    	
     <!-- ADD -->
     <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
         <p><a href="#">Publicité</a></p>

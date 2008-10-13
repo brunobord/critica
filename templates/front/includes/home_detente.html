@@ -10,7 +10,8 @@
                 {% endif %}
                 {% if is_archive %}
                     <a href="{% url issuearchive_category issue.number,voyages_article.category.slug %}">{{ voyages_article.category.name }}</a></span></h2>
-                {% else %}
+                {% endif %}
+                {% if is_current %}
                     <a href="{{ voyages_article.get_absolute_url }}">{{ voyages_article.category.name }}</a>
                 {% endif %}
             </li>
@@ -24,7 +25,8 @@
                     {% endif %}
                     {% if is_archive %}
                         <a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.title }}</a></span></h2>
-                    {% else %}
+                    {% endif %}
+                    {% if is_current %}
                         <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
                     {% endif %}
 				</li>
