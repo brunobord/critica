@@ -153,7 +153,7 @@ class AdBanner(models.Model):
     customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
     campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
     type = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
-    ad = models.ForeignKey('ads.Ad', verbose_name=_('ad'), unique=True, help_text=_('Please, select a ad.'))
+    ads = models.ManyToManyField('ads.Ad', verbose_name=_('ad'), help_text=_('Please, select a ad.'))
     description = models.TextField(_('description'), blank=True, help_text=_('You can enter a short description (optional).'))
     link = models.URLField(_('link'), blank=True, help_text=_('When people will click on this ad, they will be redirected to this link (optional).'))
     starting_date = models.DateField(_('starting date'))

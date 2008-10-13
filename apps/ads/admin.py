@@ -107,14 +107,15 @@ class AdBannerAdmin(admin.ModelAdmin):
             'fields': ('customer', 'campaign', 'type'),
         }),
         (_('Banner'), {
-            'fields': ('banner', 'ad', 'link', 'description'),
+            'fields': ('banner', 'ads', 'link', 'description'),
         }),
         (_('During'), {
             'fields': ('starting_date', 'ending_date'),
         }),
     )
-    list_display = ('customer', 'campaign', 'type', 'ad', 'starting_date', 'ending_date')
-    list_filter = ('customer', 'campaign', 'type', 'ad')
+    list_display = ('customer', 'campaign', 'type', 'starting_date', 'ending_date')
+    list_filter = ('customer', 'campaign', 'type')
+    filter_vertical = ['ads']
          
     def save_model(self, request, obj, form, change):
         obj.submitter = request.user
