@@ -139,8 +139,8 @@ class Ad(models.Model):
     objects = models.Manager()
 
     class Meta:
-        verbose_name = _('ad')
-        verbose_name_plural = _('ads')
+        verbose_name = _('position')
+        verbose_name_plural = _('positions')
         unique_together = (('page', 'location'),)
         
     def __unicode__(self):
