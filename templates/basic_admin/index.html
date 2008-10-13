@@ -69,6 +69,20 @@
                 <td><a href="ads/adbanner/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
+            {% if perms.ads.add_adcarousel %}
+            <tr>
+                <th scope="row"><a href="ads/adcarousel/">Carousels</a></th>
+                <td><a href="ads/adcarousel/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adcarousel/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            {% if perms.ads.add_adcarouselbanner %}
+            <tr>
+                <th scope="row"><a href="ads/adcarouselbanner/">Bannières de Carousel</a></th>
+                <td><a href="ads/adcarouselbanner/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adcarouselbanner/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
             {% if perms.ads.add_ad %}
             <tr>
                 <th scope="row"><a href="ads/ad/">Publicités</a></th>
