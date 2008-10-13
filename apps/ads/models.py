@@ -6,6 +6,7 @@ Models for ``critica.apps.ads`` application.
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
+from critica.apps.ads import settings as ads_settings
 
 
 class Customer(models.Model):
