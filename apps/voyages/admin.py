@@ -15,7 +15,7 @@ class VoyagesArticleAdmin(BaseArticleAdmin):
     Administration interface options of ``VoyagesArticle`` model.
     
     """
-    list_display = ('title', 'localization', 'ald_issues', 'tags', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish', 'ald_illustration')
+    list_display = ('title', 'localization', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_illustration')
     list_filter = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'localization')
     search_fields = ('title', 'summary', 'content', 'localization')
     

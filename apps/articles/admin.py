@@ -20,7 +20,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface options of ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'view_count', 'is_featured', 'is_reserved', 'is_ready_to_publish', 'ald_illustration')
+    list_display = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_illustration')
     list_filter = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     filter_horizontal = ('issues',)
     search_fields = ('title', 'summary', 'content')
@@ -127,7 +127,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return obj.author_nickname
         else:
             return self.ald_author(obj)
-    ald_author_nickname.short_description = _('author nickname')
+    ald_author_nickname.short_description = 'pseudo'
 
     def ald_issues(self, obj):
         """
@@ -159,7 +159,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return u'<span class="novalue">%s</span>' % _('no publication date')
         else:
             return obj.publication_date.strftime('%Y/%m/%d')
-    ald_publication_date.short_description = _('publication date')
+    ald_publication_date.short_description = 'date'
     ald_publication_date.allow_tags = True
     
     def ald_illustration(self, obj):
@@ -173,7 +173,17 @@ class BaseArticleAdmin(admin.ModelAdmin):
             thumb = '<img src="%s%s" alt="%s" height="50" />' % (settings.MEDIA_URL, obj.illustration.image, obj.illustration.legend)
         return thumb
     ald_illustration.allow_tags = True
-    ald_illustration.short_description = _('Illustration')
+    ald_illustration.short_description = 'visuel'
+    
+    def ald_view_count(self, obj):
+        return obj.view_count
+    ald_view_count.short_description = 'nb de vues'
+    
+    def ald_is_reserved(self, obj):
+        return obj.is_reserved
+    ald_is_reserved.short_description = 'marbre'
+    ald_is_reserved.boolean = True
+    
 
 
 class ArticleAdmin(BaseArticleAdmin):

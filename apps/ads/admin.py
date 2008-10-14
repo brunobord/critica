@@ -196,7 +196,7 @@ class AdCarouselAdmin(admin.ModelAdmin):
     list_display = ('folder', 'customer', 'campaign', 'type', 'starting_date', 'ending_date')
     list_filter = ('customer', 'campaign', 'type')
     filter_vertical = ['ads']
-         
+
     def save_model(self, request, obj, form, change):
         obj.submitter = request.user
         obj.save()
