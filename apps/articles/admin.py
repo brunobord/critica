@@ -171,7 +171,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
         
         """
         if obj.use_default_illustration or obj.illustration is None:
-            thumb = '<img src="%s" alt="%s" height="50" class="default-illustration" />' % (obj.category.image.url, obj.category.image_legend)
+            thumb = '<div class="default-illustration"><img src="%s" alt="%s" height="50"/></div>' % (obj.category.image.url, obj.category.image_legend)
         else:
             thumb = '<img src="%s" alt="%s" height="50" />' % (obj.illustration.image.url, obj.illustration.legend)
         return thumb
