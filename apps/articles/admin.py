@@ -170,10 +170,10 @@ class BaseArticleAdmin(admin.ModelAdmin):
         Illustration thumbnail for admin list_display option.
         
         """
-        if obj.use_default_illustration:
-            thumb = '<img src="%s%s" alt="%s" height="50" class="default-illustration" />' % (settings.MEDIA_URL, obj.category.image, obj.category.image_legend)
+        if obj.use_default_illustration or obj.illustration is None:
+            thumb = '<img src="%s" alt="%s" height="50" class="default-illustration" />' % (obj.category.image.url, obj.category.image_legend)
         else:
-            thumb = '<img src="%s%s" alt="%s" height="50" />' % (settings.MEDIA_URL, obj.illustration.image, obj.illustration.legend)
+            thumb = '<img src="%s" alt="%s" height="50" />' % (obj.illustration.image.url, obj.illustration.legend)
         return thumb
     ald_illustration.allow_tags = True
     ald_illustration.short_description = 'visuel'
