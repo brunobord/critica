@@ -8,7 +8,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from tagging.fields import TagField
 from critica.apps.videos.utils import resize_video
-#from critica.apps.videos.managers import PublishedVideoManager
 
 
 class Video(models.Model):
@@ -100,7 +99,6 @@ class Video(models.Model):
     is_reserved = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
     
     objects = models.Manager()
-#    published = PublishedVideoManager()
     
     class Meta:
         """ 
