@@ -27,6 +27,7 @@ class VideoAdmin(admin.ModelAdmin):
     ordering = ('-creation_date',)
     date_hierarchy = 'creation_date'
     exclude = ['author']
+    _object = None
     
     def __call__(self, request, url):
         self.request = request

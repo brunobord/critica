@@ -114,10 +114,64 @@ class AdBannerAdmin(admin.ModelAdmin):
             'fields': ('starting_date', 'ending_date'),
         }),
     )
-    list_display = ('customer', 'campaign', 'type', 'starting_date', 'ending_date')
+    list_display = ('customer', 'campaign', 'type', 'ald_ads', 'starting_date', 'ending_date')
     list_filter = ('customer', 'campaign', 'type')
     filter_vertical = ['ads']
-         
+    _object = None
+
+    def __call__(self, request, url):
+        self.request = request
+        return super(AdBannerAdmin, self).__call__(request, url)
+        
+    def change_view(self, request, object_id):
+        self._request = request
+        self._object = None
+        try:
+            self._object = self.model._default_manager.get(pk=object_id)
+        except model.DoesNotExist:
+            self._object = None
+        self._action = "change"
+        return super(AdBannerAdmin, self).change_view(request, object_id) 
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(AdBannerAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'ads': 
+            my_choices = []
+            # Displays only available ads
+            ads = []
+            banners = AdBanner.objects.all()
+            for banner in banners:
+                for ad in banner.ads.all():
+                    ads.append((ad.id, ad))
+            all_ads = list(set(ads))        
+            excluded_ads = [int(ad.id) for ad_id, ad in all_ads]
+            if self._object:
+                current_ads = [int(ad.id) for ad in self._object.ads.all()]
+                for current_ad in current_ads:
+                    excluded_ads.remove(current_ad)
+            ad_list = []
+            for ad in Ad.objects.exclude(id__in=excluded_ads):
+                ad_list.append((int(ad.id), ad.__unicode__()))
+            my_choices.extend(ad_list)
+            print my_choices
+            field.choices = my_choices
+        return field
+
+    def ald_ads(self, obj):
+        html = '<table class="banner-ads-info"><tbody>'
+        html += '<tr><th style="width:120px">%s</th><th style="width:200px">%s</th><th style="width:140px">%s</th></tr>' % ('Page', 'Format', 'Emplacement')
+        for ad in obj.ads.all():
+            html += '<tr><td>%s</td><td>%s</td><td>%s</td></tr>' % (ad.page, ad.format, ad.location)
+        html += '</tbody></table>'
+        return html
+    ald_ads.allow_tags = True
+    ald_ads.short_description = (_('positions'))
+    
     def save_model(self, request, obj, form, change):
         obj.submitter = request.user
         obj.save()
