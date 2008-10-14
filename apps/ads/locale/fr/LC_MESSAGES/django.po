@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-13 17:13+0200\n"
+"POT-Creation-Date: 2008-10-14 08:04+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,19 +17,19 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:108 admin.py:146
+#: admin.py:107 admin.py:132
 msgid "Customer"
 msgstr "Client"
 
-#: admin.py:111
+#: admin.py:110
 msgid "Banner"
 msgstr "Bannière"
 
-#: admin.py:114 admin.py:152
+#: admin.py:113 admin.py:138
 msgid "During"
 msgstr "Durée"
 
-#: admin.py:149
+#: admin.py:135
 msgid "Carousel"
 msgstr "Carousel"
 
@@ -43,16 +43,16 @@ msgid "Please, enter the customer name."
 msgstr "Entrez un nom pour ce client."
 
 #: models.py:14 models.py:30 models.py:49 models.py:69 models.py:93
-#: models.py:114 models.py:136 models.py:161 models.py:178 models.py:201
+#: models.py:114 models.py:136 models.py:161 models.py:193
 msgid "creation date"
 msgstr "date de création"
 
 #: models.py:15 models.py:31 models.py:50 models.py:70 models.py:94
-#: models.py:115 models.py:137 models.py:162 models.py:179 models.py:202
+#: models.py:115 models.py:137 models.py:162 models.py:194
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:20 models.py:28 models.py:153 models.py:195
+#: models.py:20 models.py:28 models.py:153 models.py:187
 msgid "customer"
 msgstr "client"
 
@@ -68,7 +68,7 @@ msgstr "Sélectionnez un client."
 msgid "Please, enter the campaign name."
 msgstr "Entrez un nom pour cette campagne."
 
-#: models.py:36 models.py:154 models.py:196
+#: models.py:36 models.py:154 models.py:188
 msgid "campaign"
 msgstr "campagne"
 
@@ -112,7 +112,7 @@ msgstr "formats"
 msgid "Please, enter a name for this type."
 msgstr "Entrez un nom pour ce type."
 
-#: models.py:75 models.py:91 models.py:155 models.py:197
+#: models.py:75 models.py:91 models.py:155 models.py:189
 msgid "type"
 msgstr "type"
 
@@ -158,7 +158,7 @@ msgstr "pages"
 msgid "Please, enter a name for this location."
 msgstr "Entrez un nom pour cet emplacement."
 
-#: models.py:113 models.py:142
+#: models.py:113 models.py:142 models.py:190
 msgid "position"
 msgstr "position"
 
@@ -196,42 +196,41 @@ msgstr "Entrez son prix au mois."
 
 #: models.py:143 models.py:156
 msgid "positions"
-msgstr "position"
+msgstr "positions"
 
-#: models.py:151 models.py:167 models.py:175
+#: models.py:151 models.py:167
 msgid "banner"
 msgstr "bannière"
 
-#: models.py:151 models.py:175
+#: models.py:151
 msgid "Please, select a banner to upload."
 msgstr "Sélectionnez une bannière à télécharger."
 
-#: models.py:152 models.py:176 models.py:194
+#: models.py:152 models.py:186
 msgid "submitter"
 msgstr "auteur"
 
-#: models.py:153 models.py:195
+#: models.py:153 models.py:187
 msgid "Please, select a customer."
 msgstr "Sélectionnez un client."
 
-#: models.py:154 models.py:196
+#: models.py:154 models.py:188
 msgid "Please, select a campaign."
 msgstr "Sélectionnez une campagne."
 
-#: models.py:155 models.py:197
+#: models.py:155 models.py:189
 msgid "Please, select a ad type."
 msgstr "Sélectionnez un type de publicité."
 
-#: models.py:156
-#, fuzzy
+#: models.py:156 models.py:190
 msgid "Please, select one or several positions."
-msgstr "Entrez une position numérique."
+msgstr "Sélectionnez une ou plusieurs positions."
 
-#: models.py:157 models.py:177
+#: models.py:157
 msgid "description"
 msgstr "description"
 
-#: models.py:157 models.py:177
+#: models.py:157
 msgid "You can enter a short description (optional)."
 msgstr "Vous pouvez entrer une courte description (optionnel)."
 
@@ -247,51 +246,75 @@ msgstr ""
 "Quand les internautes cliqueront sur cette publicité, ils seront redirigés "
 "vers ce lien."
 
-#: models.py:159 models.py:199
+#: models.py:159 models.py:191
 msgid "starting date"
 msgstr "date de départ"
 
-#: models.py:160 models.py:200
+#: models.py:160 models.py:192
 msgid "ending date"
 msgstr "date de fin"
 
-#: models.py:168 models.py:193
+#: models.py:168
 msgid "banners"
 msgstr "bannières"
 
-#: models.py:184
-msgid "carousel banner"
-msgstr "bannière de Carousel"
-
-#: models.py:185
-msgid "carousel banners"
-msgstr "bannières de Carousel"
-
-#: models.py:192
+#: models.py:175
 msgid "XML file"
 msgstr "fichier XML"
 
-#: models.py:192
+#: models.py:175
 msgid "Please, upload the Carousel XML file."
 msgstr "Téléchargez le fichier XML du Carousel."
 
-#: models.py:193
-msgid "Please, select banners to include in the Carousel."
-msgstr "Sélectionnez les bannières à inclure dans le Carousel."
+#: models.py:176
+msgid "Banner 1"
+msgstr "Bannière 1"
 
-#: models.py:198
-msgid "ad"
-msgstr "publicité"
+#: models.py:176 models.py:177 models.py:178 models.py:179 models.py:180
+#: models.py:181 models.py:182 models.py:183 models.py:184 models.py:185
+msgid "Please, upload an image."
+msgstr "Téléchargez une image."
 
-#: models.py:198
-msgid "Please, select a ad."
-msgstr "Sélectionnez une publicité."
+#: models.py:177
+msgid "Banner 2"
+msgstr "Bannière 2"
 
-#: models.py:207
+#: models.py:178
+msgid "Banner 3"
+msgstr "Bannière 3"
+
+#: models.py:179
+msgid "Banner 4"
+msgstr "Bannière 4"
+
+#: models.py:180
+msgid "Banner 5"
+msgstr "Bannière 5"
+
+#: models.py:181
+msgid "Banner 6"
+msgstr "Bannière 6"
+
+#: models.py:182
+msgid "Banner 7"
+msgstr "Bannière 7"
+
+#: models.py:183
+msgid "Banner 8"
+msgstr "Bannière 8"
+
+#: models.py:184
+msgid "Banner 9"
+msgstr "Bannière 9"
+
+#: models.py:185
+msgid "Banner 10"
+msgstr "Bannière 10"
+
+#: models.py:199
 msgid "carousel"
 msgstr "carousel"
 
-#: models.py:208
+#: models.py:200
 msgid "carousels"
 msgstr "carousels"
-
