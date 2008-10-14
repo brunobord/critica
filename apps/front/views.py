@@ -9,6 +9,7 @@ from django.shortcuts import render_to_response
 from django.shortcuts import get_object_or_404
 from django.template import RequestContext
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import MultipleObjectsReturned
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
 from critica.apps.positions.models import IssueCategoryPosition
@@ -110,6 +111,13 @@ def home(request, issue=None, is_preview=False, is_archive=False):
                 is_reserved=False, 
                 category=category_position.category)
                 context[varname] = article
+            except MultipleObjectsReturned:
+                article = Article.objects.filter(
+                issues__id=issue.id, 
+                is_ready_to_publish=True, 
+                is_reserved=False, 
+                category=category_position.category)[0]
+                context[varname] = article
             except ObjectDoesNotExist:
                 context[varname] = False
 
@@ -121,6 +129,12 @@ def home(request, issue=None, is_preview=False, is_archive=False):
             is_ready_to_publish=True, 
             is_reserved=False, 
             region=featured.region)
+    except MultipleObjectsReturned:
+        context['region_note'] = RegionNote.objects.filter(
+            issues__id=issue.id, 
+            is_ready_to_publish=True, 
+            is_reserved=False, 
+            region=featured.region)[0]
     except ObjectDoesNotExist:
         context['region_note'] = False
 
@@ -130,6 +144,11 @@ def home(request, issue=None, is_preview=False, is_archive=False):
             issues__id=issue.id, 
             is_ready_to_publish=True, 
             is_reserved=False)
+    except MultipleObjectsReturned:
+        context['voyages_article'] = VoyagesArticle.objects.filter(
+            issues__id=issue.id, 
+            is_ready_to_publish=True, 
+            is_reserved=False)[0]
     except ObjectDoesNotExist:
         context['voyages_article'] = False
     
@@ -148,19 +167,27 @@ def home(request, issue=None, is_preview=False, is_archive=False):
             issues__id=issue.id, 
             is_ready_to_publish=True, 
             is_reserved=False)
+    except MultipleObjectsReturned:
+        context['anger_article'] = AngerArticle.objects.filter(
+            issues__id=issue.id, 
+            is_ready_to_publish=True, 
+            is_reserved=False)[0]
     except ObjectDoesNotExist:
         context['anger_article'] = False
     
     # Illustration of the day
     try:
-        context['illustration'] = IllustrationOfTheDay.objects.get(
-            issues__id=issue.id)
+        context['illustration'] = IllustrationOfTheDay.objects.get(issues__id=issue.id)
+    except MultipleObjectsReturned:
+        context['illustration'] = IllustrationOfTheDay.objects.filter(issues__id=issue.id)[0]
     except ObjectDoesNotExist:
         context['illustration'] = False
 
     # Video (reportage)
     try:
         context['video'] = Video.objects.get(issues__id=issue.id)
+    except MultipleObjectsReturned:
+        context['video'] = Video.objects.filter(issues__id=issue.id)[0]
     except ObjectDoesNotExist:
         context['video'] = False
 
@@ -271,6 +298,14 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
             is_reserved=False,
             region=featured_region.region)
         context['featured_region_note'] = featured_region_note
+    except MultipleObjectsReturned:
+        featured_region = FeaturedRegion.objects.get(issue=issue)
+        featured_region_note = RegionNote.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            region=featured_region.region)[0]
+        context['featured_region_note'] = featured_region_note
     except ObjectDoesNotExist:
         context['featured_region_note'] = False
     
@@ -331,6 +366,11 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
             issues__id=issue.id,
             is_ready_to_publish=True,
             is_reserved=False)
+    except MultipleObjectsReturned:
+        context['article'] = VoyagesArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False)[0]
     except ObjectDoesNotExist:
         context['article'] = False
         
@@ -391,6 +431,12 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
             is_ready_to_publish=True,
             is_reserved=False,
             type=type_cotefumeurs)
+    except MultipleObjectsReturned:
+        context['article_cotefumeurs'] = EpicurienArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotefumeurs)[0]
     except ObjectDoesNotExist:
         context['article_cotefumeurs'] = False
         
@@ -409,6 +455,12 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
             is_ready_to_publish=True,
             is_reserved=False,
             type=type_cotegourmets)
+    except MultipleObjectsReturned:
+        context['article_cotegourmets'] = EpicurienArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotegourmets)[0]
     except ObjectDoesNotExist:
         context['article_cotegourmets'] = False
         
@@ -427,6 +479,12 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
             is_ready_to_publish=True,
             is_reserved=False,
             type=type_cotebar)
+    except MultipleObjectsReturned:
+        context['article_cotebar'] = EpicurienArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False,
+            type=type_cotebar)[0]
     except ObjectDoesNotExist:
         context['article_cotebar'] = False
         
@@ -481,6 +539,11 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
             issues__id=issue.id,
             is_ready_to_publish=True,
             is_reserved=False)
+    except MultipleObjectsReturned:
+        context['article'] = AngerArticle.objects.filter(
+            issues__id=issue.id,
+            is_ready_to_publish=True,
+            is_reserved=False)[0]
     except ObjectDoesNotExist:
         context['article'] = False
         

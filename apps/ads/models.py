@@ -170,19 +170,26 @@ class AdBanner(models.Model):
     def __unicode__(self):
         return u'%s' % (self.banner)
         
+
+class AdCarouselBanner(models.Model):
+    banner = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload.'))
+    carousel = models.ForeignKey('ads.AdCarousel', verbose_name=_('carousel'), help_text=_('Please, select or add a Carousel.'))
+    submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
+    customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
+    campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
+
+    objects = models.Manager()
+
+    class Meta:
+        verbose_name = _('carousel banner')
+        verbose_name_plural = _('carousel banners')
         
+    def __unicode__(self):
+        return u'%s' % (self.banner)
+
+
 class AdCarousel(models.Model):
     xml = models.FileField(upload_to=ads_settings.CAROUSEL_XML_UPLOAD_PATH, verbose_name=_('XML file'), help_text=_('Please, upload the Carousel XML file.'))
-    banner_1 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 1'), blank=True, help_text=_('Please, upload an image.'))
-    banner_2 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 2'), blank=True, help_text=_('Please, upload an image.'))
-    banner_3 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 3'), blank=True, help_text=_('Please, upload an image.'))
-    banner_4 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 4'), blank=True, help_text=_('Please, upload an image.'))
-    banner_5 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 5'), blank=True, help_text=_('Please, upload an image.'))
-    banner_6 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 6'), blank=True, help_text=_('Please, upload an image.'))
-    banner_7 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 7'), blank=True, help_text=_('Please, upload an image.'))
-    banner_8 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 8'), blank=True, help_text=_('Please, upload an image.'))
-    banner_9 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 9'), blank=True, help_text=_('Please, upload an image.'))
-    banner_10 = models.ImageField(upload_to=ads_settings.CAROUSEL_IMAGE_UPLOAD_PATH, verbose_name=_('Banner 10'), blank=True, help_text=_('Please, upload an image.'))
     submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
     customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
     campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))

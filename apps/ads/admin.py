@@ -187,7 +187,7 @@ class AdCarouselAdmin(admin.ModelAdmin):
             'fields': ('customer', 'campaign', 'type'),
         }),
         (_('Carousel'), {
-            'fields': ('xml', 'banner_1', 'banner_2', 'banner_3', 'banner_4', 'banner_5', 'banner_6', 'banner_7', 'banner_8', 'banner_9', 'banner_10', 'ads'),
+            'fields': ('xml', 'ads'),
         }),
         (_('During'), {
             'fields': ('starting_date', 'ending_date'),
@@ -204,3 +204,5 @@ class AdCarouselAdmin(admin.ModelAdmin):
 admin.site.register(AdCarousel, AdCarouselAdmin)
 basic_site.register(AdCarousel, AdCarouselAdmin)
 advanced_site.register(AdCarousel, AdCarouselAdmin)
+
+
