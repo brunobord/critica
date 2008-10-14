@@ -150,7 +150,7 @@ class AdBannerAdmin(admin.ModelAdmin):
                     ads.append((ad.id, ad))
             all_ads = list(set(ads))        
             excluded_ads = [int(ad.id) for ad_id, ad in all_ads]
-            if self._object:
+            if self._object is not None:
                 current_ads = [int(ad.id) for ad in self._object.ads.all()]
                 for current_ad in current_ads:
                     excluded_ads.remove(current_ad)
