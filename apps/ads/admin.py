@@ -187,13 +187,13 @@ class AdCarouselAdmin(admin.ModelAdmin):
             'fields': ('customer', 'campaign', 'type'),
         }),
         (_('Carousel'), {
-            'fields': ('xml', 'ads'),
+            'fields': ('folder', 'ads'),
         }),
         (_('During'), {
             'fields': ('starting_date', 'ending_date'),
         }),
     )
-    list_display = ('customer', 'campaign', 'type', 'starting_date', 'ending_date')
+    list_display = ('folder', 'customer', 'campaign', 'type', 'starting_date', 'ending_date')
     list_filter = ('customer', 'campaign', 'type')
     filter_vertical = ['ads']
          
