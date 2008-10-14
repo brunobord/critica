@@ -103,8 +103,9 @@ class BaseArticleAdmin(admin.ModelAdmin):
         Auto-save author.
         
         """
-        obj.author = request.user
-        obj.save()
+        if change == False:
+            obj.author = request.user
+            obj.save()
         
     def ald_author(self, obj):
         """

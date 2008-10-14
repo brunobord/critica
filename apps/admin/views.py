@@ -246,3 +246,4 @@ def basic_dashboard(request, issue=None):
         context_instance=RequestContext(request)
     )
 
+
