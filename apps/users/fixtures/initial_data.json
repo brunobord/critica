@@ -54,6 +54,15 @@
         }
     }, 
     {
+        "pk": 137, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_adcarousel", 
+            "name": "Can add carousel", 
+            "content_type": 45
+        }
+    }, 
+    {
         "pk": 119, 
         "model": "auth.permission", 
         "fields": {
@@ -126,6 +135,15 @@
         }
     }, 
     {
+        "pk": 138, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_adcarousel", 
+            "name": "Can change carousel", 
+            "content_type": 45
+        }
+    }, 
+    {
         "pk": 120, 
         "model": "auth.permission", 
         "fields": {
@@ -195,6 +213,15 @@
             "codename": "delete_adcampaign", 
             "name": "Can delete campaign", 
             "content_type": 38
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_adcarousel", 
+            "name": "Can delete carousel", 
+            "content_type": 45
         }
     }, 
     {
@@ -1477,14 +1504,17 @@
                 131, 
                 134, 
                 116, 
+                137, 
                 113, 
                 132, 
                 135, 
                 117, 
+                138, 
                 114, 
                 133, 
                 136, 
                 118, 
+                139, 
                 115
             ]
         }
