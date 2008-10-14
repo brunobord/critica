@@ -69,7 +69,8 @@ class PageAdmin(admin.ModelAdmin):
         Auto-save author.
         
         """
-        obj.author = request.user
+        if change == False:
+            obj.author = request.user
         obj.save()
 
 admin.site.register(Page, PageAdmin)

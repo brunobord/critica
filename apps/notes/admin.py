@@ -96,7 +96,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
         """
         if change == False:
             obj.author = request.user
-            obj.save()
+        obj.save()
         
     def ald_author(self, obj):
         """

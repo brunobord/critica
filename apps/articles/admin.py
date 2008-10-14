@@ -105,7 +105,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
         """
         if change == False:
             obj.author = request.user
-            obj.save()
+        obj.save()
         
     def ald_author(self, obj):
         """
@@ -143,8 +143,11 @@ class BaseArticleAdmin(admin.ModelAdmin):
         Formatted opinion for admin list_display option.
         
         """
+        from critica.apps.articles import choices
         if obj.opinion:
-            return obj.opinion
+            for opinion in choices.OPINION_CHOICES:
+                if obj.opinion == opinion[0]:
+                    return opinion[1]
         else:
             return u'<span class="novalue">%s</span>' % _('no opinion')
     ald_opinion.short_description = _('opinion')
@@ -184,7 +187,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
     ald_is_reserved.short_description = 'marbre'
     ald_is_reserved.boolean = True
     
-
 
 class ArticleAdmin(BaseArticleAdmin):
     """
