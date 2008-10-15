@@ -5,6 +5,7 @@ Administration interface options of ``critica.apps.positions`` models.
 """
 from django.contrib import admin
 from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 from critica.apps.categories.models import Category
 from critica.apps.positions.models import CategoryPosition, NotePosition
 from critica.apps.positions.models import DefaultCategoryPosition, DefaultNotePosition
@@ -67,7 +68,7 @@ admin.site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
 custom_site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
 
 class IssueNotePositionAdmin(admin.ModelAdmin):
-    list_display = ('issue', 'category', 'type', 'position')
+    list_display = ('issue', 'ald_category', 'type', 'position')
     list_filter = ('issue', 'category', 'type', 'position')
     search_fields = ('issue__number', 'category__name', 'type__name', 'position')
     
@@ -84,6 +85,13 @@ class IssueNotePositionAdmin(admin.ModelAdmin):
             print my_choices
             field.choices = my_choices
         return field
+        
+    def ald_category(self, obj):
+        from django.contrib.sites.models import Site
+        site = Site.objects.get_current()
+        return '<a href="http://%s/preview/%s/%s/">%s</a>' % (site.domain, obj.issue.secret_key, obj.category.slug, obj.category.name)
+    ald_category.short_description = _('category')
+    ald_category.allow_tags = True
     
 admin.site.register(IssueNotePosition, IssueNotePositionAdmin)
 custom_site.register(IssueNotePosition, IssueNotePositionAdmin)

@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+{% load adminmedia admin_list i18n %}
+{% block extrahead %}<link rel="stylesheet" type="text/css" media="all" href="{{ MEDIA_URL }}critica/admin/basic/css/custom.css" />{% endblock %}
+{% block content %}
+<div id="content-main">
+    <p><strong>Pour prévisualiser la mise en page d'une rubrique, cliquez sur son nom (colonne "Rubrique").</strong></p>
+    {{ block.super }}
+{% endblock %}
+
+
+
+

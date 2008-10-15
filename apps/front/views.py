@@ -244,10 +244,20 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
                     type=note_position.type,
                     category=category)
                 context[varname] = note
+            except MultipleObjectsReturned:
+                note = Note.objects.filter(
+                    issues__id=issue.id, 
+                    is_ready_to_publish=True, 
+                    is_reserved=False, 
+                    type=note_position.type,
+                    category=category)[0]
+                context[varname] = note
             except ObjectDoesNotExist:
                 context[varname] = False
     try:
         context['article'] = Article.objects.get(issues__id=issue.id, category__slug=category_slug)
+    except MultipleObjectsReturned:
+        context['article'] = Article.objects.filter(issues__id=issue.id, category__slug=category_slug)[0]
     except ObjectDoesNotExist:
         context['article'] = False
         
