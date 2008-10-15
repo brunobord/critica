@@ -539,7 +539,7 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if is_current:
+    if not is_preview or is_archive:
         context['is_current'] = True
     else:
         context['is_current'] = False

@@ -22,51 +22,38 @@
     <h1>Régions</h1>
     <!-- ARTICLE ACCORDION -->
     <div class="articleAccordion">
-        {% for regions_note in regions_notes_1 %}
-	    <div class="articleSection" id="{{ regions_note.region.slug }}">
-	        <div class="articleButton">
-	            <h2>{{ regions_note.region.name }}</h2>
-	            <h3>{{ regions_note.title }}</h3>
-			</div>
-			<div class="articleContent">
-                {{ regions_note.content|safe }}
-            </div>
-        </div>
-        {% endfor %}
+        {% if regions_notes_1 %}
+            {% for regions_note in regions_notes_1 %}
+                {% include "front/includes/regions_note.html" %}
+            {% endfor %}
+        {% endif %}
+        
         <!-- ADD -->
         <div class="addSection add468">
             <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
             <p><a href="#">Publicité</a></p>
         </div>
 	    <!-- // ADD -->
-        {% for regions_note in regions_notes_2 %}
-	    <div class="articleSection" id="{{ regions_note.region.slug }}">
-	        <div class="articleButton">
-	            <h2>{{ regions_note.region.name }}</h2>
-	            <h3>{{ regions_note.title }}</h3>
-			</div>
-			<div class="articleContent">
-                {{ regions_note.content|safe }}
-            </div>
-        </div>
-        {% endfor %}
+	    
+	    {% if regions_notes_2 %}
+            {% for regions_note in regions_notes_2 %}
+                {% include "front/includes/regions_note.html" %}
+            {% endfor %}
+        {% endif %}
+        
         <!-- ADD -->
         <div class="addSection add468">
             <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
             <p><a href="#">Publicité</a></p>
 	    </div>
 	    <!-- // ADD -->
-        {% for regions_note in regions_notes_3 %}
-	    <div class="articleSection" id="{{ regions_note.region.slug }}">
-	        <div class="articleButton">
-	            <h2>{{ regions_note.region.name }}</h2>
-	            <h3>{{ regions_note.title }}</h3>
-			</div>
-			<div class="articleContent">
-                {{ regions_note.content|safe }}
-            </div>
-        </div>
-        {% endfor %}
+	    
+	    {% if regions_notes_3 %}
+            {% for regions_note in regions_notes_3 %}
+                {% include "front/includes/regions_note.html" %}
+            {% endfor %}
+        {% endif %}
+        
     </div>
     <!-- // ARTICLE ACCORDION -->
 </div>
@@ -75,13 +62,11 @@
 <!-- RIGHT WRAP -->
 <div class="rightWrap">
     <!-- MAIN ARTICLE -->
-    <div class="articleSection articleMain">
-        <h2><span>{{ featured_region_note.region.name }}</span></h2>
-		<h3>{{ featured_region_note.title }}</h3>
-		<div class="lead autoClear">
-            {{ featured_region_note.content|safe }}
-        </div>
-    </div>
+    {% if featured_region_note %}
+        {% include "front/includes/regions_featured_note.html" %}
+    {% else %}
+        {% include "front/includes/regions_featured_note_empty.html" %}
+    {% endif %}
 	<!-- // MAIN ARTICLE -->
 	
     <div class="addSection add728">

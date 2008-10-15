@@ -192,37 +192,49 @@
             {% with article_4 as article %}
                 {% include "front/includes/home_article.html" %}
             {% endwith %}
-		{% endif %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
 
 		{% if article_5 %}
             {% with article_5 as article %}
                 {% include "front/includes/home_article.html" %}
             {% endwith %}
-		{% endif %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
 
 		{% if article_6 %}
             {% with article_6 as article %}
                 {% include "front/includes/home_article.html" %}
             {% endwith %}
-		{% endif %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
 
 		{% if article_7 %}
             {% with article_7 as article %}
                 {% include "front/includes/home_article.html" %}
             {% endwith %}
-		{% endif %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
 		
 		{% if article_8 %}
             {% with article_8 as article %}
                 {% include "front/includes/home_article.html" %}
             {% endwith %}
-		{% endif %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
 		
 		{% if article_9 %}
             {% with article_9 as article %}
                 {% include "front/includes/home_article.html" %}
             {% endwith %}
-		{% endif %}
+		{% else %}
+	        {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
 		
     </div>
     <!-- // ARTICLE LIST -->
@@ -241,7 +253,9 @@
             {% with region_note as article %}
                 {% include "front/includes/home_region.html" %}
             {% endwith %}
-		{% endif %}
+		{% else %}
+		    {% include "front/includes/home_region_empty.html" %}
+        {% endif %}
 		
         {% include "front/includes/home_detente.html" %}
 		
@@ -264,7 +278,9 @@
         {% with article_3 as article %}
             {% include "front/includes/home_article_main.html" %}
         {% endwith %}
-	{% endif %}
+	{% else %}
+	    {% include "front/includes/home_article_main_empty.html" %}
+    {% endif %}
 	
     <div id="newsletterSection">
         <form action="" method="post">
@@ -283,7 +299,9 @@
                     {% with anger_article as article %}
                         {% include "front/includes/home_anger.html" %}
 				    {% endwith %}
-				{% endif %}
+				{% else %}
+				    {% include "front/includes/home_anger_empty.html" %}
+			    {% endif %}
 				
 			</div>
 		    <!-- // ARTICLE LIST -->

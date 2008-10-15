@@ -1,0 +1,8 @@
+{% for article in archives %}
+<div class="articleButton">
+    <h3>{{ article.title }}</h3>
+</div>
+<div>
+    {{ article.summary|safe }}
+</div>
+{% endfor %}

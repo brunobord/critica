@@ -6,16 +6,22 @@
 			<li>
 			    <h3>Voyages</h3>
                 {% if is_preview %}
-                    <a href="{% url issuepreview_category issue.secret_key,voyages_article.category.slug %}">{{ voyages_article.category.name }}</a>
+                    <a href="{% url issuepreview_category issue.secret_key,voyages_article.category.slug %}">{{ voyages_article.title }}</a>
                 {% endif %}
                 {% if is_archive %}
-                    <a href="{% url issuearchive_category issue.number,voyages_article.category.slug %}">{{ voyages_article.category.name }}</a></span></h2>
+                    <a href="{% url issuearchive_category issue.number,voyages_article.category.slug %}">{{ voyages_article.title }}</a></span></h2>
                 {% endif %}
                 {% if is_current %}
-                    <a href="{{ voyages_article.get_absolute_url }}">{{ voyages_article.category.name }}</a>
+                    <a href="{{ voyages_article.get_absolute_url }}">{{ voyages_article.title }}</a>
                 {% endif %}
             </li>
-		{% endif %}
+		{% else %}
+		    <li>
+		        <h3>Voyages</h3>
+		        <a href="#">Article non-rédigé.</a>
+            </li>
+        {% endif %}
+        
 		{% if epicurien_articles %}
 		    {% for article in epicurien_articles %}
 		        <li>
@@ -31,7 +37,11 @@
                     {% endif %}
 				</li>
 			{% endfor %}
-		{% endif %}
+		{% else %}
+		    <li>
+		        <h3>Épicurien : incomplet - articles manquants</h3>
+		    </li>
+        {% endif %}
 	    </ul>
 	</div>
 	<p class="readMore"><a href="#">Lire la suite</a></p>

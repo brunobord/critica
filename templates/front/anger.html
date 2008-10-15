@@ -10,35 +10,18 @@
     <h1>Coup de gueule</h1>
     
     {% if article %}
-    <div class="articleSection articleMain">
-        <h3>{{ article.title }}</h3>
-        <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
-        <div class="illustration">
-            <img src="{{ article.category.image|thumbnail:"200,0" }}" alt="{{ article.category.image_legend }}" />
-			<p class="credits">Photo : {{ article.category.image_credits }}</p>
-        </div>
-        {{ article.summary|safe }}
-		<p class="readMore slick-show"><a href="#">Lire la suite</a></p>
-		<!-- SLICKBOX -->
-		<div class="slickbox" style="display:block;">
-            {{ article.content|safe }}
-            <div class="relatedArticles">
-                <h4>A lire aussi</h4>
-                <ul>
-                    <li><h5><a href="#">Pascal n'a plus d'idées <span>(n°284 - 12.08.2008)</span></a></h5></li>
-                </ul>
-            </div>
-            <p class="readMore slick-hide"><a href="#">Masquer</a></p>
-        </div>
-        <!-- // SLICKBOX -->
-    </div>
+        {% include "front/includes/category_article.html" %}
+    {% else %}
+        {% include "front/includes/category_article_empty.html" %}
     {% endif %}
+    
     <!-- ADD -->
     <div class="addSection add468">
         <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
 		<p><a href="#">Publicité</a></p>
 	</div>
 	<!-- // ADD -->
+	
 </div>
 <!-- // LEFT WRAP -->
 				
@@ -54,15 +37,10 @@
     			    <div>
     			        <h2>ARCHIVES COUP DE GUEULE</h2>
     			        {% if archives %}
-    			            {% for article in archives %}
-    			            <div class="articleButton">
-    			                <h3>{{ article.title }}</h3>
-    			             </div>
-    			             <div>
-    			                {{ article.summary|safe }}
-    			             </div>
-    			            {% endfor %}
-    			         {% endif %}
+                            {% include "front/includes/category_archives.html" %}
+                        {% else %}
+                            {% include "front/includes/category_archives_empty.html" %}
+                        {% endif %}
                     </div>
                 </div>
 				<div class="addSection">

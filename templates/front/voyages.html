@@ -44,41 +44,18 @@
 <div id="mainContent" class="leftWrap">
     <h1>Voyages</h1>
     {% if article %}
-    <div class="articleSection articleMain">
-        <h3>{{ article.title }}</h3>
-    	<p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
-    	<div class="illustration">
-    	    {% if article.use_default_illustration %}
-    	        <img src="{{ article.category.image|thumbnail:"200,0" }}" alt="{{ article.category.image_legend }}" />
-    		    <p class="credits">Photo : {{ article.category.image_credits }}</p>
-            {% else %}
-    	        <img src="{{ article.illustration.image|thumbnail:"200,0" }}" alt="{{ article.illustration.legend }}" />
-    		    <p class="credits">Photo : {{ article.illustration.credits }}</p>
-    	    {% endif %}
-    	</div>
-    	<p class="lead">{{ article.title }}</p>
-        {{ article.summary|safe }}
-    	<p class="readMore slick-show"><a href="#">Lire la suite</a></p>
-    	<!-- SLICKBOX -->
-    	<div class="slickbox" style="display:block;">
-            {{ article.content|safe }}
-            <div class="relatedArticles">
-                <h4>A lire aussi</h4>
-                <ul>
-                    <li><h5><a href="#">Pascal n'a plus d'idées <span>(n°284 - 12.08.2008)</span></a></h5></li>
-    			</ul>
-    		</div>
-    		<p class="readMore slick-hide"><a href="#">Masquer</a></p>
-    	</div>
-    	<!-- // SLICKBOX -->
-    </div>
+        {% include "front/includes/category_article.html" %}
+    {% else %}
+        {% include "front/includes/category_article_empty.html" %}
     {% endif %}
+    
     <!-- ADD -->
     <div class="addSection add468">
         <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
     	<p><a href="#">Publicité</a></p>
     </div>
     <!-- // ADD -->
+    
 </div>
 <!-- // LEFT WRAP -->
 
@@ -89,25 +66,20 @@
 	    <!-- LEFT WRAP -->
 	    <div class="leftWrap">
 	        <div class="articleList autoClear">
-	            <div class="articleSection" id="mapSection">
-	                <h2>{{ article.localization }}</h2>
-	                <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.fr/maps?f=q&amp;hl=fr&amp;geocode=&amp;q=belfast&amp;ie=UTF8&amp;t=k&amp;s=AARTsJrcQ0voIQsRVGZu3HYLRHB0fshCpA&amp;ll=54.603345,-5.925922&amp;spn=0.014915,0.025749&amp;z=14&amp;iwloc=addr&amp;output=embed"></iframe>
-                    <p><a href="http://maps.google.fr/maps?f=q&amp;hl=fr&amp;geocode=&amp;q={{ article.localization|lower }}&amp;ie=UTF8&amp;t=k&amp;ll=54.603345,-5.925922&amp;spn=0.014915,0.025749&amp;z=14&amp;iwloc=addr&amp;source=embed" >Agrandir le plan</a></p>
-                </div>
+	            {% if article %}
+                    {% include "front/includes/article_localization.html" %}
+                {% else %}
+                    {% include "front/includes/article_localization_empty.html" %}
+                {% endif %}
 			 </div>
             <div class="leftWrap"><!-- LEFT WRAP -->
                 <div id="archivesBar" class="articleList autoClear">
                     <div>
                         <h2>ARCHIVES VOYAGES</h2>
                         {% if archives %}
-                            {% for article in archives %}
-                            <div class="articleButton">
-                                <h3>{{ article.title }}</h3>
-                            </div>
-							<div>
-                                {{ article.summary|safe }}
-                            </div>
-                            {% endfor %}
+                            {% include "front/includes/category_archives.html" %}
+                        {% else %}
+                            {% include "front/includes/category_archives_empty.html" %}
                         {% endif %}
                     </div>
                 </div>
@@ -137,292 +109,12 @@
     <!-- // LEFT WRAP -->
 	</div>
 
-<div id="me"><h2>Voyages</h2> avec easyvoyage.com
-	<ul class="onglets">
-		<li onclick="displayForm(document.getElementById('formMEV'));" title="Accès à la recherche vols" id="ongletMEV" class="selected"><span>Vols</span></li>
-		<li class="unselected" onclick="displayForm(document.getElementById('formMEH'));" title="Accès à la recherche hôtels" id="ongletMEH"><span>Hôtels</span></li>
-		<li class="unselected" onclick="displayForm(document.getElementById('formMEC'));" title="Accès à la recherche voitures" id="ongletMEC"><span>Voitures</span></li>
-		<li title="Accès à la recherche séjours" id="ongletMEP"><span><a href="http://www.easyvoyage.com/voyages/results.jsp?formule=0">Voyages</a></span></li>
-	</ul>
-	    <form onsubmit="submitFormMEV();return false;" style="display: block;" id="formMEV" action="/vols/results.jsp" method="get">
+    {% include "front/includes/voyages_easyvoyages.html" %}
 
-      <fieldset title="Sélection du type de parcours" id="typeParcoursMEV">
-				<legend>Parcours</legend>
-				<p id="typeParcours">
-          <label for="allerSimpleMEV">
-  					<input onclick="setMEVType();" id="typeMEVAS" value="0" name="type" type="radio">
-            aller-simple
-  				</label>
-  				<label for="allerRetourMEV">
-  					<input onclick="setMEVType();" id="typeMEVAR" value="1" name="type" checked="checked" type="radio">
-  					aller-retour
-  				</label>
-        </p>
-			</fieldset>
+	<!-- // SUB CONTENT -->
+	</div>
+	
+<!-- // RIGHT WRAP -->
+</div>
 
-			<fieldset title="Définition du parcours" id="trajetMEV">
-				<legend>Trajet</legend>
-        <p id="allerMEV">
-          <label for="departAllerMEV">Ville de départ :</label>
-  				<input onblur="completionMEVPool.get(0).delayedHidePropositions(500);" onfocus="return completionMEVPool.get(0).updatePropositions(event);" onkeyup="return completionMEVPool.get(0).toucheUp(event);" onkeydown="return completionMEVPool.get(0).toucheDown(event);" autocomplete="off" id="lieuMEVDepartAller" name="departAller" value="" type="text">
-					<input id="iataMEVDepartAller" name="departAllerIata" value="" type="hidden">
-          </p><div id="propositionsMEVDepartAller"><div class="completionMEV" style="visibility: hidden;"></div></div>
-          <label for="arriveeAllerMEV">Ville d'arrivée :</label>
-					<input onblur="completionMEVPool.get(1).delayedHidePropositions(500);" onfocus="return completionMEVPool.get(1).updatePropositions(event);" onkeyup="return completionMEVPool.get(1).toucheUp(event);" onkeydown="return completionMEVPool.get(1).toucheDown(event);" autocomplete="off" id="lieuMEVArriveeAller" name="arriveeAller" value="" type="text">
-					<input id="iataMEVArriveeAller" name="arriveeAllerIata" value="" type="hidden">
-          <div id="propositionsMEVArriveeAller"><div class="completionMEV" style="visibility: hidden;"></div></div>
-
-      </fieldset>
-
-     <fieldset title="Définition des dates du trajet aller et éventuellement retour" id="dateMEV">
-				<legend>Dates</legend>
-			  				<div style="display: none;" id="errorMEVDateAllerErronee">La date aller que vous avez définie est erronée</div>
-			  				<div style="display: none;" id="errorMEVDateRetourErronee">La date retour que vous avez définie est erronée</div>
-			  				<div style="display: none;" id="errorMEVDatesInversees">La date retour est antérieure à la date d'aller</div>
-			  <p id="dateAllerMEV">
-			  	<label for="jourMEVAller">Date de départ :</label>
-			  	<select id="jourMEVAller" name="jourAller"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
-			  	<select id="moisMEVAller" name="moisAller"><option value="09/2008">sep. 2008</option><option value="10/2008">oct. 2008</option><option value="11/2008">nov. 2008</option><option value="12/2008">dec. 2008</option><option value="01/2009">jan. 2009</option><option value="02/2009">fev. 2009</option><option value="03/2009">mar. 2009</option><option value="04/2009">avr. 2009</option><option value="05/2009">mai 2009</option><option value="06/2009">jun. 2009</option><option value="07/2009">jul. 2009</option><option value="08/2009">aou. 2009</option><option value="09/2009">sep. 2009</option></select>
-			    <img class="calendarEnabled" onclick="calendarPool.get(0).show();" id="calendrierMEVAllerIcon" src="easyV_fichiers/calendrier.gif" alt="calendrier aller">
-				</p>
-				<p id="dateRetourMEV">
-			  	<label for="jourMEVRetour">Date de retour :</label>
-			  	<select class="enabled" id="jourMEVRetour" name="jourRetour"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
-			  	<select class="enabled" id="moisMEVRetour" name="moisRetour"><option value="09/2008">sep. 2008</option><option value="10/2008">oct. 2008</option><option value="11/2008">nov. 2008</option><option value="12/2008">dec. 2008</option><option value="01/2009">jan. 2009</option><option value="02/2009">fev. 2009</option><option value="03/2009">mar. 2009</option><option value="04/2009">avr. 2009</option><option value="05/2009">mai 2009</option><option value="06/2009">jun. 2009</option><option value="07/2009">jul. 2009</option><option value="08/2009">aou. 2009</option><option value="09/2009">sep. 2009</option></select>
-			    <img class="calendarEnabled" onclick="calendarPool.get(1).show();" id="calendrierMEVRetourIcon" src="easyV_fichiers/calendrier.gif" alt="calendrier retour">
-			  </p>
-			    <div id="calendrierMEVAller"><div style="display: none;" class="calendar"><div class="title"><a href="javascript:;">&lt;&lt;</a>Title1<a href="javascript:;">&gt;&gt;</a></div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="title">Title2</div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="close"><a href="javascript:calendarPool.get(0).hide();">Fermer</a></div></div></div>
-			    <div id="calendrierMEVRetour"><div style="display: none;" class="calendar"><div class="title"><a href="javascript:;">&lt;&lt;</a>Title1<a href="javascript:;">&gt;&gt;</a></div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="title">Title2</div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="close"><a href="javascript:calendarPool.get(1).hide();">Fermer</a></div></div></div>
-		</fieldset>
-
-				<fieldset title="Sélection du nombre de passagers dans chaque catégorie d'âge" id="typePassagersMEV">
-
-								<legend>Passagers</legend>
-								<div style="display: none;" id="errorMEVNbBebes">Le nombre de bébés ne doit pas être supérieur au nombre d'adultes</div>
-								<p id="nbAdultesMEV">
-				          <label for="paxAdultes">Adultes</label>
-									<select onchange="setMEVPax();" id="paxAdultes" name="paxAdultes">
-										<option value="1" selected="selected">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-									</select>
-				        </p>
-				      <p id="nbEnfantsMEV">
-								<label for="paxEnfants">Enfants</label>
-								<select id="paxEnfants" name="paxEnfants">
-								<option value="0" selected="selected">0</option>
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-							</select>
-				     </p>
-				    <p id="nbBebesMEV">
-						<label for="paxBebes">Bébés</label>
-
-						<select onchange="setMEVPax();" id="paxBebes" name="paxBebes">
-								<option class="enabled" value="0" selected="selected">0</option>
-								<option class="enabled" value="1">1</option>
-								<option class="disabled" disabled="disabled" value="2">2</option>
-								<option class="disabled" disabled="disabled" value="3">3</option>
-								<option class="disabled" disabled="disabled" value="4">4</option>
-								<option class="disabled" disabled="disabled" value="5">5</option>
-								<option class="disabled" disabled="disabled" value="6">6</option>
-								<option class="disabled" disabled="disabled" value="7">7</option>
-								<option class="disabled" disabled="disabled" value="8">8</option>
-								<option class="disabled" disabled="disabled" value="9">9</option>
-						</select>
-
-				   </p>
-			</fieldset>
-
-			<fieldset title="Sélection de la classe" id="classeMEV">
-				<legend>Classe</legend>
-        <p id="classeEcoMEV">
-  				<label for="classeEcoMEV">
-  			  <input value="1" name="classe" id="classeMEVEco" checked="checked" type="radio">
-          Eco
-          </label>
-
-  				<label for="classeAffMEV">
-  				<input value="3" name="classe" id="classeMEVAff" type="radio">
-          Affaire
-          </label>
-
-  				<label for="classePreMEV">
-  				<input value="2" name="classe" id="classeMEVPre" type="radio">
-          Première
-          </label>
-        </p>
-			</fieldset>
-
-			<fieldset title="Lancer la recherche" id="submitBtMEV">
-				<input id="submitMEV" value="" type="submit">
-			</fieldset>
-
-		</form>
-	  <form onsubmit="submitFormMEH();" style="display: none;" id="formMEH" action="/hotels/results.jsp" method="get">
-<p id="message">Tapez les 4 premières lettres de votre ville et cliquez dans la liste proposée<img id="fleche_message" src="easyV_fichiers/fleche_message.png"></p>
-       <fieldset title="Sélection du lieu de séjour et des dates d'arriv&amp;eacute;e et de d&amp;eacute;part" id="villesMEH">
-			   	<legend>Lieu &amp; dates du séjour</legend>
-        	<p id="villeMEH">
-	          <label for="ville"><b>Ville : </b></label>
-	          <input onblur="completionMEHPool.get(0).delayedHidePropositions(500);" onfocus="return completionMEHPool.get(0).updatePropositions(event);" onkeyup="return completionMEHPool.get(0).toucheUp(event);" onkeydown="return completionMEHPool.get(0).toucheDown(event);" autocomplete="off" id="lieuMEH" name="lieu" value="" type="text">
-	          <input id="lieuIataMEH" name="lieuIata" value="" type="hidden">
-	          </p><div id="propositionsMEH"><div class="completionMEH" style="visibility: hidden;"></div></div>
-
-       		<p id="arriveeMEH">
-       			<label for="arriveeMEH">Début : </label>
-	          </p><div style="display: none;" id="errorMEHDateDebutErronee">La date de début de séjour que vous avez définie est erronée</div>
-	          <div style="display: none;" id="errorMEHDateFinErronee">La date de fin de séjour que vous avez définie est erronée</div>
-						<div style="display: none;" id="errorMEHDatesInversees">La date de fin de séjour est antérieure à la date de début</div>
-	          <select id="jourDebutMEH" name="jourDebut"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select id="moisDebutMEH" name="moisDebut"><option value="09/2008">sep. 2008</option><option value="10/2008">oct. 2008</option><option value="11/2008">nov. 2008</option><option value="12/2008">dec. 2008</option><option value="01/2009">jan. 2009</option><option value="02/2009">fev. 2009</option><option value="03/2009">mar. 2009</option><option value="04/2009">avr. 2009</option><option value="05/2009">mai 2009</option><option value="06/2009">jun. 2009</option><option value="07/2009">jul. 2009</option><option value="08/2009">aou. 2009</option><option value="09/2009">sep. 2009</option></select>
-	          <!-- on devrait sï¿½lectionner la date : "" -->
-	          <img onclick="calendarPool.get(2).show();" id="calendrierMEHDebutIcon" src="easyV_fichiers/calendrier.gif" alt="calendrier aller">
-	          <div id="calendrierMEHDebut"><div style="display: none;" class="calendar"><div class="title"><a href="javascript:;">&lt;&lt;</a>Title1<a href="javascript:;">&gt;&gt;</a></div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="title">Title2</div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="close"><a href="javascript:calendarPool.get(2).hide();">Fermer</a></div></div></div>
-
-       		<p id="departMEH">
-	          <label for="departMEH">Fin : </label>
-	          <select id="jourFinMEH" name="jourFin"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select id="moisFinMEH" name="moisFin"><option value="09/2008">sep. 2008</option><option value="10/2008">oct. 2008</option><option value="11/2008">nov. 2008</option><option value="12/2008">dec. 2008</option><option value="01/2009">jan. 2009</option><option value="02/2009">fev. 2009</option><option value="03/2009">mar. 2009</option><option value="04/2009">avr. 2009</option><option value="05/2009">mai 2009</option><option value="06/2009">jun. 2009</option><option value="07/2009">jul. 2009</option><option value="08/2009">aou. 2009</option><option value="09/2009">sep. 2009</option></select>
-	          <!-- on devrait sï¿½lectionner la date : "" -->
-	          <img onclick="calendarPool.get(3).show();" id="calendrierMEHFinIcon" src="easyV_fichiers/calendrier.gif" alt="calendrier retour">
-	          </p><div id="calendrierMEHFin"><div style="display: none;" class="calendar"><div class="title"><a href="javascript:;">&lt;&lt;</a>Title1<a href="javascript:;">&gt;&gt;</a></div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="title">Title2</div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="close"><a href="javascript:calendarPool.get(3).hide();">Fermer</a></div></div></div>
-
-      </fieldset>
-
-     <fieldset title="Sélection des caractéristiques d'hébergement" id="hebergementMEH">
-			  <legend>Hébergement</legend>
-        <p id="nombreChambreMEH">
-          <label for="nombreChambres">Chambre(s) :</label>
-            <select name="chambres" id="chambres">
-              <option value="1" selected="selected">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-
-        </p>
-        <p id="nombreAdultesMEH">
-          <label for="nombreAdultes">Adulte(s) : </label>
-            <select name="paxAdultes" id="paxAdultes">
-              <option value="1">1</option>
-              <option value="2" selected="selected">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-	          <!-- on devrait sï¿½lectionner "" adultes -->
-
-        </p>
-        <p id="nombreEnfantsMEH">
-          <label for="nombreEnfants">Enfant(s) : </label>
-            <select name="paxEnfants" id="paxEnfants">
-              <option value="0" selected="selected">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-	          <!-- on devrait sï¿½lectionner "" enfants -->
-
-        </p>
-      </fieldset>
-
-      <fieldset title="Sélection de la catégorie d'hébergement" id="categoriesMEH">
-        <legend>Catégorie</legend>
-        <p id="etoilesLeftMEH">
-          <input value="1" name="etoiles" type="radio"> <label><img src="easyV_fichiers/star1.gif" alt="1 étoile"></label><br>
-          <input value="2" name="etoiles" type="radio"> <label><img src="easyV_fichiers/star2.gif" alt="2 étoiles"></label><br>
-          <input value="3" name="etoiles" type="radio"> <label><img src="easyV_fichiers/star3.gif" alt="3 étoiles"></label><br>
-        </p>
-        <p id="etoilesRightMEH">
-          <input value="4" name="etoiles" type="radio"> <label><img src="easyV_fichiers/star4.gif" alt="4 étoiles"></label><br>
-          <input value="5" name="etoiles" type="radio"> <label><img src="easyV_fichiers/star5.gif" alt="5 étoiles"></label><br>
-          <input value="0" name="etoiles" checked="checked" type="radio"> <label>indiférent</label>
-        </p>
-      </fieldset>
-
-      <fieldset title="Lancer la recherche" id="submitBtMEH">
-        <input id="submitMEH" value="" type="submit">
-      </fieldset>
-
-    </form>
-
-	    <form onsubmit="submitFormMEC();" style="display: none;" id="formMEC" action="/voitures/results.jsp" method="get">
-
-      <fieldset title="Sélection du lieu de retrait" id="retraitMEC">
-			  <legend>Lieu</legend>
-				<p>
-          <label for="lieuMEC">Lieu de retrait : </label>
-          <input onblur="completionMECPool.get(0).delayedHidePropositions(500);" onfocus="return completionMECPool.get(0).updatePropositions(event);" onkeyup="return completionMECPool.get(0).toucheUp(event);" onkeydown="return completionMECPool.get(0).toucheDown(event);" autocomplete="off" id="lieuMEC" name="pickUpSuggest" value="" type="text">
-					<input id="adresseCodeMEC" name="pickUpLocation" value="" type="hidden">
-          </p><div id="propositionsMEC"><div class="completionMEC" style="visibility: hidden;"></div></div>
-
-			</fieldset>
-      <fieldset title="Sélection des dates" id="datesMEC">
-				<legend>Dates et heures</legend>
- 				<div style="display: none;" id="errorMECDateDebutErronee">La date de retrait de la voiture que vous avez définie est erronée</div>
-				<div style="display: none;" id="errorMECDateFinErronee">La date de restitution de la voiture que vous avez définie est erronée</div>
-				<div style="display: none;" id="errorMECDatesInversees">La date de restitution de la voiture est antérieure à celle de son retrait</div>
-        <p id="dateRetraitMEC">
-          <label for="dateRetrait">Date de retrait : </label>
-  				<select id="jourDebutMEC" name="pickUpDay"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
-  				<select id="moisDebutMEC" name="pickUpMonth"><option value="09/2008">sep. 2008</option><option value="10/2008">oct. 2008</option><option value="11/2008">nov. 2008</option><option value="12/2008">dec. 2008</option><option value="01/2009">jan. 2009</option><option value="02/2009">fev. 2009</option><option value="03/2009">mar. 2009</option><option value="04/2009">avr. 2009</option><option value="05/2009">mai 2009</option><option value="06/2009">jun. 2009</option><option value="07/2009">jul. 2009</option><option value="08/2009">aou. 2009</option><option value="09/2009">sep. 2009</option></select>
-          <img onclick="calendarPool.get(4).show();" id="calendrierMECDebutIcon" src="easyV_fichiers/calendrier.gif" alt="calendrier date de retrait">
-          <select id="heureDebutMEC" name="pickUpHour"><option value="00:00">00:00</option><option value="01:00">01:00</option><option value="02:00">02:00</option><option value="03:00">03:00</option><option value="04:00">04:00</option><option value="05:00">05:00</option><option value="06:00">06:00</option><option value="07:00">07:00</option><option value="08:00">08:00</option><option value="09:00">09:00</option><option value="10:00">10:00</option><option value="11:00">11:00</option><option value="12:00">12:00</option><option value="13:00">13:00</option><option value="14:00">14:00</option><option value="15:00">15:00</option><option value="16:00">16:00</option><option value="17:00">17:00</option><option value="18:00">18:00</option><option value="19:00">19:00</option><option value="20:00">20:00</option><option value="21:00">21:00</option><option value="22:00">22:00</option><option value="23:00">23:00</option></select>
-          <!-- on devrait sélectionner la date : "" -->
-          <!-- on devrait sélectionner l'heure : "" -->
-          </p><div id="calendrierMECDebut"><div style="display: none;" class="calendar"><div class="title"><a href="javascript:;">&lt;&lt;</a>Title1<a href="javascript:;">&gt;&gt;</a></div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="title">Title2</div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="close"><a href="javascript:calendarPool.get(4).hide();">Fermer</a></div></div></div>
-
-        <p id="dateRetourMEC">
-       	  <label for="dateRetour">Date de retour : </label>
-          <select id="jourFinMEC" name="dropOffDay"><option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
-				  <select id="moisFinMEC" name="dropOffMonth"><option value="09/2008">sep. 2008</option><option value="10/2008">oct. 2008</option><option value="11/2008">nov. 2008</option><option value="12/2008">dec. 2008</option><option value="01/2009">jan. 2009</option><option value="02/2009">fev. 2009</option><option value="03/2009">mar. 2009</option><option value="04/2009">avr. 2009</option><option value="05/2009">mai 2009</option><option value="06/2009">jun. 2009</option><option value="07/2009">jul. 2009</option><option value="08/2009">aou. 2009</option><option value="09/2009">sep. 2009</option></select>
-          <img onclick="calendarPool.get(5).show();" id="calendrierMECFinIcon" src="easyV_fichiers/calendrier.gif" alt="calendrier date de retour">
-          <select id="heureFinMEC" name="dropOffHour"><option value="00:00">00:00</option><option value="01:00">01:00</option><option value="02:00">02:00</option><option value="03:00">03:00</option><option value="04:00">04:00</option><option value="05:00">05:00</option><option value="06:00">06:00</option><option value="07:00">07:00</option><option value="08:00">08:00</option><option value="09:00">09:00</option><option value="10:00">10:00</option><option value="11:00">11:00</option><option value="12:00">12:00</option><option value="13:00">13:00</option><option value="14:00">14:00</option><option value="15:00">15:00</option><option value="16:00">16:00</option><option value="17:00">17:00</option><option value="18:00">18:00</option><option value="19:00">19:00</option><option value="20:00">20:00</option><option value="21:00">21:00</option><option value="22:00">22:00</option><option value="23:00">23:00</option></select>
-          <!-- on devrait sélectionner la date : "" -->
-          <!-- on devrait sélectionner l'heure : "" -->
-          </p><div id="calendrierMECFin"><div style="display: none;" class="calendar"><div class="title"><a href="javascript:;">&lt;&lt;</a>Title1<a href="javascript:;">&gt;&gt;</a></div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="title">Title2</div><table><thead><tr><td>lun.</td><td>mar.</td><td>mer.</td><td>jeu.</td><td>ven.</td><td>sam.</td><td>dim.</td></tr></thead><tbody></tbody></table><div class="close"><a href="javascript:calendarPool.get(5).hide();">Fermer</a></div></div></div>
-
-			</fieldset>
-
-      <fieldset title="Sélection de l'âge du conducteur" id="ageConducteurMEC">
-				<legend>Conducteur</legend>
-				<p id="ageDuConducteurMEC">
-          <label for="age">Âge du conducteur :</label>
-          <input id="ageMEC" name="driverAge" value="" type="text">
-        </p>
-			</fieldset>
-
-      <fieldset title="Lancer la recherche" id="submitBtMEC">
-				<input id="submitMEC" value="" type="submit">
-			</fieldset>
-		</form>
-	<script type="text/javascript">	initForm();	</script>
-</div><!--/me-->
-
-					<!-- // SUB CONTENT -->
-				</div>
-				<!-- // RIGHT WRAP -->
-			</div>
 {% endblock %}
