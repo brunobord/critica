@@ -76,12 +76,11 @@ urlpatterns += patterns('',
     url(r'^$', 'critica.apps.front.views.home', name='home'),
 )
 
-#urlpatterns += patterns('',
-    #(r'^archives/', include('critica.apps.archives.urls')),
-    #(r'^pages/', include('critica.apps.pages.urls')),
-    #(r'^rss/', include('critica.apps.syndication.urls')),
-    #(r'', include('critica.apps.categories.urls')),
-#)
+# Pages
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^pages/(?P<page_slug>[-\w]+)/$', 'critica.apps.front.views.page', name='page'),
+)
 
 # Media
 # ------------------------------------------------------------------------------

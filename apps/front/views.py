@@ -24,6 +24,7 @@ from critica.apps.regions.models import RegionNote
 from critica.apps.regions.models import FeaturedRegion
 from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.videos.models import Video
+from critica.apps.pages.models import Page
 from critica.apps.utils import urlbase64
 from tagging.models import Tag
 from tagging.utils import calculate_cloud
@@ -848,5 +849,22 @@ def rss_index(request):
     except ObjectDoesNotExist:
         context['categories'] = False
     return render_to_response('front/rss_index.html', context, context_instance=RequestContext(request))
+
+
+
+# Pages
+# ------------------------------------------------------------------------------
+def page(request, page_slug):
+    """
+    Displays a given page by its slug.
+    
+    """
+    issue = _get_current_issue()
+    context = {}
+    context['issue'] = issue
+    context['is_current'] = True
+    context['page'] = get_object_or_404(Page.objects.all(), slug=page_slug, is_published=True)
+    return render_to_response('front/page.html', context, context_instance=RequestContext(request))
+
 
 

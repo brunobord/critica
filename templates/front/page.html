@@ -1,0 +1,10 @@
+{% extends "layout/base.html" %}
+{% block title %}{{ page.title }}{% endblock %}
+{% block body_id %}page.slug{% endblock %}
+{% block content %}
+<div id="mainContent">
+    <h2>{{ page.title }}</h2>
+    {{ page.content|safe }}
+</div>
+{% endblock %}
+
