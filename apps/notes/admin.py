@@ -54,7 +54,10 @@ class BaseNoteAdmin(BaseArticleAdmin):
         field = super(BaseNoteAdmin, self).formfield_for_dbfield(db_field, **kwargs)
         if db_field.name == 'author_nickname': 
             my_choices = [('', '---------')]
-            my_choices.extend(UserNickname.objects.filter(user=self.request.user).values_list('id','nickname'))
+            if not current_user.has_perms('users.is_editor'):
+                my_choices.extend(UserNickname.objects.all().values_list('id','nickname'))
+            else:
+                my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
             print my_choices
             field.choices = my_choices
         if db_field.name == 'issues': 
