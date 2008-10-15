@@ -94,7 +94,7 @@ def home(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview or is_archive:
+    if not is_preview and not is_archive:
         context['is_current'] = True
     else:
         context['is_current'] = False
@@ -262,7 +262,7 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
         context['is_archive'] = False
         
     # Is current
-    if not is_preview or is_archive:
+    if not is_preview and not is_archive:
         context['is_current'] = True
     else:
         context['is_current'] = False
@@ -355,7 +355,7 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview or is_archive:
+    if not is_preview and not is_archive:
         context['is_current'] = True
     else:
         context['is_current'] = False
@@ -439,7 +439,7 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview or is_archive:
+    if not is_preview and not is_archive:
         context['is_current'] = True
     else:
         context['is_current'] = False
@@ -500,7 +500,7 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview or is_archive:
+    if not is_preview and not is_archive:
         context['is_current'] = True
     else:
         context['is_current'] = False
@@ -621,7 +621,7 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview or is_archive:
+    if not is_preview and not is_archive:
         context['is_current'] = True
     else:
         context['is_current'] = False
@@ -667,16 +667,14 @@ def archives(request):
     context = {}   
     
     context['issue'] = issue
+    context['is_current'] = True
     
     try:
         context['issues'] = Issue.objects.filter(is_published=True).order_by('-publication_date')
     except ObjectDoesNotExist:
         context['issues'] = False
-    
-    return render_to_response(
-        'front/archives.html',
-        context,
-        context_instance=RequestContext(request))
+        
+    return render_to_response('front/archives.html', context, context_instance=RequestContext(request))
 
 
 
@@ -811,19 +809,14 @@ def tags(request):
     """
     issue = _get_current_issue()
     context = {}
-    
     context['issue'] = issue
-    
+    context['is_current'] = True
     try:
         tags = Tag.objects.all()
         context['tags'] = calculate_cloud(tags)
     except ObjectDoesNotExist:
         context['tags'] = False
-        
-    return render_to_response(
-        'front/tags.html',
-        context,
-        context_instance=RequestContext(request))
+    return render_to_response('front/tags.html', context, context_instance=RequestContext(request))
 
 
     
@@ -835,10 +828,8 @@ def tags_tag(request, tag):
     issue = _get_current_issue()
     context = {}
     context['issue'] = issue
-    return render_to_response(
-        'front/tags_tag.html',
-        context,
-        context_instance=RequestContext(request))
+    context['is_current'] = True
+    return render_to_response('front/tags_tag.html', context, context_instance=RequestContext(request))
 
 
 # RSS
@@ -850,17 +841,12 @@ def rss_index(request):
     """
     issue = _get_current_issue()
     context = {}
-    
     context['issue'] = issue
-    
+    context['is_current'] = True
     try:
         context['categories'] = Category.objects.all()
     except ObjectDoesNotExist:
         context['categories'] = False
-        
-    return render_to_response(
-        'front/rss_index.html',
-        context,
-        context_instance=RequestContext(request))
+    return render_to_response('front/rss_index.html', context, context_instance=RequestContext(request))
 
 
