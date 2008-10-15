@@ -5,7 +5,7 @@ Administration interface options of ``critica.apps.anger`` application.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.admin import BaseArticleAdmin
 from critica.apps.anger.models import AngerArticle
 
@@ -39,6 +39,5 @@ class AngerArticleAdmin(BaseArticleAdmin):
         return fieldsets
 
 admin.site.register(AngerArticle, AngerArticleAdmin)
-basic_site.register(AngerArticle, AngerArticleAdmin)
-advanced_site.register(AngerArticle, AngerArticleAdmin)
+custom_site.register(AngerArticle, AngerArticleAdmin)
 

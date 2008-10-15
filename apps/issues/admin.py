@@ -6,7 +6,7 @@ Administration interface options of ``critica.apps.issues`` models.
 from django.contrib import admin
 from django.contrib.sites.models import Site
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.issues.models import Issue
     
     
@@ -64,7 +64,6 @@ class IssueAdmin(admin.ModelAdmin):
                     category_quota.save()
 
 admin.site.register(Issue, IssueAdmin)
-basic_site.register(Issue, IssueAdmin)
-advanced_site.register(Issue, IssueAdmin)
+custom_site.register(Issue, IssueAdmin)
 
 

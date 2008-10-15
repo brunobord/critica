@@ -5,7 +5,7 @@ Administration interface options of ``critica.apps.regions`` models.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.regions.models import RegionNote, Region, FeaturedRegion
 from critica.apps.notes.admin import BaseNoteAdmin
 
@@ -20,8 +20,7 @@ class RegionAdmin(admin.ModelAdmin):
     ordering = ['name']
 
 admin.site.register(Region, RegionAdmin)
-basic_site.register(Region, RegionAdmin)
-advanced_site.register(Region, RegionAdmin)
+custom_site.register(Region, RegionAdmin)
 
 
 class FeaturedRegionAdmin(admin.ModelAdmin):
@@ -34,8 +33,7 @@ class FeaturedRegionAdmin(admin.ModelAdmin):
     ordering = ['-issue']
 
 admin.site.register(FeaturedRegion, FeaturedRegionAdmin)
-basic_site.register(FeaturedRegion, FeaturedRegionAdmin)
-advanced_site.register(FeaturedRegion, FeaturedRegionAdmin)
+custom_site.register(FeaturedRegion, FeaturedRegionAdmin)
 
 
 class RegionNoteAdmin(BaseNoteAdmin):
@@ -88,6 +86,5 @@ class RegionNoteAdmin(BaseNoteAdmin):
         return fieldsets
 
 admin.site.register(RegionNote, RegionNoteAdmin)
-basic_site.register(RegionNote, RegionNoteAdmin)
-advanced_site.register(RegionNote, RegionNoteAdmin)
+custom_site.register(RegionNote, RegionNoteAdmin)
 

@@ -6,7 +6,7 @@ Administration interface options of ``critica.apps.illustrations`` models.
 from django.contrib import admin
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.illustrations.models import Illustration, IllustrationOfTheDay
 from critica.apps.issues.models import Issue
 
@@ -54,8 +54,7 @@ class IllustrationAdmin(admin.ModelAdmin):
         obj.save()
 
 admin.site.register(Illustration, IllustrationAdmin)
-basic_site.register(Illustration, IllustrationAdmin)
-advanced_site.register(Illustration, IllustrationAdmin)
+custom_site.register(Illustration, IllustrationAdmin)
 
 
 class IllustrationOfTheDayAdmin(admin.ModelAdmin):    
@@ -146,6 +145,5 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
         obj.save()
 
 admin.site.register(IllustrationOfTheDay, IllustrationOfTheDayAdmin)
-basic_site.register(IllustrationOfTheDay, IllustrationOfTheDayAdmin)
-advanced_site.register(IllustrationOfTheDay, IllustrationOfTheDayAdmin)
+custom_site.register(IllustrationOfTheDay, IllustrationOfTheDayAdmin)
 

@@ -6,7 +6,7 @@ Administration interface options of ``critica.apps.notes`` application.
 from django.contrib import admin
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.notes.models import NoteType, Note
 from critica.apps.articles.admin import BaseArticleAdmin
 from critica.apps.users.models import UserNickname
@@ -25,8 +25,7 @@ class NoteTypeAdmin(admin.ModelAdmin):
     ordering = ['name']
 
 admin.site.register(NoteType, NoteTypeAdmin)
-basic_site.register(NoteType, NoteTypeAdmin)
-advanced_site.register(NoteType, NoteTypeAdmin)
+custom_site.register(NoteType, NoteTypeAdmin)
 
 
 class BaseNoteAdmin(BaseArticleAdmin):
@@ -185,6 +184,5 @@ class NoteAdmin(BaseNoteAdmin):
         return field
 
 admin.site.register(Note, NoteAdmin)
-basic_site.register(Note, NoteAdmin)
-advanced_site.register(Note, NoteAdmin)
+custom_site.register(Note, NoteAdmin)
 

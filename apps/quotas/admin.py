@@ -4,7 +4,7 @@ Administration interface options of ``critica.apps.quotas`` models.
 
 """
 from django.contrib import admin
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.quotas.models import DefaultCategoryQuota, CategoryQuota
 
 
@@ -19,8 +19,7 @@ class DefaultCategoryQuotaAdmin(admin.ModelAdmin):
     ordering = ['category']
 
 admin.site.register(DefaultCategoryQuota, DefaultCategoryQuotaAdmin)
-basic_site.register(DefaultCategoryQuota, DefaultCategoryQuotaAdmin)
-advanced_site.register(DefaultCategoryQuota, DefaultCategoryQuotaAdmin)
+custom_site.register(DefaultCategoryQuota, DefaultCategoryQuotaAdmin)
 
 
 class CategoryQuotaAdmin(admin.ModelAdmin):
@@ -34,5 +33,4 @@ class CategoryQuotaAdmin(admin.ModelAdmin):
     ordering = ['-issue']
     
 admin.site.register(CategoryQuota, CategoryQuotaAdmin)
-basic_site.register(CategoryQuota, CategoryQuotaAdmin)
-advanced_site.register(CategoryQuota, CategoryQuotaAdmin)
+custom_site.register(CategoryQuota, CategoryQuotaAdmin)

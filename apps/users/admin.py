@@ -5,7 +5,7 @@ Administration interface options of ``critica.apps.users`` models.
 """
 from django.contrib import admin
 from critica.apps.users.models import UserProfile, UserNickname
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 
 
 class UserProfileAdmin(admin.ModelAdmin):
@@ -16,8 +16,7 @@ class UserProfileAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(UserProfile, UserProfileAdmin)
-basic_site.register(UserProfile, UserProfileAdmin)
-advanced_site.register(UserProfile, UserProfileAdmin)
+custom_site.register(UserProfile, UserProfileAdmin)
 
 
 class UserNicknameAdmin(admin.ModelAdmin):
@@ -31,5 +30,4 @@ class UserNicknameAdmin(admin.ModelAdmin):
     ordering = ['user']
     
 admin.site.register(UserNickname, UserNicknameAdmin)
-basic_site.register(UserNickname, UserNicknameAdmin)
-advanced_site.register(UserNickname, UserNicknameAdmin)
+custom_site.register(UserNickname, UserNicknameAdmin)

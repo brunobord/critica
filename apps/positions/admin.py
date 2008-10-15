@@ -10,7 +10,7 @@ from critica.apps.positions.models import CategoryPosition, NotePosition
 from critica.apps.positions.models import DefaultCategoryPosition, DefaultNotePosition
 from critica.apps.positions.models import IssueCategoryPosition, IssueNotePosition
 from critica.apps.positions import settings as positions_settings
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 
 
 # Positions
@@ -19,15 +19,13 @@ class CategoryPositionAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'slug')
     
 admin.site.register(CategoryPosition, CategoryPositionAdmin)
-basic_site.register(CategoryPosition, CategoryPositionAdmin)
-advanced_site.register(CategoryPosition, CategoryPositionAdmin)
+custom_site.register(CategoryPosition, CategoryPositionAdmin)
 
 class NotePositionAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'slug')
     
 admin.site.register(NotePosition, NotePositionAdmin)
-basic_site.register(NotePosition, NotePositionAdmin)
-advanced_site.register(NotePosition, NotePositionAdmin)
+custom_site.register(NotePosition, NotePositionAdmin)
 
 # Default positions
 # ------------------------------------------------------------------------------
@@ -35,8 +33,7 @@ class DefaultCategoryPositionAdmin(admin.ModelAdmin):
     list_display = ('category', 'position')
     
 admin.site.register(DefaultCategoryPosition, DefaultCategoryPositionAdmin)
-basic_site.register(DefaultCategoryPosition, DefaultCategoryPositionAdmin)
-advanced_site.register(DefaultCategoryPosition, DefaultCategoryPositionAdmin)
+custom_site.register(DefaultCategoryPosition, DefaultCategoryPositionAdmin)
 
 class DefaultNotePositionAdmin(admin.ModelAdmin):
     list_display = ('category', 'type', 'position')
@@ -57,8 +54,7 @@ class DefaultNotePositionAdmin(admin.ModelAdmin):
         return field
     
 admin.site.register(DefaultNotePosition, DefaultNotePositionAdmin)
-basic_site.register(DefaultNotePosition, DefaultNotePositionAdmin)
-advanced_site.register(DefaultNotePosition, DefaultNotePositionAdmin)
+custom_site.register(DefaultNotePosition, DefaultNotePositionAdmin)
 
 # Issue positions
 # ------------------------------------------------------------------------------
@@ -68,8 +64,7 @@ class IssueCategoryPositionAdmin(admin.ModelAdmin):
     search_fields = ('issue__number', 'category__name', 'position')
         
 admin.site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
-basic_site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
-advanced_site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
+custom_site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
 
 class IssueNotePositionAdmin(admin.ModelAdmin):
     list_display = ('issue', 'category', 'type', 'position')
@@ -91,6 +86,5 @@ class IssueNotePositionAdmin(admin.ModelAdmin):
         return field
     
 admin.site.register(IssueNotePosition, IssueNotePositionAdmin)
-basic_site.register(IssueNotePosition, IssueNotePositionAdmin)
-advanced_site.register(IssueNotePosition, IssueNotePositionAdmin)
+custom_site.register(IssueNotePosition, IssueNotePositionAdmin)
 

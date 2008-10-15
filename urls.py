@@ -7,8 +7,15 @@ import os.path
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from critica.apps.admin.sites import basic_site, advanced_site
-from critica.apps.admin.views import basic_dashboard
+from critica.apps.custom_admin.sites import custom_site
+from critica.apps.custom_admin.views import dashboard
+from critica.apps.custom_admin.views import preview_home_article
+from critica.apps.custom_admin.views import preview_home_note
+from critica.apps.custom_admin.views import preview_category_article
+from critica.apps.custom_admin.views import preview_category_note
+from critica.apps.custom_admin.views import preview_category_voyages_article
+from critica.apps.custom_admin.views import preview_category_epicurien_article
+from critica.apps.custom_admin.views import preview_category_anger_article
 from critica.apps.syndication.feeds import LatestRss
 from critica.apps.syndication.feeds import LatestByCategoryRss
 
@@ -17,10 +24,16 @@ from critica.apps.syndication.feeds import LatestByCategoryRss
 # ------------------------------------------------------------------------------
 admin.autodiscover()
 urlpatterns = patterns('',
-    (r'^admin/dashboard/(?P<issue>\d+)/', basic_dashboard),
-    (r'^admin/dashboard/', basic_dashboard),
-    (r'^admin/(.*)', basic_site.root),
-    (r'^advanced-admin/(.*)', advanced_site.root),
+    (r'^admin/preview/home/article/(?P<article_id>\d+)/$', preview_home_article),
+    (r'^admin/preview/home/note/(?P<note_id>\d+)/$', preview_home_note),
+    (r'^admin/preview/category/voyages/(?P<article_id>\d+)/$', preview_category_voyages_article),
+    (r'^admin/preview/category/epicurien/(?P<article_id>\d+)/$', preview_category_epicurien_article),
+    (r'^admin/preview/category/coup-de-gueule/(?P<article_id>\d+)/$', preview_category_anger_article),
+    (r'^admin/preview/category/(?P<category_slug>\d+)/article/(?P<article_id>\d+)/$', preview_category_article),
+    (r'^admin/preview/category/(?P<category_slug>\d+)/note/(?P<note_id>\d+)/$', preview_category_note),
+    (r'^admin/dashboard/(?P<issue>\d+)/$', dashboard),
+    (r'^admin/dashboard/$', dashboard),
+    (r'^admin/(.*)', custom_site.root),
     (r'^django-admin/(.*)', admin.site.root),
 )
 

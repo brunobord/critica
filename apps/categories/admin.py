@@ -5,7 +5,7 @@ Administration interface options of ``critica.apps.categories`` application.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.categories.models import Category
 
 
@@ -40,7 +40,6 @@ class CategoryAdmin(admin.ModelAdmin):
     ald_image.short_description = _('Default illustration')
 
 admin.site.register(Category, CategoryAdmin)
-basic_site.register(Category, CategoryAdmin)
-advanced_site.register(Category, CategoryAdmin)
+custom_site.register(Category, CategoryAdmin)
 
 

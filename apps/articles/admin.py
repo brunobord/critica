@@ -6,7 +6,7 @@ Administration interface options of ``critica.apps.articles`` application.
 from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.models import Article
 from critica.apps.users.models import UserNickname
 from critica.apps.categories.models import Category
@@ -196,6 +196,5 @@ class ArticleAdmin(BaseArticleAdmin):
     pass
 
 admin.site.register(Article, ArticleAdmin)
-basic_site.register(Article, ArticleAdmin)
-advanced_site.register(Article, ArticleAdmin)
+custom_site.register(Article, ArticleAdmin)
 

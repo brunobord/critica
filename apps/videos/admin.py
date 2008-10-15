@@ -5,7 +5,7 @@ Administration interface options for ``critica.apps.videos`` models.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.videos.models import Video
 from critica.apps.issues.models import Issue
 
@@ -99,6 +99,5 @@ class VideoAdmin(admin.ModelAdmin):
     ald_issues.short_description = _('issues')
 
 admin.site.register(Video, VideoAdmin)
-basic_site.register(Video, VideoAdmin)
-advanced_site.register(Video, VideoAdmin)
+custom_site.register(Video, VideoAdmin)
 

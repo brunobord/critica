@@ -5,7 +5,7 @@ Administration interface options for ``critica.apps.epicurien`` models.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.admin import BaseArticleAdmin
 from critica.apps.epicurien.models import EpicurienArticleType, EpicurienArticle
 
@@ -18,8 +18,7 @@ class EpicurienArticleTypeAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug')
     
 admin.site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
-basic_site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
-advanced_site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
+custom_site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
 
 
 class EpicurienArticleAdmin(BaseArticleAdmin):
@@ -53,6 +52,5 @@ class EpicurienArticleAdmin(BaseArticleAdmin):
         return fieldsets
 
 admin.site.register(EpicurienArticle, EpicurienArticleAdmin)
-basic_site.register(EpicurienArticle, EpicurienArticleAdmin)
-advanced_site.register(EpicurienArticle, EpicurienArticleAdmin)
+custom_site.register(EpicurienArticle, EpicurienArticleAdmin)
 

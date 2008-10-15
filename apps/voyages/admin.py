@@ -5,7 +5,7 @@ Administration interface options of ``critica.apps.voyages`` application.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.admin import BaseArticleAdmin
 from critica.apps.voyages.models import VoyagesArticle
 
@@ -39,6 +39,5 @@ class VoyagesArticleAdmin(BaseArticleAdmin):
         return fieldsets
 
 admin.site.register(VoyagesArticle, VoyagesArticleAdmin)
-basic_site.register(VoyagesArticle, VoyagesArticleAdmin)
-advanced_site.register(VoyagesArticle, VoyagesArticleAdmin)
+custom_site.register(VoyagesArticle, VoyagesArticleAdmin)
 

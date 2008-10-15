@@ -6,7 +6,7 @@ Administration interface options of ``critica.apps.ads`` application.
 from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-from critica.apps.admin.sites import basic_site, advanced_site
+from critica.apps.custom_admin.sites import custom_site
 from critica.apps.ads.models import Customer
 from critica.apps.ads.models import AdCampaign
 from critica.apps.ads.models import AdFormat
@@ -22,16 +22,14 @@ class CustomerAdmin(admin.ModelAdmin):
     pass
     
 admin.site.register(Customer, CustomerAdmin)
-basic_site.register(Customer, CustomerAdmin)
-advanced_site.register(Customer, CustomerAdmin)
+custom_site.register(Customer, CustomerAdmin)
 
 
 class AdCampaignAdmin(admin.ModelAdmin):
     pass
     
 admin.site.register(AdCampaign, AdCampaignAdmin)
-basic_site.register(AdCampaign, AdCampaignAdmin)
-advanced_site.register(AdCampaign, AdCampaignAdmin)
+custom_site.register(AdCampaign, AdCampaignAdmin)
 
 
 class AdFormatAdmin(admin.ModelAdmin):
@@ -39,16 +37,14 @@ class AdFormatAdmin(admin.ModelAdmin):
     ordering = ['width']
     
 admin.site.register(AdFormat, AdFormatAdmin)
-basic_site.register(AdFormat, AdFormatAdmin)
-advanced_site.register(AdFormat, AdFormatAdmin)
+custom_site.register(AdFormat, AdFormatAdmin)
 
 
 class AdTypeAdmin(admin.ModelAdmin):
     pass
     
 admin.site.register(AdType, AdTypeAdmin)
-basic_site.register(AdType, AdTypeAdmin)
-advanced_site.register(AdType, AdTypeAdmin)
+custom_site.register(AdType, AdTypeAdmin)
 
 
 class AdPageAdmin(admin.ModelAdmin):
@@ -57,8 +53,7 @@ class AdPageAdmin(admin.ModelAdmin):
     ordering = ['id']
     
 admin.site.register(AdPage, AdPageAdmin)
-basic_site.register(AdPage, AdPageAdmin)
-advanced_site.register(AdPage, AdPageAdmin)
+custom_site.register(AdPage, AdPageAdmin)
 
 
 class AdLocationAdmin(admin.ModelAdmin):
@@ -66,8 +61,7 @@ class AdLocationAdmin(admin.ModelAdmin):
     ordering = ['position']
     
 admin.site.register(AdLocation, AdLocationAdmin)
-basic_site.register(AdLocation, AdLocationAdmin)
-advanced_site.register(AdLocation, AdLocationAdmin)
+custom_site.register(AdLocation, AdLocationAdmin)
 
 
 class AdAdmin(admin.ModelAdmin):
@@ -98,8 +92,7 @@ class AdAdmin(admin.ModelAdmin):
         return field
     
 admin.site.register(Ad, AdAdmin)
-basic_site.register(Ad, AdAdmin)
-advanced_site.register(Ad, AdAdmin)
+custom_site.register(Ad, AdAdmin)
 
 
 class AdBannerAdmin(admin.ModelAdmin):
@@ -177,8 +170,7 @@ class AdBannerAdmin(admin.ModelAdmin):
         obj.save()
     
 admin.site.register(AdBanner, AdBannerAdmin)
-basic_site.register(AdBanner, AdBannerAdmin)
-advanced_site.register(AdBanner, AdBannerAdmin)
+custom_site.register(AdBanner, AdBannerAdmin)
 
 
 class AdCarouselAdmin(admin.ModelAdmin):
@@ -202,7 +194,6 @@ class AdCarouselAdmin(admin.ModelAdmin):
         obj.save()
     
 admin.site.register(AdCarousel, AdCarouselAdmin)
-basic_site.register(AdCarousel, AdCarouselAdmin)
-advanced_site.register(AdCarousel, AdCarouselAdmin)
+custom_site.register(AdCarousel, AdCarouselAdmin)
 
 

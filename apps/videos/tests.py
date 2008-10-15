@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Tests of ``critica.apps.issues`` application.
+Tests of ``critica.apps.videos`` application.
 
 """
 from django.test import TestCase
