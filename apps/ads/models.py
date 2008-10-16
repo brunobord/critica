@@ -176,7 +176,7 @@ class AdCarousel(models.Model):
     customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
     campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
     type = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
-    ads = models.ManyToManyField('ads.Ad', verbose_name=_('position'), help_text=_('Please, select one or several positions.'))
+    ads = models.ManyToManyField('ads.Ad', verbose_name=_('position'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
     starting_date = models.DateField(_('starting date'))
     ending_date = models.DateField(_('ending date'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)

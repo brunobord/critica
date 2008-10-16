@@ -142,14 +142,14 @@ class AdBannerAdmin(admin.ModelAdmin):
                 for ad in banner.ads.all():
                     ads.append((ad.id, ad))
             all_ads = list(set(ads))        
-            excluded_ads = [int(ad.id) for ad_id, ad in all_ads]
+            excluded_ads = [ad.id for ad_id, ad in all_ads]
             if self._object is not None:
-                current_ads = [int(ad.id) for ad in self._object.ads.all()]
+                current_ads = [ad.id for ad in self._object.ads.all()]
                 for current_ad in current_ads:
                     excluded_ads.remove(current_ad)
             ad_list = []
             for ad in Ad.objects.exclude(id__in=excluded_ads):
-                ad_list.append((int(ad.id), ad.__unicode__()))
+                ad_list.append((ad.id, ad.__unicode__()))
             my_choices.extend(ad_list)
             print my_choices
             field.choices = my_choices
