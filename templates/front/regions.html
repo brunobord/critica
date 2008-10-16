@@ -1,4 +1,5 @@
 {% extends "layout/base.html" %}
+{% load ads_extra %}
 {% block title %}Régions{% endblock %}
 {% block extra_head %}
 <script type="text/javascript">
@@ -14,14 +15,20 @@
 	// ]]>
 </script>
 {% endblock %}
+{% block ad_1_0 %}
+    {% display_ad '728x90' 'regions' '1.0' %}
+{% endblock %}
 {% block body_id %}regions{% endblock %}
 {% block body_class %}rubrique{% endblock %}
 {% block content %}
 <!-- LEFT WRAP -->
 <div id="mainContent" class="leftWrap">
+    
     <h1>Régions</h1>
+    
     <!-- ARTICLE ACCORDION -->
     <div class="articleAccordion">
+        
         {% if regions_notes_1 %}
             {% for regions_note in regions_notes_1 %}
                 {% include "front/includes/regions_note.html" %}
@@ -29,10 +36,7 @@
         {% endif %}
         
         <!-- ADD -->
-        <div class="addSection add468">
-            <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-            <p><a href="#">Publicité</a></p>
-        </div>
+        {% display_ad '468x60' 'regions' '2.0' %}
 	    <!-- // ADD -->
 	    
 	    {% if regions_notes_2 %}
@@ -42,10 +46,7 @@
         {% endif %}
         
         <!-- ADD -->
-        <div class="addSection add468">
-            <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-            <p><a href="#">Publicité</a></p>
-	    </div>
+        {% display_ad '468x60' 'regions' '3.0' %}
 	    <!-- // ADD -->
 	    
 	    {% if regions_notes_3 %}
@@ -56,11 +57,13 @@
         
     </div>
     <!-- // ARTICLE ACCORDION -->
+    
 </div>
 <!-- // LEFT WRAP -->
 
 <!-- RIGHT WRAP -->
 <div class="rightWrap">
+
     <!-- MAIN ARTICLE -->
     {% if featured_region_note %}
         {% include "front/includes/regions_featured_note.html" %}
@@ -69,16 +72,17 @@
     {% endif %}
 	<!-- // MAIN ARTICLE -->
 	
-    <div class="addSection add728">
-        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/300x250_tgv.gif" alt="Publicit&eacute;" /></a>
-		<p><a href="#">Publicité</a></p>
-	</div>
+	<!-- ADD -->
+	{% display_ad '250x250' 'regions' '4.0' %}
+	<!-- // ADD -->
+	
 	<div id="newsletterSection">
-		<form action="" method="post">
-			<p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
-			<p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
-		</form>
+        {% include "front/includes/newsletter_form.html" %}
 	</div>
+	
+	<!-- ADD -->
+	{% display_ad '250x250' 'regions' '4.1' %}
+	<!-- // ADD -->
 	
 	<!-- SUB CONTENT -->
 	<div id="subContent">
