@@ -1,6 +1,9 @@
 {% extends "layout/base.html" %}
 {% load image_thumbnail %}
 {% block title %}Coup de Gueule{% endblock %}
+{% block ad_1_0 %}
+    {% display_ad '728x90' 'coup-de-gueule' '1.0' %}
+{% endblock %}
 {% block body_id %}coup-de-gueule{% endblock %}
 {% block body_class %}rubrique{% endblock %}
 {% block content %}
@@ -15,24 +18,26 @@
         {% include "front/includes/category_article_empty.html" %}
     {% endif %}
     
-    <!-- ADD -->
-    <div class="addSection add468">
-        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-		<p><a href="#">Publicité</a></p>
-	</div>
-	<!-- // ADD -->
+    <!-- AD -->
+    {% display_ad '468x60' 'coup-de-gueule' '2.0' %}
+	<!-- // AD -->
 	
 </div>
 <!-- // LEFT WRAP -->
 				
 <!-- RIGHT WRAP -->
 <div class="rightWrap">
+
     <!-- SUB CONTENT -->
     <div id="subContent">
+        
         <!-- LEFT WRAP -->
         <div class="leftWrap">
-            <div class="leftWrap">
+            
             <!-- LEFT WRAP -->
+            <div class="leftWrap">
+
+                <!-- ARCHIVES -->
                 <div id="archivesBar" class="articleList autoClear">
     			    <div>
     			        <h2>ARCHIVES COUP DE GUEULE</h2>
@@ -43,32 +48,35 @@
                         {% endif %}
                     </div>
                 </div>
-				<div class="addSection">
-				    <div class="add-300x90 autoClear">
-				        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
-				        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
-                    </div>
-                    <p><a href="#">Publicité</a></p>
-                </div>
-            </div><!-- // LEFT WRAP -->
+                <!-- // ARCHIVES -->
+                
+                <!-- AD -->
+                {% display_ad '300x250' 'coup-de-gueule' '5.0' %}
+                <!-- // AD -->
+                
+                <!-- AD -->
+                {% display_ad '300x250' 'coup-de-gueule' '5.1' %}
+                <!-- // AD -->
+                
+            </div>
+            <!-- // LEFT WRAP -->
+        
         </div>
+        <!-- // LEFT WRAP -->
+        
         <!-- RIGHT WRAP -->
         <div class="rightWrap">
-            <div class="addSection">
-                <div class="add130">
-                    <object data="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
-                        <param name="movie" value="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf"/>
-                        <param name="quality" value="high"/>
-                        <param name="menu" value="false"/>
-                    </object>
-                </div>
-                <p><a href="">Publicité</a></p>
-            </div>
+        
+            <!-- AD -->
+            {% display_ad '160x600' 'coup-de-gueule' '6.0' %}
+            <!-- // AD -->
+        
         </div>
         <!-- // RIGHT WRAP -->
-    <!-- // LEFT WRAP -->
+    
     </div>
-    <!-- // SUB CONTENT -->
+    <!-- // SUBCONTENT -->
+    
 </div>
 <!-- // RIGHT WRAP -->
 
