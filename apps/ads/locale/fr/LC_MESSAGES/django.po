@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-14 16:38+0200\n"
+"POT-Creation-Date: 2008-10-16 11:30+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,23 +17,23 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:107 admin.py:186
+#: admin.py:100 admin.py:178
 msgid "Customer"
 msgstr "Client"
 
-#: admin.py:110
+#: admin.py:103
 msgid "Banner"
 msgstr "Bannière"
 
-#: admin.py:113 admin.py:192
+#: admin.py:106 admin.py:184
 msgid "During"
 msgstr "Durée"
 
-#: admin.py:173 models.py:143 models.py:156
+#: admin.py:166 models.py:143 models.py:156
 msgid "positions"
 msgstr "positions"
 
-#: admin.py:189
+#: admin.py:181
 msgid "Carousel"
 msgstr "Carousel"
 
@@ -203,8 +203,8 @@ msgid "banner"
 msgstr "bannière"
 
 #: models.py:151
-msgid "Please, select a banner to upload."
-msgstr "Sélectionnez une bannière à télécharger."
+msgid "Please, select a banner to upload (image or swf)."
+msgstr "Sélectionnez une bannière à télécharger (image ou swf)."
 
 #: models.py:152
 msgid "submitter"
@@ -273,4 +273,3 @@ msgstr "carousel"
 #: models.py:189
 msgid "carousels"
 msgstr "carousels"
-

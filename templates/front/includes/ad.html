@@ -1,0 +1,33 @@
+{% if banner %}
+    {% ifequal banner.banner_type 'image' %}
+        <div class="addSection add{{ format_width }}">
+        {% if banner.link %}
+            <a href="{{ banner.link }}"><img src="{{ banner.banner.url }}" alt="Publicité" /></a>
+            <p><a href="{{ banner.link }}">Publicité</a></p>
+        {% else %}
+            <img src="{{ banner.banner.url }}" alt="Publicité" />
+            <p>Publicité</p>
+        {% endif %}
+        </div>
+    {% else %}
+        <div class="addSection">
+            <div class="add{{ format_width }}">
+                <object data="{{ banner.banner.url }}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
+                    <param name="movie" value="{{ banner.banner.url }}"/>
+                    <param name="quality" value="high"/>
+                    <param name="menu" value="false"/>
+                </object>
+            </div>
+            {% if banner.link %}
+                <p><a href="{{ banner.link }}">Publicité</a></p>
+            {% else %}
+                <p>Publicité</p>
+            {% endif %}
+        </div>
+    {% endifequal %}
+{% else %}
+    <div class="addSection add{{ format_width }}">
+        <a href="#"><img src="#" alt="Publicité" /></a>
+        <p><a href="#">Publicité</a></p>
+    </div>
+{% endif %}

@@ -25,6 +25,8 @@ from critica.apps.regions.models import FeaturedRegion
 from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.videos.models import Video
 from critica.apps.pages.models import Page
+from critica.apps.ads.models import Ad
+from critica.apps.ads.models import AdBanner
 from critica.apps.utils import urlbase64
 from tagging.models import Tag
 from tagging.utils import calculate_cloud
@@ -229,6 +231,18 @@ def home(request, issue=None, is_preview=False, is_archive=False):
         context['video'] = Video.objects.filter(issues__id=issue.id)[0]
     except ObjectDoesNotExist:
         context['video'] = False
+        
+    # Ads
+    try:
+        context['ads'] = Ad.objects.filter(page__id=1)
+    except ObjectDoesNotExist:
+        context['ads'] = False
+        
+    # Ad banners
+    try:
+        context['adbanners'] = AdBanner.objects.filter(ads__page__id=1)
+    except ObjectDoesNotExist:
+        context['adbanners'] = False
 
     return render_to_response(
         'front/home.html', 
@@ -325,6 +339,7 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
             context['article'] = Article.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False, category__slug=category_slug)[0]
         except ObjectDoesNotExist:
             context['article'] = False
+    
         
     return render_to_response('front/category.html', context, context_instance=RequestContext(request))
 

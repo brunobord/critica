@@ -1,162 +1,14 @@
 {% extends "layout/base.html" %}
-{% load image_thumbnail %}
+{% load image_thumbnail ads_extra %}
 {% block title %}Accueil{% endblock %}
+{% block ad_1_0 %}
+    {% display_ad '728x90' 'portail' '1.0' %}
+{% endblock %}
 {% block body_id %}home{% endblock %}
 {% block content %}
+<!-- LAUNCH-UNIT -->
 <div id="launch-unit">
-	<script id="extFlashPOS" type="text/javascript">
-	function FlashObject(swfFile, id, dim, transparent, clsid, flashversion, element)
-	{
-		var content = '';
-		content = content +'<OBJECT classid="'+clsid+'" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version='+flashversion+',0,0,0" ID="'+id+'" '+dim+' ALIGN="">';
-		content = content +'<PARAM NAME=movie VALUE="'+swfFile+'"><PARAM NAME=quality VALUE=high><PARAM NAME="wmode" VALUE="'+transparent+'">';
-		content = content + '<EMBED src="'+swfFile+'" quality=high wmode='+transparent+' swLiveConnect=FALSE '+dim+' NAME="'+id+'" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">';
-		content =content +'</EMBED></OBJECT>';
-		document.getElementById(element).innerHTML=content;
-	}
-
-	</script>
-	<script type="text/javascript">
-
-		var sliderIntervalId = 0;
-		var sliderHeight = 440;
-		var sliding = false;
-
-		/* Vitesse d'apparition et de disparition de l'animation expandÃ© */
-		var slideSpeed = 50;
-
-		function HideMe()
-		{
-		   if(sliding)
-			 return;
-		   sliding = true;
-		   if(sliderHeight == 440)
-			 sliderIntervalId = setInterval('SlideUpRun()', 30);
-		}
-
-		function ShowMe()
-		{
-		   if(sliding)
-			 return;
-		   sliding = true;
-		   if(sliderHeight == 90)
-			 sliderIntervalId = setInterval('SlideDownRun()', 30);
-		}
-
-		function SlideUpRun()
-		{
-		   slider = document.getElementById('panel');
-		   if(sliderHeight <= 90)
-		   {
-			 sliding = false;
-			 sliderHeight = 90;
-			 slider.style.height = '90px';
-			 clearInterval(sliderIntervalId);
-		   }
-		   else
-		   {
-			 sliderHeight -= slideSpeed;
-			 if(sliderHeight <90)
-			    sliderHeight = 90;
-			 slider.style.height = sliderHeight + 'px';
-		   }
-		}
-
-		function SlideDownRun()
-		{
-		   slider = document.getElementById('panel');
-		   if(sliderHeight>= 440)
-		   {
-			 sliding = false;
-			 sliderHeight = 440;
-			 slider.style.height = '440px';
-			 clearInterval(sliderIntervalId);
-		   }
-		   else
-		   {
-			 sliderHeight += slideSpeed;
-			 if(sliderHeight> 440)
-			    sliderHeight = 440;
-			 slider.style.height = sliderHeight + 'px';
-		   }
-		}
-	</script>
-
-	<script type="text/javascript" >
-	<!--
-
-	var oas_filenamePOS = '{{ MEDIA_URL }}critica/launch_unit.swf';
-	var oas_gifnamePOS = 'http://a1692.g.akamai.net/n/1692/2042/1077898746/pubs.lemonde.fr/RealMedia/ads/Creatives/CAMP/image.gif';
-	var oas_widthPOS = '1000';					// Largeur
-	var oas_heightPOS = '440';					// Hauteur
-	var oas_clickTagPOS = 'clicktag';				//Orthographe du clicktag
-	var oas_delayPOS = '6';						//DurÃ©e de l'animation
-
-	if(!document.body)
-	document.write("<html><body>");
-	OASd = document;
-	plug =(navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]) ? navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin : 0;
-	if(plug){plug = parseInt(plug.description.substring(plug.description.indexOf(".")-1)) >= 6;}
-	else if(navigator.userAgent && navigator.userAgent.indexOf("MSIE")>=0
-	&&(navigator.userAgent.indexOf("Windows 95")>=0 || navigator.userAgent.indexOf("Windows 98")>=0 || navigator.userAgent.indexOf("Windows NT")>=0)){document.write("<SCRIPT LANGUAGE=VBScript\> \n");
-	document.write("on error resume next \n");
-	document.write("plug =(IsObject(CreateObject(\"ShockwaveFlash.ShockwaveFlash.6\")))\n");
-	document.write("</SCRIPT\> \n");}
-	if(navigator.userAgent.indexOf("MSIE")>=0 && navigator.userAgent.indexOf("Mac")>=0) plug=1;
-
-	if(plug)
-	{
-	if(navigator.userAgent.indexOf("MSIE") != -1 && navigator.userAgent.indexOf("Opera") == -1){
-	document.write("<div id=\"panel\"  style=\"width:1000px; height:440px; display:block; overflow:hidden;\"><div id=\"FinContentPOS1\"></div></div>");
-	}
-	function loadFlashPOS(){
-
-
-		if(navigator.userAgent.indexOf("MSIE") != -1 && navigator.userAgent.indexOf("Opera") == -1){
-
-			if (extFlashPOS.readyState == "complete")
-	  		{
-
-			/*
-		   		FlashObject(""+oas_filenamePOS+"?"+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"", "OAS_AD_POS", "width="+oas_widthPOS+" height="+oas_heightPOS+"", "transparent", "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" ,"6", "FinContentPOS");*/
-
-
-				FlashObject(
-				""+oas_filenamePOS+"?"+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"",
-				 "OAS_AD_POS",
-				  "width="+oas_widthPOS+" height="+oas_heightPOS+"",
-				  "transparent",
-				  "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000",
-				  "6",
-				  "FinContentPOS1");
-
-
-				extFlashPOS.onreadystatechange = "";
-
-			}
-
-			extFlashPOS.onreadystatechange = loadFlashPOS;
-		}
-		else
-		{
-
-	           OASfp=" Menu=FALSE swModifyReport=TRUE width="+oas_widthPOS+" height="+oas_heightPOS+" ";
-	           OASd.write("<div id=\"panel\"  style=\"width:1000px; height:440px; display:block; overflow:hidden;\"><object id=\"techsource_POS\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=3,0,0,0\""+OASfp+">");
-	           OASd.write("<param name=src value=\""+oas_filenamePOS+"\"><param name=quality value=autohigh><param name=loop value=true><param name=play value=true><param name=menu value=false><param name=wmode value=transparent><param name=FlashVars value=\""+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"\">");
-	           OASd.write("<embed src=\""+oas_filenamePOS+"\""+OASfp+"pluginspage=\"http://www.macromedia.com/shockwave\" type=\"application/x-shockwave-flash\" width="+oas_widthPOS+" height="+oas_heightPOS+" PLAY=true LOOP=true QUALITY=autohigh WMODE=transparent FlashVars=\""+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"\">");
-	           OASd.write("</embed></object></div>");
-	        }
-
-	}
-		loadFlashPOS();
-	}
-	else
-	{
-	OASd.write("<a href=\"C?QUERY\" target=\"TARGET\"><img src=\""+oas_gifnamePOS+"\" width="+oas_widthPOS+" height="+oas_heightPOS+" border=0 alt=\"ALT\"></a>");}
-	if(!document.body)
-	document.write("</body></html>");
-	//-->
-</script>
+    {% include "front/includes/launch_unit.html" %}
 </div>
 <!-- // LAUNCH-UNIT -->
 
@@ -180,9 +32,7 @@
     {% endif %}
     	
     <!-- ADD -->
-    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-        <p><a href="#">Publicité</a></p>
-    </div>
+    {% display_ad '468x60' 'portail' '2.0' %}
     <!-- // ADD -->
     
     <!-- ARTICLE LIST -->
@@ -240,10 +90,7 @@
     <!-- // ARTICLE LIST -->
     
     <!-- ADD -->
-    <div class="addSection add468">
-        <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-        <p><a href="#">Publicité</a></p>
-    </div>
+    {% display_ad '468x60' 'portail' '3.0' %}
     <!-- // ADD -->
     
     <!-- ARTICLE LIST -->
@@ -263,15 +110,13 @@
     <!-- // ARTICLE LIST -->
 	
     <!-- ADD -->
-    <div class="addSection add468"> <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/alerte_enlevement.jpg" alt="Alerte en lèvement" /></a>
-        <p><a href="">Alerte enlèvement</a></p>
-    </div>
+    {% display_ad '468x60' 'portail' '3.1' %}
     <!-- // ADD -->
 
 </div>
 <!-- // MAIN CONTENT -->
 
-<!-- SUB CONTENT -->
+<!-- RIGHTWRAP -->
 <div class="rightWrap">
     
     {% if article_3 %}
@@ -282,16 +127,18 @@
 	    {% include "front/includes/home_article_main_empty.html" %}
     {% endif %}
 	
+	<!-- NEWSLETTER -->
     <div id="newsletterSection">
-        <form action="" method="post">
-            <p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
-            <p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
-        </form>
+        {% include "front/includes/newsletter_form.html" %}
     </div>
+    <!-- // NEWSLETTER -->
     
+    <!-- SUBCONTENT -->
     <div id="subContent">
+        
         <!-- LEFT WRAP -->
         <div class="leftWrap">
+            
             <!-- ARTICLE LIST -->
             <div class="articleList">
 
@@ -306,13 +153,10 @@
 			</div>
 		    <!-- // ARTICLE LIST -->
 
-            <div class="addSection">
-                <div class="add-300x90 autoClear">
-                    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
-                    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/add-300x90.gif" alt="Publicit&eacute;" /></a>
-                </div>
-                <p><a href="#">Publicité</a></p>
-            </div>
+            <!-- ADD -->
+            {% display_ad '300x250' 'portail' '5.0' %}
+            {% display_ad '300x250' 'portail' '5.1' %}
+            <!-- // ADD -->
 			
             <!-- ARTICLE LIST -->
             <div class="articleList">
@@ -339,57 +183,24 @@
 
         <!-- RIGHT WRAP -->
         <div class="rightWrap">
+            
+            <!-- POLL -->
             <div id="surveySection">
-                <h2><img src="{{ MEDIA_URL }}critica/img/pouroucontre_top.png" alt="Pour ou contre ?" /></h2>
-                <form action="" method="post">
-                    <p>SUPPRESSION DU SAMEDI MATIN POUR LES ECOLIERS&nbsp;:</p>
-
-                    <ul class="autoClear">
-                        <li>
-                        	<input name="reponse_pourcontre" type="radio" value="Bande de feignasses, les gosses !" />
-                        	<label>Bande de feignasses, les gosses !</label>
-                        </li>
-                        <li>
-                        	<input name="reponse_pourcontre" type="radio" value="Et un week-end, un, pour les profs et instits !" />
-                        	<label>Et un week-end, un, pour les profs et instits !</label>
-
-                        </li>
-                        <li>
-                        	<input name="reponse_pourcontre" type="radio" value="Les journées restent quand même trop longues !" />
-                        	<label>Les journées restent quand même trop longues !</label>
-                        </li>
-                        <li>
-                        	<input name="reponse_pourcontre" type="radio" value="Et pourquoi pas un jour de RTT aussi, non ?" />
-                        	<label>Et pourquoi pas un jour de RTT aussi, non ?</label>
-
-                        </li>
-                        <li>
-                        	<input name="reponse_pourcontre" type="radio" value="M'en fous, j'a pas de gosse(s) !!" />
-                        	<label>M'en fous, j'a pas de gosse(s) !!</label>
-                        </li>
-					</ul>
-                    <p class="submit">
-                        <input src="{{ MEDIA_URL }}critica/img/pouroucontre_valider.jpg" alt="Valider" type="image"/>
-                    </p>
-                </form>
+                {% include "front/includes/poll.html" %}
             </div>
+            <!-- // POLL -->
             
+            <!-- WEATHER -->
             <div id="meteo">
-                <p><a href="#"><img src="{{ MEDIA_URL }}critica/img/meteo.jpg" alt="M&eacute;t&eacute;o" /></a></p>
+                {% include "front/includes/weather.html" %}
             </div>
+            <!-- // WEATHER -->
             
-            <div class="addSection">
-                <div class="add130">
-                    <object data="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
-						<param name="movie" value="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf"/>
-						<param name="quality" value="high"/>
-						<param name="menu" value="false"/>
-					</object>
-				</div>
-			    <p><a href="">Publicité</a></p>
-			</div>
+            <!-- ADD -->
+            {% display_ad '160x600' 'portail' '6.0' %}
+            <!-- // ADD -->
+            
 		</div>
-
 		<!-- // RIGHT WRAP -->
 		
         <!-- TAG CLOUD -->
@@ -404,6 +215,9 @@
         <!-- TAG CLOUD -->
         
     </div>
+    <!-- // SUBCONTENT -->
+    
 </div>
-<!-- // SUB CONTENT -->
+<!-- // RIGHTWRAP -->
+
 {% endblock %}

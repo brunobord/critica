@@ -148,7 +148,9 @@ class Ad(models.Model):
 
 
 class AdBanner(models.Model):
-    banner = models.ImageField(upload_to=ads_settings.IMAGE_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload.'))
+    banner = models.FileField(upload_to=ads_settings.BANNER_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload (image or swf).'))
+    banner_extension = models.CharField(_('banner extension'), max_length=5, blank=True, editable=False)
+    banner_type = models.CharField(_('banner type'), max_length=15, blank=True, editable=False)
     submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
     customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
     campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
@@ -169,6 +171,21 @@ class AdBanner(models.Model):
         
     def __unicode__(self):
         return u'%s' % (self.banner)
+        
+    def save(self):
+        import os.path
+        s, ext = os.path.splitext(self.banner.name)
+        # Saves extension
+        self.banner_extension = ext[1:].lower()
+        image_extensions = ['jpeg', 'jpg', 'gif', 'png']
+        # Saves type
+        if self.banner_extension in image_extensions:
+            self.banner_type = 'image'
+        elif self.banner_extension == 'swf':
+            self.banner_type = 'swf'
+        else:
+            self.banner_type = 'unknown'
+        super(AdBanner, self).save()
         
 
 class AdCarousel(models.Model):

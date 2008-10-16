@@ -1,11 +1,15 @@
 {% extends "layout/base.html" %}
+{% load ads_extra %}
 {% block title %}{{ category.name }}{% endblock %}
+{% block ad_1_0 %}
+    {% display_ad '728x90' category.slug '1.0' %}
+{% endblock %}
 {% block body_id %}{{ category.slug }}{% endblock %}
 {% block body_class %}rubrique{% endblock %}
 {% block content %}
 <!-- LEFT WRAP -->
 <div id="mainContent" class="leftWrap">
-
+    
     <h1>{{ category.name }}</h1>
     
     {% if article %}
@@ -15,10 +19,7 @@
     {% endif %}
 	
 	<!-- ADD -->
-	<div class="addSection add468">
-	    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-	    <p><a href="#">Publicité</a></p>
-	</div>
+    {% display_ad '468x60' category.slug '2.0' %}
     <!-- // ADD -->
 
     <!-- ARTICLE LIST -->
@@ -60,10 +61,7 @@
     <!-- // ARTICLE LIST -->
 	
 	<!-- ADD -->
-	<div class="addSection add468">
-	    <a href="#"><img src="{{ MEDIA_URL }}critica/img/add/pub_468x60.gif" alt="Publicit&eacute;" /></a>
-	    <p><a href="#">Publicité</a></p>
-    </div>
+    {% display_ad '468x60' category.slug '3.0' %}
     <!-- // ADD -->
     	
 </div>
@@ -71,6 +69,7 @@
 
 <!-- RIGHT WRAP -->
 <div class="rightWrap">
+    
     <!-- MAIN ARTICLE -->
     {% if note_1 %}
         {% with note_1 as note %}
@@ -86,75 +85,87 @@
         <!-- LEFT WRAP -->
         <div class="leftWrap">
             <div class="articleList autoClear">
-            
-            {% if note_6 %}
-                {% with note_6 as note %}
-                    {% include "front/includes/category_note_accordion.html" %}
-                {% endwith %}
-		    {% else %}
-		        {% include "front/includes/category_note_accordion_empty.html" %}
-		    {% endif %}
-		    
-            {% if note_7 %}
-                {% with note_7 as note %}
-                    {% include "front/includes/category_note_accordion.html" %}
-                {% endwith %}
-		    {% else %}
-		        {% include "front/includes/category_note_accordion_empty.html" %}
-		    {% endif %}
-		    
-            {% if note_8 %}
-                {% with note_8 as note %}
-                    {% include "front/includes/category_note_accordion.html" %}
-                {% endwith %}
-		    {% else %}
-		        {% include "front/includes/category_note_accordion_empty.html" %}
-		    {% endif %}
-		    
-            {% if note_9 %}
-                {% with note_9 as note %}
-                    {% include "front/includes/category_note_accordion.html" %}
-                {% endwith %}
-		    {% else %}
-		        {% include "front/includes/category_note_accordion_empty.html" %}
-		    {% endif %}
-		    
-            {% if note_10 %}
-                {% with note_6 as note %}
-                    {% include "front/includes/category_note_accordion.html" %}
-                {% endwith %}
-		    {% else %}
-		        {% include "front/includes/category_note_accordion_empty.html" %}
-		    {% endif %}
-        </div>
-    </div>
-    <!-- // LEFT WRAP -->
-    
-    <!-- RIGHT WRAP -->
-    <div class="rightWrap">
-        <div class="addSection">
-            <div class="add130">
-                <object data="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf" type="application/x-shockwave-flash" style=" width:120px; height:600px;">
-                    <param name="movie" value="{{ MEDIA_URL }}critica/img/add/pub_130x600.swf"/>
-                    <param name="quality" value="high"/>
-                    <param name="menu" value="false"/>
-                </object>
+                {% if note_6 %}
+                    {% with note_6 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+    		    
+                {% if note_7 %}
+                    {% with note_7 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+    		    
+                {% if note_8 %}
+                    {% with note_8 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+    		    
+                {% if note_9 %}
+                    {% with note_9 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+    		    
+                {% if note_10 %}
+                    {% with note_6 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
             </div>
-            <p><a href="">Publicité</a></p>
+            
+            <!-- ADD -->
+            {% ifequal category.slug "national" %}
+                {% display_ad '250x250' category.slug '4.0' %}
+            {% endifequal %}
+            {% ifequal category.slug "etranger" %}
+                {% display_ad '250x250' category.slug '4.0' %}
+            {% endifequal %}
+            {% ifequal category.slug "societe" %}
+                {% display_ad '250x250' category.slug '4.0' %}
+            {% endifequal %}
+            {% ifequal category.slug "insolite" %}
+                {% display_ad '250x250' category.slug '4.0' %}
+            {% endifequal %}
+            {% ifequal category.slug "pipoles" %}
+                {% display_ad '250x250' category.slug '4.0' %}
+            {% endifequal %}
+            {% ifequal category.slug "bouquins" %}
+                {% display_ad '250x250' category.slug '4.0' %}
+            {% endifequal %}
+            <!-- // ADD -->
+            
         </div>
+        <!-- // LEFT WRAP -->
+    
+        <!-- RIGHT WRAP -->
+        <div class="rightWrap">
+            {% display_ad '160x600' category.slug '6.0' %}
+        </div>
+        <!-- // RIGHT WRAP -->
+    
     </div>
-    <!-- // RIGHT WRAP -->
-</div>
-<!-- // SUB CONTENT -->
+    <!-- // SUB CONTENT -->
 
-<!-- NEWSLETTER SECTION -->
-<div id="newsletterSection">
-    <form action="" method="post">
-        <p><input name="news" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
-		<p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
-	</form>
-</div>
-<!-- // NEWSLETTER SECTION -->
+    <!-- NEWSLETTER SECTION -->
+    <div id="newsletterSection">
+        {% include "front/includes/newsletter_form.html" %}
+    </div>
+    <!-- // NEWSLETTER SECTION -->
+
 </div>
 <!-- // RIGHT WRAP -->
+
 {% endblock %}

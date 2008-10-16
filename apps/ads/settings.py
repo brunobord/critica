@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # Banner image upload path
-IMAGE_UPLOAD_PATH = 'upload/ads/%Y/%m/%d'
+BANNER_UPLOAD_PATH = 'upload/ads/%Y/%m/%d'
 
 # Carousel XML file upload path
 CAROUSEL_XML_UPLOAD_PATH = 'upload/ads/carousel/%Y/%m/%d/xml/'

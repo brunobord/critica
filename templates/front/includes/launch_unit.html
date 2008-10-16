@@ -1,0 +1,153 @@
+	<script id="extFlashPOS" type="text/javascript">
+	function FlashObject(swfFile, id, dim, transparent, clsid, flashversion, element)
+	{
+		var content = '';
+		content = content +'<OBJECT classid="'+clsid+'" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version='+flashversion+',0,0,0" ID="'+id+'" '+dim+' ALIGN="">';
+		content = content +'<PARAM NAME=movie VALUE="'+swfFile+'"><PARAM NAME=quality VALUE=high><PARAM NAME="wmode" VALUE="'+transparent+'">';
+		content = content + '<EMBED src="'+swfFile+'" quality=high wmode='+transparent+' swLiveConnect=FALSE '+dim+' NAME="'+id+'" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">';
+		content =content +'</EMBED></OBJECT>';
+		document.getElementById(element).innerHTML=content;
+	}
+
+	</script>
+	<script type="text/javascript">
+
+		var sliderIntervalId = 0;
+		var sliderHeight = 440;
+		var sliding = false;
+
+		/* Vitesse d'apparition et de disparition de l'animation expandÃ© */
+		var slideSpeed = 50;
+
+		function HideMe()
+		{
+		   if(sliding)
+			 return;
+		   sliding = true;
+		   if(sliderHeight == 440)
+			 sliderIntervalId = setInterval('SlideUpRun()', 30);
+		}
+
+		function ShowMe()
+		{
+		   if(sliding)
+			 return;
+		   sliding = true;
+		   if(sliderHeight == 90)
+			 sliderIntervalId = setInterval('SlideDownRun()', 30);
+		}
+
+		function SlideUpRun()
+		{
+		   slider = document.getElementById('panel');
+		   if(sliderHeight <= 90)
+		   {
+			 sliding = false;
+			 sliderHeight = 90;
+			 slider.style.height = '90px';
+			 clearInterval(sliderIntervalId);
+		   }
+		   else
+		   {
+			 sliderHeight -= slideSpeed;
+			 if(sliderHeight <90)
+			    sliderHeight = 90;
+			 slider.style.height = sliderHeight + 'px';
+		   }
+		}
+
+		function SlideDownRun()
+		{
+		   slider = document.getElementById('panel');
+		   if(sliderHeight>= 440)
+		   {
+			 sliding = false;
+			 sliderHeight = 440;
+			 slider.style.height = '440px';
+			 clearInterval(sliderIntervalId);
+		   }
+		   else
+		   {
+			 sliderHeight += slideSpeed;
+			 if(sliderHeight> 440)
+			    sliderHeight = 440;
+			 slider.style.height = sliderHeight + 'px';
+		   }
+		}
+	</script>
+
+	<script type="text/javascript" >
+	<!--
+
+	var oas_filenamePOS = '{{ MEDIA_URL }}critica/launch_unit.swf';
+	var oas_gifnamePOS = 'http://a1692.g.akamai.net/n/1692/2042/1077898746/pubs.lemonde.fr/RealMedia/ads/Creatives/CAMP/image.gif';
+	var oas_widthPOS = '1000';					// Largeur
+	var oas_heightPOS = '440';					// Hauteur
+	var oas_clickTagPOS = 'clicktag';				//Orthographe du clicktag
+	var oas_delayPOS = '6';						//DurÃ©e de l'animation
+
+	if(!document.body)
+	document.write("<html><body>");
+	OASd = document;
+	plug =(navigator.mimeTypes && navigator.mimeTypes["application/x-shockwave-flash"]) ? navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin : 0;
+	if(plug){plug = parseInt(plug.description.substring(plug.description.indexOf(".")-1)) >= 6;}
+	else if(navigator.userAgent && navigator.userAgent.indexOf("MSIE")>=0
+	&&(navigator.userAgent.indexOf("Windows 95")>=0 || navigator.userAgent.indexOf("Windows 98")>=0 || navigator.userAgent.indexOf("Windows NT")>=0)){document.write("<SCRIPT LANGUAGE=VBScript\> \n");
+	document.write("on error resume next \n");
+	document.write("plug =(IsObject(CreateObject(\"ShockwaveFlash.ShockwaveFlash.6\")))\n");
+	document.write("</SCRIPT\> \n");}
+	if(navigator.userAgent.indexOf("MSIE")>=0 && navigator.userAgent.indexOf("Mac")>=0) plug=1;
+
+	if(plug)
+	{
+	if(navigator.userAgent.indexOf("MSIE") != -1 && navigator.userAgent.indexOf("Opera") == -1){
+	document.write("<div id=\"panel\"  style=\"width:1000px; height:440px; display:block; overflow:hidden;\"><div id=\"FinContentPOS1\"></div></div>");
+	}
+	function loadFlashPOS(){
+
+
+		if(navigator.userAgent.indexOf("MSIE") != -1 && navigator.userAgent.indexOf("Opera") == -1){
+
+			if (extFlashPOS.readyState == "complete")
+	  		{
+
+			/*
+		   		FlashObject(""+oas_filenamePOS+"?"+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"", "OAS_AD_POS", "width="+oas_widthPOS+" height="+oas_heightPOS+"", "transparent", "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" ,"6", "FinContentPOS");*/
+
+
+				FlashObject(
+				""+oas_filenamePOS+"?"+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"",
+				 "OAS_AD_POS",
+				  "width="+oas_widthPOS+" height="+oas_heightPOS+"",
+				  "transparent",
+				  "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000",
+				  "6",
+				  "FinContentPOS1");
+
+
+				extFlashPOS.onreadystatechange = "";
+
+			}
+
+			extFlashPOS.onreadystatechange = loadFlashPOS;
+		}
+		else
+		{
+
+	           OASfp=" Menu=FALSE swModifyReport=TRUE width="+oas_widthPOS+" height="+oas_heightPOS+" ";
+	           OASd.write("<div id=\"panel\"  style=\"width:1000px; height:440px; display:block; overflow:hidden;\"><object id=\"techsource_POS\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=3,0,0,0\""+OASfp+">");
+	           OASd.write("<param name=src value=\""+oas_filenamePOS+"\"><param name=quality value=autohigh><param name=loop value=true><param name=play value=true><param name=menu value=false><param name=wmode value=transparent><param name=FlashVars value=\""+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"\">");
+	           OASd.write("<embed src=\""+oas_filenamePOS+"\""+OASfp+"pluginspage=\"http://www.macromedia.com/shockwave\" type=\"application/x-shockwave-flash\" width="+oas_widthPOS+" height="+oas_heightPOS+" PLAY=true LOOP=true QUALITY=autohigh WMODE=transparent FlashVars=\""+oas_clickTagPOS+"=C?QUERY&delay="+oas_delayPOS+"\">");
+	           OASd.write("</embed></object></div>");
+	        }
+
+	}
+		loadFlashPOS();
+	}
+	else
+	{
+	OASd.write("<a href=\"C?QUERY\" target=\"TARGET\"><img src=\""+oas_gifnamePOS+"\" width="+oas_widthPOS+" height="+oas_heightPOS+" border=0 alt=\"ALT\"></a>");}
+	if(!document.body)
+	document.write("</body></html>");
+	//-->
+</script>
