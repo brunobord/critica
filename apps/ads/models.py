@@ -158,8 +158,8 @@ class AdBanner(models.Model):
     ads = models.ManyToManyField('ads.Ad', verbose_name=_('positions'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
     description = models.TextField(_('description'), blank=True, help_text=_('You can enter a short description (optional).'))
     link = models.URLField(_('link'), blank=True, help_text=_('When people will click on this ad, they will be redirected to this link (optional).'))
-    starting_date = models.DateField(_('starting date'))
-    ending_date = models.DateField(_('ending date'))
+    starting_date = models.DateField(_('starting date'), blank=True)
+    ending_date = models.DateField(_('ending date'), blank=True)
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     
@@ -186,7 +186,6 @@ class AdBanner(models.Model):
         else:
             self.banner_type = 'unknown'
         super(AdBanner, self).save()
-        
 
 class AdCarousel(models.Model):
     folder = models.CharField(_('folder'), max_length=255, unique=True, help_text=_('Please, enter the folder name.'))
