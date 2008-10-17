@@ -14,6 +14,7 @@ from critica.apps.ads.models import AdType
 from critica.apps.ads.models import AdPage
 from critica.apps.ads.models import AdLocation
 from critica.apps.ads.models import Ad
+from critica.apps.ads.models import AdDefaultBanner
 from critica.apps.ads.models import AdBanner
 from critica.apps.ads.models import AdCarousel
 
@@ -93,6 +94,39 @@ class AdAdmin(admin.ModelAdmin):
     
 admin.site.register(Ad, AdAdmin)
 custom_site.register(Ad, AdAdmin)
+
+
+class AdDefaultBannerAdmin(admin.ModelAdmin):
+    fieldsets = (
+        (_('Banner'), {
+            'fields': ('banner', 'ads', 'link', 'description'),
+        }),
+    )
+    list_display = ('ald_banner', 'ald_ads')
+    filter_vertical = ['ads']
+
+    def ald_ads(self, obj):
+        html = '<table class="banner-ads-info"><tbody>'
+        for ad in obj.ads.all():
+            html += '<tr><td style="border:none; width: 220px; font-variant: small-caps;">%s</td><td style="border:none;">%s</td></tr>' % (ad.page, ad.location)
+        html += '</tbody></table>'
+        return html
+    ald_ads.allow_tags = True
+    ald_ads.short_description = _('positions')
+    
+    def ald_banner(self, obj):
+        for ad in obj.ads.all():
+            format = ad.format
+        return format
+    ald_banner.allow_tags = True
+    ald_banner.short_description = _('banner')
+    
+    def save_model(self, request, obj, form, change):
+        obj.submitter = request.user
+        obj.save()
+    
+admin.site.register(AdDefaultBanner, AdDefaultBannerAdmin)
+custom_site.register(AdDefaultBanner, AdDefaultBannerAdmin)
 
 
 class AdBannerAdmin(admin.ModelAdmin):

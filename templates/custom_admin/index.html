@@ -69,6 +69,13 @@
                 <td><a href="ads/adbanner/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
+            {% if perms.ads.add_addefaultbanner %}
+            <tr>
+                <th scope="row"><a href="ads/addefaultbanner/">Bannières par défaut</a></th>
+                <td><a href="ads/addefaultbanner/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/addefaultbanner/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
             {% if perms.ads.add_adcarousel %}
             <tr>
                 <th scope="row"><a href="ads/adcarousel/">Carousels</a></th>

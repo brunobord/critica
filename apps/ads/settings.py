@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+# Default banner image upload path
+DEFAULT_BANNER_UPLOAD_PATH = 'upload/ads/default/'
+
 # Banner image upload path
 BANNER_UPLOAD_PATH = 'upload/ads/%Y/%m/%d'
 

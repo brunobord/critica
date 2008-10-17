@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-16 11:30+0200\n"
+"POT-Creation-Date: 2008-10-17 13:38+0200\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,23 +17,27 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:100 admin.py:178
-msgid "Customer"
-msgstr "Client"
-
-#: admin.py:103
+#: admin.py:101 admin.py:137
 msgid "Banner"
 msgstr "Bannière"
 
-#: admin.py:106 admin.py:184
-msgid "During"
-msgstr "Durée"
-
-#: admin.py:166 models.py:143 models.py:156
+#: admin.py:115 admin.py:155 models.py:143 models.py:155 models.py:193
 msgid "positions"
 msgstr "positions"
 
-#: admin.py:181
+#: admin.py:122 models.py:151 models.py:187 models.py:204
+msgid "banner"
+msgstr "bannière"
+
+#: admin.py:134 admin.py:167
+msgid "Customer"
+msgstr "Client"
+
+#: admin.py:140 admin.py:173
+msgid "During"
+msgstr "Durée"
+
+#: admin.py:170
 msgid "Carousel"
 msgstr "Carousel"
 
@@ -47,16 +51,16 @@ msgid "Please, enter the customer name."
 msgstr "Entrez un nom pour ce client."
 
 #: models.py:14 models.py:30 models.py:49 models.py:69 models.py:93
-#: models.py:114 models.py:136 models.py:161 models.py:182
+#: models.py:114 models.py:136 models.py:158 models.py:198 models.py:234
 msgid "creation date"
 msgstr "date de création"
 
 #: models.py:15 models.py:31 models.py:50 models.py:70 models.py:94
-#: models.py:115 models.py:137 models.py:162 models.py:183
+#: models.py:115 models.py:137 models.py:159 models.py:199 models.py:235
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:20 models.py:28 models.py:153 models.py:176
+#: models.py:20 models.py:28 models.py:228
 msgid "customer"
 msgstr "client"
 
@@ -72,7 +76,7 @@ msgstr "Sélectionnez un client."
 msgid "Please, enter the campaign name."
 msgstr "Entrez un nom pour cette campagne."
 
-#: models.py:36 models.py:154 models.py:177
+#: models.py:36 models.py:191 models.py:229
 msgid "campaign"
 msgstr "campagne"
 
@@ -116,7 +120,7 @@ msgstr "formats"
 msgid "Please, enter a name for this type."
 msgstr "Entrez un nom pour ce type."
 
-#: models.py:75 models.py:91 models.py:155 models.py:178
+#: models.py:75 models.py:91 models.py:192 models.py:230
 msgid "type"
 msgstr "type"
 
@@ -162,7 +166,7 @@ msgstr "pages"
 msgid "Please, enter a name for this location."
 msgstr "Entrez un nom pour cet emplacement."
 
-#: models.py:113 models.py:142 models.py:179
+#: models.py:113 models.py:142 models.py:231
 msgid "position"
 msgstr "position"
 
@@ -198,47 +202,41 @@ msgstr "prix"
 msgid "Please, enter its price by month."
 msgstr "Entrez son prix au mois."
 
-#: models.py:151 models.py:167
-msgid "banner"
-msgstr "bannière"
-
-#: models.py:151
+#: models.py:151 models.py:187
 msgid "Please, select a banner to upload (image or swf)."
 msgstr "Sélectionnez une bannière à télécharger (image ou swf)."
 
-#: models.py:152
+#: models.py:152 models.py:188
+#, fuzzy
+msgid "banner extension"
+msgstr "bannières"
+
+#: models.py:153 models.py:189
+#, fuzzy
+msgid "banner type"
+msgstr "bannière"
+
+#: models.py:154 models.py:190
 msgid "submitter"
 msgstr "auteur"
 
-#: models.py:153 models.py:176
-msgid "Please, select a customer."
-msgstr "Sélectionnez un client."
-
-#: models.py:154 models.py:177
-msgid "Please, select a campaign."
-msgstr "Sélectionnez une campagne."
-
-#: models.py:155 models.py:178
-msgid "Please, select a ad type."
-msgstr "Sélectionnez un type de publicité."
-
-#: models.py:156 models.py:179
+#: models.py:155 models.py:193 models.py:231
 msgid "Please, select one or several positions."
 msgstr "Sélectionnez une ou plusieurs positions."
 
-#: models.py:157
+#: models.py:156 models.py:194
 msgid "description"
 msgstr "description"
 
-#: models.py:157
+#: models.py:156 models.py:194
 msgid "You can enter a short description (optional)."
 msgstr "Vous pouvez entrer une courte description (optionnel)."
 
-#: models.py:158
+#: models.py:157 models.py:195
 msgid "link"
 msgstr "lien"
 
-#: models.py:158
+#: models.py:157 models.py:195
 msgid ""
 "When people will click on this ad, they will be redirected to this link "
 "(optional)."
@@ -246,30 +244,50 @@ msgstr ""
 "Quand les internautes cliqueront sur cette publicité, ils seront redirigés "
 "vers ce lien."
 
-#: models.py:159 models.py:180
+#: models.py:164
+msgid "default banner"
+msgstr "bannière par défaut"
+
+#: models.py:165
+msgid "default banners"
+msgstr "bannières par défaut"
+
+#: models.py:191 models.py:229
+msgid "Please, select a campaign."
+msgstr "Sélectionnez une campagne."
+
+#: models.py:192 models.py:230
+msgid "Please, select a ad type."
+msgstr "Sélectionnez un type de publicité."
+
+#: models.py:196 models.py:232
 msgid "starting date"
 msgstr "date de départ"
 
-#: models.py:160 models.py:181
+#: models.py:197 models.py:233
 msgid "ending date"
 msgstr "date de fin"
 
-#: models.py:168
+#: models.py:205
 msgid "banners"
 msgstr "bannières"
 
-#: models.py:175
+#: models.py:227
 msgid "folder"
 msgstr "répertoire"
 
-#: models.py:175
+#: models.py:227
 msgid "Please, enter the folder name."
 msgstr "Entrez le nom du répertoire."
 
-#: models.py:188
+#: models.py:228
+msgid "Please, select a customer."
+msgstr "Sélectionnez un client."
+
+#: models.py:240
 msgid "carousel"
 msgstr "carousel"
 
-#: models.py:189
+#: models.py:241
 msgid "carousels"
 msgstr "carousels"
