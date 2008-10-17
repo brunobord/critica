@@ -98,7 +98,7 @@ custom_site.register(Ad, AdAdmin)
 class AdBannerAdmin(admin.ModelAdmin):
     fieldsets = (
         (_('Customer'), {
-            'fields': ('customer', 'campaign', 'type'),
+            'fields': ('campaign', 'type'),
         }),
         (_('Banner'), {
             'fields': ('banner', 'ads', 'link', 'description'),
@@ -107,8 +107,8 @@ class AdBannerAdmin(admin.ModelAdmin):
             'fields': ('starting_date', 'ending_date'),
         }),
     )
-    list_display = ('customer', 'campaign', 'type', 'ald_ads', 'starting_date', 'ending_date')
-    list_filter = ('customer', 'campaign', 'type')
+    list_display = ('campaign', 'type', 'ald_ads', 'starting_date', 'ending_date')
+    list_filter = ('campaign', 'type')
     filter_vertical = ['ads']
 
     def ald_ads(self, obj):

@@ -152,7 +152,6 @@ class AdBanner(models.Model):
     banner_extension = models.CharField(_('banner extension'), max_length=5, blank=True, editable=False)
     banner_type = models.CharField(_('banner type'), max_length=15, blank=True, editable=False)
     submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
-    customer = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select a customer.'))
     campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
     type = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
     ads = models.ManyToManyField('ads.Ad', verbose_name=_('positions'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
@@ -186,6 +185,7 @@ class AdBanner(models.Model):
         else:
             self.banner_type = 'unknown'
         super(AdBanner, self).save()
+
 
 class AdCarousel(models.Model):
     folder = models.CharField(_('folder'), max_length=255, unique=True, help_text=_('Please, enter the folder name.'))

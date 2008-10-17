@@ -4,8 +4,8 @@
         "model": "ads.customer", 
         "fields": {
             "name": "Bidule", 
-            "modification_date": "2008-10-16 07:58:37", 
-            "creation_date": "2008-10-16 07:58:37"
+            "modification_date": "2008-10-17 10:27:38", 
+            "creation_date": "2008-10-17 10:27:38"
         }
     }, 
     {
@@ -13,8 +13,8 @@
         "model": "ads.customer", 
         "fields": {
             "name": "Chouette", 
-            "modification_date": "2008-10-16 08:04:13", 
-            "creation_date": "2008-10-16 08:04:13"
+            "modification_date": "2008-10-17 10:27:50", 
+            "creation_date": "2008-10-17 10:27:50"
         }
     }, 
     {
@@ -23,8 +23,8 @@
         "fields": {
             "customer": 1, 
             "name": "Bidule Campagne", 
-            "modification_date": "2008-10-16 07:58:50", 
-            "creation_date": "2008-10-16 07:58:50"
+            "modification_date": "2008-10-17 10:28:07", 
+            "creation_date": "2008-10-17 10:28:07"
         }
     }, 
     {
@@ -33,18 +33,17 @@
         "fields": {
             "customer": 2, 
             "name": "Chouette Campagne", 
-            "modification_date": "2008-10-16 08:04:22", 
-            "creation_date": "2008-10-16 08:04:22"
+            "modification_date": "2008-10-17 10:28:15", 
+            "creation_date": "2008-10-17 10:28:15"
         }
     }, 
     {
         "pk": 1, 
         "model": "ads.adbanner", 
         "fields": {
-            "customer": 1, 
-            "description": "Super banni\u00e8re en 728x90", 
+            "description": "Super Banni\u00e8re 728x90.", 
             "campaign": 1, 
-            "type": 1, 
+            "banner": "upload/ads/2008/10/17/728x90.jpg", 
             "ads": [
                 1, 
                 9, 
@@ -58,28 +57,27 @@
                 46, 
                 51, 
                 56, 
-                61, 
-                66, 
-                71, 
-                76
+                62, 
+                73
             ], 
-            "creation_date": "2008-10-16 08:01:06", 
-            "ending_date": "2008-10-30", 
+            "creation_date": "2008-10-17 10:30:58", 
+            "banner_type": "image", 
+            "ending_date": "2008-11-12", 
             "link": "http://www.google.com/", 
+            "type": 1, 
             "submitter": 1, 
-            "starting_date": "2008-09-03", 
-            "banner": "upload/ads/2008/10/16/728x90.jpg", 
-            "modification_date": "2008-10-16 08:01:06"
+            "starting_date": "2008-09-10", 
+            "banner_extension": "jpg", 
+            "modification_date": "2008-10-17 10:30:58"
         }
     }, 
     {
         "pk": 2, 
         "model": "ads.adbanner", 
         "fields": {
-            "customer": 1, 
-            "description": "Super banni\u00e8re 468x60.", 
+            "description": "Super Banni\u00e8re 468x60.", 
             "campaign": 1, 
-            "type": 1, 
+            "banner": "upload/ads/2008/10/17/468x60.jpg", 
             "ads": [
                 3, 
                 4, 
@@ -105,59 +103,61 @@
                 52, 
                 53, 
                 57, 
-                62, 
+                64, 
                 67, 
-                72, 
-                77
+                70, 
+                74
             ], 
-            "creation_date": "2008-10-16 08:03:30", 
-            "ending_date": "2008-11-20", 
+            "creation_date": "2008-10-17 10:34:14", 
+            "banner_type": "image", 
+            "ending_date": "2008-11-28", 
             "link": "", 
+            "type": 1, 
             "submitter": 1, 
-            "starting_date": "2008-09-25", 
-            "banner": "upload/ads/2008/10/16/468x60.jpg", 
-            "modification_date": "2008-10-16 08:03:30"
+            "starting_date": "2008-09-30", 
+            "banner_extension": "jpg", 
+            "modification_date": "2008-10-17 10:34:14"
         }
     }, 
     {
         "pk": 3, 
         "model": "ads.adbanner", 
         "fields": {
-            "customer": 2, 
-            "description": "Super banni\u00e8re 300x250.", 
-            "campaign": 2, 
-            "type": 1, 
+            "description": "", 
+            "campaign": 1, 
+            "banner": "upload/ads/2008/10/17/300x90.jpg", 
             "ads": [
                 6, 
                 7, 
-                58, 
                 59, 
-                63, 
-                64, 
+                60, 
+                65, 
+                66, 
                 68, 
                 69, 
-                73, 
-                74, 
-                78, 
-                79
+                71, 
+                72, 
+                75, 
+                76
             ], 
-            "creation_date": "2008-10-16 08:06:05", 
-            "ending_date": "2008-12-11", 
-            "link": "http://www.google.com/", 
+            "creation_date": "2008-10-17 10:58:19", 
+            "banner_type": "image", 
+            "ending_date": "2008-12-19", 
+            "link": "", 
+            "type": 1, 
             "submitter": 1, 
-            "starting_date": "2008-10-08", 
-            "banner": "upload/ads/2008/10/16/300x250.jpg", 
-            "modification_date": "2008-10-16 08:06:05"
+            "starting_date": "2008-10-10", 
+            "banner_extension": "jpg", 
+            "modification_date": "2008-10-17 10:58:19"
         }
     }, 
     {
         "pk": 4, 
         "model": "ads.adbanner", 
         "fields": {
-            "customer": 2, 
-            "description": "Super banni\u00e8re 250x250.", 
+            "description": "", 
             "campaign": 2, 
-            "type": 1, 
+            "banner": "upload/ads/2008/10/17/250x250.jpg", 
             "ads": [
                 12, 
                 17, 
@@ -166,25 +166,26 @@
                 40, 
                 49, 
                 54, 
-                55
+                58
             ], 
-            "creation_date": "2008-10-16 08:13:06", 
-            "ending_date": "2008-12-20", 
-            "link": "", 
+            "creation_date": "2008-10-17 11:00:27", 
+            "banner_type": "image", 
+            "ending_date": "2009-01-15", 
+            "link": "http://www.google.com/", 
+            "type": 1, 
             "submitter": 1, 
-            "starting_date": "2008-09-26", 
-            "banner": "upload/ads/2008/10/16/250x250.jpg", 
-            "modification_date": "2008-10-16 08:13:06"
+            "starting_date": "2008-09-10", 
+            "banner_extension": "jpg", 
+            "modification_date": "2008-10-17 11:00:27"
         }
     }, 
     {
         "pk": 5, 
         "model": "ads.adbanner", 
         "fields": {
-            "customer": 1, 
             "description": "", 
-            "campaign": 1, 
-            "type": 1, 
+            "campaign": 2, 
+            "banner": "upload/ads/2008/10/17/120x600.jpg", 
             "ads": [
                 8, 
                 13, 
@@ -196,39 +197,19 @@
                 41, 
                 45, 
                 50, 
-                60, 
-                65, 
-                70, 
-                75, 
-                80
+                61, 
+                63, 
+                77
             ], 
-            "creation_date": "2008-10-16 08:14:46", 
-            "ending_date": "2009-01-16", 
+            "creation_date": "2008-10-17 11:04:43", 
+            "banner_type": "image", 
+            "ending_date": "2008-12-19", 
             "link": "", 
-            "submitter": 1, 
-            "starting_date": "2008-10-02", 
-            "banner": "upload/ads/2008/10/16/160x600.jpg", 
-            "modification_date": "2008-10-16 08:14:46"
-        }
-    }, 
-    {
-        "pk": 6, 
-        "model": "ads.adbanner", 
-        "fields": {
-            "customer": 2, 
-            "description": "Super banni\u00e8re 1000x440.", 
-            "campaign": 2, 
             "type": 1, 
-            "ads": [
-                2
-            ], 
-            "creation_date": "2008-10-16 08:15:54", 
-            "ending_date": "2008-11-20", 
-            "link": "http://www.google.com/", 
             "submitter": 1, 
-            "starting_date": "2008-10-08", 
-            "banner": "upload/ads/2008/10/16/1000x440.jpg", 
-            "modification_date": "2008-10-16 08:15:54"
+            "starting_date": "2008-09-10", 
+            "banner_extension": "jpg", 
+            "modification_date": "2008-10-17 11:04:43"
         }
     }
 ]
