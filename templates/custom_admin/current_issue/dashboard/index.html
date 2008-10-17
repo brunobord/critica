@@ -10,7 +10,7 @@
 
     <div id="dashboard-welcome">
         <p><strong>Bienvenue sur le Dashboard. Vous contrôlez actuellement l'édition : <a href="/admin/issues/issue/{{ current_issue.id }}">{{ current_issue.number }}</a></strong></p>
-        <p><strong>Pour avoir un aperçu de cette édition, utilisez ce lien caché : <a href="{{ site_url }}/preview/{{ current_issue.secret_key }}/">{{ site_url }}/preview/{{ current_issue.secret_key }}/</a></strong></p>
+        <p><strong>Pour avoir un aperçu de cette édition, utilisez ce lien caché : <a href="{{ site_url }}/preview/{{ current_issue.secret_key }}/" target="_blank">{{ site_url }}/preview/{{ current_issue.secret_key }}/</a></strong></p>
         <p>Vous pouvez contrôler une édition particulière&nbsp;:</p>
         <ul>
         {% for issue in issues %}

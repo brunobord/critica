@@ -89,7 +89,7 @@ class IssueNotePositionAdmin(admin.ModelAdmin):
     def ald_category(self, obj):
         from django.contrib.sites.models import Site
         site = Site.objects.get_current()
-        return '<a href="http://%s/preview/%s/%s/">%s</a>' % (site.domain, obj.issue.secret_key, obj.category.slug, obj.category.name)
+        return '<a href="http://%s/preview/%s/%s/" target="_blank">%s</a>' % (site.domain, obj.issue.secret_key, obj.category.slug, obj.category.name)
     ald_category.short_description = _('category')
     ald_category.allow_tags = True
     
