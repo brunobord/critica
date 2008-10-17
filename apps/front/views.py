@@ -710,7 +710,7 @@ def issuearchive_category(request, issue_number, category_slug):
     
     """
     issue = _get_current_issue(issue_number=issue_number)
-    return category(request, issue=issue, is_archive=True)
+    return category(request, category_slug, issue=issue, is_archive=True)
 
 
 

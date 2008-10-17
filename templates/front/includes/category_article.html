@@ -1,4 +1,4 @@
-{% load image_thumbnail %}
+{% load image_thumbnail articles_extra %}
 <div class="articleSection articleMain">
     <h3>{{ article.title }}</h3>
     <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
@@ -16,14 +16,9 @@
 	<!-- SLICKBOX -->
 	<div class="slickbox" style="display:block;">
         {{ article.content|safe }}
-        <div class="relatedArticles">
-            <h4>A lire aussi</h4>
-            <ul>
-                <li><h5><a href="#">Ces acteurs qui soutiennent des candidats <span>(n°284 - 12.08.2008)</span></a></h5></li>
-                <li><h5><a href="#">Sarkozy veut remonter le moral des policiers et gendarmes <span>(n°284 - 12.08.2008)</span></a></h5></li>
-                <li><h5><a href="#">Pascal n'a plus d'idées <span>(n°284 - 12.08.2008)</span></a></h5></li>
-            </ul>
-        </div>
+        
+        {% display_related_articles article %}
+        
         <p class="readMore slick-hide"><a href="#">Masquer</a></p>
 	</div>
 	<!-- // SLICKBOX -->
