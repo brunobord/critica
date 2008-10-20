@@ -1,8 +1,10 @@
 <div class="articleSection">
     <h2><span>{{ note.type.name }}</span></h2>
-    <div class="lead autoClear">
-        <h3>{{ note.title }}</h3>
-        {{ note.content|safe }}
+    <div  class="note-{{ note.id }}">
+        <div class="lead autoClear">
+            <h3>{{ note.title }}</h3>
+            <div class="content">{{ note.content|safe }}</div>
+        </div>
+        <p class="readMore"><a href="#">Lire la suite</a></p>
     </div>
-    <p class="readMore"><a href="#">Lire la suite</a></p>
 </div>

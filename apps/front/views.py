@@ -10,6 +10,9 @@ from django.shortcuts import get_object_or_404
 from django.template import RequestContext
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import MultipleObjectsReturned
+from django.core.paginator import Paginator
+from django.core.paginator import InvalidPage
+from django.core.paginator import EmptyPage
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
 from critica.apps.positions.models import IssueCategoryPosition
@@ -29,6 +32,7 @@ from critica.apps.ads.models import Ad
 from critica.apps.ads.models import AdBanner
 from critica.apps.utils import urlbase64
 from tagging.models import Tag
+from tagging.models import TaggedItem
 from tagging.utils import calculate_cloud
 
 
@@ -828,11 +832,33 @@ def tags(request):
     context = {}
     context['issue'] = issue
     context['is_current'] = True
-    try:
-        tags = Tag.objects.all()
-        context['tags'] = calculate_cloud(tags)
-    except ObjectDoesNotExist:
-        context['tags'] = False
+    
+    all_tags = []
+    article_tags = Tag.objects.usage_for_model(Article, counts=True)
+    for tag in article_tags:
+        all_tags.append(tag)
+        
+    note_tags = Tag.objects.usage_for_model(Note, counts=True)
+    for tag in note_tags:
+        all_tags.append(tag)
+    
+    region_tags = Tag.objects.usage_for_model(RegionNote, counts=True)
+    for tag in region_tags:
+        all_tags.append(tag)
+        
+    voyages_tags = Tag.objects.usage_for_model(VoyagesArticle, counts=True)
+    for tag in voyages_tags:
+        all_tags.append(tag)
+        
+    epicurien_tags = Tag.objects.usage_for_model(VoyagesArticle, counts=True)
+    for tag in epicurien_tags:
+        all_tags.append(tag)
+        
+    anger_tags = Tag.objects.usage_for_model(AngerArticle, counts=True)
+    for tag in anger_tags:
+        all_tags.append(tag)
+        
+    context['tags'] = calculate_cloud(all_tags, steps=10)
     return render_to_response('front/tags.html', context, context_instance=RequestContext(request))
 
 
@@ -846,6 +872,55 @@ def tags_tag(request, tag):
     context = {}
     context['issue'] = issue
     context['is_current'] = True
+    
+    tag = get_object_or_404(Tag, name=tag)
+    context['tag'] = tag
+        
+    items = []
+    
+    articles = TaggedItem.objects.get_by_model(Article.objects.filter(is_ready_to_publish=True, is_reserved=False).order_by('-publication_date'), tag)
+    if articles:
+        for article in articles:
+            items.append((article.id, article))
+    
+    notes = TaggedItem.objects.get_by_model(Note.objects.filter(is_ready_to_publish=True, is_reserved=False).order_by('-publication_date'), tag)
+    if notes:
+        for note in notes:
+            items.append((note.id, note))
+        
+    regions = TaggedItem.objects.get_by_model(RegionNote.objects.filter(is_ready_to_publish=True, is_reserved=False).order_by('-publication_date'), tag)
+    if regions:
+        for region in regions:
+            items.append((region.id, region))
+            
+    voyages = TaggedItem.objects.get_by_model(VoyagesArticle.objects.filter(is_ready_to_publish=True, is_reserved=False).order_by('-publication_date'), tag)
+    if voyages:
+        for voyage in voyages:
+            items.append((voyage.id, voyage))
+            
+    epicurien = TaggedItem.objects.get_by_model(EpicurienArticle.objects.filter(is_ready_to_publish=True, is_reserved=False).order_by('-publication_date'), tag)
+    if epicurien:
+        for e in epicurien:
+            items.append((e.id, e))
+            
+    anger = TaggedItem.objects.get_by_model(AngerArticle.objects.filter(is_ready_to_publish=True, is_reserved=False).order_by('-publication_date'), tag)
+    if anger:
+        for a in anger:
+            items.append((a.id, a))
+    
+    item_list = [item for k, item in items]
+    
+    # Pagination
+    paginator = Paginator(item_list, 30)
+    try:
+        page = int(request.GET.get('page', '1'))
+    except ValueError:
+        page = 1
+    try:
+        context['items'] = paginator.page(page)
+    except (EmptyPage, InvalidPage):
+        context['items'] = paginator.page(paginator.num_pages)
+
     return render_to_response('front/tags_tag.html', context, context_instance=RequestContext(request))
 
 

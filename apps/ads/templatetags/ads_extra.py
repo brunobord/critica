@@ -44,3 +44,26 @@ def display_ad(format, page, location):
         'format_height': height,
     }
 
+
+@register.inclusion_tag('front/includes/carousel.html')
+def display_carousel(format, page, location):
+    width, height = format.split('x')
+    today = datetime.date.today()
+    try:
+        carousel = AdCarousel.objects.get(
+            ads__format__width=width, 
+            ads__format__height=height,
+            ads__page__slug=page, 
+            ads__location__position=location,
+            starting_date__lte=today,
+            ending_date__gte=today,
+        )
+    except ObjectDoesNotExist:
+        carousel = None
+
+    return {
+        'carousel': carousel,
+        'format': format,
+        'format_width': width,
+        'format_height': height,
+    }

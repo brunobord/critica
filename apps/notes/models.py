@@ -7,6 +7,7 @@ import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
+from django.db.models import permalink
 from tagging.fields import TagField
 from critica.apps.articles.models import BaseArticle
 from critica.apps.notes.managers import PublishedNoteManager
@@ -58,7 +59,7 @@ class BaseNoteType(models.Model):
         
         """
         return u'%s' % self.name
-        
+
     def save(self):
         """ 
         Object pre-saving operations:
