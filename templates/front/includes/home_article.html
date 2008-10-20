@@ -34,7 +34,7 @@
         {% if is_current %}
             <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
         {% endif %}
-        {{ article.summary|safe }}
+        <p>{{ article.summary|safe }}</p>
 	</div>
 
     {% if is_preview %}
