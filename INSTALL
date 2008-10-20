@@ -19,13 +19,13 @@ As Launchpad is based on Bazaar (http://bazaar-vcs.org/), a distributed version
 control system, you must install it on your system to grab its source. But you
 probably already know it.
 
-Critic@-engine uses the latest development version of django-tagging 
-(http://code.google.com/p/django-tagging/) as tagging system. So you need to 
-download and install this Django application.
+Critic@-engine uses the latest development version (also called "SVN") of 
+django-tagging (http://code.google.com/p/django-tagging/) as tagging system. So 
+you need to download and install this Django application.
 
 Critic@-engine uses the latest version of django-imagethumbnail 
-(http://www.interfaceip.org/django-imagethumbnail/) for generating thumbnails.
-So you need to download and install this application.
+(http://www.interfaceip.org/django-imagethumbnail/django-imagethumbnail.tar.gz) 
+for generating thumbnails. So you need to download and install this application.
 
 Installation
 ------------
@@ -73,10 +73,19 @@ constant which points to the project root directory::
     import os.path
     PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
-Then, add project templates directory::
+If you want to install Critic@-engine as application (so, into the root directory
+of your project), you need to add this path to your ``TEMPLATES_DIR``::
 
     TEMPLATE_DIRS = (
         os.path.join(PROJECT_PATH, 'critica', 'templates'),
+    )
+    
+Or if you want to install Critic@-engine as project (so, with your own ``settings.py``
+and ``manage.py`` files into Critic@-engine directory, you need to add this path
+to your ``TEMPLATES_DIR``::
+
+    TEMPLATE_DIRS = (
+        os.path.join(PROJECT_PATH, 'templates'),
     )
 
 Some templates, including the layout, need to get information about the current
@@ -106,9 +115,14 @@ Replace the value of ``ROOT_URLCONF`` with the appropriate one::
 
     ROOT_URLCONF = 'critica.urls'
 
-And add these applications to your ``INSTALLED_APPS``::
+And add these applications to your ``INSTALLED_APPS`` (IMPORTANT: please, respect
+this order otherwise you will encounter problems during fixtures loading)::
 
     INSTALLED_APPS = (
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.sites',
         'django.contrib.admin',
         'tagging',
         'imagethumbnail',
