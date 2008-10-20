@@ -2,7 +2,9 @@
 {% load image_thumbnail ads_extra %}
 {% block title %}Accueil{% endblock %}
 {% block ad_1_0 %}
-    {% display_ad '728x90' 'portail' '1.0' %}
+	<div class="addSection add728">
+        {% display_ad '728x90' 'portail' '1.0' %}
+    </div>
 {% endblock %}
 {% block body_id %}home{% endblock %}
 {% block content %}
@@ -32,7 +34,9 @@
     {% endif %}
     	
     <!-- AD -->
-    {% display_ad '468x60' 'portail' '2.0' %}
+    <div class="addSection add468">
+        {% display_ad '468x60' 'portail' '2.0' %}
+    </div>
     <!-- // AD -->
     
     <!-- ARTICLE LIST -->
@@ -90,7 +94,9 @@
     <!-- // ARTICLE LIST -->
     
     <!-- AD -->
-    {% display_ad '468x60' 'portail' '3.0' %}
+	<div class="addSection add468">
+        {% display_ad '468x60' 'portail' '3.0' %}
+    </div>
     <!-- // AD -->
     
     <!-- ARTICLE LIST -->
@@ -110,7 +116,9 @@
     <!-- // ARTICLE LIST -->
 	
     <!-- AD -->
-    {% display_ad '468x60' 'portail' '3.1' %}
+	<div class="addSection add468">
+        {% display_ad '468x60' 'portail' '3.1' %}
+    </div>
     <!-- // AD -->
 
 </div>
@@ -154,8 +162,12 @@
 		    <!-- // ARTICLE LIST -->
 
             <!-- AD -->
-            {% display_ad '300x90' 'portail' '5.0' %}
-            {% display_ad '300x90' 'portail' '5.1' %}
+            <div class="addSection">
+                <div class="add145 autoClear">
+                    {% display_ad '300x90' 'portail' '5.0' %}
+                    {% display_ad '300x90' 'portail' '5.1' %}
+                </div>
+            </div>
             <!-- // AD -->
 			
             <!-- ARTICLE LIST -->
@@ -197,7 +209,11 @@
             <!-- // WEATHER -->
             
             <!-- AD -->
-            {% display_ad '120x600' 'portail' '6.0' %}
+            <div class="addSection">
+                <div class="add130">
+                    {% display_ad '120x600' 'portail' '6.0' %}
+                </div>
+            </div>
             <!-- // AD -->
             
 		</div>

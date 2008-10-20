@@ -11,7 +11,9 @@
 </script>
 {% endblock %}
 {% block ad_1_0 %}
-    {% display_ad '728x90' 'epicurien' '1.0' %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'epicurien' '1.0' %}
+    </div>
 {% endblock %}
 {% block body_id %}epicurien{% endblock %}
 {% block body_class %}rubrique{% endblock %}
@@ -71,11 +73,12 @@
 								<!-- // ARCHIVES -->
 							
 								<!-- AD -->
-								{% display_ad '300x90' 'epicurien-cote-gourmets' '5.0' %}
-	                            <!-- // AD -->
-	                            
-	                            <!-- AD -->							
-								{% display_ad '300x90' 'epicurien-cote-gourmets' '5.1' %}
+								<div class="addSection">
+							        <div class="add-300x90 autoClear">
+								        {% display_ad '300x90' 'epicurien-cote-gourmets' '5.0' %}					
+								        {% display_ad '300x90' 'epicurien-cote-gourmets' '5.1' %}
+                                    </div>
+                                </div>
                                 <!-- // AD -->
                                 
                             </div>
@@ -101,7 +104,9 @@
                 </div>
                 
                 <!-- AD -->
-                {% display_ad '468x60' 'epicurien-cote-gourmets' '2.0' %}
+                <div class="addSection add468">
+                    {% display_ad '468x60' 'epicurien-cote-gourmets' '2.0' %}
+                </div>
                 <!-- // AD -->
                 
             </div>
@@ -138,11 +143,12 @@
 								<!-- // ARCHIVES -->
 								
 								<!-- AD -->
-								{% display_ad '300x90' 'epicurien-cote-bar' '5.0' %}
-	                            <!-- // AD -->
-	                            
-	                            <!-- AD -->							
-								{% display_ad '300x90' 'epicurien-cote-bar' '5.1' %}
+							    <div class="addSection">
+							        <div class="add-300x90 autoClear">
+								        {% display_ad '300x90' 'epicurien-cote-bar' '5.0' %}
+								        {% display_ad '300x90' 'epicurien-cote-bar' '5.1' %}
+                                    </div>
+                                </div>
                                 <!-- // AD -->
 
 							</div>
@@ -168,9 +174,11 @@
                 </div>
                 
                 <!-- AD -->
-                {% display_ad '468x60' 'epicurien-cote-bar' '2.0' %}
+                <div class="addSection add468">
+                    {% display_ad '468x60' 'epicurien-cote-bar' '2.0' %}
+                </div>
                 <!-- // AD -->
-                
+            
             </div>
             <!-- // PANEL ALCOOLS -->
             
@@ -205,11 +213,12 @@
 								<!-- // ARCHIVES -->
 								
 								<!-- AD -->
-								{% display_ad '300x90' 'epicurien-cote-fumeurs' '5.0' %}
-	                            <!-- // AD -->
-	                            
-	                            <!-- AD -->							
-								{% display_ad '300x90' 'epicurien-cote-fumeurs' '5.1' %}
+								<div class="addSection">
+							        <div class="add-300x90 autoClear">
+								        {% display_ad '300x90' 'epicurien-cote-fumeurs' '5.0' %}						
+								        {% display_ad '300x90' 'epicurien-cote-fumeurs' '5.1' %}
+								    </div>
+								</div>
                                 <!-- // AD -->
                                 
 							</div>
@@ -227,10 +236,12 @@
 				        {% else %}
 				            {% include "front/includes/epicurien_article_empty.html" %}
 				        {% endif %}
-				    </div>
-                
+                    </div>
+                    
                     <!-- AD -->
-                    {% display_ad '468x60' 'epicurien-cote-fumeurs' '2.0' %}
+                    <div class="addSection add468">
+                        {% display_ad '468x60' 'epicurien-cote-fumeurs' '2.0' %}
+                    </div>
                     <!-- // AD -->
                 
                 </div>
@@ -252,7 +263,11 @@
         <div class="rightWrap">
         
             <!-- AD -->
-            {% display_ad '120x600' 'portail' '6.0' %}
+			<div class="addSection">
+			    <div class="add130">
+                    {% display_ad '120x600' 'portail' '6.0' %}
+                </div>
+            </div>
             <!-- // AD -->
         
         </div>

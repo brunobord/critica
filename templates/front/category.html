@@ -2,7 +2,9 @@
 {% load ads_extra %}
 {% block title %}{{ category.name }}{% endblock %}
 {% block ad_1_0 %}
-    {% display_ad '728x90' category.slug '1.0' %}
+    <div class="addSection add728">
+        {% display_ad '728x90' category.slug '1.0' %}
+    </div>
 {% endblock %}
 {% block body_id %}{{ category.slug }}{% endblock %}
 {% block body_class %}rubrique{% endblock %}
@@ -19,7 +21,9 @@
     {% endif %}
 	
 	<!-- AD -->
-    {% display_ad '468x60' category.slug '2.0' %}
+    <div class="addSection add468"> 
+        {% display_ad '468x60' category.slug '2.0' %}
+    </div>
     <!-- // AD -->
 
     <!-- ARTICLE LIST -->
@@ -61,7 +65,9 @@
     <!-- // ARTICLE LIST -->
 	
 	<!-- AD -->
-    {% display_ad '468x60' category.slug '3.0' %}
+    <div class="addSection add468">
+        {% display_ad '468x60' category.slug '3.0' %}
+    </div>
     <!-- // AD -->
     	
 </div>
@@ -130,22 +136,34 @@
             
             <!-- AD -->
             {% ifequal category.slug "national" %}
-                {% display_ad '250x250' category.slug '4.0' %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                </div>
             {% endifequal %}
             {% ifequal category.slug "etranger" %}
-                {% display_ad '250x250' category.slug '4.0' %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                </div>
             {% endifequal %}
             {% ifequal category.slug "societe" %}
-                {% display_ad '250x250' category.slug '4.0' %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                </div>
             {% endifequal %}
             {% ifequal category.slug "insolite" %}
-                {% display_ad '250x250' category.slug '4.0' %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                </div>
             {% endifequal %}
             {% ifequal category.slug "pipoles" %}
-                {% display_ad '250x250' category.slug '4.0' %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                </div>
             {% endifequal %}
             {% ifequal category.slug "bouquins" %}
-                {% display_ad '250x250' category.slug '4.0' %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                </div>
             {% endifequal %}
             <!-- // AD -->
             
@@ -156,7 +174,11 @@
         <div class="rightWrap">
         
             <!-- AD -->
-            {% display_ad '120x600' category.slug '6.0' %}
+			<div class="addSection">
+		        <div class="add130">
+                    {% display_ad '120x600' category.slug '6.0' %}
+                </div>
+            </div>
             <!-- // AD -->
             
         </div>

@@ -31,7 +31,9 @@
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/fr_moteur.css" media="screen"><!-- JAVASCRIPT -->
 {% endblock %}
 {% block ad_1_0 %}
-    {% display_ad '728x90' 'voyages' '1.0' %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'voyages' '1.0' %}
+    </div>
 {% endblock %}
 {% block body_id %}voyages{% endblock %}
 {% block body_class %}rubrique{% endblock %}
@@ -48,7 +50,9 @@
     {% endif %}
     
     <!-- AD -->
-    {% display_ad '468x60' 'voyages' '2.0' %}
+    <div class="addSection add468"> 
+        {% display_ad '468x60' 'voyages' '2.0' %}
+    </div>
     <!-- // AD -->
     
 </div>
@@ -88,11 +92,12 @@
                 <!-- // ARCHIVES -->
                 
                 <!-- AD -->
-                {% display_ad '300x90' 'voyages' '5.0' %}
-                <!-- // AD -->
-                
-                <!-- AD -->
-                {% display_ad '300x90' 'voyages' '5.1' %}
+				<div class="addSection">
+				    <div class="add-300x90 autoClear">
+                        {% display_ad '300x90' 'voyages' '5.0' %}
+                        {% display_ad '300x90' 'voyages' '5.1' %}
+                    </div>
+                </div>
                 <!-- // AD -->
                 
             </div>
@@ -105,7 +110,11 @@
 		<div class="rightWrap">
 		
 		    <!-- AD -->
-            {% display_ad '120x600' 'voyages' '6.0' %}
+			<div class="addSection">
+		        <div class="add130">
+                    {% display_ad '120x600' 'voyages' '6.0' %}
+                </div>
+            </div>
             <!-- // AD -->
             
         </div>

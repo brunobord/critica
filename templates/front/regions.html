@@ -16,7 +16,9 @@
 </script>
 {% endblock %}
 {% block ad_1_0 %}
-    {% display_ad '728x90' 'regions' '1.0' %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'regions' '1.0' %}
+    </div>
 {% endblock %}
 {% block body_id %}regions{% endblock %}
 {% block body_class %}rubrique{% endblock %}
@@ -36,7 +38,9 @@
         {% endif %}
         
         <!-- AD -->
-        {% display_ad '468x60' 'regions' '2.0' %}
+        <div class="addSection add468">
+            {% display_ad '468x60' 'regions' '2.0' %}
+        </div>
 	    <!-- // AD -->
 	    
 	    {% if regions_notes_2 %}
@@ -46,7 +50,9 @@
         {% endif %}
         
         <!-- AD -->
-        {% display_ad '468x60' 'regions' '3.0' %}
+        <div class="addSection add468">
+            {% display_ad '468x60' 'regions' '3.0' %}
+        </div>
 	    <!-- // AD -->
 	    
 	    {% if regions_notes_3 %}
@@ -73,7 +79,9 @@
 	<!-- // MAIN ARTICLE -->
 	
 	<!-- AD -->
-	{% display_ad '250x250' 'regions' '4.0' %}
+	<div class="addSection add468">
+	    {% display_ad '250x250' 'regions' '4.0' %}
+	</div>
 	<!-- // AD -->
 	
 	<div id="newsletterSection">
@@ -81,7 +89,9 @@
 	</div>
 	
 	<!-- AD -->
-	{% display_ad '250x250' 'regions' '4.1' %}
+	<div class="addSection add468">
+	    {% display_ad '250x250' 'regions' '4.1' %}
+	</div>
 	<!-- // AD -->
 	
 	<!-- SUB CONTENT -->
