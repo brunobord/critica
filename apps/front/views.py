@@ -377,33 +377,31 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         context['is_current'] = False
     
     # Featured region
-    if is_preview:
+    try:
+        featured_region = FeaturedRegion.objects.get(issue=issue)
+    except ObjectDoesNotExist:
+        featured_region = None
+    
+    # Featured region note
+    if featured_region:
         try:
-            featured_region = FeaturedRegion.objects.get(issue=issue)
             featured_region_note = RegionNote.objects.get(issues__id=issue.id, is_reserved=False, region=featured_region.region)
             context['featured_region_note'] = featured_region_note
         except MultipleObjectsReturned:
-            featured_region = FeaturedRegion.objects.get(issue=issue)
             featured_region_note = RegionNote.objects.filter(issues__id=issue.id, is_reserved=False, region=featured_region.region)[0]
             context['featured_region_note'] = featured_region_note
         except ObjectDoesNotExist:
             context['featured_region_note'] = False
     else:
-        try:
-            featured_region = FeaturedRegion.objects.get(issue=issue)
-            featured_region_note = RegionNote.objects.get(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False, region=featured_region.region)
-            context['featured_region_note'] = featured_region_note
-        except MultipleObjectsReturned:
-            featured_region = FeaturedRegion.objects.get(issue=issue)
-            featured_region_note = RegionNote.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False, region=featured_region.region)[0]
-            context['featured_region_note'] = featured_region_note
-        except ObjectDoesNotExist:
-            context['featured_region_note'] = False
+        context['featured_region_note'] = False
     
     # Regions notes
     if is_preview:
         try:
-            regions_notes = RegionNote.objects.filter(issues__id=issue.id, is_reserved=False).exclude(id=featured_region.id).order_by('region__name')
+            regions_notes = RegionNote.objects.filter(issues__id=issue.id, is_reserved=False)
+            if featured_region:
+                regions_notes.exclude(id=featured_region.id)
+            regions_notes.order_by('region__name')
             context['regions_notes_1'] = regions_notes[0:10]
             context['regions_notes_2'] = regions_notes[10:20]
             context['regions_notes_3'] = regions_notes[20:]
@@ -413,7 +411,10 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
             context['regions_notes_3'] = False
     else:
         try:
-            regions_notes = RegionNote.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False).exclude(id=featured_region.id).order_by('region__name')
+            regions_notes = RegionNote.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False)
+            if featured_region:
+                regions_notes.exclude(id=featured_region.id)
+            regions_notes.order_by('region__name')
             context['regions_notes_1'] = regions_notes[0:10]
             context['regions_notes_2'] = regions_notes[10:20]
             context['regions_notes_3'] = regions_notes[20:]
