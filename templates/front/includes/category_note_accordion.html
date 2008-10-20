@@ -1,5 +1,19 @@
 <h2>{{ note.type.name }}</h2>
-<div>
+<div class="note-{{ note.id }}">
     <h3>{{ note.title }}</h3>
-    {{ note.content|safe }}
+    <div class="lead"></div>
+    <div class="content">{{ note.content|safe }}</div>
+    <script type="text/javascript">
+    // <![CDATA[
+        function toggle_note_{{ note.id }}() {
+        	  $('.note-{{ note.id }} .lead').toggle();
+        	  $('.note-{{ note.id }} .content').toggle();
+        }
+        $(document).ready(function() {
+            $(".note-{{ note.id }} h3").html('<a onClick="Javascript:toggle_note_{{ note.id }}();">' + $(".note-{{ note.id }} h3").html() +'</a>')
+            $(".note-{{ note.id }} .content").hide();
+            $(".note-{{ note.id }} .lead").html('{{ note.content|striptags|truncatewords:20|safe|escapejs }}');
+        });
+    // ]]>
+    </script>
 </div>
