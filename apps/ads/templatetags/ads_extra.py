@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import datetime
 from django import template
 from django.core.exceptions import ObjectDoesNotExist
 from critica.apps.ads.models import Ad
@@ -12,12 +13,15 @@ register = template.Library()
 @register.inclusion_tag('front/includes/ad.html')
 def display_ad(format, page, location):
     width, height = format.split('x')
+    today = datetime.date.today()
     try:
         banner = AdBanner.objects.get(
             ads__format__width=width, 
             ads__format__height=height,
             ads__page__slug=page, 
-            ads__location__position=location
+            ads__location__position=location,
+            starting_date__lte=today,
+            ending_date__gte=today,
         )
     except ObjectDoesNotExist:
         banner = None
