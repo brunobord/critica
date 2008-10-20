@@ -139,6 +139,9 @@ class RegionNote(BaseNote):
         verbose_name = _('region note')
         verbose_name_plural = _('region notes')
         
+    def get_absolute_url(self):
+        return u'/regions/'
+        
     def save(self):
         """ 
         Object pre-saving operations:

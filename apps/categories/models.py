@@ -108,6 +108,12 @@ class Category(models.Model):
         """
         return u'%s' % self.name
         
+    
+    def get_absolute_url(self):
+        from django.contrib.sites.models import Site
+        site = Site.objects.get_current()
+        return u'%s/%s/' % (site.domain, self.slug)
+        
     def get_rss_url(self):
         """
         Returns category RSS feed URL.

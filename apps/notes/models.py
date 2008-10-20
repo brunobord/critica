@@ -302,4 +302,7 @@ class Note(BaseNote):
         db_table = 'notes_note'
         verbose_name = _('note')
         verbose_name_plural = _('notes')
+        
+    def get_absolute_url(self):
+        return '/%s/' % self.slug
 

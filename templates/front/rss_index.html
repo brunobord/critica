@@ -34,7 +34,7 @@
     <ul>
         <li><a href="/rss/articles/" title="Fil RSS des derniers articles">Fil RSS des derniers articles</a></li>
         {% for category in categories %}
-        <li><a href="{{ category.get_rss_url }}" title="Fil RSS de la rubrique {{ category.name }}">Fil RSS de la rubrique {{ category.name }}</a></li>
+        <li><a href="/rss/rubriques/{{ category.slug }}/" title="Fil RSS de la rubrique {{ category.name }}">Fil RSS de la rubrique {{ category.name }}</a></li>
         {% endfor %}
     </ul>
 
