@@ -112,6 +112,7 @@ And add these applications to your ``INSTALLED_APPS``::
         'django.contrib.admin',
         'tagging',
         'imagethumbnail',
+        'critica.apps.custom_admin',
         'critica.apps.front',
         'critica.apps.categories',
         'critica.apps.illustrations',
@@ -128,6 +129,7 @@ And add these applications to your ``INSTALLED_APPS``::
         'critica.apps.syndication',
         'critica.apps.anger',
         'critica.apps.quotas',
+        'critica.apps.ads', 
     )
 
 Voilà! Critic@-engine is ready.
