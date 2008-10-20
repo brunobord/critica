@@ -52,7 +52,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
         
         """
         field = super(BaseNoteAdmin, self).formfield_for_dbfield(db_field, **kwargs)
-        current_user = request.user
+        current_user = self.request.user
         if db_field.name == 'author_nickname': 
             my_choices = [('', '---------')]
             if not current_user.has_perms('users.is_editor'):
