@@ -10,7 +10,7 @@
         <h2>Par ordre chronologique</h2>
         <ul id="items">
         {% for item in items.object_list %}
-            <li><a href="{% url issuearchive_home item.number %}" title="Édition {{ item.number }} - publiée le {{ item.publication_date|date:"Y/m/d" }}">{{ item.publication_date|date:"l d F Y"|capfirst }}</a></li>
+            <li><a href="{% url issuearchive_home item.number %}" title="Édition {{ item.number }} - publiée le {{ item.publication_date|date:"Y/m/d" }}">{{ item.publication_date|date:"l d F Y"|capfirst }}</a> (édition {{ item.number }})</li>
         {% endfor %}
         </ul>
         {% if items.has_next %}
