@@ -222,10 +222,8 @@
         <!-- TAG CLOUD -->
 		<div id="tagcloudSection" style="text-align: center;">
 			<h2>Nuage de tags</h2>
-            {% load tagging_tags %}
-            {% tag_cloud_for_model notes.note as tags with steps=8 distribution=log min_count=2 %}
-			{% for tag in tags %}
-			    <span style="font-size: 1.{{ tag.font_size }}em; padding: 0.2em; line-height: 1.6em;"><a href="" title="Articles taggés {{ tag.name }}">{{ tag.name }}</a></span>
+            {% for tag in tagcloud %}
+			    <span style="font-size: 1.{{ tag.font_size }}em; padding: 0.2em; line-height: 1.6em;"><a href="/tags/{{ tag.name }}/" title="Articles taggés {{ tag.name }}">{{ tag.name }}</a></span>
 			{% endfor %}
 		</div>
         <!-- TAG CLOUD -->
