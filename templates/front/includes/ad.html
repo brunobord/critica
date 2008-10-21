@@ -2,10 +2,8 @@
     {% ifequal banner.banner_type 'image' %}
         {% if banner.link %}
             <a href="{{ banner.link }}"><img src="{{ banner.banner.url }}" alt="Publicité" /></a>
-            <p><a href="{{ banner.link }}">Publicité</a></p>
         {% else %}
             <img src="{{ banner.banner.url }}" alt="Publicité" />
-            <p>Publicité</p>
         {% endif %}
     {% else %}
         <object data="{{ banner.banner.url }}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
@@ -16,17 +14,14 @@
         {% if banner.link %}
             <p><a href="{{ banner.link }}">Publicité</a></p>
         {% else %}
-            <p>Publicité</p>
         {% endif %}
     {% endifequal %}
 {% else %}
     {% ifequal default_banner.banner_type 'image' %}
         {% if default_banner.link %}
             <a href="{{ default_banner.link }}"><img src="{{ default_banner.banner.url }}" alt="Publicité" /></a>
-            <p><a href="{{ default_banner.link }}">Publicité</a></p>
         {% else %}
             <img src="{{ default_banner.banner.url }}" alt="Publicité" />
-            <p>Publicité</p>
         {% endif %}
     {% else %}
         <object data="{{ default_banner.banner.url }}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
@@ -34,11 +29,6 @@
             <param name="quality" value="high"/>
             <param name="menu" value="false"/>
         </object>
-        {% if banner.link %}
-            <p><a href="{{ default_banner.link }}">Publicité</a></p>
-        {% else %}
-            <p>Publicité</p>
-        {% endif %}
     {% endifequal %}
 {% endif %}
 

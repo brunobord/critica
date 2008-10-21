@@ -33,6 +33,7 @@
 {% block ad_1_0 %}
     <div class="addSection add728">
         {% display_ad '728x90' 'voyages' '1.0' %}
+        <p><a href="{% url page "publicite" %}">Publicité</a></p>
     </div>
 {% endblock %}
 {% block body_id %}voyages{% endblock %}
@@ -52,6 +53,7 @@
     <!-- AD -->
     <div class="addSection add468"> 
         {% display_ad '468x60' 'voyages' '2.0' %}
+        <p><a href="{% url page "publicite" %}">Publicité</a></p>
     </div>
     <!-- // AD -->
     
@@ -93,10 +95,11 @@
                 
                 <!-- AD -->
 				<div class="addSection">
-				    <div class="add-300x250 autoClear">
+				    <div class="add-300x90 autoClear">
                         {% display_ad '300x90' 'voyages' '5.0' %}
                         {% display_ad '300x90' 'voyages' '5.1' %}
                     </div>
+                    <p><a href="{% url page "publicite" %}">Publicité</a></p>
                 </div>
                 <!-- // AD -->
                 
@@ -114,6 +117,7 @@
 		        <div class="add130">
                     {% display_ad '120x600' 'voyages' '6.0' %}
                 </div>
+                <p><a href="{% url page "publicite" %}">Publicité</a></p>
             </div>
             <!-- // AD -->
             

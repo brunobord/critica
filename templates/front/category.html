@@ -4,6 +4,7 @@
 {% block ad_1_0 %}
     <div class="addSection add728">
         {% display_ad '728x90' category.slug '1.0' %}
+        <p><a href="{% url page "publicite" %}">Publicité</a></p>
     </div>
 {% endblock %}
 {% block body_id %}{{ category.slug }}{% endblock %}
@@ -23,6 +24,7 @@
 	<!-- AD -->
     <div class="addSection add468"> 
         {% display_ad '468x60' category.slug '2.0' %}
+        <p><a href="{% url page "publicite" %}">Publicité</a></p>
     </div>
     <!-- // AD -->
 
@@ -67,6 +69,7 @@
 	<!-- AD -->
     <div class="addSection add468">
         {% display_ad '468x60' category.slug '3.0' %}
+        <p><a href="{% url page "publicite" %}">Publicité</a></p>
     </div>
     <!-- // AD -->
     	
@@ -138,31 +141,37 @@
             {% ifequal category.slug "national" %}
                 <div class="addSection">
                     {% display_ad '250x250' category.slug '4.0' %}
+                    <p><a href="{% url page "publicite" %}">Publicité</a></p>
                 </div>
             {% endifequal %}
             {% ifequal category.slug "etranger" %}
                 <div class="addSection">
                     {% display_ad '250x250' category.slug '4.0' %}
+                    <p><a href="{% url page "publicite" %}">Publicité</a></p>
                 </div>
             {% endifequal %}
             {% ifequal category.slug "societe" %}
                 <div class="addSection">
                     {% display_ad '250x250' category.slug '4.0' %}
+                    <p><a href="{% url page "publicite" %}">Publicité</a></p>
                 </div>
             {% endifequal %}
             {% ifequal category.slug "insolite" %}
                 <div class="addSection">
                     {% display_ad '250x250' category.slug '4.0' %}
+                    <p><a href="{% url page "publicite" %}">Publicité</a></p>
                 </div>
             {% endifequal %}
             {% ifequal category.slug "pipoles" %}
                 <div class="addSection">
                     {% display_ad '250x250' category.slug '4.0' %}
+                    <p><a href="{% url page "publicite" %}">Publicité</a></p>
                 </div>
             {% endifequal %}
             {% ifequal category.slug "bouquins" %}
                 <div class="addSection">
                     {% display_ad '250x250' category.slug '4.0' %}
+                    <p><a href="{% url page "publicite" %}">Publicité</a></p>
                 </div>
             {% endifequal %}
             <!-- // AD -->
@@ -178,6 +187,7 @@
 		        <div class="add130">
                     {% display_ad '120x600' category.slug '6.0' %}
                 </div>
+                <p><a href="{% url page "publicite" %}">Publicité</a></p>
             </div>
             <!-- // AD -->
             
