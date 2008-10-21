@@ -2,7 +2,9 @@
 {% load image_thumbnail ads_extra %}
 {% block title %}Coup de Gueule{% endblock %}
 {% block ad_1_0 %}
-    {% display_ad '728x90' 'coup-de-gueule' '1.0' %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'coup-de-gueule' '1.0' %}
+    </div>
 {% endblock %}
 {% block body_id %}coup-de-gueule{% endblock %}
 {% block body_class %}rubrique{% endblock %}
@@ -19,7 +21,9 @@
     {% endif %}
     
     <!-- AD -->
-    {% display_ad '468x60' 'coup-de-gueule' '2.0' %}
+    <div class="addSection add468"> 
+        {% display_ad '468x60' 'coup-de-gueule' '2.0' %}
+    </div>
 	<!-- // AD -->
 	
 </div>
@@ -51,11 +55,10 @@
                 <!-- // ARCHIVES -->
                 
                 <!-- AD -->
-                {% display_ad '300x90' 'coup-de-gueule' '5.0' %}
-                <!-- // AD -->
-                
-                <!-- AD -->
-                {% display_ad '300x90' 'coup-de-gueule' '5.1' %}
+                <div class="add-300x250 autoClear">
+                    {% display_ad '300x90' 'coup-de-gueule' '5.0' %}
+                    {% display_ad '300x90' 'coup-de-gueule' '5.1' %}
+                </div>
                 <!-- // AD -->
                 
             </div>
@@ -68,7 +71,11 @@
         <div class="rightWrap">
         
             <!-- AD -->
-            {% display_ad '120x600' 'coup-de-gueule' '6.0' %}
+			<div class="addSection">
+		        <div class="add130">
+                    {% display_ad '120x600' 'coup-de-gueule' '6.0' %}
+                </div>
+            </div>
             <!-- // AD -->
         
         </div>
