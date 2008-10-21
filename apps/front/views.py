@@ -29,8 +29,10 @@ from critica.apps.regions.models import FeaturedRegion
 from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.videos.models import Video
 from critica.apps.pages.models import Page
-from critica.apps.ads.models import Ad
+from critica.apps.ads.models import AdBannerPosition
 from critica.apps.ads.models import AdBanner
+from critica.apps.ads.models import AdCarouselPosition
+from critica.apps.ads.models import AdCarousel
 from critica.apps.utils import urlbase64
 from tagging.models import Tag
 from tagging.models import TaggedItem

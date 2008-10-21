@@ -76,6 +76,13 @@
                 <td><a href="ads/addefaultbanner/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
+            {% if perms.ads.add_adbannerposition %}
+            <tr>
+                <th scope="row"><a href="ads/adbannerposition/">Positions de bannière</a></th>
+                <td><a href="ads/adbannerposition/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adbannerposition/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
             {% if perms.ads.add_adcarousel %}
             <tr>
                 <th scope="row"><a href="ads/adcarousel/">Carousels</a></th>
@@ -83,11 +90,11 @@
                 <td><a href="ads/adcarousel/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
-            {% if perms.ads.add_ad %}
+            {% if perms.ads.add_adcarouselposition %}
             <tr>
-                <th scope="row"><a href="ads/ad/">Positions de publicité</a></th>
-                <td><a href="ads/ad/add" class="addlink">Ajouter</a></td>         
-                <td><a href="ads/ad/" class="changelink">Modifier</a></td>
+                <th scope="row"><a href="ads/adcarouselposition/">Positions de carousel</a></th>
+                <td><a href="ads/adcarouselposition/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adcarouselposition/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
             {% if perms.users.add_adtype %}
