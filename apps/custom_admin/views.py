@@ -99,7 +99,8 @@ def dashboard(request, issue=None):
         cover_voyages = VoyagesArticle.objects.get(issues__id=current_issue.id)
         context['cover_voyages'] = cover_voyages
     except MultipleObjectsReturned:
-        cover_voyages = VoyagesArticle.objects.filter(issues__id=current_issue.id)[0]
+        cover_voyages = VoyagesArticle.objects.filter(issues__id=current_issue.id)
+        context['cover_voyages_multiple'] = True
         context['cover_voyages'] = cover_voyages
     except ObjectDoesNotExist:
         context['cover_voyages'] = False
