@@ -12,6 +12,7 @@ from django.views.decorators.cache import never_cache
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import permission_required
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import MultipleObjectsReturned
 from django.contrib.sites.models import Site
 from critica.apps.issues.models import Issue
 from critica.apps.categories.models import Category
