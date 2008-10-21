@@ -67,3 +67,5 @@ def display_carousel(format, page, location):
         'format_width': width,
         'format_height': height,
     }
+    
+

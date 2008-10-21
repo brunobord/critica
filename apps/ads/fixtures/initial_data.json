@@ -52,8 +52,8 @@
         "model": "ads.adformat", 
         "fields": {
             "name": "Pav\u00e9", 
-            "modification_date": "2008-10-17 09:34:43", 
-            "height": 90, 
+            "modification_date": "2008-10-21 15:21:49", 
+            "height": 250, 
             "width": 300, 
             "creation_date": "2008-10-17 09:34:43", 
             "slug": "pave"
