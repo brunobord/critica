@@ -3,16 +3,34 @@
 {% block body_id %}archives{% endblock %}
 {% block content %}
 <div id="mainContent">
+    
     <h1>Archives</h1>
-    {% if issues %}
-        <p>Vous pouvez consulter les archives du journal par édition et par ordre chronologique.</p>
-        <ul>
-        {% for issue in issues %}
-            <li><a href="{% url issuearchive_home issue.number %}" title="Édition {{ issue.number }} - publiée le {{ issue.publication_date|date:"Y/m/d" }}">{{ issue.publication_date|date:"l d F Y"|capfirst }}</a></li>
+    
+    {% if items.object_list %}
+        <h2>Par ordre chronologique</h2>
+        <ul id="items">
+        {% for item in items.object_list %}
+            <li><a href="{% url issuearchive_home item.number %}" title="Édition {{ item.number }} - publiée le {{ item.publication_date|date:"Y/m/d" }}">{{ item.publication_date|date:"l d F Y"|capfirst }}</a></li>
         {% endfor %}
         </ul>
+        {% if items.has_next %}
+        <div class="pagination">
+            <span class="step-links">
+                {% if items.has_previous %}
+                    <a href="?page={{ items.previous_page_number }}">Plus récents</a> &laquo;
+                {% endif %}
+                <span class="current">
+                    Page {{ items.number }} / {{ items.paginator.num_pages }}
+                </span>
+                {% if items.has_next %}
+                    &raquo; <a href="?page={{ items.next_page_number }}">Plus anciens</a>
+                {% endif %}
+            </span>
+        </div>
+        {% endif %}
     {% else %}
         <p><strong>Désolé, aucune édition archivée pour le moment.</strong></p>
     {% endif %}
+    
 </div>
 {% endblock %}

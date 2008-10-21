@@ -692,11 +692,25 @@ def archives(request):
     context['is_current'] = True
     
     try:
-        context['issues'] = Issue.objects.filter(is_published=True).order_by('-publication_date')
+        item_list = Issue.objects.filter(is_published=True).order_by('-publication_date')
     except ObjectDoesNotExist:
-        context['issues'] = False
+        item_list = None
         
-    return render_to_response('front/archives.html', context, context_instance=RequestContext(request))
+    paginator = Paginator(item_list, 30)
+    try:
+        page = int(request.GET.get('page', '1'))
+    except ValueError:
+        page = 1
+    try:
+        context['items'] = paginator.page(page)
+    except (EmptyPage, InvalidPage):
+        context['items'] = paginator.page(paginator.num_pages)
+        
+    return render_to_response(
+        'front/archives.html', 
+        context, 
+        context_instance=RequestContext(request)
+    )
 
 
 
