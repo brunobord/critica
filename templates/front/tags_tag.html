@@ -3,7 +3,8 @@
 {% block body_id %}tags{% endblock %}
 {% block content %}
 <div id="mainContent">
-    <h1>Articles taggés &laquo; {{ tag }} &raquo;</h1>
+    <h1>Tag &laquo; {{ tag }} &raquo;</h1>
+    <h2>Articles et brèves taggés &laquo; {{ tag }} &raquo; ({{ items.object_list|length }} résultats)</h2>
     <ul id="items">
     {% for item in items.object_list %}
         <li>
