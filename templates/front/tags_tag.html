@@ -4,11 +4,11 @@
 {% block content %}
 <div id="mainContent">
     <h1>Articles taggés &laquo; {{ tag }} &raquo;</h1>
-    <ul id="tags-items">
+    <ul id="items">
     {% for item in items.object_list %}
         <li>
             <a href="{% url issuearchive_category item.issues.all|first,item.category.slug %}" title="{{ item.title }}">{{ item.title }}</a><br />
-            <span class="tags-item-meta">Posté le {{ item.publication_date|date:"l d F Y" }} dans l'édition {{ item.issues.all|first }} et classé dans la rubrique {{ item.category.name }}</span>
+            <span class="item-meta">Posté le {{ item.publication_date|date:"l d F Y" }} dans l'édition {{ item.issues.all|first }} et classé dans la rubrique {{ item.category.name }}</span>
         </li>
     {% endfor %}
     </ul>

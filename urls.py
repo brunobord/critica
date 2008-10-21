@@ -35,6 +35,12 @@ urlpatterns += patterns('',
     url(r'^rss/$', 'critica.apps.front.views.rss_index', name='rss'),
 )
 
+# Search
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^search/results/$', 'critica.apps.front.views.search', name='search'),
+)
+
 # Tags
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',

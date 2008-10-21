@@ -5,6 +5,7 @@ Views of ``critica.apps.front`` application.
 """
 from django.conf import settings
 from django.http import Http404
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.shortcuts import get_object_or_404
 from django.template import RequestContext
@@ -923,6 +924,105 @@ def tags_tag(request, tag):
 
     return render_to_response('front/tags_tag.html', context, context_instance=RequestContext(request))
 
+
+
+# Search
+# ------------------------------------------------------------------------------
+def search(request):
+    """
+    Displays search results.
+    
+    """
+    issue = _get_current_issue()
+    context = {}
+    context['issue'] = issue
+    context['is_current'] = True
+    
+    if request.method == 'POST':
+        search_item = request.POST['search']
+        context['search_item'] = search_item
+        
+        items = []
+        from django.db.models import Q
+        
+        articles = Article.objects.filter(
+            Q(title__icontains=search_item) | 
+            Q(summary__icontains=search_item) | 
+            Q(content__icontains=search_item) |
+            Q(tags__icontains=search_item) & 
+            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+        if articles:
+            for article in articles:
+                items.append((article.id, article))
+        
+        notes = Note.objects.filter(
+            Q(title__icontains=search_item) | 
+            Q(content__icontains=search_item) |
+            Q(tags__icontains=search_item) & 
+            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+        if notes:
+            for note in notes:
+                items.append((note.id, note))
+            
+        regions = RegionNote.objects.filter(
+            Q(title__icontains=search_item) | 
+            Q(content__icontains=search_item) |
+            Q(tags__icontains=search_item) & 
+            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+        if regions:
+            for region in regions:
+                items.append((region.id, region))
+                
+        voyages = VoyagesArticle.objects.filter(
+            Q(title__icontains=search_item) | 
+            Q(summary__icontains=search_item) | 
+            Q(content__icontains=search_item) |
+            Q(tags__icontains=search_item) & 
+            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+        if voyages:
+            for voyage in voyages:
+                items.append((voyage.id, voyage))
+                
+        epicurien = EpicurienArticle.objects.filter(
+            Q(title__icontains=search_item) | 
+            Q(summary__icontains=search_item) | 
+            Q(content__icontains=search_item) |
+            Q(tags__icontains=search_item) & 
+            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+        if epicurien:
+            for e in epicurien:
+                items.append((e.id, e))
+                
+        anger = AngerArticle.objects.filter(
+            Q(title__icontains=search_item) | 
+            Q(summary__icontains=search_item) | 
+            Q(content__icontains=search_item) |
+            Q(tags__icontains=search_item) & 
+            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+        if anger:
+            for a in anger:
+                items.append((a.id, a))
+        
+        item_list = [item for k, item in items]
+        
+        # Pagination
+        paginator = Paginator(item_list, 30)
+        try:
+            page = int(request.GET.get('page', '1'))
+        except ValueError:
+            page = 1
+        try:
+            context['items'] = paginator.page(page)
+        except (EmptyPage, InvalidPage):
+            context['items'] = paginator.page(paginator.num_pages)
+    else:
+        return HttpResponseRedirect('/')
+        
+    return render_to_response(
+        'front/search_results.html',
+        context,
+        context_instance=RequestContext(request)
+    )
 
 # RSS
 # ------------------------------------------------------------------------------
