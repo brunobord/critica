@@ -30,7 +30,7 @@ class VoyagesArticleAdmin(BaseArticleAdmin):
         if request.user.has_perm('users.is_editor'):
             publication_fields.append('is_ready_to_publish')
         fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'localization', 'opinion', 'publication_date')}),
+            (_('Headline'), {'fields': ('author_nickname', 'title', 'localization', 'widget', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'tags')}),
             (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
             (_('Content'), {'fields': ('summary', 'content')}),

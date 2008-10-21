@@ -7,7 +7,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from tagging.fields import TagField
-from critica.apps.videos.utils import resize_video
+from critica.apps.utils.widgets import resize_widget
 
 
 class Video(models.Model):
@@ -123,7 +123,7 @@ class Video(models.Model):
         * Save video
         
         """
-        new_widget = resize_video(self.widget)
+        new_widget = resize_widget(self.widget)
         self.widget = new_widget
         super(Video, self).save()
 
