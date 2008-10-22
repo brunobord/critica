@@ -4,6 +4,7 @@ Models for ``critica.apps.ads`` application.
 
 """
 from django.db import models
+from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from critica.apps.ads import settings as ads_settings
@@ -258,7 +259,7 @@ class AdDefaultBanner(models.Model):
     Default ad banner.
     
     """
-    banner            = models.FileField(upload_to=ads_settings.DEFAULT_BANNER_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload (image or swf).'))
+    banner            = models.FileField(upload_to=ads_settings.DEFAULT_BANNER_UPLOAD_PATH, verbose_name=_('banner'), help_text=_('Please, select a banner to upload (image or swf).'))
     banner_extension  = models.CharField(_('banner extension'), max_length=5, blank=True, editable=False)
     banner_type       = models.CharField(_('banner type'), max_length=15, blank=True, editable=False)
     submitter         = models.ForeignKey('auth.User', verbose_name=_('submitter'))
@@ -405,7 +406,7 @@ class AdCarousel(models.Model):
     folder            = models.CharField(_('folder'), max_length=255, unique=True, help_text=_('Please, enter the folder name.'))
     campaign          = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
     type              = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
-    positions          = models.ManyToManyField('ads.AdCarouselPosition', verbose_name=_('positions'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
+    positions         = models.ManyToManyField('ads.AdCarouselPosition', verbose_name=_('positions'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
     starting_date     = models.DateField(_('starting date'))
     ending_date       = models.DateField(_('ending date'))
     creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)

@@ -18,7 +18,8 @@ from critica.apps.ads.models import AdDefaultBanner
 from critica.apps.ads.models import AdBanner
 from critica.apps.ads.models import AdCarouselPosition
 from critica.apps.ads.models import AdCarousel
-
+from critica.apps.ads.forms import CustomAdDefaultBannerForm
+from critica.apps.ads.forms import CustomAdBannerForm
 
 # Commons 
 # ------------------------------------------------------------------------------
@@ -114,8 +115,9 @@ class AdDefaultBannerAdmin(admin.ModelAdmin):
             'fields': ('banner', 'positions', 'link', 'description'),
         }),
     )
-    list_display = ('ald_banner', 'ald_positions')
+    list_display = ('banner', 'ald_positions')
     filter_vertical = ['positions']
+    form = CustomAdDefaultBannerForm
 
     def ald_positions(self, obj):
         html = '<table class="banner-ads-info"><tbody>'
@@ -128,15 +130,19 @@ class AdDefaultBannerAdmin(admin.ModelAdmin):
     
     def ald_banner(self, obj):
         for ad in obj.positions.all():
-            format = ad.format
-        return format
+            if not ad.format:
+                return None
+            else:
+                return ad.format
     ald_banner.allow_tags = True
     ald_banner.short_description = _('banner')
     
     def save_model(self, request, obj, form, change):
-        obj.submitter = request.user
+        form = self.form
+        if change == False:
+            obj.submitter = request.user
         obj.save()
-    
+        
 admin.site.register(AdDefaultBanner, AdDefaultBannerAdmin)
 custom_site.register(AdDefaultBanner, AdDefaultBannerAdmin)
 
@@ -157,6 +163,7 @@ class AdBannerAdmin(admin.ModelAdmin):
     list_display = ('campaign', 'type', 'ald_positions', 'starting_date', 'ending_date')
     list_filter = ('campaign', 'type')
     filter_vertical = ['positions']
+    form = CustomAdBannerForm
 
     def ald_positions(self, obj):
         html = '<table class="banner-ads-info"><tbody>'
@@ -184,7 +191,7 @@ class AdCarouselPositionAdmin(admin.ModelAdmin):
             'fields': ('page', 'format', 'location', 'price'),
         }),
     )
-    list_display = ('format', 'page', 'location', 'price')
+    list_display = ('page', 'format', 'location', 'price')
     list_filter = ('format', 'page', 'location', 'price')
     
     def __call__(self, request, url):

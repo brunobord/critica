@@ -54,11 +54,12 @@ class BaseArticleAdmin(admin.ModelAdmin):
             print my_choices
             field.choices = my_choices
         if db_field.name == 'illustration':
-            my_choices = [('', '---------')]
+            my_choices = []
+            my_choices = [(obj.illustration.id, obj.illustration.image)]
             if 'users.is_editor' in current_user.get_all_permissions():
-                my_choices.extend(Illustration.objects.all().values_list('id','image')[:20])
+                my_choices.extend(Illustration.objects.all().values_list('id','image')[:2])
             else:
-                my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','image')[:20])
+                my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','image')[:2])
             print my_choices
             field.choices = my_choices
         if db_field.name == 'category':
