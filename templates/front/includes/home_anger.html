@@ -1,6 +1,6 @@
 <div class="articleSection" id="coupdegueule">
     <h2>Coup de Gueule</h2>
-    {{ article.summary|safe }} 
+    <p>{{ article.summary|safe }}</p>
     {% if is_preview %}
 	    <p class="readMore"><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">Lire la suite</a></p>
 	{% endif %}
