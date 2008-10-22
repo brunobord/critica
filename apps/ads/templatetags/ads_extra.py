@@ -2,7 +2,7 @@
 import datetime
 from django import template
 from django.core.exceptions import ObjectDoesNotExist
-from critica.apps.ads.models import Ad
+from critica.apps.ads.models import AdBanner
 from critica.apps.ads.models import AdDefaultBanner
 from critica.apps.ads.models import AdBanner
 
@@ -16,10 +16,10 @@ def display_ad(format, page, location):
     today = datetime.date.today()
     try:
         banner = AdBanner.objects.get(
-            ads__format__width=width, 
-            ads__format__height=height,
-            ads__page__slug=page, 
-            ads__location__position=location,
+            positions__format__width=width, 
+            positions__format__height=height,
+            positions__page__slug=page, 
+            positions__location__position=location,
             starting_date__lte=today,
             ending_date__gte=today,
         )
@@ -28,10 +28,10 @@ def display_ad(format, page, location):
 
     try:
         default_banner = AdDefaultBanner.objects.get(
-            ads__format__width=width, 
-            ads__format__height=height,
-            ads__page__slug=page, 
-            ads__location__position=location
+            positions__format__width=width, 
+            positions__format__height=height,
+            positions__page__slug=page, 
+            positions__location__position=location
         )
     except ObjectDoesNotExist:
         default_banner = None
@@ -51,10 +51,10 @@ def display_carousel(format, page, location):
     today = datetime.date.today()
     try:
         carousel = AdCarousel.objects.get(
-            ads__format__width=width, 
-            ads__format__height=height,
-            ads__page__slug=page, 
-            ads__location__position=location,
+            positions__format__width=width, 
+            positions__format__height=height,
+            positions__page__slug=page, 
+            positions__location__position=location,
             starting_date__lte=today,
             ending_date__gte=today,
         )

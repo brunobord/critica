@@ -50,14 +50,14 @@ def _get_current_issue(issue_number=None):
     the latest published issue object or 404 if there's no issue yet. 
     
     """
-    if issue_number is not None:
+    if issue_number:
         try:
             issue = Issue.objects.get(number=issue_number)
         except ObjectDoesNotExist:
             raise Http404
     else:
         try:
-            issue = Issue.objects.filter(is_published=True)[0]
+            issue = Issue.objects.filter(is_published=True).order_by('-number')[0]
         except ObjectDoesNotExist:
             raise Http404
     return issue
@@ -241,13 +241,13 @@ def home(request, issue=None, is_preview=False, is_archive=False):
         
     # Ads
     try:
-        context['ads'] = Ad.objects.filter(page__id=1)
+        context['ads'] = AdBannerPosition.objects.filter(page__id=1)
     except ObjectDoesNotExist:
         context['ads'] = False
         
     # Ad banners
     try:
-        context['adbanners'] = AdBanner.objects.filter(ads__page__id=1)
+        context['adbanners'] = AdBanner.objects.filter(positions__page__id=1)
     except ObjectDoesNotExist:
         context['adbanners'] = False
         
