@@ -80,14 +80,6 @@
         }
     }, 
     {
-        "pk": 11, 
-        "model": "positions.categoryposition", 
-        "fields": {
-            "name": "Punaise -- ligne 4 -- droite", 
-            "slug": "punaise-ligne-4-droite"
-        }
-    }, 
-    {
         "pk": 12, 
         "model": "positions.categoryposition", 
         "fields": {
@@ -253,22 +245,6 @@
         "fields": {
             "category": 13, 
             "position": 12
-        }
-    }, 
-    {
-        "pk": 11, 
-        "model": "positions.defaultcategoryposition", 
-        "fields": {
-            "category": 10, 
-            "position": null
-        }
-    }, 
-    {
-        "pk": 12, 
-        "model": "positions.defaultcategoryposition", 
-        "fields": {
-            "category": 11, 
-            "position": null
         }
     }, 
     {

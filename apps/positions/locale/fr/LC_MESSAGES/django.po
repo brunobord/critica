@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-04 09:36+0200\n"
+"POT-Creation-Date: 2008-10-23 13:10+0200\n"
 "PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,76 +17,80 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: models.py:45 models.py:99
-msgid "name"
-msgstr "nom"
-
-#: models.py:46 
-#: models.py:100
-msgid "slug"
-msgstr "slug"
-
-#: models.py:55
-msgid "category position"
-msgstr "position de rubrique"
-
-#: models.py:56
-msgid "category positions"
-msgstr "positions de rubrique"
-
-#: models.py:109
-msgid "note position"
-msgstr "position de brève"
-
-#: models.py:110
-msgid "note positions"
-msgstr "positions de brève"
-
-#: models.py:152 models.py:205 models.py:266 models.py:330
+#: admin.py:98 models.py:178 models.py:236 models.py:298 models.py:362
 msgid "category"
 msgstr "rubrique"
 
-#: models.py:153 models.py:206 models.py:332
+#: forms.py:37 forms.py:65
+#, python-format
+msgid ""
+"Sorry, this position is already taken. Available position(s): %(availables)s"
+msgstr "Désolé, cette position est déjà prise. Position(s) disponible(s) : %(availables)s"
+
+#: models.py:47 models.py:113
+msgid "name"
+msgstr "nom"
+
+#: models.py:48 models.py:114
+msgid "slug"
+msgstr "slug"
+
+#: models.py:57
+msgid "category position"
+msgstr "position de rubrique"
+
+#: models.py:58
+msgid "category positions"
+msgstr "positions de rubrique"
+
+#: models.py:123
+msgid "note position"
+msgstr "position de brève"
+
+#: models.py:124
+msgid "note positions"
+msgstr "positions de brève"
+
+#: models.py:179 models.py:238 models.py:364
 msgid "position"
 msgstr "position"
 
-#: models.py:162
+#: models.py:188
 msgid "default category position"
 msgstr "position de rubrique par défaut"
 
-#: models.py:163
+#: models.py:189
 msgid "default category positions"
 msgstr "positions de rubrique par défaut"
 
-#: models.py:215
-msgid "default note position"
-msgstr "position de brève par défaut"
-
-#: models.py:216
-msgid "default note positions"
-msgstr "positions de brève par défaut"
-
-#: models.py:265 models.py:329
-msgid "issue"
-msgstr "édition"
-
-#: models.py:276
-msgid "issue category position"
-msgstr "position de rubrique par édition"
-
-#: models.py:277
-msgid "issue category positions"
-msgstr "positions de rubrique par édition"
-
-#: models.py:331
+#: models.py:237 models.py:363
 msgid "type"
 msgstr "type"
 
-#: models.py:341
+#: models.py:247
+msgid "default note position"
+msgstr "position de brève par défaut"
+
+#: models.py:248
+msgid "default note positions"
+msgstr "positions de brève par défaut"
+
+#: models.py:297 models.py:361
+msgid "issue"
+msgstr "édition"
+
+#: models.py:308
+msgid "issue category position"
+msgstr "position de rubrique par édition"
+
+#: models.py:309
+msgid "issue category positions"
+msgstr "positions de rubrique par édition"
+
+#: models.py:373
 msgid "issue note position"
 msgstr "position de brèves par édition"
 
-#: models.py:342
+#: models.py:374
 msgid "issue note positions"
 msgstr "positions de brèves par édition"
-

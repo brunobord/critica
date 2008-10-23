@@ -10,8 +10,11 @@ from critica.apps.categories.models import Category
 from critica.apps.positions.models import CategoryPosition, NotePosition
 from critica.apps.positions.models import DefaultCategoryPosition, DefaultNotePosition
 from critica.apps.positions.models import IssueCategoryPosition, IssueNotePosition
+from critica.apps.positions.forms import CustomIssueCategoryPositionForm
+from critica.apps.positions.forms import CustomIssueNotePositionForm
 from critica.apps.positions import settings as positions_settings
 from critica.apps.custom_admin.sites import custom_site
+
 
 
 # Positions
@@ -63,6 +66,7 @@ class IssueCategoryPositionAdmin(admin.ModelAdmin):
     list_display = ('issue', 'category', 'position')
     list_filter = ('issue', 'category', 'position')
     search_fields = ('issue__number', 'category__name', 'position')
+    form = CustomIssueCategoryPositionForm
         
 admin.site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
 custom_site.register(IssueCategoryPosition, IssueCategoryPositionAdmin)
@@ -71,6 +75,7 @@ class IssueNotePositionAdmin(admin.ModelAdmin):
     list_display = ('issue', 'ald_category', 'type', 'position')
     list_filter = ('issue', 'category', 'type', 'position')
     search_fields = ('issue__number', 'category__name', 'type__name', 'position')
+    form = CustomIssueNotePositionForm
     
     def formfield_for_dbfield(self, db_field, **kwargs):
         """
