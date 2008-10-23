@@ -1,4 +1,9 @@
+<div class="carousel_{{ format_width }}">
+    <div id="carousel1">
+        <p>This slideshow requires <a href="http://www.adobe.com/go/getflashplayer">Adobe Flash Player 9.0</a> (or higher). JavaScript must be enabled.</p>
+    </div>
+</div>
 <script type="text/javascript" src="{{ MEDIA_URL }}critica/carousel/swfobject.js"></script>
 <script type="text/javascript">
-    swfobject.embedSWF("{{ MEDIA_URL }}critica/carousel/Carousel.swf", "carousel1", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"{{ MEDIA_URL }}ads/carousels/{{ carousel.folder }}/carousel.xml", loaderColor:"0xCCCCCC"}, {bgcolor: "#FFFFFF"});
+swfobject.embedSWF("{{ MEDIA_URL }}critica/carousel/Carousel.swf", "carousel1", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"{{ MEDIA_URL }}ads/carousels/{{ carousel.folder }}/carousel.xml", loaderColor:"0xCCCCCC"}, {bgcolor: "#FFFFFF"});
 </script>

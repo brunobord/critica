@@ -57,6 +57,7 @@ class AngerArticle(BaseArticle):
         from critica.apps.categories.models import Category
         category = Category.objects.get(slug='coup-de-gueule')
         self.category = category
+        self.use_default_illustration = True
         super(AngerArticle, self).save()
 
 

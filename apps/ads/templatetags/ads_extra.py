@@ -5,6 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from critica.apps.ads.models import AdBanner
 from critica.apps.ads.models import AdDefaultBanner
 from critica.apps.ads.models import AdBanner
+from critica.apps.ads.models import AdCarousel
 
 
 register = template.Library()
