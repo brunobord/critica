@@ -78,6 +78,13 @@ class Issue(models.Model):
         """
         return u'%s' % self.number
         
+    def get_preview_url(self):
+        """
+        Returns issue preview secret URL.
+        
+        """
+        return u'/%s/%s/' % ('preview', self.secret_key)
+        
     def save(self):
         """ 
         Object pre-saving operations:

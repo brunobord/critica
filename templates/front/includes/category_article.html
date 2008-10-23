@@ -1,7 +1,7 @@
 {% load image_thumbnail articles_extra %}
 <div class="articleSection articleMain">
     <h3>{{ article.title }}</h3>
-    <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
+    <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
     <div class="illustration">
         {% if article.use_default_illustration %}
             <a href="{{ article.category.image.url }}" title="{{ article.category.image_legend }}"><img src="{{ article.category.image|thumbnail:"200,0" }}" alt="{{ article.category.image_legend }}" /></a>
@@ -16,9 +16,7 @@
 	<!-- SLICKBOX -->
 	<div class="slickbox" style="display:block;">
         {{ article.content|safe }}
-        
         {% display_related_articles article %}
-        
         <p class="readMore slick-hide"><a href="#">Masquer</a></p>
 	</div>
 	<!-- // SLICKBOX -->

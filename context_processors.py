@@ -8,9 +8,17 @@ from critica.apps.issues.models import Issue
 
 
 def current_issue(request):
-    """ Returns the current issue object. """
+    """ 
+    Returns the current issue object and the last 20 issues. 
+    
+    """
     context = {}
+    
     current_issue = Issue.published.all()[0:1]
     context['current_issue'] = current_issue
+    
+    issuepreviews = Issue.objects.all()[:20]
+    context['issuepreviews'] = issuepreviews
+    
     return context
 

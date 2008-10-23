@@ -61,6 +61,14 @@
                         <li><a href="{% url archives %}">Archives</a></li>
                         <li><a href="#">Recevoir la newsletter</a></li>
                         <li><a href="{% url rss %}">S'abonner au flux RSS</a></li>
+                        {% if is_preview %}
+                        <li>
+                            <select name="issuepreview_switcher">
+                            {% for issuepreview in issuepreviews %}
+                                <option value ="{{ issuepreview.number }}" onclick="window.location='/preview/{{ issuepreview.secret_key }}/';return false" {% ifequal request.path issuepreview.get_preview_url %}selected="selected"{% endifequal %}>{{ issuepreview.number }}</option>
+                            {% endfor %}
+                        </li>
+                        {% endif %}
                     </ul>
                     <!-- TOP NAV -->
                     <!-- ADD -->
