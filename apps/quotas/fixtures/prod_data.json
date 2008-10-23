@@ -1,0 +1,236 @@
+[
+    {
+        "pk": 1, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 1, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 2, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 3, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 4, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 5, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 6, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 7, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 8, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 9, 
+            "issue": 1, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 10, 
+            "issue": 1, 
+            "quota": 1
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 11, 
+            "issue": 1, 
+            "quota": 3
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 12, 
+            "issue": 1, 
+            "quota": 26
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 13, 
+            "issue": 1, 
+            "quota": 1
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 1, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 2, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 3, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 4, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 5, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 6, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 7, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 8, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 9, 
+            "issue": 2, 
+            "quota": 11
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 10, 
+            "issue": 2, 
+            "quota": 1
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 11, 
+            "issue": 2, 
+            "quota": 3
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 12, 
+            "issue": 2, 
+            "quota": 26
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "quotas.categoryquota", 
+        "fields": {
+            "category": 13, 
+            "issue": 2, 
+            "quota": 1
+        }
+    }
+]

@@ -1,0 +1,1403 @@
+[
+    {
+        "pk": 1, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-11 12:36:46", 
+            "title": "Le Dr Constance d'Hypocrite vous r\u00e9pond", 
+            "tags": "question nanas chirurgie_esth\u00e9tique", 
+            "author_nickname": null, 
+            "content": "<p><span style=\"color: #ff0000;\"><em><span style=\"text-decoration: underline;\">Question de lectrice :</span> J'ai 45 ans et j'envisage d'avoir recours &agrave; la chirurgie esth&eacute;tique. Qu'en pensez-vous ? Fran&ccedil;oise<br /><strong>Dr :</strong> Ch&egrave;re Fran&ccedil;oise, c'est s&ucirc;r que le bistouri pour enlever un peu de gras ici ou l&agrave; et les aiguilles pour &eacute;liminer les rides l&agrave; ou ici, c'est tentant. La preuve, le nombre d'op&eacute;rations augmente de 10% par an en France. En plus, 79% des nanas affirment qu'elles sont satisfaites de leur chirurgie - reste &agrave; savoir si leurs mecs en sont eux aussi contents ! Il n'emp&ecirc;che que ces techniques ne vous redonnent votre 'jeunesse' que temporairement - une injection de botox, par exemple, doit &ecirc;tre r&eacute;p&eacute;t&eacute;e tous les 3 &agrave; 6 mois - et que &ccedil;a co&ucirc;te bonbon ! Mais bon, je ne vais pas vous donner de le&ccedil;ons (de m&eacute;decine), vous &ecirc;tes assez grande pour savoir ce que vous devez faire. Faites gaffe : votre mec et vos copines pourraient ne pas vous reconna&icirc;tre !</em></span></p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-11 12:36:46", 
+            "type": 7, 
+            "slug": "le-dr-constance-dhypocrite-vous-repond", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-12 20:30:17", 
+            "title": "Sur les chapeaux de roue", 
+            "tags": "bio nanas chaussures", 
+            "author_nickname": null, 
+            "content": "<p>Les pompes 100% naturelles font de plus en plus d'adeptes. Parce que, et c'est bien connu, marcher bio, c'est bon non seulement pour la sant&eacute;, mais aussi pour l'environnement. Alors on n'est m&ecirc;me pas surpris que nos copines British adorent les shoes <a href=\"http://www.simpleshoes.com\" target=\"_blank\" title=\"Simple\">Simple</a> - mais non, pas \"simple\", \"sime-peulle\" comme &ccedil;a se prononce ! Des godasses 100% \"j'aime ma plan&egrave;te\", confectionn&eacute;es &agrave; partir de coton organique, de laine, de noix de coco - la coque, pas le lait !- et m&ecirc;me de pneus de voitures et de v&eacute;los recycl&eacute;s. Avec &ccedil;a, plus question de marcher : on va partir sur les chapeaux de roue !&nbsp;</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-12 20:30:17", 
+            "type": 1, 
+            "slug": "sur-les-chapeaux-de-roue", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-12 20:31:37", 
+            "title": "Cancer Clinique", 
+            "tags": "cancer clinique nanas", 
+            "author_nickname": null, 
+            "content": "<p>Octobre, c'est le mois de la lutte contre le cancer et, pour l'occasion, <a href=\"http://www.fr.clinique.com\" target=\"_blank\" title=\"Clinique\">Clinique</a> a sorti une r&eacute;&eacute;dition de son best-seller, l'Emulsion Hydratante Tellement Diff&eacute;rente. Ne croyez pas que la marque touche un centime sur ce produit, l'int&eacute;gralit&eacute; des b&eacute;n&eacute;fices est revers&eacute;e &agrave; l'association Le Cancer du Sein, Parlons-en. Petit probl&egrave;me math&eacute;matique : sachant qu'il se vend, dans le monde, une &eacute;mulsion toutes les 3 secondes et qu'elle co&ucirc;te 62 euros, combien l'assoc' devrait toucher ? Allez, les filles, &agrave; vos calculatrices et surtout, &agrave; vos portefeuilles !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-12 20:31:37", 
+            "type": 9, 
+            "slug": "cancer-clinique", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 12:58:06", 
+            "title": "Pris entre 2 crocodiles", 
+            "tags": "crocs nanas lacoste", 
+            "author_nickname": null, 
+            "content": "<p>L'usine qu&eacute;b&eacute;coise des chaussures <a href=\"http://www.crocs.com\" target=\"_blank\" title=\"Crocs\">Crocs</a> a &eacute;t&eacute; rachet&eacute;e. Mais, ne vous r&eacute;jouissez pas trop vite, cela ne signifie pas du tout que la pompe en plascroc, euh, plastoque va dispara&icirc;tre de nos magasins de chaussures. Au contraire, la marque va s'&eacute;tendre dans tout le Canada et elle va m&ecirc;me d&eacute;velopper sa branche textile. J'voudrais pas cafter mais une marque au crocodile&nbsp; existe d&eacute;j&agrave; et la place dans le mar&eacute;cage risque de manquer. Les requins du marketing de chez <a href=\"http://www.lacoste.com\" target=\"_blank\" title=\"Lacoste\">Lacoste</a> vont-ils croquer Crocs, ou inversement ? Nous, on s'en moque on n'aime pas les crocodiles !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 12:58:06", 
+            "type": 10, 
+            "slug": "pris-entre-2-crocodiles", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-12 20:40:53", 
+            "title": "Nous testons \u00e0 nos risques et p\u00e9rils !", 
+            "tags": "nanas test av\u00e8ne", 
+            "author_nickname": null, 
+            "content": "<p>Chez Critica, on n'h&eacute;site pas une seule seconde &agrave; se mettre en danger pour vous - si, si ! Car nous testons les produits qu'on nous envoie. A nos risques et p&eacute;rils. Ainsi, nous avons essay&eacute; le duo correcteur l&egrave;vres et contours Couvrance des laboratoires Av&egrave;ne. Comme le mode d'emploi le dit, notre coll&egrave;gue testeuse a d'abord dessin&eacute; le contour des l&egrave;vres avec la mine fine qui, gr&acirc;ce &agrave; ces 20% de pigments corrigent les d&eacute;fauts ou les irr&eacute;gularit&eacute;s des contours. Puis, elle a rempli l'int&eacute;rieur de ses l&egrave;vres avec la mine large qui hydrate et adoucit les l&egrave;vres. Et l&agrave;, c'est le drame ! Notre ch&egrave;re coll&egrave;gue a eu une r&eacute;action allergique - heureusement, ses l&egrave;vres ne sont devenues aussi pulpeuses que celles d'Emmanuelle B&eacute;art. Mais, pour un produit qui se pr&eacute;tend hypoallerg&eacute;nique, c'est pas terrible !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-12 20:40:53", 
+            "type": 8, 
+            "slug": "nous-testons-a-nos-risques-et-perils", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-12 20:42:00", 
+            "title": "Avis aux gourmandes", 
+            "tags": "chocolat nanas cosm\u00e9tiques", 
+            "author_nickname": null, 
+            "content": "<p>Un chocolatier belge a invent&eacute; un rouge &agrave; l&egrave;vre au... chocolat ! Vous m'direz, ce n'est pas une innovation puisque des produits de beaut&eacute; &agrave; base de chocolat existent d&eacute;j&agrave;. Mais il n'y avait pas de rouge &agrave; l&egrave;vre ! Et en cette Semaine du Go&ucirc;t, allier cosm&eacute;tique et chocolat, &ccedil;a tombe &agrave; point - mais non, ce n'est pas le steack qui est &agrave; point, suivez un peu ! Pour le moment, le chocolatier a cr&eacute;&eacute; 3 rouges &agrave; l&egrave;vre : celui au chocolat de Papouasie-Nouvelle-Guin&eacute;e, celui au chocolat du P&eacute;rou et un autre &agrave; la menthe. Je suis tellement gourmande, et je ne suis pas la seule, qu'il m'est avis que mon ch&eacute;ri n'aura pas le temps de go&ucirc;ter &agrave; mes l&egrave;vres !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-12 20:42:00", 
+            "type": 6, 
+            "slug": "avis-aux-gourmandes", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 10, 
+            "modification_date": "2008-10-13 09:59:49", 
+            "title": "test de pascal", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<h1>ert ertert ert ertert etrerter</h1>\r\n<p class=\"relances\">&nbsp;</p>\r\n<p class=\"relances\"><span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et <span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et<span class=\"relances\">ert erte trerte rterterte rte rtertert </span>et erterte trerte rterterterte et</p>", 
+            "opinion": 1, 
+            "publication_date": "2008-10-13", 
+            "creation_date": "2008-10-13 09:59:49", 
+            "type": 1, 
+            "slug": "test-de-pascal", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 10, 
+            "modification_date": "2008-10-13 10:13:50", 
+            "title": "test de pascal", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p>sdf sdfsdf dfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfgdfg dfgd fgd gdfg dfg</p>", 
+            "opinion": 1, 
+            "publication_date": "2008-10-13", 
+            "creation_date": "2008-10-13 10:13:50", 
+            "type": 2, 
+            "slug": "test-de-pascal", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:23:21", 
+            "title": "Le pi\u00e8ge", 
+            "tags": "sharon_stone heather_locklear pipoles", 
+            "author_nickname": null, 
+            "content": "<p>Quel est le point commun entre Sharon Stone et Heather Locklear ? R&eacute;ponse : elles vivent une semaine &agrave; rebondissements multiples. Et nous avec, vu qu'on les suit &agrave; la trace. Un peu comme cette ex journaliste du magazine US Weekly, qui a mont&eacute; un v&eacute;ritable guet-apens contre Heather, arr&ecirc;t&eacute;e pour \"conduite erratique\" (s'agissant de Sharon, voir l'&eacute;dition pr&eacute;c&eacute;dente). Apr&egrave;s avoir chop&eacute; l'adresse de l'actrice gr&acirc;ce au piratage des donn&eacute;es confidentielles de son ancien magazine, elle a pr&eacute;venu la police de la conduite inqui&eacute;tante d'Heather, samedi dernier, avant m&ecirc;me qu'elle n'ait pris le volant. Elle a aussi appel&eacute; des paparazzis de ses amis, pour qu'ils immortalisent la sc&egrave;ne de l'arrestation. Et au passage, elle a pris sa com' sur les ventes des photos. Du grand journalisme, ou on ne s'y conna&icirc;t pas.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:23:21", 
+            "type": 1, 
+            "slug": "le-piege", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:26:52", 
+            "title": "The Britney's Diary", 
+            "tags": "brit-brit spears journal pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Hello journal ! Wouaouaouaouh... Plus que deux mois pil poile, et j'aurai mon k-do d'anniv' avec la sorti de mon sizi&egrave;me albaum Circus ! Keski me tarde le 2 d&eacute;cenbre de mes 27 ans... Quoi encore ? Ben oui, &eacute;vidamant que ch'uis retouch&eacute;e dessus la pochette de son premier single Womanizer... C&eacute; super tip top &agrave; la mode chez les popstar. Alors l&agrave;, je ser&eacute; en maillo de latex, les cuisse lisses et le visage plus fin. Bon, c'est vr&eacute;&eacute;&eacute;&eacute;, j'ai pas encore tout m&eacute;gri d'avant mais je f&eacute; vachemant gafe &agrave; plus boufer du frittes-milkshake-amburger-ketcheup-whisky-cola... En fait, t'a les boules grave paskeu c&eacute; pas toi qu'est sur la cover de l'ann&eacute;e... Ouais je sais, ch'uis g&eacute;niale. Des fois... Allez, t'ambrasse !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:26:52", 
+            "type": 7, 
+            "slug": "the-britneys-diary", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:28:49", 
+            "title": "@ + George !", 
+            "tags": "george_clooney ex pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Ah ah ! Bien fait pour toi, George ! Qu'est ce qu'on t'avait dit, pourtant ? Remettre le couvert avec une ex une fois, &ccedil;a va ! Deux fois, bonjour les d&eacute;g&acirc;ts ! Et trois fois... &ccedil;a se fera pas ! Oui, d'accord, \"jamais deux sans trois\", dit le v&eacute;ritable proverbe, mais tu nous excuses, il nous arrange pas trop, celui-l&agrave; ! Et de toutes fa&ccedil;ons, &ccedil;a a l'air mal engag&eacute;, cette histoire ! Parce qu'elle a l'air bien accroch&eacute;e &agrave; son danseur professionnel, ton ex Lisa Snowdon ! Alors, arr&ecirc;te de la bombarder de mails, de textos et de bouquets de fleurs ! Tiens, regarde la photo prise hier soir &agrave; Londres, pendant une soir&eacute;e de gala contre le cancer ! Tu vois bien qu'elle est compl&egrave;tement addict, Lisa ! Alors laisse tomber ! Par contre, tu peux nous envoyer des mails, &agrave; nous. On te file l'adresse : <a href=\"mailto:george_ou_tu_veux_quand_tu_veux@critica.fr\" target=\"_blank\">george_ou_tu_veux_quand_tu_veux@critica.fr</a>. @ + !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:28:49", 
+            "type": 9, 
+            "slug": "george", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:35:11", 
+            "title": "Sex tape, le retour", 
+            "tags": "brit-brit spears sex_tape pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Alors qu'elle croyait enfin voir le bout du loooooooog tunnel de ses emmerdes, avec son grand retour dans les bacs (voir Fallait s'en douter), eh ben non, encore rat&eacute; : les vieux dossiers de Brit Brit refont surface, sous la forme d'une sex tape. Celle que l'un de ses ex, le paparazzi Adnan Ghalib, vient de proposer &agrave; plusieurs sites porno, pour la somme symbolique de 1 dollar. Non, joke : 5 millions, en vrai. Le plus marrant dans cette histoire, c'est que l'entourage de Brit Brit d&eacute;ment formellement l'existence d'une telle vid&eacute;o, tandis que dans le m&ecirc;me temps, une source r&eacute;v&egrave;le que ses avocats sont au taquet pour la r&eacute;cup&eacute;rer. Alors, qui croire ? Les proches ? La source ? Pour m&eacute;moire et sans chercher &agrave; vous influencer, sachez qu'une autre sex tape de Brit Brit avait d&eacute;j&agrave; circul&eacute; &agrave; son &eacute;poque Kevin Federline... On dit &ccedil;a, on dit rien.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:35:11", 
+            "type": 8, 
+            "slug": "sex-tape-le-retour", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 13:30:32", 
+            "title": "Quartier des artistes", 
+            "tags": "jude_law sienna_miller kate_moss pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->A Los Angeles, il y a Hollywood. A New York, il y a Soho et Greenwich Village. A Paris, c'est Montmartre, Belleville, et Saint Germain des Pr&eacute;s. Et &agrave; Londres, le quartier o&ugrave; les artistes ont &eacute;lu domicile, c'est Primrose Hill. Un foyer de l'industrie du spectacle qui int&eacute;resse beaucoup les producteurs des films Superbad et Sans Sarah rien ne va, qui envisagent&nbsp; d'aller tourner prochainement dans le spot londonien. Il faut dire qu'il compte rien de moins que Sadie Frost, Jude Law, Sienna Miller et Kate Moss parmi ses r&eacute;sidents, des pipoles dont les frasques multiples et vari&eacute;es constituent une bonne base pour un sc&eacute;nario de fiction. Quoique, ils pourraient opter pour un biopic (film biographique, ndlr), parce que franchement, entre Kate se tape des lignes de coke et des musiciens, et Jude cern&eacute; par ses ex, y a de la mati&egrave;re.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 13:30:32", 
+            "type": 6, 
+            "slug": "quartier-des-artistes", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:37:26", 
+            "title": "Prudence, prudence", 
+            "tags": "steve_fossett disparition pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Des objets ayant \"potentiellement\" appartenu &agrave; Steve Fossett, l'aventurier-millionnaire yankee port&eacute; disparu depuis plus d'an, apr&egrave;s avoir d&eacute;coll&eacute; seul &agrave; bord de son monomoteur pour un vol qui devait durer trois heures, viennent d'&ecirc;tre retrouv&eacute;s par des randonneurs, en Californie, &agrave; quelques encablures du ranch du Nevada, d'o&ugrave; il &eacute;tait parti. \"Potentiellement\" ? C'est le chef de la police locale qui le dit : \"nous ne sommes pas s&ucirc;rs que cela appartienne &agrave; Steve Fossett, mais ce qui est certain c'est que son nom se trouve sur les papiers d'identit&eacute;, en l'occurrence divers permis ou licences de pilote\". Effectivement, y a de quoi douter : maintenant, il se fait appeler Steve Fossill.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:37:26", 
+            "type": 10, 
+            "slug": "prudence-prudence", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:42:03", 
+            "title": "Jack Tropeur", 
+            "tags": "kiefer_sutherland 24 pipoles ", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Qui a dit :<em> \"je ne peux pas regarder trop de films d'horreur. Je peux en regarder un par an, grand maximum. Je compare ces films aux man&egrave;ges. Vous n'y &ecirc;tes pas all&eacute; depuis quatre ans, et vous allez dans un parc d'attraction, et vous faites la queue, vous &ecirc;tes pr&ecirc;t &agrave; monter dans le man&egrave;ge, mais vous vous dites 'Qu'est-ce que je fous ici ?' Et lorsque vous essayez de vous en aller, et qu'il y a 300 personnes derri&egrave;re vous, vous &ecirc;tes coinc&eacute;\"</em>. R&eacute;ponse : Kiefer Sutherland, qui sauve le monde pour de faux, mais flippe pour un rien dans la r&eacute;alit&eacute;. Consternant.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:42:03", 
+            "type": 2, 
+            "slug": "jack-tropeur", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:43:41", 
+            "title": "Angie blues", 
+            "tags": "angelina_jolie brad_pitt brangelina pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Ca faisait longtemps qu'on n'avait pas eu de nouvelles de la part du couple Brangelina et de sa smala. Eh ben, manifestement, &ccedil;a va pas fort. Du c&ocirc;t&eacute; d'Angie, surtout, qui, apr&egrave;s avoir encha&icirc;n&eacute; les crises de nerf juste apr&egrave;s la naissance de ses jumeaux, s'enfonce chaque jour un peu plus dans la d&eacute;pression, tellement qu'elle arrive plus &agrave; g&eacute;rer ses gosses. Du coup, elle en oublie m&ecirc;me de manger. Grand seigneur, Brad l'incite &agrave; voir un psy, pour qu'elle redevienne la Angie qu'il a connu. Quant &agrave; lui filer un coup de main... Mais vous n'y pensez pas !?</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:43:41", 
+            "type": 3, 
+            "slug": "angie-blues", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:45:40", 
+            "title": "Radicale", 
+            "tags": "anne_hathaway rupture pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Les ruptures amoureuses conduisent &agrave; faire n'importe quoi. On se met la t&ecirc;te tous les soirs, on arrive les yeux encore pleins d'alcool au boulot, on arr&ecirc;te le sport, on couche avec n'importe qui, etc. La vie, quoi. Mais Anne Hathaway, l'h&eacute;ro&iuml;ne du Diable s'habille en Prada, a choisi une toute autre option, pour oublier son ex, Raffaello Follieri, escroc notoire de son &eacute;tat, mais c'est pas le sujet. Bref, Anna a arr&ecirc;t&eacute; de fumer, de boire, de manger de la viande et m&ecirc;me du poisson. Quand on vous dit que les ruptures amoureuse conduisent &agrave; faire n'importe quoi.</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:45:40", 
+            "type": 4, 
+            "slug": "radicale", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 5, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 11:47:18", 
+            "title": "Connerie, quand tu nous tiens", 
+            "tags": "phrases pipoles", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->Puisque vous avez &eacute;t&eacute; sages et qu'on a qu'une parole, on vous balance l'ultime rafale de phrases absurdes de pipoles, recens&eacute;es par le magazine People. C'est parti : <em>\"j'ai jamais fum&eacute; de la marijuana, car &ccedil;a donne de la cellulite\"</em> (le top model Valeria Mazza) ; <em>\"jamais je ne me sens aussi bien que quand je suis heureuse\" </em>(Wynona Rider) ; <em>\"fumer tue, et si vous mourez, vous avez perdu une partie tr&egrave;s importante de votre vie\" </em>(Brooke Shields) ; et notre pr&eacute;f&eacute;r&eacute;e : <em>\"le mariage gay est quelques chose qui doit se faire entre un homme et une femme\" </em>(Schwarzy, Gouvernator de son Etat).</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 11:47:18", 
+            "type": 5, 
+            "slug": "connerie-quand-tu-nous-tiens", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 12:58:55", 
+            "title": "Des cheveux qui brillent comme des diamants", 
+            "tags": "niv\u00e9a cheveux nanas", 
+            "author_nickname": null, 
+            "content": "<p><a href=\"http://www.nivea.fr\" target=\"_blank\" title=\"Niv&eacute;a\">Niv&eacute;a</a> a cr&eacute;&eacute; une nouvelle ligne de produits pour les cheveux: le Niv&eacute;a Diamond Gloss. Ce programme capillaire <em>\"offre &agrave; vos cheveux des reflets multifacettes et les enveloppe d'une douceur exquise\"</em>. Shampooing, apr&egrave;s-shampooing, brume lumi&egrave;re et fluide sp&eacute;cial pointes <em>\"pour des cheveux &eacute;tincelants\"</em>. Et cela est possible gr&acirc;ce &agrave; l'action des particules de diamants. Comment qu'ils s'la p&egrave;tent chez Niv&eacute;a ! C'est la crise et eux, ils mettent des particules de diamants dans leur shampooing !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 12:58:55", 
+            "type": 2, 
+            "slug": "des-cheveux-qui-brillent-comme-des-diamants", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 12:59:45", 
+            "title": "Des boucles d'oreilles comme des chandeliers", 
+            "tags": "bijoux zac_posen nanas", 
+            "author_nickname": null, 
+            "content": "<p>Vous savez ce que sera la mode c&ocirc;t&eacute; bijoux la saison prochaine ? Les &eacute;n&ocirc;&ocirc;&ocirc;&ocirc;rmes boucles d'oreille. Non, non rien &agrave; voir avec les gros anneaux des ados, les boucles d'oreilles qui risquent de d&eacute;barquer sont bien plus volumineuses. Celles de Zac Posen, par exemple, ressemblent plus &agrave; des chandeliers qu'&agrave; des boucles d'oreilles - et ce n'est pas pour &ccedil;a que celles qui les porteront seront forc&eacute;ment des lumi&egrave;res, bien au contraire ! Et puis, avec de tels bijoux, on risque vite d'avoir des oreilles d'&eacute;l&eacute;phant !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 12:59:45", 
+            "type": 3, 
+            "slug": "des-boucles-doreilles-comme-des-chandeliers", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 13:00:39", 
+            "title": "Nous v'l\u00e0 vernis !", 
+            "tags": "cosm\u00e9tiques dior nanas", 
+            "author_nickname": null, 
+            "content": "<p>Les fabricants de cosm&eacute;tiques d&eacute;couvrent toujours LE vernis &agrave; ongles miracle pour celles qui se les bouffent. Mais, moi, grande rogneuse d'ongles devant l'&eacute;ternel, j'en ai test&eacute; un certain nombre, sans succ&egrave;s ! Donc le vernis au r&eacute;glisse de chez Dior ne m'arr&ecirc;tera pas - en plus, j'adore le r&eacute;glisse - et les chewing-gum cens&eacute;s d&eacute;tourn&eacute;s mon attention de mes ongles ne me calmeront pas ! Ma solution miracle : une belle-m&egrave;re qui traque cette mauvaise habitude. Comme quoi, &ccedil;a peut avoir un avantage une belle-m&egrave;re...</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 13:00:39", 
+            "type": 4, 
+            "slug": "nous-vla-vernis", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 3, 
+            "modification_date": "2008-10-13 13:01:39", 
+            "title": "Les belles ont droit aux c\u00e2lins", 
+            "tags": "nanas c\u00e2lins mecs", 
+            "author_nickname": null, 
+            "content": "<p>Vous vous demandez pourquoi votre ch&eacute;ri veut tout le temps des c&acirc;lins coquins ? Non, ce n'est pas parce qu'il est un &eacute;ternel insatisfait ou qu'il a une bite &agrave; la place du cerveau - quoiqueue ! Une enqu&ecirc;te vient de r&eacute;v&eacute;ler que les mecs qui trouvent leurs nanas super hyper m&eacute;ga canons pr&eacute;f&egrave;rent jouer au lit plut&ocirc;t qu'au Scrabble. Voil&agrave; un bon moyen de savoir si votre ch&eacute;ri vous trouve toujours sublime m&ecirc;me &agrave; 40 ans ! Et non, les gars, ce n'est pas r&eacute;ciproque, donc ne vous inqui&eacute;tez pas si votre nana a souvent la migraine ! &nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-15", 
+            "creation_date": "2008-10-13 13:01:39", 
+            "type": 5, 
+            "slug": "les-belles-ont-droit-aux-calins", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+
+    {
+        "pk": 23, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:07:48", 
+            "title": "Rachida ch\u00e9rie aime sa famille", 
+            "tags": "rachida dati, cr\u00e8che", 
+            "author_nickname": null, 
+            "content": "<p>Selon l'hebdo lyonnais \"Les potins d'Ang&egrave;le\", Rachida ch&eacute;rie en aurait encore fait une belle : sachant que l'une de ses innombrables s&oelig;urs avait bien de la peine pour trouver une place de cr&egrave;che &agrave; son petit dernier, elle serait intervenue aupr&egrave;s de G&eacute;rard Collomb, le maire de la cit&eacute; des Gaules. Qui aurait trouv&eacute; une ch'tite place dans le 6e, un quartier o&ugrave; les places sont pourtant rares (367 pour 1.550 enfants). C&ocirc;t&eacute; chancellerie, on d&eacute;ment, comme d'habitude, de m&ecirc;me qu'&agrave; la mairie de Lyon, encore qu'on reconnaisse qu'\"une demande a &eacute;t&eacute; formul&eacute;e\". Ou l'art de se pi&eacute;ger soi-m&ecirc;me. Dans six mois, quand D&eacute;sir&eacute; Dati sera n&eacute;, il saura o&ugrave; cr&egrave;cher.</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:07:48", 
+            "type": 1, 
+            "slug": "rachida-cherie-aime-sa-famille", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:08:43", 
+            "title": "Le journal de Tonton", 
+            "tags": "tonton, s\u00e9gol\u00e8ne royal", 
+            "author_nickname": null, 
+            "content": "<p>Elle est vraiment jolie, ma petite S&eacute;gol&egrave;ne. Comment se fait-il que moi, homme &agrave; femmes s'il en est, je ne l'ai jamais remarqu&eacute;e ? D'un autre c&ocirc;t&eacute;, quand je regarde les photos d'elle &agrave; mes c&ocirc;t&eacute;s, je ne peux que constater qu'elle avait un petit c&ocirc;t&eacute; dame patronnesse, coinc&eacute;e du cul (oups, pardon, &ccedil;a m'a &eacute;chapp&eacute;). Pas vraiment un symbole sexuel. Et &agrave; la voir l&agrave;, l'autre soir sur la sc&egrave;ne du Z&eacute;nith, je n'en croyais pas mes yeux. Ca lui r&eacute;ussit, le c&eacute;libat ! On pourrait passer la recette &agrave; Martine Aubry, qui part dans la bagarre avec un l&eacute;ger handicap. D'un autre c&ocirc;t&eacute;, Delano&euml;, c'est pas vraiment Tom Cruise... Pourvu que mon PS ne se joue pas sur le look ! Tontonnement v&ocirc;tre.</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:08:43", 
+            "type": 7, 
+            "slug": "le-journal-de-tonton", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:09:44", 
+            "title": "L'appartement de Poncelet fait jaser", 
+            "tags": "xavier bertrand, christian poncelet", 
+            "author_nickname": null, 
+            "content": "<p>Alors qu'on ne lui demandait rien, Xavier Bertrand, ministre du Travail de son &eacute;tat, est mont&eacute; au feu pour d&eacute;noncer les avantages dont jouissait (et allait continuer &agrave; jouir) Christian Poncelet, futur ex-pr&eacute;sident du S&eacute;nat. \"Il faut mettre un terme &agrave; cette id&eacute;e aberrante d'avoir un appartement &agrave; vie pour le pr&eacute;sident du S&eacute;nat. J'ai entendu parler de &ccedil;a, je pense que &ccedil;a n'a jamais &eacute;t&eacute; fait auparavant, il ne faut pas que &ccedil;a voie le jour... A un moment qui est un moment difficile, une conjoncture difficile, l'exemplarit&eacute; est essentielle.\" Quant au futur pr&eacute;sident, G&eacute;rard Larcher, il ne s'est toujours pas prononc&eacute;. Il serait temps qu'il le fasse.&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:09:44", 
+            "type": 9, 
+            "slug": "lappartement-de-poncelet-fait-jaser", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:10:39", 
+            "title": "Dray pas candidat au Frigidaire", 
+            "tags": "julien dray, premier secr\u00e9taire", 
+            "author_nickname": null, 
+            "content": "<p>Ceux qui avaient cru que Julien Dray &eacute;tait all&eacute; &agrave; Canossa en rejoignant S&eacute;gol&egrave;ne en seront pour leurs frais. Car il n'a toujours pas renonc&eacute; (en d&eacute;pit des sondages qui lui accordent un score &agrave; un chiffre) au poste de Premier secr&eacute;taire. \"Je ferai acte de candidature ; il y en aura d'autres certainement, mais on verra... Si elle estime &agrave; un moment donn&eacute; qu'elle est en capacit&eacute;, on en discutera tous les deux de mani&egrave;re cordiale.\" Pour notre part, si c'est le cas, on voit mal comment les fid&egrave;les barons (Rebsamen, Bianco, Peillon) accepteraient que le fils prodigue leur ravisse le poste &eacute;ventuel, lui qui avait affirm&eacute; qu'on \"ne met pas la figurine avant de construire la pi&egrave;ce mont&eacute;e.\"&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:10:39", 
+            "type": 6, 
+            "slug": "dray-pas-candidat-au-frigidaire", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:11:55", 
+            "title": "Crise financi\u00e8re : Nicolas pas rassurant", 
+            "tags": "nicolas sarkozy, discours de toulon", 
+            "author_nickname": null, 
+            "content": "<p>Navr&eacute; pour Nicolas, mais son discours de Toulon n'a pas rassur&eacute; les Fran&ccedil;ais. Selon un sondage CSA pour Le Parisien, ils sont 51% (contre 47) &agrave; d&eacute;clarer qu'ils n'ont pas confiance en lui pour r&eacute;duire l'impact de la crise financi&egrave;re en France. Et comme en &eacute;cho, le secr&eacute;taire g&eacute;n&eacute;ral de l'Elys&eacute;e, Claude Gu&eacute;ant, a l&acirc;ch&eacute; sur France-Inter que \"personne ne sait v&eacute;ritablement ce qui va se passer. Personne.\" C'est bon de se savoir dirig&eacute;s ! Le pire est &agrave; venir et ass&eacute;n&eacute; sans douceur : \"Le pr&eacute;sident n'a pas pr&eacute;vu les d&eacute;veloppements de cette crise. Pas davantage que les &eacute;conomistes et les soi-disant experts en conjoncture.\" On le vire, Gu&eacute;ant ?</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:11:55", 
+            "type": 8, 
+            "slug": "crise-financiere-nicolas-pas-rassurant", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:13:52", 
+            "title": "Borloo fait mumuse", 
+            "tags": "\u00e9cologie, voiture hybride,  jean-louis borloo ", 
+            "author_nickname": null, 
+            "content": "<p>En ces temps o&ugrave; les Fran&ccedil;ais h&eacute;sitent &agrave; prendre un cr&eacute;dit pour changer leur voiture, r&eacute;jouissons-nous : notre ministre du Grenelle et de l'Ecologie vient de toucher (terme poli pour signifier qu'on la lui a refil&eacute;e gratis) une Peugeot 308 hybride diesel, associant un bloc 1.6 HDi de 110 cv &agrave; un moteur &eacute;lectrique. Fin du fin, la tuture b&eacute;n&eacute;ficie du syst&egrave;me Stop&amp;Start qui l'arr&ecirc;te quand elle s'immobilise, et qui la fait red&eacute;marrer d&egrave;s que Jean-Louis appuiera sur l'embrayage. Et pour preuve que les avantages en nature, y'en a pour tout le monde, la firme du lion va donner d'autres exemplaires &agrave; la mairie de Paris. S'en foutent, ils roulent en Velib.&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:13:52", 
+            "type": 10, 
+            "slug": "borloo-fait-mumuse", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:14:58", 
+            "title": "Les m\u00e9saventures de la famille Pasqua (suite)", 
+            "tags": "pierre pasqua, cour de justice de la r\u00e9publique, condamnation", 
+            "author_nickname": null, 
+            "content": "<p>Apr&egrave;s papy Charly (81 ans), qui doit &ecirc;tre jug&eacute; par la Cour de Justice de la R&eacute;publique dans l'affaire de la Sofremi et condamn&eacute; en appel en mars 2008 &agrave; 18 mois de prison avec sursis dans celle du casino d'Annemasse, voici les aventures de Pierre, le fiston de 60 ans, qui vient d'&ecirc;tre lui aussi condamn&eacute; d&eacute;finitivement &agrave; un an de prison ferme dans une affaire de pots-de-vin extorqu&eacute;s &agrave; Alstom en 1994. Et tout cela est loin d'&ecirc;tre termin&eacute;, puisqu'il doit de nouveau &ecirc;tre jug&eacute; en mars prochain dans la m&ecirc;me affaire Sofremi. Ce qui pourrait nous donner en finale les Pasqua p&egrave;re et fils embastill&eacute;s au quartier VIP de la Sant&eacute;. Pauvre France !</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:14:58", 
+            "type": 2, 
+            "slug": "les-mesaventures-de-la-famille-pasqua-suite", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:15:55", 
+            "title": "Boutin veut monter un parti d\u00e9mocrate chr\u00e9tien", 
+            "tags": "christine boutin, chr\u00e9tiens ", 
+            "author_nickname": null, 
+            "content": "<p>Revigor&eacute;e par la venue du pape Beno&icirc;t XVI sur nos terres, Christine Boutin r&ecirc;ve d'un nouveau parti, d'ob&eacute;dience d&eacute;mocrate chr&eacute;tienne. Du coup, elle organisera un colloque le 10 octobre sur le th&egrave;me \"Chr&eacute;tiens : de l'audace pour la politique\". Et elle explique : \"J'ai un parti politique, le Forum des r&eacute;publicains sociaux, mais on se pose la question de savoir si on doit changer de nom. Je suis absolument scandalis&eacute;e qu'en France, il n'existe plus de parti politique portant des valeurs de la d&eacute;mocratie chr&eacute;tienne. Ces valeurs, je les revendique.\" Pas s&ucirc;r qu'un coup de Ripolin sur des id&eacute;aux de la IV R&eacute;publique lui permette de d&eacute;passer les 2%...&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:15:55", 
+            "type": 3, 
+            "slug": "boutin-veut-monter-un-parti-democrate-chretien", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:16:55", 
+            "title": "Le ch\u00f4mage a explos\u00e9 en ao\u00fbt", 
+            "tags": "laurent wauquiez, chiffres du ch\u00f4mage", 
+            "author_nickname": null, 
+            "content": "<p>Quand &ccedil;a va mal... Sans craquer, le secr&eacute;taire d'Etat &agrave; l'Emploi, le jeune Laurent Wauquiez a carr&eacute;ment annonc&eacute; (mais pouvait-il faire autrement ?) que \"les chiffres du ch&ocirc;mage seront tr&egrave;s mauvais et beaucoup plus qu'avant. En ao&ucirc;t, de 30 &agrave; 40.000 ch&ocirc;meurs de plus.\" Soit le plus mauvais chiffre mensuel depuis quinze ans. On conna&icirc;tra officiellement l'ampleur du d&eacute;sastre ce soir. Mais il faut pas croire : en haut, on a r&eacute;agi. C'est ainsi que d&egrave;s aujourd'hui, une \"r&eacute;union de crise\" s'est tenue avec Christine Lagarde et l'ensemble des services concern&eacute;s : Anpe, Assedic, Afpa et collectivit&eacute;s locales. En sortira un joli communiqu&eacute;. Un de plus.&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:16:55", 
+            "type": 4, 
+            "slug": "le-chomage-a-explose-en-aout", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 1, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:18:07", 
+            "title": "La troisi\u00e8me jambe de Nicolas", 
+            "tags": "nicolas sarkozy, garde du corps", 
+            "author_nickname": null, 
+            "content": "<p>Non, n'y voyez aucune allusion sexuelle ! Mais lorsqu'on regarde la photo prise &agrave; la sortie de la salle des f&ecirc;tes de l'Elys&eacute;e le 12 septembre dernier, et publi&eacute;e cette semaine par Paris Match, on reste dubitatif. Voil&agrave;-t'y pas que Notre Pr&eacute;sident est dot&eacute;... d'une troisi&egrave;me jambe ! D&eacute;j&agrave; qu'on savait qu'il avait 5 ou 6 cerveaux ! Renseignements pris, il s'agit d'une erreur de Pascal Rostain, le paparazzo attitr&eacute; de Nicolas. Sur sa palette graphique, il a effac&eacute; un garde du corps, qui faisait d&eacute;sordre aux c&ocirc;t&eacute;s du pr&eacute;sident et de Beno&icirc;t XVI. Mais a oubli&eacute; de lui virer sa jambe. Le r&eacute;sultat fait tr&egrave;s ph&eacute;nom&egrave;ne de Foire du tr&ocirc;ne. Enfin, f&eacute;licitations &agrave; Carla.&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:18:07", 
+            "type": 5, 
+            "slug": "la-troisieme-jambe-de-nicolas", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:30:54", 
+            "title": "Une augmentation en porte-jarretelles", 
+            "tags": "lingerie, augmentation, belge", 
+            "author_nickname": null, 
+            "content": "<p>Vous ne savez pas comment obtenir les faveurs d'un homme - votre patron ou votre mec, &agrave; vous de voir ? Facile, portez de la lingerie coquine. Vous m'direz, c'est &eacute;vident ! Mais c'est d&eacute;sormais scientifiquement prouv&eacute; par les Belges - je vous jure que ce n'est pas une blague ! L'exp&eacute;rience est simple : placer devant des mecs une nana portant une tenue de ville, puis la m&ecirc;me en sous-v&ecirc;tements et enfin en bikini et voyez comment ils r&eacute;agissent. C'est sans appel : les m&acirc;les, peu patients, sont pr&ecirc;ts &agrave; offrir une petite r&eacute;compense tout de suite &agrave; Miss porte-jarretelles. Vous savez ce que vous devez faire maintenant pour avoir une augmentation...</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:30:54", 
+            "type": 1, 
+            "slug": "une-augmentation-en-porte-jarretelles", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:31:48", 
+            "title": "Le Dr Constance d'Hypocrite vous r\u00e9pond", 
+            "tags": "hiver, b\u00e9b\u00e9, klorane", 
+            "author_nickname": null, 
+            "content": "<p>Question de lectrice : L'hiver approche et je voudrais prot&eacute;ger la peau de mon b&eacute;b&eacute; contre les agressions du froid. Marie-Laure<br />Le Dr : Ch&egrave;re Marie-Laure, vous allez commencer par habiller chaudement votre petit, &ccedil;a lui &eacute;vitera d'attraper froid ! Oh, j'rigole ! Bien s&ucirc;r que j'ai compris votre question. En gros, vous avez peur que le froid et les variations de temp&eacute;ratures entra&icirc;nent rougeurs, dartres et m&ecirc;me ger&ccedil;ures. On vous propose d'essayer les produits Klorane pour peaux s&egrave;ches et tr&egrave;s s&egrave;ches - m&ecirc;me &agrave; quelques mois, les b&eacute;b&eacute;s sont la cible du marketing \"type de peau\" - &agrave; base d'huile de Cameline et d'extrait de Calendula. Moi, j'ai pas de troll, alors je vais prot&egrave;ge ma petite personne contre les agressions du froid : 3 pulls, 2 paires de gants et 4 paires de chaussettes devraient suffire !</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:31:48", 
+            "type": 7, 
+            "slug": "le-dr-constance-dhypocrite-vous-repond", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:34:41", 
+            "title": "Iran son tablier", 
+            "tags": "ministre de l'int\u00e9rieur, iran, dipl\u00f4me", 
+            "author_nickname": null, 
+            "content": "<p>Le ministre de l'Int&eacute;rieur iranien, Ali Kordan, a fourni un faux dipl&ocirc;me. Il pr&eacute;tendait d&eacute;tenir un doctorat honorifique en droit de l'universit&eacute; d'Oxford et affirmait qu'un \"interm&eacute;diaire\" de la dite lui avait fait passer le dipl&ocirc;me &agrave; T&eacute;h&eacute;ran. Toutefois, il indique &eacute;galement qu'il avait &eacute;mis des doutes quant &agrave; la validit&eacute; de ce dipl&ocirc;me. Bongo, le document n'&eacute;tait qu'une contrefa&ccedil;on - comme quoi, y'a pas que Chanel et Vuitton qui sont concern&eacute;s. Et l'universit&eacute; britannique ne poss&egrave;de aucun dossier au nom d'Ali Kordan. Forc&eacute;ment, il est pouss&eacute; vers la sortie, mais il refuse de quitter son poste. Alors Ali, Iran ou Iran pas son tablier ?</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:34:41", 
+            "type": 1, 
+            "slug": "iran-son-tablier", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:35:37", 
+            "title": "Le journal de Georgie Deubeulyou", 
+            "tags": "georgie deubeulyou, r\u00e9fugi\u00e9s", 
+            "author_nickname": null, 
+            "content": "<p>Hey mon diary, j'ai eu une idea g&eacute;niale. J'ai annonc&eacute; que mon grand et beau pays, les Super States, va accueillir jusqu'&agrave; 80.000 r&eacute;fugi&eacute;s au cours de l'ann&eacute;e fiscale 2009. Comment &ccedil;a, elle n'est pas g&eacute;niale mon idea ? Mais si, comme &ccedil;a, hop, je d&eacute;tourne l'attention des journalistes de la crise - y commencent &agrave; m'&eacute;nerver tous avec cette crise &agrave; laquelle je pige nothing - et en plus, je fais une B-A avant de quitter la pr&eacute;sidence - bon, je sais j'avais dit que ma B-A aurait &eacute;t&eacute; la r&eacute;solution du conflit au Moyen-Orient, mais j'y arrive pas, c'est pas de ma faute quand m&ecirc;me ! Et pis, c'est pas moi qui aura &agrave; g&eacute;rer ces 80.000 bougnoules, chinetoques et latinos qui poseront leurs bagages chez nous, ce sera mon successeur, qui sera du coup dans la shit ! T'as vu, j'suis g&eacute;nial... des fois ! En m&ecirc;me temps, c'est moi the best President of the United States !</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:35:37", 
+            "type": 7, 
+            "slug": "le-journal-de-georgie-deubeulyou", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 37,
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:36:40", 
+            "title": "Le tsar r\u00e9habilit\u00e9", 
+            "tags": "tsar nicolas ii, russie, r\u00e9habilitation", 
+            "author_nickname": null, 
+            "content": "<p>La Russie a r&eacute;habilit&eacute; le tsar Nicolas II et sa famille. Ils avaient tous &eacute;t&eacute; assassin&eacute;s par les bolcheviques en 1918. Bon, ok c'est un peu tard et c'est surtout tr&egrave;s symbolique, mais cela ne cache-t-il pas autre chose ? Ben oui, cela pourrait signifier que Poutine &amp; Co ont des ambitions d'empire. En m&ecirc;me temps, ils sont d&eacute;j&agrave; bien parti : ils ont mat&eacute; les tch&eacute;tch&egrave;nes, ils ont envahi la G&eacute;orgie, nul doute qu'ils parviennent bient&ocirc;t &agrave; r&eacute;tablir les fronti&egrave;res de l'empire !&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:36:40", 
+            "type": 9, 
+            "slug": "le-tsar-rehabilite", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:37:28", 
+            "title": "Qui a fait quoi et quand ?", 
+            "tags": "conseil de l'europe, russie, g\u00e9orgie", 
+            "author_nickname": null, 
+            "content": "<p>Le Conseil de l'Europe a critiqu&eacute; la Russie pour son \"interventionnisme\" en G&eacute;orgie et cette derni&egrave;re s'est &eacute;galement fait remonter les bretelles pour son \"aventurisme\". Un partout, comme &ccedil;a pas de jaloux ! Dans le m&ecirc;me temps, Eneko Landaburu, directeur g&eacute;n&eacute;ral &agrave; la direction g&eacute;n&eacute;rale des&nbsp; relations ext&eacute;rieures de la Commission europ&eacute;enne, confiait au repr&eacute;sentant permanent de la Russie aupr&egrave;s de l'UE que Tbilissi &eacute;tait responsable du conflit en Oss&eacute;tie du Sud. Bon heureusement que le Conseil de l'Europe a pr&eacute;vu d'ouvrir une enqu&ecirc;te ind&eacute;pendante pour conna&icirc;tre le fin mot de l'histoire, parce qu'entre les d&eacute;clarations des uns et des autres, on n'est plus tr&egrave;s s&ucirc;r de savoir qui a commenc&eacute; la bagarre !</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:37:28", 
+            "type": 6, 
+            "slug": "qui-a-fait-quoi-et-quand", 
+            "issues": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 39, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:38:39", 
+            "title": "Elle est Bel(arus) l'Europe !", 
+            "tags": "bi\u00e9larussie, union europ\u00e9enne, sanctions", 
+            "author_nickname": null, 
+            "content": "<p>L'Union europ&eacute;enne est en train d'examiner diff&eacute;rentes options pour r&eacute;duire les sanctions contre la Bi&eacute;lorussie. Alors l&agrave;, bravo ! Le pr&eacute;sident Lukashenko organise un semblant d'&eacute;lection, du coup, &ccedil;a y est, il est redevenu gentil ! Et puis, comme Poutine va lui rendre visite la semaine prochaine, ce serait bien que l'UE fasse un petit cadeau &agrave; Lukashenko. Histoire de lui signifier qu'on l'aime bien, nous aussi ! Apr&egrave;s tout, on s'en fout qu'il soit un dictateur, faut surtout pas qu'il se rapproche trop de la Russie. Mais est-ce une raison pour se prostituer de la sorte et bafouer au passage les droits de l'homme ? Comment ils traduisent Bi&eacute;lorussie d&eacute;j&agrave;, les British? Belarus ? Eh bien, elle n'est pas Belarus-ie et l'Europe non plus !&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:38:39", 
+            "type": 8, 
+            "slug": "elle-est-belarus-leurope", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:39:43", 
+            "title": "Les petites aventures de la Crise", 
+            "tags": "s\u00e9nat, plan de sauvetage, chambre des repr\u00e9sentants", 
+            "author_nickname": null, 
+            "content": "<p>Comme le S&eacute;nat doit voter oui au plan de sauvetage (voir Premi&egrave;re nouvelle), toutes les places boursi&egrave;res sont rassur&eacute;es et les indices repartent &agrave; la hausse. Youpi ! Euh... non, ne vous r&eacute;jouissez pas trop vite car la Chambre des repr&eacute;sentants doit re-voter le texte l&eacute;g&egrave;rement modifi&eacute; demain. Et comme ses membres veulent des changements plus importants dans ce texte, &ccedil;a pourrait ne pas passer ! Franchement, &ccedil;a sert &agrave; rien de crier victoire, si c'est pour replonger dans les abysses de la bourse d&egrave;s demain !&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:39:43", 
+            "type": 10, 
+            "slug": "les-petites-aventures-de-la-crise", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:40:45", 
+            "title": "Les petites aventures de la Crise - suite", 
+            "tags": "s\u00e9nat, henry paulson, bush", 
+            "author_nickname": null, 
+            "content": "<p>Aujourd'hui, le S&eacute;nat doit se prononcer sur le plan de sauvetage &eacute;labor&eacute; par Henry Paulson, le secr&eacute;taire am&eacute;ricain au Tr&eacute;sor. A priori pas de surprise, le texte doit &ecirc;tre adopt&eacute; - mais bon, on disait bien &ccedil;a avant le vote de la Chambre des repr&eacute;sentants ! Cependant, les S&eacute;nateurs ne subissent pas la m&ecirc;me pression des &eacute;lecteurs que les membres de la chambre basse. De toute fa&ccedil;on, on peut compter sur Bush : quand il veut quelque chose, il l'a - souvenez-vous la pr&eacute;sidence, la guerre en Afghanistan, celle en Irak...</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:40:45", 
+            "type": 2, 
+            "slug": "les-petites-aventures-de-la-crise-suite", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:41:47", 
+            "title": "Accord ou pas accord ?", 
+            "tags": "zimbabwe, mugabe, gouvernement d'unit\u00e9 nationale", 
+            "author_nickname": null, 
+            "content": "<p>Hier, on se r&eacute;jouissait de l'annonce de Mugabe : le gouvernement d'unit&eacute; nationale serait sur pied avant la fin de la semaine. Aujourd'hui, on apprend qu'on nous aurait menti ! Le MDC, le parti d'opposition, refuse de poursuivre les n&eacute;gociations avec Mugabe car ce dernier r&eacute;serve pour son parti les postes les plus prestigieux, genre le minist&egrave;re de l'Economie, celui de l'Int&eacute;rieur ou de la Justice. Et comme ils se disputent comme des gamins dans une cour de r&eacute;cr&eacute;, l'Union africaine va devoir venir siffler les fautes !</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:41:47", 
+            "type": 3, 
+            "slug": "accord-ou-pas-accord", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:42:55", 
+            "title": "Qui dit mieux ?", 
+            "tags": "george, gordon brown, actif pourris", 
+            "author_nickname": null, 
+            "content": "<p>George de la Maison Blanche a promis (enfin, presque) une enveloppe de 700 milliards de dollars pour racheter les actifs pourris des &eacute;tablissements financiers. Et bien, Gordon Brown, l'ennuyeux Premier ministre british, aime les challenges et augmente les ench&egrave;res. Selon nos confr&egrave;res du Daily Mail, il serait pr&ecirc;t &agrave; mettre sur la table 1,9... trillions de livre sterling ! Je suis bien incapable de vous faire la conversion en euros ou en dollars : ma calculatrice ne prend pas autant de z&eacute;ros ! Alors, il bluffe ou pas ?</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:42:55", 
+            "type": 4, 
+            "slug": "qui-dit-mieux", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 2, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-21 15:43:56", 
+            "title": "De nouveaux missiles US au Pakistan", 
+            "tags": "ricains, afghanistan, pakistan, missiles", 
+            "author_nickname": null, 
+            "content": "<p>D&eacute;cid&eacute;ment, ils cherchent la bagarre les Ricains. Un de leurs drones a (encore) balanc&eacute; des missiles &agrave; la fronti&egrave;re entre l'Afghanistan et le Pakistan, faisant une fois de plus 6 morts et 9 bless&eacute;s c&ocirc;t&eacute; pakistanais. Pour le moment, les Pakistanais n'ont pas fait de commentaire, mais faudra pas que les Ricains viennent se plaindre s'ils prennent du plomb dans les ailes (de leurs drones). Parce que le pr&eacute;sident Zardari les a pr&eacute;venus : pas de nouvelles violations du territoire pakistanais, sinon, pan-pan cul-cul.</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-21 15:43:56", 
+            "type": 5, 
+            "slug": "de-nouveaux-missiles-us-au-pakistan", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-22 15:36:32", 
+            "title": "Plus de vergetures ?", 
+            "tags": "vergetures cr\u00e8me nanas", 
+            "author_nickname": null, 
+            "content": "<p>Entre les grossesses - le moins possible - et les prises de poids - ok on n'est pas oblig&eacute; de se goinfrer, mais &ccedil;a fait du bien des fois -, la peau de notre bidon est toute stri&eacute;e. Sans oublier celle de nos n&eacute;n&eacute;s, nos cuisses ou nos hanches. Je parle bien s&ucirc;r des vergetures - et dire que certains les appellent les marques de tendresse... - et le nombre de traitement est illimit&eacute;. La particularit&eacute; de la cr&egrave;me Percutalfa des laboratoires Pierre Fabre, c'est qu'elle n'en a pas ! Car, comme beaucoup de ces concurrentes sur le march&eacute; des anti-vergetures, Percutalfa ne permet pas de les r&eacute;duire et en plus elle ne sent pas tr&egrave;s bon. Allez, il y a quand m&ecirc;me des point positifs : elle n'est ni grasse, ni collante, et elle hydrate bien. C'est toujours &ccedil;a de pris...</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 15:36:32", 
+            "type": 3, 
+            "slug": "plus-de-vergetures", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:15:00", 
+            "title": "H Cup, Saison 14, Episode 1", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>C'est reparti pour un tour&nbsp;! Ce week-end, le vieux continent du rugueuby remet les couverts pour mordre &agrave; pleins prot&egrave;ge-dents dans sa H Cup. Une comp&egrave;te certes europ&eacute;enne, mais ouskeu y'a surtout des Angliches, des Iriches, des Gallois et nous, les Gaulois. D'ailleurs, pour cette saison 14, &eacute;pisode 1, on pr&eacute;sente nos 7 mercenaires&nbsp;: Toulouse, finaliste ayant perdu face au Munster 17 &agrave; 13 en mai dernier, qui se prend Bath&nbsp;; le Stade Fran&ccedil;ais, qui visite l'Ulster&nbsp;; Clermont, qui veut jouer proprement contre Sale&nbsp;; Perpignan, qui r&eacute;vise face &agrave; Tr&eacute;vise&nbsp;; Biarritz, qui glousse &agrave; Gloucester&nbsp;; Montauban, qui se paie le tenant au Munster&nbsp;; Castres, qui s'axe sur les Wasps. Peut-&ecirc;tre que l'un d'eux ira en finale le 23 mai, dans l'antre &eacute;cossaise de Murrayfield. Ce qui nous laisse le temps d'y mettre la t&ecirc;te. La semaine prochaine par exemple, entre les deux premi&egrave;res joutes et autres pouss&eacute;es de joug.</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:15:00", 
+            "type": 1, 
+            "slug": "h-cup-saison-14-episode-1", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:17:42", 
+            "title": "El diario de Diego Maindedieu", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]-->\r\n<p><!--  --></p>\r\n<!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->\r\n<p><span style=\"color: #000000;\">Hola diario mio&nbsp;! Bolalaaa... Y'ai appris qu&eacute; l&eacute; \"Kun\"... Ma, non, pas l&eacute; cone&nbsp;! L&eacute; Kun, Sergio Ag&uuml;ero, l&eacute; youeur d&eacute; l'Atletico Madrid... Bon, eh bi&egrave;ne, il s&eacute;ra papa dans quelqu&eacute;s s&eacute;main&eacute;s. Quoi, kesk&eacute; &ccedil;a peut m&eacute; foutr&eacute;&nbsp;? Ma, c'est tout d&eacute; m&ecirc;m&eacute; l&eacute; p&eacute;tite amor&eacute; d&eacute; ma ni&ntilde;a Gianina&nbsp;! Alor&eacute;, comm&eacute; c'est ma roubriqu&eacute;, y&eacute; fais c&eacute; qu&eacute; y&eacute; veux. Na... Touyours est-il qu&eacute; y&eacute; souis mouy content&eacute;, porqu&eacute; c&eacute; s&eacute;r&eacute; oun gar&ccedil;one. Il d&eacute;vrait s&eacute; nommer Leonel Ag&uuml;ero Main d&eacute; Dios. Y&eacute; peux t&eacute; dir&eacute; qu&eacute; l&eacute; cocktail s'annonc&eacute; d&eacute;y&agrave; essplosif. Car l&eacute; b&eacute;b&eacute;, il port&eacute;ra l&eacute; pr&eacute;nome d&eacute; Messi, l&eacute; nome d&eacute; la mama, y... y... y... l&eacute; mienne&nbsp;! Alor&eacute; tou parl&eacute; si &ccedil;a m&eacute; fait mouy chialer d&eacute; bonhour... Quelqu&eacute; chos&eacute; m&eacute; dit qu&eacute; l&eacute; p&eacute;tite Leo, on n'a pas fini d'en entendr&eacute; parler. Et m&ecirc;m&eacute; avec les mains. Ma, si&nbsp;: les main d&eacute; Dios&nbsp;! Si, si, y&eacute; sais : soy g&eacute;nial... Adios ! <br /></span></p>\r\n<p><span style=\"color: #000000;\">\r\n<script type=\"text/javascript\"></script>\r\n</span></p>\r\n<p><span style=\"color: #000000;\"> &nbsp; </span></p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:17:42", 
+            "type": 7, 
+            "slug": "el-diario-de-diego-maindedieu", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:18:42", 
+            "title": "Chardy devient tr\u00e8s hardi", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>J&eacute;r&eacute;my Chardy, vous connaissez&nbsp;? Mais si, c'est le jeune palois de 21 printemps qui avait atteint les 8e du dernier Roland-Garros. Depuis, on aurait pu penser que notre nouvelle coqueluche du tennis s'&eacute;tait transcend&eacute;e devant son public. Sauf que l&agrave;, il s'aguerrit. A Moscou hier soir, il s'en est all&eacute; battre le local de l'&eacute;tape Igor Andreev, mondial n&deg;19 et t&ecirc;te de s&eacute;rie n&deg;2 de ce tournoi ATP&nbsp;: 3/6, 7/5 et 6/4. Chardy, seulement n&deg;81, poussera son culot en quart face &agrave; un autre russe, Igor Kunitsyn, plus abordable vu qu'il est n&deg;71... Comme une bonne nouvelle n'arrive jamais seule, le v&eacute;t&eacute;ran Fabrice Santoro passe &eacute;galement son tour, et s'&eacute;changera des coups avec un autre fran&ccedil;ais, Paul-Henri Mathieu, de dix ans son cadet. Donc, &agrave; moins qu'ils ne n'entretuent, on devrait avoir un joueur en demi-finale. Et, vu le tableau, pourquoi pas contre... Chardy&nbsp;?</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:18:42", 
+            "type": 9, 
+            "slug": "chardy-devient-tres-hardi", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 19:20:06", 
+            "title": "Diniz lance le DEFI \u00e0 Paris", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>Inutile d'insister, c'est complet&nbsp;! Depuis hier, pas moins de 20.000 personnes sont inscrites aux \"20 kilom&egrave;tres de Paris\". Pour sa 30e &eacute;dition, la tr&egrave;s populaire course p&eacute;destre empruntera une seule boucle au d&eacute;part du Pont d'I&eacute;na, au pied de la Tour Eiffel, pour s'achever Quai Branly, &agrave; un autre pied de la Tour Eiffel. Le tout via le bois de Boulogne et les bords de Seine. Parmi les participants, on remarquera Yohann Diniz, qui effectue son retour apr&egrave;s l'abandon lors du 50 bornes marche des Jeux olympiques de P&eacute;kin. Cette fois, il courra, et ce pour le compte de \"Donnons de l'Espoir Face &agrave; l'Inconnu\", dit DEFI. Le vice-champion du monde 2007 et champion d'Europe 2006 versera quelques gouttes de sueur pour les jeunes adultes gravement malades ou accident&eacute;s. Donc s'il ne gagne pas, il s'en tapera le coquillard.</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 19:20:06", 
+            "type": 6, 
+            "slug": "diniz-lance-le-defi-a-paris", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:22:05", 
+            "title": "God save the ruine", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]-->\r\n<p><!--  --></p>\r\n<!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]-->\r\n<p>Qui avait pr&eacute;tendu que le foot anglais &eacute;tait gav&eacute; de tunes&nbsp;? Certes, ses clubs s'offrent les meilleurs joueurs du monde. D'ailleurs, on voit les r&eacute;sultats de l'&eacute;quipe nationale, m&ecirc;me pas qualifi&eacute;e pour le dernier Euro... Eh bien figurez-vous que, non seulement il ne gagne pas beaucoup de matches, mais en plus, le foot <em>Made in Englande</em> perd du pognon. Environ 3 milliards d'euros, comme le pr&eacute;tend le pr&eacute;si de la F&eacute;d&eacute; David Triesman. Tout &ccedil;a, c'est &agrave; cause de la crise, qui a toujours bon dos, bien entendu. Mais pas que... Lisez plut&ocirc;t le montant des dettes&nbsp;: Chelsea, 619 millions de livres (792, en euros)&nbsp;; Manchester United, 604 millions (772)&nbsp;; Arsenal, 268 millions (343). Sans omettre que West Ham n'est plus garant d'un avenir certain apr&egrave;s avoir paum&eacute; son principal sponsor, la compagnie a&eacute;rienne XL Leisure Group. Et ne parlons pas de Newcastle, au fond du trou financier bien avant que le krach ne nous &eacute;clate &agrave; la gueule. Il ne reste plus qu'&agrave; prier pour eux. God save the foot.</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n&nbsp;\r\n<p><br />\r\n<script type=\"text/javascript\"></script>\r\n</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:22:05", 
+            "type": 8, 
+            "slug": "god-save-the-ruine", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:24:28", 
+            "title": "La danse des canards", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>Le groupe Amaury, &eacute;diteur de <em>L'Equipe</em> et du <em>Parisien</em>, dit &agrave; qui veut le lire qu'il va lancer \"<em>dans les prochaines semaines</em>\" son nouveau quotidien sportif national. Si l'on ne conna&icirc;t pas encore son titre, on sait que sept jours sur sept, il sera vou&eacute; au foot, aux chevaux et &agrave; quelques grands sports. Une r&eacute;ponse envoy&eacute;e &agrave; Michel Moulin, ancien conseiller sportif du PSG (dur m&eacute;tier), qui crie sous tous les toits que, d&egrave;s le 3 novembre, il sortira <em>Le 10 Sport</em>. Un quotidien lui-m&ecirc;me d&eacute;di&eacute; au ballon rond et \"paru-vendu\" au prix de 50 centimes d'euro. Entre temps, le groupe Lafont Presse affirme vouloir lancer un nouveau quotidien sportif , <em>Le Foot</em>, vendu 60 centimes d'euros d&egrave;s le 25 janvier prochain. Et dire que trop d'infos, tue l'info... Bravo messieurs, rab&acirc;chez-nous du foot et, surtout, ne changez rien. Pas m&ecirc;me vos strat&eacute;gies commerciales &agrave; deux balles (ou 0,30 euros).</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:24:28", 
+            "type": 10, 
+            "slug": "la-danse-des-canards", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:25:28", 
+            "title": "La le\u00e7on de judo", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>Mardi, Vladimir Poutine, l'ex-tsar star qui s'est auto-r&eacute;trograd&eacute; en premier Ministre russe, s'est souffl&eacute; 56 bougies. Vous allez nous dire&nbsp;: keskeu cette info vient foutre en page sport&nbsp;? Et vous avez raison. Sauf &nbsp;que pour f&ecirc;ter &ccedil;a, il va nous offrir un petit cadeau&nbsp;! Attention, &ccedil;a retourne&nbsp;: un DVD ousk'il apprend aux d&eacute;butants &agrave; faire du judo... Ah mais c'est tr&egrave;s s&eacute;rieux&nbsp;: il est lui-m&ecirc;me ceinture noire (m&ecirc;me que cet &eacute;t&eacute;, il avait fait ippon &agrave; un tigre devant des journaleux m&eacute;dus&eacute;s). Du coup, cet ancien lieut-co du KGB nous donnera bient&ocirc;t la le&ccedil;on. Pour cela, il sera aid&eacute; du champion du monde japonais Yasuhiro Yamashita, l'un des plus forts judokas que la terre ait port&eacute; (apr&egrave;s David Douillet).</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:25:28", 
+            "type": 2, 
+            "slug": "la-lecon-de-judo", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:27:09", 
+            "title": "La villa ! Ou la vie !", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>D&eacute;j&agrave; quatre ans que Marco Pantani a &eacute;chapp&eacute; &agrave; la vie... Quatre ans que l'on ressasse les souvenirs du \"Pirate\" qui se serait crev&eacute; perqu&eacute; il n'aurait jamais d&ucirc; gagner le Giro en 1998. Ni le Tour d'ailleurs. Cette ann&eacute;e-l&agrave;, le cycliste italien aurait us&eacute; de produits illicites. C'est, en r&eacute;sum&eacute;, ce que pr&eacute;tend Ivano Fanini, pr&eacute;si de l'&eacute;quipe &agrave; v&eacute;lo Amore e Vita. \"<em>Pantani devait passer au contr&ocirc;le antidopage. Comme il se savait positif, il a cherch&eacute; d&eacute;sesp&eacute;r&eacute;ment un &eacute;chantillon n&eacute;gatif et il est tomb&eacute; sur son co&eacute;quipier Riccardo Folconi</em>.\" Qui &eacute;tait le seul coureur \"<em>propre</em>\" de la Mercato Uno. Du coup, Folconi avait charg&eacute; pour lui. Avant d'habiter \"<em>une luxueuse villa en Toscane</em>\". Autrement dit&nbsp;: le vaisseau du pirate.</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:27:09", 
+            "type": 3, 
+            "slug": "la-villa-ou-la-vie", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:29:24", 
+            "title": "Des Kazakhs noirs de rage", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>Les joueurs de foot du Kazakhstan sont noirs de rage. Pire, ils entendent \"<em>faire payer &agrave; l'Angleterre</em>\" samedi &agrave; Wembley (en qualif' du Mondial 2010) le personnage de Borat. Jou&eacute; par le comique Sacha Baron Cohen, ce h&eacute;ros de cinoche pr&eacute;sente les Kazakhs comme arri&eacute;r&eacute;s, homophobes et racistes. Si l'acteur ne veut plus faire le faux journaliste moustachu bicause il flippe sa race, le film <em>Borat, le&ccedil;ons culturelles sur l'Am&eacute;rique au profit de la glorieuse nation du Kazakhstan</em>, avait connu un succ&egrave;s mondial voici deux ans, le pr&eacute;sident Noursoultan Nazarba&iuml;ev jugeant m&ecirc;me qu'il valait mieux en rire. Et puis, &ccedil;a ne peut pas &ecirc;tre pire que l'&eacute;quipe de v&eacute;lo Astana, qui s'est fait piqu&eacute;e l'an pass&eacute;, pour dopage &agrave; r&eacute;p&eacute;tition.</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:29:24", 
+            "type": 4, 
+            "slug": "des-kazakhs-noirs-de-rage", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 4, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 4, 
+            "modification_date": "2008-10-22 17:31:03", 
+            "title": "Le maillot Bryant", 
+            "tags": "", 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>La NBA nous communique ses super stats. Alors nous, comme on est sympa avec l'US Basket Army bicause ils sont tous grands et costauds, on se fait un plaisir de relayer. Non sans &eacute;tonnement&nbsp;: cinq joueurs europ&eacute;ens figurent parmi le Top 10&nbsp;! Enfin, ils entendent par l&agrave; qu'ils sont en bonne position du classement de la vente des maillots. En effet&nbsp;: \"<em>Le march&eacute; des produits d&eacute;riv&eacute;s NBA atteint des records de croissance en Europe</em>.\" Alors qui est le MVP (pour Maillot Vendu en Preumse)&nbsp;? Kobe Bryant, l'un des meilleurs marqueurs du championnat ricain jouant aux Los Angeles Lakers. Et n&ocirc;&ocirc;&ocirc;tre Tipi n&deg;9, dit Tony Parker of San Antonio Spurs, se place cinqui&egrave;me. Paf&nbsp;! Dans le 5 majeur des tee-shirts...</p>\r\n<p>\r\n<script type=\"text/javascript\"></script>\r\n</p>\r\n<p>&nbsp;</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:31:03", 
+            "type": 5, 
+            "slug": "le-maillot-bryant", 
+            "issues": [
+                2
+            ]
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "notes.note", 
+        "fields": {
+            "category": 8, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 0, 
+            "author": 9, 
+            "modification_date": "2008-10-22 17:38:20", 
+            "title": "Nous v'l\u00e0 vernis !", 
+            "tags": "vernis nanas", 
+            "author_nickname": null, 
+            "content": "<p>Les fabricants de cosm&eacute;tiques d&eacute;couvrent toujours LE vernis &agrave; ongles miracle pour celles qui se les bouffent. Mais, moi, grande rogneuse d'ongles devant l'&eacute;ternel, j'en ai test&eacute; un certain nombre, sans succ&egrave;s ! Donc le vernis au r&eacute;glisse de chez Dior ne m'arr&ecirc;tera pas - en plus, j'adore le r&eacute;glisse - et les chewing-gum cens&eacute;s d&eacute;tourn&eacute;s mon attention de mes ongles ne me calmeront pas ! Ma solution miracle : une belle-m&egrave;re qui traque cette mauvaise habitude. Comme quoi, &ccedil;a peut avoir un avantage une belle-m&egrave;re...</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 17:38:20", 
+            "type": 1, 
+            "slug": "nous-vla-vernis", 
+            "issues": [
+                2
+            ]
+        }
+    }
+]

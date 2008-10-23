@@ -1,0 +1,85 @@
+[
+    {
+        "pk": 1, 
+        "model": "regions.featuredregion", 
+        "fields": {
+            "region": 14, 
+            "issue": 2
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 0, 
+            "is_reserved": 1, 
+            "author": 12, 
+            "modification_date": "2008-10-21 20:48:11", 
+            "title": "C'est le moins bourr\u00e9 qui conduit ! ", 
+            "region": 13, 
+            "tags": "ivre, conduite, faits-divers", 
+            "author_nickname": null, 
+            "content": "<p>Oui Monsieur le juge, je sais bien qu'une jeune fille de 19 ans est morte &agrave; cause de notre inconscience ! En fait, comme tous les week-end, nous &eacute;tions partis en discoth&egrave;que et au moment de partir, on s'est tout de m&ecirc;me dit qu'il fallait que le conducteur de la voiture soit celui qui &eacute;tait le plus frais. Et c'&eacute;tait moi ! J'avais bu une quinzaine de bi&egrave;res, une dizaine de whiskies et j'avais fum&eacute; quelques joints... Nous nous sommes arr&ecirc;t&eacute;s &agrave; Aurillac pour acheter des viennoiseries et nous sommes repartis pour Raulhac. C'est l&agrave; que je me suis endormi au volant... Mais me mettre 4 mois ferme alors que je voulais juste rendre service, &ccedil;a me saoule !</p>", 
+            "opinion": null, 
+            "publication_date": "2008-10-21", 
+            "creation_date": "2008-10-21 20:48:11", 
+            "slug": "cest-le-moins-bourre-qui-conduit", 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 12, 
+            "modification_date": "2008-10-22 22:40:26", 
+            "title": "Il a deux bras gauche le chasseur ! ", 
+            "region": 14, 
+            "tags": "bretagne, chasseur", 
+            "author_nickname": null, 
+            "content": "<p>Attention papy ! Un fusil c'est pas un jouet ! Et tu ne nous facilite pas le travail ! On a du ce dimanche prendre l'h&eacute;lico pour rejoindre ton petit bled d'Erquy, afin de te r&eacute;cup&eacute;rer ! Comment tu t'es d&eacute;brouill&eacute; grand-p&egrave;re ? Tu as tir&eacute; sur un faisan et ton fusil est tomb&eacute; par terre ? Et le coup est parti ! Sur ton bras gauche, te bousillant le poignet et la main... Tu ferais peut-&ecirc;tre bien &agrave; 63 piges de penser &agrave; raccrocher ta p&eacute;toire au mur et vaquer &agrave; des activit&eacute;s plus... calme... Moins dangereuses ! A ton &acirc;ge, on perd vite la main ! Cette fois-ci le CHU de Pontchaillou te l'a sauv&eacute;e mais demain...</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 22:40:26", 
+            "slug": "il-a-deux-bras-gauche-le-chasseur", 
+            "issues": [
+                2
+            ]
+        }
+    },
+    {
+        "pk": 3, 
+        "model": "regions.regionnote", 
+        "fields": {
+            "category": 12, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 12, 
+            "modification_date": "2008-10-22 22:41:33", 
+            "title": "Il s'est fait Vite chier \u00e0 la retraite ! ", 
+            "region": 15, 
+            "tags": "centre, retraite", 
+            "author_nickname": null, 
+            "content": "<p>Je m'appelle Francis Vite, j'ai 62 ans et j'habite Vierzon ! Ca fait &agrave; peine 2 ans que je pointe &agrave; la retraite que d&eacute;j&agrave; je m'emmerde ! Alors j'ai d&eacute;cid&eacute; d'agir ! Vite ! Ma vie reposant sur trois pieds, &agrave; savoir la famille, la vie associative et le travail, ce dernier me manquait... Alors, en tant qu'ancien professeur de math&eacute;matiques, j'ai d&eacute;cid&eacute; de reprendre le chemin de l'&eacute;cole. J'int&egrave;gre donc cette ann&eacute;e l'IUT de Ch&acirc;teauroux afin d'y suivre une licence de management des organisations du tiers secteur et de l'&eacute;conomie solidaire. Et si je la d&eacute;croche, je partirai faire un stage au Cresol. Allez hop ! Vite Francis ! En cours !</p>", 
+            "opinion": null, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 22:41:33", 
+            "slug": "il-sest-fait-vite-chier-a-la-retraite", 
+            "issues": [
+                2
+            ]
+        }
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "pk": 1, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-10-23", 
+            "secret_key": "MTQy", 
+            "number": 142, 
+            "is_published": 0
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-10-21", 
+            "secret_key": "MTQ4", 
+            "number": 148, 
+            "is_published": 0
+        }
+    }
+]

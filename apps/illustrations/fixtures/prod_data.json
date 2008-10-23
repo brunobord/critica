@@ -1,0 +1,812 @@
+[
+    {
+        "pk": 1, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-09-25 17:15:30", 
+            "image": "upload/2008/09/25/national.jpg", 
+            "creation_date": "2008-09-25 17:15:30", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "National"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 2, 
+            "modification_date": "2008-09-25 17:16:33", 
+            "image": "upload/2008/09/25/international.jpg", 
+            "creation_date": "2008-09-25 17:16:33", 
+            "credits": "EPA ", 
+            "submitter": 1, 
+            "legend": "\u00c9tranger"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-09-25 17:17:13", 
+            "image": "upload/2008/09/25/societe.jpg", 
+            "creation_date": "2008-09-25 17:17:13", 
+            "credits": "6PA", 
+            "submitter": 1, 
+            "legend": "Soci\u00e9t\u00e9"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-09-25 17:17:39", 
+            "image": "upload/2008/09/25/sport.jpg", 
+            "creation_date": "2008-09-25 17:17:39", 
+            "credits": "NPO", 
+            "submitter": 1, 
+            "legend": "Sports"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 5, 
+            "modification_date": "2008-09-25 17:21:10", 
+            "image": "upload/2008/09/25/pipoleok.jpg", 
+            "creation_date": "2008-09-25 17:21:10", 
+            "credits": "Mick Jagger, site officiel", 
+            "submitter": 1, 
+            "legend": "Pipoles"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 6, 
+            "modification_date": "2008-09-25 17:21:48", 
+            "image": "upload/2008/09/25/tele.jpg", 
+            "creation_date": "2008-09-25 17:21:48", 
+            "credits": "TF1", 
+            "submitter": 1, 
+            "legend": "Cki ? Christelle, la gagnante"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 7, 
+            "modification_date": "2008-09-25 17:22:25", 
+            "image": "upload/2008/09/25/bouquin.jpg", 
+            "creation_date": "2008-09-25 17:22:25", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "Bouquins"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-09-25 17:23:00", 
+            "image": "upload/2008/09/25/nana.jpg", 
+            "creation_date": "2008-09-25 17:23:00", 
+            "credits": "MAXPPP", 
+            "submitter": 1, 
+            "legend": "Nanas"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-09-25 17:23:31", 
+            "image": "upload/2008/09/25/insolite.jpg", 
+            "creation_date": "2008-09-25 17:23:31", 
+            "credits": "MAXPP", 
+            "submitter": 1, 
+            "legend": "Insolite"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 10, 
+            "modification_date": "2008-09-25 17:24:10", 
+            "image": "upload/2008/09/25/voyageingridjouault.jpg", 
+            "creation_date": "2008-09-25 17:24:10", 
+            "credits": "Ingrid Jouault", 
+            "submitter": 1, 
+            "legend": "Voyages"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 11, 
+            "modification_date": "2008-09-25 17:25:34", 
+            "image": "upload/2008/09/25/cigare002.jpg", 
+            "creation_date": "2008-09-25 17:25:34", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "C\u00f4t\u00e9 Fumeur"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 11, 
+            "modification_date": "2008-09-25 17:26:18", 
+            "image": "upload/2008/09/25/Rgisphotocuisine.jpg", 
+            "creation_date": "2008-09-25 17:26:18", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 1, 
+            "legend": "R\u00e9gis Marcon, chef \u00e9toil\u00e9"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 11, 
+            "modification_date": "2008-09-25 17:27:02", 
+            "image": "upload/2008/09/25/alcool.jpg", 
+            "creation_date": "2008-09-25 17:27:02", 
+            "credits": "MAXPPP", 
+            "submitter": 1, 
+            "legend": "C\u00f4t\u00e9 Bar"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-10-01 15:17:24", 
+            "image": "upload/2008/09/23/national.jpg", 
+            "creation_date": "2008-10-01 15:17:24", 
+            "credits": "Wostok Press", 
+            "submitter": 1, 
+            "legend": "Cki ? S\u00e9gol\u00e8ne Royal"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 2, 
+            "modification_date": "2008-10-01 15:18:49", 
+            "image": "upload/2008/09/23/international.jpg", 
+            "creation_date": "2008-10-01 15:18:46", 
+            "credits": "Photoshot", 
+            "submitter": 1, 
+            "legend": "Ckoi ? Suite \u00e0 l'attentat..."
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-10-01 15:19:23", 
+            "image": "upload/2008/09/23/societe.jpg", 
+            "creation_date": "2008-10-01 15:19:23", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "Cki ? Karim Achoui"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-10-01 15:19:51", 
+            "image": "upload/2008/09/23/sport.jpg", 
+            "creation_date": "2008-10-01 15:19:51", 
+            "credits": "DPA", 
+            "submitter": 1, 
+            "legend": "Cki ? Paolo Bettini"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 6, 
+            "modification_date": "2008-10-01 15:20:23", 
+            "image": "upload/2008/09/23/tele.jpg", 
+            "creation_date": "2008-10-01 15:20:23", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "Cki ? Yves R\u00e9nier"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 5, 
+            "modification_date": "2008-10-01 15:21:14", 
+            "image": "upload/2008/09/23/pipole.jpg", 
+            "creation_date": "2008-10-01 15:21:14", 
+            "credits": "DanaPress", 
+            "submitter": 1, 
+            "legend": "George Michael"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-01 15:22:00", 
+            "image": "upload/2008/09/23/nana.jpg", 
+            "creation_date": "2008-10-01 15:22:00", 
+            "credits": "ILLU", 
+            "submitter": 1, 
+            "legend": "Nanas"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 7, 
+            "modification_date": "2008-10-01 15:22:32", 
+            "image": "upload/2008/09/23/bouquin.jpg", 
+            "creation_date": "2008-10-01 15:22:32", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "On envoie DIEU se faire voir ailleurs !"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-01 15:23:33", 
+            "image": "upload/2008/09/23/insolite.jpg", 
+            "creation_date": "2008-10-01 15:23:33", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "L'accumulateur de particules"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-10-02 09:39:02", 
+            "image": "upload/2008/09/24/national.jpg", 
+            "creation_date": "2008-10-02 09:39:02", 
+            "credits": "Zuma Press", 
+            "submitter": 1, 
+            "legend": "Nicolas Sarkozy et Carla Bruni-Sarkozy"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 2, 
+            "modification_date": "2008-10-02 09:39:33", 
+            "image": "upload/2008/09/24/international.jpg", 
+            "creation_date": "2008-10-02 09:39:33", 
+            "credits": "AtlasPress", 
+            "submitter": 1, 
+            "legend": "Cki ? Sarah Palin"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-10-02 09:40:45", 
+            "image": "upload/2008/09/24/societe.jpg", 
+            "creation_date": "2008-10-02 09:40:45", 
+            "credits": "MV Photos", 
+            "submitter": 1, 
+            "legend": "Soci\u00e9t\u00e9 (Massacre \u00e0 l'\u00e9cole)"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-02 09:41:50", 
+            "image": "upload/2008/09/24/nanas1.jpg", 
+            "creation_date": "2008-10-02 09:41:50", 
+            "credits": "Photopqr", 
+            "submitter": 1, 
+            "legend": "Sauve qui poux !"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-10-02 09:42:26", 
+            "image": "upload/2008/09/24/sport.jpg", 
+            "creation_date": "2008-10-02 09:42:26", 
+            "credits": "Teamshoot", 
+            "submitter": 1, 
+            "legend": "Cki ? Le B.O."
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": null, 
+            "modification_date": "2008-10-02 09:43:16", 
+            "image": "upload/2008/09/24/tele.jpg", 
+            "creation_date": "2008-10-02 09:43:16", 
+            "credits": "Maxppp", 
+            "submitter": 1, 
+            "legend": "Enqu\u00eate d'action sur W9 : bravo, les affaires !"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": null, 
+            "modification_date": "2008-10-02 09:44:07", 
+            "image": "upload/2008/09/24/pipole.jpg", 
+            "creation_date": "2008-10-02 09:44:07", 
+            "credits": "BEIimages", 
+            "submitter": 1, 
+            "legend": "Cki ? Gwyneth Paltrow"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 7, 
+            "modification_date": "2008-10-02 09:44:47", 
+            "image": "upload/2008/09/24/bouquin1.jpg", 
+            "creation_date": "2008-10-02 09:44:47", 
+            "credits": "Critic@", 
+            "submitter": 1, 
+            "legend": "Rupture, mode d'emploi"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-02 09:45:34", 
+            "image": "upload/2008/09/24/insolite.jpg", 
+            "creation_date": "2008-10-02 09:45:34", 
+            "credits": "6PA", 
+            "submitter": 1, 
+            "legend": "On tire le vin, mais on le retire aussi"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-12 20:35:46", 
+            "image": "upload/2008/10/12/Anacaps.jpg", 
+            "creation_date": "2008-10-12 20:35:46", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 4, 
+            "legend": "La bonne solution ?"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-10-13 10:09:11", 
+            "image": "upload/2008/10/13/Collines.jpg", 
+            "creation_date": "2008-10-13 10:09:11", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 10, 
+            "legend": "dfd"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-16 11:53:48", 
+            "image": "upload/2008/10/16/Bonux.jpg", 
+            "creation_date": "2008-10-16 11:53:48", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 7, 
+            "legend": "Bonux"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 5, 
+            "modification_date": "2008-10-14 19:46:53", 
+            "image": "upload/2008/10/14/Liam_Gallagher.jpeg", 
+            "creation_date": "2008-10-14 19:46:53", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 11, 
+            "legend": "Liam Gallagher"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 6, 
+            "modification_date": "2008-10-14 19:58:04", 
+            "image": "upload/2008/10/14/Rafael_Amargo.jpeg", 
+            "creation_date": "2008-10-14 19:58:04", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 11, 
+            "legend": "Rafael Amargo"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-13 12:26:13", 
+            "image": "upload/2008/10/13/Atelier_des_Dames.jpg", 
+            "creation_date": "2008-10-13 12:26:13", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 3, 
+            "legend": "Atelier des Dames"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 5, 
+            "modification_date": "2008-10-13 12:37:28", 
+            "image": "upload/2008/10/13/salma_hayek.jpeg", 
+            "creation_date": "2008-10-13 12:37:28", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 3, 
+            "legend": "Salma Hayek"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-13 12:45:15", 
+            "image": "upload/2008/10/13/Cheveux.jpg", 
+            "creation_date": "2008-10-13 12:45:15", 
+            "credits": "photo Pierre Fabre", 
+            "submitter": 4, 
+            "legend": "Oh que j'ai de beaux cheveux !"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 6, 
+            "modification_date": "2008-10-13 12:59:28", 
+            "image": "upload/2008/10/13/Rafael_Amargo.jpeg", 
+            "creation_date": "2008-10-13 12:59:28", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 3, 
+            "legend": "Rafael Amargo"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-16 12:22:59", 
+            "image": "upload/2008/10/16/Bonux_.jpg", 
+            "creation_date": "2008-10-16 12:22:59", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 11, 
+            "legend": "Bonux"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-10-13 14:44:26", 
+            "image": "upload/2008/10/13/Loc_Scher.jpeg", 
+            "creation_date": "2008-10-13 14:44:26", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 3, 
+            "legend": "Lo\u00efc S\u00e9cher"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-16 12:26:00", 
+            "image": "upload/2008/10/16/Bonux__.jpg", 
+            "creation_date": "2008-10-16 12:26:00", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 11, 
+            "legend": "Bonux"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 9, 
+            "modification_date": "2008-10-16 12:55:12", 
+            "image": "upload/2008/10/16/Bonux___.jpg", 
+            "creation_date": "2008-10-16 12:55:12", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 11, 
+            "legend": "Bonux"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-16 13:06:40", 
+            "image": "upload/2008/10/16/sc000dc064.jpg", 
+            "creation_date": "2008-10-16 13:06:40", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 9, 
+            "legend": "Doriance"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-10-16 17:14:25", 
+            "image": "upload/2008/10/16/rdaction.jpeg", 
+            "creation_date": "2008-10-16 17:14:25", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 6, 
+            "legend": "fuhuskfksjf"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": null, 
+            "modification_date": "2008-10-16 17:54:05", 
+            "image": "upload/2008/10/16/rdaction_.jpeg", 
+            "creation_date": "2008-10-16 17:54:05", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 9, 
+            "legend": "dghrkjghkrhug"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 3, 
+            "modification_date": "2008-10-16 18:02:16", 
+            "image": "upload/2008/10/16/Liam_Gallagher.jpeg", 
+            "creation_date": "2008-10-16 18:02:16", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 8, 
+            "legend": "gvchgvhgvhgvf"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 6, 
+            "modification_date": "2008-10-16 18:04:04", 
+            "image": "upload/2008/10/16/Britney_Spears.jpg", 
+            "creation_date": "2008-10-16 18:04:04", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 8, 
+            "legend": "hfghfghdchgdh"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-21 15:27:24", 
+            "image": "upload/2008/10/21/DSC01209.JPG", 
+            "creation_date": "2008-10-21 15:27:24", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 9, 
+            "legend": "Belles et/ou beaux"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 5, 
+            "modification_date": "2008-10-21 18:27:42", 
+            "image": "upload/2008/10/21/Salma_Hayek.jpg", 
+            "creation_date": "2008-10-21 18:27:42", 
+            "credits": "\u00a9Mark Savage/PHOTOSHOT/MAXPPP ", 
+            "submitter": 11, 
+            "legend": "Salma Hayek"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 1, 
+            "modification_date": "2008-10-21 18:34:55", 
+            "image": "upload/2008/10/21/Sgolne_Royal.jpg", 
+            "creation_date": "2008-10-21 18:34:55", 
+            "credits": "\u00a9PHOTOPQR/LE TELEGRAMME/Nicolas Salles", 
+            "submitter": 11, 
+            "legend": "S\u00e9gol\u00e8ne Royal"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-10-21 18:37:11", 
+            "image": "upload/2008/10/21/Alejandro_Valverde.jpg", 
+            "creation_date": "2008-10-21 18:37:11", 
+            "credits": "\u00a9PHOTOPQR/L'EST REPUBLICAIN/A. MARCHI ", 
+            "submitter": 11, 
+            "legend": "Alejandro Valverde"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 8, 
+            "modification_date": "2008-10-22 15:22:58", 
+            "image": "upload/2008/10/22/ericallc3a9gc3a9.jpg", 
+            "creation_date": "2008-10-22 15:22:58", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 9, 
+            "legend": "Eric Bilon, du ballon \u00e0 la cr\u00e9ation"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 10, 
+            "modification_date": "2008-10-22 16:28:55", 
+            "image": "upload/2008/10/22/Tivua_Island2FIDJI.jpg", 
+            "creation_date": "2008-10-22 16:28:55", 
+            "credits": "Marine Leggari", 
+            "submitter": 11, 
+            "legend": "Tivua Island"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 10, 
+            "modification_date": "2008-10-22 16:39:53", 
+            "image": "upload/2008/10/22/Tivua_Island2FIDJI_.jpg", 
+            "creation_date": "2008-10-22 16:39:53", 
+            "credits": "Marine Leggari", 
+            "submitter": 11, 
+            "legend": "L'\u00eele de Tivua"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-10-22 18:18:04", 
+            "image": "upload/2008/10/22/Raymond_Domenech.jpg", 
+            "creation_date": "2008-10-22 18:18:04", 
+            "credits": "MAXPPP", 
+            "submitter": 11, 
+            "legend": "Cki ? Raymond Domenech"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 4, 
+            "modification_date": "2008-10-22 20:21:03", 
+            "image": "upload/2008/10/22/Raymond_Domenech_.jpg", 
+            "creation_date": "2008-10-22 20:21:03", 
+            "credits": "MAXPPP", 
+            "submitter": 11, 
+            "legend": "Cki ? Raymond \"Prof\" Domenech"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 11, 
+            "modification_date": "2008-10-22 22:37:27", 
+            "image": "upload/2008/10/22/DSC01393.JPG", 
+            "creation_date": "2008-10-22 22:37:27", 
+            "credits": "tous droits r\u00e9serv\u00e9s", 
+            "submitter": 12, 
+            "legend": "Lagavulin 16 ans"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "illustrations.illustration", 
+        "fields": {
+            "category": 12, 
+            "modification_date": "2008-10-23 12:48:25", 
+            "image": "upload/2008/10/23/100_0460.jpg", 
+            "creation_date": "2008-10-23 12:46:46", 
+            "credits": "Charlotte David", 
+            "submitter": 11, 
+            "legend": "Ckoi ? La Bretagne, pardi !"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "illustrations.illustrationoftheday", 
+        "fields": {
+            "modification_date": "2008-09-25 17:44:13", 
+            "image": "upload/2008/09/25/caricature____.JPG", 
+            "creation_date": "2008-09-25 17:44:13", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "submitter": 1, 
+            "legend": "50 millions d'euros pris sur le budget d'insertion des handicap\u00e9s !", 
+            "issues": [
+                1
+            ]
+        }
+    },
+    {
+        "pk": 2, 
+        "model": "illustrations.illustrationoftheday", 
+        "fields": {
+            "modification_date": "2008-10-22 15:16:43", 
+            "image": "upload/2008/10/22/DECES_SOEUR_EMMANUELLE.jpg", 
+            "creation_date": "2008-10-22 15:15:54", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "submitter": 11, 
+            "legend": "La mort de soeur Emmanuelle", 
+            "issues": [
+                8
+            ]
+        }
+    }
+]

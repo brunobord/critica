@@ -1,0 +1,53 @@
+[
+    {
+        "pk": 1, 
+        "model": "videos.video", 
+        "fields": {
+            "widget": "<object width=\"300\" height=\"241\"><param name=\"movie\" value=\"http://www.youtube.com/v/0tNdNxvmH-4&hl=fr&fs=1&rel=0\"></param><param name=\"allowFullScreen\" value=\"true\"></param><embed src=\"http://www.youtube.com/v/0tNdNxvmH-4&hl=fr&fs=1&rel=0\" type=\"application/x-shockwave-flash\" allowfullscreen=\"true\" width=\"300\" height=\"241\"></embed></object>", 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "name": "Sarkozy au salon de l'agriculture : \"Casse toi pauvre con !\"", 
+            "modification_date": "2008-10-09 22:29:45", 
+            "tags": "video, reportage, sarkozy", 
+            "creation_date": "2008-10-09 22:29:45", 
+            "submitter": 1, 
+            "issues": [
+                1
+            ]
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "videos.video", 
+        "fields": {
+            "widget": "<object width=\"300\" height=\"241\"><param name=\"movie\" value=\"http://www.youtube.com/v/__DYhgzePic&hl=fr&fs=1&rel=0&color1=0x5d1719&color2=0xcd311b\"></param><param name=\"allowFullScreen\" value=\"true\"></param><embed src=\"http://www.youtube.com/v/__DYhgzePic&hl=fr&fs=1&rel=0&color1=0x5d1719&color2=0xcd311b\" type=\"application/x-shockwave-flash\" allowfullscreen=\"true\" width=\"300\" height=\"241\"></embed></object>", 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "name": "Sylvain Augier \"l'instant o\u00f9 tout a bascul\u00e9\"", 
+            "modification_date": "2008-10-14 17:10:44", 
+            "tags": "augier d\u00e9pression drogue morphine livre", 
+            "creation_date": "2008-10-10 18:17:24", 
+            "submitter": 1, 
+            "issues": [
+                4
+            ]
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "videos.video", 
+        "fields": {
+            "widget": "<object width=\"300\" height=\"241\"><param name=\"movie\" value=\"http://www.youtube.com/v/M-_s3TWm9wY&hl=fr&fs=1&rel=0&color1=0x5d1719&color2=0xcd311b\"></param><param name=\"allowFullScreen\" value=\"true\"></param><embed src=\"http://www.youtube.com/v/M-_s3TWm9wY&hl=fr&fs=1&rel=0&color1=0x5d1719&color2=0xcd311b\" type=\"application/x-shockwave-flash\" allowfullscreen=\"true\" width=\"300\" height=\"241\"></embed></object>", 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "name": "Christian Louis \"Usain Ona\"", 
+            "modification_date": "2008-10-16 15:34:49", 
+            "tags": "loup parfum roman basque juif odeur labastide", 
+            "creation_date": "2008-10-13 02:32:42", 
+            "submitter": 11, 
+            "issues": [
+                5
+            ]
+        }
+    }
+]

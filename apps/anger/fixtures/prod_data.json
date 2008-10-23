@@ -1,0 +1,29 @@
+[
+    {
+        "pk": 1, 
+        "model": "anger.angerarticle", 
+        "fields": {
+            "category": 13, 
+            "view_count": null, 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "author": 11, 
+            "modification_date": "2008-10-22 15:24:22", 
+            "title": "DSK c\u2019est exquis", 
+            "tags": "dsk fmi sexe", 
+            "illustration": null, 
+            "author_nickname": null, 
+            "content": "<p><!--[if gte mso 9]><xml> Normal   0   21                         MicrosoftInternetExplorer4 </xml><![endif]--><!--  --><!--[if gte mso 10]> <mce:style><!   /* Style Definitions */  table.MsoNormalTable \t{mso-style-name:\"Tableau Normal\"; \tmso-tstyle-rowband-size:0; \tmso-tstyle-colband-size:0; \tmso-style-noshow:yes; \tmso-style-parent:\"\"; \tmso-padding-alt:0cm 5.4pt 0cm 5.4pt; \tmso-para-margin:0cm; \tmso-para-margin-bottom:.0001pt; \tmso-pagination:widow-orphan; \tfont-size:10.0pt; \tfont-family:\"Times New Roman\";} --> <!--[endif]--></p>\r\n<p>La dame s'est certainement exclam&eacute;&nbsp;: \"DSK c'est exquis&nbsp;!\", avant de faire une turlutte &agrave; son patron qui l'a proprement pay&eacute;e en frais de miction. Ceci &eacute;tant, cela fait un peu d&eacute;sordre que le pr&eacute;sident du FMI s'envoie en l'air juste au moment o&ugrave; les bourses s'&eacute;croulent. A moins qu'il n'ait pas bien compris o&ugrave; il a &eacute;t&eacute; nomm&eacute;. Il croit peut-&ecirc;tre qu'il est employ&eacute; &agrave; la banque du sperme et qu'il est donneur universel. Il ne lui reste qu'&agrave; remanier son patronyme et &agrave; changer Dominique Strauss-Canne en Dominique Strauss-Pine. Il a quand m&ecirc;me d&ucirc; &ecirc;tre consol&eacute; par la grande solidarit&eacute; du monde politique. Personne, ni &agrave; droite ni &agrave; gauche, n'a profit&eacute; de la situation. Aucun de ses amis de droite ni aucun de ses ennemis socialistes (et il y en a&nbsp;!) ne s'est risqu&eacute; &agrave; le critiquer. On dirait qu'ils ont tous peur de se faire, eux aussi, prendre la main dans le sac un de ces jours. C'est du joli. La plus d&eacute;&ccedil;ue dans l'affaire a &eacute;t&eacute; s&oelig;ur Emmanuelle qui n'a pas support&eacute; la nouvelle et en est morte. Elle a d&ucirc; &eacute;couter une derni&egrave;re fois le disque de sa consoeur qui chantait, en hommage &agrave; DSK, Dominique nique nique et elle est all&eacute;e porter une boite de capotes &agrave; Saint Pierre.</p>\r\n<p>&nbsp;</p>", 
+            "summary": "Sacr&eacute; Dominique Strauss-Kahn, il n'a pas pu r&eacute;sister longtemps &agrave; la tentation. Il a sans doute cru que FMI signifiait \"fourrez-moi int&eacute;gralement\", et hop il a montr&eacute; &agrave; la vacataire au nom impronon&ccedil;able la diff&eacute;rence qu'il y avait entre un membre titulaire et un membre honoraire...", 
+            "opinion": null, 
+            "use_default_illustration": 0, 
+            "publication_date": null, 
+            "creation_date": "2008-10-22 15:24:22", 
+            "slug": "dsk-cest-exquis", 
+            "issues": [
+                2
+            ]
+        }
+    }
+]
