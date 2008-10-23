@@ -20,13 +20,13 @@ from critica.apps.custom_admin.sites import custom_site
 # Positions
 # ------------------------------------------------------------------------------
 class CategoryPositionAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'slug')
+    list_display = ('name', 'slug')
     
 admin.site.register(CategoryPosition, CategoryPositionAdmin)
 custom_site.register(CategoryPosition, CategoryPositionAdmin)
 
 class NotePositionAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'slug')
+    list_display = ('name', 'slug')
     
 admin.site.register(NotePosition, NotePositionAdmin)
 custom_site.register(NotePosition, NotePositionAdmin)
