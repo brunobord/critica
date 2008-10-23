@@ -58,6 +58,8 @@ def _get_current_issue(issue_number=None):
     else:
         try:
             issue = Issue.objects.filter(is_published=True).order_by('-number')[0]
+        except IndexError:
+            raise Http404
         except ObjectDoesNotExist:
             raise Http404
     return issue
@@ -89,8 +91,11 @@ def home(request, issue=None, is_preview=False, is_archive=False):
     context = {}
     
     # Issue
-    context['issue'] = issue
-    
+    try:
+        context['issue'] = issue
+    except ObjectDoesNotExist:
+        raise Htt404
+        
     # Is a preview
     if is_preview:
         context['is_preview'] = True
