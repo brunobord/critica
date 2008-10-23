@@ -84,6 +84,30 @@
         }
     }, 
     {
+        "pk": 8, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Carousel 320", 
+            "modification_date": "2008-10-23 09:38:53", 
+            "height": 100, 
+            "width": 320, 
+            "creation_date": "2008-10-23 09:38:53", 
+            "slug": "carousel-320"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Carousel 450", 
+            "modification_date": "2008-10-23 09:39:01", 
+            "height": 130, 
+            "width": 450, 
+            "creation_date": "2008-10-23 09:39:01", 
+            "slug": "carousel-450"
+        }
+    }, 
+    {
         "pk": 1, 
         "model": "ads.adtype", 
         "fields": {
@@ -433,6 +457,28 @@
             "name": "6 (bis) - Skyscraper 160 (colonne droite)", 
             "modification_date": "2008-10-17 10:25:47", 
             "slug": "6-bis-skyscraper-160-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "7.0", 
+            "creation_date": "2008-10-23 09:39:31", 
+            "name": "7 - Carousel 320", 
+            "modification_date": "2008-10-23 09:39:31", 
+            "slug": "7-carousel-320"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "8.0", 
+            "creation_date": "2008-10-23 09:39:38", 
+            "name": "8 - Carousel 450", 
+            "modification_date": "2008-10-23 09:39:38", 
+            "slug": "8-carousel-450"
         }
     }, 
     {
@@ -1358,7 +1404,7 @@
             "location": 10, 
             "page": 17
         }
-    },
+    }, 
     {
         "pk": 1, 
         "model": "ads.addefaultbanner", 
@@ -1369,8 +1415,6 @@
             "creation_date": "2008-10-17 13:17:49", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
             "positions": [
                 1, 
                 9, 
@@ -1386,7 +1430,9 @@
                 56, 
                 62, 
                 73
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -1399,8 +1445,6 @@
             "creation_date": "2008-10-17 13:23:43", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
             "positions": [
                 3, 
                 4, 
@@ -1430,7 +1474,9 @@
                 67, 
                 70, 
                 74
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -1443,8 +1489,6 @@
             "creation_date": "2008-10-17 13:26:08", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
             "positions": [
                 12, 
                 17, 
@@ -1455,7 +1499,9 @@
                 54, 
                 55, 
                 58
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -1468,8 +1514,6 @@
             "creation_date": "2008-10-17 13:27:56", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
             "positions": [
                 6, 
                 7, 
@@ -1483,7 +1527,9 @@
                 72, 
                 75, 
                 76
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -1496,8 +1542,6 @@
             "creation_date": "2008-10-17 13:29:45", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
             "positions": [
                 8, 
                 13, 
@@ -1512,264 +1556,153 @@
                 61, 
                 63, 
                 77
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
         "pk": 1, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "Super Banni\u00e8re 728x90.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/728x90.jpg", 
-            "positions": [
-                1, 
-                9, 
-                14, 
-                19, 
-                24, 
-                28, 
-                33, 
-                37, 
-                42, 
-                46, 
-                51, 
-                56, 
-                62, 
-                73
-            ], 
-            "creation_date": "2008-10-17 10:30:58", 
-            "banner_type": "image", 
-            "ending_date": "2008-11-12", 
-            "link": "http://www.google.com/", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:30:58"
+            "modification_date": "2008-10-23 09:40:07", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:07", 
+            "location": 13, 
+            "page": 2
         }
     }, 
     {
         "pk": 2, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "Super Banni\u00e8re 468x60.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/468x60.jpg", 
-            "positions": [
-                3, 
-                4, 
-                5, 
-                10, 
-                11, 
-                15, 
-                16, 
-                20, 
-                21, 
-                25, 
-                26, 
-                29, 
-                30, 
-                34, 
-                35, 
-                38, 
-                39, 
-                43, 
-                44, 
-                47, 
-                48, 
-                52, 
-                53, 
-                57, 
-                64, 
-                67, 
-                70, 
-                74
-            ], 
-            "creation_date": "2008-10-17 10:34:14", 
-            "banner_type": "image", 
-            "ending_date": "2008-11-28", 
-            "link": "", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-30", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:34:14"
-        }
-    }, 
-    {
-        "pk": 1, 
-        "model": "ads.adbanner", 
-        "fields": {
-            "description": "Super Banni\u00e8re 728x90.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/728x90.jpg", 
-            "positions": [
-                1, 
-                9, 
-                14, 
-                19, 
-                24, 
-                28, 
-                33, 
-                37, 
-                42, 
-                46, 
-                51, 
-                56, 
-                62, 
-                73
-            ], 
-            "creation_date": "2008-10-17 10:30:58", 
-            "banner_type": "image", 
-            "ending_date": "2008-11-12", 
-            "link": "http://www.google.com/", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:30:58"
-        }
-    }, 
-    {
-        "pk": 2, 
-        "model": "ads.adbanner", 
-        "fields": {
-            "description": "Super Banni\u00e8re 468x60.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/468x60.jpg", 
-            "positions": [
-                3, 
-                4, 
-                5, 
-                10, 
-                11, 
-                15, 
-                16, 
-                20, 
-                21, 
-                25, 
-                26, 
-                29, 
-                30, 
-                34, 
-                35, 
-                38, 
-                39, 
-                43, 
-                44, 
-                47, 
-                48, 
-                52, 
-                53, 
-                57, 
-                64, 
-                67, 
-                70, 
-                74
-            ], 
-            "creation_date": "2008-10-17 10:34:14", 
-            "banner_type": "image", 
-            "ending_date": "2008-11-28", 
-            "link": "", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-30", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:34:14"
+            "modification_date": "2008-10-23 09:40:14", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:14", 
+            "location": 13, 
+            "page": 3
         }
     }, 
     {
         "pk": 3, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/300x90.jpg", 
-            "positions": [
-                6, 
-                7, 
-                59, 
-                60, 
-                65, 
-                66, 
-                68, 
-                69, 
-                71, 
-                72, 
-                75, 
-                76
-            ], 
-            "creation_date": "2008-10-17 10:58:19", 
-            "banner_type": "image", 
-            "ending_date": "2008-12-19", 
-            "link": "", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-10-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:58:19"
+            "modification_date": "2008-10-23 09:40:23", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:23", 
+            "location": 13, 
+            "page": 4
         }
     }, 
     {
         "pk": 4, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "", 
-            "campaign": 2, 
-            "banner": "upload/ads/2008/10/17/250x250.jpg", 
-            "positions": [
-                12, 
-                17, 
-                22, 
-                31, 
-                40, 
-                49, 
-                54, 
-                58
-            ], 
-            "creation_date": "2008-10-17 11:00:27", 
-            "banner_type": "image", 
-            "ending_date": "2009-01-15", 
-            "link": "http://www.google.com/", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 11:00:27"
+            "modification_date": "2008-10-23 09:40:29", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:29", 
+            "location": 13, 
+            "page": 5
         }
     }, 
     {
         "pk": 5, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "", 
-            "campaign": 2, 
-            "banner": "upload/ads/2008/10/17/120x600.jpg", 
-            "positions": [
-                8, 
-                13, 
-                18, 
-                23, 
-                27, 
-                32, 
-                36, 
-                41, 
-                45, 
-                50, 
-                61, 
-                63, 
-                77
-            ], 
-            "creation_date": "2008-10-17 11:04:43", 
-            "banner_type": "image", 
-            "ending_date": "2008-12-19", 
-            "link": "", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 11:04:43"
+            "modification_date": "2008-10-23 09:40:37", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:37", 
+            "location": 13, 
+            "page": 6
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:40:44", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:44", 
+            "location": 13, 
+            "page": 7
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:40:52", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:52", 
+            "location": 13, 
+            "page": 8
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:40:59", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:59", 
+            "location": 13, 
+            "page": 9
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:41:17", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:41:17", 
+            "location": 13, 
+            "page": 10
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:43:24", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:43:24", 
+            "location": 13, 
+            "page": 11
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:43:30", 
+            "format": 8, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:43:30", 
+            "location": 12, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:43:43", 
+            "format": 8, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:43:43", 
+            "location": 12, 
+            "page": 13
         }
     }
 ]
