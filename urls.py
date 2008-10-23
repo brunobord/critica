@@ -41,6 +41,13 @@ urlpatterns += patterns('',
     url(r'^search/results/$', 'critica.apps.front.views.search', name='search'),
 )
 
+# Pages
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^publicites/$', 'critica.apps.front.views.page_ads', name='page_ads'),
+    url(r'^mentions-legales/$', 'critica.apps.front.views.page_legal', name='page_legal'),
+)
+
 # Tags
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
@@ -80,12 +87,6 @@ urlpatterns += patterns('',
     url(r'^regions/$', 'critica.apps.front.views.regions', name='category_regions'),
     url(r'^(?P<category_slug>[-\w]+)/$', 'critica.apps.front.views.category', name='category'),
     url(r'^$', 'critica.apps.front.views.home', name='home'),
-)
-
-# Pages
-# ------------------------------------------------------------------------------
-urlpatterns += patterns('',
-    url(r'^pages/(?P<page_slug>[-\w]+)/$', 'critica.apps.front.views.page', name='page'),
 )
 
 # Media

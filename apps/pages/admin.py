@@ -15,28 +15,11 @@ class PageAdmin(admin.ModelAdmin):
     Administration interface options of ``Page`` model. 
     
     """
-    list_display = ('title', 'ald_slug', 'creation_date', 'modification_date', 'is_published', 'ald_author')
+    list_display = ('title', 'creation_date', 'modification_date', 'is_published', 'ald_author')
     search_fields = ('title', 'content')
     list_filter = ('is_published', 'author')
     ordering = ['title']
     exclude = ['author']
-    
-    class Media:
-        js = (
-            settings.MEDIA_URL + 'common/js/tiny_mce/tiny_mce.js',
-            settings.MEDIA_URL + 'common/js/textarea.js',
-        )
-        
-    def ald_slug(self, obj):
-        """ 
-        Formatted slug for admin list_display option. 
-        
-        """
-        from django.contrib.sites.models import Site
-        site = Site.objects.get_current()
-        return 'http://www.%s/pages/<strong>%s</strong>/' % (site.domain, obj.slug)
-    ald_slug.allow_tags = True
-    ald_slug.short_description = _('URL')
     
     def ald_author(self, obj):
         """

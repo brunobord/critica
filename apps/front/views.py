@@ -1099,17 +1099,28 @@ def rss_index(request):
 
 # Pages
 # ------------------------------------------------------------------------------
-def page(request, page_slug):
+def page_legal(request):
     """
-    Displays a given page by its slug.
+    Displays the legal page.
     
     """
     issue = _get_current_issue()
     context = {}
     context['issue'] = issue
     context['is_current'] = True
-    context['page'] = get_object_or_404(Page.objects.all(), slug=page_slug, is_published=True)
+    context['page'] = get_object_or_404(Page.objects.all(), slug='mentions-legales', is_published=True)
     return render_to_response('front/page.html', context, context_instance=RequestContext(request))
 
+def page_ads(request):
+    """
+    Displays the ad page.
+    
+    """
+    issue = _get_current_issue()
+    context = {}
+    context['issue'] = issue
+    context['is_current'] = True
+    context['page'] = get_object_or_404(Page.objects.all(), slug='publicites', is_published=True)
+    return render_to_response('front/page.html', context, context_instance=RequestContext(request))
 
 
