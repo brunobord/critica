@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/layout.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/kwicks.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/grid.css" type="text/css" media="screen" />
+	   <link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/print.css" type="text/css" media="print" />
         <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/css/fancy.css" media="screen" title="default"/>
         <!-- JAVASCRIPT -->
         <script type="text/javascript">
@@ -101,7 +102,7 @@
                     <!-- PAGE OPTIONS -->
                     <div id="pageOptions">
                         <ul>
-                            <li class="print"><a href="#" title="Imprimer ette page">Imprimer</a></li>
+                            <li class="print"><a href="#" title="Imprimer ette page" onClick="window.print()">Imprimer</a></li>
                             <li class="send"><a href="#" title="Envoyer à un ami">Envoyer à un ami</a></li>
                         </ul>
                     </div>

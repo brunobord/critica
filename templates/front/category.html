@@ -1,14 +1,20 @@
 {% extends "layout/base.html" %}
+
 {% load ads_extra %}
+
 {% block title %}{{ category.name }}{% endblock %}
+
 {% block ad_1_0 %}
     <div class="addSection add728">
         {% display_ad '728x90' category.slug '1.0' %}
         <p><a href="{% url page_ads %}">Publicité</a></p>
     </div>
 {% endblock %}
+
 {% block body_id %}{{ category.slug }}{% endblock %}
+
 {% block body_class %}rubrique{% endblock %}
+
 {% block content %}
 <!-- LEFT WRAP -->
 <div id="mainContent" class="leftWrap">
@@ -30,7 +36,7 @@
 
     <!-- ARTICLE LIST -->
     <div class="articleList autoClear">
-
+	<div class="wrap">
         {% if note_2 %}
             {% with note_2 as note %}
                 {% include "front/includes/category_note_pushpin.html" %}
@@ -46,6 +52,8 @@
         {% else %}
             {% include "front/includes/category_note_pushpin_empty.html" %}
         {% endif %}
+	   </div>
+	   <div class="wrap">
         
         {% if note_4 %}
             {% with note_4 as note %}
@@ -62,6 +70,7 @@
         {% else %}
             {% include "front/includes/category_note_pushpin_empty.html" %}
         {% endif %}
+	   </div>
     
     </div>
     <!-- // ARTICLE LIST -->
@@ -96,6 +105,7 @@
         <div class="leftWrap">
             
             <div class="articleList autoClear">
+
                 {% if note_6 %}
                     {% with note_6 as note %}
                         {% include "front/includes/category_note_accordion.html" %}
@@ -111,7 +121,6 @@
     		    {% else %}
     		        {% include "front/includes/category_note_accordion_empty.html" %}
     		    {% endif %}
-    		    
                 {% if note_8 %}
                     {% with note_8 as note %}
                         {% include "front/includes/category_note_accordion.html" %}

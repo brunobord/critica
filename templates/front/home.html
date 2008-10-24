@@ -1,14 +1,20 @@
 {% extends "layout/base.html" %}
+
 {% load image_thumbnail ads_extra %}
+
 {% block title %}Accueil{% endblock %}
+
 {% block ad_1_0 %}
 	<div class="addSection add728">
         {% display_ad '728x90' 'portail' '1.0' %}
         <p><a href="{% url page_ads %}">Publicité</a></p>
     </div>
 {% endblock %}
+
 {% block body_id %}home{% endblock %}
+
 {% block content %}
+
 <!-- LAUNCH-UNIT -->
 <div id="launch-unit">
     {% include "front/includes/launch_unit.html" %}
@@ -43,7 +49,7 @@
     
     <!-- ARTICLE LIST -->
     <div class="articleList autoClear">
-		
+		<div class="wrap">
 		{% if article_4 %}
             {% with article_4 as article %}
                 {% include "front/includes/home_article.html" %}
@@ -67,7 +73,8 @@
 		{% else %}
 		    {% include "front/includes/home_article_empty.html" %}
         {% endif %}
-
+	   </div>
+		<div class="wrap">
 		{% if article_7 %}
             {% with article_7 as article %}
                 {% include "front/includes/home_article.html" %}
@@ -91,6 +98,7 @@
 		{% else %}
 	        {% include "front/includes/home_article_empty.html" %}
         {% endif %}
+	   </div>
 		
     </div>
     <!-- // ARTICLE LIST -->

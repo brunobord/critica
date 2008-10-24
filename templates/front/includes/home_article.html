@@ -1,19 +1,27 @@
 {% load image_thumbnail %}
 
-
-
 <div class="articleSection">
+
     {% if is_preview %}
-        <h2><span><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.category.name }}</a></span></h2>
+	   <h2><span><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.category.name }}</a></span></h2>
     {% endif %}
     {% if is_archive %}
-        <h2><span><a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.category.name }}</a></span></h2>
+	   <h2><span><a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.category.name }}</a></span></h2>
     {% endif %}
     {% if is_current %}
-        <h2><span><a href="{{ article.get_absolute_url }}">{{ article.category.name }}</a></span></h2>
+	   <h2><span><a href="{{ article.get_absolute_url }}">{{ article.category.name }}</a></span></h2>
     {% endif %}
 
 	<div class="lead autoClear">
+        {% if is_preview %}
+            <h3><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if is_archive %}
+            <h3><a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if is_current %}
+            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+        {% endif %}
 		<div class="illustration">
 		    {% if article.use_default_illustration %}
 		        <a href="{{ article.category.image.url }}" title="{{ article.category.image_legend }}">
@@ -25,15 +33,7 @@
 		        </a>
 		    {% endif %}
 		 </div>
-        {% if is_preview %}
-            <h3><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a></h3>
-        {% endif %}
-        {% if is_archive %}
-            <h3><a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.title }}</a></h3>
-        {% endif %}
-        {% if is_current %}
-            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
-        {% endif %}
+
         <p>{{ article.summary|safe }}</p>
 	</div>
 

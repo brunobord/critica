@@ -3,7 +3,8 @@
     <div  class="note-{{ note.id }}">
         <div class="lead autoClear">
             <h3><a href="#" class="note-show">{{ note.title }}</a></h3>
-            <p class="summary" style="font-weight: bold"></p>
+		  <p class="author">Par <strong>{{ note.author }}</strong></p>
+          <!-- <p class="summary"></p>-->
             <div class="content">{{ note.content|safe }}</div>
         </div>
         <p class="readMore">&nbsp;</p>
@@ -13,8 +14,7 @@
                 $('.note-{{ note.id }} .content').hide();
                 $('.note-{{ note.id }} .summary').html('{{ note.content|striptags|truncatewords:45|safe|escapejs }}');
                 $('.note-{{ note.id }} .note-show').click(function() {
-                    $('.note-{{ note.id }} .lead').css('height', 'auto');
-                    $('.note-{{ note.id }} .summary').slideToggle('fast');
+                   $('.note-{{ note.id }} .summary').slideToggle('fast');
                     $('.note-{{ note.id }} .content').slideToggle('fast');
                     return false;
                 });
