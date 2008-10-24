@@ -48,24 +48,13 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
             print my_choices
             field.choices = my_choices
-        if db_field.name == 'issues': 
-            my_choices = []
-            my_choices.extend(Issue.objects.all().values_list('id','number')[:15])
-            print my_choices
-            field.choices = my_choices
-        if db_field.name == 'illustration':
-            my_choices = []
-            if 'users.is_editor' in current_user.get_all_permissions():
-                my_choices.extend(Illustration.objects.all().values_list('id','image')[:2])
-            else:
-                my_choices.extend(Illustration.objects.filter(submitter=self.request.user).values_list('id','image')[:2])
-            print my_choices
-            field.choices = my_choices
+        
         if db_field.name == 'category':
             my_choices = [('', '---------')]
             my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
+        
         return field
 
     def queryset(self, request):
