@@ -15,7 +15,7 @@ class AngerArticleAdmin(BaseArticleAdmin):
     Administration interface options of ``AngerArticle`` model.
     
     """
-    list_display  = ('title', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish')
+    list_display  = ('title', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish')
     list_filter   = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'is_featured')
     search_fields = ('title', 'summary', 'content')
     ordering      = ['-publication_date']

@@ -4,16 +4,28 @@ Models of ``critica.apps.articles`` application.
 
 """
 import datetime
+from tagging.fields import TagField
+
 from django.db import models
 from django.db.models import permalink
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
-from tagging.fields import TagField
+
 from critica.apps.articles import choices
 from critica.apps.articles.managers import PublishedArticleManager
 
 
+
+def get_illustration_path(instance, filename):
+    """
+    Dynamic image upload path.
+    
+    """
+    return 'upload/%s/%s' % (instance.category.slug, filename)
+
+
+        
 class BaseArticle(models.Model):
     """
     Base article.
@@ -88,11 +100,6 @@ class BaseArticle(models.Model):
             * Choices: critica.apps.article.choices.OPINION_CHOICES
             * The article opinion flag
             * Optional (can be blank)
-
-        illustration
-            * ForeignKey: critica.apps.illustrations.models.Illustration
-            * The article illustration
-            * Optional (can be blank)
     
         is_featured
             * BooleanField
@@ -136,24 +143,26 @@ class BaseArticle(models.Model):
         * is_reserved
 
     """
-    author              = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this article.'))
-    author_nickname     = models.ForeignKey('users.UserNickname', verbose_name=_('author nickname'), null=True, blank=True, help_text=_('If you want to sign this article under a nickname, please select one in the list. If you do not select a nickname, your signature will be your full name.'))
-    title               = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
-    slug                = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
-    category            = models.ForeignKey('categories.Category', verbose_name=_('category'), null=True, blank=True, help_text=_('Please, select a category for this article.'))
-    tags                = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
-    issues              = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues.'))
-    view_count          = models.IntegerField(_('view count'), null=True, blank=True, editable=False)
-    creation_date       = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date   = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
-    publication_date    = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
-    opinion             = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
-    illustration        = models.ForeignKey('illustrations.Illustration', verbose_name=_('illustration'), null=True, blank=True, help_text=_('Please, select an illustration which will be attached to this article.')) 
-    is_featured         = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))
-    is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be publish?'))
-    is_reserved         = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
-    summary             = models.TextField(_('summary'))
-    content             = models.TextField(_('content'))
+    author               = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this article.'))
+    author_nickname      = models.ForeignKey('users.UserNickname', verbose_name=_('author nickname'), null=True, blank=True, help_text=_('If you want to sign this article under a nickname, please select one in the list. If you do not select a nickname, your signature will be your full name.'))
+    title                = models.CharField(_('title'), max_length=255, db_index=True, help_text=_('255 characters max.'))
+    slug                 = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
+    category             = models.ForeignKey('categories.Category', verbose_name=_('category'), null=True, blank=True, help_text=_('Please, select a category for this article.'))
+    tags                 = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
+    issues               = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues.'))
+    view_count           = models.IntegerField(_('view count'), null=True, blank=True, editable=False)
+    creation_date        = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
+    modification_date    = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
+    publication_date     = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
+    opinion              = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
+    illustration         = models.ImageField(upload_to=get_illustration_path, verbose_name=_('illustration'), blank=True, help_text=_('Please, select an illustration which will be attached to this article.')) 
+    illustration_legend  = models.CharField(_('legend'), max_length=255, blank=True)
+    illustration_credits = models.CharField(_('credits'), max_length=255, blank=True, default='Critic@') 
+    is_featured          = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))
+    is_ready_to_publish  = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be publish?'))
+    is_reserved          = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
+    summary              = models.TextField(_('summary'))
+    content              = models.TextField(_('content'))
     
     class Meta:
         """ 
@@ -162,12 +171,14 @@ class BaseArticle(models.Model):
         """
         abstract = True
 
+
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u"%s" % (self.title)
+
 
     @permalink
     def get_absolute_url(self):
@@ -176,7 +187,8 @@ class BaseArticle(models.Model):
         
         """
         return ('category', (), {'category_slug': self.category.slug})
-        
+
+    
     def save(self):
         """ 
         Object pre-saving operations:
@@ -187,6 +199,7 @@ class BaseArticle(models.Model):
         """
         self.slug = slugify(self.title)
         super(BaseArticle, self).save()
+
 
 
 class Article(BaseArticle):

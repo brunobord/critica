@@ -5,6 +5,7 @@ Administration interface options of ``critica.apps.articles`` application.
 """
 from django.conf import settings
 from django.contrib import admin
+from django import forms
 from django.utils.translation import ugettext_lazy as _
 
 from critica.apps.custom_admin.sites import custom_site
@@ -14,6 +15,7 @@ from critica.apps.categories.models import Category
 from critica.apps.illustrations.models import Illustration
 from critica.apps.issues.models import Issue
 from critica.apps.articles import settings as articles_settings
+from critica.apps.articles.widgets import ImageWithThumbWidget
 
 from imagethumbnail.templatetags.image_thumbnail import thumbnail
 
@@ -62,6 +64,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
             my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
+        if db_field.name == 'illustration':
+            return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Illustration'), required=False) 
         return field
 
 
@@ -91,7 +95,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
         fieldsets = [
             (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
-            (_('Illustration'), {'fields': ('illustration',)}),
+            (_('Illustration'), {'fields': ('illustration', 'illustration_legend', 'illustration_credits')}),
             (_('Content'), {'fields': ('summary', 'content')}),
             (_('Publication'), {'fields': publication_fields}),
         ]
@@ -124,19 +128,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 return obj.author.username
     
     ald_author.short_description = 'auteur'
-
-
-    def ald_author_nickname(self, obj):
-        """
-        Formatted author nickname for admin list_display option.
-        
-        """
-        if obj.author_nickname:
-            return obj.author_nickname
-        else:
-            return self.ald_author(obj)
-    
-    ald_author_nickname.short_description = 'pseudo'
 
 
     def ald_issues(self, obj):
@@ -190,8 +181,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
             img_thumb = thumbnail(obj.category.image, '45,0')
             thumb = '<div class="default-illustration"><img src="%s" alt="%s" /></div>' % (img_thumb, obj.category.image_legend)
         else:
-            img_thumb = thumbnail(obj.illustration.image, '45,0')
-            thumb = '<img src="%s" alt="%s" />' % (img_thumb, obj.illustration.legend)
+            img_thumb = thumbnail(obj.illustration, '45,0')
+            thumb = '<img src="%s" alt="%s" />' % (img_thumb, obj.illustration_legend)
         return thumb
     
     ald_illustration.allow_tags = True

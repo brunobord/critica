@@ -26,7 +26,7 @@ class EpicurienArticleAdmin(BaseArticleAdmin):
     Administration interface options of ``EpicurienArticle`` model.
     
     """
-    list_display   = ('title', 'type', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_illustration')
+    list_display   = ('title', 'type', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_illustration')
     list_filter    = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'type')
     search_fields  = ('title', 'summary', 'content')
     ordering       = ('-publication_date', 'category')
@@ -45,7 +45,7 @@ class EpicurienArticleAdmin(BaseArticleAdmin):
         fieldsets = [
             (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'type', 'tags')}),
-            (_('Illustration'), {'fields': ('illustration',)}),
+            (_('Illustration'), {'fields': ('illustration', 'illustration_legend', 'illustration_credits')}),
             (_('Content'), {'fields': ('summary', 'content')}),
             (_('Publication'), {'fields': publication_fields})
         ]
