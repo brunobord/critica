@@ -6,9 +6,12 @@ Administration interface options of ``critica.apps.illustrations`` models.
 from django.contrib import admin
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
+
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.illustrations.models import Illustration, IllustrationOfTheDay
 from critica.apps.issues.models import Issue
+
+from imagethumbnail.templatetags.image_thumbnail import thumbnail
 
 
 class IllustrationAdmin(admin.ModelAdmin):
@@ -19,11 +22,10 @@ class IllustrationAdmin(admin.ModelAdmin):
     fieldsets = [
         (None, {'fields': ('category', 'image', 'credits', 'legend')}),
     ]
-    
-    list_display = ('ald_image', 'ald_category', 'credits', 'legend', 'creation_date', 'modification_date', 'submitter')
-    list_filter = ('category',)
-    search_fields = ('image', 'credits', 'legend')
-    ordering = ['-creation_date']
+    list_display   = ('ald_image', 'ald_category', 'credits', 'legend', 'creation_date', 'modification_date', 'submitter')
+    list_filter    = ('category',)
+    search_fields  = ('image', 'credits', 'legend')
+    ordering       = ['-creation_date']
     date_hierarchy = 'creation_date'
 
     def ald_image(self, obj):
@@ -31,9 +33,12 @@ class IllustrationAdmin(admin.ModelAdmin):
         Image thumbnail for admin list_display option. 
         
         """
-        return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, obj.image, obj.legend)
+        img_thumb = thumbnail(obj.image, '45,0')
+        return '<img src="%s" alt="%s" />' % (img_thumb, obj.legend)
+    
     ald_image.allow_tags = True
     ald_image.short_description = _('Illustration')
+
 
     def ald_category(self, obj):
         """

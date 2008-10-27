@@ -1,4 +1,4 @@
-{% load image_thumbnail %}
+{% load image_thumbnail articles_extra %}
 <h3>{{ article.title }}</h3>
 <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
 <div class="illustration">
