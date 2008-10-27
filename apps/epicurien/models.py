@@ -7,39 +7,11 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from critica.apps.articles.models import BaseArticle
-from critica.apps.epicurien.managers import PublishedArticleManager
 
 
 class EpicurienArticleType(models.Model):
     """
-    Epicurien article category: article type.
-    
-    Database table name: ``epicurien_articletype``.
-    
-    Fields::
-    
-        name
-            * CharField
-            * 255 characters max.
-            * Required
-        
-        slug
-            * SlugField
-            * 255 characters max.
-            * The type slug (can be used for CSS or later for URLs) 
-            * Must be unique
-            * No editable
-            * Required
-        
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-            
-    Indexes::
-    
-        * slug
+    Epicurien article type.
     
     """
     name = models.CharField(_('name'), max_length=255)
@@ -47,14 +19,16 @@ class EpicurienArticleType(models.Model):
     
     objects = models.Manager()
     
+    
     class Meta:
         """ 
         Model metadata. 
         
         """
-        db_table = 'epicurien_articletype'
-        verbose_name = _('article epicurien type')
+        db_table            = 'epicurien_articletype'
+        verbose_name        = _('article epicurien type')
         verbose_name_plural = _('article epicurien types')
+
 
     def __unicode__(self):
         """ 
@@ -62,13 +36,11 @@ class EpicurienArticleType(models.Model):
         
         """
         return u'%s' % self.name
+
         
     def save(self):
         """ 
-        Object pre-saving operations:
-        
-        * Generates slug from title
-        * Save note type
+        Object pre-saving / post-saving operations.
         
         """
         self.slug = slugify(self.name)
@@ -78,56 +50,25 @@ class EpicurienArticleType(models.Model):
 
 class EpicurienArticle(BaseArticle):
     """
-    Epicurien article category: article.
-    
-    Database table name: ``epicurien_article``.
-    
-    Fields::
-    
-        See BaseArticle. And fields below.
-        
-        type
-            * ForeignKey: critica.apps.epicurien.models.ArticleType
-            * The article type
-            * Required
-            
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-        
-        published
-            Only returns ready to publish articles.
-            Manager: critica.apps.epicurien.managers.PublishedArticleManager()
-            
-    Indexes::
-    
-        See BaseArticle. And below.
-        
-        * type
+    Epicurien article.
     
     """
     type = models.ForeignKey('epicurien.EpicurienArticleType', verbose_name=_('type'))
-    
-    objects = models.Manager()
-    published = PublishedArticleManager()
+
 
     class Meta:
         """ 
         Model metadata. 
         
         """
-        db_table = 'epicurien_article'
-        verbose_name = _('article epicurien')
+        db_table            = 'epicurien_article'
+        verbose_name        = _('article epicurien')
         verbose_name_plural = _('articles epicurien')
+
 
     def save(self):
         """ 
-        Object pre-saving operations:
-        
-        * Auto-save category
-        * Save article
+        Object pre-saving / post-saving operations.
         
         """
         from critica.apps.categories.models import Category

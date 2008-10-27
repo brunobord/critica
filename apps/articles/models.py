@@ -13,7 +13,8 @@ from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 
 from critica.apps.articles import choices
-from critica.apps.articles.managers import PublishedArticleManager
+from critica.apps.articles.managers import ArticlePublishedManager
+from critica.apps.articles.managers import ArticlePreviewManager
 
 
 def get_image_path(instance, filename):
@@ -186,6 +187,10 @@ class BaseArticle(models.Model):
     summary              = models.TextField(_('summary'))
     content              = models.TextField(_('content'))
     
+    objects   = models.Manager()
+    published = ArticlePublishedManager()
+    preview   = ArticlePreviewManager()
+    
     class Meta:
         """ 
         Model metadata. 
@@ -213,10 +218,7 @@ class BaseArticle(models.Model):
     
     def save(self):
         """ 
-        Object pre-saving operations:
-        
-        * Generates slug from title
-        * Save article
+        Object pre-saving / post-saving operations.
         
         """
         self.slug = slugify(self.title)
@@ -227,31 +229,8 @@ class BaseArticle(models.Model):
 class Article(BaseArticle):
     """
     Article.
-    
-    Database table name: ``articles_article``.
-    
-    Fields::
-    
-        See BaseArticle.
-            
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-        
-        published
-            Only returns ready to publish articles.
-            Manager: critica.apps.articles.managers.PublishedArticleManager()
-            
-    Indexes::
-    
-        See BaseArticle.
             
     """
-    objects   = models.Manager()
-    published = PublishedArticleManager()
-
     class Meta:
         """ 
         Model metadata. 

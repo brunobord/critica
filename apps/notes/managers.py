@@ -3,23 +3,16 @@ Managers of ``critica.apps.notes`` application.
 
 """
 from django.db import models
-from critica.apps.articles import choices as articles_choices
 
 
-class PublishedNoteManager(models.Manager):
-    """
-    Published notes.
-    
-    """
+class NotePublishedManager(models.Manager):
     def get_query_set(self):
-        """
-        By default, returns only ready to publish and not reserved notes
-        from complete issues.
-        
-        """
-        return super(PublishedNoteManager, self).get_query_set().filter(
+        return super(NotePublishedManager, self).get_query_set().filter(
             issues__is_published=True, 
             is_ready_to_publish=True,
-            is_reserved=False,
-        )
+            is_reserved=False)
 
+
+class NotePreviewManager(models.Manager):
+    def get_query_set(self):
+        return super(NotePreviewManager, self).get_query_set().filter(is_reserved=False)

@@ -11,7 +11,8 @@ from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from django.db.models import permalink
 
-from critica.apps.notes.managers import PublishedNoteManager
+from critica.apps.notes.managers import NotePublishedManager
+from critica.apps.notes.managers import NotePreviewManager
 from critica.apps.notes import choices
 
 
@@ -20,27 +21,6 @@ from critica.apps.notes import choices
 class BaseNoteType(models.Model):
     """
     Base note type.
-    
-    This is an abstract class.
-    
-    Fields::
-    
-        name
-            * CharField
-            * 255 characters max.
-            * Required
-        
-        slug
-            * SlugField
-            * 255 characters max.
-            * The region type slug (can be used for CSS or later for URLs) 
-            * Must be unique
-            * No editable
-            * Required
-            
-    Indexes::
-    
-        * slug
     
     """
     name = models.CharField(_('name'), max_length=255)
@@ -53,7 +33,8 @@ class BaseNoteType(models.Model):
         
         """
         abstract = True
-        
+
+
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
@@ -61,12 +42,10 @@ class BaseNoteType(models.Model):
         """
         return u'%s' % self.name
 
+
     def save(self):
         """ 
-        Object pre-saving operations:
-        
-        * Generates slug from title
-        * Save note type
+        Object pre-saving / post-saving operations.
         
         """
         self.slug = slugify(self.name)
@@ -77,22 +56,6 @@ class NoteType(BaseNoteType):
     """
     Generic note type.
     
-    Database table name: ``notes_notetype``.
-    
-    Fields::
-    
-        See BaseNoteType.
-            
-    Indexes::
-    
-        See BaseNoteType.
-        
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-    
     """
     objects = models.Manager()
     
@@ -101,8 +64,8 @@ class NoteType(BaseNoteType):
         Model metadata. 
         
         """
-        db_table = 'notes_notetype'
-        verbose_name = _('note type')
+        db_table            = 'notes_notetype'
+        verbose_name        = _('note type')
         verbose_name_plural = _('note types')
 
 
@@ -110,114 +73,7 @@ class NoteType(BaseNoteType):
 # ------------------------------------------------------------------------------
 class BaseNote(models.Model):
     """
-    Base note.
-    
-    This is an abstract class.
-    
-    Fields::
-    
-        author
-            * ForeignKey: django.contrib.auth.models.User
-            * The note author
-            * Required
-            
-        author_nickname
-            * ForeignKey: critica.apps.users.models.UserNickname
-            * The author nickname
-            * Optional (can be blank)
-            
-        title
-            * CharField
-            * 255 characters max.
-            * The note title
-            * Required
-            
-        slug
-            * SlugField
-            * 255 characters max.
-            * The note slug
-            * No editable
-            * Optional (can be blank)
-            
-        category
-            * ForeignKey: critica.apps.categories.models.Category
-            * The note category
-            * Required
-            
-        tags
-            * TagField (from tagging)
-            * The note tags
-            * Optional
-            
-        issues
-            * ManyToManyField: critica.apps.issues.models.Issue
-            * The note issues
-            * Optional (can be blank)
-            
-        view_count
-            * PositiveIntegerField
-            * The note view count
-            * No editable
-            * Optional (can be blank)
-            
-        creation_date
-            * DateTimeField
-            * auto_now_add
-            * The note creation date
-            * Required
-            
-        modification_date
-            * DateTimeField
-            * auto_now
-            * The note modification date
-            * Required
-            
-        publication_date
-            * DateField
-            * The note publication date
-            * Optional (can be blank)
-        
-        opinion
-            * IntegerField
-            * Choices: critica.apps.article.choices.OPINION_CHOICES
-            * The note opinion flag
-            * Optional (can be blank)
-
-        is_featured
-            * BooleanField
-            * Default: False
-            * Is note featured?
-            * Required
-            
-        is_ready_to_publish
-            * BooleanField
-            * Default: False
-            * Is note ready to publish?
-            * Required
-            
-        is_reserved
-            * BooleanField
-            * Default: False
-            * Is note reserved?
-            * Required
-            
-        content
-            * TextField
-            * The note content
-            * Required
-            
-    Indexes::
-    
-        * author
-        * author_nickname
-        * slug
-        * category
-        * issues
-        * publication_date
-        * opinion
-        * is_featured
-        * is_ready_to_publish
-        * is_reserved
+    Base note
 
     """
     author              = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this note.'))
@@ -236,7 +92,12 @@ class BaseNote(models.Model):
     is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be publish?'))
     is_reserved         = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
     content             = models.TextField(_('content'))
-    
+
+    objects   = models.Manager()
+    published = NotePublishedManager()
+    preview   = NotePreviewManager()
+
+
     class Meta:
         """ 
         Model metadata. 
@@ -259,54 +120,27 @@ class BaseNote(models.Model):
         
     def save(self):
         """ 
-        Object pre-saving operations:
-        
-        * Generates slug from title
-        * Save note
+        Object pre-saving / post-saving operations.
         
         """
         self.slug = slugify(self.title)
         super(BaseNote, self).save()
 
 
+
 class Note(BaseNote):
     """
     Generic note.
     
-    Database table name: ``notes_note``.
-    
-    Fields::
-    
-        See BaseNote. And below.
-    
-        type
-            * ForeignKey: critica.apps.notes.models.NoteType
-            * The note type
-            * Required
-            
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-            
-        published
-            Only returns ready to publish notes.
-            Manager: critica.apps.notes.managers.PublishedNoteManager()
-            
-    Indexes::
-    
-        See BaseNote. And below.
-        
-        * type
-    
     """
     type = models.ForeignKey('notes.NoteType', verbose_name=_('type'), help_text=_('Please, select a note type.'))
     
-    objects   = models.Manager()
-    published = PublishedNoteManager()
-
+    
     class Meta:
+        """ 
+        Model metadata. 
+        
+        """
         db_table            = 'notes_note'
         verbose_name        = _('note')
         verbose_name_plural = _('notes')
