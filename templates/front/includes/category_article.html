@@ -4,15 +4,7 @@
 	<h2><span>&Agrave; la une</span></h2>
     <h3>{{ article.title }}</h3>
     <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
-    <div class="illustration">
-        {% if not article.illustration %}
-            <a href="{{ article.category.image.url }}" title="{{ article.category.image_legend }}"><img src="{{ article.category.image|thumbnail:"200,0" }}" alt="{{ article.category.image_legend }}" /></a>
-            <p class="credits">Photo : {{ article.category.image_credits }} {% if article.category.image_legend %}{{ article.category.image_legend }}{% endif %}</p>
-        {% else %}
-            <a href="{{ article.illustration.image.url }}" title="{{ article.illustration.legend }}"><img src="{{ article.illustration.image|thumbnail:"200,0" }}" alt="{{ article.illustration.legend }}" /></a>
-            <p class="credits">Photo : {{ article.illustration.credits }} {% if article.illustration.legend %}{{ article.illustration.legend }}{% endif %}</p>
-        {% endif %}
-    </div>
+    {% include "front/article_illustration_medium.html" %}
     <p class="lead">{{ article.summary|safe }}</p>
     <p class="readMore slick-show"><a href="#">Lire la suite</a></p>
 	<!-- SLICKBOX -->

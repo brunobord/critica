@@ -171,14 +171,6 @@
     <div class="module">
         <table summary="Médias">
         <caption>Médias</caption>
-            {% if perms.users.is_editor or perms.users.is_journalist %}
-            <tr>
-                <th scope="row"><a href="illustrations/illustration/">Visuels</a></th>
-                <td><a href="illustrations/illustration/add/" class="addlink">Ajouter</a></td>
-                <td><a href="illustrations/illustration/" class="changelink">Modifier</a></td>
-            </tr>
-            {% endif %}
-            
             {% if perms.users.is_editor %}
             <tr>
                 <th scope="row"><a href="illustrations/illustrationoftheday/">Illustrations du jour</a></th>

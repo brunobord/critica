@@ -12,7 +12,6 @@ from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.models import Article
 from critica.apps.users.models import UserNickname
 from critica.apps.categories.models import Category
-from critica.apps.illustrations.models import Illustration
 from critica.apps.issues.models import Issue
 from critica.apps.articles import settings as articles_settings
 from critica.apps.articles.widgets import ImageWithThumbWidget
@@ -25,7 +24,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface options of ``BaseArticle`` abstract model.
     
     """
-    list_display      = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_illustration')
+    list_display      = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_image')
     list_filter       = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     filter_horizontal = ('issues',)
     search_fields     = ('title', 'summary', 'content')
@@ -64,8 +63,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
             my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
-        if db_field.name == 'illustration':
-            return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Illustration'), required=False) 
+        if db_field.name == 'image':
+            return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Image'), required=False) 
         return field
 
 
@@ -95,7 +94,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
         fieldsets = [
             (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
-            (_('Illustration'), {'fields': ('illustration', 'illustration_legend', 'illustration_credits')}),
+            (_('Image'), {'fields': ('image', 'image_legend', 'image_credits')}),
             (_('Content'), {'fields': ('summary', 'content')}),
             (_('Publication'), {'fields': publication_fields}),
         ]
@@ -172,21 +171,21 @@ class BaseArticleAdmin(admin.ModelAdmin):
     ald_publication_date.allow_tags = True
 
 
-    def ald_illustration(self, obj):
+    def ald_image(self, obj):
         """
-        Illustration thumbnail for admin list_display option.
+        Image thumbnail for admin list_display option.
         
         """
-        if not obj.illustration:
+        if not obj.image:
             img_thumb = thumbnail(obj.category.image, '45,0')
             thumb = '<div class="default-illustration"><img src="%s" alt="%s" /></div>' % (img_thumb, obj.category.image_legend)
         else:
-            img_thumb = thumbnail(obj.illustration, '45,0')
-            thumb = '<img src="%s" alt="%s" />' % (img_thumb, obj.illustration_legend)
+            img_thumb = thumbnail(obj.image, '45,0')
+            thumb = '<img src="%s" alt="%s" />' % (img_thumb, obj.image_legend)
         return thumb
     
-    ald_illustration.allow_tags = True
-    ald_illustration.short_description = 'visuel'
+    ald_image.allow_tags = True
+    ald_image.short_description = 'visuel'
 
 
     def ald_view_count(self, obj):

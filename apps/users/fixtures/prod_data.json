@@ -594,15 +594,6 @@
         }
     }, 
     {
-        "pk": 34, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "add_illustration", 
-            "name": "Can add illustration", 
-            "content_type": 12
-        }
-    }, 
-    {
         "pk": 37, 
         "model": "auth.permission", 
         "fields": {
@@ -612,30 +603,12 @@
         }
     }, 
     {
-        "pk": 35, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "change_illustration", 
-            "name": "Can change illustration", 
-            "content_type": 12
-        }
-    }, 
-    {
         "pk": 38, 
         "model": "auth.permission", 
         "fields": {
             "codename": "change_illustrationoftheday", 
             "name": "Can change illustration of the day", 
             "content_type": 13
-        }
-    }, 
-    {
-        "pk": 36, 
-        "model": "auth.permission", 
-        "fields": {
-            "codename": "delete_illustration", 
-            "name": "Can delete illustration", 
-            "content_type": 12
         }
     }, 
     {

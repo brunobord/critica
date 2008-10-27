@@ -17,28 +17,20 @@
     
 	<div class="lead autoClear">
 	
-    {% if is_preview %}
-        <h3><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a></h3>
-    {% endif %}
-    {% if is_archive %}
-        <h3><a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.title }}</a></h3>
-    {% endif %}
-    {% if is_current %}
-        <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
-    {% endif %}
-	
-		<div class="illustration">
-		    {% if not article.illustration %}
-		        <a href="{{ article.category.image.url }}" title="{{ article.category.image_legend }}">
-		            <img src="{{ article.category.image|thumbnail:"80,0" }}" alt="{{ article.category.image_legend }}" />
-		        </a>
-		    {% else %}
-		        <a href="{{ article.illustration.image.url }}" title="{{ article.illustration.legend }}">
-		            <img src="{{ article.illustration.image|thumbnail:"80,0" }}" alt="{{ article.illustration.legend }}" />
-		        </a>
-		    {% endif %}
-		 </div>
-		 <p>{{ article.summary|safe }}</p>
+        {% if is_preview %}
+            <h3><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if is_archive %}
+            <h3><a href="{% url issuearchive_category issue.number,article.category.slug %}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if is_current %}
+            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+        {% endif %}
+	    
+	    {% include "front/article_illustration_small.html" %}
+	    
+        <p>{{ article.summary|safe }}</p>
+        
 	</div>
     
     {% if is_preview %}
