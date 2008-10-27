@@ -14,6 +14,7 @@ from django.core.exceptions import MultipleObjectsReturned
 from django.core.paginator import Paginator
 from django.core.paginator import InvalidPage
 from django.core.paginator import EmptyPage
+
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
 from critica.apps.positions.models import IssueCategoryPosition
@@ -34,6 +35,7 @@ from critica.apps.ads.models import AdBanner
 from critica.apps.ads.models import AdCarouselPosition
 from critica.apps.ads.models import AdCarousel
 from critica.apps.utils import urlbase64
+
 from tagging.models import Tag
 from tagging.models import TaggedItem
 from tagging.utils import calculate_cloud
@@ -323,12 +325,25 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
         
     # Is current
     if not is_preview and not is_archive:
-        context['is_current'] = True
+        is_current = True
+        context['is_current'] = is_current
     else:
-        context['is_current'] = False
+        is_current = False
+        context['is_current'] = is_current
     
     category = get_object_or_404(Category, slug=category_slug)
     context['category'] = category
+    
+    # View count
+    if is_current or is_archive:
+        articles = Article.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False, category=category)
+        for article in articles:
+            article.view_count += 1
+            article.save()
+        notes = Note.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False, category=category)
+        for note in notes:
+            note.view_count += 1
+            note.save()
 
     note_positions = IssueNotePosition.objects.filter(issue=issue, category=category)
     for note_position in note_positions:
@@ -417,9 +432,18 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         
     # Is current
     if not is_preview and not is_archive:
-        context['is_current'] = True
+        is_current = True
+        context['is_current'] = is_current
     else:
-        context['is_current'] = False
+        is_current = False
+        context['is_current'] = is_current
+        
+    # View count
+    if is_current or is_archive:
+        notes = RegionNote.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False)
+        for note in notes:
+            note.view_count += 1
+            note.save()
     
     # Featured region
     try:
@@ -502,9 +526,18 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
         
     # Is current
     if not is_preview and not is_archive:
-        context['is_current'] = True
+        is_current = True
+        context['is_current'] = is_current
     else:
-        context['is_current'] = False
+        is_current = False
+        context['is_current'] = is_current
+    
+    # View count
+    if is_current or is_archive:
+        articles = VoyagesArticle.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False)
+        for article in articles:
+            article.view_count += 1
+            article.save()    
     
     if is_preview:
         try:
@@ -563,9 +596,18 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
         
     # Is current
     if not is_preview and not is_archive:
-        context['is_current'] = True
+        is_current = True
+        context['is_current'] = is_current
     else:
-        context['is_current'] = False
+        is_current = False
+        context['is_current'] = is_current
+        
+    # View count
+    if is_current or is_archive:
+        epicurien_articles = EpicurienArticle.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False)
+        for article in epicurien_articles:
+            article.view_count += 1
+            article.save()
     
     # Types
     type_cotefumeurs = EpicurienArticleType.objects.get(slug='cote-fumeurs')
@@ -684,9 +726,18 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
         
     # Is current
     if not is_preview and not is_archive:
-        context['is_current'] = True
+        is_current = True
+        context['is_current'] = is_current
     else:
-        context['is_current'] = False
+        is_current = False
+        context['is_current'] = is_current
+    
+    # View count
+    if is_current or is_archive:
+        articles = AngerArticle.objects.filter(issues__id=issue.id, is_ready_to_publish=True, is_reserved=False)
+        for article in articles:
+            article.view_count += 1
+            article.save()
     
     if is_preview:
         try:

@@ -4,7 +4,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 1, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -29,7 +29,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 2, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -54,7 +54,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 3, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -79,7 +79,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 4, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -104,7 +104,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 6, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -129,7 +129,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 5, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -154,7 +154,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 8, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -179,7 +179,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 7, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -204,7 +204,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 9, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -229,7 +229,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 1, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -254,7 +254,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 2, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -279,7 +279,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 3, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -304,7 +304,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 8, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -329,7 +329,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 4, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -354,7 +354,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 6, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -379,7 +379,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 5, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -404,7 +404,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 7, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 1, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 
@@ -429,7 +429,7 @@
         "model": "articles.article", 
         "fields": {
             "category": 9, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 

@@ -23,3 +23,4 @@ class PublishedArticleManager(models.Manager):
             is_reserved=False
         )
 
+

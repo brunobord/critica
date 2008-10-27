@@ -4,7 +4,7 @@
         "model": "voyages.voyagesarticle", 
         "fields": {
             "category": 10, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 0, 
             "is_reserved": 1, 
@@ -31,7 +31,7 @@
         "model": "voyages.voyagesarticle", 
         "fields": {
             "category": 10, 
-            "view_count": null, 
+            "view_count": 0, 
             "is_featured": 0, 
             "is_ready_to_publish": 1, 
             "is_reserved": 0, 

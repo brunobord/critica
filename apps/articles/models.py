@@ -172,7 +172,7 @@ class BaseArticle(models.Model):
     category             = models.ForeignKey('categories.Category', verbose_name=_('category'), null=True, blank=True, help_text=_('Please, select a category for this article.'))
     tags                 = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
     issues               = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues.'))
-    view_count           = models.IntegerField(_('view count'), null=True, blank=True, editable=False)
+    view_count           = models.IntegerField(_('view count'), null=True, blank=True, default=0, editable=False)
     creation_date        = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date    = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
     publication_date     = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
