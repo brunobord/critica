@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-27 14:07+0100\n"
+"POT-Creation-Date: 2008-10-27 14:18+0100\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -20,6 +20,12 @@ msgstr ""
 #: admin.py:67 admin.py:97
 msgid "Image"
 msgstr "Visuel"
+
+#: admin.py:67
+msgid ""
+"You can attach an image to this article. By default, the category image is "
+"displayed."
+msgstr "Vous pouvez associer un visuel à cet article. Sinon, le visuel par défaut de la rubrique sera utilisé."
 
 #: admin.py:95
 msgid "Headline"
@@ -150,9 +156,17 @@ msgstr "Vous pouvez sélectionner un visuel à insérer dans cet article."
 msgid "legend"
 msgstr "légende"
 
+#: models.py:157
+msgid "Please, enter the image legend."
+msgstr "Entrez la légende du visuel."
+
 #: models.py:158
 msgid "credits"
 msgstr "crédits"
+
+#: models.py:158
+msgid "Please, enter the image credits."
+msgstr "Entrez les crédits du visuel."
 
 #: models.py:159
 msgid "featured"

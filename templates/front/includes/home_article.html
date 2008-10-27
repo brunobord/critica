@@ -23,7 +23,7 @@
             <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
         {% endif %}
         
-        {% include "front/article_illustration_small.html" %}
+        {% include "front/includes/article_illustration_small.html" %}
 
         <p>{{ article.summary|safe }}</p>
 	</div>

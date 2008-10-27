@@ -21,7 +21,14 @@ def get_image_path(instance, filename):
     Dynamic image upload path.
     
     """
-    return 'upload/images/visuels/%s/%s-%s' % (instance.category.slug, instance.id, filename)
+    klass_name = instance.__class__.__name__
+    
+    if klass_name == 'VoyagesArticle':
+        return 'upload/images/visuels/voyages/%s-%s' % (instance.id, filename)
+    elif klass_name == 'EpicurienArticle':
+        return 'upload/images/visuels/epicurien/%s-%s' % (instance.id, filename)
+    else:
+        return 'upload/images/visuels/%s/%s-%s' % (instance.category.slug, instance.id, filename)
 
         
 class BaseArticle(models.Model):
@@ -154,8 +161,8 @@ class BaseArticle(models.Model):
     publication_date     = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion              = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
     image                = models.ImageField(upload_to=get_image_path, verbose_name=_('image'), blank=True, help_text=_('Please, select an image which will be attached to this article.')) 
-    image_legend         = models.CharField(_('legend'), max_length=255, blank=True)
-    image_credits        = models.CharField(_('credits'), max_length=255, blank=True, default='Critic@') 
+    image_legend         = models.CharField(_('legend'), max_length=255, blank=True, help_text=_('Please, enter the image legend.'))
+    image_credits        = models.CharField(_('credits'), max_length=255, blank=True, default='Critic@', help_text=_('Please, enter the image credits.')) 
     is_featured          = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))
     is_ready_to_publish  = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be publish?'))
     is_reserved          = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))

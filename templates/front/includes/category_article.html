@@ -4,7 +4,7 @@
 	<h2><span>&Agrave; la une</span></h2>
     <h3>{{ article.title }}</h3>
     <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
-    {% include "front/article_illustration_medium.html" %}
+    {% include "front/includes/article_illustration_medium.html" %}
     <p class="lead">{{ article.summary|safe }}</p>
     <p class="readMore slick-show"><a href="#">Lire la suite</a></p>
 	<!-- SLICKBOX -->

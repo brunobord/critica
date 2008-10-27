@@ -64,7 +64,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
             print my_choices
             field.choices = my_choices
         if db_field.name == 'image':
-            return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Image'), required=False) 
+            return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Image'), help_text=_('You can attach an image to this article. By default, the category image is displayed.'), required=False) 
         return field
 
 

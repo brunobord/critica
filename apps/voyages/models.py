@@ -9,6 +9,7 @@ from critica.apps.articles.models import BaseArticle
 from critica.apps.voyages.managers import PublishedArticleManager
 from critica.apps.utils.widgets import resize_widget
 
+
 class VoyagesArticle(BaseArticle):
     """
     Voyages article category: article.
@@ -48,7 +49,7 @@ class VoyagesArticle(BaseArticle):
     
     """
     localization = models.CharField(_('localization'), max_length=255, db_index=True, help_text=_('Please, enter the localization in this format: city, country (e.g. Paris, France).'))
-    widget = models.TextField(_('Google Map widget'), help_text=_('Please, copy-paste the widget here. Do not modify it.'))
+    widget       = models.TextField(_('Google Map widget'), help_text=_('Please, copy-paste the widget here. Do not modify it.'))
     
     objects = models.Manager()
     published = PublishedArticleManager()
