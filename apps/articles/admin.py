@@ -14,7 +14,7 @@ from critica.apps.users.models import UserNickname
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
 from critica.apps.articles import settings as articles_settings
-from critica.apps.articles.widgets import ImageWithThumbWidget
+from critica.lib.widgets import ImageWithThumbWidget
 
 from imagethumbnail.templatetags.image_thumbnail import thumbnail
 
@@ -58,13 +58,16 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
             print my_choices
             field.choices = my_choices
+            
         if db_field.name == 'category':
             my_choices = [('', '---------')]
             my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
+        
         if db_field.name == 'image':
             return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Image'), help_text=_('You can attach an image to this article. By default, the category image is displayed.'), required=False) 
+        
         return field
 
 

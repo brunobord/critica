@@ -4,12 +4,14 @@ Administration interface options of ``critica.apps.illustrations`` models.
 
 """
 from django.contrib import admin
+from django import forms
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.issues.models import Issue
+from critica.lib.widgets import ImageWithThumbWidget
 
 from imagethumbnail.templatetags.image_thumbnail import thumbnail
 
@@ -23,17 +25,19 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
         (None, {'fields': ('image', 'credits', 'legend', 'issues')}),
     ]
     
-    list_display = ('ald_image', 'ald_issues', 'credits', 'legend', 'creation_date', 'modification_date', 'submitter')
-    list_filter = ('issues',)
+    list_display      = ('ald_image', 'ald_issues', 'credits', 'legend', 'creation_date', 'modification_date', 'submitter')
+    list_filter       = ('issues',)
     filter_horizontal = ['issues']
-    search_fields = ('image', 'credits', 'legend', 'issues__number')
-    ordering = ['issues', 'legend', 'creation_date']
-    date_hierarchy = 'creation_date'
-    _object = None
+    search_fields     = ('image', 'credits', 'legend', 'issues__number')
+    ordering          = ['issues', 'legend', 'creation_date']
+    date_hierarchy    = 'creation_date'
+    _object           = None
+
 
     def __call__(self, request, url):
         self.request = request
         return super(IllustrationOfTheDayAdmin, self).__call__(request, url)
+
 
     def change_view(self, request, object_id):
         self._request = request
@@ -44,6 +48,7 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
             self._object = None
         self._action = "change"
         return super(IllustrationOfTheDayAdmin, self).change_view(request, object_id) 
+
 
     def formfield_for_dbfield(self, db_field, **kwargs):
         """
@@ -69,7 +74,12 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
             my_choices.extend(Issue.objects.exclude(id__in=excluded_issues).values_list('id', 'number'))
             print my_choices
             field.choices = my_choices
+        
+        if db_field.name == 'image':
+            return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Illustration'), required=True) 
+        
         return field
+
 
     def ald_issues(self, obj):
         """
@@ -81,16 +91,21 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
             return ', '.join(['%s' % issue for issue in issues])
         else:
             return _('no issues')
+            
     ald_issues.short_description = _('issues')
+
     
     def ald_image(self, obj):
         """ 
         Image thumbnail for admin list_display option. 
         
         """
-        return '<img src="%s%s" alt="%s" height="60" />' % (settings.MEDIA_URL, obj.image, obj.legend)
+        img_thumb = thumbnail(obj.image, '45,0')
+        return '<img src="%s" alt="%s" />' % (img_thumb, obj.legend)
+
     ald_image.allow_tags = True
     ald_image.short_description = _('Illustration')
+
     
     def save_model(self, request, obj, form, change):
         """ 

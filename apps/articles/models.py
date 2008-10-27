@@ -24,11 +24,11 @@ def get_image_path(instance, filename):
     klass_name = instance.__class__.__name__
     
     if klass_name == 'VoyagesArticle':
-        return 'upload/images/visuels/voyages/%s-%s' % (instance.id, filename)
+        return 'upload/visuels/voyages/%s-%s' % (instance.id, filename)
     elif klass_name == 'EpicurienArticle':
-        return 'upload/images/visuels/epicurien/%s-%s' % (instance.id, filename)
+        return 'upload/visuels/epicurien/%s-%s' % (instance.id, filename)
     else:
-        return 'upload/images/visuels/%s/%s-%s' % (instance.category.slug, instance.id, filename)
+        return 'upload/visuels/%s/%s-%s' % (instance.category.slug, instance.id, filename)
 
         
 class BaseArticle(models.Model):

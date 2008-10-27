@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-05 20:25+0200\n"
+"POT-Creation-Date: 2008-10-27 15:08+0100\n"
 "PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,74 +17,60 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:35 admin.py:94
+#: admin.py:79 admin.py:107
 msgid "Illustration"
-msgstr "Visuel"
+msgstr "Illustration"
 
-#: admin.py:44
-msgid "Category"
-msgstr "Rubrique"
-
-#: admin.py:84
+#: admin.py:93
 msgid "no issues"
-msgstr "aucune édition"
+msgstr "aucune"
 
-#: admin.py:85 models.py:159
+#: admin.py:95 models.py:80
 msgid "issues"
 msgstr "éditions"
 
-#: models.py:72 models.py:158
+#: models.py:79
 msgid "submitter"
 msgstr "auteur"
 
-#: models.py:73
-msgid "category"
-msgstr "rubrique"
+#: models.py:80
+msgid "Please, select one or several issues to associate to this illustration."
+msgstr ""
+"Sélectionnez une ou plusieurs éditions à associer à cette illustration."
 
-#: models.py:74 models.py:160
+#: models.py:81
 msgid "Please, select an image to upload"
 msgstr "Sélectionnez une image à télécharger"
 
-#: models.py:75 models.py:161
+#: models.py:82
 msgid "credits"
 msgstr "crédits"
 
-#: models.py:75 models.py:161
+#: models.py:82
 msgid "all rights reserved"
 msgstr "tous droits réservés"
 
-#: models.py:75 models.py:76 models.py:161 models.py:162
+#: models.py:82 models.py:83
 msgid "100 characters max."
 msgstr "100 caractères max."
 
-#: models.py:76 models.py:162
+#: models.py:83
 msgid "legend"
 msgstr "légende"
 
-#: models.py:77 models.py:163
+#: models.py:84
 msgid "creation date"
 msgstr "date de création"
 
-#: models.py:78 models.py:164
+#: models.py:85
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:87
-msgid "illustration"
-msgstr "visuel"
-
-#: models.py:88
-msgid "illustrations"
-msgstr "visuels"
-
-#: models.py:159
-msgid "Please, select one or several issues to associate to this illustration."
-msgstr "Sélectionnez une ou plusieurs éditions à associer à cette illustration."
-
-#: models.py:173
+#: models.py:95
 msgid "illustration of the day"
 msgstr "illustration du jour"
 
-#: models.py:174
+#: models.py:96
 msgid "illustrations of the day"
 msgstr "illustrations du jour"
+

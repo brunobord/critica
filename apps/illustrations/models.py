@@ -13,7 +13,7 @@ def get_image_path(instance, filename):
     Dynamic image upload path.
     
     """
-    return 'upload/images/idj/%s-%s' % (instance.id, filename)
+    return 'upload/idj/%s-%s' % (instance.id, filename)
 
 
 class IllustrationOfTheDay(models.Model):
