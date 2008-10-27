@@ -5,7 +5,7 @@
     <h3>{{ article.title }}</h3>
     <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
     <div class="illustration">
-        {% if article.use_default_illustration %}
+        {% if not article.illustration %}
             <a href="{{ article.category.image.url }}" title="{{ article.category.image_legend }}"><img src="{{ article.category.image|thumbnail:"200,0" }}" alt="{{ article.category.image_legend }}" /></a>
             <p class="credits">Photo : {{ article.category.image_credits }} {% if article.category.image_legend %}{{ article.category.image_legend }}{% endif %}</p>
         {% else %}

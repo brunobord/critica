@@ -6,6 +6,7 @@ Administration interface options of ``critica.apps.articles`` application.
 from django.conf import settings
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
+
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.models import Article
 from critica.apps.users.models import UserNickname
@@ -14,23 +15,31 @@ from critica.apps.illustrations.models import Illustration
 from critica.apps.issues.models import Issue
 from critica.apps.articles import settings as articles_settings
 
+from imagethumbnail.templatetags.image_thumbnail import thumbnail
+
 
 class BaseArticleAdmin(admin.ModelAdmin):
     """
     Administration interface options of ``BaseArticle`` abstract model.
     
     """
-    list_display = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_illustration')
-    list_filter = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
+    list_display      = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_illustration')
+    list_filter       = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     filter_horizontal = ('issues',)
-    search_fields = ('title', 'summary', 'content')
-    ordering = ('-publication_date', 'category')
-    date_hierarchy = 'publication_date'
-    exclude = ['author']
+    search_fields     = ('title', 'summary', 'content')
+    ordering          = ('-publication_date', 'category')
+    date_hierarchy    = 'publication_date'
+    exclude           = ['author']
+
     
     def __call__(self, request, url):
+        """
+        Adds current request object and current URL to this class.
+        
+        """
         self.request = request
         return super(BaseArticleAdmin, self).__call__(request, url)
+
 
     def formfield_for_dbfield(self, db_field, **kwargs):
         """
@@ -48,14 +57,13 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
             print my_choices
             field.choices = my_choices
-        
         if db_field.name == 'category':
             my_choices = [('', '---------')]
             my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
-        
         return field
+
 
     def queryset(self, request):
         """ 
@@ -68,7 +76,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return qs
         else:
             return qs.filter(author=user)
-        
+
+
     def get_fieldsets(self, request, obj=None):
         """ 
         Hook for specifying fieldsets for the add form. 
@@ -82,7 +91,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
         fieldsets = [
             (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
             (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
-            (_('Illustration'), {'fields': ('illustration', 'use_default_illustration')}),
+            (_('Illustration'), {'fields': ('illustration',)}),
             (_('Content'), {'fields': ('summary', 'content')}),
             (_('Publication'), {'fields': publication_fields}),
         ]
@@ -92,24 +101,31 @@ class BaseArticleAdmin(admin.ModelAdmin):
     def save_model(self, request, obj, form, change):
         """ 
         Given a model instance save it to the database. 
+        
         Auto-save author.
         
         """
         if change == False:
             obj.author = request.user
         obj.save()
-        
+
+    
     def ald_author(self, obj):
         """
         Formatted author for admin list_display option.
         
         """
-        if obj.author.get_full_name():
-            return obj.author.get_full_name()
+        if obj.author_nickname:
+            return obj.author_nickname.nickname
         else:
-            return obj.author
-    ald_author.short_description = _('author')
+            if obj.author.get_full_name():
+                return obj.author.get_full_name()
+            else:
+                return obj.author.username
     
+    ald_author.short_description = 'auteur'
+
+
     def ald_author_nickname(self, obj):
         """
         Formatted author nickname for admin list_display option.
@@ -119,7 +135,9 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return obj.author_nickname
         else:
             return self.ald_author(obj)
+    
     ald_author_nickname.short_description = 'pseudo'
+
 
     def ald_issues(self, obj):
         """
@@ -128,7 +146,9 @@ class BaseArticleAdmin(admin.ModelAdmin):
         """
         issues = [issue.number for issue in obj.issues.all()]
         return ', '.join(['%s' % issue for issue in issues])
-    ald_issues.short_description = _('issues')
+    
+    ald_issues.short_description = 'édition(s)'
+
 
     def ald_opinion(self, obj):
         """
@@ -142,9 +162,11 @@ class BaseArticleAdmin(admin.ModelAdmin):
                     return opinion[1]
         else:
             return u'<span class="novalue">%s</span>' % _('no opinion')
-    ald_opinion.short_description = _('opinion')
-    ald_opinion.allow_tags = True
     
+    ald_opinion.short_description = 'opinion'
+    ald_opinion.allow_tags = True
+
+
     def ald_publication_date(self, obj):
         """
         Formatted publication date for admin list_display option.
@@ -154,31 +176,41 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return u'<span class="novalue">%s</span>' % _('no publication date')
         else:
             return obj.publication_date.strftime('%Y/%m/%d')
+    
     ald_publication_date.short_description = 'date'
     ald_publication_date.allow_tags = True
-    
+
+
     def ald_illustration(self, obj):
         """
         Illustration thumbnail for admin list_display option.
         
         """
-        if obj.use_default_illustration or obj.illustration is None:
-            thumb = '<div class="default-illustration"><img src="%s" alt="%s" height="50"/></div>' % (obj.category.image.url, obj.category.image_legend)
+        if not obj.illustration:
+            img_thumb = thumbnail(obj.category.image, '45,0')
+            thumb = '<div class="default-illustration"><img src="%s" alt="%s" /></div>' % (img_thumb, obj.category.image_legend)
         else:
-            thumb = '<img src="%s" alt="%s" height="50" />' % (obj.illustration.image.url, obj.illustration.legend)
+            img_thumb = thumbnail(obj.illustration.image, '45,0')
+            thumb = '<img src="%s" alt="%s" />' % (img_thumb, obj.illustration.legend)
         return thumb
+    
     ald_illustration.allow_tags = True
     ald_illustration.short_description = 'visuel'
-    
+
+
     def ald_view_count(self, obj):
         return obj.view_count
-    ald_view_count.short_description = 'nb de vues'
+    
+    ald_view_count.short_description = 'nb vues'
+
     
     def ald_is_reserved(self, obj):
         return obj.is_reserved
+    
     ald_is_reserved.short_description = 'marbre'
     ald_is_reserved.boolean = True
     
+
 
 class ArticleAdmin(BaseArticleAdmin):
     """

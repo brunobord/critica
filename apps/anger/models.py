@@ -48,16 +48,12 @@ class AngerArticle(BaseArticle):
         
     def save(self):
         """ 
-        Object pre-saving operations:
-        
-        * Auto-save category
-        * Save article
+        Object pre-saving / post-saving operations.
         
         """
         from critica.apps.categories.models import Category
         category = Category.objects.get(slug='coup-de-gueule')
         self.category = category
-        self.use_default_illustration = True
         super(AngerArticle, self).save()
 
 

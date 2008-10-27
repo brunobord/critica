@@ -28,7 +28,7 @@
     {% endif %}
 	
 		<div class="illustration">
-		    {% if article.use_default_illustration %}
+		    {% if not article.illustration %}
 		        <a href="{{ article.category.image.url }}" title="{{ article.category.image_legend }}">
 		            <img src="{{ article.category.image|thumbnail:"80,0" }}" alt="{{ article.category.image_legend }}" />
 		        </a>
