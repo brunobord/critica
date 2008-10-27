@@ -22,7 +22,6 @@ def get_image_path(instance, filename):
     
     """
     klass_name = instance.__class__.__name__
-    
     if klass_name == 'VoyagesArticle':
         return 'upload/visuels/voyages/%s-%s' % (instance.id, filename)
     elif klass_name == 'EpicurienArticle':
@@ -40,98 +39,116 @@ class BaseArticle(models.Model):
     Fields::
     
         author
-            * ForeignKey: django.contrib.auth.models.User
             * The article author
+            * ForeignKey: django.contrib.auth.models.User
             * Required
             
         author_nickname
-            * ForeignKey: critica.apps.users.models.UserNickname
             * The author nickname
+            * ForeignKey: critica.apps.users.models.UserNickname
             * Optional (can be blank)
             
         title
+            * The article title
             * CharField
             * 255 characters max.
-            * The article title
             * Required
             
         slug
+            * The article slug
             * SlugField
             * 255 characters max.
-            * The article slug
             * No editable
             * Optional (can be blank)
             
         category
-            * ForeignKey: critica.apps.categories.models.Category
             * The article category
+            * ForeignKey: critica.apps.categories.models.Category
             * Required
             
         tags
-            * TagField (from tagging)
             * The article tags
+            * TagField (from tagging)
             * Optional
             
         issues
-            * ManyToManyField: critica.apps.issues.models.Issue
             * The article issues
+            * ManyToManyField: critica.apps.issues.models.Issue
             * Optional (can be blank)
             
         view_count
-            * PositiveIntegerField
             * The article view count
+            * PositiveIntegerField
             * No editable
             * Optional (can be blank)
             
         creation_date
+            * The article creation date
             * DateTimeField
             * auto_now_add
-            * The article creation date
             * Required
             
         modification_date
+            * The article modification date
             * DateTimeField
             * auto_now
-            * The article modification date
             * Required
             
         publication_date
-            * DateField
             * The article publication date
+            * DateField
             * Optional (can be blank)
         
         opinion
+            * The article opinion flag
             * IntegerField
             * Choices: critica.apps.article.choices.OPINION_CHOICES
-            * The article opinion flag
             * Optional (can be blank)
+            
+        image
+            * The article image
+            * ImageField
+            * Can be blank
+            
+        image_legend
+            * The article image legend
+            * CharField
+            * 255 characters max.
+            * Can be blank
+            
+        image_credits
+            * The article image credits
+            * CharField
+            * 255 characters max.
+            * Default: Critic@
+            * Can be blank
     
         is_featured
+            * Is article featured?
             * BooleanField
             * Default: False
-            * Is article featured?
             * Required
             
         is_ready_to_publish
+            * Is article ready to publish?
             * BooleanField
             * Default: False
-            * Is article ready to publish?
             * Required
             
         is_reserved
+            * Is article reserved?
             * BooleanField
             * Default: False
-            * Is article reserved?
             * Required
             
         summary
-            * TextField
             * The article summary
+            * TextField
             * Required
             
         content
-            * TextField
             * The article content
+            * TextField
             * Required
             
     Indexes::
@@ -240,8 +257,8 @@ class Article(BaseArticle):
         Model metadata. 
         
         """
-        db_table = 'articles_article'
-        verbose_name = _('article')
+        db_table            = 'articles_article'
+        verbose_name        = _('article')
         verbose_name_plural = _('articles')
 
 
