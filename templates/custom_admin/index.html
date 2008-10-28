@@ -235,6 +235,19 @@
     </div>
     {% endif %}
 
+    {% if perms.users.is_editor %}
+    <div class="module">
+        <table summary="Newsletter">
+        <caption>Newsletter</caption>
+            <tr>
+                <th scope="row"><a href="newsletter/subscriber/">Inscrits</a></th>
+                <td><a href="newsletter/subscriber/add/" class="addlink">Ajouter</a></td>
+                <td><a href="newsletter/subscriber/" class="changelink">Modifier</a></td>
+            </tr>
+        </table>
+    </div>
+    {% endif %}
+
     {% if perms.users.is_administrator %}
     <div class="module">
         <table summary="Rubriques et types de brèves">

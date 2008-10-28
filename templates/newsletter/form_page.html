@@ -1,0 +1,32 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Newsletter{% endblock %}
+
+{% block body_id %}newsletter{% endblock %}
+
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Newsletter</span></h1>
+
+    <p>
+        C'est gratos, ça vous évite de lire de l'info indigeste, et en prime, ça 
+        tombe tout seul dans votre boîte aux lettres, donc on ne pouvait vraiment 
+        pas faire mieux. Ne vous reste plus qu'à donner votre nom, votre prénom, 
+        votre adresse mail (ben oui, pour recevoir, on est forts mais pas magiciens&nbsp;!) 
+        et votre code postal. Franchement, y a pire non&nbsp;?
+    </p>
+    
+    <p>
+        Venez vite rejoindre la tribu Critic@ pour une info pertinente ET 
+        impertinente... A tout de suite.
+    </p>
+
+	<form action="." method="POST" class="vForm">
+        {{ form.as_p }}
+        <p class="submit"><input type="submit" value="Je m'inscris !" name="submit" /></p>
+	</form>
+
+</div>
+{% endblock %}
+

@@ -42,6 +42,13 @@ urlpatterns += patterns('',
     url(r'^rss/$', 'critica.apps.syndication.views.rss_index', name='rss'),
 )
 
+# Newsletter
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url('^newsletter/$', 'critica.apps.newsletter.views.newsletter', name='newsletter'),
+    url('^newsletter/merci/$', 'critica.apps.newsletter.views.newsletter_thanks', name='newsletter_thanks'),
+)
+
 # Send to a friend
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
