@@ -1,0 +1,20 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Tags{% endblock %}
+
+{% block body_id %}tags{% endblock %}
+
+{% block content %}
+<div id="mainContent">
+    <h1>Tags</h1>
+    {% if tags %}
+        <ul id="tagcloud">
+        {% for tag in tags %}
+            <li><a href="/tags/{{ tag.name }}/" title="Articles taggé {{ tag.name }}" class="tag-{{ tag.font_size }}">{{ tag.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p><strong>Aucun article taggé pour le moment.</strong></p>
+    {% endif %}
+</div>
+{% endblock %}

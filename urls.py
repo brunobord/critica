@@ -23,6 +23,13 @@ urlpatterns = patterns('',
     (r'^django-admin/(.*)', admin.site.root),
 )
 
+# Pages
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^publicites/$', 'critica.apps.pages.views.page_ads', name='page_ads'),
+    url(r'^mentions-legales/$', 'critica.apps.pages.views.page_legal', name='page_legal'),
+)
+
 # Syndication
 # ------------------------------------------------------------------------------
 feeds = {
@@ -32,27 +39,27 @@ feeds = {
 
 urlpatterns += patterns('',
     (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
-    url(r'^rss/$', 'critica.apps.front.views.rss_index', name='rss'),
+    url(r'^rss/$', 'critica.apps.syndication.views.rss_index', name='rss'),
+)
+
+# Send to a friend
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url('^envoyer/$', 'critica.apps.sendfriend.views.sendfriend', name="sendfriend"),
+    url('^envoyer/merci/$', 'critica.apps.sendfriend.views.sendfriend_thanks', name="sendfriend_thanks"),
 )
 
 # Search
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
-    url(r'^search/results/$', 'critica.apps.front.views.search', name='search'),
-)
-
-# Pages
-# ------------------------------------------------------------------------------
-urlpatterns += patterns('',
-    url(r'^publicites/$', 'critica.apps.front.views.page_ads', name='page_ads'),
-    url(r'^mentions-legales/$', 'critica.apps.front.views.page_legal', name='page_legal'),
+    url(r'^search/results/$', 'critica.apps.search.views.search', name='search'),
 )
 
 # Tags
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
-    url(r'^tags/(?P<tag>[-\w]+)/$', 'critica.apps.front.views.tags_tag', name='tags_tag'),
-    url(r'^tags/$', 'critica.apps.front.views.tags', name='tags'),
+    url(r'^tags/(?P<tag>[-\w]+)/$', 'critica.apps.tags.views.tag', name='tag'),
+    url(r'^tags/$', 'critica.apps.tags.views.tags', name='tags'),
 )
 
 # Archives

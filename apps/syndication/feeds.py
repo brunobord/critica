@@ -24,8 +24,8 @@ class LatestRss(Feed):
     
     """
     feed_type = Rss201rev2Feed
-    title_template = 'front/feeds/item_title.html'
-    description_template = 'front/feeds/item_description.html'
+    title_template = 'syndication/feeds/item_title.html'
+    description_template = 'syndication/feeds/item_description.html'
     
     def title(self):
         """
@@ -106,8 +106,8 @@ class LatestByCategoryRss(LatestRss):
     RSS feed: latest articles published in a given category. 
     
     """
-    title_template = 'front/feeds/category_item_title.html'
-    description_template = 'front/feeds/category_item_description.html'
+    title_template = 'syndication/feeds/category_item_title.html'
+    description_template = 'syndication/feeds/category_item_description.html'
     
     def get_object(self, bits):
         """
