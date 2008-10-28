@@ -12,4 +12,5 @@ class SendFriendForm(forms.Form):
     Form to send latest articles to a friend.
     
     """
-    to_email = forms.EmailField(label=_('to email'))
+    sender   = forms.CharField(label='Votre nom', required=True)
+    to_email = forms.EmailField(label='Email de votre ami', required=True)

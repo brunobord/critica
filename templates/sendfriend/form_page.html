@@ -9,12 +9,9 @@
 
     <h1><span>Envoyer à un ami</span></h1>
     
-	<form action="." method="post" class="vForm">
-		<ul>
-			{{ form.as_ul }}
-		</ul>
-
-		<p class="submit"><input type="image" src="{{ MEDIA_URL }}img/boutons/valider.png" alt="Je valide"/></p>
+	<form action="." method="POST" class="vForm">
+        {{ form.as_p }}
+        <p class="submit"><input type="submit" value="Envoyer !" name="submit" /></p>
 	</form>
 
 </div>

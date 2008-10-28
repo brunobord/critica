@@ -35,7 +35,7 @@ def sendfriend(request):
             sendfriend_send_mail(form)
             return HttpResponseRedirect(reverse('sendfriend_thanks'))
     else:
-        form = SendFriendForm()
+        form = SendFriendForm(auto_id=True)
         
     context['form'] = form
 
@@ -76,6 +76,7 @@ def sendfriend_send_mail(form):
     items = [item for k, item in all_items]
     
     context['items'] = items
+    context['sender'] = form.cleaned_data['sender']
     
     body = render_to_string('sendfriend/email.html', context)
     subject = u'Critic@...'
