@@ -150,6 +150,7 @@ this order otherwise you will encounter problems during fixtures loading)::
         'critica.apps.tags',
         'critica.apps.archives',
         'critica.apps.issuepreview',
+        'critica.apps.newsletter',
     )
 
 Voilà! Critic@-engine is ready.

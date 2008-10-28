@@ -16,20 +16,6 @@ from critica.apps.articles import choices
 from critica.apps.articles.managers import ArticlePublishedManager
 from critica.apps.articles.managers import ArticlePreviewManager
 
-
-def get_image_path(instance, filename):
-    """
-    Dynamic image upload path.
-    
-    """
-    klass_name = instance.__class__.__name__
-    if klass_name == 'VoyagesArticle':
-        return 'upload/visuels/voyages/%s-%s' % (instance.id, filename)
-    elif klass_name == 'EpicurienArticle':
-        return 'upload/visuels/epicurien/%s-%s' % (instance.id, filename)
-    else:
-        return 'upload/visuels/%s/%s-%s' % (instance.category.slug, instance.id, filename)
-
         
 class BaseArticle(models.Model):
     """
@@ -178,7 +164,7 @@ class BaseArticle(models.Model):
     modification_date    = models.DateTimeField(_('modification date'), auto_now_add=True, editable=False)
     publication_date     = models.DateField(_('publication date'), null=True, blank=True, db_index=True, help_text=_("Don't forget to adjust the publication date."))
     opinion              = models.IntegerField(_('opinion'), choices=choices.OPINION_CHOICES, null=True, blank=True, db_index=True)
-    image                = models.ImageField(upload_to=get_image_path, verbose_name=_('image'), blank=True, help_text=_('Please, select an image which will be attached to this article.')) 
+    image                = models.ImageField(upload_to='upload/visuels/', verbose_name=_('image'), blank=True, help_text=_('Please, select an image which will be attached to this article.')) 
     image_legend         = models.CharField(_('legend'), max_length=255, blank=True, help_text=_('Please, enter the image legend.'))
     image_credits        = models.CharField(_('credits'), max_length=255, blank=True, default='Critic@', help_text=_('Please, enter the image credits.')) 
     is_featured          = models.BooleanField(_('featured'), default=False, db_index=True, help_text=_('Is featured?'))

@@ -7,7 +7,6 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from critica.apps.notes.models import BaseNoteType, BaseNote
-from critica.apps.regions.managers import PublishedNoteManager
 
 
 class Region(BaseNoteType):
@@ -127,9 +126,6 @@ class RegionNote(BaseNote):
     
     """
     region = models.ForeignKey('regions.Region', verbose_name=_('region'), help_text=_('Please, select a region.'))
-
-    objects   = models.Manager()
-    published = PublishedNoteManager()
 
 
     class Meta:
