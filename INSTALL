@@ -144,7 +144,10 @@ this order otherwise you will encounter problems during fixtures loading)::
         'critica.apps.syndication',
         'critica.apps.anger',
         'critica.apps.quotas',
-        'critica.apps.ads', 
+        'critica.apps.ads',
+        'critica.apps.sendfriend',
+        'critica.apps.search',
+        'critica.apps.tags',
     )
 
 Voilà! Critic@-engine is ready.
