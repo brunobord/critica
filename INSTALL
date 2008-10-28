@@ -148,6 +148,8 @@ this order otherwise you will encounter problems during fixtures loading)::
         'critica.apps.sendfriend',
         'critica.apps.search',
         'critica.apps.tags',
+        'critica.apps.archives',
+        'critica.apps.issuepreview',
     )
 
 Voilà! Critic@-engine is ready.
