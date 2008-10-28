@@ -4,69 +4,38 @@ Views of ``critica.apps.front`` application.
 
 """
 from django.conf import settings
-from django.http import Http404, HttpResponseRedirect
-from django.shortcuts import render_to_response, get_object_or_404
+from django.http import Http404
+from django.shortcuts import render_to_response
+from django.shortcuts import get_object_or_404
 from django.template import RequestContext
-from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
-from django.core.paginator import Paginator, InvalidPage, EmptyPage
+from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import MultipleObjectsReturned
+
+from tagging.models import Tag
+from tagging.models import TaggedItem
+from tagging.utils import calculate_cloud
 
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
-from critica.apps.positions.models import IssueCategoryPosition, IssueNotePosition
+from critica.apps.positions.models import IssueCategoryPosition
+from critica.apps.positions.models import IssueNotePosition
 from critica.apps.articles.models import Article
-from critica.apps.epicurien.models import EpicurienArticle, EpicurienArticleType
+from critica.apps.epicurien.models import EpicurienArticle
+from critica.apps.epicurien.models import EpicurienArticleType
 from critica.apps.voyages.models import VoyagesArticle
 from critica.apps.anger.models import AngerArticle
 from critica.apps.notes.models import Note
-from critica.apps.regions.models import RegionNote, FeaturedRegion
+from critica.apps.regions.models import RegionNote
+from critica.apps.regions.models import FeaturedRegion
 from critica.apps.illustrations.models import IllustrationOfTheDay
 from critica.apps.videos.models import Video
-from critica.apps.ads.models import AdBannerPosition, AdBanner, AdCarouselPosition, AdCarousel
-from critica.apps.utils import urlbase64
-
-from tagging.models import Tag, TaggedItem
-from tagging.utils import calculate_cloud
-
-
-# Issue getters
-# ------------------------------------------------------------------------------
-def _get_current_issue(issue_number=None):
-    """
-    Gets the current issue (object).
-    
-    If parameter ``issue_number`` is defined, returns the issue object or 404
-    if it does not exist. If parameter ``issue_number`` is not defined, returns
-    the latest published issue object or 404 if there's no issue yet. 
-    
-    """
-    if issue_number:
-        try:
-            issue = Issue.objects.get(number=issue_number)
-        except ObjectDoesNotExist:
-            raise Http404
-    else:
-        try:
-            issue = Issue.objects.filter(is_published=True).order_by('-number')[0]
-        except IndexError:
-            raise Http404
-        except ObjectDoesNotExist:
-            raise Http404
-    return issue
+from critica.apps.ads.models import AdBannerPosition
+from critica.apps.ads.models import AdBanner
+from critica.apps.ads.models import AdCarouselPosition
+from critica.apps.ads.models import AdCarousel
+from critica.apps.issues.views import _get_current_issue
 
 
-
-def _get_encoded_issue(issue_key):
-    """
-    Gets issue number from issue key and returns ``_get_current_issue()``.
-    
-    """
-    issue_number = int(urlbase64.uri_b64decode(str(issue_key)))
-    return _get_current_issue(issue_number=issue_number)
-
-
-
-# Home and categories
-# ------------------------------------------------------------------------------
 def home(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays the homepage.
@@ -83,7 +52,7 @@ def home(request, issue=None, is_preview=False, is_archive=False):
     try:
         context['issue'] = issue
     except ObjectDoesNotExist:
-        raise Htt404
+        raise Http404
         
     # Is a preview
     if is_preview:
@@ -708,163 +677,5 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
         'front/anger.html', 
         context, 
         context_instance=RequestContext(request))
-
-
-
-# Issue archive
-# ------------------------------------------------------------------------------
-def archives(request):
-    """
-    Displays archive list.
-    
-    """
-    issue = _get_current_issue()
-    context = {}   
-    
-    context['issue'] = issue
-    context['is_current'] = True
-    
-    try:
-        item_list = Issue.objects.filter(is_published=True).order_by('-publication_date')
-    except ObjectDoesNotExist:
-        item_list = None
-        
-    paginator = Paginator(item_list, 30)
-    try:
-        page = int(request.GET.get('page', '1'))
-    except ValueError:
-        page = 1
-    try:
-        context['items'] = paginator.page(page)
-    except (EmptyPage, InvalidPage):
-        context['items'] = paginator.page(paginator.num_pages)
-        
-    return render_to_response(
-        'front/archives.html', 
-        context, 
-        context_instance=RequestContext(request)
-    )
-
-
-
-def issuearchive_home(request, issue_number):
-    """
-    Displays home archive of a given issue.
-    
-    """
-    issue = _get_current_issue(issue_number=issue_number)
-    return home(request, issue=issue, is_archive=True)
-
-
-
-def issuearchive_category(request, issue_number, category_slug):
-    """
-    Displays category archive of a given issue.
-    
-    """
-    issue = _get_current_issue(issue_number=issue_number)
-    return category(request, category_slug, issue=issue, is_archive=True)
-
-
-
-def issuearchive_regions(request, issue_number):
-    """
-    Displays "Regions" category of a given issue.
-    
-    """
-    issue = _get_current_issue(issue_number=issue_number)
-    return regions(request, issue=issue, is_archive=True)
-
-
-
-def issuearchive_voyages(request, issue_number):
-    """
-    Displays "Voyages" category of a given issue.
-    
-    """
-    issue = _get_current_issue(issue_number=issue_number)
-    return voyages(request, issue=issue, is_archive=True)
-
-
-
-def issuearchive_epicurien(request, issue_number):
-    """
-    Displays "Epicurien" category of a given issue.
-    
-    """
-    issue = _get_current_issue(issue_number=issue_number)
-    return epicurien(request, issue=issue, is_archive=True)
-
-
-
-def issuearchive_anger(request, issue_number):
-    """
-    Displays "Anger" category of a given issue.
-    
-    """
-    issue = _get_current_issue(issue_number=issue_number)
-    return anger(request, issue=issue, is_archive=True)
-
-
-
-# Issue preview
-# ------------------------------------------------------------------------------
-def issuepreview_home(request, issue_key):
-    """
-    Displays home preview of a given issue.
-    
-    """
-    issue = _get_encoded_issue(issue_key)
-    return home(request, issue=issue, is_preview=True)
-
-
-
-def issuepreview_category(request, issue_key, category_slug):
-    """
-    Displays category preview of a given issue.
-    
-    """
-    issue = _get_encoded_issue(issue_key)
-    return category(request, category_slug=category_slug, issue=issue, is_preview=True)
-
-
-
-def issuepreview_regions(request, issue_key):
-    """
-    Displays "Regions" category of a given issue.
-    
-    """
-    issue = _get_encoded_issue(issue_key)
-    return regions(request, issue=issue, is_preview=True)
-    
-    
-    
-def issuepreview_voyages(request, issue_key):
-    """
-    Displays "Voyages" category of a given issue.
-    
-    """
-    issue = _get_encoded_issue(issue_key)
-    return voyages(request, issue=issue, is_preview=True)
-    
-    
-
-def issuepreview_epicurien(request, issue_key):
-    """
-    Displays "Epicurien" category of a given issue.
-    
-    """
-    issue = _get_encoded_issue(issue_key)
-    return epicurien(request, issue=issue, is_preview=True)
-    
-    
-
-def issuepreview_anger(request, issue_key):
-    """
-    Displays "Anger" category of a given issue.
-    
-    """
-    issue = _get_encoded_issue(issue_key)
-    return anger(request, issue=issue, is_preview=True)
 
 

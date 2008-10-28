@@ -65,24 +65,24 @@ urlpatterns += patterns('',
 # Archives
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
-    url(r'^archives/(?P<issue_number>\d+)/coup-de-gueule/$', 'critica.apps.front.views.issuearchive_anger', name='issuearchive_category_anger'),
-    url(r'^archives/(?P<issue_number>\d+)/epicurien/$', 'critica.apps.front.views.issuearchive_epicurien', name='issuearchive_category_epicurien'),
-    url(r'^archives/(?P<issue_number>\d+)/voyages/$', 'critica.apps.front.views.issuearchive_voyages', name='issuearchive_category_voyages'),
-    url(r'^archives/(?P<issue_number>\d+)/regions/$', 'critica.apps.front.views.issuearchive_regions', name='issuearchive_category_regions'),
-    url(r'^archives/(?P<issue_number>\d+)/(?P<category_slug>[-\w]+)/$', 'critica.apps.front.views.issuearchive_category', name='issuearchive_category'),
-    url(r'^archives/(?P<issue_number>\d+)/$', 'critica.apps.front.views.issuearchive_home', name='issuearchive_home'),
-    url(r'^archives/$', 'critica.apps.front.views.archives', name='archives'),
+    url(r'^archives/(?P<issue_number>\d+)/coup-de-gueule/$', 'critica.apps.archives.views.issuearchive_anger', name='issuearchive_category_anger'),
+    url(r'^archives/(?P<issue_number>\d+)/epicurien/$', 'critica.apps.archives.views.issuearchive_epicurien', name='issuearchive_category_epicurien'),
+    url(r'^archives/(?P<issue_number>\d+)/voyages/$', 'critica.apps.archives.views.issuearchive_voyages', name='issuearchive_category_voyages'),
+    url(r'^archives/(?P<issue_number>\d+)/regions/$', 'critica.apps.archives.views.issuearchive_regions', name='issuearchive_category_regions'),
+    url(r'^archives/(?P<issue_number>\d+)/(?P<category_slug>[-\w]+)/$', 'critica.apps.archives.views.issuearchive_category', name='issuearchive_category'),
+    url(r'^archives/(?P<issue_number>\d+)/$', 'critica.apps.archives.views.issuearchive_home', name='issuearchive_home'),
+    url(r'^archives/$', 'critica.apps.archives.views.archives', name='archives'),
 )
 
 # Issue preview
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
-    url(r'^preview/(?P<issue_key>[-\w]+)/coup-de-gueule/$', 'critica.apps.front.views.issuepreview_anger', name='issuepreview_category_anger'),
-    url(r'^preview/(?P<issue_key>[-\w]+)/epicurien/$', 'critica.apps.front.views.issuepreview_epicurien', name='issuepreview_category_epicurien'),
-    url(r'^preview/(?P<issue_key>[-\w]+)/voyages/$', 'critica.apps.front.views.issuepreview_voyages', name='issuepreview_category_voyages'),
-    url(r'^preview/(?P<issue_key>[-\w]+)/regions/$', 'critica.apps.front.views.issuepreview_regions', name='issuepreview_category_regions'),
-    url(r'^preview/(?P<issue_key>[-\w]+)/(?P<category_slug>[-\w]+)/$', 'critica.apps.front.views.issuepreview_category', name='issuepreview_category'),
-    url(r'^preview/(?P<issue_key>[-\w]+)/$', 'critica.apps.front.views.issuepreview_home', name='issuepreview_home'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/coup-de-gueule/$', 'critica.apps.issuepreview.views.issuepreview_anger', name='issuepreview_category_anger'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/epicurien/$', 'critica.apps.issuepreview.views.issuepreview_epicurien', name='issuepreview_category_epicurien'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/voyages/$', 'critica.apps.issuepreview.views.issuepreview_voyages', name='issuepreview_category_voyages'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/regions/$', 'critica.apps.issuepreview.views.issuepreview_regions', name='issuepreview_category_regions'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/(?P<category_slug>[-\w]+)/$', 'critica.apps.issuepreview.views.issuepreview_category', name='issuepreview_category'),
+    url(r'^preview/(?P<issue_key>[-\w]+)/$', 'critica.apps.issuepreview.views.issuepreview_home', name='issuepreview_home'),
 )
 
 # Home and categories
