@@ -10,6 +10,7 @@ from django.shortcuts import get_object_or_404
 from django.template import RequestContext
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import MultipleObjectsReturned
+from django.views.generic.simple import direct_to_template
 
 from tagging.models import Tag
 from tagging.models import TaggedItem
@@ -36,6 +37,9 @@ from critica.apps.ads.models import AdCarousel
 from critica.apps.issues.views import _get_current_issue
 
 
+# ------------------------------------------------------------------------------
+# HOME
+# ------------------------------------------------------------------------------
 def home(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays the homepage.
@@ -81,19 +85,14 @@ def home(request, issue=None, is_preview=False, is_archive=False):
             varname = 'article_%s' % category_position.position.id
             if is_preview:
                 try:
-                    article = Article.preview.get(issues__id=issue.id, category=category_position.category)
-                    context[varname] = article
-                except MultipleObjectsReturned:
-                    article = Article.preview.filter(issues__id=issue.id, category=category_position.category)[0]
-                    context[varname] = article
+                    article = Article.preview.filter(issues__id=issue.id, category=category_position.category)
+                    context[varname] = article[0:1].get()
                 except ObjectDoesNotExist:
                     context[varname] = None
             else:  
                 try:
-                    article = Article.published.get(issues__id=issue.id, category=category_position.category)
-                    context[varname] = article
-                except MultipleObjectsReturned:
-                    article = Article.published.filter(issues__id=issue.id, category=category_position.category)[0]
+                    article = Article.published.filter(issues__id=issue.id, category=category_position.category)
+                    article = article[0:1].get()
                     context[varname] = article
                 except ObjectDoesNotExist:
                     context[varname] = None
@@ -102,77 +101,85 @@ def home(request, issue=None, is_preview=False, is_archive=False):
     if is_preview:
         try:
             featured = FeaturedRegion.objects.get(issue=issue)
-            context['region_note'] = RegionNote.preview.get(issues__id=issue.id, region=featured.region)
-        except MultipleObjectsReturned:
-            context['region_note'] = RegionNote.preview.filter(issues__id=issue.id, region=featured.region)[0]
+            region_note = RegionNote.preview.filter(issues__id=issue.id, region=featured.region)
+            region_note = region_note.order_by('-publication_date')
+            region_note = region_note[0:1].get()
+            context['region_note'] = region_note
         except ObjectDoesNotExist:
             context['region_note'] = None
     else:
         try:
             featured = FeaturedRegion.objects.get(issue=issue)
-            context['region_note'] = RegionNote.published.get(issues__id=issue.id, region=featured.region)
-        except MultipleObjectsReturned:
-            context['region_note'] = RegionNote.published.filter(issues__id=issue.id, region=featured.region)[0]
+            region_note = RegionNote.published.filter(issues__id=issue.id, region=featured.region)
+            region_note = region_note.order_by('-publication_date')
+            region_note = region_note[0:1].get()
+            context['region_note'] = region_note
         except ObjectDoesNotExist:
             context['region_note'] = None
 
     # Voyages
     if is_preview:
         try:
-            context['voyages_article'] = VoyagesArticle.preview.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['voyages_article'] = VoyagesArticle.preview.filter(issues__id=issue.id)[0]
+            voyages_article = VoyagesArticle.preview.filter(issues__id=issue.id)
+            voyages_article = voyages_article.order_by('-publication_date')
+            voyages_article = voyages_article[0:1].get()
+            context['voyages_article'] = voyages_article
         except ObjectDoesNotExist:
             context['voyages_article'] = None
     else:
         try:
-            context['voyages_article'] = VoyagesArticle.published.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['voyages_article'] = VoyagesArticle.published.filter(issues__id=issue.id)[0]
+            voyages_article = VoyagesArticle.published.filter(issues__id=issue.id)
+            voyages_article = voyages_article.order_by('-publication_date')
+            voyages_article = voyages_article[0:1].get()
+            context['voyages_article'] = voyages_article
         except ObjectDoesNotExist:
             context['voyages_article'] = None
     
     # Epicurien
     if is_preview:
         try:
-            context['epicurien_articles'] = EpicurienArticle.preview.filter(issues__id=issue.id)
+            epicurien_articles = EpicurienArticle.preview.filter(issues__id=issue.id)
+            context['epicurien_articles'] = epicurien_articles
         except ObjectDoesNotExist:
             context['epicurien_articles'] = None
     else:
         try:
-            context['epicurien_articles'] = EpicurienArticle.published.filter(issues__id=issue.id)
+            epicurien_articles = EpicurienArticle.published.filter(issues__id=issue.id)
+            context['epicurien_articles'] = epicurien_articles
         except ObjectDoesNotExist:
             context['epicurien_articles'] = None
     
     # Anger ("Coup de Gueule")
     if is_preview:
         try:
-            context['anger_article'] = AngerArticle.preview.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['anger_article'] = AngerArticle.preview.filter(issues__id=issue.id)[0]
+            anger_article = AngerArticle.preview.filter(issues__id=issue.id)
+            anger_article = anger_article.order_by('-publication_date')
+            anger_article = anger_article[0:1].get()
+            context['anger_article'] = anger_article
         except ObjectDoesNotExist:
             context['anger_article'] = None
     else:
         try:
-            context['anger_article'] = AngerArticle.published.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['anger_article'] = AngerArticle.published.filter(issues__id=issue.id)[0]
+            anger_article = AngerArticle.published.filter(issues__id=issue.id)
+            anger_article = anger_article.order_by('-publication_date')
+            anger_article = anger_article[0:1].get()
+            context['anger_article'] = anger_article
         except ObjectDoesNotExist:
             context['anger_article'] = None
     
     # Illustration of the day
     try:
-        context['illustration'] = IllustrationOfTheDay.objects.get(issues__id=issue.id)
-    except MultipleObjectsReturned:
-        context['illustration'] = IllustrationOfTheDay.objects.filter(issues__id=issue.id)[0]
+        illustration = IllustrationOfTheDay.objects.filter(issues__id=issue.id)
+        illustration = illustration[0:1].get()
+        context['illustration'] = illustration
     except ObjectDoesNotExist:
         context['illustration'] = None
 
     # Video (reportage)
     try:
-        context['video'] = Video.objects.get(issues__id=issue.id)
-    except MultipleObjectsReturned:
-        context['video'] = Video.objects.filter(issues__id=issue.id)[0]
+        video = Video.objects.filter(issues__id=issue.id)
+        video = video[0:1].get()
+        context['video'] = video
     except ObjectDoesNotExist:
         context['video'] = None
         
@@ -209,13 +216,12 @@ def home(request, issue=None, is_preview=False, is_archive=False):
             tagcloud.append(tag)
     context['tagcloud'] = tagcloud
     
-    return render_to_response(
-        'front/home.html', 
-        context, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'front/home.html', context)
 
 
-
+# ------------------------------------------------------------------------------
+# CATEGORY
+# ------------------------------------------------------------------------------
 def category(request, category_slug, issue=None, is_preview=False, is_archive=False):
     """
     Displays the given category page.
@@ -269,44 +275,43 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
             varname = 'note_%s' % note_position.position.id
             if is_preview:
                 try:
-                    note = Note.preview.get(issues__id=issue.id, type=note_position.type, category=category)
-                    context[varname] = note
-                except MultipleObjectsReturned:
-                    note = Note.preview.filter(issues__id=issue.id, type=note_position.type, category=category)[0]
+                    note = Note.preview.filter(issues__id=issue.id, type=note_position.type, category=category)
+                    note = note.order_by('-publication_date')
+                    note = note[0:1].get()
                     context[varname] = note
                 except ObjectDoesNotExist:
                     context[varname] = None
             else:
                 try:
-                    note = Note.published.get(issues__id=issue.id, type=note_position.type, category=category)
-                    context[varname] = note
-                except MultipleObjectsReturned:
-                    note = Note.published.filter(issues__id=issue.id, type=note_position.type, category=category)[0]
+                    note = Note.published.filter(issues__id=issue.id, type=note_position.type, category=category)
+                    note = note.order_by('-publication_date')
+                    note = note[0:1].get()
                     context[varname] = note
                 except ObjectDoesNotExist:
                     context[varname] = None
     if is_preview:
         try:
-            context['article'] = Article.preview.get(issues__id=issue.id, category__slug=category_slug)
-        except MultipleObjectsReturned:
-            context['article'] = Article.preview.filter(issues__id=issue.id, category__slug=category_slug)[0]
+            article = Article.preview.filter(issues__id=issue.id, category__slug=category_slug)
+            article = article.order_by('-publication_date')
+            article = article[0:1].get()
+            context['article'] = article
         except ObjectDoesNotExist:
             context['article'] = None
     else:
         try:
-            context['article'] = Article.published.get(issues__id=issue.id, category__slug=category_slug)
-        except MultipleObjectsReturned:
-            context['article'] = Article.published.filter(issues__id=issue.id, category__slug=category_slug)[0]
+            article = Article.published.filter(issues__id=issue.id, category__slug=category_slug)
+            article = article.order_by('-publication_date')
+            article = article[0:1].get()
+            context['article'] = article
         except ObjectDoesNotExist:
             context['article'] = None
     
-    return render_to_response(
-        'front/category.html', 
-        context, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'front/category.html', context)
 
 
-
+# ------------------------------------------------------------------------------
+# REGIONS
+# ------------------------------------------------------------------------------
 def regions(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Regions" category page.
@@ -356,10 +361,9 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
     # Featured region note
     if featured_region:
         try:
-            featured_region_note = RegionNote.preview.get(issues__id=issue.id, region=featured_region.region)
-            context['featured_region_note'] = featured_region_note
-        except MultipleObjectsReturned:
-            featured_region_note = RegionNote.preview.filter(issues__id=issue.id, region=featured_region.region)[0]
+            featured_region_note = RegionNote.preview.filter(issues__id=issue.id, region=featured_region.region)
+            featured_region_note = featured_region_note.order_by('-publication_date')
+            featured_region_note = featured_region_note[0:1].get()
             context['featured_region_note'] = featured_region_note
         except ObjectDoesNotExist:
             context['featured_region_note'] = None
@@ -371,8 +375,8 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         try:
             regions_notes = RegionNote.preview.filter(issues__id=issue.id)
             if featured_region:
-                regions_notes.exclude(id=featured_region.id)
-            regions_notes.order_by('region__name')
+                regions_notes = regions_notes.exclude(id=featured_region.id)
+            regions_notes = regions_notes.order_by('region__name')
             context['regions_notes_1'] = regions_notes[0:10]
             context['regions_notes_2'] = regions_notes[10:20]
             context['regions_notes_3'] = regions_notes[20:]
@@ -384,8 +388,8 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         try:
             regions_notes = RegionNote.published.filter(issues__id=issue.id)
             if featured_region:
-                regions_notes.exclude(id=featured_region.id)
-            regions_notes.order_by('region__name')
+                regions_notes = regions_notes.exclude(id=featured_region.id)
+            regions_notes = regions_notes.order_by('region__name')
             context['regions_notes_1'] = regions_notes[0:10]
             context['regions_notes_2'] = regions_notes[10:20]
             context['regions_notes_3'] = regions_notes[20:]
@@ -394,13 +398,12 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
             context['regions_notes_2'] = None
             context['regions_notes_3'] = None
     
-    return render_to_response(
-        'front/regions.html',
-        context,
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'front/regions.html', context)
 
 
-
+# ------------------------------------------------------------------------------
+# VOYAGES
+# ------------------------------------------------------------------------------
 def voyages(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Voyages" category page.
@@ -443,37 +446,54 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
     
     if is_preview:
         try:
-            context['article'] = VoyagesArticle.preview.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['article'] = VoyagesArticle.preview.filter(issues__id=issue.id)[0]
+            article = VoyagesArticle.preview.filter(issues__id=issue.id)
+            article = article.order_by('-publication_date')
+            article = article[0:1].get()
+            context['article'] = article
         except ObjectDoesNotExist:
-            context['article'] = None
+            article = None
+            context['article'] = article
     else:
         try:
-            context['article'] = VoyagesArticle.published.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['article'] = VoyagesArticle.published.filter(issues__id=issue.id)[0]
+            article = VoyagesArticle.published.filter(issues__id=issue.id)
+            article = article.order_by('-publication_date')
+            article = article[0:1].get()
+            context['article'] = article
         except ObjectDoesNotExist:
-            context['article'] = None
+            article = None
+            context['article'] = article
         
     if is_preview:
         try:
-            context['archives'] = VoyagesArticle.preview.order_by('-publication_date')[:10]
+            archives = VoyagesArticle.preview.all()
+            archives = archives.exclude(id=article.id)
+            archives = archives.order_by('-publication_date')[:10]
+            context['archives'] = archives
+        except IndexError:
+            archives = None
+            context['archives'] = archives
         except ObjectDoesNotExist:
-            context['archives'] = None
+            archives = None
+            context['archives'] = archives
     else:
         try:
-            context['archives'] = VoyagesArticle.published.order_by('-publication_date')[:10]
+            archives = VoyagesArticle.published.all()
+            archives = archives.exclude(id=article.id)
+            archives = archives.order_by('-publication_date')[:10]
+            context['archives'] = archives
+        except IndexError:
+            archives = None
+            context['archives'] = archives
         except ObjectDoesNotExist:
-            context['archives'] = None
+            archives = None
+            context['archives'] = archives
         
-    return render_to_response(
-        'front/voyages.html', 
-        context, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'front/voyages.html', context)
 
 
-
+# ------------------------------------------------------------------------------
+# EPICURIEN
+# ------------------------------------------------------------------------------
 def epicurien(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Epicurien" category page.
@@ -522,91 +542,129 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
     # Côté fumeurs
     if is_preview:
         try:
-            context['article_cotefumeurs'] = EpicurienArticle.preview.get(issues__id=issue.id, type=type_cotefumeurs)
-        except MultipleObjectsReturned:
-            context['article_cotefumeurs'] = EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotefumeurs)[0]
+            article_cotefumeurs = EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotefumeurs)
+            article_cotefumeurs = article_cotefumeurs.order_by('-publication_date')
+            article_cotefumeurs = article_cotefumeurs[0:1].get()
+            context['article_cotefumeurs'] = article_cotefumeurs
         except ObjectDoesNotExist:
-            context['article_cotefumeurs'] = None
+            article_cotefumeurs = None
+            context['article_cotefumeurs'] = article_cotefumeurs
     else:
         try:
-            context['article_cotefumeurs'] = EpicurienArticle.published.get(issues__id=issue.id, type=type_cotefumeurs)
-        except MultipleObjectsReturned:
-            context['article_cotefumeurs'] = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotefumeurs)[0]
+            article_cotefumeurs = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotefumeurs)
+            article_cotefumeurs = article_cotefumeurs.order_by('-publication_date')
+            article_cotefumeurs = article_cotefumeurs[0:1].get()
+            context['article_cotefumeurs'] = article_cotefumeurs
         except ObjectDoesNotExist:
-            context['article_cotefumeurs'] = None
+            article_cotefumeurs = None
+            context['article_cotefumeurs'] = article_cotefumeurs
     
     if is_preview:
         try:
-            context['archives_cotefumeurs'] = EpicurienArticle.preview.filter(type=type_cotefumeurs).order_by('-publication_date')[:10]
+            archives_cotefumeurs = EpicurienArticle.preview.filter(type=type_cotefumeurs)
+            archives_cotefumeurs = archives_cotefumeurs.exclude(id=article_cotefumeurs.id)
+            archives_cotefumeurs = archives_cotefumeurs.order_by('-publication_date')[:10]
+            context['archives_cotefumeurs'] = archives_cotefumeurs
+        except IndexError:
+            archives_cotefumeurs = None
+            context['archives_cotefumeurs'] = archives_cotefumeurs
         except ObjectDoesNotExist:
-            context['archives_cotefumeurs'] = None
+            archives_cotefumeurs = None
+            context['archives_cotefumeurs'] = archives_cotefumeurs
     else:
         try:
-            context['archives_cotefumeurs'] = EpicurienArticle.published.filter(type=type_cotefumeurs).order_by('-publication_date')[:10]
+            archives_cotefumeurs = EpicurienArticle.published.filter(type=type_cotefumeurs)
+            archives_cotefumeurs = archives_cotefumeurs.exclude(id=article_cotefumeurs.id)
+            archives_cotefumeurs = archives_cotefumeurs.order_by('-publication_date')[:10]
+            context['archives_cotefumeurs'] = archives_cotefumeurs
         except ObjectDoesNotExist:
-            context['archives_cotefumeurs'] = None
+            archives_cotefumeurs = None
+            context['archives_cotefumeurs'] = archives_cotefumeurs
     
     # Côté Gourmets
     if is_preview:
         try:
-            context['article_cotegourmets'] = EpicurienArticle.preview.get(issues__id=issue.id, type=type_cotegourmets)
-        except MultipleObjectsReturned:
-            context['article_cotegourmets'] = EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotegourmets)[0]
+            article_cotegourmets =  EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotegourmets)
+            article_cotegourmets = article_cotegourmets.order_by('-publication_date')
+            article_cotegourmets = article_cotegourmets[0:1].get()
+            context['article_cotegourmets'] = article_cotegourmets
         except ObjectDoesNotExist:
-            context['article_cotegourmets'] = None
+            article_cotegourmets = None
+            context['article_cotegourmets'] = article_cotegourmets
     else:
         try:
-            context['article_cotegourmets'] = EpicurienArticle.published.get(issues__id=issue.id, type=type_cotegourmets)
-        except MultipleObjectsReturned:
-            context['article_cotegourmets'] = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotegourmets)[0]
+            article_cotegourmets = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotegourmets)
+            article_cotegourmets = article_cotegourmets.order_by('-publication_date')
+            article_cotegourmets = article_cotegourmets[0:1].get()
+            context['article_cotegourmets'] = article_cotegourmets
         except ObjectDoesNotExist:
-            context['article_cotegourmets'] = None
+            article_cotegourmets = None
+            context['article_cotegourmets'] = article_cotegourmets
     
     if is_preview:
         try:
-            context['archives_cotegourmets'] = EpicurienArticle.preview.filter(type=type_cotegourmets).order_by('-publication_date')[:10]
+            archives_cotegourmets = EpicurienArticle.preview.filter(type=type_cotegourmets)
+            archives_cotegourmets = archives.exclude(id=article_cotegourmets.id)
+            archives_cotegourmets = archives_cotegourmets.order_by('-publication_date')[:10]
+            context['archives_cotegourmets'] = archives_cotegourmets
         except ObjectDoesNotExist:
-            context['archives_cotegourmets'] = None
+            archives_cotegourmets = None
+            context['archives_cotegourmets'] = archives_cotegourmets
     else:
         try:
-            context['archives_cotegourmets'] = EpicurienArticle.published.filter(type=type_cotegourmets).order_by('-publication_date')[:10]
+            archives_cotegourmets = EpicurienArticle.published.filter(type=type_cotegourmets)
+            archives_cotegourmets = archives_cotegourmets.exclude(id=article_cotegourmets.id)
+            archives_cotegourmets = archives_cotegourmets.order_by('-publication_date')[:10]
+            context['archives_cotegourmets'] = archives_cotegourmets
         except ObjectDoesNotExist:
-            context['archives_cotegourmets'] = None
+            archives_cotegourmets = None
+            context['archives_cotegourmets'] = archives_cotegourmets
     
     # Côté Bar
     if is_preview:
         try:
-            context['article_cotebar'] = EpicurienArticle.preview.get(issues__id=issue.id, type=type_cotebar)
-        except MultipleObjectsReturned:
-            context['article_cotebar'] = EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotebar)[0]
+            article_cotebar = EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotebar)
+            article_cotebar = article_cotebar.order_by('-publication_date')
+            article_cotebar = article_cotebar[0:1].get()
+            context['article_cotebar'] = article_cotebar
         except ObjectDoesNotExist:
-            context['article_cotebar'] = None
+            article_cotebar = None
+            context['article_cotebar'] = article_cotebar
     else:
         try:
-            context['article_cotebar'] = EpicurienArticle.published.get(issues__id=issue.id, type=type_cotebar)
-        except MultipleObjectsReturned:
-            context['article_cotebar'] = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotebar)[0]
+            article_cotebar = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotebar)
+            article_cotebar = article_cotebar.order_by('-publication_date')
+            article_cotebar = article_cotebar[0:1].get()
+            context['article_cotebar'] = article_cotebar
         except ObjectDoesNotExist:
-            context['article_cotebar'] = None
+            article_cotebar = None
+            context['article_cotebar'] = article_cotebar
     
     if is_preview:
         try:
-            context['archives_cotebar'] = EpicurienArticle.preview.filter(type=type_cotebar).order_by('-publication_date')[:10]
+            archives_cotebar = EpicurienArticle.preview.filter(type=type_cotebar).order_by('-publication_date')
+            archives_cotebar = archives_cotebar.exclude(id=article_cotebar.id)
+            archives_cotebar = archives_cotebar.order_by('-publication_date')[:10]
+            context['archives_cotebar'] = archives_cotebar
         except ObjectDoesNotExist:
-            context['archives_cotebar'] = None
+            archives_cotebar = None
+            context['archives_cotebar'] = archives_cotebar
     else:
         try:
-            context['archives_cotebar'] = EpicurienArticle.published.filter(type=type_cotebar).order_by('-publication_date')[:10]
+            archives_cotebar = EpicurienArticle.published.filter(type=type_cotebar)
+            archives_cotebar = archives_cotebar.exclude(id=article_cotebar.id)
+            archives_cotebar = archives_cotebar.order_by('-publication_date')[:10]
+            context['archives_cotebar'] = archives_cotebar
         except ObjectDoesNotExist:
-            context['archives_cotebar'] = None
+            archives_cotebar = None
+            context['archives_cotebar'] = archives_cotebar
 
-    return render_to_response(
-        'front/epicurien.html', 
-        context, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'front/epicurien.html', context)
 
 
-
+# ------------------------------------------------------------------------------
+# ANGER
+# ------------------------------------------------------------------------------
 def anger(request, issue=None, is_preview=False, is_archive=False):
     """
     Displays "Anger" (Coup de Gueule) category page.
@@ -649,33 +707,42 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
     
     if is_preview:
         try:
-            context['article'] = AngerArticle.preview.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['article'] = AngerArticle.preview.filter(issues__id=issue.id)[0]
+            article = AngerArticle.preview.filter(issues__id=issue.id)
+            article = article.order_by('-publication_date')
+            article = article[0:1].get()
+            context['article'] = article
         except ObjectDoesNotExist:
-            context['article'] = None
+            article = None
+            context['article'] = article
     else:
         try:
-            context['article'] = AngerArticle.published.get(issues__id=issue.id)
-        except MultipleObjectsReturned:
-            context['article'] = AngerArticle.published.filter(issues__id=issue.id)[0]
+            article = AngerArticle.published.filter(issues__id=issue.id)
+            article = article.order_by('-publication_date')
+            article = article[0:1].get()
+            context['article'] = article
         except ObjectDoesNotExist:
-            context['article'] = None
+            article = None
+            context['article'] = article
     
     if is_preview:
         try:
-            context['archives'] = AngerArticle.preview.order_by('-publication_date')[:10]
+            archives = AngerArticle.preview.all()
+            archives = archives.exclude(id=article.id)
+            archives = archives.order_by('-publication_date')[:10]
+            context['archives'] = archives
         except ObjectDoesNotExist:
-            context['archives'] = None
+            archives = None
+            context['archives'] = archives
     else:
         try:
-            context['archives'] = AngerArticle.published.order_by('-publication_date')[:10]
+            archives = AngerArticle.published.all()
+            archives = archives.exclude(id=article.id)
+            archives = archives.order_by('-publication_date')[:10]
+            context['archives'] = archives
         except ObjectDoesNotExist:
-            context['archives'] = None
+            archives = None
+            context['archives'] = archives
         
-    return render_to_response(
-        'front/anger.html', 
-        context, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'front/anger.html', context)
 
 

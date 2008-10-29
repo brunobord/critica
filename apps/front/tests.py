@@ -208,7 +208,7 @@ class FrontTestCase(TestCase):
         self.assert_(response.context[0]['article'])
         self.assertEqual(hasattr(response.context[0]['article'], '__iter__'), False)
         # Archives
-        self.assert_(response.context[0]['archives'])
+        self.assert_(response.context[0].has_key('archives'))
         # 10 archives max.
         over_max_archives = False
         if len(response.context[0]['archives']) > 10:
@@ -241,21 +241,21 @@ class FrontTestCase(TestCase):
         # Archives
         over_max_archives = False
         # Archives cote fumeurs (max 10)
-        self.assert_(response.context[0]['archives_cotefumeurs'])
+        self.assert_(response.context[0].has_key('archives_cotefumeurs'))
         if len(response.context[0]['archives_cotefumeurs']) > 10:
             over_max_archives = True
         else:
             over_max_archives = False
         self.assertFalse(over_max_archives)
         # Archives cote gourmets (max 10)
-        self.assert_(response.context[0]['archives_cotegourmets'])
+        self.assert_(response.context[0].has_key('archives_cotegourmets'))
         if len(response.context[0]['archives_cotegourmets']) > 10:
             over_max_archives = True
         else:
             over_max_archives = False
         self.assertFalse(over_max_archives)
         # Archives cote bar (max 10)
-        self.assert_(response.context[0]['archives_cotebar'])
+        self.assert_(response.context[0].has_key('archives_cotebar'))
         if len(response.context[0]['archives_cotebar']) > 10:
             over_max_archives = True
         else:
@@ -280,7 +280,7 @@ class FrontTestCase(TestCase):
         self.assert_(response.context[0]['article'])
         self.assertEqual(hasattr(response.context[0]['article'], '__iter__'), False)
         # Archives (max 10)
-        self.assert_(response.context[0]['archives'])
+        self.assert_(response.context[0].has_key('archives'))
         if len(response.context[0]['archives']) > 10:
             over_max_archives = True
         else:
