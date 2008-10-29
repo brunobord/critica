@@ -13,12 +13,17 @@ def current_issue(request):
     
     """
     context = {}
+    try:
+        current_issue = Issue.published.all()[0]
+        context['current_issue'] = current_issue
+    except IndexError:
+        context['current_issue'] = None
     
-    current_issue = Issue.published.all()[0:1]
-    context['current_issue'] = current_issue
-    
-    issuepreviews = Issue.objects.all()[:20]
-    context['issuepreviews'] = issuepreviews
-    
+    try:
+        issuepreviews = Issue.objects.all()[:20]
+        context['issuepreviews'] = issuepreviews
+    except IndexError:
+        context['issuepreviews'] = None
+        
     return context
 

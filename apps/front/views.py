@@ -664,12 +664,12 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
     
     if is_preview:
         try:
-            context['archives'] = AngerArticle.preview.order_by('-publication_date')
+            context['archives'] = AngerArticle.preview.order_by('-publication_date')[:10]
         except ObjectDoesNotExist:
             context['archives'] = None
     else:
         try:
-            context['archives'] = AngerArticle.published.order_by('-publication_date')
+            context['archives'] = AngerArticle.published.order_by('-publication_date')[:10]
         except ObjectDoesNotExist:
             context['archives'] = None
         
