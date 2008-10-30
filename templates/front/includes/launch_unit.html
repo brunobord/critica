@@ -1,8 +1,12 @@
-<div id="panel" style="width:1000px; height:440px; display:block; overflow:hidden;">
-	<div id="flashcontent"></div>
-	<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lu.panel-control.js"></script>	
-	<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/utils/swfobject.js"></script>	
-	<script type="text/javascript">
-		swfobject.embedSWF("{{ MEDIA_URL }}critica/launch_unit.swf", "flashcontent", "1000", "440", "9.0.0", false, {delay:"6"} , {wmode: "transparent"});
-	</script>
+{% if banner %}
+<div id="launch-unit">
+    <div id="panel" style="width:1000px; height:440px; display:block; overflow:hidden;">
+    	<div id="flashcontent"></div>
+    	<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/lu.panel-control.js"></script>	
+    	<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/utils/swfobject.js"></script>	
+    	<script type="text/javascript">
+    		swfobject.embedSWF("{{ banner.banner.url }}", "flashcontent", "1000", "440", "9.0.0", false, {delay:"6"} , {wmode: "transparent"});
+    	</script>
+    </div>
 </div>
+{% endif %}
