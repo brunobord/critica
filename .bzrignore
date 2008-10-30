@@ -2,4 +2,6 @@ settings.py
 manage.py
 media
 media/*
+db_dumps
+db_dumps/*
 *.pyc
