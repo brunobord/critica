@@ -77,6 +77,7 @@ def sendfriend_send_mail(form):
     
     context['items'] = items
     context['sender'] = form.cleaned_data['sender']
+    context['message'] = form.cleaned_data['message']
     
     body = render_to_string('sendfriend/email.html', context)
     subject = u'Critic@...'
