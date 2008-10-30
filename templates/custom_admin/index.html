@@ -189,7 +189,39 @@
         </table>
     </div>
     {% endif %}
-    
+
+    {% if perms.users.is_editor or perms.polls.add_poll or perms.polls.change_poll %}
+    <div class="module">
+        <table summary="Sondages">
+        <caption>Sondages</caption>
+            {% if perms.users.is_editor or perms.polls.add_poll or perms.polls.change_poll %}
+            <tr>
+                <th scope="row"><a href="polls/poll/">Sondages</a></th>
+                <td><a href="polls/poll/add/" class="addlink">Ajouter</a></td>
+                <td><a href="polls/poll/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+            
+            {% if perms.users.is_editor or perms.polls.add_choice or perms.polls.change_choice %}
+            <tr>
+                <th scope="row"><a href="polls/choice/">Choix</a></th>
+                <td><a href="polls/choice/add/" class="addlink">Ajouter</a></td>
+                <td><a href="polls/choice/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+
+            {% if perms.users.is_editor or perms.polls.add_vote or perms.polls.change_vote %}
+            <tr>
+                <th scope="row"><a href="polls/vote/">Votes</a></th>
+                <td><a href="polls/vote/add/" class="addlink">Ajouter</a></td>
+                <td><a href="polls/vote/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
+
+        </table>
+    </div>
+    {% endif %}
+
     {% if perms.users.is_editor %}
     <div class="module">
         <table summary="Positions">

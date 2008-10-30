@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Critica Engine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-30 15:25+0100\n"
+"PO-Revision-Date: 2008-09-22 11:11+0100\n"
+"Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
+"Language-Team: Interface IP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: models.py:18
+msgid "submitter"
+msgstr "auteur"
+
+#: models.py:19
+msgid "title"
+msgstr "titre"
+
+#: models.py:19
+msgid "255 characters max."
+msgstr "255 caractères max."
+
+#: models.py:20
+msgid "slug"
+msgstr "permalien"
+
+#: models.py:21 models.py:102
+msgid "creation date"
+msgstr "date de création"
+
+#: models.py:22
+msgid "modification date"
+msgstr "date de modification"
+
+#: models.py:23
+msgid "issues"
+msgstr "éditions"
+
+#: models.py:23
+msgid "Please, select one or several issues."
+msgstr "Sélectionnez une ou plusieurs éditions."
+
+#: models.py:24
+msgid "tags"
+msgstr "tags"
+
+#: models.py:24
+msgid "Please, enter tags separated by commas or spaces."
+msgstr "Entrez des tags séparés par des virgules ou des espaces."
+
+#: models.py:25
+msgid "published"
+msgstr "publié"
+
+#: models.py:25
+msgid "Is it ready to be published?"
+msgstr "Est-il prêt à être publié ?"
+
+#: models.py:36 models.py:63 models.py:100
+msgid "poll"
+msgstr "sondage"
+
+#: models.py:37
+msgid "polls"
+msgstr "sondages"
+
+#: models.py:63
+msgid "Please, select or add a new poll."
+msgstr "Sélectionnez ou ajoutez un nouveau sondage."
+
+#: models.py:64 models.py:74 models.py:101
+msgid "choice"
+msgstr "choix"
+
+#: models.py:64
+msgid "Enter a choice for this poll."
+msgstr "Entrez un choix pour ce sondage."
+
+#: models.py:75
+msgid "choices"
+msgstr "choix"
+
+#: models.py:103
+msgid "Submitter IP address"
+msgstr "Adresse IP"
+
+#: models.py:111
+msgid "vote"
+msgstr "vote"
+
+#: models.py:112
+msgid "votes"
+msgstr "votes"
+
