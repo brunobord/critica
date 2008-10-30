@@ -2,7 +2,6 @@
 	<h2><span>{{ note.type.name }}</span></h2>
 	<div class="note-{{ note.id }}">
 	    <h3><a href="#" class="note-show">{{ note.title }}</a></h3>
-        <p class="author">Par <strong>{% if note.author_nickname %}{{ note.author_nickname.nickname }}{% else %}{{ note.author.get_full_name }}{% endif %}</strong></p>
 	    <!--<p class="summary"></p>-->
 	    <div class="content">{{ note.content|safe }}</div>
 	    

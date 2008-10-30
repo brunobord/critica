@@ -1,6 +1,6 @@
 {% load image_thumbnail %}
 
-<div class="articleSection">
+<div class="articleSection article-{{ article.id }}">
 
     {% if is_preview %}
 	   <h2><span><a href="{% url issuepreview_category issue.secret_key,article.category.slug %}">{{ article.category.name }}</a></span></h2>
@@ -25,7 +25,23 @@
         
         {% include "front/includes/article_illustration_small.html" %}
 
-        <p>{{ article.summary|safe }}</p>
+        <div class="summary"></div>
+        <div class="content"><p>{{ article.summary|safe }}</p></div>
+
+        <script type="text/javascript">
+            // <![CDATA[
+                $(document).ready(function() {
+                    $('.article-{{ article.id }} .content').hide();
+                    $('.article-{{ article.id }} .summary').html('<p>{{ article.summary|striptags|truncatewords:45|safe|escapejs }}</p>');
+                    $('.article-{{ article.id }} h3 a').click(function() {
+                        $('.article-{{ article.id }} .summary').slideToggle('fast');
+                        $('.article-{{ article.id }} .content').slideToggle('fast');
+                        return false;
+                    });
+                });
+        // ]]>
+        </script>
+        
 	</div>
 
     {% if is_preview %}
