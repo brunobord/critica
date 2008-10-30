@@ -34,27 +34,27 @@ def tags(request):
     context['is_current'] = True
     
     all_tags = []
-    article_tags = Tag.objects.usage_for_model(Article, counts=True)
+    article_tags = Tag.objects.usage_for_queryset(Article.published.all(), counts=True)
     for tag in article_tags:
         all_tags.append(tag)
         
-    note_tags = Tag.objects.usage_for_model(Note, counts=True)
+    note_tags = Tag.objects.usage_for_queryset(Note.published.all(), counts=True)
     for tag in note_tags:
         all_tags.append(tag)
     
-    region_tags = Tag.objects.usage_for_model(RegionNote, counts=True)
+    region_tags = Tag.objects.usage_for_queryset(RegionNote.published.all(), counts=True)
     for tag in region_tags:
         all_tags.append(tag)
         
-    voyages_tags = Tag.objects.usage_for_model(VoyagesArticle, counts=True)
+    voyages_tags = Tag.objects.usage_for_queryset(VoyagesArticle.published.all(), counts=True)
     for tag in voyages_tags:
         all_tags.append(tag)
         
-    epicurien_tags = Tag.objects.usage_for_model(EpicurienArticle, counts=True)
+    epicurien_tags = Tag.objects.usage_for_queryset(EpicurienArticle.published.all(), counts=True)
     for tag in epicurien_tags:
         all_tags.append(tag)
         
-    anger_tags = Tag.objects.usage_for_model(AngerArticle, counts=True)
+    anger_tags = Tag.objects.usage_for_queryset(AngerArticle.published.all(), counts=True)
     for tag in anger_tags:
         all_tags.append(tag)
         

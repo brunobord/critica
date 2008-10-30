@@ -185,35 +185,39 @@ def home(request, issue=None, is_preview=False, is_archive=False):
         
     # Tags 
     all_tags = []
-    article_tags = Tag.objects.usage_for_model(Article, counts=True)
+    article_tags = Tag.objects.usage_for_queryset(Article.published.all(), counts=True)
     for tag in article_tags:
         all_tags.append(tag)
         
-    note_tags = Tag.objects.usage_for_model(Note, counts=True)
+    note_tags = Tag.objects.usage_for_queryset(Note.published.all(), counts=True)
     for tag in note_tags:
         all_tags.append(tag)
     
-    region_tags = Tag.objects.usage_for_model(RegionNote, counts=True)
+    region_tags = Tag.objects.usage_for_queryset(RegionNote.published.all(), counts=True)
     for tag in region_tags:
         all_tags.append(tag)
         
-    voyages_tags = Tag.objects.usage_for_model(VoyagesArticle, counts=True)
+    voyages_tags = Tag.objects.usage_for_queryset(VoyagesArticle.published.all(), counts=True)
     for tag in voyages_tags:
         all_tags.append(tag)
         
-    epicurien_tags = Tag.objects.usage_for_model(VoyagesArticle, counts=True)
+    epicurien_tags = Tag.objects.usage_for_queryset(VoyagesArticle.published.all(), counts=True)
     for tag in epicurien_tags:
         all_tags.append(tag)
         
-    anger_tags = Tag.objects.usage_for_model(AngerArticle, counts=True)
+    anger_tags = Tag.objects.usage_for_queryset(AngerArticle.published.all(), counts=True)
     for tag in anger_tags:
         all_tags.append(tag)
         
     tags = calculate_cloud(all_tags, steps=10)
-    tagcloud = []
-    for tag in tags:
-        if tag.font_size > 2:
-            tagcloud.append(tag)
+    if len(tags) < 40:
+        tagcloud = tags
+    else:
+        tagcloud = []
+        for tag in tags:
+            if tag.count > 2:
+                tagcloud.append(tag)
+                
     context['tagcloud'] = tagcloud
     
     return direct_to_template(request, 'front/home.html', context)
