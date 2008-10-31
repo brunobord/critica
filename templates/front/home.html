@@ -1,6 +1,6 @@
 {% extends "layout/base.html" %}
 
-{% load image_thumbnail ads_extra %}
+{% load image_thumbnail ads_extra polls_extra %}
 
 {% block title %}Accueil{% endblock %}
 
@@ -217,7 +217,7 @@
             
             <!-- POLL -->
             <div id="surveySection">
-                {% include "front/includes/poll.html" %}
+                {% display_poll %}
             </div>
             <!-- // POLL -->
             

@@ -42,6 +42,13 @@ urlpatterns += patterns('',
     url(r'^rss/$', 'critica.apps.syndication.views.rss_index', name='rss'),
 )
 
+# Polls
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url('^sondage/vote/$', 'critica.apps.polls.views.poll_vote', name='poll_vote'),
+    url('^sondage/(?P<poll_slug>[-\w]+)/$', 'critica.apps.polls.views.poll_results', name='poll_results'),
+)
+
 # Newsletter
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',

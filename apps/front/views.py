@@ -77,6 +77,18 @@ def home(request, issue=None, is_preview=False, is_archive=False):
     else:
         is_current = False
         context['is_current'] = is_current
+        
+    # Poll
+    from critica.apps.polls.models import Poll
+    from critica.apps.polls.models import Choice
+    from critica.apps.polls.models import Vote
+    if request.method == 'POST':
+        if request.POST.has_key('poll'):
+            poll = Poll.objects.get(pk=request.POST['id_poll'])
+            choice = Choice.objects.get(pk=request.POST['id_choice'])
+            ip_address = request.POST['ip_address']
+            vote = Vote(poll=poll, choice=choice, ip_address=ip_address)
+            vote.save()
 
     # Generic articles
     category_positions = IssueCategoryPosition.objects.filter(issue=issue)

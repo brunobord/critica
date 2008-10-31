@@ -83,12 +83,15 @@ class Choice(models.Model):
         return u'%s' % self.choice
 
 
-    def get_vote_count(self):
+    def get_vote_percentage(self):
         """
-        Returns number of votes.
+        Returns number of votes in percentage.
         
         """
-        return self.vote_set.all().count()
+        poll_count = self.poll.vote_set.all().count()
+        choice_count = self.vote_set.all().count()
+        percentage = (1.0 * choice_count / poll_count) * 100
+        return round(percentage)
 
 
 
@@ -97,7 +100,7 @@ class Vote(models.Model):
     Vote.
     
     """
-    poll          = models.ForeignKey(Poll, verbose_name=_('poll'), unique=True)
+    poll          = models.ForeignKey(Poll, verbose_name=_('poll'))
     choice        = models.ForeignKey(Choice, verbose_name=_('choice'))
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True)
     ip_address    = models.IPAddressField(verbose_name=_('Submitter IP address'))
