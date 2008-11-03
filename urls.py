@@ -17,8 +17,9 @@ from critica.apps.syndication.feeds import LatestByCategoryRss
 # ------------------------------------------------------------------------------
 admin.autodiscover()
 urlpatterns = patterns('',
-    (r'^admin/dashboard/(?P<issue>\d+)/$', dashboard),
-    (r'^admin/dashboard/$', dashboard),
+    (r'^admin/ads/adbanner/(?P<id>\d+)/preview/$', 'critica.apps.ads.views.adbanner_preview'), 
+    (r'^admin/dashboard/(?P<issue>\d+)/$', 'critica.apps.custom_admin.views.dashboard'),
+    (r'^admin/dashboard/$', 'critica.apps.custom_admin.views.dashboard'),
     (r'^admin/(.*)', custom_site.root),
     (r'^django-admin/(.*)', admin.site.root),
 )

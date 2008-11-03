@@ -112,7 +112,7 @@ custom_site.register(AdBannerPosition, AdBannerPositionAdmin)
 class AdDefaultBannerAdmin(admin.ModelAdmin):
     fieldsets = (
         (_('Banner'), {
-            'fields': ('banner', 'positions', 'link', 'description'),
+            'fields': ('banner', 'format', 'positions', 'link', 'description'),
         }),
     )
     list_display = ('banner', 'ald_positions')
@@ -154,7 +154,7 @@ class AdBannerAdmin(admin.ModelAdmin):
             'fields': ('campaign', 'type'),
         }),
         (_('Banner'), {
-            'fields': ('banner', 'positions', 'link', 'description'),
+            'fields': ('banner', 'format', 'positions', 'link', 'description'),
         }),
         (_('During'), {
             'fields': ('starting_date', 'ending_date'),

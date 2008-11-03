@@ -18,18 +18,20 @@ class Customer(models.Model):
     
     """
     name              = models.CharField(_('name'), max_length=255, help_text=_('Please, enter the customer name.'), unique=True)
-    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True)
     
     objects = models.Manager()
-    
+
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('customer')
+        verbose_name        = _('customer')
         verbose_name_plural = _('customers')
+
         
     def __unicode__(self):
         """ 
@@ -47,19 +49,21 @@ class AdCampaign(models.Model):
     """
     customer          = models.ForeignKey('ads.Customer', verbose_name=_('customer'), help_text=_('Please, select or add a customer.'))
     name              = models.CharField(_('name'), max_length=255, help_text=_('Please, enter the campaign name.'))
-    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True)
     
     objects = models.Manager()
-    
+
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('ad campaign')
+        verbose_name        = _('ad campaign')
         verbose_name_plural = _('ad campaigns')
-        unique_together = (('customer', 'name'),)
+        unique_together     = (('customer', 'name'),)
+
         
     def __unicode__(self):
         """ 
@@ -79,26 +83,29 @@ class AdFormat(models.Model):
     slug              = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
     width             = models.IntegerField(_('width'), help_text=_('Please, enter the format width.'))
     height            = models.IntegerField(_('height'), help_text=_('Please, enter the format height.'))
-    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True)
     
     objects = models.Manager()
-    
+
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('ad format')
+        verbose_name        = _('ad format')
         verbose_name_plural = _('ad formats')
-        unique_together = (('width', 'height'),)
-        
+        unique_together     = (('width', 'height'),)
+
+ 
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s - %sx%s' % (self.name, self.width, self.height)
+
         
     def save(self):
         """ 
@@ -121,13 +128,15 @@ class AdType(models.Model):
     
     objects = models.Manager()
 
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('ad type')
+        verbose_name        = _('ad type')
         verbose_name_plural = _('ad types')
+
         
     def __unicode__(self):
         """ 
@@ -159,13 +168,15 @@ class AdPage(models.Model):
 
     objects = models.Manager()
 
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('ad page')
+        verbose_name        = _('ad page')
         verbose_name_plural = _('ad pages')
+
         
     def __unicode__(self):
         """ 
@@ -173,7 +184,8 @@ class AdPage(models.Model):
         
         """
         return u'%s' % self.name
-        
+
+
     def save(self):
         """ 
         Object pre-saving / post-saving operations.
@@ -196,20 +208,23 @@ class AdLocation(models.Model):
     
     objects = models.Manager()
 
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('ad location')
+        verbose_name        = _('ad location')
         verbose_name_plural = _('ad locations')
-        
+
+
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s' % self.name
+
         
     def save(self):
         """ 
@@ -218,6 +233,7 @@ class AdLocation(models.Model):
         """
         self.slug = slugify(self.name)
         super(AdLocation, self).save()
+
 
 
 # Banners (images / swf)
@@ -231,26 +247,28 @@ class AdBannerPosition(models.Model):
     page              = models.ForeignKey('ads.AdPage', verbose_name=_('page'), help_text=_('Please, select a page where to display the ad.'))
     location          = models.ForeignKey('ads.AdLocation', verbose_name=_('location'), help_text=_('Please, select a location for this ad.'))
     price             = models.DecimalField(_('price'), max_digits=10, decimal_places=2, null=True, blank=True, help_text=_('Please, enter its price by month.'))
-    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True)
     
     objects = models.Manager()
+
 
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('ad banner position')
+        verbose_name        = _('ad banner position')
         verbose_name_plural = _('ad banner positions')
-        unique_together = (('page', 'location'),)
-        
+        unique_together     = (('page', 'location'),)
+
+
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
-        return u'%s - %s (%s)' % (self.page, self.location, self.format)
+        return u'%s - %s -- %sx%s' % (self.page, self.location, self.format.width, self.format.height)
 
 
 
@@ -262,6 +280,7 @@ class AdDefaultBanner(models.Model):
     banner            = models.FileField(upload_to=ads_settings.DEFAULT_BANNER_UPLOAD_PATH, verbose_name=_('banner'), help_text=_('Please, select a banner to upload (image or swf).'))
     banner_extension  = models.CharField(_('banner extension'), max_length=5, blank=True, editable=False)
     banner_type       = models.CharField(_('banner type'), max_length=15, blank=True, editable=False)
+    format            = models.ForeignKey('ads.AdFormat', verbose_name=_('format'), help_text=_('Please, select the format of your banner.'))
     submitter         = models.ForeignKey('auth.User', verbose_name=_('submitter'))
     positions         = models.ManyToManyField('ads.AdBannerPosition', verbose_name=_('positions'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
     description       = models.TextField(_('description'), blank=True, help_text=_('You can enter a short description (optional).'))
@@ -271,21 +290,24 @@ class AdDefaultBanner(models.Model):
     
     objects = models.Manager()
 
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('default ad banner')
+        verbose_name        = _('default ad banner')
         verbose_name_plural = _('default ad banners')
-        
+
+
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s' % (self.banner)
-        
+
+
     def save(self):
         """ 
         Object pre-saving / post-saving operations.
@@ -315,34 +337,38 @@ class AdBanner(models.Model):
     banner            = models.FileField(upload_to=ads_settings.BANNER_UPLOAD_PATH, max_length=200, verbose_name=_('banner'), help_text=_('Please, select a banner to upload (image or swf).'))
     banner_extension  = models.CharField(_('banner extension'), max_length=5, blank=True, editable=False)
     banner_type       = models.CharField(_('banner type'), max_length=15, blank=True, editable=False)
+    format            = models.ForeignKey('ads.AdFormat', verbose_name=_('format'), help_text=_('Please, select the format of your banner.'))
     submitter         = models.ForeignKey('auth.User', verbose_name=_('submitter'))
     campaign          = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
     type              = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
     positions         = models.ManyToManyField('ads.AdBannerPosition', verbose_name=_('positions'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
     description       = models.TextField(_('description'), blank=True, help_text=_('You can enter a short description (optional).'))
     link              = models.URLField(_('link'), blank=True, help_text=_('When people will click on this ad, they will be redirected to this link (optional).'))
-    starting_date     = models.DateField(_('starting date'), blank=True)
-    ending_date       = models.DateField(_('ending date'), blank=True)
-    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    starting_date     = models.DateField(_('starting date'), blank=True, null=True)
+    ending_date       = models.DateField(_('ending date'), blank=True, null=True)
+    creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True)
+    modification_date = models.DateTimeField(_('modification date'), auto_now=True)
     
     objects = models.Manager()
+
 
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('banner')
+        verbose_name        = _('banner')
         verbose_name_plural = _('banners')
-        
+
+
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s' % (self.banner)
-        
+
+
     def save(self):
         """ 
         Object pre-saving / post-saving operations.
@@ -379,15 +405,17 @@ class AdCarouselPosition(models.Model):
     
     objects = models.Manager()
 
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('carousel position')
+        verbose_name        = _('carousel position')
         verbose_name_plural = _('carousel positions')
-        unique_together = (('page', 'location'),)
-        
+        unique_together     = (('page', 'location'),)
+
+
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
@@ -414,13 +442,15 @@ class AdCarousel(models.Model):
     
     objects = models.Manager()
 
+
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('ad carousel')
+        verbose_name        = _('ad carousel')
         verbose_name_plural = _('ad carousels')
+
         
     def __unicode__(self):
         """ 

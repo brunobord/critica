@@ -29,6 +29,9 @@ class CustomBannerForm(forms.ModelForm):
         if self.cleaned_data.has_key('banner'):
             banner = self.cleaned_data['banner']
             
+        if self.cleaned_data.has_key('format'):
+            format = self.cleaned_data['format']
+            
         if self.cleaned_data.has_key('positions'):
             positions = self.cleaned_data['positions']
         
@@ -54,10 +57,11 @@ class CustomBannerForm(forms.ModelForm):
             is_image = True
             
         # Check image / swf format
-        if positions and is_valid_extension:
-            position = positions[0]
-            format_width = position.format.width
-            format_height = position.format.height
+        if positions and format and is_valid_extension:
+            for position in positions:
+                if position.format != format:
+                    msg = _('Please, only select a position related to the format.')
+                    self._errors['positions'] = ErrorList([msg])
             if hasattr(banner, 'temporary_file_path'):
                 file = banner.temporary_file_path()
             else:
@@ -72,7 +76,7 @@ class CustomBannerForm(forms.ModelForm):
                 trial_image = hexagonit.swfheader.parse(file)
                 banner_width = trial_image['width']
                 banner_height = trial_image['height']
-            if banner_width != format_width and banner_height != format_height:
+            if banner_width != format.width and banner.height != format_height:
                 msg = _('Please, upload an image or a swf file in the correct format.')
                 self._errors['banner'] = ErrorList([msg])
         
