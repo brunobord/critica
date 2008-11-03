@@ -482,7 +482,8 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
     if is_preview:
         try:
             archives = VoyagesArticle.preview.all()
-            archives = archives.exclude(id=article.id)
+            if hasattr(article, 'id'):
+                archives = archives.exclude(id=article.id)
             archives = archives.order_by('-publication_date')[:10]
             context['archives'] = archives
         except IndexError:
@@ -578,7 +579,8 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
     if is_preview:
         try:
             archives_cotefumeurs = EpicurienArticle.preview.filter(type=type_cotefumeurs)
-            archives_cotefumeurs = archives_cotefumeurs.exclude(id=article_cotefumeurs.id)
+            if hasattr(article_cotefumeurs, 'id'):
+                archives_cotefumeurs = archives_cotefumeurs.exclude(id=article_cotefumeurs.id)
             archives_cotefumeurs = archives_cotefumeurs.order_by('-publication_date')[:10]
             context['archives_cotefumeurs'] = archives_cotefumeurs
         except IndexError:
@@ -620,7 +622,8 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
     if is_preview:
         try:
             archives_cotegourmets = EpicurienArticle.preview.filter(type=type_cotegourmets)
-            archives_cotegourmets = archives_cotegourmets.exclude(id=article_cotegourmets.id)
+            if hasattr(article_cotegourmets, 'id'):
+                archives_cotegourmets = archives_cotegourmets.exclude(id=article_cotegourmets.id)
             archives_cotegourmets = archives_cotegourmets.order_by('-publication_date')[:10]
             context['archives_cotegourmets'] = archives_cotegourmets
         except ObjectDoesNotExist:
@@ -659,7 +662,8 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
     if is_preview:
         try:
             archives_cotebar = EpicurienArticle.preview.filter(type=type_cotebar).order_by('-publication_date')
-            archives_cotebar = archives_cotebar.exclude(id=article_cotebar.id)
+            if hasattr(article_cotebar, 'id'):
+                archives_cotebar = archives_cotebar.exclude(id=article_cotebar.id)
             archives_cotebar = archives_cotebar.order_by('-publication_date')[:10]
             context['archives_cotebar'] = archives_cotebar
         except ObjectDoesNotExist:
@@ -743,7 +747,8 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
     if is_preview:
         try:
             archives = AngerArticle.preview.all()
-            archives = archives.exclude(id=article.id)
+            if hasattr(article, 'id'):
+                archives = archives.exclude(id=article.id)
             archives = archives.order_by('-publication_date')[:10]
             context['archives'] = archives
         except ObjectDoesNotExist:

@@ -25,7 +25,26 @@ class CustomBannerForm(forms.ModelForm):
         abstract = True
         
     def clean(self):
-        # Cleaned datas
+        """
+        Form validation process.
+        
+        Process::
+        
+            is_valid_extension
+                True if extension is OK.
+                
+            is_valid_position_format
+                True if selected format matches the position format.
+                
+            is_valid_image_format
+                True if image format matches the selected format.
+                
+            is_valid_position_date
+                True if position and date are available.
+        
+        """
+        # Cleaned data
+        # ----------------------------------------------------------------------
         if self.cleaned_data.has_key('banner'):
             banner = self.cleaned_data['banner']
             
@@ -41,12 +60,13 @@ class CustomBannerForm(forms.ModelForm):
         if self.cleaned_data.has_key('ending_date'):
             ending_date = self.cleaned_data['ending_date']
             
-        # Extensions
+        # Validation of extension
+        # ----------------------------------------------------------------------
+        is_valid_extension = True
+        
         file_exts = ('.png', '.jpg', '.jpeg', '.gif', '.swf')
         image_exts = ('.png', '.jpg', '.jpeg', '.gif')
         
-        # Check banner extension
-        is_valid_extension = True
         from os.path import splitext
         if splitext(banner.name)[1].lower() not in file_exts:
             msg = _('Sorry, only these file types are supported: .png, .jpg, .jpeg, .gif and .swf. Please, upload a new one.')
@@ -56,12 +76,22 @@ class CustomBannerForm(forms.ModelForm):
         if splitext(banner.name)[1].lower() in image_exts:
             is_image = True
             
-        # Check image / swf format
-        if positions and format and is_valid_extension:
+        # Validation of position <=> format
+        # ----------------------------------------------------------------------
+        is_valid_position_format = True
+        
+        if positions and is_valid_extension:
             for position in positions:
                 if position.format != format:
                     msg = _('Please, only select a position related to the format.')
                     self._errors['positions'] = ErrorList([msg])
+                    is_valid_position_format = False
+        
+        # Validation of real image format
+        # ----------------------------------------------------------------------
+        is_valid_image_format = True
+        
+        if is_valid_extension and is_valid_position_format:
             if hasattr(banner, 'temporary_file_path'):
                 file = banner.temporary_file_path()
             else:
@@ -76,9 +106,23 @@ class CustomBannerForm(forms.ModelForm):
                 trial_image = hexagonit.swfheader.parse(file)
                 banner_width = trial_image['width']
                 banner_height = trial_image['height']
+            
             if banner_width != format.width and banner.height != format_height:
                 msg = _('Please, upload an image or a swf file in the correct format.')
                 self._errors['banner'] = ErrorList([msg])
+                is_valid_image_format = False
+                
+        # Validation of dates
+        # ----------------------------------------------------------------------
+        if starting_date and ending_date and positions:
+            current_positions = []
+            for p in self.cleaned_data['positions']:
+                current_positions.append(p.id)
+            existing_banners = AdBanner.objects.filter(positions__id__in=current_positions)
+            existing_banners = existing_banners.filter(starting_date__lt=starting_date, ending_date__gt=ending_date)
+            if existing_banners:
+                msg = _('Dates already taken. Please, select other dates.')
+                self._errors['starting_date'] = ErrorList([msg])
         
         return self.cleaned_data
 
