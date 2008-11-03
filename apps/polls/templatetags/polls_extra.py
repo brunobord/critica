@@ -34,6 +34,6 @@ def display_poll(context):
     return {
         'poll': poll,
         'MEDIA_URL': context['MEDIA_URL'],
-        'REMOTE_ADDR': request.META['REMOTE_ADDR']
+        'REMOTE_ADDR': request.META.get('REMOTE_ADDR')
     }
 
