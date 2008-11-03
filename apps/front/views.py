@@ -620,7 +620,7 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
     if is_preview:
         try:
             archives_cotegourmets = EpicurienArticle.preview.filter(type=type_cotegourmets)
-            archives_cotegourmets = archives.exclude(id=article_cotegourmets.id)
+            archives_cotegourmets = archives_cotegourmets.exclude(id=article_cotegourmets.id)
             archives_cotegourmets = archives_cotegourmets.order_by('-publication_date')[:10]
             context['archives_cotegourmets'] = archives_cotegourmets
         except ObjectDoesNotExist:
