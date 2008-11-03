@@ -36,60 +36,54 @@ def search(request):
         items = []
         from django.db.models import Q
         
-        articles = Article.objects.filter(
+        articles = Article.published.filter(
             Q(title__icontains=search_item) | 
             Q(summary__icontains=search_item) | 
             Q(content__icontains=search_item) |
-            Q(tags__icontains=search_item) & 
-            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+            Q(tags__icontains=search_item)).order_by('-publication_date')
         if articles:
             for article in articles:
                 items.append((article.id, article))
         
-        notes = Note.objects.filter(
+        notes = Note.published.filter(
             Q(title__icontains=search_item) | 
             Q(content__icontains=search_item) |
-            Q(tags__icontains=search_item) & 
-            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+            Q(tags__icontains=search_item)).order_by('-publication_date')
         if notes:
             for note in notes:
                 items.append((note.id, note))
             
-        regions = RegionNote.objects.filter(
+        regions = RegionNote.published.filter(
             Q(title__icontains=search_item) | 
             Q(content__icontains=search_item) |
-            Q(tags__icontains=search_item) & 
-            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+            Q(tags__icontains=search_item)).order_by('-publication_date')
         if regions:
             for region in regions:
                 items.append((region.id, region))
                 
-        voyages = VoyagesArticle.objects.filter(
+        voyages = VoyagesArticle.published.filter(
             Q(title__icontains=search_item) | 
             Q(summary__icontains=search_item) | 
             Q(content__icontains=search_item) |
-            Q(tags__icontains=search_item) & 
-            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+            Q(tags__icontains=search_item)).order_by('-publication_date')
         if voyages:
             for voyage in voyages:
                 items.append((voyage.id, voyage))
                 
-        epicurien = EpicurienArticle.objects.filter(
+        epicurien = EpicurienArticle.published.filter(
             Q(title__icontains=search_item) | 
             Q(summary__icontains=search_item) | 
             Q(content__icontains=search_item) |
-            Q(tags__icontains=search_item) & 
-            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+            Q(tags__icontains=search_item)).order_by('-publication_date')
         if epicurien:
             for e in epicurien:
                 items.append((e.id, e))
                 
-        anger = AngerArticle.objects.filter(
+        anger = AngerArticle.published.filter(
             Q(title__icontains=search_item) | 
             Q(summary__icontains=search_item) | 
             Q(content__icontains=search_item) |
-            Q(tags__icontains=search_item) & 
-            Q(is_ready_to_publish=True, is_reserved=False)).order_by('-publication_date')
+            Q(tags__icontains=search_item)).order_by('-publication_date')
         if anger:
             for a in anger:
                 items.append((a.id, a))
