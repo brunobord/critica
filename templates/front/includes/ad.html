@@ -9,14 +9,20 @@
                 <img src="{{ banner.banner.url }}" alt="Publicité" />
             {% endif %}
         {% else %}
+            {% if banner.link %}
+            <a href="{{ banner.link }}" target="_blank">
+                <object data="{{ banner.banner.url}}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
+                    <param name="movie" value="{{ banner.banner.url }}"/>
+                    <param name="quality" value="high"/>
+                    <param name="menu" value="false"/>
+                </object>
+            </a>
+            {% else %}
             <object data="{{ banner.banner.url }}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
                 <param name="movie" value="{{ banner.banner.url }}"/>
                 <param name="quality" value="high"/>
                 <param name="menu" value="false"/>
             </object>
-            {% if banner.link %}
-                <p><a href="{{ banner.link }}">Publicité</a></p>
-            {% else %}
             {% endif %}
         {% endifequal %}
     {% else %}    
