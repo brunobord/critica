@@ -8,6 +8,7 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from critica.apps.ads import settings as ads_settings
+from critica.apps.ads.managers import AdBannerManager
 
 
 # Common models
@@ -349,7 +350,7 @@ class AdBanner(models.Model):
     creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True)
     
-    objects = models.Manager()
+    objects = AdBannerManager()
 
 
     class Meta:

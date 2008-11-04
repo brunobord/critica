@@ -4,6 +4,7 @@ Ads application custom forms.
 
 """
 import os
+import datetime
 from PIL import Image
 import hexagonit.swfheader
 from StringIO import StringIO  
@@ -114,16 +115,38 @@ class CustomBannerForm(forms.ModelForm):
                 
         # Validation of dates
         # ----------------------------------------------------------------------
-        if starting_date and ending_date and positions:
-            current_positions = []
+        if self.cleaned_data['starting_date'] and self.cleaned_data['ending_date'] and self.cleaned_data['positions']:
+            # Get proposed positions
+            proposed_positions = []
             for p in self.cleaned_data['positions']:
-                current_positions.append(p.id)
-            existing_banners = AdBanner.objects.filter(positions__id__in=current_positions)
-            existing_banners = existing_banners.filter(starting_date__lt=starting_date, ending_date__gt=ending_date)
-            if existing_banners:
-                msg = _('Dates already taken. Please, select other dates.')
-                self._errors['starting_date'] = ErrorList([msg])
+                proposed_positions.append(p.id)
+                
+            # Get proposed dates
+            proposed_dates = []
+            for day in xrange((self.cleaned_data['ending_date'] - self.cleaned_data['starting_date']).days + 1):
+                proposed_dates.append(self.cleaned_data['starting_date'] + datetime.timedelta(day))
+
+            # Get existing banners with same positions and starting date / ending date in proposed dates
+            existing_banners = AdBanner.objects.filter(positions__id__in=proposed_positions)
+            if hasattr(self.instance, 'id'):
+                existing_banners = existing_banners.exclude(pk=self.instance.id)
+            
+            # Check positions and dates
+            for existing_banner in existing_banners:
+                for existing_banner_position in existing_banner.positions.all():
+                    for proposed_position in proposed_positions:
+                        if proposed_position == existing_banner_position.id:
+                            existing_banner_dates = []
+                            for day in xrange((existing_banner.ending_date - existing_banner.starting_date).days + 1):
+                                existing_banner_dates.append(existing_banner.starting_date + datetime.timedelta(day))
+                            common_dates = [d for d in proposed_dates if d in existing_banner_dates]
+                            if common_dates:
+                                msg = 'Date already taken. Please, select another. Taken dates for this position: %s' % ', '.join([d.strftime('%Y/%m/%d') for d in common_dates])
+                                self._errors['starting_date'] = ErrorList([msg])
+                                self._errors['ending_date'] = ErrorList([msg])
         
+        # Return
+        # -----------------------------------------------------------------------
         return self.cleaned_data
 
 
