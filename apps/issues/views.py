@@ -5,7 +5,6 @@ Views of ``critica.apps.issues`` application.
 """
 from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
-
 from critica.apps.utils import urlbase64
 from critica.apps.issues.models import Issue
 
@@ -32,7 +31,6 @@ def _get_current_issue(issue_number=None):
         except ObjectDoesNotExist:
             raise Http404
     return issue
-
 
 
 def _get_encoded_issue(issue_key):

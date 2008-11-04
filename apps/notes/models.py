@@ -5,12 +5,10 @@ Models of ``critica.apps.notes`` application.
 """
 import datetime
 from tagging.fields import TagField
-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from django.db.models import permalink
-
 from critica.apps.notes.managers import NotePublishedManager
 from critica.apps.notes.managers import NotePreviewManager
 from critica.apps.notes import choices
@@ -26,7 +24,6 @@ class BaseNoteType(models.Model):
     name = models.CharField(_('name'), max_length=255)
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
     
-    
     class Meta:
         """ 
         Model metadata. 
@@ -34,14 +31,12 @@ class BaseNoteType(models.Model):
         """
         abstract = True
 
-
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s' % self.name
-
 
     def save(self):
         """ 
@@ -97,14 +92,12 @@ class BaseNote(models.Model):
     published = NotePublishedManager()
     preview   = NotePreviewManager()
 
-
     class Meta:
         """ 
         Model metadata. 
         
         """
         abstract = True
-
 
     def __unicode__(self):
         """ 
@@ -113,10 +106,12 @@ class BaseNote(models.Model):
         """
         return u"%s" % (self.title)
 
-
     def get_absolute_url(self):
-        return '/%s/' % self.category.slug
+        """
+        Returns object absolute URL.
         
+        """
+        return '/%s/' % self.category.slug
         
     def save(self):
         """ 
@@ -127,14 +122,12 @@ class BaseNote(models.Model):
         super(BaseNote, self).save()
 
 
-
 class Note(BaseNote):
     """
     Generic note.
     
     """
     type = models.ForeignKey('notes.NoteType', verbose_name=_('type'), help_text=_('Please, select a note type.'))
-    
     
     class Meta:
         """ 

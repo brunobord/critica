@@ -17,7 +17,6 @@ class Subscriber(models.Model):
     email      = models.EmailField(_('email'), max_length=255, unique=True) 
     zip_code   = models.CharField(_('zip code'), max_length=5) 
 
-
     class Meta:
         """ 
         Model metadata. 
@@ -25,7 +24,6 @@ class Subscriber(models.Model):
         """
         verbose_name        = _('subscriber')
         verbose_name_plural = _('subscribers')
-
 
     def __unicode__(self):
         """ 

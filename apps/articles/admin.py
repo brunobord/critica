@@ -7,7 +7,6 @@ from django.conf import settings
 from django.contrib import admin
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.models import Article
 from critica.apps.users.models import UserNickname
@@ -15,7 +14,6 @@ from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
 from critica.apps.articles import settings as articles_settings
 from critica.lib.widgets import ImageWithThumbWidget
-
 from imagethumbnail.templatetags.image_thumbnail import thumbnail
 
 
@@ -24,6 +22,23 @@ class BaseArticleAdmin(admin.ModelAdmin):
     Administration interface options of ``BaseArticle`` abstract model.
     
     """
+    fieldsets = (
+        (_('Headline'), {
+            'fields': ('author_nickname', 'title', 'opinion', 'publication_date'),
+        }),
+        (_('Filling'), {
+            'fields': ('issues', 'category', 'tags'),
+        }),
+        (_('Image'), {
+            'fields': ('image', 'image_legend', 'image_credits'),
+        }),
+        (_('Content'), {
+            'fields': ('summary', 'content'),
+        }),
+        (_('Publication'), {
+            'fields': ('is_featured', 'is_reserved', 'is_ready_to_publish'),
+        }),
+    )
     list_display      = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_image')
     list_filter       = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     filter_horizontal = ('issues',)
@@ -32,7 +47,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
     date_hierarchy    = 'publication_date'
     exclude           = ['author']
 
-    
     def __call__(self, request, url):
         """
         Adds current request object and current URL to this class.
@@ -40,7 +54,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
         """
         self.request = request
         return super(BaseArticleAdmin, self).__call__(request, url)
-
 
     def formfield_for_dbfield(self, db_field, **kwargs):
         """
@@ -58,18 +71,14 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
             print my_choices
             field.choices = my_choices
-            
         if db_field.name == 'category':
             my_choices = [('', '---------')]
             my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
             print my_choices
             field.choices = my_choices
-        
         if db_field.name == 'image':
             return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Image'), help_text=_('You can attach an image to this article. By default, the category image is displayed.'), required=False) 
-        
         return field
-
 
     def queryset(self, request):
         """ 
@@ -83,27 +92,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
         else:
             return qs.filter(author=user)
 
-
-    def get_fieldsets(self, request, obj=None):
-        """ 
-        Hook for specifying fieldsets for the add form. 
-        
-        """
-        publication_fields = []
-        publication_fields.append('is_featured')
-        publication_fields.append('is_reserved')
-        if request.user.has_perm('users.is_editor'):
-            publication_fields.append('is_ready_to_publish')
-        fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
-            (_('Filling'), {'fields': ('issues', 'category', 'tags')}),
-            (_('Image'), {'fields': ('image', 'image_legend', 'image_credits')}),
-            (_('Content'), {'fields': ('summary', 'content')}),
-            (_('Publication'), {'fields': publication_fields}),
-        ]
-        return fieldsets
-
-
     def save_model(self, request, obj, form, change):
         """ 
         Given a model instance save it to the database. 
@@ -114,7 +102,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
         if change == False:
             obj.author = request.user
         obj.save()
-
     
     def ald_author(self, obj):
         """
@@ -128,9 +115,7 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 return obj.author.get_full_name()
             else:
                 return obj.author.username
-    
     ald_author.short_description = 'auteur'
-
 
     def ald_issues(self, obj):
         """
@@ -141,7 +126,6 @@ class BaseArticleAdmin(admin.ModelAdmin):
         return ', '.join(['%s' % issue for issue in issues])
     
     ald_issues.short_description = 'édition(s)'
-
 
     def ald_opinion(self, obj):
         """
@@ -155,10 +139,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
                     return opinion[1]
         else:
             return u'<span class="novalue">%s</span>' % _('no opinion')
-    
     ald_opinion.short_description = 'opinion'
     ald_opinion.allow_tags = True
-
 
     def ald_publication_date(self, obj):
         """
@@ -169,10 +151,8 @@ class BaseArticleAdmin(admin.ModelAdmin):
             return u'<span class="novalue">%s</span>' % _('no publication date')
         else:
             return obj.publication_date.strftime('%Y/%m/%d')
-    
     ald_publication_date.short_description = 'date'
     ald_publication_date.allow_tags = True
-
 
     def ald_image(self, obj):
         """
@@ -186,23 +166,25 @@ class BaseArticleAdmin(admin.ModelAdmin):
             img_thumb = thumbnail(obj.image, '45,0')
             thumb = '<img src="%s" alt="%s" />' % (img_thumb, obj.image_legend)
         return thumb
-    
     ald_image.allow_tags = True
     ald_image.short_description = 'visuel'
 
-
     def ald_view_count(self, obj):
+        """
+        Displays view count for admin list display.
+        
+        """
         return obj.view_count
-    
     ald_view_count.short_description = 'nb vues'
-
     
     def ald_is_reserved(self, obj):
+        """
+        Displays is_reserved for admin list_display.
+        
+        """
         return obj.is_reserved
-    
     ald_is_reserved.short_description = 'marbre'
     ald_is_reserved.boolean = True
-    
 
 
 class ArticleAdmin(BaseArticleAdmin):
@@ -212,6 +194,11 @@ class ArticleAdmin(BaseArticleAdmin):
     """
     pass
 
+
+# Registers
+# ------------------------------------------------------------------------------
 admin.site.register(Article, ArticleAdmin)
 custom_site.register(Article, ArticleAdmin)
+
+
 

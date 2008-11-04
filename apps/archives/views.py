@@ -53,7 +53,7 @@ def archives(request):
         context_instance=RequestContext(request)
     )
     
-    
+
 def issuearchive_home(request, issue_number):
     """
     Displays home archive of a given issue.
@@ -106,5 +106,6 @@ def issuearchive_anger(request, issue_number):
     """
     issue = _get_current_issue(issue_number=issue_number)
     return anger(request, issue=issue, is_archive=True)
+
 
 

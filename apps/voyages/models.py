@@ -5,7 +5,6 @@ Models of ``critica.apps.voyages`` application.
 """
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
 from critica.apps.articles.models import BaseArticle
 from critica.apps.utils.widgets import resize_widget
 
@@ -26,7 +25,7 @@ class VoyagesArticle(BaseArticle):
         db_table            = 'voyages_article'
         verbose_name        = _('article voyage')
         verbose_name_plural = _('articles voyage')
-        
+
     def save(self):
         """ 
         Object pre-saving / post-saving operations.

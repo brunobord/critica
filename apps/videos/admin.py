@@ -20,20 +20,28 @@ class VideoAdmin(admin.ModelAdmin):
         (_('Filling'), {'fields': ('issues', 'tags')}),
         (_('Publication'), {'fields': ('is_reserved', 'is_ready_to_publish')}),
     )
-    list_display = ('name', 'ald_issues', 'creation_date', 'modification_date', 'is_reserved', 'is_ready_to_publish', 'ald_submitter')
-    list_filter = ('issues',)
+    list_display      = ('name', 'ald_issues', 'creation_date', 'modification_date', 'is_reserved', 'is_ready_to_publish', 'ald_submitter')
+    list_filter       = ('issues',)
     filter_horizontal = ('issues',)
-    search_fields = ('name',)
-    ordering = ('-creation_date',)
-    date_hierarchy = 'creation_date'
-    exclude = ['author']
-    _object = None
+    search_fields     = ('name',)
+    ordering          = ('-creation_date',)
+    date_hierarchy    = 'creation_date'
+    exclude           = ['author']
+    _object           = None
     
     def __call__(self, request, url):
+        """
+        Adds current request object and current URL to this class.
+        
+        """
         self.request = request
         return super(VideoAdmin, self).__call__(request, url)
 
     def change_view(self, request, object_id):
+        """
+        Custom change view.
+        
+        """
         self._request = request
         self._object = None
         try:
@@ -75,7 +83,8 @@ class VideoAdmin(admin.ModelAdmin):
         Auto-save submitter.
         
         """
-        obj.submitter = request.user
+        if change == False:
+            obj.submitter = request.user
         obj.save()
 
     def ald_submitter(self, obj):
@@ -98,6 +107,9 @@ class VideoAdmin(admin.ModelAdmin):
         return ', '.join(['%s' % issue for issue in issues])
     ald_issues.short_description = _('issues')
 
+
+# Registers
+# ------------------------------------------------------------------------------
 admin.site.register(Video, VideoAdmin)
 custom_site.register(Video, VideoAdmin)
 

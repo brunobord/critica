@@ -5,29 +5,13 @@ Models of ``critica.apps.regions`` application.
 """
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
-from critica.apps.notes.models import BaseNoteType, BaseNote
+from critica.apps.notes.models import BaseNoteType
+from critica.apps.notes.models import BaseNote
 
 
 class Region(BaseNoteType):
     """
     Region.
-    
-    Database table name: ``regions_region``.
-    
-    Fields::
-    
-        See BaseNoteType.
-            
-    Indexes::
-    
-        See BaseNoteType.
-        
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
     
     """
     objects = models.Manager()
@@ -45,37 +29,10 @@ class Region(BaseNoteType):
 class FeaturedRegion(models.Model):
     """
     Featured region.
-    
-    Database table name: ``regions_featuredregion``.
-    
-    Fields::
-    
-        issue
-            * ForeignKey: critica.apps.issues.models.Issue
-            * The issue
-            * Required
-            
-        region
-            * ForeignKey: critica.apps.regions.models.Region
-            * The region
-            * Required
 
-    Indexes::
-    
-        * issue
-        * region
-
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-    
     """
-    issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
+    issue  = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
     region = models.ForeignKey('regions.Region', verbose_name=_('region'))
-    
-    objects = models.Manager()
     
     class Meta:
         """ 
@@ -97,36 +54,8 @@ class RegionNote(BaseNote):
     """
     Region note.
     
-    Database table name: ``regions_note``.
-    
-    Fields::
-    
-        See BaseNote. And below.
-    
-        region
-            * ForeignKey: critica.apps.regions.models.Region
-            * The region
-            * Required
-
-    Indexes::
-    
-        See BaseNote and below.
-        
-        * region
-            
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-            
-        published
-            Retrieves only published region notes. 
-            Manager: critica.apps.regions.managers.PublishedNoteManager()  
-    
     """
     region = models.ForeignKey('regions.Region', verbose_name=_('region'), help_text=_('Please, select a region.'))
-
 
     class Meta:
         """ 
@@ -137,17 +66,16 @@ class RegionNote(BaseNote):
         verbose_name        = _('region note')
         verbose_name_plural = _('region notes')
 
-
     def get_absolute_url(self):
-        return u'/regions/'
+        """
+        Returns object absolute URL.
         
+        """
+        return u'/regions/'
         
     def save(self):
         """ 
-        Object pre-saving operations:
-        
-        * Auto-save category
-        * Save article
+        Object pre-saving / post-saving operations.
         
         """
         from critica.apps.categories.models import Category

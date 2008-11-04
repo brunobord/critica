@@ -5,7 +5,6 @@ Administration interface options of ``critica.apps.polls`` application.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.polls.models import Poll
 from critica.apps.polls.models import Choice
@@ -19,7 +18,6 @@ class ChoiceInline(admin.TabularInline):
     """
     model = Choice
     max_num = 8 
-
 
 
 class PollAdmin(admin.ModelAdmin):
@@ -38,7 +36,7 @@ class PollAdmin(admin.ModelAdmin):
     date_hierarchy    = 'creation_date'
     inlines           = [ChoiceInline]
     exclude           = ['submitter']
-    
+
     def ald_issues(self, obj):
         """
         Formatted issue list for admin list_display option."
@@ -51,16 +49,10 @@ class PollAdmin(admin.ModelAdmin):
         """ 
         Given a model instance save it to the database. 
         
-        Auto-save submitter.
-        
         """
         if change == False:
             obj.submitter = request.user
         obj.save()
-
-admin.site.register(Poll, PollAdmin)
-custom_site.register(Poll, PollAdmin)
-
 
 
 class ChoiceAdmin(admin.ModelAdmin):
@@ -71,10 +63,6 @@ class ChoiceAdmin(admin.ModelAdmin):
     list_display  = ('poll', 'choice')
     list_filter   = ('poll',)
     search_fields = ('choice',)
-
-admin.site.register(Choice, ChoiceAdmin)
-custom_site.register(Choice, ChoiceAdmin)
-
 
 
 class VoteAdmin(admin.ModelAdmin):
@@ -88,7 +76,14 @@ class VoteAdmin(admin.ModelAdmin):
     ordering          = ('-creation_date',)
     date_hierarchy    = 'creation_date'
     
+
+# Registers
+# ------------------------------------------------------------------------------
+admin.site.register(Poll, PollAdmin)
+custom_site.register(Poll, PollAdmin)
+
+admin.site.register(Choice, ChoiceAdmin)
+custom_site.register(Choice, ChoiceAdmin)
+
 admin.site.register(Vote, VoteAdmin)
 custom_site.register(Vote, VoteAdmin)
-
-

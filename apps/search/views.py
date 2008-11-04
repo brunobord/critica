@@ -9,7 +9,6 @@ from django.template import RequestContext
 from django.core.paginator import Paginator
 from django.core.paginator import InvalidPage
 from django.core.paginator import EmptyPage
-
 from critica.apps.front.views import _get_current_issue
 from critica.apps.articles.models import Article
 from critica.apps.notes.models import Note

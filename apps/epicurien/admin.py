@@ -7,7 +7,8 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.admin import BaseArticleAdmin
-from critica.apps.epicurien.models import EpicurienArticleType, EpicurienArticle
+from critica.apps.epicurien.models import EpicurienArticleType
+from critica.apps.epicurien.models import EpicurienArticle
 
 
 class EpicurienArticleTypeAdmin(admin.ModelAdmin):
@@ -17,40 +18,43 @@ class EpicurienArticleTypeAdmin(admin.ModelAdmin):
     """
     list_display = ('name', 'slug')
     
-admin.site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
-custom_site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
-
 
 class EpicurienArticleAdmin(BaseArticleAdmin):
     """
     Administration interface options of ``EpicurienArticle`` model.
     
     """
+    fieldsets = (
+        (_('Headline'), {
+            'fields': ('author_nickname', 'title', 'opinion', 'publication_date'),
+        }),
+        (_('Filling'), {
+            'fields': ('issues', 'type', 'tags'),
+        }),
+        (_('Image'), {
+            'fields': ('image', 'image_legend', 'image_credits'),
+        }),
+        (_('Content'), {
+            'fields': ('summary', 'content'),
+        }),
+        (_('Publication'), {
+            'fields': ('is_featured', 'is_reserved', 'is_ready_to_publish'),
+        }),
+    )
     list_display   = ('title', 'type', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_image')
     list_filter    = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'type')
     search_fields  = ('title', 'summary', 'content')
     ordering       = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
 
-    def get_fieldsets(self, request, obj=None):
-        """ 
-        Hook for specifying fieldsets for the add form. 
-        
-        """
-        publication_fields = []
-        publication_fields.append('is_featured')
-        publication_fields.append('is_reserved')
-        if request.user.has_perm('users.is_editor'):
-            publication_fields.append('is_ready_to_publish')
-        fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
-            (_('Filling'), {'fields': ('issues', 'type', 'tags')}),
-            (_('Image'), {'fields': ('image', 'image_legend', 'image_credits')}),
-            (_('Content'), {'fields': ('summary', 'content')}),
-            (_('Publication'), {'fields': publication_fields})
-        ]
-        return fieldsets
+
+# Registers
+# ------------------------------------------------------------------------------
+admin.site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
+custom_site.register(EpicurienArticleType, EpicurienArticleTypeAdmin)
 
 admin.site.register(EpicurienArticle, EpicurienArticleAdmin)
 custom_site.register(EpicurienArticle, EpicurienArticleAdmin)
+
+
 

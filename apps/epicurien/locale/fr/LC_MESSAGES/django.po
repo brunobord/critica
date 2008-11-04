@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-01 11:34+0200\n"
+"POT-Creation-Date: 2008-11-04 10:25+0100\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,50 +17,51 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:36
+#: admin.py:31
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:37
+#: admin.py:34
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:38
-msgid "Illustration"
-msgstr "Visuel"
+#: admin.py:37
+msgid "Image"
+msgstr ""
 
-#: admin.py:39
+#: admin.py:40
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:54
+#: admin.py:43
 msgid "Publication"
 msgstr "Publication"
 
-#: models.py:45
+#: models.py:17
 msgid "name"
 msgstr "nom"
 
-#: models.py:46
+#: models.py:18
 msgid "URL"
 msgstr "URL"
 
-#: models.py:56
+#: models.py:29
 msgid "article epicurien type"
 msgstr "type d'article épicurien"
 
-#: models.py:57
+#: models.py:30
 msgid "article epicurien types"
 msgstr "types d'article épicurien"
 
-#: models.py:122
+#: models.py:56
 msgid "type"
 msgstr "type"
 
-#: models.py:133
+#: models.py:65
 msgid "article epicurien"
 msgstr "article épicurien"
 
-#: models.py:134
+#: models.py:66
 msgid "articles epicurien"
 msgstr "articles épicurien"
+

@@ -7,7 +7,6 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.generic.simple import direct_to_template
 from django.shortcuts import get_object_or_404
-
 from critica.apps.issues.views import _get_current_issue
 from critica.apps.polls.models import Poll
 from critica.apps.polls.models import Choice
@@ -36,7 +35,6 @@ def poll_vote(request):
             return HttpResponseRedirect(reverse('home'))
     else:
         return HttpResponseRedirect(reverse('home'))
-
 
 
 def poll_results(request, poll_slug):

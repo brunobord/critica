@@ -11,11 +11,9 @@ from django.template import RequestContext
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import MultipleObjectsReturned
 from django.views.generic.simple import direct_to_template
-
 from tagging.models import Tag
 from tagging.models import TaggedItem
 from tagging.utils import calculate_cloud
-
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
 from critica.apps.positions.models import IssueCategoryPosition

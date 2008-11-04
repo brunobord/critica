@@ -6,7 +6,6 @@ Views of ``critica.apps.syndication`` application.
 from django.shortcuts import render_to_response
 from django.core.exceptions import ObjectDoesNotExist
 from django.template import RequestContext
-
 from critica.apps.front.views import _get_current_issue
 from critica.apps.categories.models import Category
 

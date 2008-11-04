@@ -29,20 +29,6 @@ class CustomBannerForm(forms.ModelForm):
         """
         Form validation process.
         
-        Process::
-        
-            is_valid_extension
-                True if extension is OK.
-                
-            is_valid_position_format
-                True if selected format matches the position format.
-                
-            is_valid_image_format
-                True if image format matches the selected format.
-                
-            is_valid_position_date
-                True if position and date are available.
-        
         """
         # Cleaned data
         # ----------------------------------------------------------------------
@@ -141,7 +127,9 @@ class CustomBannerForm(forms.ModelForm):
                                 existing_banner_dates.append(existing_banner.starting_date + datetime.timedelta(day))
                             common_dates = [d for d in proposed_dates if d in existing_banner_dates]
                             if common_dates:
-                                msg = 'Date already taken. Please, select another. Taken dates for this position: %s' % ', '.join([d.strftime('%Y/%m/%d') for d in common_dates])
+                                msg = _('Date already taken. Please, select another. Taken dates for this position: %(dates)s') % {
+                                    'dates': ', '.join([d.strftime('%Y/%m/%d') for d in common_dates]),
+                                }
                                 self._errors['starting_date'] = ErrorList([msg])
                                 self._errors['ending_date'] = ErrorList([msg])
         
@@ -167,9 +155,4 @@ class CustomAdDefaultBannerForm(CustomBannerForm):
     class Meta:
         model = AdDefaultBanner
     
-
-
-
-
-        
 

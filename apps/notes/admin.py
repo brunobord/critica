@@ -20,12 +20,9 @@ class NoteTypeAdmin(admin.ModelAdmin):
     Administration interface options of ``NoteType`` model.
     
     """
-    list_display = ('id', 'name', 'slug')
+    list_display  = ('id', 'name', 'slug')
     search_fields = ('name',)
-    ordering = ['name']
-
-admin.site.register(NoteType, NoteTypeAdmin)
-custom_site.register(NoteType, NoteTypeAdmin)
+    ordering      = ['name']
 
 
 class BaseNoteAdmin(BaseArticleAdmin):
@@ -33,15 +30,33 @@ class BaseNoteAdmin(BaseArticleAdmin):
     Administration interface options of ``BaseNote`` abstract model.
     
     """
-    list_display = ('title', 'category', 'type', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish')
-    list_filter = ('issues', 'author', 'type', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
+    fieldsets = (
+        (_('Headline'), {
+            'fields': ('author_nickname', 'title', 'opinion', 'publication_date'),
+        }),
+        (_('Filling'), {
+            'fields': ('issues', 'category', 'type', 'tags'),
+        }),
+        (_('Content'), {
+            'fields': ('content',),
+        }),
+        (_('Publication'), {
+            'fields': ('is_featured', 'is_reserved', 'is_ready_to_publish'),
+        }),
+    )
+    list_display      = ('title', 'category', 'type', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_author_nickname', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish')
+    list_filter       = ('issues', 'author', 'type', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     filter_horizontal = ('issues',)
-    search_fields = ('title', 'content')
-    ordering = ('-publication_date', 'category')
-    date_hierarchy = 'publication_date'
-    exclude = ['author']
+    search_fields     = ('title', 'content')
+    ordering          = ('-publication_date', 'category')
+    date_hierarchy    = 'publication_date'
+    exclude           = ['author']
 
     def __call__(self, request, url):
+        """
+        Adds current request object and current URL to this class.
+        
+        """
         self.request = request
         return super(BaseNoteAdmin, self).__call__(request, url)
 
@@ -72,35 +87,16 @@ class BaseNoteAdmin(BaseArticleAdmin):
             print my_choices
             field.choices = my_choices
         return field
-
-    def get_fieldsets(self, request, obj=None):
-        """ 
-        Hook for specifying fieldsets for the add form. 
         
-        """
-        publication_fields = []
-        publication_fields.append('is_featured')
-        publication_fields.append('is_reserved')
-        if request.user.has_perm('users.is_editor'):
-            publication_fields.append('is_ready_to_publish')
-        fieldsets = [
-            (_('Headline'), {'fields': ('author_nickname', 'title', 'opinion', 'publication_date')}),
-            (_('Filling'), {'fields': ('issues', 'category', 'type', 'tags')}),
-            (_('Content'), {'fields': ('content',)}),
-            (_('Publication'), {'fields': publication_fields}),
-        ]
-        return fieldsets
-
     def save_model(self, request, obj, form, change):
         """ 
         Given a model instance save it to the database. 
-        Auto-save author.
         
         """
         if change == False:
             obj.author = request.user
         obj.save()
-        
+
     def ald_author(self, obj):
         """
         Formatted author for admin list_display option.
@@ -111,7 +107,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
         else:
             return obj.author
     ald_author.short_description = _('author')
-    
+
     def ald_author_nickname(self, obj):
         """
         Formatted author nickname for admin list_display option.
@@ -122,6 +118,7 @@ class BaseNoteAdmin(BaseArticleAdmin):
         else:
             return self.ald_author(obj)
     ald_author_nickname.short_description = 'pseudo'
+
 
     def ald_issues(self, obj):
         """
@@ -157,14 +154,22 @@ class BaseNoteAdmin(BaseArticleAdmin):
     ald_publication_date.allow_tags = True
     
     def ald_view_count(self, obj):
+        """
+        Formatted view_count for admin list display.
+        
+        """
         return obj.view_count
     ald_view_count.short_description = 'nb vues'
     
     def ald_is_reserved(self, obj):
+        """
+        Formatted is_reserved for admin list display.
+        
+        """
         return obj.is_reserved
     ald_is_reserved.short_description = 'marbre'
     ald_is_reserved.boolean = True
-    
+
 
 class NoteAdmin(BaseNoteAdmin):
     """
@@ -186,6 +191,12 @@ class NoteAdmin(BaseNoteAdmin):
             print my_choices
             field.choices = my_choices
         return field
+
+
+# Registers
+# ------------------------------------------------------------------------------
+admin.site.register(NoteType, NoteTypeAdmin)
+custom_site.register(NoteType, NoteTypeAdmin)
 
 admin.site.register(Note, NoteAdmin)
 custom_site.register(Note, NoteAdmin)

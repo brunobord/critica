@@ -15,12 +15,20 @@ class PageAdmin(admin.ModelAdmin):
     Administration interface options of ``Page`` model. 
     
     """
-    list_display = ('title', 'creation_date', 'modification_date', 'is_published', 'ald_author')
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'content'),
+        }),
+        (_('Publication'), {
+            'fields': ('is_published',),
+        }),
+    )
+    list_display  = ('title', 'creation_date', 'modification_date', 'is_published', 'ald_author')
     search_fields = ('title', 'content')
-    list_filter = ('is_published', 'author')
-    ordering = ['title']
-    exclude = ['author']
-    
+    list_filter   = ('is_published', 'author')
+    ordering      = ['title']
+    exclude       = ['author']
+
     def ald_author(self, obj):
         """
         Formatted author for admin list_display option.
@@ -31,31 +39,19 @@ class PageAdmin(admin.ModelAdmin):
         else:
             return obj.author
     ald_author.short_description = _('author')
-    
-    def get_fieldsets(self, request, obj=None):
-        """ 
-        Hook for specifying fieldsets for the add form. 
-        
-        """
-        publication_fields = []
-        if request.user.has_perm('users.is_editor'):
-            publication_fields.append('is_published')
-        fieldsets = [
-            (None, {'fields': ['title', 'content']}),
-            (_('Publication'), {'fields': publication_fields}),
-        ]
-        return fieldsets
-        
+
     def save_model(self, request, obj, form, change):
         """ 
         Given a model instance save it to the database. 
-        Auto-save author.
         
         """
         if change == False:
             obj.author = request.user
         obj.save()
 
+
+# Registers
+# ------------------------------------------------------------------------------
 admin.site.register(Page, PageAdmin)
 custom_site.register(Page, PageAdmin)
 

@@ -5,13 +5,11 @@ Models of ``critica.apps.articles`` application.
 """
 import datetime
 from tagging.fields import TagField
-
 from django.db import models
 from django.db.models import permalink
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
-
 from critica.apps.articles import choices
 from critica.apps.articles.managers import ArticlePublishedManager
 from critica.apps.articles.managers import ArticlePreviewManager
@@ -20,136 +18,6 @@ from critica.apps.articles.managers import ArticlePreviewManager
 class BaseArticle(models.Model):
     """
     Base article.
-    
-    This is an abstract class.
-    
-    Fields::
-    
-        author
-            * The article author
-            * ForeignKey: django.contrib.auth.models.User
-            * Required
-            
-        author_nickname
-            * The author nickname
-            * ForeignKey: critica.apps.users.models.UserNickname
-            * Optional (can be blank)
-            
-        title
-            * The article title
-            * CharField
-            * 255 characters max.
-            * Required
-            
-        slug
-            * The article slug
-            * SlugField
-            * 255 characters max.
-            * No editable
-            * Optional (can be blank)
-            
-        category
-            * The article category
-            * ForeignKey: critica.apps.categories.models.Category
-            * Required
-            
-        tags
-            * The article tags
-            * TagField (from tagging)
-            * Optional
-            
-        issues
-            * The article issues
-            * ManyToManyField: critica.apps.issues.models.Issue
-            * Optional (can be blank)
-            
-        view_count
-            * The article view count
-            * PositiveIntegerField
-            * No editable
-            * Optional (can be blank)
-            
-        creation_date
-            * The article creation date
-            * DateTimeField
-            * auto_now_add
-            * Required
-            
-        modification_date
-            * The article modification date
-            * DateTimeField
-            * auto_now
-            * Required
-            
-        publication_date
-            * The article publication date
-            * DateField
-            * Optional (can be blank)
-        
-        opinion
-            * The article opinion flag
-            * IntegerField
-            * Choices: critica.apps.article.choices.OPINION_CHOICES
-            * Optional (can be blank)
-            
-        image
-            * The article image
-            * ImageField
-            * Can be blank
-            
-        image_legend
-            * The article image legend
-            * CharField
-            * 255 characters max.
-            * Can be blank
-            
-        image_credits
-            * The article image credits
-            * CharField
-            * 255 characters max.
-            * Default: Critic@
-            * Can be blank
-    
-        is_featured
-            * Is article featured?
-            * BooleanField
-            * Default: False
-            * Required
-            
-        is_ready_to_publish
-            * Is article ready to publish?
-            * BooleanField
-            * Default: False
-            * Required
-            
-        is_reserved
-            * Is article reserved?
-            * BooleanField
-            * Default: False
-            * Required
-            
-        summary
-            * The article summary
-            * TextField
-            * Required
-            
-        content
-            * The article content
-            * TextField
-            * Required
-            
-    Indexes::
-    
-        * author
-        * author_nickname
-        * slug
-        * category
-        * issues
-        * publication_date
-        * opinion
-        * is_featured
-        * is_ready_to_publish
-        * is_reserved
 
     """
     author               = models.ForeignKey('auth.User', verbose_name=_('author'), help_text=_('Please, select an author for this article.'))
@@ -184,14 +52,12 @@ class BaseArticle(models.Model):
         """
         abstract = True
 
-
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u"%s" % (self.title)
-
 
     @permalink
     def get_absolute_url(self):
@@ -201,7 +67,6 @@ class BaseArticle(models.Model):
         """
         return ('category', (), {'category_slug': self.category.slug})
 
-    
     def save(self):
         """ 
         Object pre-saving / post-saving operations.
@@ -209,7 +74,6 @@ class BaseArticle(models.Model):
         """
         self.slug = slugify(self.title)
         super(BaseArticle, self).save()
-
 
 
 class Article(BaseArticle):

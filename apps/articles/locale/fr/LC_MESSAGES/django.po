@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-27 14:18+0100\n"
+"POT-Creation-Date: 2008-11-04 10:22+0100\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,31 +17,33 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:67 admin.py:97
-msgid "Image"
-msgstr "Visuel"
-
-#: admin.py:67
-msgid ""
-"You can attach an image to this article. By default, the category image is "
-"displayed."
-msgstr "Vous pouvez associer un visuel à cet article. Sinon, le visuel par défaut de la rubrique sera utilisé."
-
-#: admin.py:95
+#: admin.py:28
 msgid "Headline"
 msgstr "En-tête"
 
-#: admin.py:96
+#: admin.py:31
 msgid "Filling"
 msgstr "Classement"
 
-#: admin.py:98
+#: admin.py:34 admin.py:86
+msgid "Image"
+msgstr "Visuel"
+
+#: admin.py:37
 msgid "Content"
 msgstr "Contenu"
 
-#: admin.py:99
+#: admin.py:40
 msgid "Publication"
 msgstr "Publication"
+
+#: admin.py:86
+msgid ""
+"You can attach an image to this article. By default, the category image is "
+"displayed."
+msgstr ""
+"Vous pouvez associer un visuel à cet article. Sinon, le visuel par défaut de "
+"la rubrique sera utilisé."
 
 #: admin.py:154
 msgid "no opinion"
@@ -67,19 +69,19 @@ msgstr "Je suis content"
 msgid "I'm not happy"
 msgstr "Je suis pas content"
 
-#: models.py:144
+#: models.py:155
 msgid "author"
 msgstr "auteur"
 
-#: models.py:144
+#: models.py:155
 msgid "Please, select an author for this article."
 msgstr "Veuillez sélectionner un auteur pour cet article."
 
-#: models.py:145
+#: models.py:156
 msgid "author nickname"
 msgstr "pseudonyme"
 
-#: models.py:145
+#: models.py:156
 msgid ""
 "If you want to sign this article under a nickname, please select one in the "
 "list. If you do not select a nickname, your signature will be your full name."
@@ -88,126 +90,123 @@ msgstr ""
 "dans la liste. Si vous ne sélectionnez pas de pseudonyme, votre signature "
 "sera votre nom complet."
 
-#: models.py:146
+#: models.py:157
 msgid "title"
 msgstr "titre"
 
-#: models.py:146
+#: models.py:157
 msgid "255 characters max."
 msgstr "255 caractères max."
 
-#: models.py:147
+#: models.py:158
 msgid "slug"
 msgstr "permalien"
 
-#: models.py:148
+#: models.py:159
 msgid "category"
 msgstr "rubrique"
 
-#: models.py:148
+#: models.py:159
 msgid "Please, select a category for this article."
 msgstr "Veuillez sélectionner une rubrique pour cet article."
 
-#: models.py:149
+#: models.py:160
 msgid "Please, enter tags separated by commas or spaces."
 msgstr "Vous pouvez entrer des tags séparés par des virgules ou des espaces."
 
-#: models.py:150
+#: models.py:161
 msgid "issues"
 msgstr "éditions"
 
-#: models.py:150
+#: models.py:161
 msgid "Please, select one or several issues."
 msgstr "Sélectionnez une ou plusieurs éditions."
 
-#: models.py:151
+#: models.py:162
 msgid "view count"
 msgstr "nombre de vues"
 
-#: models.py:152
+#: models.py:163
 msgid "creation date"
 msgstr "date de création"
 
-#: models.py:153
+#: models.py:164
 msgid "modification date"
 msgstr "date de modification"
 
-#: models.py:154
+#: models.py:165
 msgid "publication date"
 msgstr "date de publication"
 
-#: models.py:154
+#: models.py:165
 msgid "Don't forget to adjust the publication date."
 msgstr "N'oubliez pas d'ajuster la date de publication."
 
-#: models.py:155
+#: models.py:166
 msgid "opinion"
 msgstr "opinion"
 
-#: models.py:156
+#: models.py:167
 msgid "image"
 msgstr "visuel"
 
-#: models.py:156
+#: models.py:167
 msgid "Please, select an image which will be attached to this article."
 msgstr "Vous pouvez sélectionner un visuel à insérer dans cet article."
 
-#: models.py:157
+#: models.py:168
 msgid "legend"
 msgstr "légende"
 
-#: models.py:157
+#: models.py:168
 msgid "Please, enter the image legend."
 msgstr "Entrez la légende du visuel."
 
-#: models.py:158
+#: models.py:169
 msgid "credits"
 msgstr "crédits"
 
-#: models.py:158
+#: models.py:169
 msgid "Please, enter the image credits."
 msgstr "Entrez les crédits du visuel."
 
-#: models.py:159
+#: models.py:170
 msgid "featured"
 msgstr "exclusif"
 
-#: models.py:159
+#: models.py:170
 msgid "Is featured?"
 msgstr "Est-il/elle exclusif ?"
 
-#: models.py:160
+#: models.py:171
 msgid "ready to publish"
 msgstr "Prêt(e) à être publié(e)"
 
-#: models.py:160
+#: models.py:171
 msgid "Is ready to be publish?"
 msgstr "Est-il/elle prêt(e) à être publié(e) ?"
 
-#: models.py:161
+#: models.py:172
 msgid "reserved"
 msgstr "Mis(e) au marbre"
 
-#: models.py:161
+#: models.py:172
 msgid "Is reserved?"
 msgstr "Doit-il/elle mis(e) au marbre ?"
 
-#: models.py:162
+#: models.py:173
 msgid "summary"
 msgstr "accroche"
 
-#: models.py:163
+#: models.py:174
 msgid "content"
 msgstr "contenu"
 
-#: models.py:237
+#: models.py:226
 msgid "article"
 msgstr "article"
 
-#: models.py:238
+#: models.py:227
 msgid "articles"
 msgstr "articles"
 
-#: widgets.py:22
-msgid "current image"
-msgstr "visuel actuel"

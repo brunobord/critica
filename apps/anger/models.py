@@ -21,7 +21,7 @@ class AngerArticle(BaseArticle):
         db_table            = 'anger_article'
         verbose_name        = _('article anger')
         verbose_name_plural = _('articles anger')
-        
+
     def save(self):
         """ 
         Object pre-saving / post-saving operations.

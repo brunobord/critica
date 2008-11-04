@@ -14,10 +14,10 @@ class CategoryAdmin(admin.ModelAdmin):
     Administration interface options of ``Category`` model.
     
     """
-    list_display = ('name', 'ald_slug', 'description', 'creation_date', 'modification_date', 'ald_image')
+    list_display  = ('name', 'ald_slug', 'description', 'creation_date', 'modification_date', 'ald_image')
     search_fields = ('name', 'description')
-    ordering = ['name']
-    
+    ordering      = ['name']
+
     def ald_slug(self, obj):
         """ 
         Formatted slug for admin list_display option. 
@@ -39,7 +39,11 @@ class CategoryAdmin(admin.ModelAdmin):
     ald_image.allow_tags = True
     ald_image.short_description = _('Default illustration')
 
+
+# Registers
+# ------------------------------------------------------------------------------
 admin.site.register(Category, CategoryAdmin)
 custom_site.register(Category, CategoryAdmin)
+
 
 

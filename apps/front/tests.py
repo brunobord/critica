@@ -21,7 +21,6 @@ class EmptyFrontTestCase(TestCase):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 404)
 
-
     def test_front_category(self):
         """
         Tests front category.
@@ -37,7 +36,6 @@ class EmptyFrontTestCase(TestCase):
             response = self.client.get(reverse('category', args=[category.slug]))
             self.assertEqual(response.status_code, 404)
 
-
     def test_front_regions(self):
         """
         Tests front Regions category.
@@ -46,7 +44,6 @@ class EmptyFrontTestCase(TestCase):
         # Should return 404
         response = self.client.get(reverse('category_regions'))
         self.assertEqual(response.status_code, 404)
-
 
     def test_front_voyages(self):
         """
@@ -57,7 +54,6 @@ class EmptyFrontTestCase(TestCase):
         response = self.client.get(reverse('category_voyages'))
         self.assertEqual(response.status_code, 404)
 
-
     def test_front_epicurien(self):
         """
         Tests front Epicurien category.
@@ -66,7 +62,6 @@ class EmptyFrontTestCase(TestCase):
         # Should return 404
         response = self.client.get(reverse('category_epicurien'))
         self.assertEqual(response.status_code, 404)
-
 
     def test_front_anger(self):
         """
@@ -78,14 +73,12 @@ class EmptyFrontTestCase(TestCase):
         self.assertEqual(response.status_code, 404)
 
 
-
 class FrontTestCase(TestCase):
     """
     Front application test case.
     
     """
     fixtures = ['sample_data']
-    
     
     def test_front_home(self):
         """
@@ -130,7 +123,6 @@ class FrontTestCase(TestCase):
         self.assert_(response.context[0]['video'])
         self.assertEqual(hasattr(response.context[0]['illustration'], '__iter__'), False)
         
-        
     def test_front_category(self):
         """
         Tests front category.
@@ -163,7 +155,6 @@ class FrontTestCase(TestCase):
             # 10 notes
             notes_count = Note.published.filter(issues__id=current_issue.id, category=category).count()
             self.assertEqual(notes_count, 10)
-            
 
     def test_front_regions(self):
         """
@@ -189,7 +180,6 @@ class FrontTestCase(TestCase):
         # 1 featured region note
         self.assert_(response.context[0]['featured_region_note'])
         self.assertEqual(hasattr(response.context[0]['featured_region_note'], '__iter__'), False)
-
         
     def test_front_voyages(self):
         """
@@ -216,7 +206,6 @@ class FrontTestCase(TestCase):
         else:
             over_max_archives = False
         self.assertFalse(over_max_archives)
-
 
     def test_front_epicurien(self):
         """
@@ -262,7 +251,6 @@ class FrontTestCase(TestCase):
             over_max_archives = False
         self.assertFalse(over_max_archives)
 
-
     def test_front_anger(self):
         """
         Tests front Anger category.
@@ -286,6 +274,5 @@ class FrontTestCase(TestCase):
         else:
             over_max_archives = False
         self.assertFalse(over_max_archives)
-
 
 

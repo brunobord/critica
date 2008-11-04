@@ -10,30 +10,9 @@ from django.utils.translation import ugettext_lazy as _
 class UserProfile(models.Model):
     """
     User profile.
-    
-    Database table name: ``users.userprofile``.
-    
-    Fields::
-    
-        user
-            * ForeignKey: django.contrib.auth.models.User
-            * The user
-            * Must be unique
-            * Required
-        
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-
-    Indexes::
-    
-        * user
 
     """
     user = models.ForeignKey('auth.User', verbose_name=_('user'), unique=True)
-    
-    objects = models.Manager()
     
     class Meta:
         """ 
@@ -67,38 +46,10 @@ class UserProfile(models.Model):
 class UserNickname(models.Model):
     """
     User nickname.
-    
-    Database table name: ``users_usernickname``.
-    
-    A user nickname is composed of::
-    
-        user
-            * ForeignKey: django.contrib.auth.models.User
-            * The user
-            * Required
-            
-        nickname
-            * CharField
-            * 255 characters max.
-            * The user nickname
-            * Must be unique
-            * Required
-
-    Indexes::
-    
-        * user
-        * nickname
-        
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
             
     """
     user = models.ForeignKey('auth.User', verbose_name=_('user'))
     nickname = models.CharField(_('nickname'), max_length=255, unique=True)
-    
-    objects = models.Manager()
     
     class Meta:
         """ 

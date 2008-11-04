@@ -14,40 +14,9 @@ class CategoryPosition(models.Model):
     """
     Category position.
     
-    Database table name: ``positions_categoryposition``.
-    
-    Fields::
-    
-        name
-            * CharField
-            * 255 characters max.
-            * The category position name
-            * Must be unique
-            * Required
-            
-        slug
-            * SlugField
-            * 255 characters max.
-            * The category position slug (used for CSS id / classes)
-            * No editable
-            * Optional (can be blank)
-            
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-            
-    Indexes::
-    
-        * name
-        * slug
-    
     """
     name = models.CharField(_('name'), max_length=255, unique=True)
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
-
-    objects = models.Manager()
 
     class Meta:
         """ 
@@ -80,40 +49,9 @@ class NotePosition(models.Model):
     """
     Note position.
     
-    Database table name: ``positions_noteposition``.
-    
-    Fields::
-    
-        name
-            * CharField
-            * 255 characters max.
-            * The note position name
-            * Must be unique
-            * Required
-            
-        slug
-            * SlugField
-            * 255 characters max.
-            * The note position slug (used for CSS id / classes)
-            * No editable
-            * Optional (can be blank)
-            
-    Managers::
-    
-        objects
-            Default manager.
-            Manager: models.Manager()
-            
-    Indexes::
-    
-        * name
-        * slug
-    
     """
     name = models.CharField(_('name'), max_length=255, unique=True)
     slug = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
-
-    objects = models.Manager()
 
     class Meta:
         """ 
@@ -148,46 +86,18 @@ class DefaultCategoryPosition(models.Model):
     """
     Default category position.
     
-    Database table name: ``positions_defaultcategoryposition``.
-    
-    Fields::
-            
-        category
-            * ForeignKey: critica.apps.categories.models.Category
-            * The category
-            * Must be unique
-            * Required
-            
-        position
-            * ForeignKey: critica.apps.positions.models.CategoryPosition
-            * The category position
-            * Required
-
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-            
-    Indexes::
-    
-        * category
-        * position
-        * category / position
-    
     """
     category = models.ForeignKey('categories.Category', verbose_name=_('category'), unique=True)
     position = models.ForeignKey('positions.CategoryPosition', verbose_name=_('position'), null=True, blank=True)
-    
-    objects = models.Manager()
     
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('default category position')
+        verbose_name        = _('default category position')
         verbose_name_plural = _('default category positions')
-        unique_together = (('category', 'position'),)
+        unique_together     = (('category', 'position'),)
 
     def __unicode__(self):
         """ 
@@ -200,53 +110,20 @@ class DefaultCategoryPosition(models.Model):
 class DefaultNotePosition(models.Model):
     """
     Default note position.
-    
-    Database table name: ``positions_defaultnoteposition``.
-    
-    Fields::
-            
-        category
-            * ForeignKey: critica.apps.categories.models.Category
-            * The category
-            * Required
-
-        type
-            * ForeignKey: critica.apps.notes.models.NoteType
-            * The note type
-            * Required
-            
-        position
-            * ForeignKey: critica.apps.positions.models.NotePosition
-            * The default category position
-            * Must be unique
-            * Required
-
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-
-    Indexes::
-    
-        * category
-        * position
-        * category / type / position
 
     """
     category = models.ForeignKey('categories.Category', verbose_name=_('category'))
-    type = models.ForeignKey('notes.NoteType', verbose_name=_('type'))
+    type     = models.ForeignKey('notes.NoteType', verbose_name=_('type'))
     position = models.ForeignKey('positions.NotePosition', verbose_name=_('position'), null=True, blank=True)
-    
-    objects = models.Manager()
     
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('default note position')
+        verbose_name        = _('default note position')
         verbose_name_plural = _('default note positions')
-        unique_together = (('category', 'type', 'position'),)
+        unique_together     = (('category', 'type', 'position'),)
 
     def __unicode__(self):
         """ 
@@ -262,43 +139,10 @@ class IssueCategoryPosition(models.Model):
     """
     Issue category position.
     
-    Database table name: ``positions_issuecategoryposition``.
-    
-    Fields::
-    
-        issue
-            * ForeignKey: critica.apps.issues.models.Issue
-            * The issue
-            * Required
-            
-        category
-            * ForeignKey: critica.apps.categories.models.Category
-            * The category
-            * Required
-            
-        position
-            * ForeignKey: critica.apps.positions.models.CategoryPosition
-            * The category position
-            * Required
-
-    Indexes::
-    
-        * issue
-        * category
-        * position
-        * issue / category / position
-
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-    
     """
-    issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
+    issue    = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
     category = models.ForeignKey('categories.Category', verbose_name=_('category'))
     position = models.ForeignKey('positions.CategoryPosition', null=True, blank=True, db_index=True)
-    
-    objects = models.Manager()
     
     class Meta:
         """ 
@@ -321,58 +165,20 @@ class IssueNotePosition(models.Model):
     """
     Issue note position.
     
-    Database table name: ``notes_issuenoteposition``.
-    
-    Fields::
-    
-        issue
-            * ForeignKey: critica.apps.issues.models.Issue
-            * The issue
-            * Required
-            
-        category
-            * ForeignKey: critica.apps.categories.models.Category
-            * The category
-            * Required
-        
-        type
-            * ForeignKey: critica.apps.notes.models.NoteType
-            * The note type
-            * Required
-            
-        position
-            * ForeignKey: critica.apps.positions.models.NotePosition
-            * The note position
-            * Optional (can be blank)
-
-    Indexes::
-    
-        * issue
-        * type
-        * position
-        * issue / category / type / position
-
-    Managers::
-    
-        objects
-            Default manager: models.Manager()
-    
     """
-    issue = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
+    issue    = models.ForeignKey('issues.Issue', verbose_name=_('issue'))
     category = models.ForeignKey('categories.Category', verbose_name=_('category'))
-    type = models.ForeignKey('notes.NoteType', verbose_name=_('type'))
+    type     = models.ForeignKey('notes.NoteType', verbose_name=_('type'))
     position = models.ForeignKey('positions.NotePosition', verbose_name=_('position'), null=True, blank=True)
-    
-    objects = models.Manager()
     
     class Meta:
         """ 
         Model metadata. 
         
         """
-        verbose_name = _('issue note position')
+        verbose_name        = _('issue note position')
         verbose_name_plural = _('issue note positions')
-        unique_together = (('issue', 'category', 'type'),)
+        unique_together     = (('issue', 'category', 'type'),)
 
     def __unicode__(self):
         """ 

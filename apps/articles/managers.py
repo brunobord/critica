@@ -11,7 +11,6 @@ class ArticlePreviewManager(models.Manager):
     Article manager for preview mode.
     
     """
-    
     def get_query_set(self):
         """
         Default QuerySet.
@@ -20,13 +19,11 @@ class ArticlePreviewManager(models.Manager):
         return super(ArticlePreviewManager, self).get_query_set().filter(is_reserved=False)
 
 
-
 class ArticlePublishedManager(models.Manager):
     """
     Article manager that returns only published objects.
     
-    """
-    
+    """    
     def get_query_set(self):
         """
         Default QuerySet.

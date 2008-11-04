@@ -6,7 +6,6 @@ Views of ``critica.apps.newsletter`` application.
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.generic.simple import direct_to_template
-
 from critica.apps.newsletter.models import Subscriber
 from critica.apps.newsletter.forms import SubscriberForm
 from critica.apps.issues.views import _get_current_issue
@@ -33,7 +32,6 @@ def newsletter(request):
     context['form'] = form
 
     return direct_to_template(request, 'newsletter/form_page.html', context)
-
 
 
 def newsletter_thanks(request):

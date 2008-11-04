@@ -27,7 +27,6 @@ class Poll(models.Model):
     objects   = models.Manager()
     published = PollPublishedManager()
     
-    
     class Meta:
         """ 
         Model metadata. 
@@ -36,14 +35,12 @@ class Poll(models.Model):
         verbose_name        = _('poll')
         verbose_name_plural = _('polls')
 
-
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s' % self.title
-
 
     def save(self):
         """ 
@@ -54,7 +51,6 @@ class Poll(models.Model):
         super(Poll, self).save()
 
 
-
 class Choice(models.Model):
     """
     Choice.
@@ -62,9 +58,6 @@ class Choice(models.Model):
     """
     poll   = models.ForeignKey(Poll, verbose_name=_('poll'), help_text=_('Please, select or add a new poll.'))
     choice = models.CharField(_('choice'), max_length=200, help_text=_('Enter a choice for this poll.'))
-    
-    objects = models.Manager()
-
 
     class Meta:
         """ 
@@ -74,14 +67,12 @@ class Choice(models.Model):
         verbose_name        = _('choice')
         verbose_name_plural = _('choices')
 
-
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s' % self.choice
-
 
     def get_vote_percentage(self):
         """
@@ -94,7 +85,6 @@ class Choice(models.Model):
         return round(percentage)
 
 
-
 class Vote(models.Model):
     """
     Vote.
@@ -105,7 +95,6 @@ class Vote(models.Model):
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True)
     ip_address    = models.IPAddressField(verbose_name=_('Submitter IP address'))
 
-
     class Meta:
         """ 
         Model metadata. 
@@ -114,7 +103,6 @@ class Vote(models.Model):
         verbose_name        = _('vote')
         verbose_name_plural = _('votes')
         get_latest_by       = 'creation_date'
-        
         
     def __unicode__(self):
         """ 

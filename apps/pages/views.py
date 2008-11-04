@@ -6,7 +6,6 @@ Views of ``critica.apps.pages`` application.
 from django.shortcuts import render_to_response
 from django.shortcuts import get_object_or_404
 from django.template import RequestContext
-
 from critica.apps.front.views import _get_current_issue
 from critica.apps.pages.models import Page
 

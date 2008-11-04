@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+"""
+Templatetags of ``critica.apps.ads`` application.
+
+"""
 import datetime
 from django import template
 from django.core.exceptions import ObjectDoesNotExist
@@ -13,6 +17,10 @@ register = template.Library()
 
 @register.inclusion_tag('front/includes/ad.html')
 def display_ad(format, page, location):
+    """
+    Displays an ad related to its format, its page and its location.
+    
+    """
     width, height = format.split('x')
     today = datetime.date.today()
     try:
@@ -46,8 +54,13 @@ def display_ad(format, page, location):
     }
 
 
+
 @register.inclusion_tag('front/includes/carousel.html')
 def display_carousel(format, page, location):
+    """
+    Displays a carousel related to its format, its page and its location.
+    
+    """
     width, height = format.split('x')
     today = datetime.date.today()
     try:

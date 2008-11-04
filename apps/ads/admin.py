@@ -21,58 +21,35 @@ from critica.apps.ads.models import AdCarousel
 from critica.apps.ads.forms import CustomAdDefaultBannerForm
 from critica.apps.ads.forms import CustomAdBannerForm
 
+
 # Commons 
 # ------------------------------------------------------------------------------
 class CustomerAdmin(admin.ModelAdmin):
     pass
     
-admin.site.register(Customer, CustomerAdmin)
-custom_site.register(Customer, CustomerAdmin)
-
-
 
 class AdCampaignAdmin(admin.ModelAdmin):
     pass
     
-admin.site.register(AdCampaign, AdCampaignAdmin)
-custom_site.register(AdCampaign, AdCampaignAdmin)
-
-
 
 class AdFormatAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'width', 'height')
-    ordering = ['width']
+    ordering     = ['width']
     
-admin.site.register(AdFormat, AdFormatAdmin)
-custom_site.register(AdFormat, AdFormatAdmin)
-
-
 
 class AdTypeAdmin(admin.ModelAdmin):
     pass
     
-admin.site.register(AdType, AdTypeAdmin)
-custom_site.register(AdType, AdTypeAdmin)
-
-
 
 class AdPageAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'slug', 'type')
+    list_display       = ('id', 'name', 'slug', 'type')
     list_display_links = ('id', 'name')
-    ordering = ['id']
-    
-admin.site.register(AdPage, AdPageAdmin)
-custom_site.register(AdPage, AdPageAdmin)
-
+    ordering           = ['id']
 
 
 class AdLocationAdmin(admin.ModelAdmin):
     list_display = ('name', 'position')
-    ordering = ['position']
-    
-admin.site.register(AdLocation, AdLocationAdmin)
-custom_site.register(AdLocation, AdLocationAdmin)
-
+    ordering     = ['position']
 
 
 # Banners 
@@ -84,9 +61,13 @@ class AdBannerPositionAdmin(admin.ModelAdmin):
         }),
     )
     list_display = ('format', 'page', 'location', 'price')
-    list_filter = ('format', 'page', 'location', 'price')
+    list_filter  = ('format', 'page', 'location', 'price')
     
     def __call__(self, request, url):
+        """
+        Adds current request object and current URL to this class.
+        
+        """
         self.request = request
         return super(AdBannerPositionAdmin, self).__call__(request, url)
 
@@ -104,10 +85,6 @@ class AdBannerPositionAdmin(admin.ModelAdmin):
             field.choices = my_choices
         return field
     
-admin.site.register(AdBannerPosition, AdBannerPositionAdmin)
-custom_site.register(AdBannerPosition, AdBannerPositionAdmin)
-
-
 
 class AdDefaultBannerAdmin(admin.ModelAdmin):
     fieldsets = (
@@ -115,11 +92,15 @@ class AdDefaultBannerAdmin(admin.ModelAdmin):
             'fields': ('banner', 'format', 'positions', 'link', 'description'),
         }),
     )
-    list_display = ('banner', 'ald_positions')
+    list_display    = ('banner', 'ald_positions')
     filter_vertical = ['positions']
-    form = CustomAdDefaultBannerForm
+    form            = CustomAdDefaultBannerForm
 
     def ald_positions(self, obj):
+        """
+        Formatted positions list for admin list display.
+        
+        """
         html = '<table class="banner-ads-info"><tbody>'
         for ad in obj.positions.all():
             html += '<tr><td style="border:none; width: 220px; font-variant: small-caps;">%s</td><td style="border:none;">%s</td></tr>' % (ad.page, ad.location)
@@ -127,8 +108,12 @@ class AdDefaultBannerAdmin(admin.ModelAdmin):
         return html
     ald_positions.allow_tags = True
     ald_positions.short_description = _('positions')
-    
+
     def ald_banner(self, obj):
+        """
+        Formatted banner format for admin list display.
+        
+        """
         for ad in obj.positions.all():
             if not ad.format:
                 return None
@@ -138,14 +123,14 @@ class AdDefaultBannerAdmin(admin.ModelAdmin):
     ald_banner.short_description = _('banner')
     
     def save_model(self, request, obj, form, change):
+        """
+        Given a model instance save it to the database.
+        
+        """
         form = self.form
         if change == False:
             obj.submitter = request.user
         obj.save()
-        
-admin.site.register(AdDefaultBanner, AdDefaultBannerAdmin)
-custom_site.register(AdDefaultBanner, AdDefaultBannerAdmin)
-
 
 
 class AdBannerAdmin(admin.ModelAdmin):
@@ -160,12 +145,16 @@ class AdBannerAdmin(admin.ModelAdmin):
             'fields': ('starting_date', 'ending_date'),
         }),
     )
-    list_display = ('campaign', 'type', 'ald_positions', 'starting_date', 'ending_date')
-    list_filter = ('campaign', 'type')
+    list_display    = ('campaign', 'type', 'ald_positions', 'starting_date', 'ending_date')
+    list_filter     = ('campaign', 'type')
     filter_vertical = ['positions']
-    form = CustomAdBannerForm
+    form            = CustomAdBannerForm
 
     def ald_positions(self, obj):
+        """
+        Formatted positions list for admin list display.
+        
+        """
         html = '<table class="banner-ads-info"><tbody>'
         for ad in obj.positions.all():
             html += '<tr><td style="border:none; width: 220px; font-variant: small-caps;">%s</td><td style="border:none;">%s</td></tr>' % (ad.page, ad.location)
@@ -173,15 +162,16 @@ class AdBannerAdmin(admin.ModelAdmin):
         return html
     ald_positions.allow_tags = True
     ald_positions.short_description = (_('positions'))
-    
+
     def save_model(self, request, obj, form, change):
-        obj.submitter = request.user
+        """
+        Given a model instance save it to the database.
+        
+        """
+        if change == False:
+            obj.submitter = request.user
         obj.save()
-    
-admin.site.register(AdBanner, AdBannerAdmin)
-custom_site.register(AdBanner, AdBannerAdmin)
-
-
+        
 
 # Carousels
 # ------------------------------------------------------------------------------
@@ -192,9 +182,13 @@ class AdCarouselPositionAdmin(admin.ModelAdmin):
         }),
     )
     list_display = ('page', 'format', 'location', 'price')
-    list_filter = ('format', 'page', 'location', 'price')
+    list_filter  = ('format', 'page', 'location', 'price')
     
     def __call__(self, request, url):
+        """
+        Adds current request object and current URL to this class.
+        
+        """
         self.request = request
         return super(AdCarouselPositionAdmin, self).__call__(request, url)
 
@@ -210,11 +204,7 @@ class AdCarouselPositionAdmin(admin.ModelAdmin):
             my_choices.extend(AdLocation.objects.order_by('position').values_list('id','name'))
             print my_choices
             field.choices = my_choices
-        return field
-    
-admin.site.register(AdCarouselPosition, AdCarouselPositionAdmin)
-custom_site.register(AdCarouselPosition, AdCarouselPositionAdmin)
-
+        return field    
 
 
 class AdCarouselAdmin(admin.ModelAdmin):
@@ -234,11 +224,47 @@ class AdCarouselAdmin(admin.ModelAdmin):
     filter_vertical = ['positions']
 
     def save_model(self, request, obj, form, change):
-        obj.submitter = request.user
+        """
+        Given a model instance save it to the database.
+        
+        """
+        if change == False:
+            obj.submitter = request.user
         obj.save()
-    
+
+
+# Registers
+# ------------------------------------------------------------------------------
+admin.site.register(Customer, CustomerAdmin)
+custom_site.register(Customer, CustomerAdmin)
+
+admin.site.register(AdCampaign, AdCampaignAdmin)
+custom_site.register(AdCampaign, AdCampaignAdmin)
+
+admin.site.register(AdFormat, AdFormatAdmin)
+custom_site.register(AdFormat, AdFormatAdmin)
+
+admin.site.register(AdType, AdTypeAdmin)
+custom_site.register(AdType, AdTypeAdmin)
+
+admin.site.register(AdPage, AdPageAdmin)
+custom_site.register(AdPage, AdPageAdmin)
+
+admin.site.register(AdLocation, AdLocationAdmin)
+custom_site.register(AdLocation, AdLocationAdmin)
+
+admin.site.register(AdBannerPosition, AdBannerPositionAdmin)
+custom_site.register(AdBannerPosition, AdBannerPositionAdmin)
+
+admin.site.register(AdDefaultBanner, AdDefaultBannerAdmin)
+custom_site.register(AdDefaultBanner, AdDefaultBannerAdmin)
+
+admin.site.register(AdBanner, AdBannerAdmin)
+custom_site.register(AdBanner, AdBannerAdmin)
+
+admin.site.register(AdCarouselPosition, AdCarouselPositionAdmin)
+custom_site.register(AdCarouselPosition, AdCarouselPositionAdmin)
+
 admin.site.register(AdCarousel, AdCarouselAdmin)
 custom_site.register(AdCarousel, AdCarouselAdmin)
-
-
 

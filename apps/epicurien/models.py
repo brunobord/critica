@@ -17,9 +17,6 @@ class EpicurienArticleType(models.Model):
     name = models.CharField(_('name'), max_length=255)
     slug = models.SlugField(_('URL'), max_length=255, unique=True, blank=True, editable=False)
     
-    objects = models.Manager()
-    
-    
     class Meta:
         """ 
         Model metadata. 
@@ -29,14 +26,12 @@ class EpicurienArticleType(models.Model):
         verbose_name        = _('article epicurien type')
         verbose_name_plural = _('article epicurien types')
 
-
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
         return u'%s' % self.name
-
         
     def save(self):
         """ 
@@ -47,14 +42,12 @@ class EpicurienArticleType(models.Model):
         super(Type, self).save()
 
 
-
 class EpicurienArticle(BaseArticle):
     """
     Epicurien article.
     
     """
     type = models.ForeignKey('epicurien.EpicurienArticleType', verbose_name=_('type'))
-
 
     class Meta:
         """ 
@@ -64,7 +57,6 @@ class EpicurienArticle(BaseArticle):
         db_table            = 'epicurien_article'
         verbose_name        = _('article epicurien')
         verbose_name_plural = _('articles epicurien')
-
 
     def save(self):
         """ 

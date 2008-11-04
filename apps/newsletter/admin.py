@@ -5,7 +5,6 @@ Administration interface options of ``critica.apps.newsletter`` models.
 """
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.newsletter.models import Subscriber
 
@@ -16,9 +15,8 @@ class SubscriberAdmin(admin.ModelAdmin):
     
     """
     list_display = ('ald_subscriber', 'email', 'zip_code')
-    list_filter = ['zip_code']
-    ordering = ['first_name', 'last_name']
-
+    list_filter  = ['zip_code']
+    ordering     = ['first_name', 'last_name']
 
     def ald_subscriber(self, obj):
         """
@@ -29,5 +27,7 @@ class SubscriberAdmin(admin.ModelAdmin):
     ald_subscriber.short_description = _('subscriber')
     
 
+# Registers
+# ------------------------------------------------------------------------------
 admin.site.register(Subscriber, SubscriberAdmin)
 custom_site.register(Subscriber, SubscriberAdmin)

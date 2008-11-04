@@ -11,7 +11,6 @@ class PublishedPageManager(models.Manager):
     Published pages.
     
     """
-    
     def get_query_set(self):
         """ 
         Retrieves published pages. 

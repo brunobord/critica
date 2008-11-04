@@ -15,13 +15,17 @@ class IssueAdmin(admin.ModelAdmin):
     Administration interface options of ``Issue`` model.
     
     """
-    list_display = ('number', 'publication_date', 'ald_secret_link', 'is_published')
-    list_filter = ('is_published',)
-    search_fields = ('number',)
-    ordering = ('-publication_date',)
+    list_display   = ('number', 'publication_date', 'ald_secret_link', 'is_published')
+    list_filter    = ('is_published',)
+    search_fields  = ('number',)
+    ordering       = ('-publication_date',)
     date_hierarchy = 'publication_date'
-    
+
     def ald_secret_link(self, obj):
+        """
+        Formatted secret link for admin list display.
+        
+        """
         site = Site.objects.get_current()
         url = 'http://%s/preview/%s/' % (site.domain, obj.secret_key)
         return '<a href="%s">%s</a>' % (url, url)
@@ -29,6 +33,10 @@ class IssueAdmin(admin.ModelAdmin):
     ald_secret_link.short_description = _('secret link')
 
     def save_model(self, request, obj, form, change):
+        """
+        Given a model instance save it to the database.
+        
+        """
         obj.save()
         if change == False:
             from django.conf import settings
@@ -63,6 +71,9 @@ class IssueAdmin(admin.ModelAdmin):
                     category_quota = CategoryQuota(issue=obj, category=category, quota=default_quota.quota)
                     category_quota.save()
 
+
+# Registers
+# ------------------------------------------------------------------------------
 admin.site.register(Issue, IssueAdmin)
 custom_site.register(Issue, IssueAdmin)
 
