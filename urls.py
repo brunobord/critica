@@ -98,7 +98,6 @@ urlpatterns += patterns('',
 urlpatterns += patterns('',
     url(r'^pages/(?P<page_slug>[-\w]+)/$', 'critica.apps.pages.views.page', name='page'),
     url(r'^pages/publicites/$', 'critica.apps.pages.views.page_ads', name='page_ads'),
-    url(r'^pages/mentions-legales/$', 'critica.apps.pages.views.page_legal', name='page_legal'),
 )
 
 # Home and categories

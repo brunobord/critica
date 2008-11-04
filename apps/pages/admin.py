@@ -23,11 +23,23 @@ class PageAdmin(admin.ModelAdmin):
             'fields': ('is_published',),
         }),
     )
-    list_display  = ('title', 'creation_date', 'modification_date', 'is_published', 'ald_author')
+    list_display  = ('title', 'ald_slug', 'creation_date', 'modification_date', 'is_published', 'ald_author')
     search_fields = ('title', 'content')
     list_filter   = ('is_published', 'author')
     ordering      = ['title']
     exclude       = ['author']
+
+    def ald_slug(self, obj):
+        """ 
+        Formatted slug for admin list_display option. 
+        
+        """
+        from django.contrib.sites.models import Site
+        site = Site.objects.get_current()
+        url = 'http://www.%s/pages/%s/' % (site.domain, obj.slug)
+        return '<a href="%s"><strong>%s</strong></a>' % (url, url)
+    ald_slug.allow_tags = True
+    ald_slug.short_description = _('Slug')
 
     def ald_author(self, obj):
         """
