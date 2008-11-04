@@ -1,0 +1,7 @@
+{% if partner_links %}
+<ul>
+{% for link in partner_links %}
+    <li><a href="{{ link.link }}" title="{{ link.name }}">{{ link.name }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
