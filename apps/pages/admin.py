@@ -36,7 +36,7 @@ class PageAdmin(admin.ModelAdmin):
         """
         from django.contrib.sites.models import Site
         site = Site.objects.get_current()
-        url = 'http://www.%s/pages/%s/' % (site.domain, obj.slug)
+        url = 'http://%s/pages/%s/' % (site.domain, obj.slug)
         return '<a href="%s"><strong>%s</strong></a>' % (url, url)
     ald_slug.allow_tags = True
     ald_slug.short_description = _('Slug')
