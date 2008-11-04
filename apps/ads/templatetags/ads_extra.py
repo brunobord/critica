@@ -15,8 +15,8 @@ from critica.apps.ads.models import AdCarousel
 register = template.Library()
 
 
-@register.inclusion_tag('front/includes/ad.html')
-def display_ad(format, page, location):
+@register.inclusion_tag('front/includes/ad.html', takes_context=True)
+def display_ad(context, format, page, location):
     """
     Displays an ad related to its format, its page and its location.
     
@@ -46,6 +46,7 @@ def display_ad(format, page, location):
         default_banner = None
         
     return {
+        'MEDIA_URL': context['MEDIA_URL'],
         'banner': banner,
         'default_banner': default_banner,
         'format': format,
