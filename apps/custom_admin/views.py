@@ -14,6 +14,7 @@ from django.contrib.auth.decorators import permission_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.exceptions import MultipleObjectsReturned
 from django.contrib.sites.models import Site
+from django.views.generic.simple import direct_to_template
 from critica.apps.issues.models import Issue
 from critica.apps.categories.models import Category
 from critica.apps.articles.models import Article
@@ -246,9 +247,41 @@ def dashboard(request, issue=None):
     context['anger_complete'] = anger_complete
     
     return render_to_response(
-        'custom_admin/current_issue/dashboard/index.html', 
+        'custom_admin/dashboard/index.html', 
         context, 
         context_instance=RequestContext(request)
     )
+
+
+# ------------------------------------------------------------------------------
+# Ads dashboard
+# ------------------------------------------------------------------------------
+from critica.apps.ads.models import AdCampaign
+
+
+@login_required
+@permission_required('users.is_administrator')
+@permission_required('users.is_editor')
+@never_cache
+def dashboard_ads(request, campaign=None):
+    """
+    Displays ads dashboard.
+    
+    By default, displays the latest campaign dashboard. If argument ``campaign`` 
+    is defined, displays dashboard for this given campaign.
+    
+    """
+    context = {}
+    try:
+        latest_campaign = AdCampaign.objects.order_by('-id')
+        latest_campaign = latest_campaign[0:1].get()
+        context['latest_campaign'] = latest_campaign
+    except ObjectDoesNotExist:
+        latest_campaign = None
+        context['latest_campaign'] = latest_campaign
+        
+    return direct_to_template(request, 'custom_admin/dashboard_ads/index.html', context)
+
+
 
 

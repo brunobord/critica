@@ -8,7 +8,6 @@ from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from critica.apps.custom_admin.sites import custom_site
-from critica.apps.custom_admin.views import dashboard
 from critica.apps.syndication.feeds import LatestRss
 from critica.apps.syndication.feeds import LatestByCategoryRss
 
@@ -17,18 +16,12 @@ from critica.apps.syndication.feeds import LatestByCategoryRss
 # ------------------------------------------------------------------------------
 admin.autodiscover()
 urlpatterns = patterns('',
-    (r'^admin/ads/adbanner/(?P<id>\d+)/preview/$', 'critica.apps.ads.views.adbanner_preview'), 
+    (r'^admin/dashboard_ads/(?P<campaign>\d+)/$', 'critica.apps.custom_admin.views.dashboard_ads'),
+    url(r'^admin/dashboard_ads/$', 'critica.apps.custom_admin.views.dashboard_ads', name='dashboard_ads'),
     (r'^admin/dashboard/(?P<issue>\d+)/$', 'critica.apps.custom_admin.views.dashboard'),
     (r'^admin/dashboard/$', 'critica.apps.custom_admin.views.dashboard'),
     (r'^admin/(.*)', custom_site.root),
     (r'^django-admin/(.*)', admin.site.root),
-)
-
-# Pages
-# ------------------------------------------------------------------------------
-urlpatterns += patterns('',
-    url(r'^publicites/$', 'critica.apps.pages.views.page_ads', name='page_ads'),
-    url(r'^mentions-legales/$', 'critica.apps.pages.views.page_legal', name='page_legal'),
 )
 
 # Syndication
@@ -98,6 +91,14 @@ urlpatterns += patterns('',
     url(r'^preview/(?P<issue_key>[-\w]+)/regions/$', 'critica.apps.issuepreview.views.issuepreview_regions', name='issuepreview_category_regions'),
     url(r'^preview/(?P<issue_key>[-\w]+)/(?P<category_slug>[-\w]+)/$', 'critica.apps.issuepreview.views.issuepreview_category', name='issuepreview_category'),
     url(r'^preview/(?P<issue_key>[-\w]+)/$', 'critica.apps.issuepreview.views.issuepreview_home', name='issuepreview_home'),
+)
+
+# Pages
+# ------------------------------------------------------------------------------
+urlpatterns += patterns('',
+    url(r'^pages/(?P<page_slug>[-\w]+)/$', 'critica.apps.pages.views.page', name='page'),
+    url(r'^pages/publicites/$', 'critica.apps.pages.views.page_ads', name='page_ads'),
+    url(r'^pages/mentions-legales/$', 'critica.apps.pages.views.page_legal', name='page_legal'),
 )
 
 # Home and categories

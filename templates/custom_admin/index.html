@@ -14,6 +14,9 @@
         <strong><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a><br/>
         {% endif %}
         {% if perms.users.is_editor %}
+        <strong><a href="dashboard_ads/">{% blocktrans %}Dashboard Publicités{% endblocktrans %}</a><br/>
+        {% endif %}
+        {% if perms.users.is_editor %}
         <strong><a href="positions/issuecategoryposition/">Organiser la Une</a><br />
         {% endif %}
         {% if perms.users.is_editor or perms.users.is_journalist %}

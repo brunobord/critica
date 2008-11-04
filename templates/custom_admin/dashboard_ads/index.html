@@ -1,0 +1,12 @@
+{% extends 'admin/base_site.html' %}
+{% load i18n %}
+{% block title %}Dashboard Publicités | Administration de Critic@{% endblock %}
+{% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="/media/critica/admin/basic/css/custom.css" />{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="/admin/">{% trans 'Home' %}</a>{% if title %} &rsaquo; {{ title|escape }}{% endif %}</div>{% endblock %}
+{% block content %}
+<div id="dashboard">
+
+    <h1><a href="{% url dashboard_ads %}">Dashboard Publicités</a>{% if specific_campaign %} / Campagne {{ specific_campaign.name }}{% endif %}</h1>
+
+</div>
+{% endblock %}
