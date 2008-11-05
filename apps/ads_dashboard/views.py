@@ -13,4 +13,6 @@ def index(request, campaign=None):
     displays the dashboard for this campaign.
     
     """
-    return direct_to_template(request, 'ads_dashboard/index.html', {})
+    context = {}
+    context['root_path'] = '/admin/'
+    return direct_to_template(request, 'ads_dashboard/index.html', context)

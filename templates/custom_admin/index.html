@@ -1,21 +1,29 @@
 {% extends "admin/index.html" %}
-{% load i18n issues_dashboard_extra ads_dashboard_extra %}
+
+{% load i18n %}
+
 {% block title %}{{ title }} | Administration de Critic@{% endblock %}
-{% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="/media/critica/admin/basic/css/custom.css" />{% endblock %}
+
+{% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="{{ MEDIA_URL }}critica/admin/basic/css/custom.css" />{% endblock %}
+
 {% block branding %}
 <h1 id="site-name">Administration de Critic@</h1>
 {% endblock %}
+
 {% block content %}
 <div id="content-main">
 
     {% if perms.users.is_editor or perms.users.is_journalist %}
+    <div id="dashboards-links">
+        <ul>
+            <li id="issues-dashboard-link"><a href="{% url issues_dashboard_index %}">Dashboard Édition</a></li>
+            <li id="ads-dashboard-link"><a href="{% url ads_dashboard_index %}">Dashboard Publicités</a></li>
+        </ul>
+        <span class="clear">&nbsp;</span>
+    </div>
+    {% endif %}
+    {% if perms.users.is_editor or perms.users.is_journalist %}
     <div class="toplink">
-        {% if perms.users.is_editor %}
-        <strong><a href="{% url issues_dashboard_index %}">{% blocktrans %}Dashboard Éditions{% endblocktrans %}</a><br/>
-        {% endif %}
-        {% if perms.users.is_editor %}
-        <strong><a href="{% url ads_dashboard_index %}">{% blocktrans %}Dashboard Publicités{% endblocktrans %}</a><br/>
-        {% endif %}
         {% if perms.users.is_editor %}
         <strong><a href="positions/issuecategoryposition/">Organiser la Une</a><br />
         {% endif %}

@@ -246,6 +246,10 @@ def index(request, issue=None):
     context['anger_quota'] = anger_quota.quota
     context['anger_complete'] = anger_complete
     
+    # Root path
+    # --------------------------------------------------------------------------
+    context['root_path'] = '/admin/'
+    
     return direct_to_template(request, 'issues_dashboard/index.html', context)
 
 
