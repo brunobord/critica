@@ -82,5 +82,14 @@ def display_carousel(format, page, location):
         'format_width': width,
         'format_height': height,
     }
+
+
+@register.simple_tag
+def calculate_total_price(count, price):
+    """
+    Gets a count and a price and returns the total.
     
+    """
+    return count * price
+
 

@@ -320,6 +320,17 @@ class AdBanner(models.Model):
         
         """
         return u'%s' % (self.banner)
+        
+    def count_days(self):
+        """
+        Returns the number of days based on starting_date / ending_date fields.
+        
+        """
+        import datetime
+        dates = []
+        for day in xrange((self.ending_date - self.starting_date).days + 1):
+            dates.append(self.starting_date + datetime.timedelta(day))
+        return len(dates)
 
     def save(self):
         """ 

@@ -20,8 +20,8 @@ class Video(models.Model):
     name                = models.CharField(_('name'), max_length=255, help_text=_('Please, enter a name for this video.'), unique=True)
     widget              = models.TextField(_('widget'), help_text=_('Please, copy-paste the widget here. Do not modify it.'))
     tags                = TagField(help_text=_('Please, enter tags separated by commas or spaces.'))
-    creation_date       = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
-    modification_date   = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
+    creation_date       = models.DateTimeField(_('creation date'), auto_now_add=True)
+    modification_date   = models.DateTimeField(_('modification date'), auto_now=True)
     is_ready_to_publish = models.BooleanField(_('ready to publish'), default=False, db_index=True, help_text=_('Is ready to be published?'))
     is_reserved         = models.BooleanField(_('reserved'), default=False, db_index=True, help_text=_('Is reserved?'))
     
