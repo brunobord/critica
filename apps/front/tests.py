@@ -12,7 +12,7 @@ class EmptyFrontTestCase(TestCase):
     Empty front test case.
     
     """
-    def test_front_home(self):
+    def test_home(self):
         """
         Tests front homepage.
         
@@ -21,7 +21,7 @@ class EmptyFrontTestCase(TestCase):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 404)
 
-    def test_front_category(self):
+    def test_category(self):
         """
         Tests front category.
         
@@ -36,7 +36,7 @@ class EmptyFrontTestCase(TestCase):
             response = self.client.get(reverse('category', args=[category.slug]))
             self.assertEqual(response.status_code, 404)
 
-    def test_front_regions(self):
+    def test_category_regions(self):
         """
         Tests front Regions category.
         
@@ -45,7 +45,7 @@ class EmptyFrontTestCase(TestCase):
         response = self.client.get(reverse('category_regions'))
         self.assertEqual(response.status_code, 404)
 
-    def test_front_voyages(self):
+    def test_category_voyages(self):
         """
         Tests front Voyages category.
         
@@ -54,7 +54,7 @@ class EmptyFrontTestCase(TestCase):
         response = self.client.get(reverse('category_voyages'))
         self.assertEqual(response.status_code, 404)
 
-    def test_front_epicurien(self):
+    def test_category_epicurien(self):
         """
         Tests front Epicurien category.
         
@@ -63,7 +63,7 @@ class EmptyFrontTestCase(TestCase):
         response = self.client.get(reverse('category_epicurien'))
         self.assertEqual(response.status_code, 404)
 
-    def test_front_anger(self):
+    def test_category_anger(self):
         """
         Tests front Anger category.
         
@@ -80,7 +80,7 @@ class FrontTestCase(TestCase):
     """
     fixtures = ['sample_data']
     
-    def test_front_home(self):
+    def test_home(self):
         """
         Tests front homepage.
         
@@ -123,7 +123,7 @@ class FrontTestCase(TestCase):
         self.assert_(response.context[0]['video'])
         self.assertEqual(hasattr(response.context[0]['illustration'], '__iter__'), False)
         
-    def test_front_category(self):
+    def test_category(self):
         """
         Tests front category.
         
@@ -156,7 +156,7 @@ class FrontTestCase(TestCase):
             notes_count = Note.published.filter(issues__id=current_issue.id, category=category).count()
             self.assertEqual(notes_count, 10)
 
-    def test_front_regions(self):
+    def test_category_regions(self):
         """
         Tests front Regions category.
         
@@ -181,7 +181,7 @@ class FrontTestCase(TestCase):
         self.assert_(response.context[0]['featured_region_note'])
         self.assertEqual(hasattr(response.context[0]['featured_region_note'], '__iter__'), False)
         
-    def test_front_voyages(self):
+    def test_category_voyages(self):
         """
         Tests front Voyages category.
         
@@ -207,7 +207,7 @@ class FrontTestCase(TestCase):
             over_max_archives = False
         self.assertFalse(over_max_archives)
 
-    def test_front_epicurien(self):
+    def test_category_epicurien(self):
         """
         Tests front Epicurien category.
         
@@ -251,7 +251,7 @@ class FrontTestCase(TestCase):
             over_max_archives = False
         self.assertFalse(over_max_archives)
 
-    def test_front_anger(self):
+    def test_category_anger(self):
         """
         Tests front Anger category.
         

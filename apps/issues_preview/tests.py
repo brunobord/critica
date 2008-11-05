@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Tests of ``critica.apps.issuepreview`` application.
+Tests of ``critica.apps.issues_preview`` application.
 
 """
 from django.test import TestCase
@@ -11,7 +11,7 @@ from critica.apps.issues.models import Issue
 ISSUE_NUMBER = 136
 
 
-class IssuePreviewTestCase(TestCase):
+class issues_previewTestCase(TestCase):
     """
     Issue preview test case.
     
@@ -28,7 +28,7 @@ class IssuePreviewTestCase(TestCase):
         return issue.secret_key
         
         
-    def test_issuepreview_home(self):
+    def test_preview_home(self):
         """
         Tests issue preview for home.
         
@@ -36,7 +36,7 @@ class IssuePreviewTestCase(TestCase):
         # Get issue secret key
         sk = self._get_issue_key()
         # Should returns return 200
-        response = self.client.get(reverse('issuepreview_home', args=[sk]))
+        response = self.client.get(reverse('issues_preview_home', args=[sk]))
         self.assertEqual(response.status_code, 200)
         # Checks if template is the good one and if we are in the current mode
         self.assertTemplateUsed(response, 'front/home.html')
@@ -44,7 +44,7 @@ class IssuePreviewTestCase(TestCase):
         self.assertEqual(response.context[0]['is_preview'], True)
         self.assertEqual(response.context[0]['is_archive'], False)
         
-    def test_issuepreview_category(self):
+    def test_preview_category(self):
         """
         Tests issue preview for category.
         
@@ -61,7 +61,7 @@ class IssuePreviewTestCase(TestCase):
         # Iterates categories
         for category in categories:
             # Should return 200
-            response = self.client.get(reverse('issuepreview_category', args=[sk, category.slug]))
+            response = self.client.get(reverse('issues_preview_category', args=[sk, category.slug]))
             self.assertEqual(response.status_code, 200)
             # Gets current issue object
             # Populated by critica.context_processors.current_issue
@@ -73,7 +73,7 @@ class IssuePreviewTestCase(TestCase):
             self.assertEqual(response.context[0]['is_preview'], True)
             self.assertEqual(response.context[0]['is_archive'], False)
             
-    def test_issuepreview_regions(self):
+    def test_preview_regions(self):
         """
         Tests issue preview for Regions category.
         
@@ -81,7 +81,7 @@ class IssuePreviewTestCase(TestCase):
         # Get issue secret key
         sk = self._get_issue_key()
         # Should return 200
-        response = self.client.get(reverse('issuepreview_category_regions', args=[sk]))
+        response = self.client.get(reverse('issues_preview_category_regions', args=[sk]))
         self.assertEqual(response.status_code, 200)
         # Gets current issue object
         # Populated by critica.context_processors.current_issue
@@ -94,7 +94,7 @@ class IssuePreviewTestCase(TestCase):
         self.assertEqual(response.context[0]['is_archive'], False) 
 
 
-    def test_issuepreview_voyages(self):
+    def test_preview_voyages(self):
         """
         Tests issue preview Voyages category.
         
@@ -102,7 +102,7 @@ class IssuePreviewTestCase(TestCase):
         # Get issue secret key
         sk = self._get_issue_key()
         # Should return 200
-        response = self.client.get(reverse('issuepreview_category_voyages', args=[sk]))
+        response = self.client.get(reverse('issues_preview_category_voyages', args=[sk]))
         self.assertEqual(response.status_code, 200)
         # Should use the good template and we must be in the preview mode
         self.assertTemplateUsed(response, 'front/voyages.html')
@@ -111,7 +111,7 @@ class IssuePreviewTestCase(TestCase):
         self.assertEqual(response.context[0]['is_archive'], False)
         
         
-    def test_issuepreview_epicurien(self):
+    def test_preview_epicurien(self):
         """
         Tests issue preview Epicurien category.
         
@@ -119,7 +119,7 @@ class IssuePreviewTestCase(TestCase):
         # Get issue secret key
         sk = self._get_issue_key()
         # Should return 200
-        response = self.client.get(reverse('issuepreview_category_epicurien', args=[sk]))
+        response = self.client.get(reverse('issues_preview_category_epicurien', args=[sk]))
         self.assertEqual(response.status_code, 200)
         # Should use the good template and we must be in the preview mode
         self.assertTemplateUsed(response, 'front/epicurien.html')
@@ -128,7 +128,7 @@ class IssuePreviewTestCase(TestCase):
         self.assertEqual(response.context[0]['is_archive'], False)
         
 
-    def test_issuepreview_anger(self):
+    def test_preview_anger(self):
         """
         Tests issue preview Anger category.
         
@@ -136,7 +136,7 @@ class IssuePreviewTestCase(TestCase):
         # Get issue secret key
         sk = self._get_issue_key()
         # Should return 200
-        response = self.client.get(reverse('issuepreview_category_anger', args=[sk]))
+        response = self.client.get(reverse('issues_preview_category_anger', args=[sk]))
         self.assertEqual(response.status_code, 200)
         # Should use the good template and we must be in the preview mode
         self.assertTemplateUsed(response, 'front/anger.html')

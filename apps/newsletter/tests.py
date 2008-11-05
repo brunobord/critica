@@ -20,14 +20,14 @@ class SubscriberTest(TestCase):
         Private: returns the result of a POST query using the subscriber form.
         
         """
-        return self.client.post(reverse('newsletter'), fields)
+        return self.client.post(reverse('newsletter_index'), fields)
         
     def test_subscriber_form_get(self):
         """
         GET request on subscriber form.
         
         """
-        response = self.client.get(reverse('newsletter'))
+        response = self.client.get(reverse('newsletter_index'))
         self.assertEquals(response.status_code, 200)
 
     def test_subscriber_form_ok(self):

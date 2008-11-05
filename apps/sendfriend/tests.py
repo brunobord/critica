@@ -22,14 +22,14 @@ class SendFriendTestCase(TestCase):
         Private: returns the result of a POST query using the sendfriend form."
         
         """
-        return self.client.post(reverse('sendfriend'), fields)
+        return self.client.post(reverse('sendfriend_index'), fields)
 
     def test_sendfriend_form_get(self):
         """
         GET request on sendfriend form.
         
         """
-        response = self.client.get(reverse('sendfriend'))
+        response = self.client.get(reverse('sendfriend_index'))
         self.assertEquals(response.status_code, 200)
 
     def test_sendfriend_form_ok(self):
