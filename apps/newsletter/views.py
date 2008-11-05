@@ -11,7 +11,7 @@ from critica.apps.newsletter.forms import SubscriberForm
 from critica.apps.issues.views import _get_current_issue
 
 
-def newsletter(request):
+def index(request):
     """
     View of newsletter form.
     
@@ -34,7 +34,7 @@ def newsletter(request):
     return direct_to_template(request, 'newsletter/form_page.html', context)
 
 
-def newsletter_thanks(request):
+def thanks(request):
     """
     View of newsletter thanks message.
     

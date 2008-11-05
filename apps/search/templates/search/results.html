@@ -1,0 +1,47 @@
+{% extends "layout/base.html" %}
+{% block title %}Résultats de la recherche{% endblock %}
+{% block body_id%}search-results{% endblock %}
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Résultats de la recherche</span></h1>
+    
+    {% if items.object_list %}
+        <h2>Articles et brèves contenant les termes de recherche <em>&laquo; {{ search_item }} &raquo;</em> ({{ items.object_list|length }} résultats)</h2>
+        <ul id="items">
+        {% for item in items.object_list %}
+            <li>
+                <a href="{% url issues_archive_category item.issues.all|first,item.category.slug %}" title="{{ item.title }}">{{ item.title }}</a><br />
+                <span class="item-meta">Posté le {{ item.publication_date|date:"l d F Y" }} dans l'édition {{ item.issues.all|first }} et classé dans la rubrique {{ item.category.name }}</span>
+            </li>
+        {% endfor %}
+        </ul>
+        {% if items.has_next %}
+        <div class="pagination">
+            <span class="step-links">
+                {% if items.has_previous %}
+                    <a href="?page={{ items.previous_page_number }}">Plus récents</a> &laquo;
+                {% endif %}
+                <span class="current">
+                    Page {{ items.number }} / {{ items.paginator.num_pages }}
+                </span>
+                {% if items.has_next %}
+                    &raquo; <a href="?page={{ items.next_page_number }}">Plus anciens</a>
+                {% endif %}
+            </span>
+        </div>
+        {% endif %}
+    {% else %}
+        <div style="font-weight: bold">
+            <p>Les termes de recherche spécifiés - <em>&laquo; {{ search_item }} &raquo;</em> – ne correspondent à aucun article.</p>
+            <p>Suggestions :</p>
+            <ul style="margin-left: 2em; list-style-type: square">
+                <li>Vérifiez l’orthographe des termes de recherche.</li>
+                <li>Essayez d'autres mots.</li>
+                <li>Utilisez des mots plus généraux.</li>
+                <li>Spécifiez un moins grand nombre de mots.</li>
+            </ul>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

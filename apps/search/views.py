@@ -3,9 +3,8 @@
 Views of ``critica.apps.search`` application.
 
 """
-from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
-from django.template import RequestContext
+from django.views.generic.simple import direct_to_template
 from django.core.paginator import Paginator
 from django.core.paginator import InvalidPage
 from django.core.paginator import EmptyPage
@@ -18,9 +17,9 @@ from critica.apps.epicurien.models import EpicurienArticle
 from critica.apps.anger.models import AngerArticle
 
 
-def search(request):
+def results(request):
     """
-    Displays search results.
+    View of search results.
     
     """
     issue = _get_current_issue()
@@ -102,10 +101,6 @@ def search(request):
     else:
         return HttpResponseRedirect('/')
         
-    return render_to_response(
-        'search/search_results.html',
-        context,
-        context_instance=RequestContext(request)
-    )
+    return direct_to_template(request, 'search/results.html', context)
 
 

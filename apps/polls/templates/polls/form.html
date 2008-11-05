@@ -1,0 +1,15 @@
+<h2><img src="{{ MEDIA_URL }}critica/img/pouroucontre_top.png" alt="Pour ou contre ?" /></h2>
+<form action="{% url polls_poll_vote %}" method="POST">
+    <p>{{ poll.title }}&nbsp;:</p>
+    <ul class="autoClear">
+        {% for choice in poll.choice_set.all %}
+        <li>
+            <input name="id_choice" value="{{ choice.id }}" type="radio" value="{{ choice.choice }}" />
+            <label>{{ choice.choice }}</label>
+        </li>
+        {% endfor %}
+    </ul>
+    <input name="ip_address" value="{{ REMOTE_ADDR }}" type="hidden" />
+    <input name="id_poll" value="{{ poll.id }}" type="hidden" />
+    <p class="submit"><input src="{{ MEDIA_URL }}critica/img/pouroucontre_valider.jpg" alt="Valider" type="image"/></p>
+</form>

@@ -1,0 +1,13 @@
+{% load image_thumbnail articles_extra %}
+<h3>{{ article.title }}</h3>
+<p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
+{% include "front/includes/article_illustration_medium.html" %}
+<p class="lead">{{ article.summary|safe }}</p>
+<p class="readMore slick-show"><a href="#">Lire la suite</a></p>
+<!-- SLICKBOX -->
+<div class="slickbox" style="display:block;">
+    {{ article.content|safe }}
+    {% display_related_articles article %}
+    <p class="readMore slick-hide"><a href="#">Masquer</a></p>
+</div>    
+<!-- // SLICKBOX -->

@@ -3,7 +3,7 @@
 Views of ``critica.apps.tags`` application.
 
 """
-from django.shortcuts import render_to_response
+from django.views.generic.simple import direct_to_template
 from django.shortcuts import get_object_or_404
 from django.template import RequestContext
 from django.core.paginator import Paginator
@@ -21,7 +21,7 @@ from critica.apps.epicurien.models import EpicurienArticle
 from critica.apps.anger.models import AngerArticle
 
 
-def tags(request):
+def index(request):
     """
     Displays all tags as tag cloud.
     
@@ -58,10 +58,7 @@ def tags(request):
         
     context['tags'] = calculate_cloud(all_tags, steps=10)
     
-    return render_to_response(
-        'tags/tags.html', 
-        context, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'tags/index.html', context)
 
     
 def tag(request, tag):
@@ -122,9 +119,6 @@ def tag(request, tag):
     except (EmptyPage, InvalidPage):
         context['items'] = paginator.page(paginator.num_pages)
 
-    return render_to_response(
-        'tags/tag.html', 
-        context, 
-        context_instance=RequestContext(request))
+    return direct_to_template(request, 'tags/tag.html', context)
 
 

@@ -1,0 +1,12 @@
+<div class="relatedArticles">
+    <h4>À lire aussi</h4>
+    {% if related_articles %}
+        <ul>
+        {% for article in related_articles %}
+            <li><a href="{% url issues_archive_category article.issues.all|first,article.category.slug %}" title="{{ article.title }}">{{ article.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p><strong>Pas encore d'articles relatifs.</strong></p>
+    {% endif %}
+</div>

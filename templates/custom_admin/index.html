@@ -1,5 +1,5 @@
 {% extends "admin/index.html" %}
-{% load i18n %}
+{% load i18n issues_dashboard_extra ads_dashboard_extra %}
 {% block title %}{{ title }} | Administration de Critic@{% endblock %}
 {% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="/media/critica/admin/basic/css/custom.css" />{% endblock %}
 {% block branding %}
@@ -11,10 +11,10 @@
     {% if perms.users.is_editor or perms.users.is_journalist %}
     <div class="toplink">
         {% if perms.users.is_editor %}
-        <strong><a href="dashboard/">{% blocktrans %}Dashboard{% endblocktrans %}</a><br/>
+        <strong><a href="{% url issues_dashboard_index %}">{% blocktrans %}Dashboard Éditions{% endblocktrans %}</a><br/>
         {% endif %}
         {% if perms.users.is_editor %}
-        <strong><a href="dashboard_ads/">{% blocktrans %}Dashboard Publicités{% endblocktrans %}</a><br/>
+        <strong><a href="{% url ads_dashboard_index %}">{% blocktrans %}Dashboard Publicités{% endblocktrans %}</a><br/>
         {% endif %}
         {% if perms.users.is_editor %}
         <strong><a href="positions/issuecategoryposition/">Organiser la Une</a><br />

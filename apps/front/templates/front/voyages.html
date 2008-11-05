@@ -1,0 +1,144 @@
+{% extends  "layout/base.html" %}
+
+{% load image_thumbnail ads_extra %}
+
+{% block title %}Voyages{% endblock %}
+
+{% block extra_head %}
+<!-- BLOC DEMO EASY VOYAGES -->
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/calendar.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/completionMEC.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/completionMEH.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/completionMEV.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/formMEV.css" media="screen">
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/completion.css" media="screen">
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/pileForms.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/formMEV.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/formMEH.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/formMEC.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/formMEP.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/rjs.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/completion.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/completionMEV.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/completionMEH.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/completionMEC.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/doubleCalendar.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/header.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/all.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/conseil.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/easyV_fichiers/tools.js"></script>
+<style type="text/css" media="screen">
+    * html #topdestimenu li{width:175px; height:28px;}
+</style>
+<!-- BLOC DEMO EASY VOYAGES -->
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}critica/easyV_fichiers/fr_moteur.css" media="screen"><!-- JAVASCRIPT -->
+{% endblock %}
+
+{% block ad_1_0 %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'voyages' '1.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+{% endblock %}
+
+{% block body_id %}voyages{% endblock %}
+{% block body_class %}rubrique{% endblock %}
+
+{% block content %}
+<!-- LEFT WRAP -->
+<div id="mainContent" class="leftWrap">
+
+    <h1>Voyages</h1>
+    
+    {% if article %}
+        {% include "front/includes/category_article.html" %}
+    {% else %}
+        {% include "front/includes/category_article_empty.html" %}
+    {% endif %}
+    
+    <!-- AD -->
+    <div class="addSection add468"> 
+        {% display_ad '468x60' 'voyages' '2.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+    <!-- // AD -->
+    
+</div>
+<!-- // LEFT WRAP -->
+
+<!-- RIGHT WRAP -->
+<div class="rightWrap">
+
+    <!-- SUB CONTENT -->
+    <div id="subContent">
+    
+        <!-- LEFT WRAP -->
+        <div class="leftWrap">
+        
+            <div class="articleList autoClear">
+                {% if article %}
+                    {% include "front/includes/article_localization.html" %}
+                {% else %}
+                    {% include "front/includes/article_localization_empty.html" %}
+                {% endif %}
+            </div>
+            
+            <!-- LEFT WRAP -->
+            <div class="leftWrap">
+            
+                <!-- ARCHIVES -->
+                <div id="archivesBar" class="articleList autoClear">
+                    <div>
+                        <h2>ARCHIVES VOYAGES</h2>
+                        {% if archives %}
+                            {% include "front/includes/category_archives.html" %}
+                        {% else %}
+                            {% include "front/includes/category_archives_empty.html" %}
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- // ARCHIVES -->
+                
+                <!-- AD -->
+				<div class="addSection">
+				    <div class="add-300x250 autoClear">
+                        {% display_ad '300x250' 'voyages' '5.0' %}
+                        {% display_ad '300x250' 'voyages' '5.1' %}
+                    </div>
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+                <!-- // AD -->
+                
+            </div>
+            <!-- // LEFT WRAP -->
+            
+        </div>
+        <!-- LEFT WRAP -->
+		
+		<!-- RIGHT WRAP -->
+		<div class="rightWrap">
+		
+		    <!-- AD -->
+			<div class="addSection">
+		        <div class="add130">
+                    {% display_ad '120x600' 'voyages' '6.0' %}
+                </div>
+                {% include "front/includes/pages_ads_link.html" %}
+            </div>
+            <!-- // AD -->
+            
+        </div>
+        <!-- // RIGHT WRAP -->
+        
+    <!-- // LEFT WRAP -->
+	</div>
+
+    {% include "front/includes/voyages_easyvoyages.html" %}
+
+	</div>
+	<!-- // SUB CONTENT -->
+	
+</div>
+<!-- // RIGHT WRAP -->
+
+{% endblock %}

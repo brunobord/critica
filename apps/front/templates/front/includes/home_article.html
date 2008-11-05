@@ -1,0 +1,58 @@
+{% load image_thumbnail %}
+
+<div class="articleSection article-{{ article.id }}">
+
+    {% if is_preview %}
+	   <h2><span><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">{{ article.category.name }}</a></span></h2>
+    {% endif %}
+    {% if is_archive %}
+	   <h2><span><a href="{% url issues_archive_category issue.number,article.category.slug %}">{{ article.category.name }}</a></span></h2>
+    {% endif %}
+    {% if is_current %}
+	   <h2><span><a href="{{ article.get_absolute_url }}">{{ article.category.name }}</a></span></h2>
+    {% endif %}
+
+	<div class="lead autoClear">
+        {% if is_preview %}
+            <h3><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if is_archive %}
+            <h3><a href="{% url issues_archive_category issue.number,article.category.slug %}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if is_current %}
+            <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+        {% endif %}
+        
+        {% include "front/includes/article_illustration_small.html" %}
+
+        <div class="summary"></div>
+        <div class="content"><p>{{ article.summary|safe }}</p></div>
+
+        <script type="text/javascript">
+            // <![CDATA[
+                $(document).ready(function() {
+                    $('.article-{{ article.id }} .content').hide();
+                    $('.article-{{ article.id }} .summary').html('<p>{{ article.summary|striptags|truncatewords:45|safe|escapejs }}</p>');
+                    $('.article-{{ article.id }} h3 a').click(function() {
+                        $('.article-{{ article.id }} .summary').slideToggle('fast');
+                        $('.article-{{ article.id }} .content').slideToggle('fast');
+                        return false;
+                    });
+                });
+        // ]]>
+        </script>
+        
+	</div>
+
+    {% if is_preview %}
+	    <p class="readMore"><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">Lire la suite</a></p>
+	{% endif %}
+	{% if is_archive %}
+	    <p class="readMore"><a href="{% url issues_archive_category issue.number,article.category.slug %}">Lire la suite</a></p>
+	{% endif %}
+	{% if is_current %}
+	    <p class="readMore"><a href="{{ article.get_absolute_url }}">Lire la suite</a></p>
+    {% endif %}
+    
+</div>
+

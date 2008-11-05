@@ -1,0 +1,266 @@
+{% extends "layout/base.html" %}
+
+{% load ads_extra %}
+
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block ad_1_0 %}
+    <div class="addSection add728">
+        {% display_ad '728x90' category.slug '1.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+{% endblock %}
+
+{% block body_id %}{{ category.slug }}{% endblock %}
+{% block body_class %}rubrique{% endblock %}
+
+{% block content %}
+<!-- LEFT WRAP -->
+<div id="mainContent" class="leftWrap">
+    
+    <h1>{{ category.name }}</h1>
+    
+    {% if article %}
+        {% include "front/includes/category_article.html" %}
+	{% else %}
+	    {% include "front/includes/category_article_empty.html" %}
+    {% endif %}
+	
+	<!-- AD -->
+    <div class="addSection add468"> 
+        {% display_ad '468x60' category.slug '2.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+    <!-- // AD -->
+
+    <!-- ARTICLE LIST -->
+    <div class="articleList autoClear">
+	<div class="wrap">
+        {% if note_2 %}
+            {% with note_2 as note %}
+                {% include "front/includes/category_note_pushpin.html" %}
+            {% endwith %}
+        {% else %}
+            {% include "front/includes/category_note_pushpin_empty.html" %}
+        {% endif %}
+        
+        {% if note_3 %}
+            {% with note_3 as note %}
+                {% include "front/includes/category_note_pushpin.html" %}
+            {% endwith %}
+        {% else %}
+            {% include "front/includes/category_note_pushpin_empty.html" %}
+        {% endif %}
+	   </div>
+	   <div class="wrap">
+        {% if note_4 %}
+            {% with note_4 as note %}
+                {% include "front/includes/category_note_pushpin.html" %}
+            {% endwith %}
+        {% else %}
+            {% include "front/includes/category_note_pushpin_empty.html" %}
+        {% endif %}
+        
+        {% if note_5 %}
+            {% with note_5 as note %}
+                {% include "front/includes/category_note_pushpin.html" %}
+            {% endwith %}
+        {% else %}
+            {% include "front/includes/category_note_pushpin_empty.html" %}
+        {% endif %}
+	   </div>
+    
+    </div>
+    <!-- // ARTICLE LIST -->
+	
+	<!-- AD -->
+    <div class="addSection add468">
+        {% display_ad '468x60' category.slug '3.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+    <!-- // AD -->
+    	
+</div>
+<!-- // LEFT WRAP -->
+
+<!-- RIGHT WRAP -->
+<div class="rightWrap">
+    
+    <!-- MAIN ARTICLE -->
+    {% if note_1 %}
+        {% with note_1 as note %}
+            {% include "front/includes/category_note_postit.html" %}
+        {% endwith %}
+	{% else %}
+	    {% include "front/includes/category_note_postit_empty.html" %}
+    {% endif %}
+	<!-- // MAIN ARTICLE -->
+
+    <!-- SUB CONTENT -->
+    <div id="subContent" class="autoClear">
+    
+        <!-- LEFT WRAP -->
+        <div class="leftWrap">
+            
+            <div class="articleList autoClear">
+
+                {% if note_6 %}
+                    {% with note_6 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+    		    
+                {% if note_7 %}
+                    {% with note_7 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+                {% if note_8 %}
+                    {% with note_8 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+    		    
+                {% if note_9 %}
+                    {% with note_9 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+    		    
+                {% if note_10 %}
+                    {% with note_10 as note %}
+                        {% include "front/includes/category_note_accordion.html" %}
+                    {% endwith %}
+    		    {% else %}
+    		        {% include "front/includes/category_note_accordion_empty.html" %}
+    		    {% endif %}
+            </div>
+            
+            <!-- AD -->
+            {% ifequal category.slug "national" %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+            {% endifequal %}
+            {% ifequal category.slug "etranger" %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+            {% endifequal %}
+            {% ifequal category.slug "societe" %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+            {% endifequal %}
+            {% ifequal category.slug "insolite" %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+            {% endifequal %}
+            {% ifequal category.slug "pipoles" %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+            {% endifequal %}
+            {% ifequal category.slug "bouquins" %}
+                <div class="addSection">
+                    {% display_ad '250x250' category.slug '4.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+            {% endifequal %}
+            <!-- // AD -->
+            
+        </div>
+        <!-- // LEFT WRAP -->
+    
+        <!-- RIGHT WRAP -->
+        <div class="rightWrap">
+        
+            <!-- AD -->
+			<div class="addSection">
+		        <div class="add130">
+                    {% display_ad '120x600' category.slug '6.0' %}
+                </div>
+                {% include "front/includes/pages_ads_link.html" %}
+            </div>
+            <!-- // AD -->
+            
+        </div>
+        <!-- // RIGHT WRAP -->
+    
+    </div>
+    <!-- // SUB CONTENT -->
+
+    <!-- EXTRA -->
+    <div id="extra">
+        {% ifequal category.slug "national" %}
+        <div id="extra-national">
+            {% include 'front/extra/national.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "etranger" %}
+        <div id="extra-etranger">
+            {% include 'front/extra/etranger.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "societe" %}
+        <div id="extra-societe">
+            {% include 'front/extra/societe.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "sports" %}
+        <div id="extra-sports">
+            {% include 'front/extra/sports.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "pipoles" %}
+        <div id="extra-etranger">
+            {% include 'front/extra/pipoles.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "tele" %}
+        <div id="extra-tele">
+            {% include 'front/extra/tele.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "bouquins" %}
+        <div id="extra-bouquins">
+            {% include 'front/extra/bouquins.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "nanas" %}
+        <div id="extra-nanas">
+            {% include 'front/extra/nanas.html' %}
+        </div>
+        {% endifequal %}
+        {% ifequal category.slug "insolite" %}
+        <div id="extra-bouquins">
+            {% include 'front/extra/insolite.html' %}
+        </div>
+        {% endifequal %}
+    </div>
+    <!-- // EXTRA -->
+    
+    <!-- NEWSLETTER SECTION -->
+    <div id="newsletterSection">
+        {% include "front/includes/newsletter_form.html" %}
+    </div>
+    <!-- // NEWSLETTER SECTION -->
+
+</div>
+<!-- // RIGHT WRAP -->
+
+{% endblock %}

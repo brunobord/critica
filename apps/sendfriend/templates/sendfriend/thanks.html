@@ -1,0 +1,18 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Envoyer à un ami{% endblock %}
+
+{% block body_id %}sendfriend{% endblock %}
+
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Envoyer à un ami</span></h1>
+    
+    <p>Votre message a été envoyé avec succès.</p>
+
+    <p class="center"><a href="{% url home %}">Cliquez ici pour retourner à la page d'accueil du site</a>.</p>
+    
+</div>
+{% endblock %}
+

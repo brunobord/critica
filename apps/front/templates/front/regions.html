@@ -1,0 +1,132 @@
+{% extends "layout/base.html" %}
+
+{% load ads_extra %}
+
+{% block title %}Régions{% endblock %}
+
+{% block extra_head %}
+<script type="text/javascript">
+	// <![CDATA[
+	jQuery().ready(function(){
+		jQuery('#mainContent div.articleAccordion').accordion({
+			header: 'div.articleButton',
+			autoheight: false,
+			alwaysOpen: false,
+			active: '.current'
+		});
+	});
+	// ]]>
+</script>
+{% endblock %}
+
+{% block ad_1_0 %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'regions' '1.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+{% endblock %}
+
+{% block body_id %}regions{% endblock %}
+{% block body_class %}rubrique{% endblock %}
+
+{% block content %}
+<!-- LEFT WRAP -->
+<div id="mainContent" class="leftWrap">
+    
+    <h1>Régions</h1>
+    
+    <!-- ARTICLE ACCORDION -->
+    <div class="articleAccordion">
+        
+        {% if regions_notes_1 %}
+            {% for regions_note in regions_notes_1 %}
+                {% include "front/includes/regions_note.html" %}
+            {% endfor %}
+        {% endif %}
+        
+        <!-- AD -->
+        <div class="addSection add468">
+            {% display_ad '468x60' 'regions' '2.0' %}
+            {% include "front/includes/pages_ads_link.html" %}
+        </div>
+	    <!-- // AD -->
+	    
+	    {% if regions_notes_2 %}
+            {% for regions_note in regions_notes_2 %}
+                {% include "front/includes/regions_note.html" %}
+            {% endfor %}
+        {% endif %}
+        
+        <!-- AD -->
+        <div class="addSection add468">
+            {% display_ad '468x60' 'regions' '3.0' %}
+            {% include "front/includes/pages_ads_link.html" %}
+        </div>
+	    <!-- // AD -->
+	    
+	    {% if regions_notes_3 %}
+            {% for regions_note in regions_notes_3 %}
+                {% include "front/includes/regions_note.html" %}
+            {% endfor %}
+        {% endif %}
+        
+    </div>
+    <!-- // ARTICLE ACCORDION -->
+    
+</div>
+<!-- // LEFT WRAP -->
+
+<!-- RIGHT WRAP -->
+<div class="rightWrap">
+
+    <!-- MAIN ARTICLE -->
+    {% if featured_region_note %}
+        {% include "front/includes/regions_featured_note.html" %}
+    {% else %}
+        {% include "front/includes/regions_featured_note_empty.html" %}
+    {% endif %}
+	<!-- // MAIN ARTICLE -->
+	
+	<!-- AD -->
+	<div class="addSection add468">
+	    {% display_ad '250x250' 'regions' '4.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+	</div>
+	<!-- // AD -->
+	
+	<!-- EXTRA -->
+	<div id="extra">
+	    <div id="extra-regions">
+	        {% include 'front/extra/regions.html' %}
+	    </div>
+	</div>
+	<!-- // EXTRA -->
+	
+	<div id="newsletterSection">
+        {% include "front/includes/newsletter_form.html" %}
+	</div>
+	
+	<!-- AD -->
+	<div class="addSection add468">
+	    {% display_ad '250x250' 'regions' '4.1' %}
+        {% include "front/includes/pages_ads_link.html" %}
+	</div>
+	<!-- // AD -->
+	
+	<!-- SUB CONTENT -->
+	<div id="subContent">
+	
+	    <!-- LEFT WRAP -->
+		<div class="leftWrap"> </div>
+		<!-- // LEFT WRAP -->
+						
+		<!-- RIGHT WRAP -->
+		<div class="rightWrap"> </div>
+		<!-- // RIGHT WRAP -->
+					
+    </div>
+	<!-- // SUB CONTENT -->
+
+</div>
+<!-- // RIGHT WRAP -->
+{% endblock %}

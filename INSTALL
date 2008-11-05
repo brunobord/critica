@@ -3,6 +3,7 @@ How to install Critic@-engine
 
 This is a quickstart guide to help you installing Critic@-engine on your system.
 
+
 Requirements
 ------------
 
@@ -27,6 +28,7 @@ Critic@-engine uses the latest version of django-imagethumbnail
 (http://www.interfaceip.org/django-imagethumbnail/django-imagethumbnail.tar.gz) 
 for generating thumbnails. So you need to download and install this application.
 
+
 Installation
 ------------
 
@@ -46,6 +48,7 @@ files into the ``critica`` directory::
     $ rm -rf sample
     
 That's all! Critic@-engine is installed.
+
 
 Configuration
 -------------
@@ -133,6 +136,9 @@ this order otherwise you will encounter problems during fixtures loading)::
         'critica.apps.illustrations',
         'critica.apps.videos',
         'critica.apps.issues',
+        'critica.apps.issues_dashboard',
+        'critica.apps.issues_preview',
+        'critica.apps.issues_archive',
         'critica.apps.articles',
         'critica.apps.epicurien',
         'critica.apps.voyages',
@@ -145,16 +151,19 @@ this order otherwise you will encounter problems during fixtures loading)::
         'critica.apps.anger',
         'critica.apps.quotas',
         'critica.apps.ads',
+        'critica.apps.ads_dashboard',
+        'critica.apps.ads_preview',
         'critica.apps.sendfriend',
         'critica.apps.search',
         'critica.apps.tags',
-        'critica.apps.archives',
-        'critica.apps.issuepreview',
         'critica.apps.newsletter',
         'critica.apps.polls',
+        'critica.apps.partnerlinks',
+        'critica.apps.utils',
     )
 
 Voilà! Critic@-engine is ready.
+
 
 Database synchronization and sample data
 ----------------------------------------
@@ -173,4 +182,82 @@ Then, have fun::
     $ python manage.py runserver
     
 You should see the website running at this URL: ``http://127.0.0.1:8000``.
+
+
+Named URLs
+----------
+
+The list of all named URLs by application:
+
+ads_dashboard
+~~~~~~~~~~~~~
++ ``ads_dashboard_index``
++ ``ads_dashboard_campaign``
+
+front
+~~~~~
++ ``home``
++ ``category``
++ ``category_regions``
++ ``category_voyages``
++ ``category_epicurien``
++ ``category_anger``
+
+issues_archive
+~~~~~~~~~~~~~~
++ ``issues_archive_index``
++ ``issues_archive_home``
++ ``issues_archive_category``
++ ``issues_archive_category_regions``
++ ``issues_archive_category_voyages``
++ ``issues_archive_category_epicurien``
++ ``issues_archive_category_anger``
+
+issues_dashboard
+~~~~~~~~~~~~~~~~
++ ``issues_dashboard_index``
++ ``issues_dashboard_issue``
+
+issues_preview
+~~~~~~~~~~~~~~
++ ``issues_preview_home``
++ ``issues_preview_category``
++ ``issues_preview_category_regions``
++ ``issues_preview_category_voyages``
++ ``issues_preview_category_epicurien``
++ ``issues_preview_category_anger``
+
+newsletter
+~~~~~~~~~~
++ ``newsletter_index``
++ ``newsletter_thanks``
+
+pages
+~~~~~
++ ``pages_index``
++ ``pages_page``
+
+polls
+~~~~~
++ ``polls_poll_vote``
++ ``polls_poll_results``
+
+search
+~~~~~~
++ ``search_results``
+
+sendfriend
+~~~~~~~~~~
++ ``sendfriend_index``
++ ``sendfriend_thanks``
+
+syndication
+~~~~~~~~~~~
++ ``syndication_index``
+
+tags
+~~~~
++ ``tags_index``
++ ``tags_tag``
+
 

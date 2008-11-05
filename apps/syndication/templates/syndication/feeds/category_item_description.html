@@ -1,0 +1,3 @@
+{{ obj.content|safe }}
+
+<p><strong>Par {% if obj.author.get_full_name %}{{ obj.author.get_full_name }}{% else %}{{ obj.author }}{% endif %}</strong></p>

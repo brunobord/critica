@@ -1,0 +1,13 @@
+{% load i18n image_thumbnail %}
+
+<div class="illustration">
+    {% if not article.image %}
+        <a href="{{ article.category.image.url }}" {% if article.category.image_legend %}title="{{ article.category.image_legend }}"{% endif %}>
+            <img src="{{ article.category.image|thumbnail:"80,0" }}" alt="{% if article.category.image_legend %}{{ article.category.image_legend }}{% else %}{{ article.category.image.name }}{% endif %}" /></a>
+        <p class="credits">Photo : {{ article.category.image_credits }} {% if article.category.image_legend %}- {{ article.category.image_legend }}{% endif %}</p>
+    {% else %}
+        <a href="{{ article.image.url }}" {% if article.image_legend %}title="{{ article.image_legend }}"{% endif %}>
+            <img src="{{ article.image|thumbnail:"80,0" }}" alt="{% if article.image_legend %}{{ article.illustration.legend }}{% else %}{{ article.image.name }}{% endif %}" /></a>
+        <p class="credits">Photo : {{ article.image_credits }} {% if article.image_legend %}- {{ article.image_legend }}{% endif %}</p>
+    {% endif %}
+</div>

@@ -1,0 +1,24 @@
+<div class="articleSection">
+    <h2><span>{{ note.type.name }}</span></h2>
+    <div  class="note-{{ note.id }}">
+        <div class="lead autoClear">
+            <h3><a href="#" class="note-show">{{ note.title }}</a></h3>
+          <!-- <p class="summary"></p>-->
+            <div class="content">{{ note.content|safe }}</div>
+        </div>
+        <p class="readMore">&nbsp;</p>
+        <script type="text/javascript">
+        // <![CDATA[
+            $(document).ready(function() {
+                $('.note-{{ note.id }} .content').hide();
+                $('.note-{{ note.id }} .summary').html('{{ note.content|striptags|truncatewords:45|safe|escapejs }}');
+                $('.note-{{ note.id }} .note-show').click(function() {
+                   $('.note-{{ note.id }} .summary').slideToggle('fast');
+                    $('.note-{{ note.id }} .content').slideToggle('fast');
+                    return false;
+                });
+            });
+        // ]]>
+        </script>
+    </div>
+</div>

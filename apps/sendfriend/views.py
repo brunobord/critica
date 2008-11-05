@@ -19,7 +19,7 @@ from critica.apps.epicurien.models import EpicurienArticle
 from critica.apps.anger.models import AngerArticle
 
 
-def sendfriend(request):
+def index(request):
     """
     View handling form requests.
     
@@ -86,7 +86,7 @@ def sendfriend_send_mail(form):
     msg.send()
 
 
-def sendfriend_thanks(request):
+def thanks(request):
     """
     View of thanks message.
     

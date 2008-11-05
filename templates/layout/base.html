@@ -46,10 +46,10 @@
                     <!-- LOGO -->
                         <div id="logo">
                             {% if is_preview %}
-                                <a href="{% url issuepreview_home issue.secret_key %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
+                                <a href="{% url issues_preview_home issue.secret_key %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
                             {% endif %}
                             {% if is_archive %}
-                                <a href="{% url issuearchive_home issue.number %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
+                                <a href="{% url issues_archive_home issue.number %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
                             {% endif %}
                             {% if is_current %}
                                 <a href="{% url home %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
@@ -59,12 +59,12 @@
                     <!-- TOP NAV -->
                     <ul id="topNav">
                         <li><a href="{% url home %}">Accueil</a></li>
-                        <li><a href="{% url archives %}">Archives</a></li>
-                        <li><a href="{% url newsletter %}">Recevoir la newsletter</a></li>
-                        <li><a href="{% url rss %}">S'abonner au flux RSS</a></li>
+                        <li><a href="{% url issues_archive_index %}">Archives</a></li>
+                        <li><a href="{% url newsletter_index %}">Recevoir la newsletter</a></li>
+                        <li><a href="{% url syndication_index %}">S'abonner au flux RSS</a></li>
                         {% if is_preview %}
                         <li>
-                            <select name="issuepreview_switcher">
+                            <select name="issues_preview_switcher">
                             {% for issuepreview in issuepreviews %}
                                 <option value ="{{ issuepreview.number }}" onclick="window.location='/preview/{{ issuepreview.secret_key }}/';return false" {% ifequal request.path issuepreview.get_preview_url %}selected="selected"{% endifequal %}>{{ issuepreview.number }}</option>
                             {% endfor %}
@@ -88,7 +88,7 @@
                     <!-- // DATE -->
                     <!-- SEARCH -->
                     <div id="search">
-                        <form action="/search/results/" method="post">
+                        <form action="{% url search_results %}" method="post">
                             <p>
                                 <label for="searchTerm">Rechercher sur Critica.fr</label>
                                 <input name="search" type="text"  value="Rechercher sur Critica.fr" onfocus="this.value=''" size="30" maxlength="40" id="searchTerm" />
@@ -103,7 +103,7 @@
                     <div id="pageOptions">
                         <ul>
                             <li class="print"><a href="#" title="Imprimer cette page" onClick="window.print()">Imprimer</a></li>
-                            <li class="send"><a href="{% url sendfriend %}" title="Envoyer à un ami">Envoyer à un ami</a></li>
+                            <li class="send"><a href="{% url sendfriend_index %}" title="Envoyer à un ami">Envoyer à un ami</a></li>
                         </ul>
                     </div>
                     <!-- // PAGE OPTIONS -->
@@ -115,32 +115,32 @@
                 <div class="contentWrap">
                     <ul class="kwicks" style="display:block; margin:0 auto; width:1000px; height:42px; overflow:hidden;">
                         {% if is_preview %}
-                            <li id="kwick1"><a href="{% url issuepreview_category issue.secret_key,"national" %}">National</a></li>
-                            <li id="kwick2"><a href="{% url issuepreview_category issue.secret_key,"etranger" %}">Etranger</a></li>
-                            <li id="kwick3"><a href="{% url issuepreview_category issue.secret_key,"societe" %}">Societe</a></li>
-                            <li id="kwick4"><a href="{% url issuepreview_category issue.secret_key,"sports" %}">Sport</a></li>
-                            <li id="kwick5"><a href="{% url issuepreview_category issue.secret_key,"pipoles" %}">Pipoles</a></li>
-                            <li id="kwick6"><a href="{% url issuepreview_category issue.secret_key,"tele" %}">Tele</a></li>
-                            <li id="kwick7"><a href="{% url issuepreview_category issue.secret_key,"bouquins" %}">Bouquins</a></li>
-                            <li id="kwick8"><a href="{% url issuepreview_category issue.secret_key,"nanas" %}">Nanas</a></li>
-                            <li id="kwick9"><a href="{% url issuepreview_category issue.secret_key,"insolite" %}">Insolite</a></li>
-                            <li id="kwick10"><a href="{% url issuepreview_category_regions issue.secret_key %}">Regions</a></li>
-                            <li id="kwick11"><a href="{% url issuepreview_category_voyages issue.secret_key %}">Voyages</a></li>
-                            <li id="kwick12"><a href="{% url issuepreview_category_epicurien issue.secret_key %}" %}">Epicurien</a></li>
+                            <li id="kwick1"><a href="{% url issues_preview_category issue.secret_key,"national" %}">National</a></li>
+                            <li id="kwick2"><a href="{% url issues_preview_category issue.secret_key,"etranger" %}">Etranger</a></li>
+                            <li id="kwick3"><a href="{% url issues_preview_category issue.secret_key,"societe" %}">Societe</a></li>
+                            <li id="kwick4"><a href="{% url issues_preview_category issue.secret_key,"sports" %}">Sport</a></li>
+                            <li id="kwick5"><a href="{% url issues_preview_category issue.secret_key,"pipoles" %}">Pipoles</a></li>
+                            <li id="kwick6"><a href="{% url issues_preview_category issue.secret_key,"tele" %}">Tele</a></li>
+                            <li id="kwick7"><a href="{% url issues_preview_category issue.secret_key,"bouquins" %}">Bouquins</a></li>
+                            <li id="kwick8"><a href="{% url issues_preview_category issue.secret_key,"nanas" %}">Nanas</a></li>
+                            <li id="kwick9"><a href="{% url issues_preview_category issue.secret_key,"insolite" %}">Insolite</a></li>
+                            <li id="kwick10"><a href="{% url issues_preview_category_regions issue.secret_key %}">Regions</a></li>
+                            <li id="kwick11"><a href="{% url issues_preview_category_voyages issue.secret_key %}">Voyages</a></li>
+                            <li id="kwick12"><a href="{% url issues_preview_category_epicurien issue.secret_key %}" %}">Epicurien</a></li>
                         {% endif %}
                         {% if is_archive %}
-                            <li id="kwick1"><a href="{% url issuearchive_category issue.number,"national" %}">National</a></li>
-                            <li id="kwick2"><a href="{% url issuearchive_category issue.number,"etranger" %}">Etranger</a></li>
-                            <li id="kwick3"><a href="{% url issuearchive_category issue.number,"societe" %}">Societe</a></li>
-                            <li id="kwick4"><a href="{% url issuearchive_category issue.number,"sports" %}">Sport</a></li>
-                            <li id="kwick5"><a href="{% url issuearchive_category issue.number,"pipoles" %}">Pipoles</a></li>
-                            <li id="kwick6"><a href="{% url issuearchive_category issue.number,"tele" %}">Tele</a></li>
-                            <li id="kwick7"><a href="{% url issuearchive_category issue.number,"bouquins" %}">Bouquins</a></li>
-                            <li id="kwick8"><a href="{% url issuearchive_category issue.number,"nanas" %}">Nanas</a></li>
-                            <li id="kwick9"><a href="{% url issuearchive_category issue.number,"insolite" %}">Insolite</a></li>
-                            <li id="kwick10"><a href="{% url issuearchive_category_regions issue.number %}">Regions</a></li>
-                            <li id="kwick11"><a href="{% url issuearchive_category_voyages issue.number %}">Voyages</a></li>
-                            <li id="kwick12"><a href="{% url issuearchive_category_epicurien issue.number %}" %}">Epicurien</a></li>
+                            <li id="kwick1"><a href="{% url issues_archive_category issue.number,"national" %}">National</a></li>
+                            <li id="kwick2"><a href="{% url issues_archive_category issue.number,"etranger" %}">Etranger</a></li>
+                            <li id="kwick3"><a href="{% url issues_archive_category issue.number,"societe" %}">Societe</a></li>
+                            <li id="kwick4"><a href="{% url issues_archive_category issue.number,"sports" %}">Sport</a></li>
+                            <li id="kwick5"><a href="{% url issues_archive_category issue.number,"pipoles" %}">Pipoles</a></li>
+                            <li id="kwick6"><a href="{% url issues_archive_category issue.number,"tele" %}">Tele</a></li>
+                            <li id="kwick7"><a href="{% url issues_archive_category issue.number,"bouquins" %}">Bouquins</a></li>
+                            <li id="kwick8"><a href="{% url issues_archive_category issue.number,"nanas" %}">Nanas</a></li>
+                            <li id="kwick9"><a href="{% url issues_archive_category issue.number,"insolite" %}">Insolite</a></li>
+                            <li id="kwick10"><a href="{% url issues_archive_category_regions issue.number %}">Regions</a></li>
+                            <li id="kwick11"><a href="{% url issues_archive_category_voyages issue.number %}">Voyages</a></li>
+                            <li id="kwick12"><a href="{% url issues_archive_category_epicurien issue.number %}" %}">Epicurien</a></li>
                         {% endif %}
                         {% if is_current %}
                             <li id="kwick1"><a href="{% url category "national" %}">National</a></li>
@@ -170,7 +170,7 @@
 			
             <!-- FOOTER -->
             <div id="footer">
-                <p> &copy; <a href="{% url page "mentions-legales" %}" title="Mentions légales">Mentions Légales</a></p>
+                <p> &copy; <a href="{% url pages_page "mentions-legales" %}" title="Mentions légales">Mentions Légales</a></p>
                 {% load partnerlinks_extra %}
                 {% display_partnerlinks %}
             </div>

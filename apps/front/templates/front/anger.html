@@ -1,0 +1,101 @@
+{% extends "layout/base.html" %}
+
+{% load image_thumbnail ads_extra %}
+
+{% block title %}Coup de Gueule{% endblock %}
+
+{% block ad_1_0 %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'coup-de-gueule' '1.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+{% endblock %}
+
+{% block body_id %}coup-de-gueule{% endblock %}
+{% block body_class %}rubrique{% endblock %}
+
+{% block content %}
+<!-- LEFT WRAP -->
+<div id="mainContent" class="leftWrap">
+    
+    <h1>Coup de gueule</h1>
+    
+    {% if article %}
+        {% include "front/includes/category_article.html" %}
+    {% else %}
+        {% include "front/includes/category_article_empty.html" %}
+    {% endif %}
+    
+    <!-- AD -->
+    <div class="addSection add468"> 
+        {% display_ad '468x60' 'coup-de-gueule' '2.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+	<!-- // AD -->
+	
+</div>
+<!-- // LEFT WRAP -->
+				
+<!-- RIGHT WRAP -->
+<div class="rightWrap">
+
+    <!-- SUB CONTENT -->
+    <div id="subContent">
+        
+        <!-- LEFT WRAP -->
+        <div class="leftWrap">
+            
+            <!-- LEFT WRAP -->
+            <div class="leftWrap">
+
+                <!-- ARCHIVES -->
+                <div id="archivesBar" class="articleList autoClear">
+    			    <div>
+    			        <h2>ARCHIVES COUP DE GUEULE</h2>
+    			        {% if archives %}
+                            {% include "front/includes/category_archives.html" %}
+                        {% else %}
+                            {% include "front/includes/category_archives_empty.html" %}
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- // ARCHIVES -->
+                
+                <!-- AD -->
+                <div class="addSection">
+                    <div class="add-300x250 autoClear">
+                        {% display_ad '300x250' 'coup-de-gueule' '5.0' %}
+                        {% display_ad '300x250' 'coup-de-gueule' '5.1' %}
+                    </div>
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+                <!-- // AD -->
+                
+            </div>
+            <!-- // LEFT WRAP -->
+        
+        </div>
+        <!-- // LEFT WRAP -->
+        
+        <!-- RIGHT WRAP -->
+        <div class="rightWrap">
+        
+            <!-- AD -->
+			<div class="addSection">
+		        <div class="add130">
+                    {% display_ad '120x600' 'coup-de-gueule' '6.0' %}
+                </div>
+                {% include "front/includes/pages_ads_link.html" %}
+            </div>
+            <!-- // AD -->
+        
+        </div>
+        <!-- // RIGHT WRAP -->
+    
+    </div>
+    <!-- // SUBCONTENT -->
+    
+</div>
+<!-- // RIGHT WRAP -->
+
+{% endblock %}

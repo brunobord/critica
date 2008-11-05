@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Envoyer à un ami{% endblock %}
+
+{% block body_id %}sendfriend{% endblock %}
+
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Envoyer à un ami</span></h1>
+    
+	<form action="." method="POST" class="vForm">
+        {{ form.as_p }}
+        <p class="submit"><input type="submit" value="Envoyer !" name="submit" /></p>
+	</form>
+
+</div>
+{% endblock %}
+

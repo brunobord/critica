@@ -1,0 +1,253 @@
+{% extends 'admin/base_site.html' %}
+{% load i18n %}
+{% block title %}Dashboard | Administration de Critic@{% endblock %}
+{% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="/media/critica/admin/basic/css/custom.css" />{% endblock %}
+{% block breadcrumbs %}<div class="breadcrumbs"><a href="/admin/">{% trans 'Home' %}</a>{% if title %} &rsaquo; {{ title|escape }}{% endif %}</div>{% endblock %}
+{% block content %}
+<div id="dashboard">
+
+    <h1><a href="/admin/dashboard/">Dashboard</a>{% if specific_issue %} / Édition {{ current_issue.number }}{% endif %}</h1>
+
+    <div id="dashboard-welcome">
+        <p><strong>Bienvenue sur le Dashboard. Vous contrôlez actuellement l'édition : <a href="/admin/issues/issue/{{ current_issue.id }}">{{ current_issue.number }}</a></strong></p>
+        <p><strong>Pour avoir un aperçu de cette édition, utilisez ce lien caché : <a href="{{ site_url }}/preview/{{ current_issue.secret_key }}/" target="_blank">{{ site_url }}/preview/{{ current_issue.secret_key }}/</a></strong></p>
+        <p>Vous pouvez contrôler une édition particulière&nbsp;:</p>
+        <ul>
+        {% for issue in issues %}
+            <li><a href="/admin/dashboard/{{ issue.number }}/" title="Accéder au contrôl de l'édition {{ issue.number }}">{{ issue.number }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div id="dashboard-status">
+    
+        <h2>État de la Une</h2>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Articles principaux</td>
+                    <td>{{ cover_articles_count }} / {{ cover_articles_quota }}</td>
+                    <td>
+                        {% if cover_articles_complete %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Illustration du jour</td>
+                    <td>
+                        {% if cover_illustration %}
+                            <a href="/admin/illustrations/illustrationoftheday/?issues__id__exact={{ current_issue.id }}">{{ cover_illustration.legend }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_illustration %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coup de Gueule</td>
+                    <td>
+                        {% if cover_anger %}
+                            <a href="/admin/anger/angerarticle/?issues__id__exact={{ current_issue.id }}">{{ cover_anger.title }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_illustration %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Voyages</td>
+                    <td>
+                        {% if cover_voyages_multiple %}
+                            <p>
+                                <span class="warning">
+                                Attention, {{ cover_voyages.count }} articles prêts à être publiés 
+                                pour cette même édition. Or, n'est autorisé qu'un seul article par 
+                                édition. Veuillez, s'il vous plaît, faire un choix parmi les articles 
+                                ci-dessous&nbsp;:
+                                </span>
+                            </p>
+                            <ul>
+                            {% for article in cover_voyages %}
+                                <li><a href="/admin/voyages/voyagesarticle/?issues__id__exact={{ current_issue.id }}">{{ article.title }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        {% else %}
+                            {% if cover_voyages %}
+                                <a href="/admin/voyages/voyagesarticle/?issues__id__exact={{ current_issue.id }}">{{ cover_voyages.title }}</a>
+                            {% else %}
+                                <span class="warning">non défini</span>
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_voyages and not cover_voyages_multiple %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Épicurien</td>
+                    <td>
+                        <ul>
+                        {% if cover_epicurien_cotegourmets %}
+                            <li><strong>Côté Gourmets : </strong><a href="/admin/epicurien/epicurienarticle/?issues__number__exact={{ current_issue.number }}&type__id__exact={{ cover_epicurien_cotegourmets.type.id }}">{{ cover_epicurien_cotegourmets.title }}</a></li>
+                        {% else %}
+                            <li><strong>Côté Gourmets : </strong><span class="warning">non défini</span></li>
+                        {% endif %}
+                        {% if cover_epicurien_cotebar %}
+                            <li><strong>Côté Bar : </strong><a href="/admin/epicurien/epicurienarticle/?issues__number__exact={{ current_issue.number }}&type__id__exact={{ cover_epicurien_cotebar.type.id }}">{{ cover_epicurien_cotebar.title }}</a></li>
+                        {% else %}
+                            <li><strong>Côté Bar : </strong><span class="warning">non défini</span></li>
+                        {% endif %}
+                        {% if cover_epicurien_cotefumeurs %}
+                            <li><strong>Côté Fumeurs : </strong><a href="/admin/epicurien/epicurienarticle/?issues__number__exact={{ current_issue.number }}&type__id__exact={{ cover_epicurien_cotefumeurs.type.id }}">{{ cover_epicurien_cotefumeurs.title }}</a></li>
+                        {% else %}
+                            <li><strong>Côté Fumeurs : </strong><span class="warning">non défini</span></li>
+                        {% endif %}
+                        </ul>
+                    </td>
+                    <td>
+                        {% if cover_epicurien_cotegourmets and cover_epicurien_cotebar and cover_epicurien_cotefumeurs %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Région vedette</td>
+                    <td>
+                        {% if cover_featured_region %}
+                            <a href="/admin/regions/regionnote/?region__id__exact={{ cover_featured_region.region.id }}&issues__id__exact={{ current_issue.id }}">{{ cover_featured_region.region.name }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if cover_featured_region %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>État des rubriques standards</h2>
+
+        <table>
+            <tbody>
+                <tr>
+                    <th>Rubrique</th>
+                    <th>Quota articles</th>
+                    <th>Quota brèves</th>
+                    <th>Positionnée</th>
+                    <th>Complète</th>
+                </tr>
+                {% for std_category in std_categories %}
+                <tr>
+                    <td class="category"><a href="/admin/articles/article/?category__id__exact={{ std_category.0.id }}">{{ std_category.0.name }}</a></td>
+                    <td class="quota-articles">
+                        {{ std_category.1 }} / {{ std_category.3 }}
+                    </td>
+                    <td class="quota-notes">
+                        {{ std_category.2 }} / {{ std_category.4 }}
+                    </td>
+                    <td class="position">
+                        {% if std_category.5 %}
+                            <span class="warning">Personnalisé</span>
+                        {% else %}
+                            Par défaut
+                        {% endif %}
+                    </td>
+                    <td class="complete">
+                        {% if std_category.6 %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <h2>États des autres rubriques</h2>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <th>Rubrique</th>
+                    <th>Quota articles</th>
+                    <th>Complète</th>
+                </tr>
+                <tr>
+                    <td class="category"><a href="/admin/regions/regionnote/?issues__id__exact={{ current_issue.id }}">Régions</a></td>
+                    <td class="quota-articles">{{ regions_count }} / {{ regions_quota }}</td>
+                    <td class="complete">
+                        {% if regions_complete %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category"><a href="/admin/voyages/voyagesarticle/?issues__id__exact={{ current_issue.id }}">Voyages</a></td>
+                    <td class="count-all">{{ voyages_count }} / {{ voyages_quota }}</td>
+                    <td class="complete">
+                        {% if voyages_complete %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category"><a href="/admin/epicurien/epicurienarticle/?issues__id__exact={{ current_issue.id }}">Épicurien</a></td>
+                    <td class="count-all">{{ epicurien_count }} / {{ epicurien_quota }}</td>
+                    <td class="complete">
+                        {% if epicurien_complete %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category"><a href="/admin/anger/angerarticle/?issues__id__exact={{ current_issue.id }}">Coup de Gueule</a></td>
+                    <td class="count-all">{{ anger_count }} / {{ anger_quota }}</td>
+                    <td class="complete">
+                        {% if anger_complete %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,25 +1,37 @@
+# -*- coding: utf-8 -*-
 """
-URLs for ``critica.apps.pages``::
+URLs of ``critica.apps.pages`` application.
 
-    pages_page
-        Page detail
-        Sample URL: /pages/legal/
-        View: page_detail
-        Takes one argument: slug
+pages_page
+----------
+
+Displays a given page (based on its slug).
+
+- Named URL   : ``pages_page``
+- View        : ``critica.apps.pages.views.page``
+- Arguments   : page slug
+
+pages_index
+-----------
+
+Displays page list.
+
+- Named URL   : ``pages_index``
+- View        : ``critica.apps.pages.views.index``
+- Arguments   : None
 
 """
 from django.conf.urls.defaults import *
-from critica.apps.pages.models import Page
 
 
-urlpatterns = patterns('django.views.generic.list_detail',
-    url(r'^(?P<slug>[-\w]+)/$', 
-        'object_detail',
-        dict(
-            queryset=Page.published.all(),
-            template_name='pages/page_detail.html',
-        ),
+urlpatterns = patterns('',
+    url(r'^(?P<page_slug>[-\w]+)/$', 
+        'critica.apps.pages.views.page', 
         name='pages_page',
-    )
+    ),
+    url(r'^$', 
+        'critica.apps.pages.views.index', 
+        name='pages_index',
+    ),
 )
 

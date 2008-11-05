@@ -1,0 +1,253 @@
+{% extends "layout/base.html" %}
+
+{% load image_thumbnail ads_extra %}
+
+{% block title %}Épicurien{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}critica/css/coda.css" type="text/css" media="screen" />
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/coda-slider.1.1.1.js"></script>
+<script type="text/javascript">
+	jQuery(window).bind("load", function() {
+		jQuery("div#slider").codaSlider()
+	});
+</script>
+{% endblock %}
+
+{% block ad_1_0 %}
+    <div class="addSection add728">
+        {% display_ad '728x90' 'epicurien' '1.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+{% endblock %}
+
+{% block body_id %}epicurien{% endblock %}
+{% block body_class %}rubrique{% endblock %}
+
+{% block content %}
+<!-- LEFT WRAP -->
+<div id="mainContent" class="leftWrap">
+    
+    <h1>Épicurien</h1>
+    
+    <!-- STRIPNAV -->
+    <noscript>
+        <div class="stripNav">
+            <ul>
+                <li><a href="#gourmets">Côté gourmets</a></li>
+                <li><a href="#alcools">Côté bar</a></li>
+                <li><a href="#fumeur">Côté fumeur</a></li>
+            </ul>
+        </div>
+    </noscript><!-- // STRIPNAV -->
+	
+	<!-- SLIDER -->
+	<div id="slider" class="csw">
+	    <!-- PANEL CONTAINER -->
+	    <div class="panelContainer">
+	        <!-- PANEL GOURMETS -->
+	        <div class="panel" title="Côté Gourmets" id="gourmets">
+	            <!-- PANNEL-RIGHT -->
+	            <div class="pannel-right">
+	                <!-- RIGHT WRAP -->
+	                <div class="rightWrap">
+	                    <!-- SUB CONTENT -->
+	                    <div class="subContent">
+	                        <!-- LEFT WRAP -->
+	                        <div class="leftWrap">
+	                            <!-- ARCHIVES -->
+	                            <div id="archivesBar" class="articleList autoClear">
+	                                <div>
+	                                    <h2>ARCHIVES COTÉ GOURMETS</h2>
+	                                    {% if archives_cotegourmets %}
+	                                        {% with archives_cotegourmets as archives %}
+	                                            {% include "front/includes/category_archives.html" %}
+	                                        {% endwith %}
+	                                    {% else %}
+	                                        {% include "front/includes/category_archives_empty.html" %}
+	                                    {% endif %}
+									</div>
+								</div>
+								<!-- // ARCHIVES -->
+								
+								<!-- AD -->
+								<div class="addSection">
+							        <div class="add-300x250 autoClear">
+								        {% display_ad '300x250' 'epicurien-cote-gourmets' '5.0' %}					
+								        {% display_ad '300x250' 'epicurien-cote-gourmets' '5.1' %}
+                                    </div>
+                                    {% include "front/includes/pages_ads_link.html" %}
+                                </div>
+                                <!-- // AD -->
+                            </div>
+                            <!-- // LEFT WRAP -->
+                        </div>
+                        <!-- // SUB CONTENT -->
+                    </div>
+                    <!-- // RIGHT WRAP -->
+                </div>
+                <!-- // PANNEL RIGHT -->
+                <div class="articleSection articleMain">
+                    {% if article_cotegourmets %}
+                        {% with article_cotegourmets as article %}
+                            {% include "front/includes/epicurien_article.html" %}
+                        {% endwith %}
+                    {% else %}
+                        {% include "front/includes/epicurien_article_empty.html" %}
+                    {% endif %}
+                </div>
+                <!-- AD -->
+                <div class="addSection add468">
+                    {% display_ad '468x60' 'epicurien-cote-gourmets' '2.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+                <!-- // AD --> 
+            </div>
+            <!-- // PANEL GOURMETS -->
+            <!-- PANEL ALCOOLS -->
+            <div class="panel" title="Côté Bar" id="alcools">
+                <!-- PANNEL-WRIGHT -->
+                <div class="pannel-right">
+                    <!-- RIGHT WRAP -->
+                    <div class="rightWrap">
+                        <!-- SUB CONTENT -->
+                        <div class="subContent">
+                            <!-- LEFT WRAP -->
+                            <div class="leftWrap">
+                                <!-- ARCHIVES -->
+                                <div id="archivesBar" class="articleList autoClear">
+                                    <div>
+                                        <h2>ARCHIVES COT&Eacute; BAR</h2>
+                                        {% if archives_cotebar %}
+                                            {% with archives_cotebar as archives %}
+                                                {% include "front/includes/category_archives.html" %}
+										    {% endwith %}
+										{% else %}
+										    {% include "front/includes/category_archives_empty.html" %}
+										{% endif %}
+									</div>
+								</div>
+								<!-- // ARCHIVES -->
+   								<!-- AD -->
+							    <div class="addSection">
+							        <div class="add-300x250 autoClear">
+								        {% display_ad '300x250' 'epicurien-cote-bar' '5.0' %}
+								        {% display_ad '300x250' 'epicurien-cote-bar' '5.1' %}
+                                    </div>
+                                    {% include "front/includes/pages_ads_link.html" %}
+                                </div>
+                                <!-- // AD -->
+							</div>
+							<!-- // LEFT WRAP -->
+						</div>
+						<!-- // SUB CONTENT -->
+					</div>
+					<!-- // RIGHT WRAP -->
+				</div>
+				<!-- // PANEL-RIGHT -->
+				<div class="articleSection articleMain">
+                    {% if article_cotebar %}
+                        {% with article_cotebar as article %}
+                            {% include "front/includes/epicurien_article.html" %}
+				        {% endwith %}
+				    {% else %}
+				        {% include "front/includes/epicurien_article_empty.html" %}
+                    {% endif %}
+                </div>
+                <!-- AD -->
+                <div class="addSection add468">
+                    {% display_ad '468x60' 'epicurien-cote-bar' '2.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+                <!-- // AD -->
+            </div>
+            <!-- // PANEL ALCOOLS -->
+            <!-- PANEL FUMEUR -->
+            <div class="panel" title="Côté Fumeur" id="fumeur">
+                <!-- PANEL-RIGHT -->
+                <div class="pannel-right">
+                    <!-- RIGHT WRAP -->
+                    <div class="rightWrap">
+                        <!-- SUB CONTENT -->
+                        <div class="subContent">
+                            <!-- LEFT WRAP -->
+                            <div class="leftWrap">
+                                <!-- ARCHIVES -->
+                                <div id="archivesFumeur" class="articleList autoClear">
+                                    <div>
+										<h2>ARCHIVES COT&Eacute; FUMEUR</h2>
+										{% if archives_cotefumeurs %}
+                                            {% with archives_cotefumeurs as archives %}
+                                                {% include "front/includes/category_archives.html" %}
+                                            {% endwith %}
+                                        {% else %}
+                                            {% include "front/includes/category_archives_empty.html" %}
+    								    {% endif %}
+									</div>
+								</div>
+								<!-- // ARCHIVES -->
+								<!-- AD -->
+								<div class="addSection">
+							        <div class="add-300x250 autoClear">
+								        {% display_ad '300x250' 'epicurien-cote-fumeurs' '5.0' %}						
+								        {% display_ad '300x250' 'epicurien-cote-fumeurs' '5.1' %}
+								    </div>
+                                    {% include "front/includes/pages_ads_link.html" %}
+								</div>
+                                <!-- // AD -->
+							</div>
+							<!-- // LEFT WRAP -->
+                        </div>
+						<!-- // SUB CONTENT -->
+                    </div>
+					<!-- // RIGHT WRAP -->
+				</div>
+			    <!-- // PANEL RIGHT -->
+    			<div class="articleSection articleMain">
+        	        {% if article_cotefumeurs %}
+        	            {% with article_cotefumeurs as article %}
+        	                {% include "front/includes/epicurien_article.html" %}
+        	            {% endwith %}
+        	        {% else %}
+        	            {% include "front/includes/epicurien_article_empty.html" %}
+        	        {% endif %}
+        	   </div>
+                <!-- AD -->
+                <div class="addSection add468">
+                    {% display_ad '468x60' 'epicurien-cote-fumeurs' '2.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+                <!-- // AD -->
+            </div>
+            <!-- // PANEL FUMEUR -->   
+        </div>
+        <!-- // PANEL CONTAINER -->
+    </div>
+    <!-- // SLIDER -->
+
+</div>
+<!-- // MAIN CONTENT -->
+
+    <!-- SUBCONTENT -->
+    <div class="subContent">
+        
+        <!-- RIGHT WRAP -->
+        <div class="rightWrap">
+        
+            <!-- AD -->
+			<div class="addSection">
+			    <div class="add130">
+                    {% display_ad '120x600' 'portail' '6.0' %}
+                </div>
+                {% include "front/includes/pages_ads_link.html" %}
+            </div>
+            <!-- // AD -->
+        
+        </div>
+        <!-- // RIGHT WRAP -->
+        
+    </div>
+    <!-- // SUBCONTENT -->
+
+</div>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Sondage &raquo; {{ poll.title }}{% endblock %}
+
+{% block extra_head %}
+<style>
+
+/* http://apples-to-oranges.com/blog/post/css-for-bar-graphs/?id=55 */
+
+dl { 
+    margin: 4em auto 2em auto; 
+    padding: 0;
+}
+
+dt { 
+    position: relative; /* IE is dumb */
+    clear: both;
+    display: block; 
+    float: left; 
+    width: 300px; 
+    height: 20px; 
+    line-height: 20px;
+    margin-right: 17px;              
+    font-size: 0.9em; 
+    color: #333;
+    text-align: right;
+}
+
+dd { 
+    position: relative; /* IE is dumb */
+    display: block;                 
+    float: left;     
+    width: 197px; 
+    height: 20px; 
+    margin: 0 0 15px; 
+    background: url("{{ MEDIA_URL }}critica/img/g_colorbar.jpg"); 
+    margin-bottom: 30px;
+}
+
+* html dd { float: none; } 
+/* IE is dumb; Quick IE hack, apply favorite filter methods for wider browser compatibility */
+
+dd div { 
+    position: relative; 
+    background: url("{{ MEDIA_URL }}critica/img/g_colorbar2.jpg"); 
+    height: 20px; 
+    width: 75%; 
+    text-align:right; 
+}
+
+dd div .marker { 
+    position: absolute; 
+    right: -5px; 
+    top: -2px; 
+    display: block; 
+    background: url("{{ MEDIA_URL }}critica/img/g_marker.gif"); 
+    height: 24px; 
+    width: 9px; 
+    text-align: left;
+    text-indent: -9999px; 
+    overflow: hidden;
+}
+
+dd strong {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #555;
+    float: right;
+}
+
+</style>
+
+{% endblock %}
+
+{% block body_id %}poll{% endblock %}
+
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Résultats du sondage &laquo; {{ poll.title }} &raquo;</span></h1>
+
+    <dl class="autoClear">
+        {% for choice in poll.choice_set.all %}
+        <dt>{{ choice.choice }}</dt>
+        <dd><div style="width:{{ choice.get_vote_percentage }}%"><span class="marker">&nbsp;</span></div><strong>{{ choice.get_vote_percentage }}%</strong></dd>
+        {% endfor %}
+    </dl>
+    
+    <p><a href="{% url home %}" title="Retourner à la page d'accueil">Retourner à la page d'accueil.</a></p>
+    
+</div>
+{% endblock %}
+

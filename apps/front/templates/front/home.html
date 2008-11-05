@@ -1,0 +1,257 @@
+{% extends "layout/base.html" %}
+
+{% load image_thumbnail ads_extra polls_extra %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block ad_1_0 %}
+	<div class="addSection add728">
+        {% display_ad '728x90' 'portail' '1.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+{% endblock %}
+
+{% block body_id %}home{% endblock %}
+
+{% block content %}
+
+<!-- LAUNCH-UNIT -->
+{% display_ad '1000x440' 'portail' '1.1' %}
+<!-- // LAUNCH-UNIT -->
+
+<!-- MAIN CONTENT -->
+<div id="mainContent" class="leftWrap">
+
+    {% if article_1 %}
+        {% with article_1 as article %}
+            {% include "front/includes/home_article_main.html" %}
+        {% endwith %}
+    {% else %}
+        {% include "front/includes/home_article_main_empty.html" %}
+    {% endif %}
+	
+	{% if article_2 %}
+        {% with article_2 as article %}
+            {% include "front/includes/home_article_main.html" %}
+        {% endwith %}
+	{% else %}
+        {% include "front/includes/home_article_main_empty.html" %}
+    {% endif %}
+    	
+    <!-- AD -->
+    <div class="addSection add468">
+        {% display_ad '468x60' 'portail' '2.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+    <!-- // AD -->
+    
+    <!-- ARTICLE LIST -->
+    <div class="articleList autoClear">
+		<div class="wrap">
+		{% if article_4 %}
+            {% with article_4 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
+
+		{% if article_5 %}
+            {% with article_5 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
+
+		{% if article_6 %}
+            {% with article_6 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
+	   </div>
+		<div class="wrap">
+		{% if article_7 %}
+            {% with article_7 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
+		
+		{% if article_8 %}
+            {% with article_8 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% else %}
+		    {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
+		
+		{% if article_9 %}
+            {% with article_9 as article %}
+                {% include "front/includes/home_article.html" %}
+            {% endwith %}
+		{% else %}
+	        {% include "front/includes/home_article_empty.html" %}
+        {% endif %}
+	   </div>
+		
+    </div>
+    <!-- // ARTICLE LIST -->
+    
+    <!-- AD -->
+	<div class="addSection add468">
+        {% display_ad '468x60' 'portail' '3.0' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+    <!-- // AD -->
+    
+    <!-- ARTICLE LIST -->
+    <div class="articleList autoClear">
+
+        {% if region_note %}
+            {% with region_note as article %}
+                {% include "front/includes/home_region.html" %}
+            {% endwith %}
+		{% else %}
+		    {% include "front/includes/home_region_empty.html" %}
+        {% endif %}
+		
+        {% include "front/includes/home_detente.html" %}
+		
+    </div>
+    <!-- // ARTICLE LIST -->
+	
+    <!-- AD -->
+	<div class="addSection add468">
+        {% display_ad '468x60' 'portail' '3.1' %}
+        {% include "front/includes/pages_ads_link.html" %}
+    </div>
+    <!-- // AD -->
+
+</div>
+<!-- // MAIN CONTENT -->
+
+<!-- RIGHTWRAP -->
+<div class="rightWrap">
+    
+    {% if article_3 %}
+        {% with article_3 as article %}
+            {% include "front/includes/home_article_main.html" %}
+        {% endwith %}
+	{% else %}
+	    {% include "front/includes/home_article_main_empty.html" %}
+    {% endif %}
+    
+    <!-- EXTRA -->
+    <div id="extra">
+        <div id="extra-home">
+            {% include 'front/extra/home.html' %}
+        </div>
+    </div>
+    <!-- // EXTRA -->
+	
+	<!-- NEWSLETTER -->
+    <div id="newsletterSection">
+        {% include "front/includes/newsletter_form.html" %}
+    </div>
+    <!-- // NEWSLETTER -->
+    
+    <!-- SUBCONTENT -->
+    <div id="subContent">
+        
+        <!-- LEFT WRAP -->
+        <div class="leftWrap">
+            
+            <!-- ARTICLE LIST -->
+            <div class="articleList">
+
+                {% if anger_article %}
+                    {% with anger_article as article %}
+                        {% include "front/includes/home_anger.html" %}
+				    {% endwith %}
+				{% else %}
+				    {% include "front/includes/home_anger_empty.html" %}
+			    {% endif %}
+				
+			</div>
+		    <!-- // ARTICLE LIST -->
+
+            <!-- AD -->
+            <div class="addSection">
+                <div class="add300x250 autoClear">
+                    {% display_ad '300x250' 'portail' '5.0' %}
+                    {% display_ad '300x250' 'portail' '5.1' %}
+                </div>
+                {% include "front/includes/pages_ads_link.html" %}
+            </div>
+            <!-- // AD -->
+			
+            <!-- ARTICLE LIST -->
+            <div class="articleList">
+            
+                {% if illustration %}
+                <div class="articleSection" id="caricature">
+                    <h2>L'illustration du jour</h2>
+                    <div class="illustration"><a href="{{ illustration.image.url }}" title="{{ illustration.legend }}"><img src="{{ illustration.image|thumbnail:"200,0" }}" alt="{{ illustration.legend }}" /></a></div>
+                    <p></p>
+                    <p class="credits">{{ illustration.legend }} - {{ illustration.credits }}</p>
+                </div>
+                {% endif %}
+				
+                <div class="articleSection" id="reportage">
+                    <h2>Critic@ TV</h2>
+                    {% if video %}
+                        {{ video.widget|safe }}
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+        <!-- // LEFT WRAP -->
+
+        <!-- RIGHT WRAP -->
+        <div class="rightWrap">
+            
+            <!-- POLL -->
+            <div id="surveySection">
+                {% display_poll %}
+            </div>
+            <!-- // POLL -->
+            
+            <!-- WEATHER -->
+            <div id="meteo">
+                {% include "front/includes/weather.html" %}
+            </div>
+            <!-- // WEATHER -->
+            
+            <!-- AD -->
+            <div class="addSection">
+                <div class="add130">
+                    {% display_ad '120x600' 'portail' '6.0' %}
+                </div>
+                {% include "front/includes/pages_ads_link.html" %}
+            </div>
+            <!-- // AD -->
+            
+		</div>
+		<!-- // RIGHT WRAP -->
+		
+        <!-- TAG CLOUD -->
+		<div id="tagcloudSection" style="text-align: center;">
+			<h2>Nuage de tags</h2>
+            {% for tag in tagcloud %}
+			    <span style="font-size: 1.{{ tag.font_size }}em; padding: 0.2em; line-height: 1.6em;"><a href="{% url tags_tag tag.name %}" title="Articles taggés {{ tag.name }}">{{ tag.name }}</a></span>
+			{% endfor %}
+		</div>
+        <!-- TAG CLOUD -->
+        
+    </div>
+    <!-- // SUBCONTENT -->
+    
+</div>
+<!-- // RIGHTWRAP -->
+
+{% endblock %}

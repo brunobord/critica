@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+{% block title %}Pages du site{% endblock %}
+{% block body_id %}pages{% endblock %}
+{% block content %}
+<div id="mainContent">
+    
+    <h1>Pages du site</h1>
+    
+    {% if pages %}
+    <ul>
+        {% for page in pages %}
+        <li><a href="{% url pages_page page.slug %}" title="{{ page.title }}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p><strong>Aucune page pour le moment.</strong></p>
+    {% endif %}
+
+</div>
+{% endblock %}
+

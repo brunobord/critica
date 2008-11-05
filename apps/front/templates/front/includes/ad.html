@@ -1,0 +1,44 @@
+{% ifequal format '1000x440' %}
+    {% include "front/includes/launch_unit.html" %}
+{% else %}
+    {% if banner %}
+        {% ifequal banner.banner_type 'image' %}
+            {% if banner.link %}
+                <a href="{{ banner.link }}"><img src="{{ banner.banner.url }}" alt="Publicité" /></a>
+            {% else %}
+                <img src="{{ banner.banner.url }}" alt="Publicité" />
+            {% endif %}
+        {% else %}
+            {% if banner.link %}
+            <a href="{{ banner.link }}" target="_blank">
+                <object data="{{ banner.banner.url}}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
+                    <param name="movie" value="{{ banner.banner.url }}"/>
+                    <param name="quality" value="high"/>
+                    <param name="menu" value="false"/>
+                </object>
+            </a>
+            {% else %}
+            <object data="{{ banner.banner.url }}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
+                <param name="movie" value="{{ banner.banner.url }}"/>
+                <param name="quality" value="high"/>
+                <param name="menu" value="false"/>
+            </object>
+            {% endif %}
+        {% endifequal %}
+    {% else %}    
+        {% ifequal default_banner.banner_type 'image' %}
+            {% if default_banner.link %}
+                <a href="{{ default_banner.link }}"><img src="{{ default_banner.banner.url }}" alt="Publicité" /></a>
+            {% else %}
+                <img src="{{ default_banner.banner.url }}" alt="Publicité" />
+            {% endif %}
+        {% else %}
+            <object data="{{ default_banner.banner.url }}" type="application/x-shockwave-flash" style=" width:{{ format_width }}px; height:{{ format_height }}px;">
+                <param name="movie" value="{{ default_banner.banner.url }}"/>
+                <param name="quality" value="high"/>
+                <param name="menu" value="false"/>
+            </object>
+        {% endifequal %}
+    {% endif %}
+{% endifequal %}
+

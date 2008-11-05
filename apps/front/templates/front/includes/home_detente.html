@@ -1,0 +1,48 @@
+<div class="articleSection" id="detenteSection">
+    <h2><span>Détente</span></h2>
+    <div class="lead  autoClear">
+        <ul>
+        {% if voyages_article %}
+			<li>
+			    <h3>Voyages</h3>
+                {% if is_preview %}
+                    <a href="{% url issues_preview_category issue.secret_key,voyages_article.category.slug %}">{{ voyages_article.title }}</a>
+                {% endif %}
+                {% if is_archive %}
+                    <a href="{% url issues_archive_category issue.number,voyages_article.category.slug %}">{{ voyages_article.title }}</a></span></h2>
+                {% endif %}
+                {% if is_current %}
+                    <a href="{{ voyages_article.get_absolute_url }}">{{ voyages_article.title }}</a>
+                {% endif %}
+            </li>
+		{% else %}
+		    <li>
+		        <h3>Voyages</h3>
+		        <a href="#">Article non-rédigé.</a>
+            </li>
+        {% endif %}
+        
+		{% if epicurien_articles %}
+		    {% for article in epicurien_articles %}
+		        <li>
+		            <h3>{{ article.type.name }}</h3>
+                    {% if is_preview %}
+                        <a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a>
+                    {% endif %}
+                    {% if is_archive %}
+                        <a href="{% url issues_archive_category issue.number,article.category.slug %}">{{ article.title }}</a></span></h2>
+                    {% endif %}
+                    {% if is_current %}
+                        <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                    {% endif %}
+				</li>
+			{% endfor %}
+		{% else %}
+		    <li>
+		        <h3>Épicurien : incomplet - articles manquants</h3>
+		    </li>
+        {% endif %}
+	    </ul>
+	</div>
+	<p class="readMore"><a href="#">Lire la suite</a></p>
+</div>

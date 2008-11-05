@@ -1,0 +1,31 @@
+<p>Bonjour,</p>
+
+<p>
+    {{ sender }} vous a envoyé cet email pour vous faire découvrir les derniers
+    articles publiés sur le site <a href="http://www.critica.fr" title="Critic@, le journal pertinant et impertinant">Critic@</a>.
+</p>
+
+{% if message %}
+    <p>{{ sender }} vous a également laissé un petit message&nbsp;:</p>
+    <blockquote>
+        {{ message|striptags|escapejs }}
+    </blockquote>
+{% endif %}
+
+<p>Voici les derniers articles&nbsp;:</p>
+
+<ul>
+{% for item in items %}
+    <li>
+        <a href="http://www.critica.fr{{ item.get_absolute_url }}" title="{{ item.category.name }} : {{ item.title }}">{{ item.category.name }} : {{ item.title }}</a>
+        {% if item.summary %}
+            <p><strong>{{ item.summary|safe }}</strong></p>
+        {% else %}
+            {{ item.content|safe|truncatewords:60 }}
+        {% endif %}    
+        <p><a href="http://www.critica.fr{{ item.get_absolute_url }}" title="Lire la suite...">Lire la suite...</a></p>
+    </li>
+{% endfor %}
+</ul>
+
+<p>A bientôt sur <a href="http://www.critica.fr" title="Critic@, le journal pertinant et impertinant">Critic@</a>.</p>

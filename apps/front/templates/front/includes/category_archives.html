@@ -1,0 +1,9 @@
+{% for article in archives %}
+<div class="articleButton">
+    <h3>{{ article.title }}</h3>
+    <p class="archiveMeta">{{ article.publication_date|date:"l d F Y" }}</p>
+</div>
+<div>
+    <p>{{ article.summary|safe }}</p>
+</div>
+{% endfor %}
