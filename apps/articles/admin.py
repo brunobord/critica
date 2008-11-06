@@ -12,6 +12,7 @@ from critica.apps.articles.models import Article
 from critica.apps.users.models import UserNickname
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
+from critica.apps.articles.forms import ArticleAdminModelForm
 from critica.apps.articles import settings as articles_settings
 from critica.lib.widgets import ImageWithThumbWidget
 from imagethumbnail.templatetags.image_thumbnail import thumbnail
@@ -39,13 +40,13 @@ class BaseArticleAdmin(admin.ModelAdmin):
             'fields': ('is_featured', 'is_reserved', 'is_ready_to_publish'),
         }),
     )
-    list_display      = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_image')
-    list_filter       = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
+    list_display = ('title', 'category', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_image')
+    list_filter = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'category')
     filter_horizontal = ('issues',)
-    search_fields     = ('title', 'summary', 'content')
-    ordering          = ('-publication_date', 'category')
-    date_hierarchy    = 'publication_date'
-    exclude           = ['author']
+    search_fields = ('title', 'summary', 'content')
+    ordering = ('-publication_date', 'category')
+    date_hierarchy = 'publication_date'
+    exclude = ['author']
 
     def __call__(self, request, url):
         """
@@ -192,7 +193,7 @@ class ArticleAdmin(BaseArticleAdmin):
     Administration interface options of ``Article`` model.
     
     """
-    pass
+    form = ArticleAdminModelForm
 
 
 # Registers

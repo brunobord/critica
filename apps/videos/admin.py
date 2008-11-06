@@ -8,6 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from critica.apps.custom_admin.sites import custom_site
 from critica.apps.videos.models import Video
 from critica.apps.issues.models import Issue
+from critica.apps.videos.forms import VideoAdminModelForm
 
 
 class VideoAdmin(admin.ModelAdmin):
@@ -20,14 +21,15 @@ class VideoAdmin(admin.ModelAdmin):
         (_('Filling'), {'fields': ('issues', 'tags')}),
         (_('Publication'), {'fields': ('is_reserved', 'is_ready_to_publish')}),
     )
-    list_display      = ('name', 'ald_issues', 'creation_date', 'modification_date', 'is_reserved', 'is_ready_to_publish', 'ald_submitter')
-    list_filter       = ('issues',)
+    list_display = ('name', 'ald_issues', 'creation_date', 'modification_date', 'is_reserved', 'is_ready_to_publish', 'ald_submitter')
+    list_filter = ('issues',)
     filter_horizontal = ('issues',)
-    search_fields     = ('name',)
-    ordering          = ('-creation_date',)
-    date_hierarchy    = 'creation_date'
-    exclude           = ['author']
-    _object           = None
+    search_fields = ('name',)
+    ordering = ('-creation_date',)
+    date_hierarchy = 'creation_date'
+    exclude = ['author']
+    form = VideoAdminModelForm
+    _object = None
     
     def __call__(self, request, url):
         """

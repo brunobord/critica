@@ -9,6 +9,7 @@ from critica.apps.custom_admin.sites import custom_site
 from critica.apps.polls.models import Poll
 from critica.apps.polls.models import Choice
 from critica.apps.polls.models import Vote
+from critica.apps.polls.forms import PollAdminModelForm
 
 
 class ChoiceInline(admin.TabularInline):
@@ -28,14 +29,15 @@ class PollAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {'fields': ('title', 'issues', 'tags', 'is_published')}),
     )
-    list_display      = ('title', 'ald_issues', 'creation_date', 'modification_date', 'is_published', 'submitter')
-    list_filter       = ('issues', 'is_published', 'submitter')
+    list_display = ('title', 'ald_issues', 'creation_date', 'modification_date', 'is_published', 'submitter')
+    list_filter = ('issues', 'is_published', 'submitter')
     filter_horizontal = ('issues',)
-    search_fields     = ('title',)
-    ordering          = ('-creation_date',)
-    date_hierarchy    = 'creation_date'
-    inlines           = [ChoiceInline]
-    exclude           = ['submitter']
+    search_fields = ('title',)
+    ordering = ('-creation_date',)
+    date_hierarchy = 'creation_date'
+    inlines = [ChoiceInline]
+    exclude = ['submitter']
+    form = PollAdminModelForm
 
     def ald_issues(self, obj):
         """

@@ -13,6 +13,7 @@ from critica.apps.users.models import UserNickname
 from critica.apps.categories.models import Category
 from critica.apps.issues.models import Issue
 from critica.apps.notes import settings as notes_settings
+from critica.apps.notes.forms import NoteAdminModelForm
 
 
 class NoteTypeAdmin(admin.ModelAdmin):
@@ -176,6 +177,8 @@ class NoteAdmin(BaseNoteAdmin):
     Administration interface options of ``Note`` model.
     
     """
+    form = NoteAdminModelForm
+    
     def formfield_for_dbfield(self, db_field, **kwargs):
         """
         Hook for specifying the form Field instance for a given database Field

@@ -9,6 +9,7 @@ from critica.apps.custom_admin.sites import custom_site
 from critica.apps.articles.admin import BaseArticleAdmin
 from critica.apps.epicurien.models import EpicurienArticleType
 from critica.apps.epicurien.models import EpicurienArticle
+from critica.apps.epicurien.forms import EpicurienArticleAdminModelForm
 
 
 class EpicurienArticleTypeAdmin(admin.ModelAdmin):
@@ -41,11 +42,12 @@ class EpicurienArticleAdmin(BaseArticleAdmin):
             'fields': ('is_featured', 'is_reserved', 'is_ready_to_publish'),
         }),
     )
-    list_display   = ('title', 'type', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_image')
-    list_filter    = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'type')
-    search_fields  = ('title', 'summary', 'content')
-    ordering       = ('-publication_date', 'category')
+    list_display = ('title', 'type', 'ald_issues', 'ald_publication_date', 'ald_opinion', 'ald_author', 'ald_view_count', 'is_featured', 'ald_is_reserved', 'is_ready_to_publish', 'ald_image')
+    list_filter = ('issues', 'author', 'is_ready_to_publish', 'is_reserved', 'opinion', 'is_featured', 'type')
+    search_fields = ('title', 'summary', 'content')
+    ordering = ('-publication_date', 'category')
     date_hierarchy = 'publication_date'
+    form = EpicurienArticleAdminModelForm
 
 
 # Registers
