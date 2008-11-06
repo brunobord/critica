@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1, 
+        "model": "polls.poll", 
+        "fields": {
+            "modification_date": "2008-11-06 07:44:21", 
+            "tags": "starac", 
+            "title": "La Star'Ac cette ann\u00e9e", 
+            "creation_date": "2008-11-06 07:43:54", 
+            "submitter": 1, 
+            "slug": "la-starac-cette-annee", 
+            "issues": [
+                1
+            ], 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "polls.choice", 
+        "fields": {
+            "poll": 1, 
+            "choice": "Quelle daube ! Je censure !"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "polls.choice", 
+        "fields": {
+            "poll": 1, 
+            "choice": "Rendez-nous Rapha\u00eblle Ricci !"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "polls.choice", 
+        "fields": {
+            "poll": 1, 
+            "choice": "J'aime pas, mais je regarde quand m\u00eame !"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "polls.choice", 
+        "fields": {
+            "poll": 1, 
+            "choice": "Tous ces p'tits cons ont un sacr\u00e9 melon !"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "polls.choice", 
+        "fields": {
+            "poll": 1, 
+            "choice": "J'aime, \u00e7a fait des vari\u00e9t\u00e9s le vendredi soir !"
+        }
+    }
+]

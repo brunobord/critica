@@ -3,18 +3,18 @@
         "pk": 1, 
         "model": "ads.customer", 
         "fields": {
-            "name": "Bidule", 
-            "modification_date": "2008-10-17 10:27:38", 
-            "creation_date": "2008-10-17 10:27:38"
+            "name": "Milka", 
+            "modification_date": "2008-11-05 14:31:52", 
+            "creation_date": "2008-11-05 14:31:39"
         }
     }, 
     {
         "pk": 2, 
         "model": "ads.customer", 
         "fields": {
-            "name": "Chouette", 
-            "modification_date": "2008-10-17 10:27:50", 
-            "creation_date": "2008-10-17 10:27:50"
+            "name": "Guiness", 
+            "modification_date": "2008-11-05 14:32:11", 
+            "creation_date": "2008-11-05 14:32:11"
         }
     }, 
     {
@@ -22,34 +22,1459 @@
         "model": "ads.adcampaign", 
         "fields": {
             "customer": 1, 
-            "name": "Bidule Campagne", 
-            "modification_date": "2008-10-17 10:28:07", 
-            "creation_date": "2008-10-17 10:28:07"
+            "name": "Super Chocolat", 
+            "modification_date": "2008-11-05 14:32:29", 
+            "creation_date": "2008-11-05 14:32:29"
         }
     }, 
     {
         "pk": 2, 
         "model": "ads.adcampaign", 
         "fields": {
-            "customer": 2, 
-            "name": "Chouette Campagne", 
-            "modification_date": "2008-10-17 10:28:15", 
-            "creation_date": "2008-10-17 10:28:15"
+            "customer": 1, 
+            "name": "Chocolat Tendre", 
+            "modification_date": "2008-11-05 14:32:40", 
+            "creation_date": "2008-11-05 14:32:40"
         }
-    },
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adcampaign", 
+        "fields": {
+            "customer": 2, 
+            "name": "Super Bi\u00e8re", 
+            "modification_date": "2008-11-05 14:32:45", 
+            "creation_date": "2008-11-05 14:32:45"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adcampaign", 
+        "fields": {
+            "customer": 2, 
+            "name": "Bi\u00e8re qui d\u00e9pote", 
+            "modification_date": "2008-11-05 14:32:53", 
+            "creation_date": "2008-11-05 14:32:53"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Large banni\u00e8re", 
+            "modification_date": "2008-10-17 09:32:36", 
+            "height": 90, 
+            "width": 728, 
+            "creation_date": "2008-10-17 09:32:36", 
+            "slug": "large-banniere"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Launch Unit", 
+            "modification_date": "2008-10-17 09:32:50", 
+            "height": 440, 
+            "width": 1000, 
+            "creation_date": "2008-10-17 09:32:50", 
+            "slug": "launch-unit"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Banni\u00e8re", 
+            "modification_date": "2008-10-17 09:34:00", 
+            "height": 60, 
+            "width": 468, 
+            "creation_date": "2008-10-17 09:34:00", 
+            "slug": "banniere"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Carr\u00e9", 
+            "modification_date": "2008-10-17 09:34:34", 
+            "height": 250, 
+            "width": 250, 
+            "creation_date": "2008-10-17 09:34:34", 
+            "slug": "carre"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Pav\u00e9", 
+            "modification_date": "2008-10-21 15:21:49", 
+            "height": 250, 
+            "width": 300, 
+            "creation_date": "2008-10-17 09:34:43", 
+            "slug": "pave"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Skyscraper 120", 
+            "modification_date": "2008-10-17 09:35:13", 
+            "height": 600, 
+            "width": 120, 
+            "creation_date": "2008-10-17 09:35:13", 
+            "slug": "skyscraper-120"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Skyscraper 160", 
+            "modification_date": "2008-10-17 09:35:23", 
+            "height": 600, 
+            "width": 160, 
+            "creation_date": "2008-10-17 09:35:23", 
+            "slug": "skyscraper-160"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Carousel 320", 
+            "modification_date": "2008-10-23 09:38:53", 
+            "height": 100, 
+            "width": 320, 
+            "creation_date": "2008-10-23 09:38:53", 
+            "slug": "carousel-320"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adformat", 
+        "fields": {
+            "name": "Carousel 450", 
+            "modification_date": "2008-10-23 09:39:01", 
+            "height": 130, 
+            "width": 450, 
+            "creation_date": "2008-10-23 09:39:01", 
+            "slug": "carousel-450"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ads.adtype", 
+        "fields": {
+            "name": "Payante", 
+            "modification_date": "2008-10-17 09:27:57", 
+            "creation_date": "2008-10-17 09:27:57"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adtype", 
+        "fields": {
+            "name": "Titre gracieux", 
+            "modification_date": "2008-10-17 09:28:04", 
+            "creation_date": "2008-10-17 09:28:04"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adtype", 
+        "fields": {
+            "name": "Autopromotion", 
+            "modification_date": "2008-10-17 09:28:20", 
+            "creation_date": "2008-10-17 09:28:20"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": null, 
+            "name": "Portail", 
+            "modification_date": "2008-10-17 09:29:11", 
+            "creation_date": "2008-10-17 09:29:11", 
+            "type": 1, 
+            "slug": "portail"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 1, 
+            "name": "National", 
+            "modification_date": "2008-10-17 09:29:28", 
+            "creation_date": "2008-10-17 09:29:28", 
+            "type": 2, 
+            "slug": "national"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 2, 
+            "name": "\u00c9tranger", 
+            "modification_date": "2008-10-17 09:29:43", 
+            "creation_date": "2008-10-17 09:29:43", 
+            "type": 2, 
+            "slug": "etranger"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 3, 
+            "name": "Soci\u00e9t\u00e9", 
+            "modification_date": "2008-10-17 09:29:58", 
+            "creation_date": "2008-10-17 09:29:51", 
+            "type": 2, 
+            "slug": "societe"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 4, 
+            "name": "Sports", 
+            "modification_date": "2008-10-17 09:30:10", 
+            "creation_date": "2008-10-17 09:30:10", 
+            "type": 2, 
+            "slug": "sports"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 5, 
+            "name": "Pipoles", 
+            "modification_date": "2008-10-17 09:30:18", 
+            "creation_date": "2008-10-17 09:30:18", 
+            "type": 2, 
+            "slug": "pipoles"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 6, 
+            "name": "T\u00e9l\u00e9", 
+            "modification_date": "2008-10-17 09:30:24", 
+            "creation_date": "2008-10-17 09:30:24", 
+            "type": 2, 
+            "slug": "tele"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 7, 
+            "name": "Bouquins", 
+            "modification_date": "2008-10-17 09:30:30", 
+            "creation_date": "2008-10-17 09:30:30", 
+            "type": 2, 
+            "slug": "bouquins"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 8, 
+            "name": "Nanas", 
+            "modification_date": "2008-10-17 09:30:37", 
+            "creation_date": "2008-10-17 09:30:37", 
+            "type": 2, 
+            "slug": "nanas"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 9, 
+            "name": "Insolite", 
+            "modification_date": "2008-10-17 09:30:44", 
+            "creation_date": "2008-10-17 09:30:44", 
+            "type": 2, 
+            "slug": "insolite"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 12, 
+            "name": "R\u00e9gions", 
+            "modification_date": "2008-10-17 09:30:52", 
+            "creation_date": "2008-10-17 09:30:52", 
+            "type": 2, 
+            "slug": "regions"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 10, 
+            "name": "Voyages", 
+            "modification_date": "2008-10-17 09:30:59", 
+            "creation_date": "2008-10-17 09:30:59", 
+            "type": 2, 
+            "slug": "voyages"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 11, 
+            "name": "\u00c9picurien", 
+            "modification_date": "2008-10-17 09:31:09", 
+            "creation_date": "2008-10-17 09:31:09", 
+            "type": 2, 
+            "slug": "epicurien"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 11, 
+            "name": "\u00c9picurien : C\u00f4t\u00e9 Gourmets", 
+            "modification_date": "2008-10-17 09:31:22", 
+            "creation_date": "2008-10-17 09:31:22", 
+            "type": 2, 
+            "slug": "epicurien-cote-gourmets"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 11, 
+            "name": "\u00c9picurien : C\u00f4t\u00e9 Bar", 
+            "modification_date": "2008-10-17 09:31:30", 
+            "creation_date": "2008-10-17 09:31:30", 
+            "type": 2, 
+            "slug": "epicurien-cote-bar"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": null, 
+            "name": "\u00c9picurien : C\u00f4t\u00e9 Fumeurs", 
+            "modification_date": "2008-10-17 09:31:38", 
+            "creation_date": "2008-10-17 09:31:38", 
+            "type": 2, 
+            "slug": "epicurien-cote-fumeurs"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "ads.adpage", 
+        "fields": {
+            "category": 13, 
+            "name": "Coup de Gueule", 
+            "modification_date": "2008-10-17 09:31:45", 
+            "creation_date": "2008-10-17 09:31:45", 
+            "type": 2, 
+            "slug": "coup-de-gueule"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "1.0", 
+            "creation_date": "2008-10-17 09:36:37", 
+            "name": "1 - Large banni\u00e8re", 
+            "modification_date": "2008-10-17 09:36:37", 
+            "slug": "1-large-banniere"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "1.1", 
+            "creation_date": "2008-10-17 09:36:53", 
+            "name": "Launch Unit", 
+            "modification_date": "2008-10-17 09:36:53", 
+            "slug": "launch-unit"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "2.0", 
+            "creation_date": "2008-10-17 09:37:49", 
+            "name": "2 - Banni\u00e8re (colonne gauche)", 
+            "modification_date": "2008-10-17 09:37:49", 
+            "slug": "2-banniere-colonne-gauche"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "3.0", 
+            "creation_date": "2008-10-17 09:38:02", 
+            "name": "3 - Banni\u00e8re (colonne gauche)", 
+            "modification_date": "2008-10-17 09:38:02", 
+            "slug": "3-banniere-colonne-gauche"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "3.1", 
+            "creation_date": "2008-10-17 09:38:22", 
+            "name": "3 (bis) - Banni\u00e8re (colonne gauche)", 
+            "modification_date": "2008-10-17 09:38:22", 
+            "slug": "3-bis-banniere-colonne-gauche"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "4.0", 
+            "creation_date": "2008-10-17 09:38:37", 
+            "name": "4 - Carr\u00e9 (colonne droite)", 
+            "modification_date": "2008-10-17 09:38:37", 
+            "slug": "4-carre-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "4.1", 
+            "creation_date": "2008-10-17 09:38:49", 
+            "name": "4 (bis) - Carr\u00e9 (colonne droite)", 
+            "modification_date": "2008-10-17 09:38:49", 
+            "slug": "4-bis-carre-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "5.0", 
+            "creation_date": "2008-10-17 09:39:04", 
+            "name": "5 - Pav\u00e9 (colonne droite)", 
+            "modification_date": "2008-10-17 09:39:04", 
+            "slug": "5-pave-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "5.1", 
+            "creation_date": "2008-10-17 09:39:16", 
+            "name": "5 (bis) - Pav\u00e9 (colonne droite)", 
+            "modification_date": "2008-10-17 09:40:21", 
+            "slug": "5-bis-pave-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "6.0", 
+            "creation_date": "2008-10-17 09:40:08", 
+            "name": "6 - Skyscraper 120 (colonne droite)", 
+            "modification_date": "2008-10-17 10:24:42", 
+            "slug": "6-skyscraper-120-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "6.1", 
+            "creation_date": "2008-10-17 10:25:38", 
+            "name": "6 (bis) - Skyscraper 160 (colonne droite)", 
+            "modification_date": "2008-10-17 10:25:47", 
+            "slug": "6-bis-skyscraper-160-colonne-droite"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "7.0", 
+            "creation_date": "2008-10-23 09:39:31", 
+            "name": "7 - Carousel 320", 
+            "modification_date": "2008-10-23 09:39:31", 
+            "slug": "7-carousel-320"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ads.adlocation", 
+        "fields": {
+            "position": "8.0", 
+            "creation_date": "2008-10-23 09:39:38", 
+            "name": "8 - Carousel 450", 
+            "modification_date": "2008-10-23 09:39:38", 
+            "slug": "8-carousel-450"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:42:35", 
+            "format": 1, 
+            "price": "5000.00", 
+            "creation_date": "2008-10-17 09:42:35", 
+            "location": 1, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:43:03", 
+            "format": 2, 
+            "price": "30000.00", 
+            "creation_date": "2008-10-17 09:43:03", 
+            "location": 2, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:43:39", 
+            "format": 3, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 09:43:39", 
+            "location": 3, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:44:07", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 09:44:07", 
+            "location": 4, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:44:14", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 09:44:14", 
+            "location": 5, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:44:25", 
+            "format": 5, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 09:44:25", 
+            "location": 8, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:44:46", 
+            "format": 5, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 09:44:46", 
+            "location": 9, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 09:45:53", 
+            "format": 6, 
+            "price": "3500.00", 
+            "creation_date": "2008-10-17 09:45:32", 
+            "location": 10, 
+            "page": 1
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:10:17", 
+            "format": 1, 
+            "price": "3000.00", 
+            "creation_date": "2008-10-17 10:10:17", 
+            "location": 1, 
+            "page": 2
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:10:27", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 10:10:27", 
+            "location": 3, 
+            "page": 2
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:10:40", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:10:40", 
+            "location": 4, 
+            "page": 2
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:10:51", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:10:51", 
+            "location": 6, 
+            "page": 2
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:11:01", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:11:01", 
+            "location": 10, 
+            "page": 2
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:11:12", 
+            "format": 1, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:11:12", 
+            "location": 1, 
+            "page": 3
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:11:20", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 10:11:20", 
+            "location": 3, 
+            "page": 3
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:11:29", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:11:29", 
+            "location": 4, 
+            "page": 3
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:11:39", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:11:39", 
+            "location": 6, 
+            "page": 3
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:11:51", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:11:51", 
+            "location": 10, 
+            "page": 3
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:12:12", 
+            "format": 1, 
+            "price": "3000.00", 
+            "creation_date": "2008-10-17 10:12:12", 
+            "location": 1, 
+            "page": 4
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:12:38", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 10:12:38", 
+            "location": 3, 
+            "page": 4
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:12:48", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:12:48", 
+            "location": 4, 
+            "page": 4
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:12:55", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:12:55", 
+            "location": 6, 
+            "page": 4
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:13:05", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:13:05", 
+            "location": 10, 
+            "page": 4
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:13:20", 
+            "format": 1, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:13:20", 
+            "location": 1, 
+            "page": 5
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:13:27", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:13:27", 
+            "location": 3, 
+            "page": 5
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:13:38", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:13:38", 
+            "location": 4, 
+            "page": 5
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:13:50", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:13:50", 
+            "location": 10, 
+            "page": 5
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:14:04", 
+            "format": 1, 
+            "price": "3000.00", 
+            "creation_date": "2008-10-17 10:14:04", 
+            "location": 1, 
+            "page": 6
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:14:13", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:14:13", 
+            "location": 3, 
+            "page": 6
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:14:22", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:14:22", 
+            "location": 4, 
+            "page": 6
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:14:33", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:14:33", 
+            "location": 6, 
+            "page": 6
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:14:46", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:14:46", 
+            "location": 10, 
+            "page": 6
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:15:40", 
+            "format": 1, 
+            "price": "3000.00", 
+            "creation_date": "2008-10-17 10:15:40", 
+            "location": 1, 
+            "page": 7
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:15:53", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:15:53", 
+            "location": 3, 
+            "page": 7
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:16:00", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:16:00", 
+            "location": 4, 
+            "page": 7
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:16:10", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:16:10", 
+            "location": 10, 
+            "page": 7
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:16:26", 
+            "format": 1, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:16:26", 
+            "location": 1, 
+            "page": 8
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:16:35", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:16:35", 
+            "location": 3, 
+            "page": 8
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:16:43", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:16:43", 
+            "location": 4, 
+            "page": 8
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:16:51", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:16:51", 
+            "location": 6, 
+            "page": 8
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:17:00", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:17:00", 
+            "location": 10, 
+            "page": 8
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:17:16", 
+            "format": 1, 
+            "price": "3000.00", 
+            "creation_date": "2008-10-17 10:17:16", 
+            "location": 1, 
+            "page": 9
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:17:23", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 10:17:23", 
+            "location": 3, 
+            "page": 9
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:17:32", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:17:32", 
+            "location": 4, 
+            "page": 9
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:17:42", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:17:42", 
+            "location": 10, 
+            "page": 9
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:17:55", 
+            "format": 1, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:17:55", 
+            "location": 1, 
+            "page": 10
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:18:04", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:18:04", 
+            "location": 3, 
+            "page": 10
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:18:13", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:18:13", 
+            "location": 4, 
+            "page": 10
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:18:21", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:18:21", 
+            "location": 6, 
+            "page": 10
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:18:30", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:18:30", 
+            "location": 10, 
+            "page": 10
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:18:40", 
+            "format": 1, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:18:40", 
+            "location": 1, 
+            "page": 11
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:18:51", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 10:18:51", 
+            "location": 3, 
+            "page": 11
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:19:00", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:19:00", 
+            "location": 4, 
+            "page": 11
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:19:13", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:19:13", 
+            "location": 6, 
+            "page": 11
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:19:23", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:19:23", 
+            "location": 7, 
+            "page": 11
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:19:46", 
+            "format": 1, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:19:46", 
+            "location": 1, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:19:56", 
+            "format": 3, 
+            "price": "1500.00", 
+            "creation_date": "2008-10-17 10:19:56", 
+            "location": 3, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:20:07", 
+            "format": 4, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:20:07", 
+            "location": 6, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:20:18", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:20:18", 
+            "location": 8, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:20:27", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:20:27", 
+            "location": 9, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:20:39", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:20:39", 
+            "location": 10, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:21:14", 
+            "format": 1, 
+            "price": "3000.00", 
+            "creation_date": "2008-10-17 10:21:14", 
+            "location": 1, 
+            "page": 13
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:21:24", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:21:24", 
+            "location": 10, 
+            "page": 13
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:21:46", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:21:46", 
+            "location": 3, 
+            "page": 14
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:21:55", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:21:55", 
+            "location": 8, 
+            "page": 14
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:22:06", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:22:06", 
+            "location": 9, 
+            "page": 14
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:22:16", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:22:16", 
+            "location": 3, 
+            "page": 15
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:22:24", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:22:24", 
+            "location": 8, 
+            "page": 15
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:22:33", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:22:33", 
+            "location": 9, 
+            "page": 15
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:22:45", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:22:45", 
+            "location": 3, 
+            "page": 16
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:22:54", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:22:54", 
+            "location": 8, 
+            "page": 16
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:23:02", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:23:02", 
+            "location": 9, 
+            "page": 16
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:23:29", 
+            "format": 1, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:23:29", 
+            "location": 1, 
+            "page": 17
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:23:38", 
+            "format": 3, 
+            "price": "1000.00", 
+            "creation_date": "2008-10-17 10:23:38", 
+            "location": 3, 
+            "page": 17
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:23:46", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:23:46", 
+            "location": 8, 
+            "page": 17
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:23:56", 
+            "format": 5, 
+            "price": "800.00", 
+            "creation_date": "2008-10-17 10:23:56", 
+            "location": 9, 
+            "page": 17
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "ads.adbannerposition", 
+        "fields": {
+            "modification_date": "2008-10-17 10:24:04", 
+            "format": 6, 
+            "price": "2000.00", 
+            "creation_date": "2008-10-17 10:24:04", 
+            "location": 10, 
+            "page": 17
+        }
+    }, 
     {
         "pk": 1, 
         "model": "ads.addefaultbanner", 
         "fields": {
             "description": "", 
             "modification_date": "2008-10-17 13:17:49", 
+            "format": 1, 
             "banner": "upload/ads/default/otoprom_728x90.gif", 
             "creation_date": "2008-10-17 13:17:49", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
-            "ads": [
+            "positions": [
                 1, 
                 9, 
                 14, 
@@ -64,7 +1489,9 @@
                 56, 
                 62, 
                 73
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -73,13 +1500,12 @@
         "fields": {
             "description": "", 
             "modification_date": "2008-10-17 13:23:43", 
+            "format": 3, 
             "banner": "upload/ads/default/otoprom_468x60.gif", 
             "creation_date": "2008-10-17 13:23:43", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
-            "ads": [
+            "positions": [
                 3, 
                 4, 
                 5, 
@@ -108,7 +1534,9 @@
                 67, 
                 70, 
                 74
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -117,13 +1545,12 @@
         "fields": {
             "description": "", 
             "modification_date": "2008-10-17 13:26:08", 
+            "format": 4, 
             "banner": "upload/ads/default/otoprom_250x250.gif", 
             "creation_date": "2008-10-17 13:26:08", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
-            "ads": [
+            "positions": [
                 12, 
                 17, 
                 22, 
@@ -133,7 +1560,9 @@
                 54, 
                 55, 
                 58
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -142,13 +1571,12 @@
         "fields": {
             "description": "", 
             "modification_date": "2008-10-17 13:27:56", 
+            "format": 5, 
             "banner": "upload/ads/default/otoprom_300x250.gif", 
             "creation_date": "2008-10-17 13:27:56", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
-            "ads": [
+            "positions": [
                 6, 
                 7, 
                 59, 
@@ -161,7 +1589,9 @@
                 72, 
                 75, 
                 76
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
@@ -170,13 +1600,12 @@
         "fields": {
             "description": "", 
             "modification_date": "2008-10-17 13:29:45", 
+            "format": 6, 
             "banner": "upload/ads/default/critica-Sky120-otoprom.gif", 
             "creation_date": "2008-10-17 13:29:45", 
             "banner_type": "image", 
             "link": "http://www.critica.fr/", 
-            "submitter": 1, 
-            "banner_extension": "gif", 
-            "ads": [
+            "positions": [
                 8, 
                 13, 
                 18, 
@@ -190,17 +1619,16 @@
                 61, 
                 63, 
                 77
-            ]
+            ], 
+            "submitter": 1, 
+            "banner_extension": "gif"
         }
     }, 
     {
         "pk": 1, 
         "model": "ads.adbanner", 
         "fields": {
-            "description": "Super Banni\u00e8re 728x90.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/728x90.jpg", 
-            "ads": [
+            "positions": [
                 1, 
                 9, 
                 14, 
@@ -212,29 +1640,28 @@
                 42, 
                 46, 
                 51, 
-                56, 
-                62, 
-                73
+                56
             ], 
-            "creation_date": "2008-10-17 10:30:58", 
+            "description": "", 
+            "campaign": 4, 
+            "format": 1, 
+            "banner": "upload/ads/2008/11/05/728x90.jpg", 
+            "creation_date": "2008-11-05 14:51:20", 
             "banner_type": "image", 
-            "ending_date": "2008-11-12", 
-            "link": "http://www.google.com/", 
+            "ending_date": "2009-02-10", 
+            "link": "http://www.guiness.com/", 
             "type": 1, 
             "submitter": 1, 
-            "starting_date": "2008-09-10", 
+            "starting_date": "2009-01-07", 
             "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:30:58"
+            "modification_date": "2008-11-05 14:51:20"
         }
     }, 
     {
         "pk": 2, 
         "model": "ads.adbanner", 
         "fields": {
-            "description": "Super Banni\u00e8re 468x60.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/468x60.jpg", 
-            "ads": [
+            "positions": [
                 3, 
                 4, 
                 5, 
@@ -251,203 +1678,170 @@
                 34, 
                 35, 
                 38, 
-                39, 
-                43, 
                 44, 
-                47, 
                 48, 
-                52, 
                 53, 
                 57, 
                 64, 
-                67, 
-                70, 
-                74
+                70
             ], 
-            "creation_date": "2008-10-17 10:34:14", 
+            "description": "", 
+            "campaign": 4, 
+            "format": 3, 
+            "banner": "upload/ads/2008/11/05/468x60.jpg", 
+            "creation_date": "2008-11-05 14:52:39", 
             "banner_type": "image", 
-            "ending_date": "2008-11-28", 
+            "ending_date": "2009-04-03", 
             "link": "", 
             "type": 1, 
             "submitter": 1, 
-            "starting_date": "2008-09-30", 
+            "starting_date": "2009-02-05", 
             "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:34:14"
+            "modification_date": "2008-11-05 14:52:39"
         }
     }, 
     {
         "pk": 1, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "Super Banni\u00e8re 728x90.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/728x90.jpg", 
-            "ads": [
-                1, 
-                9, 
-                14, 
-                19, 
-                24, 
-                28, 
-                33, 
-                37, 
-                42, 
-                46, 
-                51, 
-                56, 
-                62, 
-                73
-            ], 
-            "creation_date": "2008-10-17 10:30:58", 
-            "banner_type": "image", 
-            "ending_date": "2008-11-12", 
-            "link": "http://www.google.com/", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:30:58"
+            "modification_date": "2008-10-23 09:40:07", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:07", 
+            "location": 13, 
+            "page": 2
         }
     }, 
     {
         "pk": 2, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "Super Banni\u00e8re 468x60.", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/468x60.jpg", 
-            "ads": [
-                3, 
-                4, 
-                5, 
-                10, 
-                11, 
-                15, 
-                16, 
-                20, 
-                21, 
-                25, 
-                26, 
-                29, 
-                30, 
-                34, 
-                35, 
-                38, 
-                39, 
-                43, 
-                44, 
-                47, 
-                48, 
-                52, 
-                53, 
-                57, 
-                64, 
-                67, 
-                70, 
-                74
-            ], 
-            "creation_date": "2008-10-17 10:34:14", 
-            "banner_type": "image", 
-            "ending_date": "2008-11-28", 
-            "link": "", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-30", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:34:14"
+            "modification_date": "2008-10-23 09:40:14", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:14", 
+            "location": 13, 
+            "page": 3
         }
     }, 
     {
         "pk": 3, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "", 
-            "campaign": 1, 
-            "banner": "upload/ads/2008/10/17/300x90.jpg", 
-            "ads": [
-                6, 
-                7, 
-                59, 
-                60, 
-                65, 
-                66, 
-                68, 
-                69, 
-                71, 
-                72, 
-                75, 
-                76
-            ], 
-            "creation_date": "2008-10-17 10:58:19", 
-            "banner_type": "image", 
-            "ending_date": "2008-12-19", 
-            "link": "", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-10-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 10:58:19"
+            "modification_date": "2008-10-23 09:40:23", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:23", 
+            "location": 13, 
+            "page": 4
         }
     }, 
     {
         "pk": 4, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "", 
-            "campaign": 2, 
-            "banner": "upload/ads/2008/10/17/250x250.jpg", 
-            "ads": [
-                12, 
-                17, 
-                22, 
-                31, 
-                40, 
-                49, 
-                54, 
-                58
-            ], 
-            "creation_date": "2008-10-17 11:00:27", 
-            "banner_type": "image", 
-            "ending_date": "2009-01-15", 
-            "link": "http://www.google.com/", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 11:00:27"
+            "modification_date": "2008-10-23 09:40:29", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:29", 
+            "location": 13, 
+            "page": 5
         }
     }, 
     {
         "pk": 5, 
-        "model": "ads.adbanner", 
+        "model": "ads.adcarouselposition", 
         "fields": {
-            "description": "", 
-            "campaign": 2, 
-            "banner": "upload/ads/2008/10/17/120x600.jpg", 
-            "ads": [
-                8, 
-                13, 
-                18, 
-                23, 
-                27, 
-                32, 
-                36, 
-                41, 
-                45, 
-                50, 
-                61, 
-                63, 
-                77
-            ], 
-            "creation_date": "2008-10-17 11:04:43", 
-            "banner_type": "image", 
-            "ending_date": "2008-12-19", 
-            "link": "", 
-            "type": 1, 
-            "submitter": 1, 
-            "starting_date": "2008-09-10", 
-            "banner_extension": "jpg", 
-            "modification_date": "2008-10-17 11:04:43"
+            "modification_date": "2008-10-23 09:40:37", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:37", 
+            "location": 13, 
+            "page": 6
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:40:44", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:44", 
+            "location": 13, 
+            "page": 7
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:40:52", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:52", 
+            "location": 13, 
+            "page": 8
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:40:59", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:40:59", 
+            "location": 13, 
+            "page": 9
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:41:17", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:41:17", 
+            "location": 13, 
+            "page": 10
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:43:24", 
+            "format": 9, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:43:24", 
+            "location": 13, 
+            "page": 11
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:43:30", 
+            "format": 8, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:43:30", 
+            "location": 12, 
+            "page": 12
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-10-23 09:43:43", 
+            "format": 8, 
+            "price": null, 
+            "creation_date": "2008-10-23 09:43:43", 
+            "location": 12, 
+            "page": 13
         }
     }
 ]
