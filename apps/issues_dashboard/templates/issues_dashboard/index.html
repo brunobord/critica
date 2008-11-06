@@ -2,12 +2,12 @@
 
 {% load i18n %}
 
-{% block title %}Dashboard Édition | Administration de Critic@{% endblock %}
+{% block title %}Dashboard Éditions | Administration de Critic@{% endblock %}
 
 {% block extrastyle %}<link rel="stylesheet" media="screen, projection" href="{{ MEDIA_URL }}critica/admin/basic/css/custom.css" />{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">Dashboard Édition | Administration de Critic@</h1>
+<h1 id="site-name">Dashboard Éditions | Administration de Critic@</h1>
 {% endblock %}
 
 {% block breadcrumbs %}<div class="breadcrumbs"><a href="/admin/">{% trans 'Home' %}</a>{% if title %} &rsaquo; {{ title|escape }}{% endif %}</div>{% endblock %}
@@ -15,11 +15,11 @@
 {% block content %}
 <div id="dashboard">
 
-    <h1><a href="{% url issues_dashboard_index %}">Dashboard Édition</a> / Édition {{ issue.number }} ~ {% if issue.is_published %}<span class="issue-status-published">publiée</span>{% else %}<span class="issue-status-unpublished">non-publiée</span>{% endif %}</span></h1>
+    <h1><a href="{% url issues_dashboard_index %}">Dashboard Éditions</a> / Édition {{ issue.number }} ~ {% if issue.is_published %}<span class="issue-status-published">publiée</span>{% else %}<span class="issue-status-unpublished">non-publiée</span>{% endif %}</span></h1>
 
     <div id="issues-dashboard-welcome" class="dashboard-welcome">
         <ul>
-            <li>Bienvenue sur le Dashboard Édition.</li>
+            <li>Bienvenue sur le Dashboard Éditions.</li>
             <li>Vous consultez actuellement le dashboard de l'édition : <a href="/admin/issues/issue/{{ issue.id }}">{{ issue.number }}</a></li>
             {% if issue.is_published %}
             <li>Cette édition est en ligne et consultable via les archives&nbsp;: <a href="{{ site_url }}/archives/{{ issue.number }}/" target="_blank">{{ site_url }}/archives/{{ issue.number }}/</a></li>
@@ -29,7 +29,7 @@
                 </form>
             </li>
             {% else %}
-            <li>Cette édition n'est pas en ligne. Pour en avoir un aperçu, utilisez ce lien caché : <a href="{{ site_url }}/preview/{{ issue.secret_key }}/" target="_blank">{{ site_url }}/preview/{{ issue.secret_key }}/</a></li>
+            <li>Cette édition n'est pas en ligne. Pour en avoir un aperçu, utilisez ce lien caché : <a href="{{ issue.get_preview_url }}" target="_blank">{{ issue.get_preview_url }}</a></li>
             <li>
                 <form action="{% url issues_dashboard_change_issue_status issue.number 1 %}" method="POST">
                     <input type="submit" value="Cette édition est prête à être publiée, mettre en ligne !">

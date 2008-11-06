@@ -4,6 +4,7 @@ Models of ``critica.apps.issues`` application.
 
 """
 from django.db import models
+from django.db.models import permalink
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.issues.managers import PublishedIssueManager
@@ -38,12 +39,15 @@ class Issue(models.Model):
         """
         return u'%s' % self.number
 
+    @permalink
     def get_preview_url(self):
-        """
-        Returns issue preview secret URL.
+        """ 
+        Returns issues preview URL.
         
         """
-        return u'/%s/%s/' % ('preview', self.secret_key)
+        return ('issues_preview_home', (), {
+            'issue_key': self.secret_key,
+        })
 
     def save(self):
         """ 
