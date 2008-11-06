@@ -38,7 +38,7 @@ from critica.apps.issues.views import _get_current_issue
 # ------------------------------------------------------------------------------
 # HOME
 # ------------------------------------------------------------------------------
-def home(request, issue=None, is_preview=False, is_archive=False):
+def home(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
     """
     Displays the homepage.
     
@@ -49,7 +49,9 @@ def home(request, issue=None, is_preview=False, is_archive=False):
     
     # Initializes context dictionary
     context = {}
-    
+    if extra_context:
+        context.update(extra_context)
+        
     # Issue
     try:
         context['issue'] = issue
@@ -61,6 +63,12 @@ def home(request, issue=None, is_preview=False, is_archive=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+
+    # Is a ads preview
+    if is_ads_preview:
+        context['is_ads_preview'] = True
+    else:
+        context['is_ads_preview'] = False
         
     # Is an archive
     if is_archive:
@@ -69,7 +77,7 @@ def home(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview and not is_archive:
+    if not is_preview and not is_archive and not is_ads_preview:
         is_current = True
         context['is_current'] = is_current
     else:
@@ -232,11 +240,10 @@ def home(request, issue=None, is_preview=False, is_archive=False):
     
     return direct_to_template(request, 'front/home.html', context)
 
-
 # ------------------------------------------------------------------------------
 # CATEGORY
 # ------------------------------------------------------------------------------
-def category(request, category_slug, issue=None, is_preview=False, is_archive=False):
+def category(request, category_slug, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
     """
     Displays the given category page.
     
@@ -244,8 +251,11 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
     if not issue:
         issue = _get_current_issue()
     
+    # Context
     context = {}
-    
+    if extra_context:
+        context.update(extra_context)
+        
     # Issue
     context['issue'] = issue
     
@@ -254,6 +264,12 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+
+    # Is a ads preview
+    if is_ads_preview:
+        context['is_ads_preview'] = True
+    else:
+        context['is_ads_preview'] = False
         
     # Is an archive
     if is_archive:
@@ -262,7 +278,7 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
         context['is_archive'] = False
         
     # Is current
-    if not is_preview and not is_archive:
+    if not is_preview and not is_archive and not is_ads_preview:
         is_current = True
         context['is_current'] = is_current
     else:
@@ -326,7 +342,7 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
 # ------------------------------------------------------------------------------
 # REGIONS
 # ------------------------------------------------------------------------------
-def regions(request, issue=None, is_preview=False, is_archive=False):
+def regions(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
     """
     Displays "Regions" category page.
     
@@ -334,8 +350,11 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
     if not issue:
         issue = _get_current_issue()
     
+    # Context
     context = {}
-    
+    if extra_context:
+        context.update(extra_context)
+        
     # Issue
     context['issue'] = issue
     
@@ -344,6 +363,12 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+
+    # Is a ads preview
+    if is_ads_preview:
+        context['is_ads_preview'] = True
+    else:
+        context['is_ads_preview'] = False
         
     # Is an archive
     if is_archive:
@@ -352,7 +377,7 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview and not is_archive:
+    if not is_preview and not is_archive and not is_ads_preview:
         is_current = True
         context['is_current'] = is_current
     else:
@@ -418,7 +443,7 @@ def regions(request, issue=None, is_preview=False, is_archive=False):
 # ------------------------------------------------------------------------------
 # VOYAGES
 # ------------------------------------------------------------------------------
-def voyages(request, issue=None, is_preview=False, is_archive=False):
+def voyages(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
     """
     Displays "Voyages" category page.
     
@@ -426,8 +451,11 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
     if not issue:
         issue = _get_current_issue()
     
+    # Context
     context = {}
-    
+    if extra_context:
+        context.update(extra_context)
+        
     # Issue
     context['issue'] = issue
     
@@ -436,6 +464,12 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+
+    # Is a ads preview
+    if is_ads_preview:
+        context['is_ads_preview'] = True
+    else:
+        context['is_ads_preview'] = False
         
     # Is an archive
     if is_archive:
@@ -444,7 +478,7 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview and not is_archive:
+    if not is_preview and not is_archive and not is_ads_preview:
         is_current = True
         context['is_current'] = is_current
     else:
@@ -509,7 +543,7 @@ def voyages(request, issue=None, is_preview=False, is_archive=False):
 # ------------------------------------------------------------------------------
 # EPICURIEN
 # ------------------------------------------------------------------------------
-def epicurien(request, issue=None, is_preview=False, is_archive=False):
+def epicurien(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
     """
     Displays "Epicurien" category page.
     
@@ -517,8 +551,11 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
     if not issue:
         issue = _get_current_issue()
     
+    # Context
     context = {}
-    
+    if extra_context:
+        context.update(extra_context)
+        
     # Issue
     context['issue'] = issue
     
@@ -527,6 +564,12 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
         context['is_preview'] = True
     else:
         context['is_preview'] = False
+
+    # Is a ads preview
+    if is_ads_preview:
+        context['is_ads_preview'] = True
+    else:
+        context['is_ads_preview'] = False
         
     # Is an archive
     if is_archive:
@@ -535,7 +578,7 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview and not is_archive:
+    if not is_preview and not is_archive and not is_ads_preview:
         is_current = True
         context['is_current'] = is_current
     else:
@@ -683,7 +726,7 @@ def epicurien(request, issue=None, is_preview=False, is_archive=False):
 # ------------------------------------------------------------------------------
 # ANGER
 # ------------------------------------------------------------------------------
-def anger(request, issue=None, is_preview=False, is_archive=False):
+def anger(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
     """
     Displays "Anger" (Coup de Gueule) category page.
     
@@ -691,8 +734,11 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
     if not issue:
         issue = _get_current_issue()
     
+    # Context
     context = {}
-    
+    if extra_context:
+        context.update(extra_context)
+        
     # Issue
     context['issue'] = issue
     
@@ -702,6 +748,12 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
     else:
         context['is_preview'] = False
         
+    # Is a ads preview
+    if is_ads_preview:
+        context['is_ads_preview'] = True
+    else:
+        context['is_ads_preview'] = False
+        
     # Is an archive
     if is_archive:
         context['is_archive'] = True
@@ -709,7 +761,7 @@ def anger(request, issue=None, is_preview=False, is_archive=False):
         context['is_archive'] = False
         
     # Is current
-    if not is_preview and not is_archive:
+    if not is_preview and not is_archive and not is_ads_preview:
         is_current = True
         context['is_current'] = is_current
     else:

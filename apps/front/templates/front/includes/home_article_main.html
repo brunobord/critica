@@ -6,6 +6,9 @@
 	{% if is_preview %}
 	    <h2><span><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">{{ article.category.name }}</a></span></h2>
 	{% endif %}
+	{% if is_ads_preview %}
+	    <h2><span><a href="{% url ads_preview_category campaign.id,article.category.slug %}">{{ article.category.name }}</a></span></h2>
+	{% endif %}
 	{% if is_archive %}
 	    <h2><span><a href="{% url issues_archive_category issue.number,article.category.slug %}">{{ article.category.name }}</a></span></h2>
 	{% endif %}
@@ -19,6 +22,9 @@
 	
         {% if is_preview %}
             <h3><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a></h3>
+        {% endif %}
+        {% if is_ads_preview %}
+            <h3><a href="{% url ads_preview_category campaign.id,article.category.slug %}">{{ article.title }}</a></h3>
         {% endif %}
         {% if is_archive %}
             <h3><a href="{% url issues_archive_category issue.number,article.category.slug %}">{{ article.title }}</a></h3>
@@ -35,6 +41,9 @@
     
     {% if is_preview %}
 	    <p class="readMore"><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">Lire la suite</a></p>
+	{% endif %}
+    {% if is_ads_preview %}
+	    <p class="readMore"><a href="{% url ads_preview_category campaign.id,article.category.slug %}">Lire la suite</a></p>
 	{% endif %}
 	{% if is_archive %}
 	    <p class="readMore"><a href="{% url issues_archive_category issue.number,article.category.slug %}">Lire la suite</a></p>

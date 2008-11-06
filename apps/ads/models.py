@@ -4,6 +4,7 @@ Models for ``critica.apps.ads`` application.
 
 """
 from django.db import models
+from django.db.models import permalink
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
@@ -55,6 +56,16 @@ class AdCampaign(models.Model):
         verbose_name        = _('ad campaign')
         verbose_name_plural = _('ad campaigns')
         unique_together     = (('customer', 'name'),)
+    
+    @permalink
+    def get_preview_url(self):
+        """ 
+        Returns ads preview URL.
+        
+        """
+        return ('ads_preview_home', (), {
+            'campaign_id': self.id,
+        })
         
     def __unicode__(self):
         """ 

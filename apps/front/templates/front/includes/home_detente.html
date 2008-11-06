@@ -8,6 +8,9 @@
                 {% if is_preview %}
                     <a href="{% url issues_preview_category issue.secret_key,voyages_article.category.slug %}">{{ voyages_article.title }}</a>
                 {% endif %}
+                {% if is_ads_preview %}
+                    <a href="{% url ads_preview_category campaign.id,voyages_article.category.slug %}">{{ voyages_article.title }}</a>
+                {% endif %}
                 {% if is_archive %}
                     <a href="{% url issues_archive_category issue.number,voyages_article.category.slug %}">{{ voyages_article.title }}</a></span></h2>
                 {% endif %}
@@ -28,6 +31,9 @@
 		            <h3>{{ article.type.name }}</h3>
                     {% if is_preview %}
                         <a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">{{ article.title }}</a>
+                    {% endif %}
+                    {% if is_ads_preview %}
+                        <a href="{% url ads_preview_category campaign.id,article.category.slug %}">{{ article.title }}</a>
                     {% endif %}
                     {% if is_archive %}
                         <a href="{% url issues_archive_category issue.number,article.category.slug %}">{{ article.title }}</a></span></h2>

@@ -10,7 +10,6 @@ from django.contrib import admin
 from critica.apps.custom_admin.sites import custom_site
 
 
-
 # Admin
 # ------------------------------------------------------------------------------
 admin.autodiscover()
@@ -30,16 +29,17 @@ urlpatterns += patterns('',
 # Applications
 # ------------------------------------------------------------------------------
 urlpatterns += patterns('',
-    (r'^rss/',        include('critica.apps.syndication.urls')),
-    (r'^newsletter/', include('critica.apps.newsletter.urls')),
-    (r'^envoyer/',    include('critica.apps.sendfriend.urls')),
-    (r'^sondages/',   include('critica.apps.polls.urls')),
-    (r'^tags/',       include('critica.apps.tags.urls')),
-    (r'^recherche/',  include('critica.apps.search.urls')),
-    (r'^archives/',   include('critica.apps.issues_archive.urls')),
-    (r'^preview/',    include('critica.apps.issues_preview.urls')),
-    (r'^pages/',      include('critica.apps.pages.urls')),
-    (r'',             include('critica.apps.front.urls')),
+    (r'^rss/',         include('critica.apps.syndication.urls')),
+    (r'^newsletter/',  include('critica.apps.newsletter.urls')),
+    (r'^envoyer/',     include('critica.apps.sendfriend.urls')),
+    (r'^sondages/',    include('critica.apps.polls.urls')),
+    (r'^tags/',        include('critica.apps.tags.urls')),
+    (r'^recherche/',   include('critica.apps.search.urls')),
+    (r'^archives/',    include('critica.apps.issues_archive.urls')),
+    (r'^preview/',     include('critica.apps.issues_preview.urls')),
+    (r'^ads_preview/', include('critica.apps.ads_preview.urls')),
+    (r'^pages/',       include('critica.apps.pages.urls')),
+    (r'',              include('critica.apps.front.urls')),
 )
 
 # Media

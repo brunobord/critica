@@ -1,0 +1,5 @@
+<select name="issues_preview_switcher">
+{% for issue in issues %}
+    <option value ="{{ issue.number }}" onclick="window.location='/preview/{{ issue.secret_key }}/';return false" {% ifequal request.path issue.get_preview_url %}selected="selected"{% endifequal %}>{{ issue.number }} ({{ issue.publication_date }})</option>
+{% endfor %}
+</select>

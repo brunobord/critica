@@ -1,0 +1,5 @@
+<select name="ads_preview_switcher">
+{% for campaign in campaigns %}
+    <option value ="{{ campaign.id }}" onclick="window.location='/ads_preview/{{ campaign.id }}/';return false" {% ifequal request.path campaign.get_preview_url %}selected="selected"{% endifequal %}>{{ campaign.name }} ({{ campaign.customer.name }})</option>
+{% endfor %}
+</select>

@@ -15,16 +15,18 @@
 {% block content %}
 <div id="ads-dashboard">
 
-    <h1><a href="{% url ads_dashboard_index %}">Dashboard Publicités</a>{% if specific_campaign %} / Campagne {{ specific_campaign.name }}{% endif %}</h1>
+    <h1><a href="{% url ads_dashboard_index %}">Dashboard Publicités</a> / Campagne &laquo; {{ campaign.name }} &raquo; ({{ campaign.customer.name }})</h1>
 
     <div id="ads-dashboard-welcome" class="dashboard-welcome">
-        <p>Bienvenue sur le Dashboard Publicité.</p>
-        {% if latest_campaign %}
-        <p>Vous consultez actuellement le dashboard de la campagne publicitaire &laquo; {{ latest_campaign.name }} &raquo;</p>
-        <p>Pour avoir un aperçu de cette campagne sur le site, utilisez ce lien caché : <a href="#" title="lien caché">lien caché</a></p>
-        {% else %}
-        <p>Aucune campagne publicitaire pour le moment.</p>
-        {% endif %}
+        <ul>
+            <li>Bienvenue sur le Dashboard Publicité.</li>
+            {% if campaign %}
+            <li>Vous consultez actuellement le dashboard de la campagne publicitaire &laquo; {{ campaign.name }} &raquo; ({{ campaign.customer.name }})</li>
+            <li>Pour avoir un aperçu de cette campagne sur le site, utilisez ce lien protégé : <a href="{% url ads_preview_home campaign.id %}" title="Aperçu de la campagne publicitaire &laquo; {{ campaign.name }} ({{ campaign.customer.name }}) &raquo;" target="_blank">{{ campaign.get_preview_url }}</a></li>
+            {% else %}
+            <li>Aucune campagne publicitaire pour le moment.</li>
+            {% endif %}
+        </ul>
     </div>
     
     {% if campaigns %}
@@ -38,25 +40,27 @@
     </div>
     {% endif %}
     
-    {% if latest_campaign %}
     <h2>Bannières</h2>
     <div id="ads-dashboard-banners" class="dashboard-table">
+        {% if campaign.adbanner_set.all %}
         <table summary="Bannière de la campagne">
             <tbody>
                 <tr>
                     <th>Format</th>
                     <th>Rubrique</th>
                     <th>Emplacement</th>
+                    <th>Dates</th>
                     <th>Durée en jours</th>
                     <th>Prix au jour (en euro)</th>
                     <th>Prix total (en euro)</th>
                 </tr>
-                {% for banner in latest_campaign.adbanner_set.all %}
+                {% for banner in campaign.adbanner_set.all %}
                     {% for position in banner.positions.all %}
                     <tr>
                         <td>{{ banner.format.width }}x{{ banner.format.height }}</td>
                         <td>{{ position.page }}</td>
                         <td>{{ position.location }}</td>
+                        <td>{{ banner.starting_date }} &rarr; {{ banner.ending_date }}</td>
                         <td>{{ banner.count_days }}</td>
                         <td>{{ position.price }}</td>
                         {% load ads_extra %}
@@ -66,8 +70,10 @@
                 {% endfor %}
             </tbody>
         </table>
+        {% else %}
+        <p><strong>Aucune bannière enregistrée pour cette campagne.</strong></p>
+        {% endif %}
     </div>
-    {% endif %}
     
 </div>
 {% endblock %}

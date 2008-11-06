@@ -14,34 +14,42 @@ from critica.apps.ads.models import AdCarousel
 
 register = template.Library()
 
-
 @register.inclusion_tag('front/includes/ad.html', takes_context=True)
 def display_ad(context, format, page, location):
     """
     Displays an ad related to its format, its page and its location.
     
     """
+    # Gets campaign if it exists
+    if context.has_key('campaign'):
+        campaign = context['campaign']
+    else:
+        campaign = None
+    
+    # Gets width and height
     width, height = format.split('x')
-    today = datetime.date.today()
+    
+    # Gets banner
     try:
-        banner = AdBanner.objects.get(
+        banner = AdBanner.objects.filter(
             positions__format__width=width, 
             positions__format__height=height,
             positions__page__slug=page, 
-            positions__location__position=location,
-            starting_date__lte=today,
-            ending_date__gte=today,
-        )
+            positions__location__position=location)
+        if campaign:
+            banner = banner.filter(campaign=campaign)[0:1].get()
+        else: 
+            banner = banner.filter(starting_date__lte=datetime.date.today(), ending_date__gte=datetime.date.today())[0:1].get()
     except ObjectDoesNotExist:
         banner = None
-
+    
+    # Gets default banner
     try:
         default_banner = AdDefaultBanner.objects.get(
             positions__format__width=width, 
             positions__format__height=height,
             positions__page__slug=page, 
-            positions__location__position=location
-        )
+            positions__location__position=location)
     except ObjectDoesNotExist:
         default_banner = None
         

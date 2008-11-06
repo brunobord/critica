@@ -48,6 +48,9 @@
                             {% if is_preview %}
                                 <a href="{% url issues_preview_home issue.secret_key %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
                             {% endif %}
+                            {% if is_ads_preview %}
+                                <a href="{% url ads_preview_home campaign.id %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
+                            {% endif %}
                             {% if is_archive %}
                                 <a href="{% url issues_archive_home issue.number %}" title="Retour à la page d'accueil du site"><img src="{{ MEDIA_URL }}critica/img/logo.gif" align="Critica" /></a>
                             {% endif %}
@@ -64,10 +67,14 @@
                         <li><a href="{% url syndication_index %}">S'abonner au flux RSS</a></li>
                         {% if is_preview %}
                         <li>
-                            <select name="issues_preview_switcher">
-                            {% for issuepreview in issuepreviews %}
-                                <option value ="{{ issuepreview.number }}" onclick="window.location='/preview/{{ issuepreview.secret_key }}/';return false" {% ifequal request.path issuepreview.get_preview_url %}selected="selected"{% endifequal %}>{{ issuepreview.number }}</option>
-                            {% endfor %}
+                            {% load issues_preview_extra %}
+                            {% display_issues_preview_switcher %}
+                        </li>
+                        {% endif %}
+                        {% if is_ads_preview %}
+                        <li>
+                            {% load ads_preview_extra %}
+                            {% display_ads_preview_switcher %}
                         </li>
                         {% endif %}
                     </ul>
@@ -127,6 +134,20 @@
                             <li id="kwick10"><a href="{% url issues_preview_category_regions issue.secret_key %}">Regions</a></li>
                             <li id="kwick11"><a href="{% url issues_preview_category_voyages issue.secret_key %}">Voyages</a></li>
                             <li id="kwick12"><a href="{% url issues_preview_category_epicurien issue.secret_key %}" %}">Epicurien</a></li>
+                        {% endif %}
+                        {% if is_ads_preview %}
+                            <li id="kwick1"><a href="{% url ads_preview_category campaign.id,"national" %}">National</a></li>
+                            <li id="kwick2"><a href="{% url ads_preview_category campaign.id,"etranger" %}">Etranger</a></li>
+                            <li id="kwick3"><a href="{% url ads_preview_category campaign.id,"societe" %}">Societe</a></li>
+                            <li id="kwick4"><a href="{% url ads_preview_category campaign.id,"sports" %}">Sport</a></li>
+                            <li id="kwick5"><a href="{% url ads_preview_category campaign.id,"pipoles" %}">Pipoles</a></li>
+                            <li id="kwick6"><a href="{% url ads_preview_category campaign.id,"tele" %}">Tele</a></li>
+                            <li id="kwick7"><a href="{% url ads_preview_category campaign.id,"bouquins" %}">Bouquins</a></li>
+                            <li id="kwick8"><a href="{% url ads_preview_category campaign.id,"nanas" %}">Nanas</a></li>
+                            <li id="kwick9"><a href="{% url ads_preview_category campaign.id,"insolite" %}">Insolite</a></li>
+                            <li id="kwick10"><a href="{% url ads_preview_category_regions campaign.id %}">Regions</a></li>
+                            <li id="kwick11"><a href="{% url ads_preview_category_voyages campaign.id %}">Voyages</a></li>
+                            <li id="kwick12"><a href="{% url ads_preview_category_epicurien campaign.id %}" %}">Epicurien</a></li>
                         {% endif %}
                         {% if is_archive %}
                             <li id="kwick1"><a href="{% url issues_archive_category issue.number,"national" %}">National</a></li>

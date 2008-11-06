@@ -17,14 +17,20 @@ def index(request, campaign=None):
     """
     context = {}
     context['root_path'] = '/admin/'
-    # Get latest campaign
+    # Gets campaign
+    if campaign:
+        campaign = AdCampaign.objects.get(pk=campaign)
+    else:
+        try:
+            campaign = AdCampaign.objects.order_by('-id')[0:1].get()
+        except ObjectDoesNotExist:
+            campaign = None
+    context['campaign'] = campaign
+    # Gets other campaigns
     try:
-        latest_campaign = AdCampaign.objects.order_by('-id')[0:1].get()
+        campaigns = AdCampaign.objects.order_by('-id')
     except ObjectDoesNotExist:
-        latest_campaign = None
-    context['latest_campaign'] = latest_campaign
-    # Get other campaigns
-    if latest_campaign:
-        context['campaigns'] = AdCampaign.objects.order_by('-id')
-
+        campaigns = None
+    context['campaigns'] = campaigns
+    
     return direct_to_template(request, 'ads_dashboard/index.html', context)
