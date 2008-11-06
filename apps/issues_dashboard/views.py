@@ -46,7 +46,7 @@ def index(request, issue=None):
     
     # Issue
     # --------------------------------------------------------------------------
-    if issue is not None:
+    if issue:
         current_issue = Issue.objects.get(number=issue)
         context['specific_issue'] = True
     else:
@@ -54,7 +54,7 @@ def index(request, issue=None):
             current_issue = Issue.objects.get(publication_date=datetime.date.today())
         except ObjectDoesNotExist:
             current_issue = Issue.objects.get(pk=1)
-    context['current_issue'] = current_issue
+    context['issue'] = current_issue
     
     # Current site
     # --------------------------------------------------------------------------

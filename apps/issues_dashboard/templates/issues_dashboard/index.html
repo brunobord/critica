@@ -15,15 +15,15 @@
 {% block content %}
 <div id="dashboard">
 
-    <h1><a href="{% url issues_dashboard_index %}">Dashboard Édition</a>{% if specific_issue %} / Édition {{ current_issue.number }}{% endif %}</h1>
+    <h1><a href="{% url issues_dashboard_index %}">Dashboard Édition</a>{% if specific_issue %} / Édition {{ issue.number }}{% endif %}</h1>
 
-    <div id="issues-dashboard" class="dashboard-welcome">
+    <div id="issues-dashboard-welcome" class="dashboard-welcome">
         <p>Bienvenue sur le Dashboard Édition.</p>
-        <p>Vous consultez actuellement le dashboard de l'édition : <a href="/admin/issues/issue/{{ current_issue.id }}">{{ current_issue.number }}</a></p>
-        <p>Pour avoir un aperçu de cette édition, utilisez ce lien caché : <a href="{{ site_url }}/preview/{{ current_issue.secret_key }}/" target="_blank">{{ site_url }}/preview/{{ current_issue.secret_key }}/</a></p>
+        <p>Vous consultez actuellement le dashboard de l'édition : <a href="/admin/issues/issue/{{ issue.id }}">{{ issue.number }}</a></p>
+        <p>Pour avoir un aperçu de cette édition, utilisez ce lien caché : <a href="{{ site_url }}/preview/{{ issue.secret_key }}/" target="_blank">{{ site_url }}/preview/{{ issue.secret_key }}/</a></p>
     </div>
     
-    <div id="issues-dashboard" class="dashboard-others">
+    <div id="issues-dashboard-others" class="dashboard-others">
         <p>Accéder au dashboard d'une autre édition&nbsp;:</p>
         <ul>
         {% for issue in issues %}
@@ -31,11 +31,10 @@
         {% endfor %}
         </ul>
     </div>
-
-    <div id="dashboard-status">
     
-        <h2>État de la Une</h2>
+    <h2>État de la Une</h2>
 
+    <div class="dashboard-table">
         <table>
             <tbody>
                 <tr>
@@ -164,9 +163,11 @@
                 </tr>
             </tbody>
         </table>
-        
-        <h2>État des rubriques standards</h2>
+    </div>
+    
+    <h2>État des rubriques standards</h2>
 
+    <div id="issues-dashboard" class="dashboard-table">
         <table>
             <tbody>
                 <tr>
@@ -203,9 +204,11 @@
                 {% endfor %}
             </tbody>
         </table>
+    </div>
         
-        <h2>États des autres rubriques</h2>
-        
+    <h2>États des autres rubriques</h2>
+    
+    <div class="dashboard-table">    
         <table>
             <tbody>
                 <tr>
@@ -259,6 +262,7 @@
                 </tr>
             </tbody>
         </table>
+    </div>
 
     </div>
 
