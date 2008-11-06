@@ -6,6 +6,7 @@ Templatetags of ``critica.apps.polls`` application.
 from django import template
 from django.core.exceptions import ObjectDoesNotExist
 from critica.apps.polls.models import Poll
+from critica.apps.issues.views import _get_current_issue
 
 
 register = template.Library()
@@ -17,10 +18,8 @@ def display_poll(context):
     Displays the poll form.
     
     """
-    # Gets current issue
-    issue = context['current_issue']
-    
-    # Gets request object for REMOTE_ADDR
+    # Gets issue and request from context
+    issue = context['issue']
     request = context['request']
     
     # Gets the poll related to the current issue, otherwise None.
