@@ -15,7 +15,7 @@
 {% block content %}
 <div id="dashboard">
 
-    <h1><a href="{% url issues_dashboard_index %}">Dashboard Édition</a>{% if specific_issue %} / Édition {{ issue.number }}{% endif %}</h1>
+    <h1><a href="{% url issues_dashboard_index %}">Dashboard Édition</a> / Édition {{ issue.number }} ~ {% if issue.is_published %}<span class="issue-status-published">publiée</span>{% else %}<span class="issue-status-unpublished">non-publiée</span>{% endif %}</span></h1>
 
     <div id="issues-dashboard-welcome" class="dashboard-welcome">
         <ul>

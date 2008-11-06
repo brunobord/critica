@@ -55,7 +55,7 @@ def index(request, issue=None):
         try:
             current_issue = Issue.objects.get(publication_date=datetime.date.today())
         except ObjectDoesNotExist:
-            current_issue = Issue.objects.get(pk=1)
+            current_issue = Issue.objects.order_by('-number')[0:1].get()
     context['issue'] = current_issue
     
     # Current site

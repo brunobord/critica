@@ -15,11 +15,13 @@
 
     {% if perms.users.is_editor or perms.users.is_journalist %}
     <div id="dashboards-links">
-        <ul>
-            <li id="issues-dashboard-link"><a href="{% url issues_dashboard_index %}">Dashboard Édition</a></li>
-            <li id="ads-dashboard-link"><a href="{% url ads_dashboard_index %}">Dashboard Publicités</a></li>
-        </ul>
-        <span class="clear">&nbsp;</span>
+        <div id="dashboard-links-content">
+            <ul>
+                <li id="issues-dashboard-link"><a href="{% url issues_dashboard_index %}">Dashboard Édition</a></li>
+                <li id="ads-dashboard-link"><a href="{% url ads_dashboard_index %}">Dashboard Publicités</a></li>
+            </ul>
+            <div class="clear">&nbsp;</div>
+        </div>
     </div>
     {% endif %}
     {% if perms.users.is_editor or perms.users.is_journalist %}
