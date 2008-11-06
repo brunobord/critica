@@ -25,6 +25,10 @@ from django.conf.urls.defaults import *
 
 
 urlpatterns = patterns('',
+    url(r'^(?P<issue>\d+)/status/(?P<status>\d{1})/$', 
+        'critica.apps.issues_dashboard.views.change_issue_status', 
+        name='issues_dashboard_change_issue_status',
+    ),
     url(r'^(?P<issue>\d+)/$', 
         'critica.apps.issues_dashboard.views.index', 
         name='issues_dashboard_issue',

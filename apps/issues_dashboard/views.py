@@ -7,6 +7,8 @@ import datetime
 from django import http, template
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy, ugettext as _
 from django.views.decorators.cache import never_cache
 from django.contrib.auth.decorators import login_required
@@ -252,5 +254,24 @@ def index(request, issue=None):
     
     return direct_to_template(request, 'issues_dashboard/index.html', context)
 
+
+@login_required
+@permission_required('users.is_administrator')
+@permission_required('users.is_editor')
+@never_cache
+def change_issue_status(request, issue, status):
+    """
+    Changes issue status: online / offline.
+    
+    """
+    if request.method == 'POST':
+        issue = Issue.objects.get(number=issue)
+        if int(status) == 1:
+            issue.is_published = True
+            issue.save()
+        if int(status) == 0:
+            issue.is_published = False
+            issue.save()
+    return HttpResponseRedirect(reverse('issues_dashboard_issue', args=[issue]))
 
 
