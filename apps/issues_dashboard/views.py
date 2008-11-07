@@ -33,6 +33,8 @@ from critica.apps.positions.models import DefaultCategoryPosition
 from critica.apps.positions.models import IssueCategoryPosition
 from critica.apps.positions.models import DefaultNotePosition
 from critica.apps.positions.models import IssueNotePosition
+from critica.apps.polls.models import Poll
+from critica.apps.videos.models import Video
 
 
 @login_required
@@ -247,6 +249,24 @@ def index(request, issue=None):
     context['anger_count'] = anger_count
     context['anger_quota'] = anger_quota.quota
     context['anger_complete'] = anger_complete
+    
+    # Video
+    # --------------------------------------------------------------------------
+    try:
+        dashboard_video = Video.objects.filter(issues__id=current_issue.id).order_by('-creation_date')
+        dashboard_video = dashboard_video[0:1].get()
+    except ObjectDoesNotExist:
+        dashboard_video = None
+    context['dashboard_video'] = dashboard_video
+    
+    # Poll
+    # --------------------------------------------------------------------------
+    try:
+        dashboard_poll = Poll.objects.filter(issues__id=current_issue.id).order_by('-creation_date')
+        dashboard_poll = dashboard_poll[0:1].get()
+    except ObjectDoesNotExist:
+        dashboard_poll = None
+    context['dashboard_poll'] = dashboard_poll
     
     # Root path
     # --------------------------------------------------------------------------

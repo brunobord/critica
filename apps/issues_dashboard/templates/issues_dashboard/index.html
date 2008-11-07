@@ -182,6 +182,40 @@
                         {% endif %}
                     </td>
                 </tr>
+                <tr>
+                    <td class="type">Vidéo</td>
+                    <td class="status">
+                        {% if dashboard_video %}
+                            <a href="/admin/videos/video/?issues__id__exact={{ issue.id }}">{{ dashboard_video.name }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td class="complete">
+                        {% if dashboard_video %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="type">Sondage</td>
+                    <td class="status">
+                        {% if dashboard_poll %}
+                            <a href="/admin/polls/poll/?issues__id__exact={{ issue.id }}">{{ dashboard_poll.title }}</a>
+                        {% else %}
+                            <span class="warning">non défini</span>
+                        {% endif %}
+                    </td>
+                    <td class="complete">
+                        {% if dashboard_poll %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/tick.png" />
+                        {% else %}
+                        <img src="{{ MEDIA_URL }}critica/admin/basic/images/stop.png" />
+                        {% endif %}
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
