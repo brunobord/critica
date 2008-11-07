@@ -192,9 +192,11 @@
             <!-- FOOTER -->
             <div id="footer">
                 <p> &copy; <a href="{% url pages_page "mentions-legales" %}" title="Mentions légales">Mentions Légales</a></p>
-                {% load partnerlinks_extra %}
-                {% display_partnerlinks %}
             </div>
+		  
+		 {% load partnerlinks_extra %}
+		 {% display_partnerlinks %}
+		  
             <!-- // FOOTER -->
         </div>
     </body>

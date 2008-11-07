@@ -3,11 +3,21 @@ Managers for ``critica.apps.video`` models.
 
 """
 from django.db import models
-from critica.apps.videos.models import Video
 
 
-class PublishedVideoManager(models.Manager):
+class VideoPublishedManager(models.Manager):
+    """
+    Manager of published videos.
+    
+    """
     def get_query_set(self):
-        return super(PublishedVideoManager, self).get_query_set().filter(status=Video.STATUS_PUBLISHED)
+        """
+        Default QuerySet.
+        
+        """
+        return super(VideoPublishedManager, self).get_query_set().filter(
+            is_ready_to_publish=True,
+            is_reserved=False,
+        )
 
 

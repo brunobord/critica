@@ -2,10 +2,12 @@
 
 <div class="articleSection articleMain">
 	<h2><span>&Agrave; la une</span></h2>
+	<div class="autoClear" style="margin-bottom:15px;">
     <h3>{{ article.title }}</h3>
     <p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
     {% include "front/includes/article_illustration_medium.html" %}
     <p class="lead">{{ article.summary|safe }}</p>
+    </div>
     <p class="readMore slick-show"><a href="#">Lire la suite</a></p>
 	<!-- SLICKBOX -->
 	<div class="slickbox" style="display:block;">
