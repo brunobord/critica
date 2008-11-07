@@ -93,11 +93,17 @@ def display_carousel(format, page, location):
 
 
 @register.simple_tag
-def calculate_total_price(count, price):
+def calculate_total_price(count_days, price):
     """
     Gets a count and a price and returns the total.
     
     """
-    return count * price
+    from decimal import getcontext
+    from decimal import Decimal
+    from decimal import ROUND_HALF_EVEN
+    
+    price_per_day = price / 30
+    total = count_days * price_per_day
+    return total.quantize(Decimal('.01'), rounding=ROUND_HALF_EVEN)
 
 
