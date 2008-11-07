@@ -21,7 +21,7 @@ from critica.apps.ads.models import AdCarousel
 from critica.apps.ads.forms import CustomAdDefaultBannerForm
 from critica.apps.ads.forms import CustomAdBannerForm
 
-
+    
 # Commons 
 # ------------------------------------------------------------------------------
 class CustomerAdmin(admin.ModelAdmin):
