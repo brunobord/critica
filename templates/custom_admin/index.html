@@ -13,12 +13,16 @@
 {% block content %}
 <div id="content-main">
 
-    {% if perms.users.is_editor or perms.users.is_journalist %}
+    {% if perms.users.is_editor or perms.users.is_journalist or perms.users.is_advertiser %}
     <div id="dashboards-links">
         <div id="dashboard-links-content">
             <ul>
+                {% if perms.users.is_editor %}
                 <li id="issues-dashboard-link"><a href="{% url issues_dashboard_index %}">Dashboard Éditions</a></li>
+                {% endif %}
+                {% if perms.users.is_editor or perms.users.is_advertiser %}
                 <li id="ads-dashboard-link"><a href="{% url ads_dashboard_index %}">Dashboard Publicités</a></li>
+                {% endif %}
             </ul>
             <div class="clear">&nbsp;</div>
         </div>
