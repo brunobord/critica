@@ -93,17 +93,33 @@ def display_carousel(format, page, location):
 
 
 @register.simple_tag
-def calculate_total_price(count_days, price):
+def calculate_banner_total(count_days, price):
     """
-    Gets a count and a price and returns the total.
+    Calculate banner total price.
     
     """
     from decimal import getcontext
     from decimal import Decimal
     from decimal import ROUND_HALF_EVEN
-    
     price_per_day = price / 30
     total = count_days * price_per_day
+    return total.quantize(Decimal('.01'), rounding=ROUND_HALF_EVEN)
+
+
+@register.simple_tag
+def calculate_campaign_total(obj):
+    """
+    Calculates campaign total price.
+    
+    """
+    from decimal import getcontext
+    from decimal import Decimal
+    from decimal import ROUND_HALF_EVEN
+    banners = obj.adbanner_set.all()
+    total = Decimal('0')
+    for banner in banners:
+        for position in banner.positions.all():
+            total += calculate_banner_total(banner.count_days(), position.price)
     return total.quantize(Decimal('.01'), rounding=ROUND_HALF_EVEN)
 
 

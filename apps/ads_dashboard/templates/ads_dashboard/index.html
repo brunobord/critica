@@ -64,10 +64,14 @@
                         <td>{{ banner.count_days }}</td>
                         <td>{{ position.price }}</td>
                         {% load ads_extra %}
-                        <td>{% calculate_total_price banner.count_days position.price %}</td>
+                        <td>{% calculate_banner_total banner.count_days position.price %}</td>
                     </tr>
                     {% endfor %}
                 {% endfor %}
+                <tr class="total">
+                    <td colspan="6">Total (en euro)</td>
+                    <td colspan="1">{% calculate_campaign_total campaign %} </td>
+                </tr>
             </tbody>
         </table>
         {% else %}
