@@ -1,7 +1,7 @@
 {% load image_thumbnail articles_extra %}
 <div class="autoClear" style="margin-bottom:15px;">
 <h3>{{ article.title }}</h3>
-<p class="author">Par {% if article.author_nickname %}{{ article.author_nickname.nickname }}{% else %}{{ article.author.get_full_name }}{% endif %}</p>
+{% include "front/includes/author.html" %}
 {% include "front/includes/article_illustration_medium.html" %}
 <p class="lead">{{ article.summary|safe }}</p>
 </div>

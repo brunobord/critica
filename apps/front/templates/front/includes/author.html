@@ -1,0 +1,16 @@
+<p class="author">
+    Par 
+    {% if article.author_nickname %}
+        {% if article.author.email %}
+            <a href="mailto:{{ article.author.email }}" title="Contacter {{ article.author_nickname.nickname }}" >{{ article.author_nickname.nickname }}</a>
+        {% else %}
+            {{ article.author_nickname.nickname }}
+        {% endif %}
+    {% else %}
+        {% if article.author.email %}
+            <a href="mailto:{{ article.author.email }}" title="Contacter {{ article.author.get_full_name }}" >{{ article.author.get_full_name }}</a>
+        {% else %}
+            {{ article.author.get_full_name }}
+        {% endif %}
+    {% endif %}
+</p>
