@@ -29,7 +29,7 @@
     {% else %}
         {% include "front/includes/home_article_main_empty.html" %}
     {% endif %}
-	
+
 	{% if article_2 %}
         {% with article_2 as article %}
             {% include "front/includes/home_article_main.html" %}
@@ -37,14 +37,14 @@
 	{% else %}
         {% include "front/includes/home_article_main_empty.html" %}
     {% endif %}
-    	
+
     <!-- AD -->
     <div class="addSection add468">
         {% display_ad '468x60' 'portail' '2.0' %}
         {% include "front/includes/pages_ads_link.html" %}
     </div>
     <!-- // AD -->
-    
+
     <!-- ARTICLE LIST -->
     <div class="articleList autoClear">
 		<div class="wrap">
@@ -80,7 +80,7 @@
 		{% else %}
 		    {% include "front/includes/home_article_empty.html" %}
         {% endif %}
-		
+
 		{% if article_8 %}
             {% with article_8 as article %}
                 {% include "front/includes/home_article.html" %}
@@ -88,7 +88,7 @@
 		{% else %}
 		    {% include "front/includes/home_article_empty.html" %}
         {% endif %}
-		
+
 		{% if article_9 %}
             {% with article_9 as article %}
                 {% include "front/includes/home_article.html" %}
@@ -97,17 +97,17 @@
 	        {% include "front/includes/home_article_empty.html" %}
         {% endif %}
 	   </div>
-		
+
     </div>
     <!-- // ARTICLE LIST -->
-    
+
     <!-- AD -->
 	<div class="addSection add468">
         {% display_ad '468x60' 'portail' '3.0' %}
         {% include "front/includes/pages_ads_link.html" %}
     </div>
     <!-- // AD -->
-    
+
     <!-- ARTICLE LIST -->
     <div class="articleList autoClear">
 
@@ -118,12 +118,12 @@
 		{% else %}
 		    {% include "front/includes/home_region_empty.html" %}
         {% endif %}
-		
+
         {% include "front/includes/home_detente.html" %}
-		
+
     </div>
     <!-- // ARTICLE LIST -->
-	
+
     <!-- AD -->
 	<div class="addSection add468">
         {% display_ad '468x60' 'portail' '3.1' %}
@@ -136,7 +136,7 @@
 
 <!-- RIGHTWRAP -->
 <div class="rightWrap">
-    
+
     {% if article_3 %}
         {% with article_3 as article %}
             {% include "front/includes/home_article_main.html" %}
@@ -144,7 +144,7 @@
 	{% else %}
 	    {% include "front/includes/home_article_main_empty.html" %}
     {% endif %}
-    
+
     <!-- EXTRA -->
     <div id="extra">
         <div id="extra-home">
@@ -152,19 +152,19 @@
         </div>
     </div>
     <!-- // EXTRA -->
-	
+
 	<!-- NEWSLETTER -->
     <div id="newsletterSection">
         {% include "front/includes/newsletter_form.html" %}
     </div>
     <!-- // NEWSLETTER -->
-    
+
     <!-- SUBCONTENT -->
     <div id="subContent">
-        
+
         <!-- LEFT WRAP -->
         <div class="leftWrap">
-            
+
             <!-- ARTICLE LIST -->
             <div class="articleList">
 
@@ -175,7 +175,7 @@
 				{% else %}
 				    {% include "front/includes/home_anger_empty.html" %}
 			    {% endif %}
-				
+
 			</div>
 		    <!-- // ARTICLE LIST -->
 
@@ -188,10 +188,10 @@
                 {% include "front/includes/pages_ads_link.html" %}
             </div>
             <!-- // AD -->
-			
+
             <!-- ARTICLE LIST -->
             <div class="articleList">
-            
+
                 {% if illustration %}
                 <div class="articleSection" id="caricature">
                     <h2>L'illustration du jour</h2>
@@ -200,19 +200,8 @@
                     <p class="credits">{{ illustration.legend }} - {{ illustration.credits }}</p>
                 </div>
                 {% endif %}
-				
-                <div class="articleSection" id="reportage">
-                    <h2>Critic@ TV</h2>
-                    {% if video %}
-                        {{ video.widget|safe }}
-                    {% endif %}
-                </div>
-                
-        		<a  href="/canalcritica/" class="floatLeft" title="Canalcritica">
-        		<img src="{{ MEDIA_URL }}critica/css/img/critica_videos.jpg" width="220px"></a>
 
-        		<a  href="http://www.xahutu.com/critica_imagevue/"  class="floatRight" target="blank title="Jean-Jacques Urvoas">
-        		<img src="{{ MEDIA_URL }}critica/css/img/critica_photos.jpg" width="220px"></a>
+
 
             </div>
         </div>
@@ -220,19 +209,19 @@
 
         <!-- RIGHT WRAP -->
         <div class="rightWrap">
-            
+
             <!-- POLL -->
             <div id="surveySection">
                 {% display_poll %}
             </div>
             <!-- // POLL -->
-            
+
             <!-- WEATHER -->
             <div id="meteo">
                 {% include "front/includes/weather.html" %}
             </div>
             <!-- // WEATHER -->
-            
+
             <!-- AD -->
             <div class="addSection">
                 <div class="add130">
@@ -241,11 +230,28 @@
                 {% include "front/includes/pages_ads_link.html" %}
             </div>
             <!-- // AD -->
-            
+
 		</div>
 		<!-- // RIGHT WRAP -->
-		
+
         <!-- TAG CLOUD -->
+        <div id="reportage">
+		<h2>CANALCRITIC@</h2>
+		<iframe marginwidth="0" marginheight="0" width="293" height="318" frameborder="0" scrolling="no" src="http://www.dailymotion.com/videozap/playlist/xptq7_canalcritica_une?position=bottom&cols=3&rows=1"></iframe>
+
+		<!--{% if video %}
+		{{ video.widget|safe }}
+		{% endif %}-->
+		</div>
+
+		<a  href="/canalcritica/" class="floatLeft" title="Canalcritica">
+		<img src="{{ MEDIA_URL }}critica/css/img/critica_videos.jpg" width="220px"></a>
+
+
+
+		<a  href="http://www.xahutu.com/critica_imagevue/"  class="floatRight" target="blank title="Jean-Jacques Urvoas">
+		<img src="{{ MEDIA_URL }}critica/css/img/critica_photos.jpg" width="220px"></a>
+
 		<div id="tagcloudSection" style="text-align: center;">
 			<h2>Nuage de tags</h2>
             {% for tag in tagcloud %}
@@ -253,10 +259,10 @@
 			{% endfor %}
 		</div>
         <!-- TAG CLOUD -->
-        
+
     </div>
     <!-- // SUBCONTENT -->
-    
+
 </div>
 <!-- // RIGHTWRAP -->
 
