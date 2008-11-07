@@ -47,73 +47,81 @@
 	    <div class="panelContainer">
 	        <!-- PANEL GOURMETS -->
 	        <div class="panel" title="Côté Gourmets" id="gourmets">
-	            <!-- PANNEL-RIGHT -->
-	            <div class="pannel-right">
-	                <!-- RIGHT WRAP -->
-	                <div class="rightWrap">
-	                    <!-- SUB CONTENT -->
-	                    <div class="subContent">
-	                        <!-- LEFT WRAP -->
-	                        <div class="leftWrap">
-	                            <!-- ARCHIVES -->
-	                            <div id="archivesBar" class="articleList autoClear">
-	                                <div>
-	                                    <h2>ARCHIVES COTÉ GOURMETS</h2>
-	                                    {% if archives_cotegourmets %}
-	                                        {% with archives_cotegourmets as archives %}
-	                                            {% include "front/includes/category_archives.html" %}
-	                                        {% endwith %}
-	                                    {% else %}
-	                                        {% include "front/includes/category_archives_empty.html" %}
-	                                    {% endif %}
-									</div>
-								</div>
-								<!-- // ARCHIVES -->
-								
-								<!-- AD -->
-								<div class="addSection">
-							        <div class="add-300x250 autoClear">
-								        {% display_ad '300x250' 'epicurien-cote-gourmets' '5.0' %}					
-								        {% display_ad '300x250' 'epicurien-cote-gourmets' '5.1' %}
-                                    </div>
-                                    {% include "front/includes/pages_ads_link.html" %}
-                                </div>
-                                <!-- // AD -->
-                            </div>
-                            <!-- // LEFT WRAP -->
-                        </div>
-                        <!-- // SUB CONTENT -->
-                    </div>
-                    <!-- // RIGHT WRAP -->
+		   
+			 <div class="leftWrap"> 
+				 <div class="articleSection articleMain">
+					{% if article_cotegourmets %}
+					    {% with article_cotegourmets as article %}
+						   {% include "front/includes/epicurien_article.html" %}
+					    {% endwith %}
+					{% else %}
+					    {% include "front/includes/epicurien_article_empty.html" %}
+					{% endif %}
+				 </div>
+				 <!-- AD -->
+				 <div class="addSection add468">
+					{% display_ad '468x60' 'epicurien-cote-gourmets' '2.0' %}
+					{% include "front/includes/pages_ads_link.html" %}
+				 </div>
+				 <!-- // AD --> 
+			 </div>
+		   
+
+		    <div class="rightWrap">
+			   <!-- ARCHIVES -->
+			   <div id="archivesBar" class="articleList autoClear">
+				  <div>
+					 <h2>ARCHIVES COTÉ GOURMETS</h2>
+					 {% if archives_cotegourmets %}
+						{% with archives_cotegourmets as archives %}
+						    {% include "front/includes/category_archives.html" %}
+						{% endwith %}
+					 {% else %}
+						{% include "front/includes/category_archives_empty.html" %}
+					 {% endif %}
+						</div>
+					</div>
+					<!-- // ARCHIVES -->
+					
+					<!-- AD -->
+					<div class="addSection">
+					   <div class="add-300x250 autoClear">
+						   {% display_ad '300x250' 'epicurien-cote-gourmets' '5.0' %}					
+						   {% display_ad '300x250' 'epicurien-cote-gourmets' '5.1' %}
+				 </div>
+				 {% include "front/includes/pages_ads_link.html" %}
+				  <!-- // AD -->
+			  </div>
+                               
+
                 </div>
                 <!-- // PANNEL RIGHT -->
-                <div class="articleSection articleMain">
-                    {% if article_cotegourmets %}
-                        {% with article_cotegourmets as article %}
-                            {% include "front/includes/epicurien_article.html" %}
-                        {% endwith %}
-                    {% else %}
-                        {% include "front/includes/epicurien_article_empty.html" %}
-                    {% endif %}
-                </div>
-                <!-- AD -->
-                <div class="addSection add468">
-                    {% display_ad '468x60' 'epicurien-cote-gourmets' '2.0' %}
-                    {% include "front/includes/pages_ads_link.html" %}
-                </div>
-                <!-- // AD --> 
+
             </div>
             <!-- // PANEL GOURMETS -->
             <!-- PANEL ALCOOLS -->
             <div class="panel" title="Côté Bar" id="alcools">
-                <!-- PANNEL-WRIGHT -->
-                <div class="pannel-right">
-                    <!-- RIGHT WRAP -->
-                    <div class="rightWrap">
-                        <!-- SUB CONTENT -->
-                        <div class="subContent">
-                            <!-- LEFT WRAP -->
-                            <div class="leftWrap">
+		  
+			<div class="leftWrap"> 
+				<div class="articleSection articleMain">
+                    {% if article_cotebar %}
+                        {% with article_cotebar as article %}
+                            {% include "front/includes/epicurien_article.html" %}
+				        {% endwith %}
+				    {% else %}
+				        {% include "front/includes/epicurien_article_empty.html" %}
+                    {% endif %}
+              		</div>
+				 <!-- AD -->
+				 <div class="addSection add468">
+					{% display_ad '468x60' 'epicurien-cote-bar' '2.0' %}
+					{% include "front/includes/pages_ads_link.html" %}
+				 </div>
+				 <!-- // AD -->
+			 </div>
+		  
+
+                <div class="rightWrap">
                                 <!-- ARCHIVES -->
                                 <div id="archivesBar" class="articleList autoClear">
                                     <div>
@@ -137,41 +145,36 @@
                                     {% include "front/includes/pages_ads_link.html" %}
                                 </div>
                                 <!-- // AD -->
-							</div>
-							<!-- // LEFT WRAP -->
-						</div>
-						<!-- // SUB CONTENT -->
-					</div>
-					<!-- // RIGHT WRAP -->
+
 				</div>
 				<!-- // PANEL-RIGHT -->
-				<div class="articleSection articleMain">
-                    {% if article_cotebar %}
-                        {% with article_cotebar as article %}
-                            {% include "front/includes/epicurien_article.html" %}
-				        {% endwith %}
-				    {% else %}
-				        {% include "front/includes/epicurien_article_empty.html" %}
-                    {% endif %}
-                </div>
-                <!-- AD -->
-                <div class="addSection add468">
-                    {% display_ad '468x60' 'epicurien-cote-bar' '2.0' %}
-                    {% include "front/includes/pages_ads_link.html" %}
-                </div>
-                <!-- // AD -->
+
             </div>
             <!-- // PANEL ALCOOLS -->
             <!-- PANEL FUMEUR -->
             <div class="panel" title="Côté Fumeur" id="fumeur">
-                <!-- PANEL-RIGHT -->
-                <div class="pannel-right">
-                    <!-- RIGHT WRAP -->
-                    <div class="rightWrap">
-                        <!-- SUB CONTENT -->
-                        <div class="subContent">
+		  
+		 <div class="leftWrap"> 
+    			<div class="articleSection articleMain">
+        	        {% if article_cotefumeurs %}
+        	            {% with article_cotefumeurs as article %}
+        	                {% include "front/includes/epicurien_article.html" %}
+        	            {% endwith %}
+        	        {% else %}
+        	            {% include "front/includes/epicurien_article_empty.html" %}
+        	        {% endif %}
+        	   </div>
+                <!-- AD -->
+                <div class="addSection add468">
+                    {% display_ad '468x60' 'epicurien-cote-fumeurs' '2.0' %}
+                    {% include "front/includes/pages_ads_link.html" %}
+                </div>
+                <!-- // AD -->
+			 </div>
+		  
+		  
                             <!-- LEFT WRAP -->
-                            <div class="leftWrap">
+                            <div class="rightWrap">
                                 <!-- ARCHIVES -->
                                 <div id="archivesFumeur" class="articleList autoClear">
                                     <div>
@@ -195,29 +198,9 @@
                                     {% include "front/includes/pages_ads_link.html" %}
 								</div>
                                 <!-- // AD -->
-							</div>
-							<!-- // LEFT WRAP -->
-                        </div>
-						<!-- // SUB CONTENT -->
-                    </div>
-					<!-- // RIGHT WRAP -->
 				</div>
 			    <!-- // PANEL RIGHT -->
-    			<div class="articleSection articleMain">
-        	        {% if article_cotefumeurs %}
-        	            {% with article_cotefumeurs as article %}
-        	                {% include "front/includes/epicurien_article.html" %}
-        	            {% endwith %}
-        	        {% else %}
-        	            {% include "front/includes/epicurien_article_empty.html" %}
-        	        {% endif %}
-        	   </div>
-                <!-- AD -->
-                <div class="addSection add468">
-                    {% display_ad '468x60' 'epicurien-cote-fumeurs' '2.0' %}
-                    {% include "front/includes/pages_ads_link.html" %}
-                </div>
-                <!-- // AD -->
+
             </div>
             <!-- // PANEL FUMEUR -->   
         </div>
