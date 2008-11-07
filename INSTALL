@@ -160,6 +160,7 @@ this order otherwise you will encounter problems during fixtures loading)::
         'critica.apps.polls',
         'critica.apps.partnerlinks',
         'critica.apps.utils',
+        'critica.apps.canalcritica',
     )
 
 Voilà! Critic@-engine is ready.
