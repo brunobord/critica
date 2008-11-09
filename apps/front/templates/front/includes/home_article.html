@@ -28,7 +28,7 @@
         {% if is_current %}
             <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
         {% endif %}
-        
+
         {% include "front/includes/article_illustration_small.html" %}
 
         <div class="summary"></div>
@@ -47,21 +47,21 @@
                 });
         // ]]>
         </script>
-        
+
 	</div>
 
     {% if is_preview %}
-	    <p class="readMore"><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">Lire la suite</a></p>
+	    <p class="readMore"><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">Lire l'article</a></p>
 	{% endif %}
     {% if is_ads_preview %}
-	    <p class="readMore"><a href="{% url ads_preview_category campaign.id,article.category.slug %}">Lire la suite</a></p>
+	    <p class="readMore"><a href="{% url ads_preview_category campaign.id,article.category.slug %}">Lire l'article</a></p>
 	{% endif %}
 	{% if is_archive %}
-	    <p class="readMore"><a href="{% url issues_archive_category issue.number,article.category.slug %}">Lire la suite</a></p>
+	    <p class="readMore"><a href="{% url issues_archive_category issue.number,article.category.slug %}">Lire l'article</a></p>
 	{% endif %}
 	{% if is_current %}
-	    <p class="readMore"><a href="{{ article.get_absolute_url }}">Lire la suite</a></p>
+	    <p class="readMore"><a href="{{ article.get_absolute_url }}">Lire l'article</a></p>
     {% endif %}
-    
+
 </div>
 
