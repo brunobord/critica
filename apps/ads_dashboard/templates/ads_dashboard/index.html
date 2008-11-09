@@ -43,7 +43,7 @@
     <h2>Bannières</h2>
     <div id="ads-dashboard-banners" class="dashboard-table">
         {% if campaign.adbanner_set.all %}
-        <table summary="Bannière de la campagne">
+        <table summary="Bannières de la campagne">
             <tbody>
                 <tr>
                     <th>Format</th>
@@ -70,7 +70,7 @@
                 {% endfor %}
                 <tr class="total">
                     <td colspan="6">Total (en euro)</td>
-                    <td colspan="1">{% calculate_campaign_total campaign %} </td>
+                    <td colspan="1">{% calculate_campaign_banners_total campaign %}</td>
                 </tr>
             </tbody>
         </table>
@@ -79,5 +79,84 @@
         {% endif %}
     </div>
     
+    <h2>Carousels</h2>
+    <div id="ads-dashboard-carousels" class="dashboard-table">
+        {% if campaign.adcarousel_set.all %}
+        <table summary="">
+            <tbody>
+                <tr>
+                    <th>Format</th>
+                    <th>Rubrique</th>
+                    <th>Emplacement</th>
+                    <th>Dates</th>
+                    <th>Durée en jours</th>
+                    <th>Prix au mois (en euro)</th>
+                    <th>Prix total (en euro)</th>
+                </tr>
+                {% for carousel in campaign.adcarousel_set.all %}
+                    {% for position in carousel.positions.all %}
+                    <tr>
+                        <td>{{ carousel.format.width }}x{{ carousel.format.height }}</td>
+                        <td>{{ position.page }}</td>
+                        <td>{{ position.location }}</td>
+                        <td>{{ carousel.starting_date }} &rarr; {{ carousel.ending_date }}</td>
+                        <td>{{ carousel.count_days }}</td>
+                        {% if position.price %}
+                        <td>{{ position.price }}</td>
+                        {% else %}
+                        <td>non-défini</td>
+                        {% endif %}
+                        {% load ads_extra %}
+                        <td>{% calculate_banner_total carousel.count_days position.price %}</td>
+                    </tr>
+                    {% endfor %}
+                {% endfor %}
+                <tr class="total">
+                    <td colspan="6">Total (en euro)</td>
+                    <td colspan="1">{% calculate_campaign_carousels_total campaign %}</td>
+                </tr>
+            </tbody>
+        </table>
+        {% else %}
+        <p><strong>Aucun carousel enregistré pour cette campagne.</strong></p>
+        {% endif %}
+    </div>
+    
+    <h2>Totaux</h2>
+    <div id="ads-dashboard-totals" class="dashboard-table">
+        <table summary="Totaux">
+            <tbody>
+                <tr>
+                    <th>Type</th>
+                    <th>Total (en euro)</th>
+                </tr>
+                <tr>
+                    <td>Bannières</td>
+                    <td>
+                    {% if campaign.adbanner_set.all %}
+                        {% calculate_campaign_banners_total campaign %}</td>
+                    {% else %}
+                        aucune bannière
+                    {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carousels</td>
+                    <td>
+                    {% if campaign.adcarousel_set.all %}
+                        {% calculate_campaign_carousels_total campaign %}
+                    {% else %}
+                        aucun carousel
+                    {% endif %}
+                    </td>
+                </tr>
+                <tr class="total">
+                    <td colspan="1">Total global (en euro)</td>
+                    <td colspan="1">{% calculate_campaign_total campaign %}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 {% endblock %}

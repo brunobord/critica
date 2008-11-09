@@ -23,7 +23,7 @@ class ImageWithThumbWidget(FileInput):
 
     def render(self, name, value, attrs=None):
         thumb_html = ''
-        title = ugettext('current image')
+        title = 'Image actuelle'
         if value and hasattr(value, "url"):
             thumb_html = '<p style="line-height: 2.1em;"><span style="font-size:1.1em; font-weight: bold; font-variant:small-caps;">%s</span><br /><img src="%s" width="%s" style="border: 2px solid #000; " /><br /><strong><a href="%s">%s</a></strong></p>' % (title, value.url, self.width, value.url, value)
         return mark_safe("%s %s" % (super(ImageWithThumbWidget, self).render(name, value, attrs), thumb_html))

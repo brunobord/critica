@@ -3,6 +3,8 @@
 Models for ``critica.apps.ads`` application.
 
 """
+import os
+from django.conf import settings
 from django.db import models
 from django.db.models import permalink
 from django import forms
@@ -11,7 +13,7 @@ from django.template.defaultfilters import slugify
 from critica.apps.ads import settings as ads_settings
 
 
-# Common models
+# Customer / Campaign
 # ------------------------------------------------------------------------------
 class Customer(models.Model):
     """
@@ -75,6 +77,8 @@ class AdCampaign(models.Model):
         return u'%s -- %s' % (self.customer, self.name)
 
 
+# Commons
+# ------------------------------------------------------------------------------
 class AdFormat(models.Model):
     """
     Ad format.
@@ -361,7 +365,7 @@ class AdBanner(models.Model):
         else:
             self.banner_type = 'unknown'
         super(AdBanner, self).save()
-
+    
 
 # Carousels
 # ------------------------------------------------------------------------------
@@ -370,7 +374,7 @@ class AdCarouselPosition(models.Model):
     Ad carousel position.
     
     """
-    format = models.ForeignKey('ads.AdFormat', verbose_name=_('format'), help_text=_('Please, select the format of your banner.'))
+    format = models.ForeignKey('ads.AdFormat', verbose_name=_('format'), help_text=_('Please, select a format.'))
     page = models.ForeignKey('ads.AdPage', verbose_name=_('page'), help_text=_('Please, select a page where to display the ad.'))
     location = models.ForeignKey('ads.AdLocation', verbose_name=_('location'), help_text=_('Please, select a location for this ad.'))
     price = models.DecimalField(_('price'), max_digits=10, decimal_places=2, null=True, blank=True, help_text=_('Please, enter its price by month.'))
@@ -382,8 +386,8 @@ class AdCarouselPosition(models.Model):
         Model metadata. 
         
         """
-        verbose_name = _('carousel position')
-        verbose_name_plural = _('carousel positions')
+        verbose_name = _('ad carousel position')
+        verbose_name_plural = _('ad carousel positions')
         unique_together = (('page', 'location'),)
 
     def __unicode__(self):
@@ -391,21 +395,23 @@ class AdCarouselPosition(models.Model):
         Object human-readable string representation. 
         
         """
-        return u'%s - %s (%s)' % (self.page, self.location, self.format)
+        return u'%s - %s' % (self.page, self.location)
 
 
 class AdCarousel(models.Model):
     """
     Ad carousel.
     
-    
     """
-    folder = models.CharField(_('folder'), max_length=255, unique=True, help_text=_('Please, enter the folder name.'))
+    name = models.CharField(_('name'), max_length=255, unique=True, help_text=_('Please, enter a name for this carousel. It must be unique.'))
+    slug = models.SlugField(_('slug'), max_length=255)
     campaign = models.ForeignKey('ads.AdCampaign', verbose_name=_('campaign'), help_text=_('Please, select a campaign.'))
     type = models.ForeignKey('ads.AdType', verbose_name=_('type'), help_text=_('Please, select a ad type.'))
+    format = models.ForeignKey('ads.AdFormat', verbose_name=_('format'), help_text=_('Please, select a format.'))
     positions = models.ManyToManyField('ads.AdCarouselPosition', verbose_name=_('positions'), null=True, blank=True, help_text=_('Please, select one or several positions.'))
-    starting_date = models.DateField(_('starting date'))
-    ending_date = models.DateField(_('ending date'))
+    submitter = models.ForeignKey('auth.User', verbose_name=_('submitter'))
+    starting_date = models.DateField(_('starting date'), null=True, blank=True, db_index=True)
+    ending_date = models.DateField(_('ending date'), null=True, blank=True, db_index=True)
     creation_date = models.DateTimeField(_('creation date'), auto_now_add=True)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True)
 
@@ -417,13 +423,114 @@ class AdCarousel(models.Model):
         verbose_name = _('ad carousel')
         verbose_name_plural = _('ad carousels')
 
+    def count_days(self):
+        """
+        Returns the number of days based on starting_date / ending_date fields.
+        
+        """
+        import datetime
+        dates = []
+        for day in xrange((self.ending_date - self.starting_date).days + 1):
+            dates.append(self.starting_date + datetime.timedelta(day))
+        return len(dates)
         
     def __unicode__(self):
         """ 
         Object human-readable string representation. 
         
         """
-        return u'%s' % self.folder
+        return u'%s (%s)' % (self.name, self.campaign)
 
+    def get_xml_url(self):
+        """
+        Returns XML file URL.
+        
+        """
+        return settings.MEDIA_URL + 'upload/ads/carousels/%s/carousel.xml' % self.slug
+        
+    def _generate_xml(self):
+        """
+        Generates Carousel XML file.
+        
+        """
+        xml_file_path = settings.MEDIA_ROOT + 'upload/ads/carousels/%s/carousel.xml' % self.slug
+        if os.path.exists(xml_file_path):
+            os.remove(xml_file_path)
+        xml_file = open(xml_file_path, 'w')
+        xml_header = '''<?xml version="1.0" encoding="utf-8"?>
+        
+        <!--
+        	fhShow Carousel 1.5 configuration file
+        	Please visit http://www.critica.fr/ for more info
+        -->
+        
+        <slide_show>
+        	<options>
+        		<background>#FFFFFF</background>		<!-- #RRGGBB, transparent -->
+        		<interaction>
+        			<speed>60</speed>
+        			<!-- [-360,360] degrees per second -->
+        			<default_speed>25</default_speed>
+        			<!-- [-360,360] degrees per second -->
+        			<default_view_point>80%</default_view_point>
+        			<!-- [0,100] percentage -->
+        			<reset_delay>5</reset_delay>
+        			<!-- [0,600] seconds, 0 means never reset -->
+        		</interaction>
+                <!-- [0,600] seconds, 0 means never reset -->
+        	</options>
+        '''
+        xml_header.strip()
+        xml_file.write(xml_header)
+        banners = AdCarouselBanner.objects.filter(carousel=self)
+        for banner in banners:
+            xml_file.write('<photo href="%s" target="_self">%s</photo>' % (banner.link, banner.banner.url) + "\n")
+        xml_file.write('</slide_show>')
+        xml_file.close()
+    
+    def save(self):
+        """ 
+        Object pre-saving / post-saving operations.
+        
+        """
+        # Generates slug
+        self.slug = slugify(self.name)
+        # Generates XML file
+        self._generate_xml()
+        # Save
+        super(AdCarousel, self).save()
+
+
+def get_carousel_image_path(instance, filename):
+    """
+    Returns the path to upload carousel images.
+    
+    """
+    return 'upload/ads/carousels/%s/images/%s' % (instance.carousel.slug, filename)
+    
+
+class AdCarouselBanner(models.Model):
+    """
+    Ad carousel banner
+    
+    """
+    link = models.CharField(_('link'), max_length=255, help_text=_('Please, enter the banner link (URL).'))
+    carousel = models.ForeignKey('ads.AdCarousel', verbose_name=_('carousel'), help_text=_('Please, select a carousel that will include this image.'))
+    banner = models.ImageField(upload_to=get_carousel_image_path, verbose_name=_('banner'), help_text=_('Please, select a banner to upload.'))
+    
+    class Meta:
+        """ 
+        Model metadata. 
+        
+        """
+        verbose_name = _('carousel banner')
+        verbose_name_plural = _('carousel banners')
+
+    def __unicode__(self):
+        """ 
+        Object human-readable string representation. 
+        
+        """
+        return u'%s -- %s' % (self.carousel, self.link)
 
 

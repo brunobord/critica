@@ -1,12 +1,11 @@
 {% if carousel %}
-<script type="text/javascript" src="/media/critica/carousel/swfobject.js"></script>
-{{ carousel }}
+<script type="text/javascript" src="{{ MEDIA_URL }}critica/carousel/swfobject.js"></script>
 <div class="carousel_{{ format_width }}">
     <div id="carousel1">
         <p>This slideshow requires <a href="http://www.adobe.com/go/getflashplayer">Adobe Flash Player 9.0</a> (or higher). JavaScript must be enabled.</p>
     </div>
 </div>
 <script type="text/javascript">
-swfobject.embedSWF("/media/critica/carousel/Carousel.swf", "carousel1", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"/media/upload/ads/carousels/{{ carousel.folder }}/carousel.xml", loaderColor:"0xCCCCCC"}, {bgcolor: "#FFFFFF"});
+swfobject.embedSWF("{{ MEDIA_URL }}critica/carousel/Carousel.swf", "carousel1", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"{{ carousel.get_xml_url }}", loaderColor:"0xCCCCCC"}, {bgcolor: "#FFFFFF"});
 </script>
 {% endif %}

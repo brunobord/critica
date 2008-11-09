@@ -4,6 +4,9 @@ Templatetags of ``critica.apps.ads`` application.
 
 """
 import datetime
+from decimal import getcontext
+from decimal import Decimal
+from decimal import ROUND_HALF_EVEN
 from django import template
 from django.core.exceptions import ObjectDoesNotExist
 from critica.apps.ads.models import AdBanner
@@ -64,8 +67,8 @@ def display_ad(context, format, page, location):
 
 
 
-@register.inclusion_tag('front/includes/carousel.html')
-def display_carousel(format, page, location):
+@register.inclusion_tag('front/includes/carousel.html', takes_context=True)
+def display_carousel(context, format, page, location):
     """
     Displays a carousel related to its format, its page and its location.
     
@@ -85,6 +88,7 @@ def display_carousel(format, page, location):
         carousel = None
 
     return {
+        'MEDIA_URL': context['MEDIA_URL'],
         'carousel': carousel,
         'format': format,
         'format_width': width,
@@ -98,28 +102,53 @@ def calculate_banner_total(count_days, price):
     Calculate banner total price.
     
     """
-    from decimal import getcontext
-    from decimal import Decimal
-    from decimal import ROUND_HALF_EVEN
-    price_per_day = price / 30
-    total = count_days * price_per_day
-    return total.quantize(Decimal('.01'), rounding=ROUND_HALF_EVEN)
+    if price is None:
+        return Decimal('0.00')
+    else:
+        price_per_day = price / 30
+        total = count_days * price_per_day
+        return total.quantize(Decimal('.01'), rounding=ROUND_HALF_EVEN)
 
 
 @register.simple_tag
-def calculate_campaign_total(obj):
+def calculate_campaign_banners_total(obj):
     """
     Calculates campaign total price.
     
     """
-    from decimal import getcontext
-    from decimal import Decimal
-    from decimal import ROUND_HALF_EVEN
     banners = obj.adbanner_set.all()
     total = Decimal('0')
     for banner in banners:
         for position in banner.positions.all():
             total += calculate_banner_total(banner.count_days(), position.price)
     return total.quantize(Decimal('.01'), rounding=ROUND_HALF_EVEN)
+
+
+@register.simple_tag
+def calculate_campaign_carousels_total(obj):
+    """
+    Calculates campaign carousels total price.
+    
+    """
+    carousels = obj.adcarousel_set.all()
+    total = Decimal('0')
+    for carousel in carousels:
+        for position in carousel.positions.all():
+            total += calculate_banner_total(carousel.count_days(), position.price)
+    return total.quantize(Decimal('.01'), rounding=ROUND_HALF_EVEN)
+
+
+@register.simple_tag
+def calculate_campaign_total(obj):
+    """
+    Calculates campaign total.
+    
+    """
+    total = Decimal('0')
+    if obj.adbanner_set.all():
+        total += calculate_campaign_banners_total(obj)
+    if obj.adcarousel_set.all():
+        total += calculate_campaign_carousels_total(obj)
+    return total
 
 

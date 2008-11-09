@@ -15,6 +15,9 @@ from django.forms.util import ErrorList
 from critica.apps.ads.models import AdDefaultBanner
 from critica.apps.ads.models import AdBanner
 from critica.apps.ads.models import AdBannerPosition
+from critica.apps.ads.models import AdCarousel
+from critica.apps.ads.models import AdCarouselBanner
+from critica.lib.widgets import ImageWithThumbWidget
 
 
 class CustomBannerForm(forms.ModelForm):
@@ -155,4 +158,65 @@ class CustomAdDefaultBannerForm(CustomBannerForm):
     class Meta:
         model = AdDefaultBanner
     
+
+class AdCarouselAdminForm(forms.ModelForm):
+    """
+    Custom form of ``AdCarousel`` model.
+    
+    """
+    class Meta:
+        model = AdCarousel
+        
+    def clean(self):
+        """
+        Form validation process.
+        
+        """
+        # Validation of dates
+        # ----------------------------------------------------------------------
+        if self.cleaned_data['starting_date'] and self.cleaned_data['ending_date'] and self.cleaned_data['positions']:
+            # Get proposed positions
+            proposed_positions = []
+            for p in self.cleaned_data['positions']:
+                proposed_positions.append(p.id)
+                
+            # Get proposed dates
+            proposed_dates = []
+            for day in xrange((self.cleaned_data['ending_date'] - self.cleaned_data['starting_date']).days + 1):
+                proposed_dates.append(self.cleaned_data['starting_date'] + datetime.timedelta(day))
+
+            # Get existing banners with same positions and starting date / ending date in proposed dates
+            existing_carousels = AdCarousel.objects.filter(positions__id__in=proposed_positions)
+            if hasattr(self.instance, 'id'):
+                existing_carousels = existing_carousels.exclude(pk=self.instance.id)
+            
+            # Check positions and dates
+            for existing_carousel in existing_carousels:
+                for existing_carousel_position in existing_carousel.positions.all():
+                    for proposed_position in proposed_positions:
+                        if proposed_position == existing_carousel_position.id:
+                            existing_carousel_dates = []
+                            for day in xrange((existing_carousel.ending_date - existing_carousel.starting_date).days + 1):
+                                existing_carousel_dates.append(existing_carousel.starting_date + datetime.timedelta(day))
+                            common_dates = [d for d in proposed_dates if d in existing_carousel_dates]
+                            if common_dates:
+                                msg = _('Date already taken. Please, select another. Taken dates for this position: %(dates)s') % {
+                                    'dates': ', '.join([d.strftime('%Y/%m/%d') for d in common_dates]),
+                                }
+                                self._errors['starting_date'] = ErrorList([msg])
+                                self._errors['ending_date'] = ErrorList([msg])
+
+
+class AdCarouselBannerAdminForm(forms.ModelForm):
+    """
+    Custom form of ``AdCarouselBanner`` model.
+    
+    """
+    banner = forms.ImageField(widget=ImageWithThumbWidget, label=_('banner'), help_text=_('Please, select a banner to upload.'))
+    
+    class Meta:
+        model = AdCarouselBanner
+
+
+
 

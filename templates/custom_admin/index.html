@@ -86,6 +86,13 @@
                 <td><a href="ads/adbanner/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
+            {% if perms.ads.add_adcarousel %}
+            <tr>
+                <th scope="row"><a href="ads/adcarousel/">Carousels</a></th>
+                <td><a href="ads/adcarousel/add" class="addlink">Ajouter</a></td>         
+                <td><a href="ads/adcarousel/" class="changelink">Modifier</a></td>
+            </tr>
+            {% endif %}
             {% if perms.ads.add_addefaultbanner %}
             <tr>
                 <th scope="row"><a href="ads/addefaultbanner/">Bannières par défaut</a></th>
@@ -100,13 +107,6 @@
                 <td><a href="ads/adbannerposition/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
-            {% if perms.ads.add_adcarousel %}
-            <tr>
-                <th scope="row"><a href="ads/adcarousel/">Carousels</a></th>
-                <td><a href="ads/adcarousel/add" class="addlink">Ajouter</a></td>         
-                <td><a href="ads/adcarousel/" class="changelink">Modifier</a></td>
-            </tr>
-            {% endif %}
             {% if perms.ads.add_adcarouselposition %}
             <tr>
                 <th scope="row"><a href="ads/adcarouselposition/">Positions de carousel</a></th>
@@ -116,28 +116,28 @@
             {% endif %}
             {% if perms.users.add_adtype %}
             <tr>
-                <th scope="row"><a href="ads/adtype/">Types de publicité</a></th>
+                <th scope="row"><a href="ads/adtype/">Types (payant, titre grâcieux... )</a></th>
                 <td><a href="ads/adtype/add/" class="addlink">Ajouter</a></td>
                 <td><a href="ads/adtype/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
             {% if perms.users.add_adformat %}
             <tr>
-                <th scope="row"><a href="ads/adformat/">Formats de publicité</a></th>
+                <th scope="row"><a href="ads/adformat/">Formats</a></th>
                 <td><a href="ads/adformat/add/" class="addlink">Ajouter</a></td>
                 <td><a href="ads/adformat/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
             {% if perms.users.add_adpage %}
             <tr>
-                <th scope="row"><a href="ads/adpage/">Types de page</a></th>
+                <th scope="row"><a href="ads/adpage/">Pages (rubriques)</a></th>
                 <td><a href="ads/adpage/add" class="addlink">Ajouter</a></td>         
                 <td><a href="ads/adpage/" class="changelink">Modifier</a></td>
             </tr>
             {% endif %}
             {% if perms.users.add_adlocation %}
             <tr>
-                <th scope="row"><a href="ads/adlocation/">Emplacements de publicité</a></th>
+                <th scope="row"><a href="ads/adlocation/">Emplacements</a></th>
                 <td><a href="ads/adlocation/add" class="addlink">Ajouter</a></td>         
                 <td><a href="ads/adlocation/" class="changelink">Modifier</a></td>
             </tr>

@@ -18,8 +18,11 @@ from critica.apps.ads.models import AdDefaultBanner
 from critica.apps.ads.models import AdBanner
 from critica.apps.ads.models import AdCarouselPosition
 from critica.apps.ads.models import AdCarousel
+from critica.apps.ads.models import AdCarouselBanner
 from critica.apps.ads.forms import CustomAdDefaultBannerForm
 from critica.apps.ads.forms import CustomAdBannerForm
+from critica.apps.ads.forms import AdCarouselAdminForm
+from critica.apps.ads.forms import AdCarouselBannerAdminForm
 
     
 # Commons 
@@ -145,11 +148,22 @@ class AdBannerAdmin(admin.ModelAdmin):
             'fields': ('starting_date', 'ending_date'),
         }),
     )
-    list_display    = ('campaign', 'type', 'ald_positions', 'starting_date', 'ending_date')
+    list_display    = ('campaign', 'type', 'ald_positions', 'starting_date', 'ending_date', 'ald_submitter')
     list_filter     = ('campaign', 'type')
     filter_vertical = ['positions']
     form            = CustomAdBannerForm
 
+    def ald_submitter(self, obj):
+        """
+        Formatted submitter name for admin list display.
+        
+        """
+        if obj.submitter.get_full_name():
+            return obj.submitter.get_full_name()
+        else:
+            return obj.submitter
+    ald_submitter.short_description = _('submitter')
+    
     def ald_positions(self, obj):
         """
         Formatted positions list for admin list display.
@@ -175,6 +189,25 @@ class AdBannerAdmin(admin.ModelAdmin):
 
 # Carousels
 # ------------------------------------------------------------------------------
+class AdCarouselBannerInline(admin.StackedInline):
+    """
+    AdCarouselBanner inline.
+    
+    """
+    model = AdCarouselBanner
+    extra = 10
+    max_num = 10
+    form = AdCarouselBannerAdminForm
+    
+
+class AdCarouselLocationAdmin(admin.ModelAdmin):
+    """
+    Administration interface options of ``AdCarouselLocation`` model.
+    
+    """
+    pass
+    
+    
 class AdCarouselPositionAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
@@ -213,15 +246,57 @@ class AdCarouselAdmin(admin.ModelAdmin):
             'fields': ('campaign', 'type'),
         }),
         (_('Carousel'), {
-            'fields': ('folder', 'positions'),
+            'fields': ('name', 'format', 'positions'),
         }),
         (_('During'), {
             'fields': ('starting_date', 'ending_date'),
         }),
     )
-    list_display = ('campaign', 'folder', 'type', 'starting_date', 'ending_date')
+    list_display = ('name', 'campaign', 'type', 'ald_positions', 'starting_date', 'ending_date', 'ald_submitter')
     list_filter = ('campaign', 'type')
     filter_vertical = ['positions']
+    form = AdCarouselAdminForm
+    inlines = [
+        AdCarouselBannerInline,
+    ]
+    
+    def ald_submitter(self, obj):
+        """
+        Formatted submitter name for admin list display.
+        
+        """
+        if obj.submitter.get_full_name():
+            return obj.submitter.get_full_name()
+        else:
+            return obj.submitter
+    ald_submitter.short_description = _('submitter')
+            
+    def ald_positions(self, obj):
+        """
+        Formatted positions list for admin list display.
+        
+        """
+        html = '<table class="banner-ads-info"><tbody>'
+        for ad in obj.positions.all():
+            html += '<tr><td style="border:none; width: 220px; font-variant: small-caps;">%s</td><td style="border:none;">%s</td></tr>' % (ad.page, ad.location)
+        html += '</tbody></table>'
+        return html
+    ald_positions.allow_tags = True
+    ald_positions.short_description = (_('positions'))
+
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(AdCarouselAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'format': 
+            my_choices = [('', '---------')]
+            my_choices.extend(AdFormat.objects.filter(slug__in=['carousel-450', 'carousel-320']).values_list('id','name'))
+            print my_choices
+            field.choices = my_choices
+        return field  
 
     def save_model(self, request, obj, form, change):
         """
@@ -231,6 +306,14 @@ class AdCarouselAdmin(admin.ModelAdmin):
         if change == False:
             obj.submitter = request.user
         obj.save()
+
+
+class AdCarouselBannerAdmin(admin.ModelAdmin):
+    """
+    Administration interface options of ``AdCarouselBanner`` model.
+    
+    """
+    pass
 
 
 # Registers
@@ -264,6 +347,9 @@ custom_site.register(AdBanner, AdBannerAdmin)
 
 admin.site.register(AdCarouselPosition, AdCarouselPositionAdmin)
 custom_site.register(AdCarouselPosition, AdCarouselPositionAdmin)
+
+admin.site.register(AdCarouselBanner, AdCarouselBannerAdmin)
+custom_site.register(AdCarouselBanner, AdCarouselBannerAdmin)
 
 admin.site.register(AdCarousel, AdCarouselAdmin)
 custom_site.register(AdCarousel, AdCarouselAdmin)
