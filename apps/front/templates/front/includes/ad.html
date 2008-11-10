@@ -4,7 +4,7 @@
     {% if banner %}
         {% ifequal banner.banner_type 'image' %}
             {% if banner.link %}
-                <a href="{{ banner.link }}"><img src="{{ banner.banner.url }}" alt="Publicité" /></a>
+                <a href="{{ banner.link }}" target="_blank"><img src="{{ banner.banner.url }}" alt="Publicité" /></a>
             {% else %}
                 <img src="{{ banner.banner.url }}" alt="Publicité" />
             {% endif %}
@@ -28,7 +28,7 @@
     {% else %}    
         {% ifequal default_banner.banner_type 'image' %}
             {% if default_banner.link %}
-                <a href="{{ default_banner.link }}"><img src="{{ default_banner.banner.url }}" alt="Publicité" /></a>
+                <a href="{{ default_banner.link }}" target="_blank"><img src="{{ default_banner.banner.url }}" alt="Publicité" /></a>
             {% else %}
                 <img src="{{ default_banner.banner.url }}" alt="Publicité" />
             {% endif %}
