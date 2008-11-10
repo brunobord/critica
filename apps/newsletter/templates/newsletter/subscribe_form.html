@@ -1,13 +1,13 @@
 {% extends "layout/base.html" %}
 
-{% block title %}Newsletter{% endblock %}
+{% block title %}Abonnement à la newsletter{% endblock %}
 
 {% block body_id %}newsletter{% endblock %}
 
 {% block content %}
 <div id="mainContent">
 
-    <h1><span>Newsletter</span></h1>
+    <h1><span>Abonnement à la newsletter</span></h1>
 
     <p>
         C'est gratos, ça vous évite de lire de l'info indigeste, et en prime, ça 
@@ -26,6 +26,8 @@
         {{ form.as_p }}
         <p class="submit"><input type="submit" value="Je m'inscris !" name="submit" /></p>
 	</form>
+	
+	<p><strong>Si vous êtes déjà abonné et souhaitez vous désabonner, <a href="{% url newsletter_unsubscribe_form %}" title="Se désabonner de la newsletter">accédez au formulaire de désabonnement</a></strong>.</p>
 
 </div>
 {% endblock %}
