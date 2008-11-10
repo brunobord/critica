@@ -1709,5 +1709,41 @@
             "location": 12, 
             "page": 13
         }
+    }, 
+    {
+        "pk": 13, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-11-10 10:41:12", 
+            "format": 8, 
+            "price": null, 
+            "creation_date": "2008-11-10 10:41:12", 
+            "location": 12, 
+            "page": 15
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-11-10 10:41:24", 
+            "format": 8, 
+            "price": null, 
+            "creation_date": "2008-11-10 10:41:24", 
+            "location": 12, 
+            "page": 16
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "ads.adcarouselposition", 
+        "fields": {
+            "modification_date": "2008-11-10 10:56:58", 
+            "format": 8, 
+            "price": null, 
+            "creation_date": "2008-11-10 10:56:58", 
+            "location": 12, 
+            "page": 14
+        }
     }
 ]

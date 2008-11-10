@@ -68,7 +68,7 @@ def display_ad(context, format, page, location):
 
 
 @register.inclusion_tag('front/includes/carousel.html', takes_context=True)
-def display_carousel(context, format, page, location):
+def display_carousel(context, format, page, location, identifier=None):
     """
     Displays a carousel related to its format, its page and its location.
     
@@ -94,13 +94,13 @@ def display_carousel(context, format, page, location):
             carousel = carousel.filter(starting_date__lte=datetime.date.today(), ending_date__gte=datetime.date.today())[0:1].get()
     except ObjectDoesNotExist:
         carousel = None
-
     return {
         'MEDIA_URL': context['MEDIA_URL'],
         'carousel': carousel,
         'format': format,
         'format_width': width,
         'format_height': height,
+        'identifier': identifier,
     }
 
 
