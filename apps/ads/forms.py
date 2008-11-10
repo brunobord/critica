@@ -205,6 +205,7 @@ class AdCarouselAdminForm(forms.ModelForm):
                                 }
                                 self._errors['starting_date'] = ErrorList([msg])
                                 self._errors['ending_date'] = ErrorList([msg])
+        return self.cleaned_data
 
 
 class AdCarouselBannerAdminForm(forms.ModelForm):
