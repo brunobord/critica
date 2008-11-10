@@ -28,7 +28,7 @@ def poll_vote(request):
                 choice = Choice.objects.get(pk=id_choice)
                 vote = Vote(poll=poll, choice=choice, ip_address=ip_address)
                 vote.save()
-                return HttpResponseRedirect(reverse('poll_results', args=[poll.slug]))
+                return HttpResponseRedirect(reverse('polls_poll_results', args=[poll.slug]))
             else:
                 return HttpResponseRedirect(reverse('home'))
         else:
