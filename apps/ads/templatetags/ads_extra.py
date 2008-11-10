@@ -153,9 +153,9 @@ def calculate_campaign_total(obj):
     
     """
     total = Decimal('0')
-    if obj.adbanner_set.all():
+    if hasattr(obj, 'adbanner_set'):
         total += calculate_campaign_banners_total(obj)
-    if obj.adcarousel_set.all():
+    if hasattr(obj, 'adcarousel_set'):
         total += calculate_campaign_carousels_total(obj)
     return total
 
