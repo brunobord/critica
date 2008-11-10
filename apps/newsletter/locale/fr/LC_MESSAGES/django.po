@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-28 17:12+0100\n"
+"POT-Creation-Date: 2008-11-10 09:00+0100\n"
 "PO-Revision-Date: 2008-09-25 09:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,9 +17,21 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: admin.py:29 models.py:26
+#: admin.py:27 models.py:25
 msgid "subscriber"
 msgstr "inscrit"
+
+#: forms.py:20 models.py:18
+msgid "zip code"
+msgstr "code postal"
+
+#: forms.py:31
+msgid "your email"
+msgstr "votre email"
+
+#: forms.py:42
+msgid "Sorry, unknown email. This email has not been registered."
+msgstr "Désolé, email inconnu. Cet email n'a pas été enregistré."
 
 #: models.py:15
 msgid "first name"
@@ -33,11 +45,22 @@ msgstr "nom"
 msgid "email"
 msgstr "email"
 
-#: models.py:18
-msgid "zip code"
-msgstr "code postal"
-
-#: models.py:27
+#: models.py:26
 msgid "subscribers"
 msgstr "inscrits"
 
+#: tests.py:59 tests.py:60 tests.py:61 tests.py:62
+msgid "This field is required."
+msgstr "Ce champ est requis."
+
+#: tests.py:76
+msgid "Enter a valid e-mail address."
+msgstr "Entrez une adresse email valide."
+
+#: tests.py:98
+msgid "Subscriber with this Email already exists."
+msgstr "Une personne avec cet email s'est déjà inscrite."
+
+#: tests.py:112
+msgid "Enter a zip code in the format XXXXX."
+msgstr "Entrez votre code postal au format XXXXX (par exemple: 75000)."

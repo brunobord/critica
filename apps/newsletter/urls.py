@@ -2,22 +2,40 @@
 """
 URLs of ``critica.apps.newsletter`` application.
 
-newsletter_ok
--------------
+newsletter_subscribe_form
+-------------------------
 
-Displays the thanks message after registering.
+Displays newsletter subscribing form.
 
-- Named URL   : ``newsletter_thanks``
-- View        : ``critica.apps.newsletter.views.thanks``
+- Named URL   : ``newsletter_subscribe_form``
+- View        : ``critica.apps.newsletter.views.subscribe_form``
 - Arguments   : None
 
-newsletter_index
-----------------
+newsletter_subscribe_thanks
+---------------------------
 
-Displays newsletter form.
+Displays newsletter subscribing thanks message.
 
-- Named URL   : ``newsletter_index``
-- View        : ``critica.apps.newsletter.views.index``
+- Named URL   : ``newsletter_subscribe_thanks``
+- View        : ``critica.apps.newsletter.views.subscribe_thanks``
+- Arguments   : None
+
+newsletter_unsubscribe_form
+---------------------------
+
+Displays newsletter unsubscribing form.
+
+- Named URL   : ``newsletter_unsubscribe_form``
+- View        : ``critica.apps.newsletter.views.unsubscribe_form``
+- Arguments   : None
+
+newsletter_unsubscribe_thanks
+-----------------------------
+
+Displays newsletter unsubscribing thanks message.
+
+- Named URL   : ``newsletter_unsubscribe_thanks``
+- View        : ``critica.apps.newsletter.views.unsubscribe_thanks``
 - Arguments   : None
 
 """
@@ -25,13 +43,21 @@ from django.conf.urls.defaults import *
 
 
 urlpatterns = patterns('',
-    url('^ok/$', 
-        'critica.apps.newsletter.views.thanks', 
-        name='newsletter_thanks',
+    url('^desabonner/a-bientot/$',
+        'critica.apps.newsletter.views.unsubscribe_thanks',
+        name='newsletter_unsubscribe_thanks',
+    ),
+    url('^desabonner/$',
+        'critica.apps.newsletter.views.unsubscribe_form',
+        name='newsletter_unsubscribe_form',
+    ),
+    url('^merci/$', 
+        'critica.apps.newsletter.views.subscribe_thanks', 
+        name='newsletter_subscribe_thanks',
     ),
     url('^$', 
-        'critica.apps.newsletter.views.index', 
-        name='newsletter_index',
+        'critica.apps.newsletter.views.subscribe_form', 
+        name='newsletter_subscribe_form',
     ),
 )
 

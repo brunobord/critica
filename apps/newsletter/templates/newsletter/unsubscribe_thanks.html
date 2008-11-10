@@ -1,0 +1,18 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Vous avez été désabonné de la newsletter{% endblock %}
+
+{% block body_id %}newsletter{% endblock %}
+
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Vous avez été désabonné de la newsletter</span></h1>
+    
+    <p>Vous avez bien été désabonné de la newsletter de Critic@. À bientôt&nbsp;!</p>
+
+    <p class="center"><a href="{% url home %}">Cliquez ici pour retourner à la page d'accueil du site</a>.</p>
+    
+</div>
+{% endblock %}
+

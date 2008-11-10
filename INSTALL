@@ -230,8 +230,10 @@ issues_preview
 
 newsletter
 ~~~~~~~~~~
-+ ``newsletter_index``
-+ ``newsletter_thanks``
++ ``newsletter_subscribe_form``
++ ``newsletter_subscribe_thanks``
++ ``newsletter_unsubscribe_form``
++ ``newsletter_unsubscribe_thanks``
 
 pages
 ~~~~~

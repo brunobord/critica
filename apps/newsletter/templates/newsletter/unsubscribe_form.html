@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Désabonnement à la newsletter{% endblock %}
+
+{% block body_id %}newsletter{% endblock %}
+
+{% block content %}
+<div id="mainContent">
+
+    <h1><span>Désabonnement à la newsletter</span></h1>
+
+    <p>Pour vous désabonner, entrez juste votre email.
+
+	<form action="." method="POST" class="vForm">
+        {{ form.as_p }}
+        <p class="submit"><input type="submit" value="Je me désabonne !" name="submit" /></p>
+	</form>
+
+</div>
+{% endblock %}
+
