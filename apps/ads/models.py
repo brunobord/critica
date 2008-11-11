@@ -447,12 +447,16 @@ class AdCarousel(models.Model):
         
         """
         return settings.MEDIA_URL + 'upload/ads/carousels/%s/carousel.xml' % self.slug
+    
+    def save(self):
+        """ 
+        Object pre-saving / post-saving operations.
         
-    def _generate_xml(self):
         """
-        Generates Carousel XML file.
-        
-        """
+        # Generates slug
+        self.slug = slugify(self.name)
+        # Save
+        super(AdCarousel, self).save()
         xml_file_dir = settings.MEDIA_ROOT + 'upload/ads/carousels/%s' % self.slug
         xml_file_path = settings.MEDIA_ROOT + 'upload/ads/carousels/%s/carousel.xml' % self.slug
         if os.path.exists(xml_file_path):
@@ -489,19 +493,6 @@ class AdCarousel(models.Model):
             xml_file.write('<photo href="%s" target="_blank">%s</photo>' % (banner.link, banner.banner.url))
         xml_file.write('</slide_show>')
         xml_file.close()
-    
-    def save(self):
-        """ 
-        Object pre-saving / post-saving operations.
-        
-        """
-        # Generates slug
-        self.slug = slugify(self.name)
-        # Save
-        super(AdCarousel, self).save()
-        # Generates XML file
-        self._generate_xml()
-
 
 def get_carousel_image_path(instance, filename):
     """
