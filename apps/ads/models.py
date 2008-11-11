@@ -487,7 +487,6 @@ class AdCarousel(models.Model):
         banners = AdCarouselBanner.objects.filter(carousel=self)
         for banner in banners:
             xml_file.write('<photo href="%s" target="_self">%s</photo>' % (banner.link, banner.banner.url))
-            xml_file.write('\n')
         xml_file.write('</slide_show>')
         xml_file.close()
     
