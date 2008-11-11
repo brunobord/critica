@@ -453,9 +453,12 @@ class AdCarousel(models.Model):
         Generates Carousel XML file.
         
         """
+        xml_file_dir = settings.MEDIA_ROOT + 'upload/ads/carousels/%s' % self.slug
         xml_file_path = settings.MEDIA_ROOT + 'upload/ads/carousels/%s/carousel.xml' % self.slug
         if os.path.exists(xml_file_path):
             os.remove(xml_file_path)
+        else:
+            os.mkdir(xml_file_dir)
         xml_file = open(xml_file_path, 'w')
         xml_header = '''<?xml version="1.0" encoding="utf-8"?>
         
@@ -495,10 +498,10 @@ class AdCarousel(models.Model):
         """
         # Generates slug
         self.slug = slugify(self.name)
-        # Generates XML file
-        self._generate_xml()
         # Save
         super(AdCarousel, self).save()
+        # Generates XML file
+        self._generate_xml()
 
 
 def get_carousel_image_path(instance, filename):
