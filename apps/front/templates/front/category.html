@@ -17,17 +17,17 @@
 {% block content %}
 <!-- LEFT WRAP -->
 <div id="mainContent" class="leftWrap">
-    
+
     <h1>{{ category.name }}</h1>
-    
+
     {% if article %}
         {% include "front/includes/category_article.html" %}
 	{% else %}
 	    {% include "front/includes/category_article_empty.html" %}
     {% endif %}
-	
+
 	<!-- AD -->
-    <div class="addSection add468"> 
+    <div class="addSection add468">
         {% display_ad '468x60' category.slug '2.0' %}
         {% include "front/includes/pages_ads_link.html" %}
     </div>
@@ -43,7 +43,7 @@
         {% else %}
             {% include "front/includes/category_note_pushpin_empty.html" %}
         {% endif %}
-        
+
         {% if note_3 %}
             {% with note_3 as note %}
                 {% include "front/includes/category_note_pushpin.html" %}
@@ -60,7 +60,7 @@
         {% else %}
             {% include "front/includes/category_note_pushpin_empty.html" %}
         {% endif %}
-        
+
         {% if note_5 %}
             {% with note_5 as note %}
                 {% include "front/includes/category_note_pushpin.html" %}
@@ -69,23 +69,23 @@
             {% include "front/includes/category_note_pushpin_empty.html" %}
         {% endif %}
 	   </div>
-    
+
     </div>
     <!-- // ARTICLE LIST -->
-	
+
 	<!-- AD -->
     <div class="addSection add468">
         {% display_ad '468x60' category.slug '3.0' %}
         {% include "front/includes/pages_ads_link.html" %}
     </div>
     <!-- // AD -->
-    	
+
 </div>
 <!-- // LEFT WRAP -->
 
 <!-- RIGHT WRAP -->
 <div class="rightWrap">
-    
+
     <!-- MAIN ARTICLE -->
     {% if note_1 %}
         {% with note_1 as note %}
@@ -95,7 +95,7 @@
 	    {% include "front/includes/category_note_postit_empty.html" %}
     {% endif %}
 	<!-- // MAIN ARTICLE -->
-	
+
     <!-- CAROUSEL -->
     {% ifequal category.slug "national" %}
         <div class="addSection">
@@ -156,10 +156,10 @@
 
     <!-- SUB CONTENT -->
     <div id="subContent" class="autoClear">
-    
+
         <!-- LEFT WRAP -->
         <div class="leftWrap">
-            
+
             <div class="articleList autoClear">
 
                 {% if note_6 %}
@@ -169,7 +169,7 @@
     		    {% else %}
     		        {% include "front/includes/category_note_accordion_empty.html" %}
     		    {% endif %}
-    		    
+
                 {% if note_7 %}
                     {% with note_7 as note %}
                         {% include "front/includes/category_note_accordion.html" %}
@@ -184,7 +184,7 @@
     		    {% else %}
     		        {% include "front/includes/category_note_accordion_empty.html" %}
     		    {% endif %}
-    		    
+
                 {% if note_9 %}
                     {% with note_9 as note %}
                         {% include "front/includes/category_note_accordion.html" %}
@@ -192,7 +192,7 @@
     		    {% else %}
     		        {% include "front/includes/category_note_accordion_empty.html" %}
     		    {% endif %}
-    		    
+
                 {% if note_10 %}
                     {% with note_10 as note %}
                         {% include "front/includes/category_note_accordion.html" %}
@@ -200,8 +200,63 @@
     		    {% else %}
     		        {% include "front/includes/category_note_accordion_empty.html" %}
     		    {% endif %}
+    <!-- EXTRA -->
+
+
+				<div id="extra">
+					{% ifequal category.slug "national" %}
+					<div id="extra-national">
+						{% include 'front/extra/national.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "etranger" %}
+					<div id="extra-etranger">
+						{% include 'front/extra/etranger.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "societe" %}
+					<div id="extra-societe">
+						{% include 'front/extra/societe.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "sports" %}
+					<div id="extra-sports">
+						{% include 'front/extra/sports.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "pipoles" %}
+					<div id="extra-etranger">
+						{% include 'front/extra/pipoles.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "tele" %}
+					<div id="extra-tele">
+						{% include 'front/extra/tele.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "bouquins" %}
+					<div id="extra-bouquins">
+						{% include 'front/extra/bouquins.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "nanas" %}
+					<div id="extra-nanas">
+						{% include 'front/extra/nanas.html' %}
+					</div>
+					{% endifequal %}
+					{% ifequal category.slug "insolite" %}
+					<div id="extra-bouquins">
+						{% include 'front/extra/insolite.html' %}
+					</div>
+					{% endifequal %}
+				</div>
+        <!-- // EXTRA -->
+
+
+
+
             </div>
-            
+
             <!-- AD -->
             {% ifequal category.slug "national" %}
                 <div class="addSection">
@@ -240,13 +295,13 @@
                 </div>
             {% endifequal %}
             <!-- // AD -->
-            
+
         </div>
         <!-- // LEFT WRAP -->
-    
+
         <!-- RIGHT WRAP -->
         <div class="rightWrap">
-        
+
             <!-- AD -->
 			<div class="addSection">
 		        <div class="add130">
@@ -255,63 +310,17 @@
                 {% include "front/includes/pages_ads_link.html" %}
             </div>
             <!-- // AD -->
-            
+
         </div>
         <!-- // RIGHT WRAP -->
-    
+
     </div>
     <!-- // SUB CONTENT -->
 
     <!-- EXTRA -->
-    <div id="extra">
-        {% ifequal category.slug "national" %}
-        <div id="extra-national">
-            {% include 'front/extra/national.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "etranger" %}
-        <div id="extra-etranger">
-            {% include 'front/extra/etranger.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "societe" %}
-        <div id="extra-societe">
-            {% include 'front/extra/societe.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "sports" %}
-        <div id="extra-sports">
-            {% include 'front/extra/sports.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "pipoles" %}
-        <div id="extra-etranger">
-            {% include 'front/extra/pipoles.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "tele" %}
-        <div id="extra-tele">
-            {% include 'front/extra/tele.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "bouquins" %}
-        <div id="extra-bouquins">
-            {% include 'front/extra/bouquins.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "nanas" %}
-        <div id="extra-nanas">
-            {% include 'front/extra/nanas.html' %}
-        </div>
-        {% endifequal %}
-        {% ifequal category.slug "insolite" %}
-        <div id="extra-bouquins">
-            {% include 'front/extra/insolite.html' %}
-        </div>
-        {% endifequal %}
-    </div>
+
     <!-- // EXTRA -->
-    
+
     <!-- NEWSLETTER SECTION -->
     <div id="newsletterSection">
         {% include "front/includes/newsletter_form.html" %}

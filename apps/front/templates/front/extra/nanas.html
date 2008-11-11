@@ -1,1 +1,13 @@
-
+<script type="text/javascript" src="http://box.shopoon.fr/lemonde/js/lemonde.js"></script>
+<script type="text/javascript">
+if(mainShoppingBox.parentId != undefined && mainShoppingBox.parentId != "")
+{
+    if(document.getElementById(mainShoppingBox.parentId))
+        document.getElementById(mainShoppingBox.parentId).innerHTML = mainShoppingBox.writeIframe();
+    else
+        document.write(mainShoppingBox.writeIframe());
+}
+else
+    document.write(mainShoppingBox.writeIframe());
+</script>
+<div id="shoppingBox"></div>

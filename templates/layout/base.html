@@ -90,7 +90,7 @@
 			    <div class="contentWrap">
 			        <!-- DATE -->
 			        <div id="date">
-			            <p>{{ issue.publication_date|date:"d F Y" }}&nbsp;|&nbsp;<strong>N°{{ issue.number }}</strong></p> 
+			            <p>{{ issue.publication_date|date:"d F Y" }}&nbsp;|&nbsp;<strong>N°{{ issue.number }}</strong></p>
                     </div>
                     <!-- // DATE -->
                     <!-- SEARCH -->
@@ -188,15 +188,15 @@
 		  </div>
 			</div>
 			<!-- // CONTENT -->
-			
+
             <!-- FOOTER -->
             <div id="footer">
                 <p> &copy; <a href="{% url pages_page "mentions-legales" %}" title="Mentions légales">Mentions Légales</a></p>
             </div>
-		  
+
 		 {% load partnerlinks_extra %}
 		 {% display_partnerlinks %}
-		  
+
             <!-- // FOOTER -->
         </div>
     </body>
