@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Critica Engine\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-01 11:36+0200\n"
+"POT-Creation-Date: 2008-11-12 19:06+0100\n"
 "PO-Revision-Date: 2008-09-22 11:11+0100\n"
 "Last-Translator: Gilles Fabio <gfabio@interfaceip.fr>\n"
 "Language-Team: Interface IP\n"
@@ -17,22 +17,22 @@ msgstr ""
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
-#: feeds.py:23
+#: feeds.py:36
 #, python-format
 msgid "%(site_name)s: latest articles feed"
 msgstr "%(site_name)s: fils des derniers articles"
 
-#: feeds.py:32
+#: feeds.py:53
 #, python-format
-msgid "Recent articles published on %(site_name)s."
+msgid "Recent articles and notes published on %(site_name)s."
 msgstr "Derniers articles publiés sur %(site_name)s."
 
-#: feeds.py:53
+#: feeds.py:127
 #, python-format
 msgid "%(site_name)s: \"%(category)s\" category feed"
 msgstr "%(site_name)s: fil de la rubrique \"%(category)s\""
 
-#: feeds.py:60
+#: feeds.py:138
 #, python-format
 msgid ""
 "Recent articles published in the category \"%(category)s\" on %(site_name)s."
