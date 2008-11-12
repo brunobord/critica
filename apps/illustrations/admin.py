@@ -110,7 +110,7 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
         Auto-save author.
         
         """
-        if changed == False:
+        if change == False:
             obj.submitter = request.user
         obj.save()
 
