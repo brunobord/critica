@@ -1,5 +1,5 @@
 {% if carousel %}
-<script type="text/javascript" src="{{ MEDIA_URL }}critica/carousel/swfobject.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}carrousel/swfobject.js"></script>
 <div class="carousel_{{ format_width }}">
     <div id="{% if identifier %}{{ identifier }}{% else %}carousel1{% endif %}">
         <p>This slideshow requires <a href="http://www.adobe.com/go/getflashplayer">Adobe Flash Player 9.0</a> (or higher). JavaScript must be enabled.</p>
@@ -8,7 +8,7 @@
 {% load cache %}
 {% cache 0 ads_carousel %}
 <script type="text/javascript">
-swfobject.embedSWF("{{ MEDIA_URL }}critica/carousel/Carousel.swf", "{% if identifier %}{{ identifier }}{% else %}carousel1{% endif %}", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"{{ carousel.get_xml_url }}", loaderColor:"0xCCCCCC"}, {bgcolor: "#FFFFFF"});
+swfobject.embedSWF("{{ MEDIA_URL }}carrousel/carousel.swf", "{% if identifier %}{{ identifier }}{% else %}carousel1{% endif %}", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"{{ carousel.get_xml_url }}", loaderColor:"0xCCCCCC"}, {bgcolor: "#FFFFFF"});
 </script>
 {% endcache %}
 {% include "front/includes/pages_ads_link.html" %}
