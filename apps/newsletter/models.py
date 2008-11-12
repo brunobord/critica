@@ -12,10 +12,11 @@ class Subscriber(models.Model):
     Newsletter subscriber
     
     """
-    first_name = models.CharField(_('first name'), max_length=255)
-    last_name = models.CharField(_('last name'), max_length=255)
+    first_name = models.CharField(_('first name'), max_length=255, blank=True)
+    last_name = models.CharField(_('last name'), max_length=255, blank=True)
     email = models.EmailField(_('email'), max_length=255, unique=True) 
-    zip_code = models.CharField(_('zip code'), max_length=5) 
+    zip_code = models.CharField(_('zip code'), max_length=5, blank=True)
+    registration_date = models.DateField(_('registration date'), auto_now_add=True) 
 
     class Meta:
         """ 

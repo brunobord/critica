@@ -17,6 +17,9 @@ class SubscriberForm(forms.ModelForm):
     Newsletter subscriber form.
     
     """
+    first_name = forms.CharField(label='prénom', required=True)
+    last_name = forms.CharField(label='nom', required=True)
+    email = forms.EmailField(label='email', required=True)
     zip_code = FRZipCodeField(label=_('zip code'))
     
     class Meta:
