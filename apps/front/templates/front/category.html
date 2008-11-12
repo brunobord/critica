@@ -95,7 +95,11 @@
 	    {% include "front/includes/category_note_postit_empty.html" %}
     {% endif %}
 	<!-- // MAIN ARTICLE -->
-
+{% ifequal category.slug "bouquins" %}
+					<div id="extra-bouquins">
+						{% include 'front/extra/bouquins.html' %}
+					</div>
+					{% endifequal %}
     <!-- CAROUSEL -->
     {% ifequal category.slug "national" %}
         <div class="addSection">
@@ -225,11 +229,7 @@
 						{% include 'front/extra/tele.html' %}
 					</div>
 					{% endifequal %}
-					{% ifequal category.slug "bouquins" %}
-					<div id="extra-bouquins">
-						{% include 'front/extra/bouquins.html' %}
-					</div>
-					{% endifequal %}
+
 					{% ifequal category.slug "nanas" %}
 					<div id="extra-nanas">
 						{% include 'front/extra/nanas.html' %}

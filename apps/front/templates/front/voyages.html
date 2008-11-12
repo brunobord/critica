@@ -49,20 +49,20 @@
 <div id="mainContent" class="leftWrap">
 
     <h1>Voyages</h1>
-    
+
     {% if article %}
         {% include "front/includes/category_article.html" %}
     {% else %}
         {% include "front/includes/category_article_empty.html" %}
     {% endif %}
-    
+
     <!-- AD -->
-    <div class="addSection add468"> 
+    <div class="addSection add468">
         {% display_ad '468x60' 'voyages' '2.0' %}
         {% include "front/includes/pages_ads_link.html" %}
     </div>
     <!-- // AD -->
-    
+
 </div>
 <!-- // LEFT WRAP -->
 
@@ -71,10 +71,10 @@
 
     <!-- SUB CONTENT -->
     <div id="subContent">
-    
+
         <!-- LEFT WRAP -->
         <div class="leftWrap">
-        
+
             <div class="articleList autoClear">
                 {% if article %}
                     {% include "front/includes/article_localization.html" %}
@@ -82,17 +82,17 @@
                     {% include "front/includes/article_localization_empty.html" %}
                 {% endif %}
             </div>
-            
+
             <!-- CAROUSEL -->
             <div class="addSection">
                 {% display_carousel '320x100' 'voyages' '7.0' %}
             	{% include "front/includes/pages_ads_link.html" %}
             </div>
             <!-- // CAROUSEL -->
-            
+
             <!-- LEFT WRAP -->
             <div class="leftWrap">
-            
+
                 <!-- ARCHIVES -->
                 <div id="archivesBar" class="articleList autoClear">
                     <div>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <!-- // ARCHIVES -->
-                
+
                 <!-- EXTRA -->
                 <div id="extra">
                     <div id="extra-voyages">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <!-- // EXTRA -->
-                
+
                 <!-- AD -->
 				<div class="addSection">
 				    <div class="add-300x250 autoClear">
@@ -123,16 +123,16 @@
                     {% include "front/includes/pages_ads_link.html" %}
                 </div>
                 <!-- // AD -->
-                
+
             </div>
             <!-- // LEFT WRAP -->
-            
+
         </div>
         <!-- LEFT WRAP -->
-		
+
 		<!-- RIGHT WRAP -->
 		<div class="rightWrap">
-		
+
 		    <!-- AD -->
 			<div class="addSection">
 		        <div class="add130">
@@ -141,18 +141,17 @@
                 {% include "front/includes/pages_ads_link.html" %}
             </div>
             <!-- // AD -->
-            
+
         </div>
         <!-- // RIGHT WRAP -->
-        
+
     <!-- // LEFT WRAP -->
 	</div>
 
-    {% include "front/includes/voyages_easyvoyages.html" %}
 
 	</div>
 	<!-- // SUB CONTENT -->
-	
+
 </div>
 <!-- // RIGHT WRAP -->
 
