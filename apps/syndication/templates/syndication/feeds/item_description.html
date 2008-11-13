@@ -2,7 +2,7 @@
     <strong>
     Auteur :
     {% if obj.author_nickname %}
-        {{ obj.author_nickname }}
+        {{ obj.author_nickname.nickname }}
     {% else %} 
         {% if obj.author.get_full_name %}
             {{ obj.author.get_full_name }}
