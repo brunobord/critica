@@ -423,15 +423,18 @@ def regions(request, issue=None, is_preview=False, is_archive=False, is_ads_prev
     
     # Featured region note
     if featured_region:
-        try:
-            featured_region_note = RegionNote.preview.filter(issues__id=issue.id, region=featured_region.region)
-            featured_region_note = featured_region_note.order_by('-publication_date')
-            featured_region_note = featured_region_note[0:1].get()
-            context['featured_region_note'] = featured_region_note
-        except ObjectDoesNotExist:
-            context['featured_region_note'] = None
-    else:
-        context['featured_region_note'] = None
+        if is_preview:
+            try:
+                featured_region_note = RegionNote.preview.filter(issues__id=issue.id, region=featured_region.region).order_by('-publication_date')[0:1].get()
+                context['featured_region_note'] = featured_region_note
+            except ObjectDoesNotExist:
+                context['featured_region_note'] = None
+        else:
+            try:
+                featured_region_note = RegionNote.published.filter(issues__id=issue.id, region=featured_region.region).order_by('-publication_date')[0:1].get()
+                context['featured_region_note'] = featured_region_note
+            except ObjectDoesNotExist:
+                context['featured_region_note'] = None
     
     # Regions notes
     if is_preview:
