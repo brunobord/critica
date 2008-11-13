@@ -4,6 +4,7 @@ Models of ``critica.apps.epicurien`` application.
 
 """
 from django.db import models
+from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from critica.apps.articles.models import BaseArticle
@@ -57,7 +58,7 @@ class EpicurienArticle(BaseArticle):
         db_table            = 'epicurien_article'
         verbose_name        = _('article epicurien')
         verbose_name_plural = _('articles epicurien')
-
+        
     def save(self):
         """ 
         Object pre-saving / post-saving operations.

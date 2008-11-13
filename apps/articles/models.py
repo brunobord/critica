@@ -67,6 +67,18 @@ class BaseArticle(models.Model):
         """
         return ('category', (), {'category_slug': self.category.slug})
 
+    @permalink
+    def get_archive_url(self):
+        """
+        Returns archive URL.
+        
+        """
+        issue = self.issues.all()[0]
+        return ('issues_archive_category', (), {
+            'issue_number': issue.number,
+            'category_slug': self.category.slug,
+        })
+
     def save(self):
         """ 
         Object pre-saving / post-saving operations.

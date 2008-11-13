@@ -5,5 +5,6 @@
 </div>
 <div>
     <p>{{ article.summary|safe }}</p>
+    <p class="readMore"><a href="{{ article.get_archive_url }}">Lire l'article</a></p>
 </div>
 {% endfor %}

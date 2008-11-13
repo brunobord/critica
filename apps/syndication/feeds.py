@@ -23,8 +23,8 @@ class LatestRss(Feed):
     Homepage RSS feed.
     
     """
-    feed_type = Rss201rev2Feed
-    title_template = 'syndication/feeds/item_title.html'
+    feed_type            = Rss201rev2Feed
+    title_template       = 'syndication/feeds/item_title.html'
     description_template = 'syndication/feeds/item_description.html'
     
     def title(self):
@@ -61,44 +61,25 @@ class LatestRss(Feed):
         """
         all_items = []
         # Articles standard categories
-        articles = Article.objects.filter(
-            issues__is_published=True,
-            is_ready_to_publish=True,
-            is_reserved=False)[:9]
+        articles = Article.published.order_by('-publication_date')[0:9]
         for a in articles:
             all_items.append((a.id, a))
         # Regions
-        featured = FeaturedRegion.objects.filter(
-            issue__is_published=True)[0]
-        region_note = RegionNote.objects.filter(
-            id=featured.region.id,
-            is_ready_to_publish=True,
-            is_reserved=False)[0]
+        featured = FeaturedRegion.objects.filter(issue__is_published=True).order_by('-issue')[0:1].get()
+        region_note = RegionNote.published.get(id=featured.region.id)
         all_items.append((region_note.id, region_note))
         # Voyages
-        articles_voyages = VoyagesArticle.objects.filter(
-            issues__is_published=True,
-            is_ready_to_publish=True,
-            is_reserved=False)[:1]
-        for a in articles_voyages:
-            all_items.append((a.id, a))
+        article_voyages = VoyagesArticle.published.order_by('-publication_date')[0:1].get()
+        all_items.append((article_voyages.id, article_voyages))
         # Epicurien
-        articles_epicurien = EpicurienArticle.objects.filter(
-            issues__is_published=True,
-            is_ready_to_publish=True,
-            is_reserved=False)[:3]
+        articles_epicurien = EpicurienArticle.published.order_by('-publication_date')[0:3]
         for a in articles_epicurien:
             all_items.append((a.id, a))
         # Anger
-        articles_anger = AngerArticle.objects.filter(
-            issues__is_published=True,
-            is_ready_to_publish=True,
-            is_reserved=False)[:1]
-        for a in articles_anger:
-            all_items.append((a.id, a))
+        article_anger = AngerArticle.published.order_by('-publication_date')[0:1].get()
+        all_items.append((article_anger.id, article_anger))
         items = [item for k, item in all_items]
         return items
-
 
 
 class LatestByCategoryRss(LatestRss):
@@ -106,7 +87,7 @@ class LatestByCategoryRss(LatestRss):
     RSS feed: latest articles published in a given category. 
     
     """
-    title_template = 'syndication/feeds/category_item_title.html'
+    title_template       = 'syndication/feeds/category_item_title.html'
     description_template = 'syndication/feeds/category_item_description.html'
     
     def get_object(self, bits):
@@ -153,39 +134,22 @@ class LatestByCategoryRss(LatestRss):
         
         """
         if obj.slug == 'voyages':
-            return VoyagesArticle.objects.filter(
-                is_ready_to_publish=True,
-                is_reserved=False)[:1]
+            return VoyagesArticle.published.order_by('-publication_date')[0:1].get()
         elif obj.slug == 'epicurien':
-            return EpicurienArticle.objects.filter(
-                is_ready_to_publish=True,
-                is_reserved=False)[:3]
+            return EpicurienArticle.published.order_by('-publication_date')[0:3]
         elif obj.slug == 'coup-de-gueule':
-            return AngerArticle.objects.filter(
-                is_ready_to_publish=True,
-                is_reserved=False)[:1]
+            return AngerArticle.published.order_by('-publication_date')[0:1].get()
         elif obj.slug == 'regions':
-            return RegionNote.objects.filter(
-                is_ready_to_publish=True,
-                is_reserved=False)[:26]
+            return RegionNote.published.order_by('-publication_date')[0:26]
         else:
             all_items = []
             # Article
-            article = Article.objects.get(
-                issues__is_published=True,
-                is_ready_to_publish=True,
-                is_reserved=False,
-                category=obj)
+            article = Article.published.filter(category=obj).order_by('-publication_date')[0:1].get()
             all_items.append((article.id, article))
             # Notes
-            notes = Note.objects.filter(
-                issues__is_published=True,
-                is_ready_to_publish=True,
-                is_reserved=False,
-                category=obj)
+            notes = Note.published.filter(category=obj).order_by('-publication_date')[0:40]
             for note in notes:
                 all_items.append((note.id, note))
             items = [item for k, item in all_items]
             return items
-
 
