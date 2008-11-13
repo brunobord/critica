@@ -21,7 +21,7 @@
     <div id="addthis">
         {% include 'front/includes/addthis.html' %}
     </div>
-    
+
     <h1>{{ category.name }}</h1>
 
     {% if article %}
@@ -99,11 +99,26 @@
 	    {% include "front/includes/category_note_postit_empty.html" %}
     {% endif %}
 	<!-- // MAIN ARTICLE -->
-{% ifequal category.slug "bouquins" %}
-					<div id="extra-bouquins">
-						{% include 'front/extra/bouquins.html' %}
-					</div>
-					{% endifequal %}
+	 <!-- AMAZON -->
+			{% ifequal category.slug "bouquins" %}
+			<div id="extra-bouquins">
+				{% include 'front/extra/bouquins.html' %}
+			</div>
+			{% endifequal %}
+	<!-- //AMAZON -->
+
+
+
+	<!-- RICH MEDIA SECTION -->
+    <div class="rich-medias">
+		<a  href="/canalcritica/" class="floatLeft" title="Canalcritica">
+		<img src="{{ MEDIA_URL }}critica/css/img/critica_videos.jpg" width="220px"></a>
+		<a  href="http://www.xahutu.com/critica_imagevue/"  class="floatRight" target="blank" title="Jean-Jacques Urvoas">
+		<img src="{{ MEDIA_URL }}critica/css/img/critica_photos.jpg" width="220px"></a>
+	</div>
+	<!-- //RICH MEDIA SECTION -->
+
+
     <!-- CAROUSEL -->
     {% ifequal category.slug "national" %}
         <div class="addSection">
@@ -316,12 +331,13 @@
 
     <!-- // EXTRA -->
 
-    <!-- NEWSLETTER SECTION -->
-    <div id="newsletterSection">
-        {% include "front/includes/newsletter_form.html" %}
-    </div>
-    <!-- // NEWSLETTER SECTION -->
 
+
+  <!-- NEWSLETTER SECTION
+  <div id="newsletterSection">
+        {% include "front/includes/newsletter_form.html" %}
+    	</div>
+ //NEWSLETTER SECTION -->
 </div>
 <!-- // RIGHT WRAP -->
 
