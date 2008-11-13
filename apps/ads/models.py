@@ -474,6 +474,7 @@ class AdCarousel(models.Model):
         <slide_show>
         	<options>
         		<background>#FFFFFF</background>		<!-- #RRGGBB, transparent -->
+        		<fullscreen>true</fullscreen>
         		<interaction>
         			<speed>60</speed>
         			<!-- [-360,360] degrees per second -->
