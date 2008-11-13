@@ -439,10 +439,8 @@ def regions(request, issue=None, is_preview=False, is_archive=False, is_ads_prev
     # Regions notes
     if is_preview:
         try:
-            regions_notes = RegionNote.preview.filter(issues__id=issue.id)
-            if featured_region:
-                regions_notes = regions_notes.exclude(id=featured_region.id)
-            regions_notes = regions_notes.order_by('region__name')
+            regions_notes = RegionNote.preview.filter(issues__id=issue.id).order_by('region__name')
+            regions_notes = regions_notes.exclude(id=featured_region_note.id)
             context['regions_notes_1'] = regions_notes[0:10]
             context['regions_notes_2'] = regions_notes[10:20]
             context['regions_notes_3'] = regions_notes[20:]
@@ -452,10 +450,8 @@ def regions(request, issue=None, is_preview=False, is_archive=False, is_ads_prev
             context['regions_notes_3'] = None
     else:
         try:
-            regions_notes = RegionNote.published.filter(issues__id=issue.id)
-            if featured_region:
-                regions_notes = regions_notes.exclude(id=featured_region.id)
-            regions_notes = regions_notes.order_by('region__name')
+            regions_notes = RegionNote.published.filter(issues__id=issue.id).order_by('region__name')
+            regions_notes = regions_notes.exclude(id=featured_region_note.id)
             context['regions_notes_1'] = regions_notes[0:10]
             context['regions_notes_2'] = regions_notes[10:20]
             context['regions_notes_3'] = regions_notes[20:]
