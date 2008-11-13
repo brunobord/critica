@@ -66,7 +66,7 @@ class LatestRss(Feed):
             all_items.append((a.id, a))
         # Regions
         featured = FeaturedRegion.objects.filter(issue__is_published=True).order_by('-issue')[0:1].get()
-        region_note = RegionNote.published.get(id=featured.region.id)
+        region_note = RegionNote.published.get(region=featured.region.id)
         all_items.append((region_note.id, region_note))
         # Voyages
         article_voyages = VoyagesArticle.published.order_by('-publication_date')[0:1].get()
