@@ -1,1 +1,19 @@
-404
+{% extends "layout/base.html" %}
+{% block title %}Erreur 404{% endblock %}
+{% block body_id %}error-404{% endblock %}
+{% block content %}
+<div id="mainContent">
+    
+    <h1>Erreur 404</h1>
+    
+    <p>
+        Aï&nbsp;! Désolé, la page que vous recherchez ne correspond à aucun document. 
+        Vérifiez l'adresse (<a href="http://fr.wikipedia.org/wiki/URL" title="Wikipedia : définition d'une URL">URL</a>), 
+        il se peut qu'elle ne soit plus valide ou erronée. N'hésitez pas à utiliser 
+        <a href="http://critica.fr/#search" title="Moteur de recherche de Critic@">le moteur de recherche</a> 
+        du site pour vous aider.
+    </p>
+
+</div>
+{% endblock %}
+
