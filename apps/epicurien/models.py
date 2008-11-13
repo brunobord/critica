@@ -58,6 +58,35 @@ class EpicurienArticle(BaseArticle):
         db_table            = 'epicurien_article'
         verbose_name        = _('article epicurien')
         verbose_name_plural = _('articles epicurien')
+    
+    def _get_type_number(self):
+        """ 
+        Private method that returns the type number for anchors. 
+        
+        """
+        if self.type.id == 1:
+            type_number = '#1'
+        if self.type.id == 2:
+            type_number = '#2'
+        if self.type.id == 3:
+            type_number = '#3'
+        return type_number
+
+    def get_absolute_url(self):
+        """
+        Returns absolute URL.
+        
+        """
+        return '/epicurien/%s' % self._get_type_number()
+        
+    def get_archive_url(self):
+        """
+        Returns archive URL.
+        
+        """
+
+        issue = self.issues.all()[0]
+        return '/archives/%s/epicurien/%s' % (issue.number, self._get_type_number())
         
     def save(self):
         """ 

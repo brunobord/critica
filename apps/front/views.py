@@ -155,17 +155,41 @@ def home(request, issue=None, is_preview=False, is_archive=False, is_ads_preview
     
     # Epicurien
     if is_preview:
+        epicurien_articles = []
         try:
-            epicurien_articles = EpicurienArticle.preview.filter(issues__id=issue.id)
-            context['epicurien_articles'] = epicurien_articles
+            a = EpicurienArticle.preview.filter(issues__id=issue.id, type__slug='cote-gourmets').order_by('-publication_date')[0:1].get()
+            epicurien_articles.append(a)
         except ObjectDoesNotExist:
-            context['epicurien_articles'] = None
+            pass
+        try:
+            a = EpicurienArticle.preview.filter(issues__id=issue.id, type__slug='cote-bar').order_by('-publication_date')[0:1].get()
+            epicurien_articles.append(a)
+        except ObjectDoesNotExist:
+            pass
+        try:
+            a = EpicurienArticle.preview.filter(issues__id=issue.id, type__slug='cote-fumeurs').order_by('-publication_date')[0:1].get()
+            epicurien_articles.append(a)
+        except ObjectDoesNotExist:
+            pass
+        context['epicurien_articles'] = epicurien_articles
     else:
+        epicurien_articles = []
         try:
-            epicurien_articles = EpicurienArticle.published.filter(issues__id=issue.id)
-            context['epicurien_articles'] = epicurien_articles
+            a = EpicurienArticle.published.filter(issues__id=issue.id, type__slug='cote-gourmets').order_by('-publication_date')[0:1].get()
+            epicurien_articles.append(a)
         except ObjectDoesNotExist:
-            context['epicurien_articles'] = None
+            pass
+        try:
+            a = EpicurienArticle.published.filter(issues__id=issue.id, type__slug='cote-bar').order_by('-publication_date')[0:1].get()
+            epicurien_articles.append(a)
+        except ObjectDoesNotExist:
+            pass
+        try:
+            a = EpicurienArticle.published.filter(issues__id=issue.id, type__slug='cote-fumeurs').order_by('-publication_date')[0:1].get()
+            epicurien_articles.append(a)
+        except ObjectDoesNotExist:
+            pass
+        context['epicurien_articles'] = epicurien_articles
     
     # Anger ("Coup de Gueule")
     if is_preview:
