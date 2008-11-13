@@ -106,12 +106,25 @@ class BaseNote(models.Model):
         """
         return u"%s" % (self.title)
 
+    @permalink
     def get_absolute_url(self):
         """
-        Returns object absolute URL.
+        Returns absolute URL.
         
         """
-        return '/%s/' % self.category.slug
+        return ('category', (), {'category_slug': self.category.slug})
+
+    @permalink
+    def get_archive_url(self):
+        """
+        Returns archive URL.
+        
+        """
+        issue = self.issues.all()[0]
+        return ('issues_archive_category', (), {
+            'issue_number': issue.number,
+            'category_slug': self.category.slug,
+        })
         
     def save(self):
         """ 

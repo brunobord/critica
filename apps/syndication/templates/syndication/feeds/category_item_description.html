@@ -1,3 +1,20 @@
-{{ obj.content|safe }}
-
-<p><strong>Par {% if obj.author.get_full_name %}{{ obj.author.get_full_name }}{% else %}{{ obj.author }}{% endif %}</strong></p>
+<p>
+    <strong>
+    Auteur :
+    {% if obj.author_nickname %}
+        {{ obj.author_nickname }}
+    {% else %} 
+        {% if obj.author.get_full_name %}
+            {{ obj.author.get_full_name }}
+        {% else %}
+            {{ obj.author }}
+        {% endif %}
+    {% endif %}
+    </strong>
+</p>
+{% if obj.summary %}
+    {{ obj.summary|safe }}
+    <p><a href="{{ obj.get_archive_url }}" title="Lire la suite...">Lire la suite...</a></p>
+{% else %}
+    {{ obj.content|safe }}
+{% endif %}

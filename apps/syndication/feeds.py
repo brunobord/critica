@@ -81,6 +81,13 @@ class LatestRss(Feed):
         items = [item for k, item in all_items]
         return items
 
+    def item_link(self, obj):
+        """
+        Channel item link.
+        
+        """
+        return obj.get_archive_url()
+
 
 class LatestByCategoryRss(LatestRss):
     """ 
@@ -134,11 +141,11 @@ class LatestByCategoryRss(LatestRss):
         
         """
         if obj.slug == 'voyages':
-            return VoyagesArticle.published.order_by('-publication_date')[0:1].get()
+            return VoyagesArticle.published.order_by('-publication_date')[0:1]
         elif obj.slug == 'epicurien':
             return EpicurienArticle.published.order_by('-publication_date')[0:3]
         elif obj.slug == 'coup-de-gueule':
-            return AngerArticle.published.order_by('-publication_date')[0:1].get()
+            return AngerArticle.published.order_by('-publication_date')[0:1]
         elif obj.slug == 'regions':
             return RegionNote.published.order_by('-publication_date')[0:26]
         else:
@@ -152,4 +159,11 @@ class LatestByCategoryRss(LatestRss):
                 all_items.append((note.id, note))
             items = [item for k, item in all_items]
             return items
+            
+    def item_link(self, obj):
+        """
+        Channel item link.
+        
+        """
+        return obj.get_archive_url()
 
