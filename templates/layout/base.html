@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
     <head>
         <title>Critica - {% block title %}{% endblock %}</title>
+		<link rel="icon" type="image/x-icon" href="{{ MEDIA_URL }}critica/favicon.gif" />
+		<!--[if lt IE 8]><link rel="shortcut icon" type="image/x-icon" href="{{ MEDIA_URL }}critica/favicon.ico" /><![endif]-->
         <!-- METAS -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="Keywords" content="" />
@@ -36,24 +38,7 @@
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/jquery.accordion.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/accordion_init.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/custom.js"></script>
-
-
         {% block extra_head %}{% endblock %}
-        
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles" href="/rss/articles/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique National" href="/rss/rubriques/national/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Étranger" href="/rss/rubriques/etranger/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Société" href="/rss/rubriques/societe/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Sports" href="/rss/rubriques/sports/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Pipoles" href="/rss/rubriques/pipoles/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Télé" href="/rss/rubriques/tele/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Bouquins" href="/rss/rubriques/bouquins/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Nanas" href="/rss/rubriques/nanas/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Insolite" href="/rss/rubriques/insolite/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Voyages" href="/rss/rubriques/voyages/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Régions" href="/rss/rubriques/regions/" />
-        <link rel="alternate" type="application/RSS+XML" title="Critica - Les derniers articles de la rubrique Coup de Gueule" href="/rss/rubriques/coup-de-gueule/" />
-
     </head>
     <body id="{% block body_id %}home{% endblock %}" class="{% block body_class %}{% endblock %}">
         <div id="bodyWrap">
@@ -127,7 +112,7 @@
                     <div id="pageOptions">
                         <ul>
                             <li class="print"><a href="#" title="Imprimer cette page" onClick="window.print()">Imprimer</a></li>
-                            <!--<li class="send"><a href="{% url sendfriend_index %}" title="Envoyer à un ami">Envoyer à un ami</a></li>-->
+                            <li class="send"><a href="{% url sendfriend_index %}" title="Envoyer à un ami">Envoyer à un ami</a></li>
                         </ul>
                     </div>
                     <!-- // PAGE OPTIONS -->
