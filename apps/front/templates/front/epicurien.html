@@ -75,7 +75,7 @@
 			   <!-- ARCHIVES -->
 			   <div id="archivesBar" class="articleList autoClear">
 				  <div>
-					 <h2>ARCHIVES COTÉ GOURMETS</h2>
+					 <h2><span>ARCHIVES COTÉ GOURMETS</span></h2>
 					 {% if archives_cotegourmets %}
 						{% with archives_cotegourmets as archives %}
 						    {% include "front/includes/category_archives.html" %}
@@ -143,7 +143,7 @@
                                 <!-- ARCHIVES -->
                                 <div id="archivesBar" class="articleList autoClear">
                                     <div>
-                                        <h2>ARCHIVES COT&Eacute; BAR</h2>
+                                        <h2><span>ARCHIVES COT&Eacute; BAR</span></h2>
                                         {% if archives_cotebar %}
                                             {% with archives_cotebar as archives %}
                                                 {% include "front/includes/category_archives.html" %}
@@ -211,10 +211,10 @@
                                 <!-- ARCHIVES -->
                                 <div id="archivesFumeur" class="articleList autoClear">
                                     <div>
-										<h2>ARCHIVES COT&Eacute; FUMEUR</h2>
-										{% if archives_cotefumeurs %}
+								<h2><span>ARCHIVES COT&Eacute; FUMEUR</span></h2>
+									{% if archives_cotefumeurs %}
                                             {% with archives_cotefumeurs as archives %}
-                                                {% include "front/includes/category_archives.html" %}
+                                          	{% include "front/includes/category_archives.html" %}
                                             {% endwith %}
                                         {% else %}
                                             {% include "front/includes/category_archives_empty.html" %}
