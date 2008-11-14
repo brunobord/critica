@@ -67,6 +67,9 @@ dd strong {
     color: #555;
     float: right;
 }
+dl div.pollResult{
+	clear:both;
+}
 
 </style>
 
@@ -81,8 +84,10 @@ dd strong {
 
     <dl class="autoClear">
         {% for choice in poll.choice_set.all %}
-        <dt>{{ choice.choice }}</dt>
-        <dd><div style="width:{{ choice.get_vote_percentage }}%"><span class="marker">&nbsp;</span></div><strong>{{ choice.get_vote_percentage }}%</strong></dd>
+	   <div class="pollResult">
+		   <dt>{{ choice.choice }}</dt>
+		   <dd><div style="width:{{ choice.get_vote_percentage }}%"><span class="marker">&nbsp;</span></div><strong>{{ choice.get_vote_percentage }}%</strong></dd>
+	   </div>
         {% endfor %}
     </dl>
     
