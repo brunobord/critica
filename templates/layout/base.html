@@ -36,6 +36,8 @@
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/jquery.accordion.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/plugins/accordion_init.js"></script>
         <script type="text/javascript" src="{{ MEDIA_URL }}critica/js/custom.js"></script>
+
+
         {% block extra_head %}{% endblock %}
     </head>
     <body id="{% block body_id %}home{% endblock %}" class="{% block body_class %}{% endblock %}">
@@ -110,7 +112,7 @@
                     <div id="pageOptions">
                         <ul>
                             <li class="print"><a href="#" title="Imprimer cette page" onClick="window.print()">Imprimer</a></li>
-                            <li class="send"><a href="{% url sendfriend_index %}" title="Envoyer à un ami">Envoyer à un ami</a></li>
+                            <!--<li class="send"><a href="{% url sendfriend_index %}" title="Envoyer à un ami">Envoyer à un ami</a></li>-->
                         </ul>
                     </div>
                     <!-- // PAGE OPTIONS -->
