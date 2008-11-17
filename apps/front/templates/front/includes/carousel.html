@@ -8,7 +8,7 @@
 {% load cache %}
 {% cache 0 ads_carousel %}
 <script type="text/javascript">
-swfobject.embedSWF("{{ MEDIA_URL }}critica/carousel/Carousel.swf", "{% if identifier %}{{ identifier }}{% else %}carousel1{% endif %}", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"{{ carousel.get_xml_url }}", loaderColor:"0xCCCCCC"}, {bgcolor: "#FFFFFF"});
+swfobject.embedSWF("{{ MEDIA_URL }}critica/carousel2beta/carousel2beta.swf", "{% if identifier %}{{ identifier }}{% else %}carousel1{% endif %}", "{{ format_width }}px", "{{ format_height }}px", "9.0.0", false, {xmlfile:"{{ carousel.get_xml_url }}", loaderColor:"0x666666"}, {bgcolor: "#FFFFFF", allowFullScreen: "true"});
 </script>
 {% endcache %}
 {% include "front/includes/pages_ads_link.html" %}
