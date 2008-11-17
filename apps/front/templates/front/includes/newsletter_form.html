@@ -1,4 +1,7 @@
 <form action="{% url newsletter_subscribe_form %}" method="POST">
     <p><input name="email" value="Votre e-mail" onfocus="this.value=''" size="50" maxlength="100" id="newsletterEmail" type="text" /></p>
 	<p class="submit"><input src="{{ MEDIA_URL }}critica/img/ok.png" alt="Valider" type="image" /></p>
+
 </form>
+
+		<div class="desabo"><a href="{% url newsletter_unsubscribe_form %}" title="Se désabonner de la newsletter">Accédez au formulaire de désabonnement.</a></div>

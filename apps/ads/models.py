@@ -473,19 +473,44 @@ class AdCarousel(models.Model):
         
         <slide_show>
         	<options>
+        		<debug>false</debug>					<!-- true, false -->
+			<background>#FFFFFF</background>			<!-- #RRGGBB, transparent -->
         		<background>#FFFFFF</background>		<!-- #RRGGBB, transparent -->
         		<fullscreen>true</fullscreen>
-        		<interaction>
-        			<speed>60</speed>
-        			<!-- [-360,360] degrees per second -->
-        			<default_speed>25</default_speed>
-        			<!-- [-360,360] degrees per second -->
-        			<default_view_point>80%</default_view_point>
-        			<!-- [0,100] percentage -->
-        			<reset_delay>5</reset_delay>
-        			<!-- [0,600] seconds, 0 means never reset -->
-        		</interaction>
-                <!-- [0,600] seconds, 0 means never reset -->
+<!-- style for titles -->
+		<title_style>font-size: 12; font-family: Verdana, _sans;</title_style>
+		
+		<margins>
+			<top>0</top>					<!-- [-1000,1000] pixels -->
+			<left>0</left>					<!-- [-1000,1000] pixels -->
+			<bottom>0</bottom>				<!-- [-1000,1000] pixels -->
+			<right>0</right>				<!-- [-1000,1000] pixels -->
+			<horizontal_ratio>80%</horizontal_ratio>	<!-- [1,50] a photo may occupy at most horizontalRatio percent of the Carousel width -->
+			<vertical_ratio>85%</vertical_ratio>		<!-- [1,100] a photo may occupy at most verticalRatio percent of the Carousel height -->
+		</margins>
+		
+		<interaction>
+			<rotation>mouse</rotation>			<!-- auto, mouse, keyboard -->
+			<view_point>mouse</view_point>			<!-- none, mouse, keyboard -->
+			<speed>90</speed>				<!-- [-360,360] degrees per second -->
+			<default_speed>25</default_speed>		<!-- [-360,360] degrees per second -->
+			<default_view_point>20%</default_view_point>	<!-- [0,100] percentage -->
+			<reset_delay>25</reset_delay>			<!-- [0,600] seconds, 0 means never -->
+		</interaction>
+		
+		<far_photos>
+			<size>75%</size>				<!-- [0,100] percentage -->
+			<amount>50%</amount>				<!-- [0,100] percentage -->
+			<blur>10</blur>					<!-- [0,100] amount -->
+			<blur_quality>1</blur_quality>			<!-- [1,3] 1=low - 3=high -->
+		</far_photos>
+		
+		<reflection>
+			<amout>100</amout>				<!-- [0,1000] pixels -->
+			<blur>3</blur>					<!-- [0,100] amount -->
+			<distance>0</distance>				<!-- [-1000,1000] pixels -->
+			<alpha>50%</alpha>				<!-- [0,100] percentage -->
+		</reflection>
         	</options>
         '''
         xml_file.write(xml_header)

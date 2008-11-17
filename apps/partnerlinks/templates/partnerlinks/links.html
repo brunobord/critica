@@ -1,4 +1,6 @@
 {% if partnerlinks %}
+<div id="partners">
+Les amis de Critic@ :</div>
 <ul class="partners">
 {% for link in partnerlinks %}
     <li><a href="{{ link.link }}" title="{{ link.name }}" target="_blank">{{ link.name }}</a></li>
