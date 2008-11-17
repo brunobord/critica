@@ -1,6 +1,7 @@
 {% load image_thumbnail articles_extra %}
 
 <div class="articleSection articleMain{% if article.is_featured %} articleExclusif{% endif %}">
+	{% if article.is_featured %}<p class="exclu"><strong>Exclu Critica !</strong></p>{% endif %}
 	<h2><span>&Agrave; la une</span></h2>
 	<div class="autoClear" style="margin-bottom:15px;">
     <h3>{{ article.title }}</h3>
