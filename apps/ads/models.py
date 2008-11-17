@@ -509,7 +509,7 @@ class AdCarouselBanner(models.Model):
     
     """
     link        = models.CharField(_('link'), max_length=255, help_text=_('Please, enter the banner link (URL).'))
-    #description = models.CharField(_('description'), max_length=255, blank=True, help_text=_('You can enter a short description for this banner.'))
+    description = models.CharField(_('description'), max_length=255, null=True, blank=True, help_text=_('You can enter a short description for this banner.'))
     carousel    = models.ForeignKey('ads.AdCarousel', verbose_name=_('carousel'), help_text=_('Please, select a carousel that will include this image.'))
     banner      = models.ImageField(upload_to=get_carousel_image_path, verbose_name=_('banner'), help_text=_('Please, select a banner to upload.'))
     
