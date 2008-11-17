@@ -1,7 +1,7 @@
 {% load image_thumbnail %}
 
 
-<div class="articleSection articleMain">
+<div class="articleSection articleMain{% if article.is_featured %} articleExclusif{% endif %}">
 
 	{% if is_preview %}
 	    <h2><span><a href="{% url issues_preview_category issue.secret_key,article.category.slug %}">{{ article.category.name }}</a></span></h2>
