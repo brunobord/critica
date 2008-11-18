@@ -85,6 +85,10 @@ class Command(NoArgsCommand):
         print "\nILLUSTRATIONS"
         self._draw_separator()
         self.clean_illustrations()
+        
+        print "\nISSUES"
+        self._draw_separator()
+        self.clean_issues()
 
         print "\nNOTES / BREVES"
         self._draw_separator()
@@ -188,6 +192,23 @@ class Command(NoArgsCommand):
         
         """
         print "Nothing yet..."
+        
+        
+    def clean_issues(self):
+        """
+        Clean issues.
+        
+        """
+        from critica.apps.issues.models import Issue
+        from critica.apps.utils import urlbase64
+        
+        # Generate encoded secret keys
+        # ----------------------------------------------------------------------
+        issues = Issue.objects.all()
+        for issue in issues:
+            issue.secret_key = urlbase64.uri_b64encode(str(issue.number))
+            issue.save()
+        print "Generate secret keys... OK."
 
     
     def clean_issues(self):
