@@ -1,0 +1,212 @@
+[
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": " / ", 
+            "slug": "-"
+        }, 
+        "model": "categories.category", 
+        "pk": 4001
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Soci\u00e9t\u00e9", 
+            "slug": "accueil-societe"
+        }, 
+        "model": "categories.category", 
+        "pk": 4002
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Sport", 
+            "slug": "accueil-sport"
+        }, 
+        "model": "categories.category", 
+        "pk": 4003
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Pipoles", 
+            "slug": "accueil-pipoles"
+        }, 
+        "model": "categories.category", 
+        "pk": 4004
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / T\u00e9l\u00e9", 
+            "slug": "accueil-tele"
+        }, 
+        "model": "categories.category", 
+        "pk": 4005
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Bouquins", 
+            "slug": "accueil-bouquins"
+        }, 
+        "model": "categories.category", 
+        "pk": 4006
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Nanas", 
+            "slug": "accueil-nanas"
+        }, 
+        "model": "categories.category", 
+        "pk": 4007
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Insolite", 
+            "slug": "accueil-insolite"
+        }, 
+        "model": "categories.category", 
+        "pk": 4008
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Voyages", 
+            "slug": "accueil-voyages"
+        }, 
+        "model": "categories.category", 
+        "pk": 4009
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Actualit\u00e9s / National", 
+            "slug": "accueil-actualites-national"
+        }, 
+        "model": "categories.category", 
+        "pk": 4010
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / Actualit\u00e9s / International", 
+            "slug": "accueil-actualites-international"
+        }, 
+        "model": "categories.category", 
+        "pk": 4011
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / L'Epicurien / C\u00f4t\u00e9 fumeur", 
+            "slug": "accueil-l-epicurien-cote-fumeur"
+        }, 
+        "model": "categories.category", 
+        "pk": 4012
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / L'Epicurien / C\u00f4t\u00e9 gourmets", 
+            "slug": "accueil-l-epicurien-cote-gourmets"
+        }, 
+        "model": "categories.category", 
+        "pk": 4013
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / R\u00e9gions", 
+            "slug": "accueil-regions"
+        }, 
+        "model": "categories.category", 
+        "pk": 4014
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-21 08:28:41", 
+            "description": "", 
+            "image": "", 
+            "image_credits": "MAXPPP", 
+            "image_legend": "", 
+            "modification_date": "2008-09-21 08:28:41", 
+            "name": "Accueil / L'Epicurien / C\u00f4t\u00e9 alcools", 
+            "slug": "accueil-l-epicurien-cote-alcools"
+        }, 
+        "model": "categories.category", 
+        "pk": 4015
+    }
+]

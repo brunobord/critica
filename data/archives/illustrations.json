@@ -1,0 +1,1592 @@
+[
+    {
+        "fields": {
+            "creation_date": "2008-03-31 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/VENDREDI28MARS/caricatureok.jpg", 
+            "issues": [
+                55
+            ], 
+            "legend": "INGRID BETANCOURT AU PLUS MAL", 
+            "modification_date": "2008-03-31 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4001
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-30 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI30AVRIL/caricature.jpg", 
+            "issues": [
+                73
+            ], 
+            "legend": "LES DETAILS DE LE PEN", 
+            "modification_date": "2008-04-30 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4002
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-29 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI29MAI/caricature.jpg", 
+            "issues": [
+                87
+            ], 
+            "legend": "COMMISSION COPE : d\u00e9part du PS", 
+            "modification_date": "2008-05-29 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4003
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-30 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI30JUIN/caricature.jpg", 
+            "issues": [
+                103
+            ], 
+            "legend": "VOYAGE EN ISRAEL LA SEMAINE DERNIERE", 
+            "modification_date": "2008-06-30 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4004
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-31 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI31JUILLET/criticavacancescaricature.jpg", 
+            "issues": [
+                122
+            ], 
+            "legend": "MOIS D'AOUT : CRITIC@ EST EN VACANCES", 
+            "modification_date": "2008-07-31 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4005
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-30 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI30SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                139
+            ], 
+            "legend": "Pourquoi McCain suspend sa campagne...", 
+            "modification_date": "2008-09-30 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4006
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-10-09 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI9OCTOBRE/caricature.jpg", 
+            "issues": [
+                145
+            ], 
+            "legend": "CRISE : SARKO VEUT PUNIR LES COUPABLES", 
+            "modification_date": "2008-10-09 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4007
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-01 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI1erAVRIL/caricature.jpg", 
+            "issues": [
+                56
+            ], 
+            "legend": "BAISSE DU CHOMAGE", 
+            "modification_date": "2008-04-01 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4008
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-29 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI29MAI/caricature.jpg", 
+            "issues": [
+                88
+            ], 
+            "legend": "COMMISSION COPE : d\u00e9part du PS", 
+            "modification_date": "2008-05-29 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4009
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-01 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI1erJUILLET/caricature.jpg", 
+            "issues": [
+                105
+            ], 
+            "legend": "REFORME DE LA SECU : LES PATHOLOGIES LES PLUS GRAVES VISEES", 
+            "modification_date": "2008-07-01 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4010
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-01 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI1erSEPTEMBRE/caricature.jpg", 
+            "issues": [
+                123
+            ], 
+            "legend": "Diplomatie fran\u00e7aise, ou l'art de retourner sa veste...", 
+            "modification_date": "2008-09-01 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4011
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-10-01 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI1EROCTOBRE/caricature.jpg", 
+            "issues": [
+                140
+            ], 
+            "legend": "CRISE, LA FRANCE EPARGNEE ?", 
+            "modification_date": "2008-10-01 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4012
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-02 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI2AVRIL/caricature.jpg", 
+            "issues": [
+                57
+            ], 
+            "legend": "LE VISON A EU RAISON DU PAU-LANGON", 
+            "modification_date": "2008-04-02 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4013
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-02 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI2JUIN/caricature.jpg", 
+            "issues": [
+                89
+            ], 
+            "legend": "GASOIL : LA CRISE GAGNE DU TERRAIN", 
+            "modification_date": "2008-06-02 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4014
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-02 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI2JUILLET/caricature.jpg", 
+            "issues": [
+                106
+            ], 
+            "legend": "VOYAGE EN ISRAEL : ET POURTANT, IL A PRIE !", 
+            "modification_date": "2008-07-02 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4015
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-02 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI1erSEPTEMBRE/caricature.jpg", 
+            "issues": [
+                124
+            ], 
+            "legend": "Diplomatie fran\u00e7aise, ou l'art de retourner sa veste...", 
+            "modification_date": "2008-09-02 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4016
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-10-02 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI2OCTOBRE/caricature1.jpg", 
+            "issues": [
+                141
+            ], 
+            "legend": "GILETS ET TRIANGLES OBLIGATOIRES", 
+            "modification_date": "2008-10-02 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4017
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-03 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI3AVRIL/caricature.jpg", 
+            "issues": [
+                58
+            ], 
+            "legend": "LIBERATION DES MEMBRES DE L'ARCHE DE ZOE", 
+            "modification_date": "2008-04-03 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4018
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-03 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI2JUIN/caricature.jpg", 
+            "issues": [
+                90
+            ], 
+            "legend": "GASOIL : LA CRISE GAGNE DU TERRAIN", 
+            "modification_date": "2008-06-03 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4019
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-03 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI3JUILLET/caricature.jpg", 
+            "issues": [
+                107
+            ], 
+            "legend": "INGRID BIENTOT EN FRANCE", 
+            "modification_date": "2008-07-03 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4020
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-03 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI3SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                125
+            ], 
+            "legend": "CLAVIER-SARKO : l'enqu\u00eate (se) Corse !", 
+            "modification_date": "2008-09-03 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4021
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-04 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI4MARS/caricature.jpg", 
+            "issues": [
+                37
+            ], 
+            "legend": "PARISOT EN GUERRE CONTRE L'UIMM", 
+            "modification_date": "2008-03-04 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4022
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-04 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/VENDREDI4AVRIL/caricature.jpg", 
+            "issues": [
+                59
+            ], 
+            "legend": "ENVOI D'UNE MISSION POUR INGRID", 
+            "modification_date": "2008-04-04 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4023
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-04 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI4JUIN/caricature.jpg", 
+            "issues": [
+                91
+            ], 
+            "legend": "AUBRY, LE RETOUR !", 
+            "modification_date": "2008-06-04 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4024
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-04 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI4SEPTEMBRE/caricatureok.jpg", 
+            "issues": [
+                126
+            ], 
+            "legend": "Ce Obama ressemble \u00e0 quelqu'un qu'on conna\u00eet, mais qui ???", 
+            "modification_date": "2008-09-04 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4025
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-05 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI5MARS/caricature.jpg", 
+            "issues": [
+                38
+            ], 
+            "legend": "HAUSSE DES PRIX : LAGARDE MENE L'ENQUETE", 
+            "modification_date": "2008-03-05 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4026
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-05 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI5MAI/caricature.jpg", 
+            "issues": [
+                74
+            ], 
+            "legend": "SARKOZY, UN AN DEJA !", 
+            "modification_date": "2008-05-05 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4027
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-05 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI5JUIN/caricature.jpg", 
+            "issues": [
+                92
+            ], 
+            "legend": "ANNULATION MARIAGE : RACHIDA EN PERD LA TETE", 
+            "modification_date": "2008-06-05 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4028
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-06 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI6MARS/caricature.jpg", 
+            "issues": [
+                39
+            ], 
+            "legend": "MEDVEDEV : VERS UNE RUSSIE PLUS LIBERALE ?", 
+            "modification_date": "2008-03-06 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4029
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-06 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI6MAI/caricature.jpg", 
+            "issues": [
+                75
+            ], 
+            "legend": "REFORMES DU MONDE DU TRAVAIL : RESULTATS ATTENDUS POUR 2012", 
+            "modification_date": "2008-05-06 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4030
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-10-06 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI6OCTOBRE/caricature.jpg", 
+            "issues": [
+                142
+            ], 
+            "legend": "VERS UNE SUPPRESSION DES PARACHUTES DORES ?", 
+            "modification_date": "2008-10-06 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4031
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-07 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/VENDREDI7MARS/caricature.jpg", 
+            "issues": [
+                40
+            ], 
+            "legend": "RETRAITE : LA REVALORISATION EN QUESTION", 
+            "modification_date": "2008-03-07 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4032
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-07 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI7AVRIL/caricature.jpg", 
+            "issues": [
+                60
+            ], 
+            "legend": "HUGO CHAVEZ PROPOSE SON AIDE A LA FRANCE", 
+            "modification_date": "2008-04-07 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4033
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-07 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI7MAI/caricature.jpg", 
+            "issues": [
+                76
+            ], 
+            "legend": "CYCLONE EN BIRMANIE", 
+            "modification_date": "2008-05-07 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4034
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-07 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI7JUILLET/caricaturebis.jpg", 
+            "issues": [
+                108
+            ], 
+            "legend": "SARKO : ENFIN, L'EUROPE !", 
+            "modification_date": "2008-07-07 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4035
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-10-07 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI6OCTOBRE/caricature.jpg", 
+            "issues": [
+                143
+            ], 
+            "legend": "VERS UNE SUPPRESSION DES PARACHUTES DORES ?", 
+            "modification_date": "2008-10-07 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4036
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-08 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI8AVRIL/caricature.jpg", 
+            "issues": [
+                61
+            ], 
+            "legend": "ARRIVEE DE LA FLAMME OLYMPIQUE", 
+            "modification_date": "2008-04-08 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4037
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-08 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI8JUILLET/caricature.jpg", 
+            "issues": [
+                109
+            ], 
+            "legend": "LIBERATION D'INGRID : ET PENDANT CE TEMPS-LA...", 
+            "modification_date": "2008-07-08 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4038
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-08 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI8SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                127
+            ], 
+            "legend": "RAFFARIN PREPARE SA PRESIDENCE DU SENAT", 
+            "modification_date": "2008-09-08 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4039
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-10-08 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI8OCTOBRE/caricature.jpg", 
+            "issues": [
+                144
+            ], 
+            "legend": "La crise... mais pas pour tout le monde !", 
+            "modification_date": "2008-10-08 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4040
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-09 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI9AVRIL/caricature.jpg", 
+            "issues": [
+                62
+            ], 
+            "legend": "FLAMME OLYMPIQUE : DOUILLET PHILOSOPHE", 
+            "modification_date": "2008-04-09 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4041
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-09 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI9JUIN/caricature.jpg", 
+            "issues": [
+                93
+            ], 
+            "legend": "ATHENES : LE DISCOBOLE FRANCAIS EN ACTION", 
+            "modification_date": "2008-06-09 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4042
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-09 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI9JUILLET/caricatureG8.jpg", 
+            "issues": [
+                110
+            ], 
+            "legend": "PENDANT QUE VOUS BRONZEZ, SARKOZY BOSSE : IL EST AU G8 !", 
+            "modification_date": "2008-07-09 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4043
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-09 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI9SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                128
+            ], 
+            "legend": "L'affaire Clavier laisse des traces", 
+            "modification_date": "2008-09-09 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4044
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-10-09 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI8OCTOBRE/caricature.jpg", 
+            "issues": [
+                145
+            ], 
+            "legend": "La crise... mais pas pour tout le monde !", 
+            "modification_date": "2008-10-09 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4045
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-10 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI10MARS/caricature.jpg", 
+            "issues": [
+                41
+            ], 
+            "legend": "LE TSUNAMI ROSE N'A PAS EU LIEU", 
+            "modification_date": "2008-03-10 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4046
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-10 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI10AVRIL/caricature.jpg", 
+            "issues": [
+                63
+            ], 
+            "legend": "DROITS DE L'HOMME SAUCE ELYSEENNE", 
+            "modification_date": "2008-04-10 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4047
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-10 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI10JUIN/caricature.jpg", 
+            "issues": [
+                94
+            ], 
+            "legend": "GASOIL : LA GROGNE GAGNE L'EUROPE", 
+            "modification_date": "2008-06-10 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4048
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-10 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI9JUILLET/caricatureG8.jpg", 
+            "issues": [
+                111
+            ], 
+            "legend": "PENDANT QUE VOUS BRONZEZ, SARKOZY BOSSE : IL EST AU G8 !", 
+            "modification_date": "2008-07-10 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4049
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-10 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI10SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                129
+            ], 
+            "legend": "Royan ou l'unit\u00e9 de fa\u00e7ade", 
+            "modification_date": "2008-09-10 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4050
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-11 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI10MARS/caricature.jpg", 
+            "issues": [
+                42
+            ], 
+            "legend": "LE TSUNAMI ROSE N'A PAS EU LIEU", 
+            "modification_date": "2008-03-11 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4051
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-11 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI11SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                130
+            ], 
+            "legend": "VISITE DU PAPE EN FRANCE", 
+            "modification_date": "2008-09-11 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4052
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-12 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI10MARS/caricature.jpg", 
+            "issues": [
+                43
+            ], 
+            "legend": "LE TSUNAMI ROSE N'A PAS EU LIEU", 
+            "modification_date": "2008-03-12 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4053
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-12 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI10JUIN/caricature.jpg", 
+            "issues": [
+                95
+            ], 
+            "legend": "GASOIL : LA GROGNE GAGNE L'EUROPE", 
+            "modification_date": "2008-06-12 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4054
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-13 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI13MARS/caricature.jpg", 
+            "issues": [
+                44
+            ], 
+            "legend": "PARIS : LE MODEM EVINCE PAR LES VERTS", 
+            "modification_date": "2008-03-13 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4055
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-13 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI13MAI/caricature.jpg", 
+            "issues": [
+                77
+            ], 
+            "legend": "\u00d4 miroir, dis-moi que je suis le plus...", 
+            "modification_date": "2008-05-13 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4056
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-14 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/VENDREDI14MARS/caricatureextra.jpg", 
+            "issues": [
+                45
+            ], 
+            "legend": "MODEM : OU LA STRATEGIE DE L'INCONSTANCE", 
+            "modification_date": "2008-03-14 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4057
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-14 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI14MAI/caricature.jpg", 
+            "issues": [
+                78
+            ], 
+            "legend": "MODEM : CHERCHE DESESPEREMENT POINTURE POLITIQUE", 
+            "modification_date": "2008-05-14 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4058
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-15 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI15MAI/caricature.jpg", 
+            "issues": [
+                79
+            ], 
+            "legend": "La taxe flottante qui coule le budget des m\u00e9nages", 
+            "modification_date": "2008-05-15 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4059
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-15 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI15JUILLET/caricature.jpg", 
+            "issues": [
+                112
+            ], 
+            "legend": "DECLARATIONS, CAMBRIOLAGES : SEGOLENE EST TOUJOURS LA !", 
+            "modification_date": "2008-07-15 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4060
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-15 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI11SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                131
+            ], 
+            "legend": "VISITE DU PAPE EN FRANCE", 
+            "modification_date": "2008-09-15 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4061
+    }, 
+    {
+        "fields": {
+            "creation_date": "2007-12-16 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI16AVRIL/caricature.jpg", 
+            "issues": [
+                64
+            ], 
+            "legend": "UNE CLAUSE DE MOBILITE POUR LES NOUVEAUX FONCTIONNAIRES", 
+            "modification_date": "2007-12-16 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4062
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-16 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI10JUIN/caricature.jpg", 
+            "issues": [
+                96
+            ], 
+            "legend": "GASOIL : LA GROGNE GAGNE L'EUROPE", 
+            "modification_date": "2008-06-16 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4063
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-16 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI16JUILLET/caricature.jpg", 
+            "issues": [
+                113
+            ], 
+            "legend": "Apr\u00e8s Kadhafi, Bachar au pays des Droits de l'Homme", 
+            "modification_date": "2008-07-16 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4064
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-16 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI16SEPTEMBRE/caricatureAIRITALIA.jpg", 
+            "issues": [
+                132
+            ], 
+            "legend": "VERS UN DEPOT DE BILAN DE AIR-ITALIA", 
+            "modification_date": "2008-09-16 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4065
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-17 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI17AVRIL/caricature.jpg", 
+            "issues": [
+                65
+            ], 
+            "legend": "UNE LOI CONTRE L'ANOREXIE", 
+            "modification_date": "2008-04-17 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4066
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-17 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI17JUIN/caricature.jpg", 
+            "issues": [
+                97
+            ], 
+            "legend": "CHIRAC, toujours pour le dialogue des cultures", 
+            "modification_date": "2008-06-17 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4067
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-17 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI18JUILLET/caricature.jpg", 
+            "issues": [
+                114
+            ], 
+            "legend": "APRES LE DEFILE DU 14 JUILLET : MORIN, TOUT VA BIEN !", 
+            "modification_date": "2008-07-17 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4068
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-17 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI17SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                133
+            ], 
+            "legend": "SENAT : LARCHER/RAFFARIN, le combat des titans", 
+            "modification_date": "2008-09-17 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4069
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-18 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI17MARS/caricature.jpg", 
+            "issues": [
+                47
+            ], 
+            "legend": "OBSEQUES NATIONALES DU DERNIER POILU", 
+            "modification_date": "2008-03-18 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4070
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-18 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI17AVRIL/caricature.jpg", 
+            "issues": [
+                66
+            ], 
+            "legend": "UNE LOI CONTRE L'ANOREXIE", 
+            "modification_date": "2008-04-18 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4071
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-18 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI18JUIN/caricature.jpg", 
+            "issues": [
+                98
+            ], 
+            "legend": "LE VOTE IRLANDAIS", 
+            "modification_date": "2008-06-18 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4072
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-18 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI18SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                134
+            ], 
+            "legend": "NOTRE TOP GUN NATIONAL A ENFIN SON AIR-FORCE ONE !", 
+            "modification_date": "2008-09-18 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4073
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-19 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI19MAI/caricature.jpg", 
+            "issues": [
+                80
+            ], 
+            "legend": "LE NOUVEAU CENTRE", 
+            "modification_date": "2008-05-19 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4074
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-19 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI19JUIN/caricature.jpg", 
+            "issues": [
+                99
+            ], 
+            "legend": "TOTAL : AUGMENTATION DE LA PRIME A LA CUVE", 
+            "modification_date": "2008-06-19 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4075
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-20 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI20MARS/caricature.jpg", 
+            "issues": [
+                49
+            ], 
+            "legend": "VIOLENCES AU TIBET 2 : LA FRANCE DANS SES PETITS CHAUSSONS", 
+            "modification_date": "2008-03-20 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4076
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-20 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI20MAI/caricature.jpg", 
+            "issues": [
+                81
+            ], 
+            "legend": "REFONTE SCOLAIRE : PLUS DE DISCIPLINE", 
+            "modification_date": "2008-05-20 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4077
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-21 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/VENDREDI21MARS/caricatureok.jpg", 
+            "issues": [
+                50
+            ], 
+            "legend": "HAPPY BIRTHDAY IRAK", 
+            "modification_date": "2008-03-21 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4078
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-21 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI17AVRIL/caricature.jpg", 
+            "issues": [
+                67
+            ], 
+            "legend": "UNE LOI CONTRE L'ANOREXIE", 
+            "modification_date": "2008-04-21 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4079
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-21 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI21MAI/caricature.jpg", 
+            "issues": [
+                82
+            ], 
+            "legend": "PS : ENFIN L'UNITE", 
+            "modification_date": "2008-05-21 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4080
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-21 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI21JUILLET/caricatureunionmediterran%C3%A9e.jpg", 
+            "issues": [
+                115
+            ], 
+            "legend": "SARKOZY BATAILLE POUR L'UNION DE LA MEDITERRANEE", 
+            "modification_date": "2008-07-21 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4081
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-22 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI22AVRIL/caricature.jpg", 
+            "issues": [
+                68
+            ], 
+            "legend": "CANNELLE : relaxe pour le chasseur", 
+            "modification_date": "2008-04-22 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4082
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-22 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI22MAI/caricature.jpg", 
+            "issues": [
+                83
+            ], 
+            "legend": "MAI 68 - MAI 2008 : un p'tit go\u00fbt de revenez-y !", 
+            "modification_date": "2008-05-22 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4083
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-22 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI22JUILLET/caricature.jpg", 
+            "issues": [
+                116
+            ], 
+            "legend": "Y A-T-IL EU DES PRESSIONS AVANT LE VOTE D'HIER ?", 
+            "modification_date": "2008-07-22 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4084
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-22 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI22SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                135
+            ], 
+            "legend": "TAXE PIQUE-NIQUE : entre Woerth et Borloo, y a pas de tango !", 
+            "modification_date": "2008-09-22 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4085
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-23 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI23AVRIL/caricature.jpg", 
+            "issues": [
+                69
+            ], 
+            "legend": "CHINE : Les lettres de mon moulin \u00e0 la sauce Sarko", 
+            "modification_date": "2008-04-23 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4086
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-23 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI19JUIN/caricature.jpg", 
+            "issues": [
+                100
+            ], 
+            "legend": "TOTAL : AUGMENTATION DE LA PRIME A LA CUVE", 
+            "modification_date": "2008-06-23 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4087
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-23 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI23JUILLET/caricature.jpg", 
+            "issues": [
+                117
+            ], 
+            "legend": "REFORME PASSEE D'UNE COURTE TETE...", 
+            "modification_date": "2008-07-23 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4088
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-23 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI22SEPTEMBRE/caricature.jpg", 
+            "issues": [
+                136
+            ], 
+            "legend": "TAXE PIQUE-NIQUE : entre Woerth et Borloo, y a pas de tango !", 
+            "modification_date": "2008-09-23 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4089
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-24 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI24AVRIL/caricature.jpg", 
+            "issues": [
+                70
+            ], 
+            "legend": "Une mer de sondages", 
+            "modification_date": "2008-04-24 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4090
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-24 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI19JUIN/caricature.jpg", 
+            "issues": [
+                101
+            ], 
+            "legend": "TOTAL : AUGMENTATION DE LA PRIME A LA CUVE", 
+            "modification_date": "2008-06-24 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4091
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-24 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI24JUILLET/caricature.jpg", 
+            "issues": [
+                118
+            ], 
+            "legend": "Malgr\u00e9 son d\u00e9guisement, Karadzic a \u00e9t\u00e9 arr\u00eat\u00e9", 
+            "modification_date": "2008-07-24 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4092
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-24 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload//caricature.JPG", 
+            "issues": [
+                137
+            ], 
+            "legend": "50 millions d'euros pris sur le budget d'insertion des handicap\u00e9s !", 
+            "modification_date": "2008-09-24 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4093
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-25 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MARDI25MARS/caricature.jpg", 
+            "issues": [
+                51
+            ], 
+            "legend": "DEPART DE LA FLAMME OLYMPIQUE", 
+            "modification_date": "2008-03-25 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4094
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-25 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI19JUIN/caricature.jpg", 
+            "issues": [
+                102
+            ], 
+            "legend": "TOTAL : AUGMENTATION DE LA PRIME A LA CUVE", 
+            "modification_date": "2008-06-25 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4095
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-26 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI26MARS/caricature.jpg", 
+            "issues": [
+                52
+            ], 
+            "legend": "LA CROISSANCE REVUE A LA BAISSE", 
+            "modification_date": "2008-03-26 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4096
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-26 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI26MAI/caricature.jpg", 
+            "issues": [
+                84
+            ], 
+            "legend": "JOURNEE DE LA BIO-DIVERSITE", 
+            "modification_date": "2008-05-26 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4097
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-06-26 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI26JUIN/caricature.jpg", 
+            "issues": [
+                103
+            ], 
+            "legend": "RAPPORT COPE : VERS UNE TELEVISION PLUS INDEPENDANTE", 
+            "modification_date": "2008-06-26 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4098
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-27 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/JEUDI27MARS/caricature.jpg", 
+            "issues": [
+                53
+            ], 
+            "legend": "VOYAGE EN ANGLETERRE : LES VRAIES RAISONS", 
+            "modification_date": "2008-03-27 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4099
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-27 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI26MAI/caricature.jpg", 
+            "issues": [
+                85
+            ], 
+            "legend": "JOURNEE DE LA BIO-DIVERSITE", 
+            "modification_date": "2008-05-27 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4100
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-03-28 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/VENDREDI28MARS/caricatureok.jpg", 
+            "issues": [
+                54
+            ], 
+            "legend": "INGRID BETANCOURT AU PLUS MAL", 
+            "modification_date": "2008-03-28 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4101
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-28 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI28AVRIL/caricature.jpg", 
+            "issues": [
+                71
+            ], 
+            "legend": "SARKOZY ET L'ENERGIE RENOUVELABLE", 
+            "modification_date": "2008-04-28 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4102
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-05-28 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI28MAI/caricature.jpg", 
+            "issues": [
+                86
+            ], 
+            "legend": "DEFICIT BUDGETAIRE : LA FRANCE DANS LES CHOUX", 
+            "modification_date": "2008-05-28 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4103
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-04-29 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/LUNDI28AVRIL/caricature.jpg", 
+            "issues": [
+                72
+            ], 
+            "legend": "SARKOZY ET L'ENERGIE RENOUVELABLE", 
+            "modification_date": "2008-04-29 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4104
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-09-29 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload//caricature.JPG", 
+            "issues": [
+                138
+            ], 
+            "legend": "50 millions d'euros pris sur le budget d'insertion des handicap\u00e9s !", 
+            "modification_date": "2008-09-29 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4105
+    }, 
+    {
+        "fields": {
+            "creation_date": "2008-07-30 00:00:01", 
+            "credits": "Dessin de Franck Meffre pour Critic@", 
+            "image": "upload/MERCREDI30JUILLET/caricatureter.jpg", 
+            "issues": [
+                121
+            ], 
+            "legend": "ADOPTION : mise en place des \"peace corps\" par Rama Yade", 
+            "modification_date": "2008-07-30 00:00:01", 
+            "submitter": 1
+        }, 
+        "model": "illustrations.illustrationoftheday", 
+        "pk": 4106
+    }
+]
