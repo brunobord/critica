@@ -209,14 +209,37 @@ class Command(NoArgsCommand):
             issue.secret_key = urlbase64.uri_b64encode(str(issue.number))
             issue.save()
         print "Generate secret keys... OK."
-
-    
-    def clean_issues(self):
-        """
-        Clean issues.
         
-        """
-        print "Nothing yet..."
+        # Generate positions
+        # ----------------------------------------------------------------------
+        from critica.apps.positions.models import DefaultCategoryPosition
+        from critica.apps.positions.models import IssueCategoryPosition
+        from critica.apps.positions.models import DefaultNotePosition
+        from critica.apps.positions.models import IssueNotePosition
+        from critica.apps.categories.models import Category
+        from critica.apps.quotas.models import DefaultCategoryQuota
+        from critica.apps.quotas.models import CategoryQuota
+        
+        issues = Issue.objects.all()
+        
+        for issue in issues:
+            # categories
+            default_positions = DefaultCategoryPosition.objects.all()
+            for default_position in default_positions:
+                issue_position = IssueCategoryPosition(issue=issue, category=default_position.category, position=default_position.position)
+                issue_position.save()
+            # notes
+            default_positions = DefaultNotePosition.objects.all()
+            for default_position in default_positions:
+                issue_position = IssueNotePosition(issue=issue, category=default_position.category, type=default_position.type, position=default_position.position)
+                issue_position.save()
+            # quotas
+            default_quotas = DefaultCategoryQuota.objects.all()
+            for default_quota in default_quotas:
+                category = Category.objects.get(slug=default_quota.category.slug)
+                category_quota = CategoryQuota(issue=issue, category=category, quota=default_quota.quota)
+                category_quota.save()        
+        print "Generate positions and quotas for all issues... OK."
 
 
     def clean_notes(self):
