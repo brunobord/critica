@@ -78,8 +78,8 @@ class BaseNoteAdmin(BaseArticleAdmin):
             print my_choices
             field.choices = my_choices
         if db_field.name == 'issues': 
-            my_choices = []
-            my_choices.extend(Issue.objects.all().values_list('id','number')[:15])
+            my_choices = [('', '---------')]
+            my_choices.extend(Issue.objects.order_by('number').values_list('id','number'))
             print my_choices
             field.choices = my_choices
         if db_field.name == 'category':
