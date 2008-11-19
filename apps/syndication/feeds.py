@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Feeds for ``critica``.
 
@@ -62,24 +63,28 @@ class LatestRss(Feed):
         all_items = []
         # Articles standard categories
         articles = Article.published.order_by('-publication_date')[0:9]
-        for a in articles:
-            all_items.append((a.id, a))
+        for article in articles:
+            all_items.append(article)
         # Regions
         featured = FeaturedRegion.objects.filter(issue__is_published=True).order_by('-issue')[0:1].get()
         region_note = RegionNote.published.filter(region__id=featured.region.id).order_by('-publication_date')[0:1].get()
-        all_items.append((region_note.id, region_note))
+        all_items.append(region_note)
         # Voyages
-        article_voyages = VoyagesArticle.published.order_by('-publication_date')[0:1].get()
-        all_items.append((article_voyages.id, article_voyages))
-        # Epicurien
-        articles_epicurien = EpicurienArticle.published.order_by('-publication_date')[0:3]
-        for a in articles_epicurien:
-            all_items.append((a.id, a))
+        article = VoyagesArticle.published.order_by('-publication_date')[0:1].get()
+        all_items.append(article)
+        # Epicurien Côté Gourmets
+        article = EpicurienArticle.published.filter(type__id=1).order_by('-publication_date')[0:1].get()
+        all_items.append(article)
+        # Epicurien Côté Bar
+        article = EpicurienArticle.published.filter(type__id=2).order_by('-publication_date')[0:1].get()
+        all_items.append(article)
+        # Epicurien Côté Fumeurs
+        article = EpicurienArticle.published.filter(type__id=3).order_by('-publication_date')[0:1].get()
+        all_items.append(article)
         # Anger
-        article_anger = AngerArticle.published.order_by('-publication_date')[0:1].get()
-        all_items.append((article_anger.id, article_anger))
-        items = [item for k, item in all_items]
-        return items
+        article = AngerArticle.published.order_by('-publication_date')[0:1].get()
+        all_items.append(article)
+        return all_items
 
     def item_link(self, obj):
         """
@@ -152,13 +157,12 @@ class LatestByCategoryRss(LatestRss):
             all_items = []
             # Article
             article = Article.published.filter(category=obj).order_by('-publication_date')[0:1].get()
-            all_items.append((article.id, article))
+            all_items.append(article)
             # Notes
             notes = Note.published.filter(category=obj).order_by('-publication_date')[0:40]
             for note in notes:
-                all_items.append((note.id, note))
-            items = [item for k, item in all_items]
-            return items
+                all_items.append(note)
+            return all_items
             
     def item_link(self, obj):
         """
