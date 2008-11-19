@@ -21,6 +21,7 @@
         <ul>
             <li>Bienvenue sur le Dashboard Éditions.</li>
             <li>Vous consultez actuellement le dashboard de l'édition : <a href="/admin/issues/issue/{{ issue.id }}">{{ issue.number }}</a></li>
+            <li>Vous pouvez consulter la newsletter de cette édition : <a href="/admin/newsletter/preview/{{ issue.number }}/html/" title="Consulter la newsletter de cette édition au format HTML">format HTML</a> ou <a href="/admin/newsletter/preview/{{ issue.number }}/txt/" title="Consulter la newsletter de cette édition au format text">format texte (txt)</a></li>
             {% if issue.is_published %}
             <li>Cette édition est en ligne et consultable via les archives&nbsp;: <a href="{{ site_url }}/archives/{{ issue.number }}/" target="_blank">{{ site_url }}/archives/{{ issue.number }}/</a></li>
             <li>
