@@ -1,67 +1,68 @@
+{% load utils_extra %}
 Critica - Le journal pertinent et impertinent 	
 {{ newsletter_issue.publication_date|date:"d F Y" }} | N°{{ newsletter_issue.number }}
 
 
 - National
-{{ article_national.title }}
-{{ article_national.summary|safe|striptags }}
+{{ article_national.title|safe|striptags|replace_html_entities }}
+{{ article_national.summary|safe|striptags|replace_html_entities }}
 
 	
 - Etranger
-{{ article_etranger.title }}
-{{ article_etranger.summary|safe|striptags }}
+{{ article_etranger.title|safe|striptags|replace_html_entities }}
+{{ article_etranger.summary|safe|striptags|replace_html_entities }}
 
 
 - Bouquins
-{{ article_bouquins.title }}
-{{ article_bouquins.summary|safe|striptags }}
+{{ article_bouquins.title|safe|striptags|replace_html_entities }}
+{{ article_bouquins.summary|safe|striptags|replace_html_entities }}
 
 
 - Société
-{{ article_societe.title }}
+{{ article_societe.title|safe|striptags|replace_html_entities }}
 	
 	
 - Télé
-{{ article_tele.title }}
+{{ article_tele.title|safe|striptags|replace_html_entities }}
 	
 - Nanas
-{{ article_nanas.title }}
+{{ article_nanas.title|safe|striptags|replace_html_entities }}
 	
 	
 - Pipoles
-{{ article_pipoles.title }}
+{{ article_pipoles.title|safe|striptags|replace_html_entities }}
 	
 - Sports
-{{ article_sports.title }}
+{{ article_sports.title|safe|striptags|replace_html_entities }}
 	
 	
 - Insolite
-{{ article_insolite.title }}
+{{ article_insolite.title|safe|striptags|replace_html_entities }}
 
 
 - Détente
 
 Voyage
-{{ voyages_article.title }}
+{{ voyages_article.title|safe|striptags|replace_html_entities }}
 
 Côté Gourmets
-{{ epicurien_article_cotegourmets.title }}
+{{ epicurien_article_cotegourmets.title|safe|striptags|replace_html_entities }}
 
 Côté Bar
-{{ epicurien_article_cotebar.title }}
+{{ epicurien_article_cotebar.title|safe|striptags|replace_html_entities }}
 
 Côté Fumeurs
-{{ epicurien_article_cotefumeurs.title }}
+{{ epicurien_article_cotefumeurs.title|safe|striptags|replace_html_entities }}
 
 
 - Régions
 {{ featured_region_note.region.name }}
-{{ featured_region_note.title }}
+{{ featured_region_note.title|safe|striptags|replace_html_entities }}
 
 
 - Coup de gueule
-{{ anger_article.summary|safe|striptags }}
+{{ anger_article.summary|safe|striptags|replace_html_entities }}
 
-Sondage : {{ poll.title }}
+Sondage : {{ poll.title|safe|striptags|replace_html_entities }}
 
 

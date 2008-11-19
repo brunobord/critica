@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.generic.simple import direct_to_template
+from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import login_required
 from critica.apps.newsletter.models import Subscriber
 from critica.apps.newsletter.forms import SubscriberForm
@@ -126,23 +127,54 @@ def admin_preview(request, format, issue_number):
     from critica.apps.illustrations.models import IllustrationOfTheDay
     from critica.apps.polls.models import Poll
     
-    context['newsletter_issue'] = Issue.objects.get(number=issue_number)
+    context['newsletter_issue'] = get_object_or_404(Issue.objects.all(), number=issue_number)
     
     articles = Article.objects.filter(issues__number=issue_number)
     for article in articles:
         varname = u'article_%s' % article.category.slug
         context[varname] = article
+    
+    try:
+        context['epicurien_article_cotegourmets'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=1).order_by('-publication_date')[0:1].get()
+    except:
+        context['epicurien_article_cotegourmets'] = None
         
-    context['epicurien_article_cotegourmets'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=1).order_by('-publication_date')[0:1].get()
-    context['epicurien_article_cotebar'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=2).order_by('-publication_date')[0:1].get()
-    context['epicurien_article_cotefumeurs'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=3).order_by('-publication_date')[0:1].get()
-    context['voyages_article'] = VoyagesArticle.objects.filter(issues__number=issue_number).order_by('-publication_date')[0:1].get()
-    context['anger_article'] = AngerArticle.objects.filter(issues__number=issue_number).order_by('-publication_date')[0:1].get()
-    context['illustration'] = IllustrationOfTheDay.objects.filter(issues__number=issue_number).order_by('-creation_date')[0:1].get()
-    context['poll'] = Poll.objects.filter(issues__number=issue_number).order_by('-creation_date')[0:1].get()
-    featured_region = FeaturedRegion.objects.get(issue__number=issue_number)
-    context['featured_region_note'] = RegionNote.objects.get(issues__number=issue_number, region=featured_region)
-
+    try:
+        context['epicurien_article_cotebar'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=2).order_by('-publication_date')[0:1].get()
+    except:
+        context['epicurien_article_cotebar'] = None
+        
+    try:
+        context['epicurien_article_cotefumeurs'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=3).order_by('-publication_date')[0:1].get()
+    except:
+        context['epicurien_article_cotefumeurs'] = None
+        
+    try:
+        context['voyages_article'] = VoyagesArticle.objects.filter(issues__number=issue_number).order_by('-publication_date')[0:1].get()
+    except:
+        context['voyages_article'] = None
+        
+    try:
+        context['anger_article'] = AngerArticle.objects.filter(issues__number=issue_number).order_by('-publication_date')[0:1].get()
+    except:
+        context['anger_article'] = None
+    
+    try:
+        context['illustration'] = IllustrationOfTheDay.objects.filter(issues__number=issue_number).order_by('-creation_date')[0:1].get()
+    except:
+        context['illustration'] = None
+        
+    try:
+        context['poll'] = Poll.objects.filter(issues__number=issue_number).order_by('-creation_date')[0:1].get()
+    except:
+        context['poll'] = None
+    
+    try:
+        featured_region = FeaturedRegion.objects.get(issue__number=issue_number)
+        context['featured_region_note'] = RegionNote.objects.get(issues__number=issue_number, region=featured_region)
+    except:
+        context['featured_region_note'] = None
+        
     return direct_to_template(request, template=template, mimetype=mimetype, extra_context=context)
     
     
