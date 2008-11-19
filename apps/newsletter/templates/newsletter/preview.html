@@ -1,1 +1,326 @@
-PREVIEW HTML
+{% load image_thumbnail %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Critica Newsletter | {{ newsletter_issue.publication_date|date:"d F Y" }} (n°{{ newsletter_issue.number }})</title>
+	</head>
+	<body style="text-align:center; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif">
+
+		<table width="700" style="border-collapse:collapse; text-align:left; width:700px; margin:0 auto; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif">
+
+			<!-- DESABONNEMENT -->
+
+			<tr>
+				<td colspan="2" bgcolor="#FFFFFF" style="padding: 2px 0;">
+					<p style="text-align:right; font-size:10px;"><a href="http://www.critica.fr/newsletter/desabonner/" style="text-decoration:none; color:#D90600;">Désabonnement</a></p>
+				</td>
+			</tr>
+			<!-- // DESABONNEMENT -->
+
+			<tr>
+				<td colspan="2" bgcolor="#141215" style="padding:10px;">
+
+					<!-- HEADER -->
+					<table style="font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif">
+
+						<tr>
+
+							<!-- LOGO -->
+							<td>
+								<a href="http://www.critica.fr/" style="border:none;" title="www.critica.fr"><img src="http://www.critica.fr/media/critica/img/logo.gif" alt="Critica - Le journal pertinent et impertinent" style="float:left; width:200px;border:none"/></a>
+							</td>
+
+							<!-- // LOGO -->
+
+							<!-- PUB -->
+							<td width="468">
+								<div style="width:468px; height:60px; margin-top:0;">
+									<a class="first-child" target="_blank" href="http://www.atelier-in8.com/editions/index.php?option=com_datsogallery&Itemid=90&func=detail&id=130"><img src="http://www.critica.fr/media/upload/ads/2008/11/07/In8bouquins_2.gif" style="border:none;"/></a>
+									<p style="font-size:10px; text-align:center; margin:2px 0 0;"><a href="http://www.critica.fr/pages/publicite/" style="color:#FFFFFF;">Publicité</a></p>
+								</div>
+							</td>
+
+							<!-- // PUB -->
+
+						</tr>
+					</table>
+					<!-- // HEADER -->
+
+				</td>
+			</tr>
+
+			<!-- BANDEAU -->
+
+			<tr>
+				<td colspan="2" bgcolor="#D90600" style="padding:2px 4px 4px; background:url(http://www.critica.fr/media/critica/css/img/rubrique_bg.gif) repeat-x;" valign="top" >
+					<p style="color:#FFFFFF; font-size:10px; font-weight:bold;">{{ newsletter_issue.publication_date|date:"d F Y" }} | N°{{ newsletter_issue.number }}</p>
+				</td>
+			</tr>
+			<!-- // BANDEAU -->
+
+			<tr>
+
+				<!-- // COLONNE GAUCHE -->
+				<td width="420" style="padding:10px 10px 10px 0; "  valign="top">
+
+					<!-- A LA UNE | ARTICLE 1 -->
+					<table style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #F2F2F2; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif">
+						<tr>
+							<td valign="top"><a href="http://www.critica.fr/national/"><img src="{{ article_national.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; margin-bottom:5px; border:none;"/></a></td>
+							<td valign="top"><h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/national/" style="text-decoration:none; color:#000000;">{{ article_national.category.name }}</a></h1>
+								<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/national/" style="text-decoration:none; color:#D90600;">{{ article_national.title }}</a></h2>
+
+								<p style="font-size:13px; margin:0;">{{ article_national.summary|safe|striptags }}</p>
+								<p style="text-align:right; margin:5px 0 0; font-size:10px; font-weight:bold; clear:left; "><a href="http://www.critica.fr/national/" style="background-color:#D90600; color:#FFFFFF; padding:2px 5px; text-decoration:none;">Lire la suite</a></p></td>
+						</tr>
+					</table>
+					<!-- // A LA UNE | ARTICLE 1 -->
+
+					<!-- A LA UNE | ARTICLE 2 -->
+					<table style="font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+
+						<tr>
+							<td valign="top"><a href="http://www.critica.fr/etranger/"><img src="{{ article_etranger.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; border:none;"/></a></td>
+							<td valign="top"><h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/etranger/" style="text-decoration:none; color:#000000;">{{ article_etranger.category.name }}</a></h1>
+								<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/etranger/" style="text-decoration:none; color:#D90600;">{{ article_etranger.title }}</a></h2>
+								<p style="font-size:13px; margin:0;">{{ article_etranger.summary|safe|striptags }}</p>
+								<p style="text-align:right; margin:5px 0 0; font-size:10px; font-weight:bold;clear:left;  "><a href="http://www.critica.fr/etranger/" style="background-color:#D90600; color:#FFFFFF; padding:2px 5px; text-decoration:none;">Lire la suite</a></p></td>
+						</tr>
+
+					</table>
+					<!-- // A LA UNE | ARTICLE 2 -->
+
+					<!-- PUB -->
+					<p style="text-align:center; margin:20px 0;"> <a class="first-child" target="_blank" href="http://www.atelier-in8.com/editions/index.php?option=com_datsogallery&Itemid=90&func=detail&id=131"><img class="first-child only-child last-child" alt="Publicité" src="http://www.critica.fr/media/upload/ads/2008/11/07/In8fumeur.gif" style="border:none;"/></a> </p>
+					<!-- // PUB -->
+
+					<table>
+						<tr>
+
+							<!-- BREVES | ARTICLE 1 -->
+							<td valign="top">
+								<table style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #F2F2F2; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+									<tr>
+										<td valign="top">
+											<a href="http://www.critica.fr/societe/"><img src="{{ article_societe.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; border:none; width:50px;"/></a>
+										</td>
+										<td valign="top">
+											<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/societe/" style="text-decoration:none; color:#000000;">{{ article_societe.category.name }}</a></h1>
+
+											<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/societe/" style="text-decoration:none; color:#D90600;">{{ article_societe.title }}</a></h2>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- // BREVES | ARTICLE 1 -->
+
+							<!-- // BREVES | ARTICLE 2 -->
+							<td valign="top">
+
+								<table style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #F2F2F2; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+									<tr>
+										<td valign="top">
+											<a href="http://www.critica.fr/tele/"><img src="{{ article_tele.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; border:none; width:50px;"/></a>
+										</td>
+										<td valign="top">
+											<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/tele/" style="text-decoration:none; color:#000000;">{{ article_tele.category.name }}</a></h1>
+											<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/tele/" style="text-decoration:none; color:#D90600;">{{ article_tele.title }}</a></h2>
+
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- BREVES | ARTICLE 2 -->
+						</tr>
+						<tr>
+
+							<!-- // BREVES | ARTICLE 3 -->
+
+							<td valign="top">
+								<table style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #F2F2F2; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+									<tr>
+										<td valign="top">
+											<a href="http://www.critica.fr/nanas/"><img src="{{ article_nanas.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; border:none; width:50px;"/></a>
+										</td>
+										<td valign="top">
+											<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/nanas/" style="text-decoration:none; color:#000000;">{{ article_nanas.category.name }}</a></h1>
+
+											<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/nanas/" style="text-decoration:none; color:#D90600;">{{ article_nanas.title }}</a></h2>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- BREVES | ARTICLE 3 -->
+
+							<!-- // BREVES | ARTICLE 4 -->
+							<td valign="top">
+
+								<table style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #F2F2F2; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+									<tr>
+										<td valign="top">
+											<a href="http://www.critica.fr/pipoles/"><img src="{{ article_pipoles.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; border:none; width:50px;"/></a>
+										</td>
+										<td valign="top">
+											<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/pipoles/" style="text-decoration:none; color:#000000;">{{ article_pipoles.category.name }}</a></h1>
+											<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/pipoles/" style="text-decoration:none; color:#D90600;">{{ article_pipoles.title }}</a></h2>
+
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- BREVES | ARTICLE 4 -->
+
+						</tr>
+						<tr>
+
+							<!-- // BREVES | ARTICLE 5 -->
+
+							<td valign="top">
+								<table style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #F2F2F2; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+									<tr>
+										<td valign="top">
+											<a href="http://www.critica.fr/sports/"><img src="{{ article_sports.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; border:none; width:50px;"/></a>
+										</td>
+										<td valign="top">
+											<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/sports/" style="text-decoration:none; color:#000000;">{{ article_sports.category.name }}</a></h1>
+
+											<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/sports/" style="text-decoration:none; color:#D90600;">{{ article_sports.title }}</a></h2>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- BREVES | ARTICLE 5 -->
+
+							<!-- // BREVES | ARTICLE 6 -->
+							<td valign="top">
+
+								<table style="margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #F2F2F2; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+									<tr>
+										<td valign="top">
+											<a href="http://www.critica.fr/insolite/"><img src="{{ article_insolite.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; border:none; width:50px;"/></a>
+										</td>
+										<td valign="top">
+											<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/insolite/" style="text-decoration:none; color:#000000;">{{ article_insolite.category.name }}</a></h1>
+											<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/insolite/" style="text-decoration:none; color:#D90600;">{{ article_insolite.title }}</a></h2>
+
+										</td>
+									</tr>
+								</table>
+							</td>
+							<!-- BREVES | ARTICLE 6 -->
+
+						</tr>
+					</table>
+
+					<!-- RICH MEDIAS -->
+
+					<p  style="text-align:center;"> <a  href="http://www.critica.fr/canalcritica/" title="Canalcritica" ><img src="http://www.critica.fr/media/critica/css/img/critica_videos.jpg" style="border:none;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a  href="http://www.xahutu.com/critica_imagevue/" title="Jean-Jacques Urvoas"><img src="http://www.critica.fr/media/critica/css/img/critica_photos.jpg" style="border:none;"></a></p>
+					<!-- // RICH MEDIAS -->
+
+				</td>
+				<!-- // COLONNE GAUCHE -->
+
+				<!-- COLONNE DROITE -->
+				<td width="180" style="padding:10px 5px;" bgcolor="#F2F2F2" valign="top">
+
+					<!-- ARTICLE | BOUQUINS -->
+
+					<table style="margin-bottom:10px; background-color:#F3EA51; padding:5px; border-bottom:1px solid #AAA; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+						<tr>
+							<td valign="top" colspan="2">
+								<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 -2px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/bouquins/" style="text-decoration:none; color:#000000;">{{ article_bouquins.category.name }}</a></h1>
+								<h2 style=" font-size:18px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/bouquins/" style="text-decoration:none; color:#D90600;">{{ article_bouquins.title }}</a></h2>
+							</td>
+						</tr>
+						<tr>
+
+							<td valign="top" width="80"><a href="http://www.critica.fr/bouquins/"><img src="{{ article_bouquins.get_image|thumbnail:"80,0" }}" style="float:left; margin-right:5px; padding-bottom:5px; border:none;"/></a></td>
+							<td valign="top">
+								<p style="font-size:11px; margin:0;">{{ article_bouquins.summary|safe|striptags }}</p>
+
+								<p style="text-align:right; margin:10px 0 0; font-size:10px; font-weight:bold;clear:left;  "><a href="http://www.critica.fr/bouquins/" style="background-color:#D90600; color:#FFFFFF; padding:2px 5px; text-decoration:none;">Lire la suite</a></p></td>
+						</tr>
+					</table>
+					<!-- // ARTICLE | BOUQUINS -->
+
+					<!-- DETENTE -->
+					<div style="margin-bottom:10px;">
+						<h1 style="font-size:12px; text-transform:uppercase; margin:0 0 5px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat; color:#7F7F7F;">Détente</h1>
+
+						<h2 style="text-transform:uppercase; font-size:10px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/voyages/" style="text-decoration:none; color:#D90600;">Voyage</a></h2>
+						<p style="font-size:11px; margin:0 0 5px; padding:0 0 5px; border-bottom:1px solid #FFFFFF;"><a href="http://www.critica.fr/voyages/" style="text-decoration:none; color:#000000; font-weight:bold;">{{ voyages_article.title }}</a></p>
+						<h2 style="text-transform:uppercase; font-size:10px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/epicurien/#1" style="text-decoration:none; color:#D90600;">Côté Gourmets</a></h2>
+						<p style="font-size:11px; margin:0 0 5px; padding:0 0 5px; border-bottom:1px solid #FFFFFF;"><a href="http://www.critica.fr/epicurien/#1" style="text-decoration:none; color:#000000; font-weight:bold;">{{ epicurien_article_cotegourmets.title }}</a></p>
+						<h2 style="text-transform:uppercase; font-size:10px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/epicurien/#2" style="text-decoration:none; color:#D90600;">Côté Bar</a></h2>
+						<p style="font-size:11px; margin:0 0 5px; padding:0 0 5px; border-bottom:1px solid #FFFFFF;"><a href="http://www.critica.fr/epicurien/#2" style="text-decoration:none; color:#000000; font-weight:bold;">{{ epicurien_article_cotebar.title }}</a></p>
+
+						<h2 style="text-transform:uppercase; font-size:10px; margin:0; font-weight:bold;"><a href="http://www.critica.fr/epicurien/#3" style="text-decoration:none; color:#D90600;">Côté Fumeurs</a></h2>
+						<p style="font-size:11px; margin:0 0 5px; padding:0 0 5px; border-bottom:1px solid #FFFFFF;"><a href="http://www.critica.fr/epicurien/#3" style="text-decoration:none; color:#000000; font-weight:bold;">{{ epicurien_article_cotefumeurs.title }}</a></p>
+					</div>
+					<!-- // DETENTE -->
+
+					<!-- REGION -->
+					<table style="margin-bottom:10px; font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;">
+						<tr>
+
+							<td colspan="2">
+								<h1 style="font-size:12px; text-transform:uppercase; margin:0 0 5px; padding-left:10px; background:url(http://www.critica.fr/media/critica/css/img/puce.gif) left no-repeat;"><a href="http://www.critica.fr/regions/" style="text-decoration:none; color:#7F7F7F;">Régions</a></h1>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="http://www.critica.fr/media/critica/css/img/regions/{{ featured_region_note.region.slug }}.gif" style="float:left; margin-right:5px; border:none;"/></td>
+							<td>
+								<h2 style=" font-size:11px; margin:0; font-weight:bold; color:#D90600; text-transform:uppercase;">{{ featured_region_note.region.name }}</h2>
+
+						<p style="font-size:11px; margin:0;"><a href="http://www.critica.fr/regions/" style="text-decoration:none; color:#000000;">{{ featured_region_note.title }}</a></p>
+							</td>
+						</tr>
+					</table>
+					<!-- // REGION -->
+
+					<!-- ILLUSTRATION -->
+					<div style="margin-bottom:10px;">
+						<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 5px; color:#FFFFFF; background-color:#D90600; text-align:center; padding:2px 0; border-bottom:1px solid #AAA;">Illustration du jour</h1>
+
+						<p style="text-align:center; margin:0; padding:0;"><img src="{{ illustration.image|thumbnail:"200,0" }}"/></p>
+					</div>
+					<!-- // ILLUSTRATION -->
+
+					<!-- COUP DE GUEULE -->
+					<div style="margin-bottom:10px; background-color:#7F7F7F;">
+						<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 5px; color:#FFFFFF; background-color:#D90600; text-align:center; padding:2px 0; border-bottom:1px solid #666;">Coup de gueule</h1>
+						<p style="font-size:11px; margin:0; color:#FFFFFF; padding:2px 5px;">{{ anger_article.summary|safe|striptags }}</p>
+
+						<p style="text-align:right; margin:5px 0 0; font-size:10px; font-weight:bold; padding:0 5px 10px; "><a href="http://www.critica.fr/coup-de-gueule/" style="background-color:#D90600; color:#FFFFFF; padding:2px 5px; text-decoration:none;">Lire la suite</a></p>
+					</div>
+					<!-- // COUP DE GUEULE -->
+
+					<!-- SONDAGE -->
+					<div style="margin-bottom:10px;">
+						<h1 style="font-size:10px; text-transform:uppercase; margin:0 0 5px; color:#FFFFFF; background-color:#D90600; text-align:center; padding:2px 0; border-bottom:1px solid #AAA;">Sondage</h1>
+						<p style="font-size:11px; margin:0; font-weight:bold; text-align:center;">{{ poll.title }}</p>
+
+					</div>
+					<!-- // SONDAGE -->
+
+				</td>
+				<!-- COLONNE DROITE -->
+
+			</tr>
+
+			<!-- FOOTER -->
+			<tr>
+
+				<td colspan="2" bgcolor="#D90600" style="padding:3px;" ></td>
+			</tr>
+			<tr>
+				<td colspan="2" bgcolor="#141215" style="padding:10px;"><p style="font-size:11px; text-align:center"><a href="http://www.critica.fr/national/" style="color:#FFFFFF;">National</a> <a href="http://www.critica.fr/etranger/" style="color:#FFFFFF;">Etranger</a> <a href="http://www.critica.fr/societe/" style="color:#FFFFFF;">Société</a> <a href="http://www.critica.fr/sports/" style="color:#FFFFFF;">Sports</a> <a href="http://www.critica.fr/pipoles/" style="color:#FFFFFF;">Pipoles</a> <a href="http://www.critica.fr/tele/" style="color:#FFFFFF;">Télé</a> <a href="http://www.critica.fr/bouquins/" style="color:#FFFFFF;">Bouquins</a> <a href="http://www.critica.fr/nanas/" style="color:#FFFFFF;">Nanas</a> <a href="http://www.critica.fr/insolite/" style="color:#FFFFFF;">Insolite</a> <a href="http://www.critica.fr/regions/" style="color:#FFFFFF;">Régions</a> <a href="http://www.critica.fr/voyages/" style="color:#FFFFFF;">Voyages</a> <a href="http://www.critica.fr/epicurien/" style="color:#FFFFFF;">Epicurien</a></p></td>
+
+			</tr>
+			<!-- // FOOTER -->
+
+		</table>
+
+	</body>
+</html>
+

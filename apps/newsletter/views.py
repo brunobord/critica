@@ -98,6 +98,9 @@ def admin_preview(request, format, issue_number):
     
     context = {}
     
+    # Issue number
+    issue_number = int(issue_number)
+    
     # Check format
     if format in authorized_formats:
         format = format
@@ -107,11 +110,40 @@ def admin_preview(request, format, issue_number):
     # Set template
     if format == 'html':
         template = 'newsletter/preview.html'
-    
+        mimetype = 'text/html'
     if format == 'txt':
         template = 'newsletter/preview.txt'
+        mimetype = 'text/plain'
+    
+    # Populate context
+    from critica.apps.issues.models import Issue
+    from critica.apps.articles.models import Article
+    from critica.apps.epicurien.models import EpicurienArticle
+    from critica.apps.voyages.models import VoyagesArticle
+    from critica.apps.anger.models import AngerArticle
+    from critica.apps.regions.models import FeaturedRegion
+    from critica.apps.regions.models import RegionNote
+    from critica.apps.illustrations.models import IllustrationOfTheDay
+    from critica.apps.polls.models import Poll
+    
+    context['newsletter_issue'] = Issue.objects.get(number=issue_number)
+    
+    articles = Article.objects.filter(issues__number=issue_number)
+    for article in articles:
+        varname = u'article_%s' % article.category.slug
+        context[varname] = article
+        
+    context['epicurien_article_cotegourmets'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=1).order_by('-publication_date')[0:1].get()
+    context['epicurien_article_cotebar'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=2).order_by('-publication_date')[0:1].get()
+    context['epicurien_article_cotefumeurs'] = EpicurienArticle.objects.filter(issues__number=issue_number, type__id=3).order_by('-publication_date')[0:1].get()
+    context['voyages_article'] = VoyagesArticle.objects.filter(issues__number=issue_number).order_by('-publication_date')[0:1].get()
+    context['anger_article'] = AngerArticle.objects.filter(issues__number=issue_number).order_by('-publication_date')[0:1].get()
+    context['illustration'] = IllustrationOfTheDay.objects.filter(issues__number=issue_number).order_by('-creation_date')[0:1].get()
+    context['poll'] = Poll.objects.filter(issues__number=issue_number).order_by('-creation_date')[0:1].get()
+    featured_region = FeaturedRegion.objects.get(issue__number=issue_number)
+    context['featured_region_note'] = RegionNote.objects.get(issues__number=issue_number, region=featured_region)
 
-    return direct_to_template(request, template, context)
+    return direct_to_template(request, template=template, mimetype=mimetype, extra_context=context)
     
     
     

@@ -80,6 +80,13 @@ class BaseArticle(models.Model):
             'category_slug': self.category.slug,
         })
 
+
+    def get_image(self):
+        if self.image:
+            return self.image
+        else:
+            return self.category.image
+            
     def save(self):
         """ 
         Object pre-saving / post-saving operations.
