@@ -19,7 +19,10 @@ def replace_html_entities(value):
         article.content|safe|striptags|replace_html_entities
     
     """
-    clean_content = BeautifulStoneSoup(value, convertEntities="html", smartQuotesTo="html").contents[0]
+    try:
+        clean_content = BeautifulStoneSoup(value, convertEntities="html", smartQuotesTo="html").contents[0]
+    except:
+        clean_content = value
     return clean_content
 replace_html_entities.is_safe = True
 
