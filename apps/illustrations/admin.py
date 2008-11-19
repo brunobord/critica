@@ -61,7 +61,6 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
         
         """
         field = super(IllustrationOfTheDayAdmin, self).formfield_for_dbfield(db_field, **kwargs)
-        """
         if db_field.name == 'issues': 
             my_choices = []
             # Displays only available issues
@@ -79,7 +78,6 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
             my_choices.extend(Issue.objects.exclude(id__in=excluded_issues).values_list('id', 'number'))
             print my_choices
             field.choices = my_choices
-        """
         if db_field.name == 'image':
             return forms.ImageField(widget=ImageWithThumbWidget(), label=_('Illustration'), required=True) 
         return field

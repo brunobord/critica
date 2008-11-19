@@ -60,7 +60,6 @@ class VideoAdmin(admin.ModelAdmin):
         
         """
         field = super(VideoAdmin, self).formfield_for_dbfield(db_field, **kwargs)
-        """
         if db_field.name == 'issues': 
             my_choices = []
             # Displays only available issues
@@ -78,7 +77,6 @@ class VideoAdmin(admin.ModelAdmin):
             my_choices.extend(Issue.objects.exclude(id__in=excluded_issues).values_list('id', 'number'))
             print my_choices
             field.choices = my_choices
-        """
         return field
      
     def save_model(self, request, obj, form, change):
