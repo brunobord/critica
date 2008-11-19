@@ -91,45 +91,65 @@ def index(request, issue=None):
     try:
         cover_illustration = IllustrationOfTheDay.objects.get(issues__id=current_issue.id)
         context['cover_illustration'] = cover_illustration
-    except ObjectDoesNotExist:
-        context['cover_illustration'] = False
-        
-    try:
-        cover_anger = AngerArticle.objects.get(issues__id=current_issue.id)
-        context['cover_anger'] = cover_anger
-    except ObjectDoesNotExist:
-        context['cover_anger'] = False
-        
-    try:
-        cover_voyages = VoyagesArticle.objects.get(issues__id=current_issue.id)
-        context['cover_voyages'] = cover_voyages
     except MultipleObjectsReturned:
-        cover_voyages = VoyagesArticle.objects.filter(issues__id=current_issue.id)
-        context['cover_voyages_multiple'] = True
-        context['cover_voyages'] = cover_voyages
+        cover_illustrations = IllustrationOfTheDay.objects.filter(issues__id=current_issue.id)
+        context['cover_illustration_multiple'] = True
+        context['cover_illustrations'] = cover_illustrations
     except ObjectDoesNotExist:
-        context['cover_voyages'] = False
+        context['cover_illustration'] = None
         
     try:
-        epicurien_type = EpicurienArticleType.objects.get(pk=1)
-        cover_epicurien_cotegourmets = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type)
-        context['cover_epicurien_cotegourmets'] = cover_epicurien_cotegourmets
-    except:
-        context['cover_epicurien_cotegourmets'] = False
+        cover_anger_article = AngerArticle.objects.get(issues__id=current_issue.id)
+        context['cover_anger_article'] = cover_anger_article
+    except MultipleObjectsReturned:
+        cover_anger_articles = AngerArticle.objects.filter(issues__id=current_issue.id)
+        context['cover_anger_multiple'] = True
+        context['cover_anger_articles'] = cover_anger_articles
+    except ObjectDoesNotExist:
+        context['cover_anger_article'] = None
         
     try:
-        epicurien_type = EpicurienArticleType.objects.get(pk=2)
-        cover_epicurien_cotebar = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type)
-        context['cover_epicurien_cotebar'] = cover_epicurien_cotebar
-    except:
-        context['cover_epicurien_cotebar'] = False
-        
+        cover_voyages_article = VoyagesArticle.objects.get(issues__id=current_issue.id)
+        context['cover_voyages_article'] = cover_voyages_article
+    except MultipleObjectsReturned:
+        cover_voyages_articles = VoyagesArticle.objects.filter(issues__id=current_issue.id)
+        context['cover_voyages_multiple'] = True
+        context['cover_voyages_articles'] = cover_voyages_articles
+    except ObjectDoesNotExist:
+        context['cover_voyages_article'] = None
+    
+    epicurien_type_cotegourmets = EpicurienArticleType.objects.get(pk=1)
     try:
-        epicurien_type = EpicurienArticleType.objects.get(pk=3)
-        cover_epicurien_cotefumeurs = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type)
-        context['cover_epicurien_cotefumeurs'] = cover_epicurien_cotefumeurs
-    except:
-        context['cover_epicurien_cotefumeurs'] = False
+        cover_epicurien_cotegourmets_article = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type_cotegourmets)
+        context['cover_epicurien_cotegourmets_article'] = cover_epicurien_cotegourmets_article
+    except MultipleObjectsReturned:
+        cover_epicurien_cotegourmets_articles = EpicurienArticle.objects.filter(issues__id=current_issue.id, type=epicurien_type_cotegourmets)
+        context['cover_epicurien_cotegourmets_multiple'] = True
+        context['cover_epicurien_cotegourmets_articles'] = cover_epicurien_cotegourmets_articles
+    except ObjectDoesNotExist:
+        context['cover_epicurien_cotegourmets_article'] = None
+
+    epicurien_type_cotebar = EpicurienArticleType.objects.get(pk=2)
+    try:
+        cover_epicurien_cotebar_article = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type_cotebar)
+        context['cover_epicurien_cotebar_article'] = cover_epicurien_cotebar_article
+    except MultipleObjectsReturned:
+        cover_epicurien_cotebar_articles = EpicurienArticle.objects.filter(issues__id=current_issue.id, type=epicurien_type_cotebar)
+        context['cover_epicurien_cotebar_multiple'] = True
+        context['cover_epicurien_cotebar_articles'] = cover_epicurien_cotebar_articles
+    except ObjectDoesNotExist:
+        context['cover_epicurien_cotebar_article'] = None
+
+    epicurien_type_cotefumeurs = EpicurienArticleType.objects.get(pk=3)
+    try:
+        cover_epicurien_cotefumeurs_article = EpicurienArticle.objects.get(issues__id=current_issue.id, type=epicurien_type_cotefumeurs)
+        context['cover_epicurien_cotefumeurs_article'] = cover_epicurien_cotefumeurs_article
+    except MultipleObjectsReturned:
+        cover_epicurien_cotefumeurs_articles = EpicurienArticle.objects.filter(issues__id=current_issue.id, type=epicurien_type_cotefumeurs)
+        context['cover_epicurien_cotefumeurs_multiple'] = True
+        context['cover_epicurien_cotefumeurs_articles'] = cover_epicurien_cotefumeurs_articles
+    except ObjectDoesNotExist:
+        context['cover_epicurien_cotefumeurs_article'] = None
         
     try:
         cover_featured_region = FeaturedRegion.objects.get(issue=current_issue)
@@ -253,20 +273,26 @@ def index(request, issue=None):
     # Video
     # --------------------------------------------------------------------------
     try:
-        dashboard_video = Video.objects.filter(issues__id=current_issue.id).order_by('-creation_date')
-        dashboard_video = dashboard_video[0:1].get()
+        dashboard_video = Video.objects.get(issues__id=current_issue.id)
+        context['dashboard_video'] = dashboard_video
+    except MultipleObjectsReturned:
+        dashboard_videos = Video.objects.filter(issues__id=current_issue.id).order_by('-creation_date')
+        context['dashboard_videos_multiple'] = True
+        context['dashboard_videos'] = dashboard_videos
     except ObjectDoesNotExist:
-        dashboard_video = None
-    context['dashboard_video'] = dashboard_video
+        context['dashboard_video'] = None
     
     # Poll
     # --------------------------------------------------------------------------
     try:
-        dashboard_poll = Poll.objects.filter(issues__id=current_issue.id).order_by('-creation_date')
-        dashboard_poll = dashboard_poll[0:1].get()
+        dashboard_poll = Poll.objects.get(issues__id=current_issue.id)
+        context['dashboard_poll'] = dashboard_poll
+    except MultipleObjectsReturned:
+        dashboard_polls = Poll.objects.filter(issues__id=current_issue.id).order_by('-creation_date')
+        context['dashboard_polls_multiple'] = True
+        context['dashboard_polls'] = dashboard_polls
     except ObjectDoesNotExist:
-        dashboard_poll = None
-    context['dashboard_poll'] = dashboard_poll
+        context['dashboard_poll'] = None
     
     # Root path
     # --------------------------------------------------------------------------

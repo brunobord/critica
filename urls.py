@@ -16,8 +16,9 @@ admin.autodiscover()
 
 # Custom views
 urlpatterns = patterns('',
-    (r'^admin/ads_dashboard/',    include('critica.apps.ads_dashboard.urls')),
-    (r'^admin/issues_dashboard/', include('critica.apps.issues_dashboard.urls')),
+    (r'^admin/newsletter/preview/(?P<issue_number>\d+)/(?P<format>[-\w]+)/', 'critica.apps.newsletter.views.admin_preview'),
+    (r'^admin/ads_dashboard/',      include('critica.apps.ads_dashboard.urls')),
+    (r'^admin/issues_dashboard/',   include('critica.apps.issues_dashboard.urls')),
 )
 
 # Admin sites

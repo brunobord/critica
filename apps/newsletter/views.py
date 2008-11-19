@@ -7,6 +7,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.generic.simple import direct_to_template
+from django.contrib.auth.decorators import login_required
 from critica.apps.newsletter.models import Subscriber
 from critica.apps.newsletter.forms import SubscriberForm
 from critica.apps.newsletter.forms import UnsubscribeForm
@@ -79,3 +80,40 @@ def unsubscribe_thanks(request):
     return direct_to_template(request, 'newsletter/unsubscribe_thanks.html', context)
 
 
+@login_required
+def admin_preview(request, format, issue_number):
+    """
+    View of newsletter admin preview.
+    
+    Two required parameters::
+    
+        format
+            Should be: 'text' or 'html' (available in 'authorized_formats').
+            
+        issue_number
+            Should be the number of issue.
+    
+    """
+    authorized_formats = ['txt', 'html']
+    
+    context = {}
+    
+    # Check format
+    if format in authorized_formats:
+        format = format
+    else:
+        format = 'html'
+    
+    # Set template
+    if format == 'html':
+        template = 'newsletter/preview.html'
+    
+    if format == 'txt':
+        template = 'newsletter/preview.txt'
+
+    return direct_to_template(request, template, context)
+    
+    
+    
+    
+    
