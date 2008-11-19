@@ -252,15 +252,14 @@ def home(request, issue=None, is_preview=False, is_archive=False, is_ads_preview
         all_tags.append(tag)
         
     tags = calculate_cloud(all_tags, steps=10)
-    if len(tags) < 40:
+    if len(tags) <= 50:
         tagcloud = tags
     else:
         tagcloud = []
         for tag in tags:
             if tag.count > 2:
                 tagcloud.append(tag)
-                
-    context['tagcloud'] = tagcloud
+    context['tagcloud'] = tagcloud[:50]
     
     return direct_to_template(request, 'front/home.html', context)
 
