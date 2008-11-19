@@ -25,7 +25,7 @@ from django.conf.urls.defaults import *
 
 
 urlpatterns = patterns('',
-    url(r'^(?P<tag>[-\w]+)/$', 
+    url(r'^(?P<tag>[^/]+)/$', 
         'critica.apps.tags.views.tag', 
         name='tags_tag',
     ),

@@ -43,7 +43,7 @@ class AutoCompleteTagInput(forms.TextInput):
             'critica/js/plugins/jquery.bgiframe.min.js',
             'critica/js/plugins/jquery.ajaxQueue.js',
             'critica/js/plugins/thickbox-compressed.js',
-            'critica/js/plugins/jquery.autocomplete.js'
+            'critica/js/plugins/jquery.autocomplete.js',
         )
     
     def __init__(self, model=None, attrs=None):

@@ -5,6 +5,7 @@ Models of ``critica.apps.articles`` application.
 """
 import datetime
 from tagging.fields import TagField
+from tagging.models import Tag
 from django.db import models
 from django.db.models import permalink
 from django.conf import settings
@@ -86,7 +87,7 @@ class BaseArticle(models.Model):
         """
         self.slug = slugify(self.title)
         super(BaseArticle, self).save()
-
+        
 
 class Article(BaseArticle):
     """
