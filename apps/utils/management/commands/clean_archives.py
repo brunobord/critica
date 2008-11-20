@@ -566,6 +566,13 @@ class Command(NoArgsCommand):
             category = Category.objects.get(id=category)
             category.delete()
         print "Delete obsolete categories... OK."
+        
+        # USERS
+        # ----------------------------------------------------------------------
+        for user in USERS_TO_REMOVE:
+            user = User.objects.get(id=user)
+            user.delete()
+        print "Delete obsolete users... OK."
 
 
     def load_fixtures(self):
