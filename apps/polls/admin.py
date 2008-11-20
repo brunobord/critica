@@ -6,6 +6,7 @@ Administration interface options of ``critica.apps.polls`` application.
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.custom_admin.sites import custom_site
+from critica.apps.issues.models import Issue
 from critica.apps.polls.models import Poll
 from critica.apps.polls.models import Choice
 from critica.apps.polls.models import Vote
@@ -39,6 +40,20 @@ class PollAdmin(admin.ModelAdmin):
     exclude = ['submitter']
     form = PollAdminModelForm
 
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        """
+        Hook for specifying the form Field instance for a given database Field
+        instance. If kwargs are given, they're passed to the form Field's constructor.
+        
+        """
+        field = super(PollAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+        if db_field.name == 'issues': 
+            my_choices = [('', '---------')]
+            my_choices.extend(Issue.objects.order_by('-number').values_list('id','number'))
+            print my_choices
+            field.choices = my_choices
+        return field
+
     def ald_issues(self, obj):
         """
         Formatted issue list for admin list_display option."
@@ -46,6 +61,7 @@ class PollAdmin(admin.ModelAdmin):
         """
         issues = [issue.number for issue in obj.issues.all()]
         return ', '.join(['%s' % issue for issue in issues])
+    ald_issues.short_description = _('issues')
 
     def save_model(self, request, obj, form, change):
         """ 

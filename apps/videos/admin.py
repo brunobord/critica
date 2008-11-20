@@ -61,20 +61,8 @@ class VideoAdmin(admin.ModelAdmin):
         """
         field = super(VideoAdmin, self).formfield_for_dbfield(db_field, **kwargs)
         if db_field.name == 'issues': 
-            my_choices = []
-            # Displays only available issues
-            issues = []
-            videos = Video.objects.all()
-            for video in videos:
-                for issue in video.issues.all():
-                    issues.append((issue.id, issue))
-            all_issues = list(set(issues))        
-            excluded_issues = [int(issue.id) for issue_id, issue in all_issues]
-            if self._object is not None:
-                current_issues = [int(issue.id) for issue in self._object.issues.all()]
-                for current_issue in current_issues:
-                    excluded_issues.remove(current_issue)
-            my_choices.extend(Issue.objects.exclude(id__in=excluded_issues).values_list('id', 'number'))
+            my_choices = [('', '---------')]
+            my_choices.extend(Issue.objects.order_by('-number').values_list('id','number'))
             print my_choices
             field.choices = my_choices
         return field

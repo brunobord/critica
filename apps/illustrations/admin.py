@@ -62,20 +62,8 @@ class IllustrationOfTheDayAdmin(admin.ModelAdmin):
         """
         field = super(IllustrationOfTheDayAdmin, self).formfield_for_dbfield(db_field, **kwargs)
         if db_field.name == 'issues': 
-            my_choices = []
-            # Displays only available issues
-            issues = []
-            illustrations = IllustrationOfTheDay.objects.all()
-            for illustration in illustrations:
-                for issue in illustration.issues.all():
-                    issues.append((issue.id, issue))
-            all_issues = list(set(issues))        
-            excluded_issues = [int(issue.id) for issue_id, issue in all_issues]
-            if self._object is not None:
-                current_issues = [int(issue.id) for issue in self._object.issues.all()]
-                for current_issue in current_issues:
-                    excluded_issues.remove(current_issue)
-            my_choices.extend(Issue.objects.exclude(id__in=excluded_issues).values_list('id', 'number'))
+            my_choices = [('', '---------')]
+            my_choices.extend(Issue.objects.order_by('-number').values_list('id','number'))
             print my_choices
             field.choices = my_choices
         if db_field.name == 'image':

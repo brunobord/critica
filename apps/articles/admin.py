@@ -72,6 +72,11 @@ class BaseArticleAdmin(admin.ModelAdmin):
                 my_choices.extend(UserNickname.objects.filter(user=current_user).values_list('id','nickname'))
             print my_choices
             field.choices = my_choices
+        if db_field.name == 'issues': 
+            my_choices = [('', '---------')]
+            my_choices.extend(Issue.objects.order_by('-number').values_list('id','number'))
+            print my_choices
+            field.choices = my_choices
         if db_field.name == 'category':
             my_choices = [('', '---------')]
             my_choices.extend(Category.objects.exclude(slug__in=articles_settings.EXCLUDED_CATEGORIES).values_list('id','name'))
