@@ -20,6 +20,8 @@ from critica.apps.regions.models import Region
 from critica.apps.voyages.models import VoyagesArticle  
 from critica.apps.issues.models import Issue
 from critica.apps.utils import urlbase64
+from django.contrib.auth.models import User
+from critica.apps.users.models import UserNickname
 
 CATEGORY_MAP = [
     (1, 4010),
@@ -75,9 +77,83 @@ REGION_MAP = [
     (26, 4024),
 ]
 
-AUTHORS_TO_REMOVE = [
+USER_MAP = [
+    # Charlotte David / Rédaction Critica / Bidule Plop
+    (11, 14, 4000),
+    # Charlotte David / Rédaction Critica / Rédaction de Critica
+    (11, 14, 4004),
+    # Gracianne Hastoy / NULL / Gracianne Hastoy
+    (10, None, 4002),
+    # Emanuelle Morin / NULL / Emanuelle Morin
+    (8, None, 4003),
+    # Jean Chalvidant / Pierre Arandel / Pierre Arandel
+    (6, 18, 4005),
+    # Bruno Cavalié / NULL / Bruno Cavalié
+    (7, None, 4006),
+    # Sébastien Soumagnas / Ned Euphorya / Ned Euphorya
+    (12, 16, 4007),
+    # Charlotte David / NULL / Charlotte David
+    (11, None, 4008),
+    # Bruno Cavalié / King Charle / King Charle
+    (7, 5, 4009),
+    # Emanuelle Morin / Nathalie d'Armagnac / Nathalie d'Armagnac
+    (8, 4, 4010),
+    # Jean Chalvidant / NULL / Jean Chalvidant
+    (6, None, 4011),
+    # Karen Jouault / NULL / Karen Jouault
+    (9, None, 4012),
+    # Charlotte David / Sarah Cianengoty / Sarah Cianengoty
+    (11, 9, 4013),
+    # Gracianne Hastoy / Yoanna Grishac / Yoanna Grishac
+    (10, 20, 4014),
+    # Karen Jouault / Emily Bignon / Emily Bignon
+    (9, 1, 4015),
+    # Dominique Larue / NULL / Dominique Larue
+    (19, None, 4016),
+    # Bruno Cavalié / Paul Fernando / Paul Fernando
+    (7, 17, 4017),
+    # Aurore Labarbe / NULL / Aurore Labarbe
+    (5, None, 4018),
+    # Karen Jouault / Dominique Podovani / Dominique Podovani   
+    (9, 3, 4019),
+    # Charlotte David / Rédaction Critica / Maïlys
+    (11, 14, 4020),
+    # Charlotte David / Rédaction Critica / Eric Laborde
+    (11, 14, 4022),
+    # Sébastien Soumagnas / NULL / Sébastien Soumagnas
+    (12, None, 4023),
+]
+
+USERS_AND_ARTICLES_BY_TO_REMOVE = [
     4001, 
     4020,
+]
+
+USERS_TO_REMOVE = [
+    4000,
+    4001,
+    4002,
+    4003,
+    4004,
+    4005,
+    4006,
+    4007,
+    4008,
+    4009,
+    4010,
+    4011,
+    4012,
+    4013,
+    4014,
+    4015,
+    4016,
+    4017,
+    4018,
+    4019,
+    4020,
+    4021,
+    4022,
+    4023,
 ]
 
 REGIONS_TO_REMOVE = [
@@ -155,35 +231,39 @@ class Command(NoArgsCommand):
 
         print "\nANGER / ARTICLES COUP DE GUEULE"
         self._draw_separator()
-        self.clean_anger()
+        self.update_anger()
         
         print "\nARTICLES / ARTICLES RUBRIQUES STANDARDS"
         self._draw_separator()
-        self.clean_articles()
+        self.update_articles()
         
         print "\nEPICURIEN / ARTICLES EPICURIEN"
         self._draw_separator()
-        self.clean_epicurien()
+        self.update_epicurien()
 
         print "\nILLUSTRATIONS"
         self._draw_separator()
-        self.clean_illustrations()
+        self.update_illustrations()
         
         print "\nISSUES"
         self._draw_separator()
-        self.clean_issues()
+        self.update_issues()
 
         print "\nNOTES / BREVES"
         self._draw_separator()
-        self.clean_notes()
+        self.update_notes()
 
         print "\nREGION NOTES / BREVES REGIONNALES"
         self._draw_separator()
-        self.clean_region_notes()
+        self.update_region_notes()
         
         print "\nVOYAGES / ARTICLES VOYAGES"
         self._draw_separator()
-        self.clean_voyages()
+        self.update_voyages()
+
+        print "\nAUTHORS AND NICKNAMES"
+        self._draw_separator()
+        self.update_authors_and_nicknames()
 
         print "\nDELETE OBJECTS TO DELETE"
         self._draw_separator()
@@ -196,9 +276,59 @@ class Command(NoArgsCommand):
         print "\n"
 
     
-    def clean_anger(self):
+    def update_authors_and_nicknames(self):
         """
-        Clean anger articles.
+        Update authors (users) and nicknames.
+        
+        """
+        for user in USER_MAP:
+            # author / author_nickname
+            author = User.objects.get(id=user[0])
+            author_nickname = None
+            if user[1]:
+                author_nickname = UserNickname.objects.get(id=user[1])
+            # articles
+            articles = Article.objects.filter(author__id=user[2])
+            for article in articles:
+                article.author = author
+                article.author_nickname = author_nickname
+                article.save()
+            # epicurien
+            articles = EpicurienArticle.objects.filter(author__id=user[2])
+            for article in articles:
+                article.author = author
+                article.author_nickname = author_nickname
+                article.save()
+            # voyages
+            articles = VoyagesArticle.objects.filter(author__id=user[2])
+            for article in articles:
+                article.author = author
+                article.author_nickname = author_nickname
+                article.save()
+            # anger
+            articles = AngerArticle.objects.filter(author__id=user[2])
+            for article in articles:
+                article.author = author
+                article.author_nickname = author_nickname
+                article.save()
+            # notes
+            notes = Note.objects.filter(author__id=user[2])
+            for note in notes:
+                note.author = author
+                note.author_nickname = author_nickname
+                note.save()
+            # region notes
+            notes = RegionNote.objects.filter(author__id=user[2])
+            for note in notes:
+                note.author = author
+                note.author_nickname = author_nickname
+                note.save()
+        print "Update authors and nicknames... OK."
+        
+        
+    def update_anger(self):
+        """
+        Update anger articles.
         
         """
         # Update categories
@@ -211,9 +341,9 @@ class Command(NoArgsCommand):
         print "Update categories... OK."
         
         
-    def clean_articles(self):
+    def update_articles(self):
         """
-        Clean articles.
+        Update articles.
         
         """
         # Update categories
@@ -231,9 +361,9 @@ class Command(NoArgsCommand):
         self._set_featured(Article)
 
 
-    def clean_epicurien(self):
+    def update_epicurien(self):
         """
-        Clean articles of "Epicurien" category.
+        Update articles of "Epicurien" category.
         
         """        
         # Delete empty articles
@@ -281,17 +411,17 @@ class Command(NoArgsCommand):
         self._regroup_issues(EpicurienArticle)
 
 
-    def clean_illustrations(self):
+    def update_illustrations(self):
         """
-        Clean illustrations.
+        Update illustrations.
         
         """
         print "Nothing yet..."
         
         
-    def clean_issues(self):
+    def update_issues(self):
         """
-        Clean issues.
+        Update issues.
         
         """        
         # Generate encoded secret keys
@@ -326,9 +456,9 @@ class Command(NoArgsCommand):
         print "Generate positions and quotas for all issues... OK."
 
 
-    def clean_notes(self):
+    def update_notes(self):
         """
-        Clean notes.
+        Update notes.
         
         """        
         # Update categories
@@ -356,9 +486,9 @@ class Command(NoArgsCommand):
         self._set_featured(Note)
         
 
-    def clean_region_notes(self):
+    def update_region_notes(self):
         """
-        Clean region notes.
+        Update region notes.
         
         """
         # Update regions
@@ -375,9 +505,9 @@ class Command(NoArgsCommand):
         print "Update regions... OK."
         
 
-    def clean_voyages(self):
+    def update_voyages(self):
         """
-        Clean articles of "Voyages" category.
+        Update articles of "Voyages" category.
         
         """  
         self._regroup_issues(VoyagesArticle)
@@ -390,7 +520,7 @@ class Command(NoArgsCommand):
         """
         # AUTHORS
         # ----------------------------------------------------------------------
-        for author in AUTHORS_TO_REMOVE:
+        for author in USERS_AND_ARTICLES_BY_TO_REMOVE:
             # articles to delete
             trash = []
             # articles
@@ -443,6 +573,7 @@ class Command(NoArgsCommand):
         Load fixtures.
         
         """
+        os.system('./manage.py loaddata user_data')
         os.system('./manage.py loaddata data/archives/*')
         
 

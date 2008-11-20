@@ -1,0 +1,512 @@
+[
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "gilles", 
+            "first_name": "Gilles", 
+            "last_name": "Fabio", 
+            "is_active": 1, 
+            "is_superuser": 1, 
+            "is_staff": 1, 
+            "last_login": "2008-11-20 11:31:34", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$dd67d$35d108f6291241e8c61f373a0d9f7e10ae518484", 
+            "email": "gilles.fabio@gmail.com", 
+            "date_joined": "2008-10-05 09:03:24"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "administrateur", 
+            "first_name": "Administrateur", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 1, 
+            "is_staff": 1, 
+            "last_login": "2008-11-04 21:30:03", 
+            "groups": [
+                1
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$117d6$f6b950ab3aac9e0a6943182829b6a562e196ebda", 
+            "email": "", 
+            "date_joined": "2008-10-05 09:20:36"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "redacchef", 
+            "first_name": "R\u00e9dacteur en chef", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-04 21:28:12", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$27dc3$8a2434a54cb51cde5ddf4ea3dfa9c84c880ed8dc", 
+            "email": "", 
+            "date_joined": "2008-10-05 09:20:57"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "journaliste", 
+            "first_name": "Journaliste", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-05 18:54:15", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$8839a$48dde4d24a253290df497a8018d5bfe70fb01552", 
+            "email": "", 
+            "date_joined": "2008-10-05 09:21:14"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Labarbe", 
+            "first_name": "Aurore", 
+            "last_name": "Labarbe", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-12 16:08:23", 
+            "groups": [
+                4
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$6c1d2$0f5e63d52865d866be94546969db5fe037daf975", 
+            "email": "publicite@critica.fr", 
+            "date_joined": "2008-10-05 09:21:33"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "chalvidant", 
+            "first_name": "Jean", 
+            "last_name": "Chalvidant", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-12 10:18:19", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$031ea$f11de935ef1cc43654959ec4043c57006c9e41aa", 
+            "email": "", 
+            "date_joined": "2008-10-06 15:31:08"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "cavalie", 
+            "first_name": "Bruno", 
+            "last_name": "Cavali\u00e9", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-12 17:08:45", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$f6bab$d6d77aaf63d9b1a311599de9a2469766b0e3b9c8", 
+            "email": "cavalie@critica.fr", 
+            "date_joined": "2008-10-06 15:31:48"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Morin", 
+            "first_name": "Emmanuelle", 
+            "last_name": "Morin", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-06 15:18:29", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$52e69$4cab216cf1d447710a23653dc27b6cf6dd9bfc36", 
+            "email": "darmagnac@critica.fr", 
+            "date_joined": "2008-10-06 15:32:09"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Jouault", 
+            "first_name": "Karen", 
+            "last_name": "Jouault", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-12 10:31:49", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$0128f$0cb67adae3b94fb54c6f8877eedc62c235be16e6", 
+            "email": "jouault@critica.fr", 
+            "date_joined": "2008-10-06 15:32:28"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Hastoy", 
+            "first_name": "Gracianne", 
+            "last_name": "Hastoy", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-12 11:07:22", 
+            "groups": [
+                2
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$74c0d$33b542e74b3096e9e127e3dc78fe801cc0139226", 
+            "email": "g.hastoy@orange.fr", 
+            "date_joined": "2008-10-06 15:32:46"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "David", 
+            "first_name": "Charlotte ", 
+            "last_name": "David", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-12 18:34:28", 
+            "groups": [
+                2
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$c238f$f718255479696f933bdcfdf0ce01fbfb840f58d8", 
+            "email": "david@critica.fr", 
+            "date_joined": "2008-10-06 15:33:02"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Soumagnas", 
+            "first_name": "S\u00e9bastien", 
+            "last_name": "Soumagnas", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-10-30 17:52:32", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$a11bd$1feb956656e42bad85fe03cb5199218d9567b86f", 
+            "email": "soumagnas@critica.fr", 
+            "date_joined": "2008-10-06 15:33:20"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Blash", 
+            "first_name": "Blash", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-07 11:01:33", 
+            "groups": [
+                5
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$45c18$b0a9ead0efc7c233ae15a0164cb63caa97e1f0f3", 
+            "email": "blash@critica.fr", 
+            "date_joined": "2008-10-10 10:23:13"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "pascal", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-05 18:07:31", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$940c0$efc9ca3f02c28c340b675c4eb5bc3c1be7fa2de4", 
+            "email": "", 
+            "date_joined": "2008-10-14 14:52:47"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "publicite", 
+            "first_name": "Publicit\u00e9", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-11-06 17:57:27", 
+            "groups": [
+                4
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$14162$5e4411bf922b3752c054ed957c690acec333a15b", 
+            "email": "publicite@critica.fr", 
+            "date_joined": "2008-10-15 14:53:20"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Thomas", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 0, 
+            "last_login": "2008-10-20 18:27:57", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "sha1$04bfc$4d537c52f74563af64e8beca13bc3387c42d2636", 
+            "email": "", 
+            "date_joined": "2008-10-16 00:54:47"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Ollivier", 
+            "first_name": "Marie-Pascale", 
+            "last_name": "Ollivier", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-11-20 11:59:49", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$42e3d$380a8b3abd92f23344719df388a6e61b3cedada7", 
+            "email": "", 
+            "date_joined": "2008-11-20 11:59:49"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "Larue", 
+            "first_name": "Dominique ", 
+            "last_name": "Larue", 
+            "is_active": 1, 
+            "is_superuser": 0, 
+            "is_staff": 1, 
+            "last_login": "2008-11-20 15:06:02", 
+            "groups": [
+                3
+            ], 
+            "user_permissions": [], 
+            "password": "sha1$397ea$ddf9ba26ccbce967759a940080430da627d9e98d", 
+            "email": "", 
+            "date_joined": "2008-11-20 15:06:02"
+        }
+    },
+    {
+        "pk": 1, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Emily Bignon", 
+            "user": 9
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Gracianne Hastoy", 
+            "user": 9
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Dominique Padovani", 
+            "user": 9
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Nathalie d'Armagnac ", 
+            "user": 8
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "King Charle ", 
+            "user": 7
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Karen Jouault", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Emmanuelle Morin", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Bruno Cavali\u00e9", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Sarah Cianengoty", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "S\u00e9bastien Soumagnas ", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Jean Chalvidant", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Marine Leggari", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Fabrice Del Dingo", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "La r\u00e9daction de Critic@", 
+            "user": 11
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Hortense Des Chesnais", 
+            "user": 18
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Ned Euphorya", 
+            "user": 12
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Paul Fernando", 
+            "user": 7
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Pierre Arandel", 
+            "user": 6
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Fabienne Hatchondo", 
+            "user": 10
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "users.usernickname", 
+        "fields": {
+            "nickname": "Yoanna Grishac", 
+            "user": 10
+        }
+    }
+]

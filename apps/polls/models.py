@@ -17,7 +17,7 @@ class Poll(models.Model):
     """
     submitter         = models.ForeignKey('auth.User', verbose_name=_('submitter'))
     title             = models.CharField(_('title'), max_length=255, unique=True, help_text=_('255 characters max.'))
-    slug              = models.SlugField(_('slug'), blank=True, editable=False)
+    slug              = models.SlugField(_('slug'), max_length=255, blank=True, editable=False)
     creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True, editable=False)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True, editable=False)
     issues            = models.ManyToManyField('issues.Issue', verbose_name=_('issues'), blank=True, db_index=True, help_text=_('Please, select one or several issues.'))
