@@ -1,6 +1,25 @@
 # -*- coding: utf-8 -*-
+import os
 from django.core.management.base import NoArgsCommand
 from django.core.management.base import CommandError
+from critica.apps.categories.models import Category
+from critica.apps.articles.models import Article
+from critica.apps.anger.models import AngerArticle
+from critica.apps.epicurien.models import EpicurienArticleType
+from critica.apps.epicurien.models import EpicurienArticle
+from critica.apps.positions.models import DefaultCategoryPosition
+from critica.apps.positions.models import IssueCategoryPosition
+from critica.apps.positions.models import DefaultNotePosition
+from critica.apps.positions.models import IssueNotePosition
+from critica.apps.quotas.models import DefaultCategoryQuota
+from critica.apps.quotas.models import CategoryQuota
+from critica.apps.notes.models import NoteType
+from critica.apps.notes.models import Note
+from critica.apps.regions.models import RegionNote
+from critica.apps.regions.models import Region
+from critica.apps.voyages.models import VoyagesArticle  
+from critica.apps.issues.models import Issue
+from critica.apps.utils import urlbase64
 
 CATEGORY_MAP = [
     (1, 4010),
@@ -56,6 +75,70 @@ REGION_MAP = [
     (26, 4024),
 ]
 
+AUTHORS_TO_REMOVE = [
+    4001, 
+    4020,
+]
+
+REGIONS_TO_REMOVE = [
+    4001,
+    4002,
+    4003,
+    4004,
+    4005,
+    4006,
+    4007,
+    4008,
+    4009,
+    4010,
+    4011,
+    4012,
+    4013,
+    4014,
+    4015,
+    4016,
+    4017,
+    4018,
+    4019,
+    4020,
+    4021,
+    4022,
+    4023,
+    4024,
+    4025,
+    4026,
+]
+
+NOTE_TYPES_TO_REMOVE = [
+    4001,
+    4002,
+    4003,
+    4004,
+    4005,
+    4006,
+    4007,
+    4008,
+    4009,
+    4010,
+]
+
+CATEGORIES_TO_REMOVE = [
+    4001,
+    4002,
+    4003,
+    4004,
+    4005,
+    4006,
+    4007,
+    4008,
+    4009,
+    4010,
+    4011,
+    4012,
+    4013,
+    4014,
+    4015,
+]
 
 class Command(NoArgsCommand):
     """
@@ -69,7 +152,7 @@ class Command(NoArgsCommand):
         """
         print "Loading fixtures..."
         self._initialize()
-        
+
         print "\nANGER / ARTICLES COUP DE GUEULE"
         self._draw_separator()
         self.clean_anger()
@@ -101,6 +184,10 @@ class Command(NoArgsCommand):
         print "\nVOYAGES / ARTICLES VOYAGES"
         self._draw_separator()
         self.clean_voyages()
+
+        print "\nDELETE OBJECTS TO DELETE"
+        self._draw_separator()
+        self.delete_objects()
         
         print "\n"
 
@@ -108,15 +195,12 @@ class Command(NoArgsCommand):
     def clean_anger(self):
         print "Nothing yet..."
         
-    
+        
     def clean_articles(self):
         """
         Clean articles.
         
         """
-        from critica.apps.categories.models import Category
-        from critica.apps.articles.models import Article
-        
         # Update categories
         # ----------------------------------------------------------------------
         for category in CATEGORY_MAP:
@@ -136,11 +220,7 @@ class Command(NoArgsCommand):
         """
         Clean articles of "Epicurien" category.
         
-        """
-        from critica.apps.categories.models import Category
-        from critica.apps.epicurien.models import EpicurienArticleType
-        from critica.apps.epicurien.models import EpicurienArticle
-        
+        """        
         # Delete empty articles
         # ----------------------------------------------------------------------
         try:
@@ -198,10 +278,7 @@ class Command(NoArgsCommand):
         """
         Clean issues.
         
-        """
-        from critica.apps.issues.models import Issue
-        from critica.apps.utils import urlbase64
-        
+        """        
         # Generate encoded secret keys
         # ----------------------------------------------------------------------
         issues = Issue.objects.all()
@@ -211,15 +288,7 @@ class Command(NoArgsCommand):
         print "Generate secret keys... OK."
         
         # Generate positions
-        # ----------------------------------------------------------------------
-        from critica.apps.positions.models import DefaultCategoryPosition
-        from critica.apps.positions.models import IssueCategoryPosition
-        from critica.apps.positions.models import DefaultNotePosition
-        from critica.apps.positions.models import IssueNotePosition
-        from critica.apps.categories.models import Category
-        from critica.apps.quotas.models import DefaultCategoryQuota
-        from critica.apps.quotas.models import CategoryQuota
-        
+        # ----------------------------------------------------------------------        
         issues = Issue.objects.all()
         
         for issue in issues:
@@ -246,11 +315,7 @@ class Command(NoArgsCommand):
         """
         Clean notes.
         
-        """
-        from critica.apps.categories.models import Category
-        from critica.apps.notes.models import NoteType
-        from critica.apps.notes.models import Note
-        
+        """        
         # Update categories
         # ----------------------------------------------------------------------
         for category in CATEGORY_MAP:
@@ -281,9 +346,6 @@ class Command(NoArgsCommand):
         Clean region notes.
         
         """
-        from critica.apps.regions.models import RegionNote
-        from critica.apps.regions.models import Region
-
         # Update regions
         # Category is automatically updated at saving
         # ----------------------------------------------------------------------
@@ -302,11 +364,65 @@ class Command(NoArgsCommand):
         """
         Clean articles of "Voyages" category.
         
-        """
-        from critica.apps.voyages.models import VoyagesArticle    
+        """  
         self._regroup_issues(VoyagesArticle)
 
-    
+
+    def delete_objects(self):
+        """
+        Delete objects.
+        
+        """
+        # AUTHORS
+        # ----------------------------------------------------------------------
+        for author in AUTHORS_TO_REMOVE:
+            # articles to delete
+            trash = []
+            # articles
+            articles = Article.objects.filter(author__id=author)
+            trash.append(articles)
+            # epicurien
+            articles = EpicurienArticle.objects.filter(author__id=author)
+            trash.append(articles)
+            # voyages
+            articles = VoyagesArticle.objects.filter(author__id=author)
+            trash.append(articles)
+            # anger
+            articles = AngerArticle.objects.filter(author__id=author)
+            trash.append(articles)
+            # notes
+            notes = Note.objects.filter(author__id=author)
+            trash.append(notes)
+            # region notes
+            notes = RegionNote.objects.filter(author__id=author)
+            trash.append(notes)
+            # clean
+            for item in trash:
+                item.delete()
+        print "Delete obsolete authors... OK."
+        
+        # REGIONS
+        # ----------------------------------------------------------------------
+        for region in REGIONS_TO_REMOVE:
+            region = Region.objects.get(id=region)
+            region.delete()
+        print "Delete obsolete regions... OK."
+        
+        # NOTE TYPES
+        # ----------------------------------------------------------------------
+        for note_type in NOTE_TYPES_TO_REMOVE:
+            note_type = NoteType.objects.get(id=note_type)
+            note_type.delete()
+        print "Delete obsolete note types... OK."
+        
+        # CATEGORIES
+        # ----------------------------------------------------------------------
+        for category in CATEGORIES_TO_REMOVE:
+            category = Category.objects.get(id=category)
+            category.delete()
+        print "Delete obsolete categories... OK."
+
+
     def _draw_separator(self):
         """
         Draw article type separator.
@@ -320,7 +436,6 @@ class Command(NoArgsCommand):
         Initialization.
         
         """
-        import os
         load_fixtures = os.system('./manage.py loaddata data/archives/*')
         
     
