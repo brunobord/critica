@@ -151,7 +151,7 @@ class Command(NoArgsCommand):
         
         """
         print "Loading fixtures..."
-        self._initialize()
+        self.load_fixtures()
 
         print "\nANGER / ARTICLES COUP DE GUEULE"
         self._draw_separator()
@@ -188,12 +188,27 @@ class Command(NoArgsCommand):
         print "\nDELETE OBJECTS TO DELETE"
         self._draw_separator()
         self.delete_objects()
-        
+
+        print "\nGENERATE NEW DUMPS"
+        self._draw_separator()
+        self.generate_new_dumps()
+
         print "\n"
 
     
     def clean_anger(self):
-        print "Nothing yet..."
+        """
+        Clean anger articles.
+        
+        """
+        # Update categories
+        # ----------------------------------------------------------------------
+        articles = AngerArticle.objects.all()
+        category = Category.objects.get(id=13)
+        for article in articles:
+            article.category = category
+            article.save()
+        print "Update categories... OK."
         
         
     def clean_articles(self):
@@ -423,6 +438,39 @@ class Command(NoArgsCommand):
         print "Delete obsolete categories... OK."
 
 
+    def load_fixtures(self):
+        """
+        Load fixtures.
+        
+        """
+        os.system('./manage.py loaddata data/archives/*')
+        
+
+    def generate_new_dumps(self):
+        """
+        Generate new JSON dump files.
+        
+        """
+        os.system('rm -f data/clean_archives/*')
+        print "Delete old dumps... OK."
+        os.system('./manage.py dumpdata anger --indent=4 > data/clean_archives/anger.json')
+        print "Generate dump: anger... OK."
+        os.system('./manage.py dumpdata articles --indent=4 > data/clean_archives/articles.json')
+        print "Generate dump: articles... OK."
+        os.system('./manage.py dumpdata epicurien --indent=4 > data/clean_archives/epicurien.json')
+        print "Generate dump: epicurien... OK."
+        os.system('./manage.py dumpdata illustrations --indent=4 > data/clean_archives/illustrations.json')
+        print "Generate dump: illustrations... OK."
+        os.system('./manage.py dumpdata issues --indent=4 > data/clean_archives/issues.json')
+        print "Generate dump: issues... OK."
+        os.system('./manage.py dumpdata notes --indent=4 > data/clean_archives/notes.json')
+        print "Generate dump: notes... OK."
+        os.system('./manage.py dumpdata regions --indent=4 > data/clean_archives/regions_notes.json')
+        print "Generate dump: regions notes... OK."
+        os.system('./manage.py dumpdata voyages --indent=4 > data/clean_archives/voyages.json')
+        print "Generate dump: voyages... OK."
+
+
     def _draw_separator(self):
         """
         Draw article type separator.
@@ -430,14 +478,6 @@ class Command(NoArgsCommand):
         """
         print 80 * '-' + '\n'
 
-    
-    def _initialize(self):
-        """
-        Initialization.
-        
-        """
-        load_fixtures = os.system('./manage.py loaddata data/archives/*')
-        
     
     def _get_slugs(self, model):
         """
