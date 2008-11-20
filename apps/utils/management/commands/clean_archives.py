@@ -22,6 +22,7 @@ from critica.apps.issues.models import Issue
 from critica.apps.utils import urlbase64
 from django.contrib.auth.models import User
 from critica.apps.users.models import UserNickname
+from critica.apps.illustrations.models import IllustrationOfTheDay
 
 CATEGORY_MAP = [
     (1, 4010),
@@ -416,8 +417,20 @@ class Command(NoArgsCommand):
         Update illustrations.
         
         """
-        print "Nothing yet..."
-        
+        # create a default illustration for all issues
+        issues = Issue.objects.all()
+        submitter = User.objects.get(id=10) # Gracianne Hastoy
+        illustration = IllustrationOfTheDay(
+            submitter=submitter,
+            image='upload/idj/default.jpg',
+            credits='Critic@',
+            legend='Critic@')
+        illustration.save()
+        for issue in issues:
+            illustration.issues.add(issue)
+        illustration.save()
+        print "Create the default illustration for all issues... OK."
+
         
     def update_issues(self):
         """
