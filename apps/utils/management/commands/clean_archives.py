@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import random
 from django.core.management.base import NoArgsCommand
 from django.core.management.base import CommandError
 from critica.apps.categories.models import Category
@@ -7,6 +8,8 @@ from critica.apps.articles.models import Article
 from critica.apps.anger.models import AngerArticle
 from critica.apps.epicurien.models import EpicurienArticleType
 from critica.apps.epicurien.models import EpicurienArticle
+from critica.apps.positions.models import CategoryPosition
+from critica.apps.positions.models import NotePosition
 from critica.apps.positions.models import DefaultCategoryPosition
 from critica.apps.positions.models import IssueCategoryPosition
 from critica.apps.positions.models import DefaultNotePosition
@@ -15,6 +18,7 @@ from critica.apps.quotas.models import DefaultCategoryQuota
 from critica.apps.quotas.models import CategoryQuota
 from critica.apps.notes.models import NoteType
 from critica.apps.notes.models import Note
+from critica.apps.regions.models import FeaturedRegion
 from critica.apps.regions.models import RegionNote
 from critica.apps.regions.models import Region
 from critica.apps.voyages.models import VoyagesArticle  
@@ -23,6 +27,7 @@ from critica.apps.utils import urlbase64
 from django.contrib.auth.models import User
 from critica.apps.users.models import UserNickname
 from critica.apps.illustrations.models import IllustrationOfTheDay
+from critica.apps.videos.models import Video
 
 CATEGORY_MAP = [
     (1, 4010),
@@ -227,48 +232,61 @@ class Command(NoArgsCommand):
         Handler.
         
         """
-        print "Loading fixtures..."
+        print "\nLOADING FIXTURES"
+        self._draw_separator()
         self.load_fixtures()
 
-        print "\nANGER / ARTICLES COUP DE GUEULE"
+        print "\nANGER"
         self._draw_separator()
-        self.update_anger()
+        self.make_anger()
         
-        print "\nARTICLES / ARTICLES RUBRIQUES STANDARDS"
+        print "\nARTICLES"
         self._draw_separator()
-        self.update_articles()
+        self.make_articles()
         
-        print "\nEPICURIEN / ARTICLES EPICURIEN"
+        print "\nEPICURIEN"
         self._draw_separator()
-        self.update_epicurien()
+        self.make_epicurien()
 
         print "\nILLUSTRATIONS"
         self._draw_separator()
-        self.update_illustrations()
+        self.make_illustrations()
         
         print "\nISSUES"
         self._draw_separator()
-        self.update_issues()
+        self.make_issues()
 
-        print "\nNOTES / BREVES"
+        print "\nNOTES"
         self._draw_separator()
-        self.update_notes()
+        self.make_notes()
 
-        print "\nREGION NOTES / BREVES REGIONNALES"
+        print "\nREGION NOTES"
         self._draw_separator()
-        self.update_region_notes()
+        self.make_region_notes()
+
+        print "\nFEATURED REGIONS"
+        self._draw_separator()
+        self.make_featured_regions()
         
         print "\nVOYAGES / ARTICLES VOYAGES"
         self._draw_separator()
-        self.update_voyages()
+        self.make_voyages()
+
+        print "\nVIDEOS"
+        self._draw_separator()
+        self.make_videos()
 
         print "\nAUTHORS AND NICKNAMES"
         self._draw_separator()
-        self.update_authors_and_nicknames()
+        self.make_authors_and_nicknames()
+        
+        print "\nQUOTAS AND POSITIONS"
+        self._draw_separator()
+        self.make_quotas_and_positions()
 
         print "\nDELETE OBJECTS TO DELETE"
         self._draw_separator()
-        self.delete_objects()
+        self.delete_obsolete_objects()
 
         print "\nGENERATE NEW DUMPS"
         self._draw_separator()
@@ -277,7 +295,7 @@ class Command(NoArgsCommand):
         print "\n"
 
     
-    def update_authors_and_nicknames(self):
+    def make_authors_and_nicknames(self):
         """
         Update authors (users) and nicknames.
         
@@ -327,7 +345,7 @@ class Command(NoArgsCommand):
         print "Update authors and nicknames... OK."
         
         
-    def update_anger(self):
+    def make_anger(self):
         """
         Update anger articles.
         
@@ -342,7 +360,7 @@ class Command(NoArgsCommand):
         print "Update categories... OK."
         
         
-    def update_articles(self):
+    def make_articles(self):
         """
         Update articles.
         
@@ -362,7 +380,7 @@ class Command(NoArgsCommand):
         self._set_featured(Article)
 
 
-    def update_epicurien(self):
+    def make_epicurien(self):
         """
         Update articles of "Epicurien" category.
         
@@ -412,15 +430,16 @@ class Command(NoArgsCommand):
         self._regroup_issues(EpicurienArticle)
 
 
-    def update_illustrations(self):
+    def make_illustrations(self):
         """
-        Update illustrations.
+        Add a default illustration.
         
         """
         # create a default illustration for all issues
         issues = Issue.objects.all()
         submitter = User.objects.get(id=10) # Gracianne Hastoy
         illustration = IllustrationOfTheDay(
+            id=100,
             submitter=submitter,
             image='upload/idj/default.jpg',
             credits='Critic@',
@@ -432,7 +451,7 @@ class Command(NoArgsCommand):
         print "Create the default illustration for all issues... OK."
 
         
-    def update_issues(self):
+    def make_issues(self):
         """
         Update issues.
         
@@ -445,31 +464,53 @@ class Command(NoArgsCommand):
             issue.save()
         print "Generate secret keys... OK."
         
-        # Generate positions
-        # ----------------------------------------------------------------------        
-        issues = Issue.objects.all()
+
+    def make_quotas_and_positions(self):
+        """
+        Generates quotas and positions for all issues.
         
+        """  
+        issues = Issue.objects.all()
         for issue in issues:
             # categories
-            default_positions = DefaultCategoryPosition.objects.all()
-            for default_position in default_positions:
-                issue_position = IssueCategoryPosition(issue=issue, category=default_position.category, position=default_position.position)
-                issue_position.save()
+            default_category_positions = DefaultCategoryPosition.objects.all()
+            first_pass = True
+            for default_position in default_category_positions:
+                if first_pass == True:
+                    issue_position = IssueCategoryPosition(pk=30000, issue=issue, category=default_position.category, position=default_position.position)
+                    issue_position.save()
+                    first_pass = False
+                else:
+                    issue_position = IssueCategoryPosition(issue=issue, category=default_position.category, position=default_position.position)
+                    issue_position.save()
             # notes
-            default_positions = DefaultNotePosition.objects.all()
-            for default_position in default_positions:
-                issue_position = IssueNotePosition(issue=issue, category=default_position.category, type=default_position.type, position=default_position.position)
-                issue_position.save()
+            default_note_positions = DefaultNotePosition.objects.all()
+            first_pass = True
+            for default_position in default_note_positions:
+                if first_pass == True:
+                    issue_position = IssueNotePosition(pk=30000, issue=issue, category=default_position.category, type=default_position.type, position=default_position.position)
+                    issue_position.save()
+                    first_pass = False
+                else:
+                    issue_position = IssueNotePosition(issue=issue, category=default_position.category, type=default_position.type, position=default_position.position)
+                    issue_position.save() 
             # quotas
             default_quotas = DefaultCategoryQuota.objects.all()
+            first_pass = True
             for default_quota in default_quotas:
-                category = Category.objects.get(slug=default_quota.category.slug)
-                category_quota = CategoryQuota(issue=issue, category=category, quota=default_quota.quota)
-                category_quota.save()        
+                if first_pass == True:
+                    category = Category.objects.get(slug=default_quota.category.slug)
+                    category_quota = CategoryQuota(pk=30000, issue=issue, category=category, quota=default_quota.quota)
+                    category_quota.save()
+                    first_pass = False
+                else:
+                    category = Category.objects.get(slug=default_quota.category.slug)
+                    category_quota = CategoryQuota(issue=issue, category=category, quota=default_quota.quota)
+                    category_quota.save()   
         print "Generate positions and quotas for all issues... OK."
+        
 
-
-    def update_notes(self):
+    def make_notes(self):
         """
         Update notes.
         
@@ -499,7 +540,7 @@ class Command(NoArgsCommand):
         self._set_featured(Note)
         
 
-    def update_region_notes(self):
+    def make_region_notes(self):
         """
         Update region notes.
         
@@ -517,8 +558,42 @@ class Command(NoArgsCommand):
                 note.save()
         print "Update regions... OK."
         
+    def make_featured_regions(self):
+        """
+        Add random featured regions.
+        
+        """
+        regions = Region.objects.all()
+        issues = Issue.objects.all()
+        for issue in issues:
+            random_region = random.choice(regions)
+            featured = FeaturedRegion(issue=issue, region=random_region)
+            featured.save()
+        print "Add random featured regions... OK."
+              
+    
+    def make_videos(self):
+        """
+        Add the default videos for all issues.
+        
+        """
+        submitter = User.objects.get(id=10) # Gracianne Hastoy
+        issues = Issue.objects.all()
+        video = Video(
+            id=100,
+            submitter=submitter,
+            name='Jingle Critica',
+            widget='<div><object width="480" height="381"><param name="movie" value="http://www.dailymotion.com/swf/k7BVH2ZEIyBsE8PCOv&related=1&canvas=medium"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/k7BVH2ZEIyBsE8PCOv&related=1&canvas=medium" type="application/x-shockwave-flash" width="480" height="381" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b><a href="http://www.dailymotion.com/video/x7bprv_criticafr_news">critica.fr</a></b><br /><i>envoyé par <a href="http://www.dailymotion.com/canalcritica">canalcritica</a></i></div>',
+            is_ready_to_publish=True,
+            is_reserved=False)
+        video.save()
+        for issue in issues:
+            video.issues.add(issue)
+        video.save()
+        print "Add the default video... OK."
+        
 
-    def update_voyages(self):
+    def make_voyages(self):
         """
         Update articles of "Voyages" category.
         
@@ -526,9 +601,9 @@ class Command(NoArgsCommand):
         self._regroup_issues(VoyagesArticle)
 
 
-    def delete_objects(self):
+    def delete_obsolete_objects(self):
         """
-        Delete objects.
+        Delete obsolete objects.
         
         """
         # AUTHORS
@@ -614,6 +689,10 @@ class Command(NoArgsCommand):
         print "Generate dump: illustrations... OK."
         os.system('./manage.py dumpdata issues --indent=4 > data/clean_archives/issues.json')
         print "Generate dump: issues... OK."
+        os.system('./manage.py dumpdata positions --indent=4 > data/clean_archives/positions.json')
+        print "Generate dump: positions... OK."
+        os.system('./manage.py dumpdata quotas --indent=4 > data/clean_archives/quotas.json')
+        print "Generate dump: quotas... OK."
         os.system('./manage.py dumpdata notes --indent=4 > data/clean_archives/notes.json')
         print "Generate dump: notes... OK."
         os.system('./manage.py dumpdata regions --indent=4 > data/clean_archives/regions_notes.json')
