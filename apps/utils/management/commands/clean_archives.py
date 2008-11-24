@@ -222,6 +222,12 @@ CATEGORIES_TO_REMOVE = [
     4015,
 ]
 
+ISSUES_TO_REMOVE = [
+    143,
+    144,
+    145,
+]
+
 class Command(NoArgsCommand):
     """
     Command that cleans archives.
@@ -287,6 +293,10 @@ class Command(NoArgsCommand):
         print "\nDELETE OBJECTS TO DELETE"
         self._draw_separator()
         self.delete_obsolete_objects()
+        
+        print "\nDELETE UNWANTED ISSUES"
+        self._draw_separator()
+        self.delete_unwanted_issues()
 
         print "\nGENERATE NEW DUMPS"
         self._draw_separator()
@@ -661,6 +671,17 @@ class Command(NoArgsCommand):
             user = User.objects.get(id=user)
             user.delete()
         print "Delete obsolete users... OK."
+
+        
+    def delete_unwanted_issues(self):
+        """
+        Delete unwanted issues.
+        
+        """
+        for issue in ISSUES_TO_REMOVE:
+            i = Issue.objects.get(id=issue)
+            i.delete()
+        print "Delete unwanted issues... OK."
 
 
     def load_fixtures(self):
