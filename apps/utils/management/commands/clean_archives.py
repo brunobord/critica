@@ -223,6 +223,7 @@ CATEGORIES_TO_REMOVE = [
 ]
 
 ISSUES_TO_REMOVE = [
+    142,
     143,
     144,
     145,
@@ -238,9 +239,9 @@ class Command(NoArgsCommand):
         Handler.
         
         """
-        print "\nLOADING FIXTURES"
-        self._draw_separator()
-        self.load_fixtures()
+        #print "\nLOADING FIXTURES"
+        #self._draw_separator()
+        #self.load_fixtures()
 
         print "\nANGER"
         self._draw_separator()
@@ -294,7 +295,7 @@ class Command(NoArgsCommand):
         self._draw_separator()
         self.delete_obsolete_objects()
         
-        print "\nDELETE UNWANTED ISSUES"
+        print "\DELETE UNWANTED ISSUES"
         self._draw_separator()
         self.delete_unwanted_issues()
 
@@ -303,7 +304,16 @@ class Command(NoArgsCommand):
         self.generate_new_dumps()
 
         print "\n"
-
+        
+        
+    def load_fixtures(self):
+        """
+        Load fixtures.
+        
+        """
+        os.system('./manage.py loaddata user_data')
+        os.system('./manage.py loaddata data/archives/*')
+        
     
     def make_authors_and_nicknames(self):
         """
@@ -438,7 +448,7 @@ class Command(NoArgsCommand):
         # Regroup issues
         # ----------------------------------------------------------------------
         self._regroup_issues(EpicurienArticle)
-
+        
 
     def make_illustrations(self):
         """
@@ -449,7 +459,6 @@ class Command(NoArgsCommand):
         issues = Issue.objects.all()
         submitter = User.objects.get(id=10) # Gracianne Hastoy
         illustration = IllustrationOfTheDay(
-            id=100,
             submitter=submitter,
             image='upload/idj/default.jpg',
             credits='Critic@',
@@ -484,36 +493,17 @@ class Command(NoArgsCommand):
         for issue in issues:
             # categories
             default_category_positions = DefaultCategoryPosition.objects.all()
-            first_pass = True
             for default_position in default_category_positions:
-                if first_pass == True:
-                    issue_position = IssueCategoryPosition(pk=30000, issue=issue, category=default_position.category, position=default_position.position)
-                    issue_position.save()
-                    first_pass = False
-                else:
                     issue_position = IssueCategoryPosition(issue=issue, category=default_position.category, position=default_position.position)
                     issue_position.save()
             # notes
             default_note_positions = DefaultNotePosition.objects.all()
-            first_pass = True
             for default_position in default_note_positions:
-                if first_pass == True:
-                    issue_position = IssueNotePosition(pk=30000, issue=issue, category=default_position.category, type=default_position.type, position=default_position.position)
-                    issue_position.save()
-                    first_pass = False
-                else:
                     issue_position = IssueNotePosition(issue=issue, category=default_position.category, type=default_position.type, position=default_position.position)
                     issue_position.save() 
             # quotas
             default_quotas = DefaultCategoryQuota.objects.all()
-            first_pass = True
             for default_quota in default_quotas:
-                if first_pass == True:
-                    category = Category.objects.get(slug=default_quota.category.slug)
-                    category_quota = CategoryQuota(pk=30000, issue=issue, category=category, quota=default_quota.quota)
-                    category_quota.save()
-                    first_pass = False
-                else:
                     category = Category.objects.get(slug=default_quota.category.slug)
                     category_quota = CategoryQuota(issue=issue, category=category, quota=default_quota.quota)
                     category_quota.save()   
@@ -567,7 +557,8 @@ class Command(NoArgsCommand):
                 note.is_reserved = False
                 note.save()
         print "Update regions... OK."
-        
+
+
     def make_featured_regions(self):
         """
         Add random featured regions.
@@ -590,7 +581,6 @@ class Command(NoArgsCommand):
         submitter = User.objects.get(id=10) # Gracianne Hastoy
         issues = Issue.objects.all()
         video = Video(
-            id=100,
             submitter=submitter,
             name='Jingle Critica',
             widget='<div><object width="480" height="381"><param name="movie" value="http://www.dailymotion.com/swf/k7BVH2ZEIyBsE8PCOv&related=1&canvas=medium"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.dailymotion.com/swf/k7BVH2ZEIyBsE8PCOv&related=1&canvas=medium" type="application/x-shockwave-flash" width="480" height="381" allowFullScreen="true" allowScriptAccess="always"></embed></object><br /><b><a href="http://www.dailymotion.com/video/x7bprv_criticafr_news">critica.fr</a></b><br /><i>envoyé par <a href="http://www.dailymotion.com/canalcritica">canalcritica</a></i></div>',
@@ -607,7 +597,9 @@ class Command(NoArgsCommand):
         """
         Update articles of "Voyages" category.
         
-        """  
+        """ 
+        # Regoup issues
+        # ----------------------------------------------------------------------
         self._regroup_issues(VoyagesArticle)
 
 
@@ -671,27 +663,26 @@ class Command(NoArgsCommand):
             user = User.objects.get(id=user)
             user.delete()
         print "Delete obsolete users... OK."
-
         
+
     def delete_unwanted_issues(self):
         """
         Delete unwanted issues.
         
         """
         for issue in ISSUES_TO_REMOVE:
-            i = Issue.objects.get(id=issue)
-            i.delete()
-        print "Delete unwanted issues... OK."
-
-
-    def load_fixtures(self):
-        """
-        Load fixtures.
-        
-        """
-        os.system('./manage.py loaddata user_data')
-        os.system('./manage.py loaddata data/archives/*')
-        
+            articles = Article.objects.filter(issues__id=issue)
+            for article in articles:
+                article.delete()
+            notes = Note.objects.filter(issues__id=issue)
+            for note in notes:
+                note.delete()
+            region_notes = RegionNote.objects.filter(issues__id=issue)
+            for note in region_notes:
+                note.delete()
+            issue_obj = Issue.objects.get(id=issue)
+            issue_obj.delete()
+                
 
     def generate_new_dumps(self):
         """

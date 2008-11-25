@@ -1,0 +1,1002 @@
+[
+    {
+        "pk": 55, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-31", 
+            "secret_key": "NTU", 
+            "number": 55, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-30", 
+            "secret_key": "NzM", 
+            "number": 73, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-29", 
+            "secret_key": "ODc", 
+            "number": 87, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-30", 
+            "secret_key": "MTAz", 
+            "number": 103, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-31", 
+            "secret_key": "MTIy", 
+            "number": 122, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-30", 
+            "secret_key": "MTM5", 
+            "number": 139, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-01", 
+            "secret_key": "NTY", 
+            "number": 56, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-29", 
+            "secret_key": "ODg", 
+            "number": 88, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-01", 
+            "secret_key": "MTA1", 
+            "number": 105, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-01", 
+            "secret_key": "MTIz", 
+            "number": 123, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 140, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-10-01", 
+            "secret_key": "MTQw", 
+            "number": 140, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-02", 
+            "secret_key": "NTc", 
+            "number": 57, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-02", 
+            "secret_key": "ODk", 
+            "number": 89, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-02", 
+            "secret_key": "MTA2", 
+            "number": 106, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-02", 
+            "secret_key": "MTI0", 
+            "number": 124, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 141, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-10-02", 
+            "secret_key": "MTQx", 
+            "number": 141, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-03", 
+            "secret_key": "NTg", 
+            "number": 58, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-03", 
+            "secret_key": "OTA", 
+            "number": 90, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-03", 
+            "secret_key": "MTA3", 
+            "number": 107, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-03", 
+            "secret_key": "MTI1", 
+            "number": 125, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-04", 
+            "secret_key": "Mzc", 
+            "number": 37, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-04", 
+            "secret_key": "NTk", 
+            "number": 59, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-04", 
+            "secret_key": "OTE", 
+            "number": 91, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-04", 
+            "secret_key": "MTI2", 
+            "number": 126, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-05", 
+            "secret_key": "Mzg", 
+            "number": 38, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-05", 
+            "secret_key": "NzQ", 
+            "number": 74, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-05", 
+            "secret_key": "OTI", 
+            "number": 92, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-06", 
+            "secret_key": "Mzk", 
+            "number": 39, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-06", 
+            "secret_key": "NzU", 
+            "number": 75, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-07", 
+            "secret_key": "NDA", 
+            "number": 40, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-07", 
+            "secret_key": "NjA", 
+            "number": 60, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-07", 
+            "secret_key": "NzY", 
+            "number": 76, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-07", 
+            "secret_key": "MTA4", 
+            "number": 108, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-08", 
+            "secret_key": "NjE", 
+            "number": 61, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-08", 
+            "secret_key": "MTA5", 
+            "number": 109, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-08", 
+            "secret_key": "MTI3", 
+            "number": 127, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-09", 
+            "secret_key": "NjI", 
+            "number": 62, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-09", 
+            "secret_key": "OTM", 
+            "number": 93, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-09", 
+            "secret_key": "MTEw", 
+            "number": 110, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-09", 
+            "secret_key": "MTI4", 
+            "number": 128, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-10", 
+            "secret_key": "NDE", 
+            "number": 41, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-10", 
+            "secret_key": "NjM", 
+            "number": 63, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-10", 
+            "secret_key": "OTQ", 
+            "number": 94, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-10", 
+            "secret_key": "MTEx", 
+            "number": 111, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-10", 
+            "secret_key": "MTI5", 
+            "number": 129, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-11", 
+            "secret_key": "NDI", 
+            "number": 42, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-11", 
+            "secret_key": "MTMw", 
+            "number": 130, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-12", 
+            "secret_key": "NDM", 
+            "number": 43, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-12", 
+            "secret_key": "OTU", 
+            "number": 95, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-13", 
+            "secret_key": "NDQ", 
+            "number": 44, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-13", 
+            "secret_key": "Nzc", 
+            "number": 77, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-14", 
+            "secret_key": "NDU", 
+            "number": 45, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-14", 
+            "secret_key": "Nzg", 
+            "number": 78, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-15", 
+            "secret_key": "Nzk", 
+            "number": 79, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-15", 
+            "secret_key": "MTEy", 
+            "number": 112, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-15", 
+            "secret_key": "MTMx", 
+            "number": 131, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2007-12-16", 
+            "secret_key": "NjQ", 
+            "number": 64, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-16", 
+            "secret_key": "OTY", 
+            "number": 96, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-16", 
+            "secret_key": "MTEz", 
+            "number": 113, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-16", 
+            "secret_key": "MTMy", 
+            "number": 132, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-17", 
+            "secret_key": "NjU", 
+            "number": 65, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-17", 
+            "secret_key": "OTc", 
+            "number": 97, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-17", 
+            "secret_key": "MTE0", 
+            "number": 114, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-17", 
+            "secret_key": "MTMz", 
+            "number": 133, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-18", 
+            "secret_key": "NDc", 
+            "number": 47, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-18", 
+            "secret_key": "NjY", 
+            "number": 66, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-18", 
+            "secret_key": "OTg", 
+            "number": 98, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 134, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-18", 
+            "secret_key": "MTM0", 
+            "number": 134, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-19", 
+            "secret_key": "ODA", 
+            "number": 80, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-19", 
+            "secret_key": "OTk", 
+            "number": 99, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-20", 
+            "secret_key": "NDk", 
+            "number": 49, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-20", 
+            "secret_key": "ODE", 
+            "number": 81, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-21", 
+            "secret_key": "NTA", 
+            "number": 50, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-21", 
+            "secret_key": "Njc", 
+            "number": 67, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-21", 
+            "secret_key": "ODI", 
+            "number": 82, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-21", 
+            "secret_key": "MTE1", 
+            "number": 115, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-22", 
+            "secret_key": "Njg", 
+            "number": 68, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-22", 
+            "secret_key": "ODM", 
+            "number": 83, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-22", 
+            "secret_key": "MTE2", 
+            "number": 116, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 135, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-22", 
+            "secret_key": "MTM1", 
+            "number": 135, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-23", 
+            "secret_key": "Njk", 
+            "number": 69, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-23", 
+            "secret_key": "MTAw", 
+            "number": 100, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-23", 
+            "secret_key": "MTE3", 
+            "number": 117, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-23", 
+            "secret_key": "MTM2", 
+            "number": 136, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-24", 
+            "secret_key": "NzA", 
+            "number": 70, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-24", 
+            "secret_key": "MTAx", 
+            "number": 101, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-24", 
+            "secret_key": "MTE4", 
+            "number": 118, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 137, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-24", 
+            "secret_key": "MTM3", 
+            "number": 137, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-25", 
+            "secret_key": "NTE", 
+            "number": 51, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-06-25", 
+            "secret_key": "MTAy", 
+            "number": 102, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-26", 
+            "secret_key": "NTI", 
+            "number": 52, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-26", 
+            "secret_key": "ODQ", 
+            "number": 84, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-27", 
+            "secret_key": "NTM", 
+            "number": 53, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-27", 
+            "secret_key": "ODU", 
+            "number": 85, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-03-28", 
+            "secret_key": "NTQ", 
+            "number": 54, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-28", 
+            "secret_key": "NzE", 
+            "number": 71, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-05-28", 
+            "secret_key": "ODY", 
+            "number": 86, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-04-29", 
+            "secret_key": "NzI", 
+            "number": 72, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 138, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-09-29", 
+            "secret_key": "MTM4", 
+            "number": 138, 
+            "is_published": 1
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "issues.issue", 
+        "fields": {
+            "publication_date": "2008-07-30", 
+            "secret_key": "MTIx", 
+            "number": 121, 
+            "is_published": 1
+        }
+    }
+]

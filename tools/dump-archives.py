@@ -11,9 +11,7 @@ import os
 # ------------------------------------------------------------------------------
 db_name = 'critica'
 db_user = 'root'
-db_password = ''
 options = '-e -t'
-output_file = 'dump.sql'
 tables = [
     'anger_article',
     'anger_article_issues',
@@ -26,10 +24,8 @@ tables = [
     'issues_issue',
     'notes_note',
     'notes_note_issues',
-    'positions_categoryposition',
     'positions_issuecategoryposition',
     'positions_issuenoteposition',
-    'positions_noteposition',
     'quotas_categoryquota', 
     'regions_featuredregion',
     'regions_note',
@@ -42,16 +38,11 @@ tables = [
 
 # Dump
 # ------------------------------------------------------------------------------
-command = 'mysqldump -u %s -p %s %s %s %s > %s' % (
-    db_user, 
-    db_password, 
-    db_name, 
-    options, 
-    ' '.join(tables), 
-    output_file)
-    
-exec_command = os.system(command)
+for table in tables:
+    command = 'mysqldump -u %s %s %s %s > dumps/%s' % (db_user, db_name, options, table, '%s.sql' % table)
+    exec_command = os.system(command)
+    print "Dump table %s... OK." % table
 
-print "Dumped tables in %s... OK." % output_file
-
-
+#command = 'mysqldump -u %s %s %s %s > %s' % (db_user, db_name, options, ' '.join(tables), 'dump.sql')
+#exec_command = os.system(command)
+#print "Dump tables... OK."
