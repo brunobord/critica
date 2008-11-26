@@ -85,9 +85,9 @@ REGION_MAP = [
 
 USER_MAP = [
     # Charlotte David / Rédaction Critica / Bidule Plop
-    (11, 14, 4000),
+    (11, 15, 4000),
     # Charlotte David / Rédaction Critica / Rédaction de Critica
-    (11, 14, 4004),
+    (11, 15, 4004),
     # Gracianne Hastoy / NULL / Gracianne Hastoy
     (10, None, 4002),
     # Emanuelle Morin / NULL / Emanuelle Morin
@@ -123,9 +123,9 @@ USER_MAP = [
     # Karen Jouault / Dominique Podovani / Dominique Podovani   
     (9, 3, 4019),
     # Charlotte David / Rédaction Critica / Maïlys
-    (11, 14, 4020),
+    (11, 15, 4020),
     # Charlotte David / Rédaction Critica / Eric Laborde
-    (11, 14, 4022),
+    (11, 15, 4022),
     # Sébastien Soumagnas / NULL / Sébastien Soumagnas
     (12, None, 4023),
 ]
@@ -295,7 +295,7 @@ class Command(NoArgsCommand):
         self._draw_separator()
         self.delete_obsolete_objects()
         
-        print "\DELETE UNWANTED ISSUES"
+        print "\nDELETE UNWANTED ISSUES"
         self._draw_separator()
         self.delete_unwanted_issues()
 
@@ -682,6 +682,7 @@ class Command(NoArgsCommand):
                 note.delete()
             issue_obj = Issue.objects.get(id=issue)
             issue_obj.delete()
+        print "Delete unwanted issues... OK."
                 
 
     def generate_new_dumps(self):

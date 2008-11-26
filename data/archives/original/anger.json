@@ -1,0 +1,2886 @@
+[
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-31 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                55
+            ], 
+            "modification_date": "2008-03-31 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-55", 
+            "summary": "Eh oui, les m\u00e9dias aboient leur silence et la caravane Critic@ passe\u0085 J\u0092ai zapp\u00e9 comme un fou, tous les jours, d\u0092une cha\u00eene \u00e0 l\u0092autre, pour m\u0092accrocher au reste de l\u0092actu, aux\r\n                  frasques habituelles du Sarko Circus, \u00e0 tout ce qui pouvait m\u0092\u00e9loigner des pr\u00e9toires sombres de Charleville-M\u00e9zi\u00e8res.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 55", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4001
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-30 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                73
+            ], 
+            "modification_date": "2008-04-30 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-73", 
+            "summary": "Nous sommes ce que nous mangeons. Soit. \u00c0 l\u0092approche de l\u0092\u00e9t\u00e9, on nous le mart\u00e8le assez, et les hommes \u00e9pargn\u00e9s jusqu\u0092\u00e0 il y a quelques ann\u00e9es, sont maintenant log\u00e9s \u00e0 la m\u00eame\r\n                  pauvre enseigne que nous. Donc, un esprit sain dans un corps sain, tout \u00e7a, c\u0092est tr\u00e8s bien. Hormis qu\u0092il faut tout de m\u00eame arriver \u00e0 s\u0092y retrouver. Le petit d\u00e9jeuner serait\r\n                  primordial, qu\u0092ils disent. Je d\u00e9cide de m\u0092y mettre.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 73", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4002
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-29 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                87
+            ], 
+            "modification_date": "2008-05-29 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-87", 
+            "summary": "J\u0092arrive de Cannes o\u00f9, incognito, je m\u0092\u00e9tais gliss\u00e9 dans la salle de d\u00e9lib\u00e9rations. Deux heures planqu\u00e9 derri\u00e8re un rideau \u00e0 \u00e9couter Sean Penn, Nathalie Portman et autres membres du\r\n                  jury. Aussi, c\u0092est en exclusivit\u00e9 mondiale que je vous livre l\u0092\u00e9laboration du palmar\u00e8s.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 87", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4003
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-30 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                103
+            ], 
+            "modification_date": "2008-06-30 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-103", 
+            "summary": "Bon sang de bon cent ! Ca y\u0092est, Critica.fr souffle aujourd\u0092hui ses cent bougies. Et cent jours, c\u0092est pas rien. Pour Napol\u00e9on, c\u0092\u00e9tait la fin, pour Critic@, c\u0092est juste les\r\n                  premiers pas. Alors aujourd\u0092hui, pas de chronique. Juste une d\u00e9clinaison des sans, des cent, des s\u0092en et des sangs. Va falloir faire le tri. Il y a des sans qui m\u0092amputent comme des\r\n                  blessures de guerre et d\u0092autres, privations fantasm\u00e9es, qui m\u0092offrent une silhouette de vie nouvelle.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 103", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4004
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-31 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                122
+            ], 
+            "modification_date": "2008-07-31 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-122", 
+            "summary": "Critic@ est n\u00e9 le 14 janvier de l'an 2008. Depuis ce jour, ont \u00e9t\u00e9 r\u00e9dig\u00e9s 122 num\u00e9ros. Nous nous sommes amus\u00e9s \u00e0 un petit comptage (cach\u00e9 \u00e0 nos journalistes, sans \u00e7a, pour s\u00fbr, ils\r\n                  auraient imm\u00e9diatement donn\u00e9 leur d\u00e9mission et seraient partis s'isoler sur une \u00eele d\u00e9serte en refusant, \u00e0 tout jamais, d'entendre prononcer une fois de plus le nom de Critic@).\r\n                  Voici ce que \u00e7a donne. Donc, depuis le 14 janvier de cette ann\u00e9e, vous avez lu : 1.098 articles, 10.980 br\u00e8ves, 3.172 br\u00e8ves r\u00e9gionales...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 122", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4005
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-30 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                139
+            ], 
+            "modification_date": "2008-09-30 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-139", 
+            "summary": "Il y a comme \u00e7a quelques \u00e9missions, apparemment accessibles \u00e0 tous, faciles et grand public, qui n\u00e9cessitent pourtant une petite adaptation rh\u00e9torique. Vous n\u0092aviez pas remarqu\u00e9 ?\r\n                  Je m\u0092en vais de ce pas vous initier aux phrases obligatoirement branch\u00e9es, cit\u00e9es par le grand dramaturge t\u00e9l\u00e9visuel, Nikos Alliagas.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 139", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4006
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-10-09 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                145
+            ], 
+            "modification_date": "2008-10-09 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-145", 
+            "summary": "Octobre. Les arr\u00eats maladie pleuvent dru sur le pays. Normal, c\u0092est l\u0092automne. Pour certains, c\u0092est la palombite aigu\u00eb, maladie apparemment tr\u00e8s grave, qui toucherait en particulier\r\n                  la population masculine du Sud-Ouest. Pour d\u0092autres, c\u0092est apparemment plus b\u00e9nin, une petite ch\u00e2taignite, qui se manifeste par des piq\u00fbres de bogues dans les mains. Certains sont\r\n                  encore convalescents de la vendangite cruelle qui les avait terrass\u00e9s en septembre, et pour laquelle, c\u0092est effrayant, ils se sont tra\u00een\u00e9s une gueule de bois atroce pendant des\r\n                  jours.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 145", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4007
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-01 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                56
+            ], 
+            "modification_date": "2008-04-01 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-56", 
+            "summary": "Eh oui, les m\u00e9dias aboient leur silence et la caravane Critic@ passe\u0085 J\u0092ai zapp\u00e9 comme un fou, tous les jours, d\u0092une cha\u00eene \u00e0 l\u0092autre, pour m\u0092accrocher au reste de l\u0092actu, aux\r\n                  frasques habituelles du Sarko Circus, \u00e0 tout ce qui pouvait m\u0092\u00e9loigner des pr\u00e9toires sombres de Charleville-M\u00e9zi\u00e8res.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 56", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4008
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-01 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                105
+            ], 
+            "modification_date": "2008-07-01 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-105", 
+            "summary": "Bon sang de bon cent ! Ca y\u0092est, Critica.fr souffle aujourd\u0092hui ses cent bougies. Et cent jours, c\u0092est pas rien. Pour Napol\u00e9on, c\u0092\u00e9tait la fin, pour Critic@, c\u0092est juste les\r\n                  premiers pas. Alors aujourd\u0092hui, pas de chronique. Juste une d\u00e9clinaison des sans, des cent, des s\u0092en et des sangs. Va falloir faire le tri. Il y a des sans qui m\u0092amputent comme des\r\n                  blessures de guerre et d\u0092autres, privations fantasm\u00e9es, qui m\u0092offrent une silhouette de vie nouvelle.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 105", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4009
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-01 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                123
+            ], 
+            "modification_date": "2008-09-01 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-123", 
+            "summary": "J'en viens \u00e0 me demander si on n'est pas cern\u00e9s de grosses feignasses incomp\u00e9tentes, mais je dois faire du mauvais esprit, pensez donc. Et puis l'id\u00e9e mesquine me taraude : est-ce\r\n                  que les gens ont vraiment envie de bosser dans notre pays ? Est-ce qu'ils ont suffisamment \"faim\" pour trouver les solutions \u00e0 nos probl\u00e8mes quotidiens et se \"bouger le cul\" en\r\n                  cons\u00e9quence ? S\u00fbrement. Mais le sentiment g\u00e9n\u00e9ral est \u00e0 la \"ert\u00e9tisation\", rappelez lundi, aujourd'hui il est en RTT.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 123", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4010
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-10-01 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                140
+            ], 
+            "modification_date": "2008-10-01 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-140", 
+            "summary": "Il y a comme \u00e7a quelques \u00e9missions, apparemment accessibles \u00e0 tous, faciles et grand public, qui n\u00e9cessitent pourtant une petite adaptation rh\u00e9torique. Vous n\u0092aviez pas remarqu\u00e9 ?\r\n                  Je m\u0092en vais de ce pas vous initier aux phrases obligatoirement branch\u00e9es, cit\u00e9es par le grand dramaturge t\u00e9l\u00e9visuel, Nikos Alliagas.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 140", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4011
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-02 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                57
+            ], 
+            "modification_date": "2008-04-02 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-57", 
+            "summary": "Eh oui, les m\u00e9dias aboient leur silence et la caravane Critic@ passe\u0085 J\u0092ai zapp\u00e9 comme un fou, tous les jours, d\u0092une cha\u00eene \u00e0 l\u0092autre, pour m\u0092accrocher au reste de l\u0092actu, aux\r\n                  frasques habituelles du Sarko Circus, \u00e0 tout ce qui pouvait m\u0092\u00e9loigner des pr\u00e9toires sombres de Charleville-M\u00e9zi\u00e8res.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 57", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4012
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-02 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                89
+            ], 
+            "modification_date": "2008-06-02 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-89", 
+            "summary": "L\u0092association \"Save the children\" a d\u00e9voil\u00e9 que sur le continent africain, des milliers d\u0092enfants, apr\u00e8s s\u0092\u00eatre enferm\u00e9s dans le silence, commencent \u00e0 parler et \u00e0 porter plainte\r\n                  contre un certains nombre d\u0092humanitaires et de soldats de la paix qui leur auraient fait subir viols et abus sexuels divers. Qu\u0092on comprenne bien la situation. Les humanitaires sont\r\n                  envoy\u00e9s par l\u0092ONU dans certains pays africains pour apporter de l\u0092aide alimentaire, m\u00e9dicale et pour assurer la s\u00e9curit\u00e9 des populations les plus expos\u00e9es \u00e0 la sauvagerie. Ces gens\r\n                  l\u00e0, sont \u00e0 la fois la vitrine et la bonne conscience du monde occidental. Et une partie d\u0092entre eux aurait mis en place une sorte de troc, style \"p\u00e9trole contre nourriture\", mais\r\n                  l\u00e0, c\u0092est \"sexe contre secours\".", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 89", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4013
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-02 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                106
+            ], 
+            "modification_date": "2008-07-02 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-106", 
+            "summary": "Bon sang de bon cent ! Ca y\u0092est, Critica.fr souffle aujourd\u0092hui ses cent bougies. Et cent jours, c\u0092est pas rien. Pour Napol\u00e9on, c\u0092\u00e9tait la fin, pour Critic@, c\u0092est juste les\r\n                  premiers pas. Alors aujourd\u0092hui, pas de chronique. Juste une d\u00e9clinaison des sans, des cent, des s\u0092en et des sangs. Va falloir faire le tri. Il y a des sans qui m\u0092amputent comme des\r\n                  blessures de guerre et d\u0092autres, privations fantasm\u00e9es, qui m\u0092offrent une silhouette de vie nouvelle.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 106", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4014
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-02 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                124
+            ], 
+            "modification_date": "2008-09-02 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-124", 
+            "summary": "J'en viens \u00e0 me demander si on n'est pas cern\u00e9s de grosses feignasses incomp\u00e9tentes, mais je dois faire du mauvais esprit, pensez donc. Et puis l'id\u00e9e mesquine me taraude : est-ce\r\n                  que les gens ont vraiment envie de bosser dans notre pays ? Est-ce qu'ils ont suffisamment \"faim\" pour trouver les solutions \u00e0 nos probl\u00e8mes quotidiens et se \"bouger le cul\" en\r\n                  cons\u00e9quence ? S\u00fbrement. Mais le sentiment g\u00e9n\u00e9ral est \u00e0 la \"ert\u00e9tisation\", rappelez lundi, aujourd'hui il est en RTT.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 124", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4015
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-10-02 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                141
+            ], 
+            "modification_date": "2008-10-02 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-141", 
+            "summary": "Il y a comme \u00e7a quelques \u00e9missions, apparemment accessibles \u00e0 tous, faciles et grand public, qui n\u00e9cessitent pourtant une petite adaptation rh\u00e9torique. Vous n\u0092aviez pas remarqu\u00e9 ?\r\n                  Je m\u0092en vais de ce pas vous initier aux phrases obligatoirement branch\u00e9es, cit\u00e9es par le grand dramaturge t\u00e9l\u00e9visuel, Nikos Alliagas.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 141", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4016
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-03 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                58
+            ], 
+            "modification_date": "2008-04-03 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-58", 
+            "summary": "Eh oui, les m\u00e9dias aboient leur silence et la caravane Critic@ passe\u0085 J\u0092ai zapp\u00e9 comme un fou, tous les jours, d\u0092une cha\u00eene \u00e0 l\u0092autre, pour m\u0092accrocher au reste de l\u0092actu, aux\r\n                  frasques habituelles du Sarko Circus, \u00e0 tout ce qui pouvait m\u0092\u00e9loigner des pr\u00e9toires sombres de Charleville-M\u00e9zi\u00e8res.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 58", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4017
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-03 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                90
+            ], 
+            "modification_date": "2008-06-03 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-90", 
+            "summary": "L\u0092association \"Save the children\" a d\u00e9voil\u00e9 que sur le continent africain, des milliers d\u0092enfants, apr\u00e8s s\u0092\u00eatre enferm\u00e9s dans le silence, commencent \u00e0 parler et \u00e0 porter plainte\r\n                  contre un certains nombre d\u0092humanitaires et de soldats de la paix qui leur auraient fait subir viols et abus sexuels divers. Qu\u0092on comprenne bien la situation. Les humanitaires sont\r\n                  envoy\u00e9s par l\u0092ONU dans certains pays africains pour apporter de l\u0092aide alimentaire, m\u00e9dicale et pour assurer la s\u00e9curit\u00e9 des populations les plus expos\u00e9es \u00e0 la sauvagerie. Ces gens\r\n                  l\u00e0, sont \u00e0 la fois la vitrine et la bonne conscience du monde occidental. Et une partie d\u0092entre eux aurait mis en place une sorte de troc, style \"p\u00e9trole contre nourriture\", mais\r\n                  l\u00e0, c\u0092est \"sexe contre secours\".", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 90", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4018
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-03 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                107
+            ], 
+            "modification_date": "2008-07-03 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-107", 
+            "summary": "Dis p\u00e9pette, il est pr\u00eat ton tchador ? Tu rigoles ? Et bien tu ne devrais peut-\u00eatre pas. Sukuk, \u00e7a te dit quelque chose ? Sudoku ? Ah, \u00e9coute, ne joue pas le professeur Tournesol.\r\n                  Les sukuks, c\u0092est pas le sudoku et \u00e7a n\u0092a rien d\u0092un jeu pour senior ramollo qui attend son d\u00eener. Une confiserie ? Apr\u00e8s tout, il y a presque du sucre dans ce mot l\u00e0 (plus mollah\r\n                  que mot l\u00e0, tu vas voir\u0085) mais non, tu refroidis. D\u0092ailleurs tu ne trouveras pas. Les sukuks sont des placements financiers de type obligataire adapt\u00e9s aux besoins financiers des\r\n                  pays musulmans et compatibles avec le Coran.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 107", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4019
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-03 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                125
+            ], 
+            "modification_date": "2008-09-03 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-125", 
+            "summary": "J'en viens \u00e0 me demander si on n'est pas cern\u00e9s de grosses feignasses incomp\u00e9tentes, mais je dois faire du mauvais esprit, pensez donc. Et puis l'id\u00e9e mesquine me taraude : est-ce\r\n                  que les gens ont vraiment envie de bosser dans notre pays ? Est-ce qu'ils ont suffisamment \"faim\" pour trouver les solutions \u00e0 nos probl\u00e8mes quotidiens et se \"bouger le cul\" en\r\n                  cons\u00e9quence ? S\u00fbrement. Mais le sentiment g\u00e9n\u00e9ral est \u00e0 la \"ert\u00e9tisation\", rappelez lundi, aujourd'hui il est en RTT.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 125", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4020
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-04 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                37
+            ], 
+            "modification_date": "2008-03-04 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-37", 
+            "summary": "Municipales, \u00e7a veut dire que je t\u0092\u00ea\u00ea\u00ea\u00eame\u0085.et que je t\u0092\u00ea\u00ea\u00ea\u00eame \u00e0 en voter\u0085 Bon, j\u0092arr\u00eate le d\u00e9lire, mais quand m\u00eame, quel bonheur cette fin de campagne municipale ! A une semaine du\r\n                  premier tour de scrutin, on nous a rang\u00e9 toutes les marionnettes du Sarkoland.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 37", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4021
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-04 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                59
+            ], 
+            "modification_date": "2008-04-04 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-59", 
+            "summary": "Eh oui, les m\u00e9dias aboient leur silence et la caravane Critic@ passe\u0085 J\u0092ai zapp\u00e9 comme un fou, tous les jours, d\u0092une cha\u00eene \u00e0 l\u0092autre, pour m\u0092accrocher au reste de l\u0092actu, aux\r\n                  frasques habituelles du Sarko Circus, \u00e0 tout ce qui pouvait m\u0092\u00e9loigner des pr\u00e9toires sombres de Charleville-M\u00e9zi\u00e8res.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 59", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4022
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-04 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                91
+            ], 
+            "modification_date": "2008-06-04 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-91", 
+            "summary": "L\u0092association \"Save the children\" a d\u00e9voil\u00e9 que sur le continent africain, des milliers d\u0092enfants, apr\u00e8s s\u0092\u00eatre enferm\u00e9s dans le silence, commencent \u00e0 parler et \u00e0 porter plainte\r\n                  contre un certains nombre d\u0092humanitaires et de soldats de la paix qui leur auraient fait subir viols et abus sexuels divers. Qu\u0092on comprenne bien la situation. Les humanitaires sont\r\n                  envoy\u00e9s par l\u0092ONU dans certains pays africains pour apporter de l\u0092aide alimentaire, m\u00e9dicale et pour assurer la s\u00e9curit\u00e9 des populations les plus expos\u00e9es \u00e0 la sauvagerie. Ces gens\r\n                  l\u00e0, sont \u00e0 la fois la vitrine et la bonne conscience du monde occidental. Et une partie d\u0092entre eux aurait mis en place une sorte de troc, style \"p\u00e9trole contre nourriture\", mais\r\n                  l\u00e0, c\u0092est \"sexe contre secours\".", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 91", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4023
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-04 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                126
+            ], 
+            "modification_date": "2008-09-04 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-126", 
+            "summary": "J'en viens \u00e0 me demander si on n'est pas cern\u00e9s de grosses feignasses incomp\u00e9tentes, mais je dois faire du mauvais esprit, pensez donc. Et puis l'id\u00e9e mesquine me taraude : est-ce\r\n                  que les gens ont vraiment envie de bosser dans notre pays ? Est-ce qu'ils ont suffisamment \"faim\" pour trouver les solutions \u00e0 nos probl\u00e8mes quotidiens et se \"bouger le cul\" en\r\n                  cons\u00e9quence ? S\u00fbrement. Mais le sentiment g\u00e9n\u00e9ral est \u00e0 la \"ert\u00e9tisation\", rappelez lundi, aujourd'hui il est en RTT.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 126", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4024
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-05 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                38
+            ], 
+            "modification_date": "2008-03-05 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-38", 
+            "summary": "Municipales, \u00e7a veut dire que je t\u0092\u00ea\u00ea\u00ea\u00eame\u0085.et que je t\u0092\u00ea\u00ea\u00ea\u00eame \u00e0 en voter\u0085 Bon, j\u0092arr\u00eate le d\u00e9lire, mais quand m\u00eame, quel bonheur cette fin de campagne municipale ! A une semaine du\r\n                  premier tour de scrutin, on nous a rang\u00e9 toutes les marionnettes du Sarkoland.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 38", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4025
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-05 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                74
+            ], 
+            "modification_date": "2008-05-05 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-74", 
+            "summary": "Raffarin H\u00e2mil Th\u00fbrbo. Du 21 au 24 avril, notre c\u00e9l\u00e9brissime s\u00e9nateur, dans sa course \u00e0 la pr\u00e9sidence du S\u00e9nat, a sillonn\u00e9 la Chine \u00e0 un rythme qu\u0092on ne lui connaissait pas. Apr\u00e8s\r\n                  avoir rencontr\u00e9 les \u00e9minences rouges du Parti, notre Lino Ventura (si,si regardez-le bien) de la politique s\u0092est fendu de deux d\u00e9clarations inoubliables.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 74", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4026
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-05 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                92
+            ], 
+            "modification_date": "2008-06-05 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-92", 
+            "summary": "L\u0092association \"Save the children\" a d\u00e9voil\u00e9 que sur le continent africain, des milliers d\u0092enfants, apr\u00e8s s\u0092\u00eatre enferm\u00e9s dans le silence, commencent \u00e0 parler et \u00e0 porter plainte\r\n                  contre un certains nombre d\u0092humanitaires et de soldats de la paix qui leur auraient fait subir viols et abus sexuels divers. Qu\u0092on comprenne bien la situation. Les humanitaires sont\r\n                  envoy\u00e9s par l\u0092ONU dans certains pays africains pour apporter de l\u0092aide alimentaire, m\u00e9dicale et pour assurer la s\u00e9curit\u00e9 des populations les plus expos\u00e9es \u00e0 la sauvagerie. Ces gens\r\n                  l\u00e0, sont \u00e0 la fois la vitrine et la bonne conscience du monde occidental. Et une partie d\u0092entre eux aurait mis en place une sorte de troc, style \"p\u00e9trole contre nourriture\", mais\r\n                  l\u00e0, c\u0092est \"sexe contre secours\".", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 92", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4027
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-06 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                39
+            ], 
+            "modification_date": "2008-03-06 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-39", 
+            "summary": "Municipales, \u00e7a veut dire que je t\u0092\u00ea\u00ea\u00ea\u00eame\u0085.et que je t\u0092\u00ea\u00ea\u00ea\u00eame \u00e0 en voter\u0085 Bon, j\u0092arr\u00eate le d\u00e9lire, mais quand m\u00eame, quel bonheur cette fin de campagne municipale ! A une semaine du\r\n                  premier tour de scrutin, on nous a rang\u00e9 toutes les marionnettes du Sarkoland.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 39", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4028
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-06 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                75
+            ], 
+            "modification_date": "2008-05-06 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-75", 
+            "summary": "Raffarin H\u00e2mil Th\u00fbrbo. Du 21 au 24 avril, notre c\u00e9l\u00e9brissime s\u00e9nateur, dans sa course \u00e0 la pr\u00e9sidence du S\u00e9nat, a sillonn\u00e9 la Chine \u00e0 un rythme qu\u0092on ne lui connaissait pas. Apr\u00e8s\r\n                  avoir rencontr\u00e9 les \u00e9minences rouges du Parti, notre Lino Ventura (si,si regardez-le bien) de la politique s\u0092est fendu de deux d\u00e9clarations inoubliables.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 75", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4029
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-10-06 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                142
+            ], 
+            "modification_date": "2008-10-06 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-142", 
+            "summary": "Octobre. Les arr\u00eats maladie pleuvent dru sur le pays. Normal, c\u0092est l\u0092automne. Pour certains, c\u0092est la palombite aigu\u00eb, maladie apparemment tr\u00e8s grave, qui toucherait en particulier\r\n                  la population masculine du Sud-Ouest. Pour d\u0092autres, c\u0092est apparemment plus b\u00e9nin, une petite ch\u00e2taignite, qui se manifeste par des piq\u00fbres de bogues dans les mains. Certains sont\r\n                  encore convalescents de la vendangite cruelle qui les avait terrass\u00e9s en septembre, et pour laquelle, c\u0092est effrayant, ils se sont tra\u00een\u00e9s une gueule de bois atroce pendant des\r\n                  jours.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 142", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4030
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-07 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                40
+            ], 
+            "modification_date": "2008-03-07 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-40", 
+            "summary": "Municipales, \u00e7a veut dire que je t\u0092\u00ea\u00ea\u00ea\u00eame\u0085.et que je t\u0092\u00ea\u00ea\u00ea\u00eame \u00e0 en voter\u0085 Bon, j\u0092arr\u00eate le d\u00e9lire, mais quand m\u00eame, quel bonheur cette fin de campagne municipale ! A une semaine du\r\n                  premier tour de scrutin, on nous a rang\u00e9 toutes les marionnettes du Sarkoland.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 40", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4031
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-07 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                60
+            ], 
+            "modification_date": "2008-04-07 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-60", 
+            "summary": "Nonm\u00e9c\u00e9pavr\u00e9 ! J\u0092pars en vacances dans pas 24 heures et ils arrivent quand m\u00eame \u00e0 me mettre en rogne. Fortiche, non ? \"Ils\", ce sont les sportifs fran\u00e7ais qui, lundi, courent dans\r\n                  Paris, ou dans l'autocar, la torche \u00e0 la main. Emmen\u00e9s par le r\u00e9volutionnaire David Douillet, notre Bernadettophyle pr\u00e9f\u00e9r\u00e9 qui s\u0092est fait plus d\u0092une fois remarquer pour ses\r\n                  positions altermondialistes, il a \u00e9t\u00e9 d\u00e9cid\u00e9 qu'avec tous ses potes et potesses, dieux et d\u00e9esses du stade, tous porteraient un badge o\u00f9 sera inscrit : \"J.O, pour un monde\r\n                  meilleur\"...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 60", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4032
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-07 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                76
+            ], 
+            "modification_date": "2008-05-07 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-76", 
+            "summary": "Raffarin H\u00e2mil Th\u00fbrbo. Du 21 au 24 avril, notre c\u00e9l\u00e9brissime s\u00e9nateur, dans sa course \u00e0 la pr\u00e9sidence du S\u00e9nat, a sillonn\u00e9 la Chine \u00e0 un rythme qu\u0092on ne lui connaissait pas. Apr\u00e8s\r\n                  avoir rencontr\u00e9 les \u00e9minences rouges du Parti, notre Lino Ventura (si,si regardez-le bien) de la politique s\u0092est fendu de deux d\u00e9clarations inoubliables.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 76", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4033
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-07 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                108
+            ], 
+            "modification_date": "2008-07-07 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-108", 
+            "summary": "Allo ?!! Ingrid, t'es en cours ? Allo ?! T'es b\u00eate en cours ? T'es \u00e0 cours, Ingrid ? Ingrid ? T'es une b\u00eate \u00e0 courre, ou quoi ? ALLO !!!!! Elle r\u00e9pond pas. Normal, un peu sollicit\u00e9e\r\n                  ces jours-ci. J'sais pas vous, mais moi, ce dimanche soir, j'ai un peu le tournis. J'me sens \u00e9bloui par l'actu comme une bestiole prise en pleins farcs.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 108", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4034
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-10-07 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                143
+            ], 
+            "modification_date": "2008-10-07 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-143", 
+            "summary": "Octobre. Les arr\u00eats maladie pleuvent dru sur le pays. Normal, c\u0092est l\u0092automne. Pour certains, c\u0092est la palombite aigu\u00eb, maladie apparemment tr\u00e8s grave, qui toucherait en particulier\r\n                  la population masculine du Sud-Ouest. Pour d\u0092autres, c\u0092est apparemment plus b\u00e9nin, une petite ch\u00e2taignite, qui se manifeste par des piq\u00fbres de bogues dans les mains. Certains sont\r\n                  encore convalescents de la vendangite cruelle qui les avait terrass\u00e9s en septembre, et pour laquelle, c\u0092est effrayant, ils se sont tra\u00een\u00e9s une gueule de bois atroce pendant des\r\n                  jours.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 143", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4035
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-08 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                61
+            ], 
+            "modification_date": "2008-04-08 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-61", 
+            "summary": "Nonm\u00e9c\u00e9pavr\u00e9 ! J\u0092pars en vacances dans pas 24 heures et ils arrivent quand m\u00eame \u00e0 me mettre en rogne. Fortiche, non ? \"Ils\", ce sont les sportifs fran\u00e7ais qui, lundi, courent dans\r\n                  Paris, ou dans l'autocar, la torche \u00e0 la main. Emmen\u00e9s par le r\u00e9volutionnaire David Douillet, notre Bernadettophyle pr\u00e9f\u00e9r\u00e9 qui s\u0092est fait plus d\u0092une fois remarquer pour ses\r\n                  positions altermondialistes, il a \u00e9t\u00e9 d\u00e9cid\u00e9 qu'avec tous ses potes et potesses, dieux et d\u00e9esses du stade, tous porteraient un badge o\u00f9 sera inscrit : \"J.O, pour un monde\r\n                  meilleur\"...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 61", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4036
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-08 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                109
+            ], 
+            "modification_date": "2008-07-08 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-109", 
+            "summary": "Allo ?!! Ingrid, t'es en cours ? Allo ?! T'es b\u00eate en cours ? T'es \u00e0 cours, Ingrid ? Ingrid ? T'es une b\u00eate \u00e0 courre, ou quoi ? ALLO !!!!! Elle r\u00e9pond pas. Normal, un peu sollicit\u00e9e\r\n                  ces jours-ci. J'sais pas vous, mais moi, ce dimanche soir, j'ai un peu le tournis. J'me sens \u00e9bloui par l'actu comme une bestiole prise en pleins farcs.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 109", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4037
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-08 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                127
+            ], 
+            "modification_date": "2008-09-08 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-127", 
+            "summary": "C\u0092est la rentr\u00e9e. Et si vous y avez \u00e9chapp\u00e9, c\u0092est que, forc\u00e9ment, vous \u00e9tiez au moins en vacances en Papouasie \u00e9quatoriale ! Car comment ne pas remarquer depuis la mi-juillet\r\n                  toutes ces vitrines de magasin, d\u00e9ployant leurs cartables rutilants, leurs trousses \u00e0 la mode, cahiers Harry Potter ou classeurs Dragon Ball Z. Bon sang, si les r\u00e9sultats scolaires\r\n                  des bambins \u00e9taient \u00e0 la hauteur de leur \u00e9quipement scolaire, on croulerait sous les Einstein.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 127", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4038
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-10-08 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                144
+            ], 
+            "modification_date": "2008-10-08 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-144", 
+            "summary": "Octobre. Les arr\u00eats maladie pleuvent dru sur le pays. Normal, c\u0092est l\u0092automne. Pour certains, c\u0092est la palombite aigu\u00eb, maladie apparemment tr\u00e8s grave, qui toucherait en particulier\r\n                  la population masculine du Sud-Ouest. Pour d\u0092autres, c\u0092est apparemment plus b\u00e9nin, une petite ch\u00e2taignite, qui se manifeste par des piq\u00fbres de bogues dans les mains. Certains sont\r\n                  encore convalescents de la vendangite cruelle qui les avait terrass\u00e9s en septembre, et pour laquelle, c\u0092est effrayant, ils se sont tra\u00een\u00e9s une gueule de bois atroce pendant des\r\n                  jours.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 144", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4039
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-09 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                62
+            ], 
+            "modification_date": "2008-04-09 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-62", 
+            "summary": "Nonm\u00e9c\u00e9pavr\u00e9 ! J\u0092pars en vacances dans pas 24 heures et ils arrivent quand m\u00eame \u00e0 me mettre en rogne. Fortiche, non ? \"Ils\", ce sont les sportifs fran\u00e7ais qui, lundi, courent dans\r\n                  Paris, ou dans l'autocar, la torche \u00e0 la main. Emmen\u00e9s par le r\u00e9volutionnaire David Douillet, notre Bernadettophyle pr\u00e9f\u00e9r\u00e9 qui s\u0092est fait plus d\u0092une fois remarquer pour ses\r\n                  positions altermondialistes, il a \u00e9t\u00e9 d\u00e9cid\u00e9 qu'avec tous ses potes et potesses, dieux et d\u00e9esses du stade, tous porteraient un badge o\u00f9 sera inscrit : \"J.O, pour un monde\r\n                  meilleur\"...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 62", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4040
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-09 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                93
+            ], 
+            "modification_date": "2008-06-09 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-93", 
+            "summary": "Sur un tarmac parisien, les invit\u00e9s de Sarko pour la Beyrouth-party s\u0092installent dans le Falcon 900 affr\u00e9t\u00e9 par l\u0092Elys\u00e9e. Brochette surr\u00e9aliste\u0085Hollande, Bayrou, Devedjian, Cop\u00e9,\r\n                  Buffet, Duflot (verts), Baylet (PRG) et Raffarin. Certains vont hurler au coup de com du Pr\u00e9sident, d\u0092autres applaudir au consensus national sur le Liban...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 93", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4041
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-09 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                110
+            ], 
+            "modification_date": "2008-07-09 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-110", 
+            "summary": "Allo ?!! Ingrid, t'es en cours ? Allo ?! T'es b\u00eate en cours ? T'es \u00e0 cours, Ingrid ? Ingrid ? T'es une b\u00eate \u00e0 courre, ou quoi ? ALLO !!!!! Elle r\u00e9pond pas. Normal, un peu sollicit\u00e9e\r\n                  ces jours-ci. J'sais pas vous, mais moi, ce dimanche soir, j'ai un peu le tournis. J'me sens \u00e9bloui par l'actu comme une bestiole prise en pleins farcs.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 110", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4042
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-09 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                128
+            ], 
+            "modification_date": "2008-09-09 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-128", 
+            "summary": "C\u0092est la rentr\u00e9e. Et si vous y avez \u00e9chapp\u00e9, c\u0092est que, forc\u00e9ment, vous \u00e9tiez au moins en vacances en Papouasie \u00e9quatoriale ! Car comment ne pas remarquer depuis la mi-juillet\r\n                  toutes ces vitrines de magasin, d\u00e9ployant leurs cartables rutilants, leurs trousses \u00e0 la mode, cahiers Harry Potter ou classeurs Dragon Ball Z. Bon sang, si les r\u00e9sultats scolaires\r\n                  des bambins \u00e9taient \u00e0 la hauteur de leur \u00e9quipement scolaire, on croulerait sous les Einstein.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 128", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4043
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-10 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                41
+            ], 
+            "modification_date": "2008-03-10 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-41", 
+            "summary": "Lundi : Laurence Parisot : avis de temp\u00eate. Convocation des manitous de l\u0092UIMM, soufflage dans les bronches, soutiens de Matignon, de l\u0092Elys\u00e9e, grands couplets d\u0092indignation,\r\n                  naninan\u00e8re\u0085 La petite Laurence veut se faire les Ma\u00eetres des Forges. Comme on dit au Medef : \"CNPF\" (ce n\u0092est pas fait). Sondage du jour : 73 % des Fran\u00e7ais trouvent que Kivousav\u00e9\r\n                  affiche trop sa vie priv\u00e9e .Y\u0092a donc encore 27 % d\u0092entre nous qui le trouvent trop discret. Inqui\u00e9tant, non ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 41", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4044
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-10 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                63
+            ], 
+            "modification_date": "2008-04-10 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-63", 
+            "summary": "Nonm\u00e9c\u00e9pavr\u00e9 ! J\u0092pars en vacances dans pas 24 heures et ils arrivent quand m\u00eame \u00e0 me mettre en rogne. Fortiche, non ? \"Ils\", ce sont les sportifs fran\u00e7ais qui, lundi, courent dans\r\n                  Paris, ou dans l'autocar, la torche \u00e0 la main. Emmen\u00e9s par le r\u00e9volutionnaire David Douillet, notre Bernadettophyle pr\u00e9f\u00e9r\u00e9 qui s\u0092est fait plus d\u0092une fois remarquer pour ses\r\n                  positions altermondialistes, il a \u00e9t\u00e9 d\u00e9cid\u00e9 qu'avec tous ses potes et potesses, dieux et d\u00e9esses du stade, tous porteraient un badge o\u00f9 sera inscrit : \"J.O, pour un monde\r\n                  meilleur\"...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 63", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4045
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-10 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                94
+            ], 
+            "modification_date": "2008-06-10 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-94", 
+            "summary": "Sur un tarmac parisien, les invit\u00e9s de Sarko pour la Beyrouth-party s\u0092installent dans le Falcon 900 affr\u00e9t\u00e9 par l\u0092Elys\u00e9e. Brochette surr\u00e9aliste\u0085Hollande, Bayrou, Devedjian, Cop\u00e9,\r\n                  Buffet, Duflot (verts), Baylet (PRG) et Raffarin. Certains vont hurler au coup de com du Pr\u00e9sident, d\u0092autres applaudir au consensus national sur le Liban...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 94", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4046
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-10 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                111
+            ], 
+            "modification_date": "2008-07-10 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-111", 
+            "summary": "Allo ?!! Ingrid, t'es en cours ? Allo ?! T'es b\u00eate en cours ? T'es \u00e0 cours, Ingrid ? Ingrid ? T'es une b\u00eate \u00e0 courre, ou quoi ? ALLO !!!!! Elle r\u00e9pond pas. Normal, un peu sollicit\u00e9e\r\n                  ces jours-ci. J'sais pas vous, mais moi, ce dimanche soir, j'ai un peu le tournis. J'me sens \u00e9bloui par l'actu comme une bestiole prise en pleins farcs.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 111", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4047
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-10 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                129
+            ], 
+            "modification_date": "2008-09-10 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-129", 
+            "summary": "C\u0092est la rentr\u00e9e. Et si vous y avez \u00e9chapp\u00e9, c\u0092est que, forc\u00e9ment, vous \u00e9tiez au moins en vacances en Papouasie \u00e9quatoriale ! Car comment ne pas remarquer depuis la mi-juillet\r\n                  toutes ces vitrines de magasin, d\u00e9ployant leurs cartables rutilants, leurs trousses \u00e0 la mode, cahiers Harry Potter ou classeurs Dragon Ball Z. Bon sang, si les r\u00e9sultats scolaires\r\n                  des bambins \u00e9taient \u00e0 la hauteur de leur \u00e9quipement scolaire, on croulerait sous les Einstein.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 129", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4048
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-11 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                42
+            ], 
+            "modification_date": "2008-03-11 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-42", 
+            "summary": "Lundi : Laurence Parisot : avis de temp\u00eate. Convocation des manitous de l\u0092UIMM, soufflage dans les bronches, soutiens de Matignon, de l\u0092Elys\u00e9e, grands couplets d\u0092indignation,\r\n                  naninan\u00e8re\u0085 La petite Laurence veut se faire les Ma\u00eetres des Forges. Comme on dit au Medef : \"CNPF\" (ce n\u0092est pas fait). Sondage du jour : 73 % des Fran\u00e7ais trouvent que Kivousav\u00e9\r\n                  affiche trop sa vie priv\u00e9e .Y\u0092a donc encore 27 % d\u0092entre nous qui le trouvent trop discret. Inqui\u00e9tant, non ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 42", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4049
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-11 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                130
+            ], 
+            "modification_date": "2008-09-11 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-130", 
+            "summary": "C\u0092est la rentr\u00e9e. Et si vous y avez \u00e9chapp\u00e9, c\u0092est que, forc\u00e9ment, vous \u00e9tiez au moins en vacances en Papouasie \u00e9quatoriale ! Car comment ne pas remarquer depuis la mi-juillet\r\n                  toutes ces vitrines de magasin, d\u00e9ployant leurs cartables rutilants, leurs trousses \u00e0 la mode, cahiers Harry Potter ou classeurs Dragon Ball Z. Bon sang, si les r\u00e9sultats scolaires\r\n                  des bambins \u00e9taient \u00e0 la hauteur de leur \u00e9quipement scolaire, on croulerait sous les Einstein.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 130", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4050
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-12 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                43
+            ], 
+            "modification_date": "2008-03-12 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-43", 
+            "summary": "Lundi : Laurence Parisot : avis de temp\u00eate. Convocation des manitous de l\u0092UIMM, soufflage dans les bronches, soutiens de Matignon, de l\u0092Elys\u00e9e, grands couplets d\u0092indignation,\r\n                  naninan\u00e8re\u0085 La petite Laurence veut se faire les Ma\u00eetres des Forges. Comme on dit au Medef : \"CNPF\" (ce n\u0092est pas fait). Sondage du jour : 73 % des Fran\u00e7ais trouvent que Kivousav\u00e9\r\n                  affiche trop sa vie priv\u00e9e .Y\u0092a donc encore 27 % d\u0092entre nous qui le trouvent trop discret. Inqui\u00e9tant, non ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 43", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4051
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-12 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                95
+            ], 
+            "modification_date": "2008-06-12 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-95", 
+            "summary": "Sur un tarmac parisien, les invit\u00e9s de Sarko pour la Beyrouth-party s\u0092installent dans le Falcon 900 affr\u00e9t\u00e9 par l\u0092Elys\u00e9e. Brochette surr\u00e9aliste\u0085Hollande, Bayrou, Devedjian, Cop\u00e9,\r\n                  Buffet, Duflot (verts), Baylet (PRG) et Raffarin. Certains vont hurler au coup de com du Pr\u00e9sident, d\u0092autres applaudir au consensus national sur le Liban...", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 95", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4052
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-13 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                44
+            ], 
+            "modification_date": "2008-03-13 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-44", 
+            "summary": "Lundi : Laurence Parisot : avis de temp\u00eate. Convocation des manitous de l\u0092UIMM, soufflage dans les bronches, soutiens de Matignon, de l\u0092Elys\u00e9e, grands couplets d\u0092indignation,\r\n                  naninan\u00e8re\u0085 La petite Laurence veut se faire les Ma\u00eetres des Forges. Comme on dit au Medef : \"CNPF\" (ce n\u0092est pas fait). Sondage du jour : 73 % des Fran\u00e7ais trouvent que Kivousav\u00e9\r\n                  affiche trop sa vie priv\u00e9e .Y\u0092a donc encore 27 % d\u0092entre nous qui le trouvent trop discret. Inqui\u00e9tant, non ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 44", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4053
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-13 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                77
+            ], 
+            "modification_date": "2008-05-13 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-77", 
+            "summary": "C\u0092est pas possible, ils sont tomb\u00e9s sur le PAF ! L'autre jour, en vedette am\u00e9ricaine, Olivier Besancenot, le m\u00e9diatique-\u00e0-l\u0092insu-de-son-plein-gr\u00e9 leader de la LCR, a fait son show\r\n                  chez Drucker. Comme sans doute un paquet de Fran\u00e7ais, j\u0092m\u0092\u00e9tais dit, tiens, on va jeter un coup d\u0092\u009cil, apr\u00e8s le repas, un \"petit rouge\", \u00e7a peut pas faire grand mal.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 77", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4054
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-14 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                45
+            ], 
+            "modification_date": "2008-03-14 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-45", 
+            "summary": "Lundi : Laurence Parisot : avis de temp\u00eate. Convocation des manitous de l\u0092UIMM, soufflage dans les bronches, soutiens de Matignon, de l\u0092Elys\u00e9e, grands couplets d\u0092indignation,\r\n                  naninan\u00e8re\u0085 La petite Laurence veut se faire les Ma\u00eetres des Forges. Comme on dit au Medef : \"CNPF\" (ce n\u0092est pas fait). Sondage du jour : 73 % des Fran\u00e7ais trouvent que Kivousav\u00e9\r\n                  affiche trop sa vie priv\u00e9e .Y\u0092a donc encore 27 % d\u0092entre nous qui le trouvent trop discret. Inqui\u00e9tant, non ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 45", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4055
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-14 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                78
+            ], 
+            "modification_date": "2008-05-14 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-78", 
+            "summary": "C\u0092est pas possible, ils sont tomb\u00e9s sur le PAF ! L'autre jour, en vedette am\u00e9ricaine, Olivier Besancenot, le m\u00e9diatique-\u00e0-l\u0092insu-de-son-plein-gr\u00e9 leader de la LCR, a fait son show\r\n                  chez Drucker. Comme sans doute un paquet de Fran\u00e7ais, j\u0092m\u0092\u00e9tais dit, tiens, on va jeter un coup d\u0092\u009cil, apr\u00e8s le repas, un \"petit rouge\", \u00e7a peut pas faire grand mal.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 78", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4056
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-15 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                79
+            ], 
+            "modification_date": "2008-05-15 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-79", 
+            "summary": "C\u0092est pas possible, ils sont tomb\u00e9s sur le PAF ! L'autre jour, en vedette am\u00e9ricaine, Olivier Besancenot, le m\u00e9diatique-\u00e0-l\u0092insu-de-son-plein-gr\u00e9 leader de la LCR, a fait son show\r\n                  chez Drucker. Comme sans doute un paquet de Fran\u00e7ais, j\u0092m\u0092\u00e9tais dit, tiens, on va jeter un coup d\u0092\u009cil, apr\u00e8s le repas, un \"petit rouge\", \u00e7a peut pas faire grand mal.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 79", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4057
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-15 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                112
+            ], 
+            "modification_date": "2008-07-15 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-112", 
+            "summary": "C'est ma grand-m\u00e8re qui disait : \"c'est avec 3 fois rien qu'on fait les meilleurs plats\" et bien, l\u00e0, ce soir, 14 juillet 22h54, l'actu du week-end \u00e7a m'fait mais 3 fois rien ;\r\n                  quant aux meilleurs plats, je serre mon stylo entre les doigts et j'dis : \"change pas d'main j'sens qu'\u00e7a vient\".", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 112", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4058
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-15 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                131
+            ], 
+            "modification_date": "2008-09-15 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-131", 
+            "summary": "SCOOP : sans tambour ni trompette, le fichier Edvige a \u00e9t\u00e9 mis en place ce week-end. Siiii, m\u00eame qu'on est les premiers \u00e0 vous l'annoncer (ben tiens, personne s'y risquerait \u00e0\r\n                  celle-l\u00e0 !) Comme on a plein de copains tr\u00e8\u00e8\u00e8\u00e8ss haut plac\u00e9s, ils ont accept\u00e9 de nous refiler la fiche en question. Attention les yeux, c'est du lourd. Y a un individu supra\r\n                  dangereux qui vient de d\u00e9bouler sur le pays\u0085", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 131", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4059
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2007-12-16 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                64
+            ], 
+            "modification_date": "2007-12-16 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-64", 
+            "summary": "Je m'\u00e9tais dit : une semaine au bord de la mer rouge, \u00e7a me fera une semaine sans Sarko...toujours \u00e7a de pris. Et bien, mission impossible. A peine je descends du car qui m'arr\u00eate \u00e0\r\n                  Karnac, qu'un gamin se jette sur moi : \"French, M'sieur ? French ?\" - Yes, French ! Et v'l\u00e0 t'y pas qu'il me sort des Rayban \u00e0 3\u0080. \"Sarkozy glasses, M'sieur, Sarkozy glasses...\"", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 64", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4060
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-16 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                96
+            ], 
+            "modification_date": "2008-06-16 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-96", 
+            "summary": "Que notre pr\u00e9sident invite son homologue syrien \u00e0 Paris, le 13 juillet, pour discuter avec d\u0092autres chefs d\u0092Etats du fumeux projet d\u0092union m\u00e9diterran\u00e9enne, soit. Mais qu\u0092il d\u00e9cide\r\n                  seul (qu\u0092on ne me dise pas que Kouchner et Rama Yade ont \u00e9t\u00e9 consult\u00e9s.), qu\u0092il d\u00e9cide donc d\u0092honorer le r\u00e9gime syrien en l\u0092associant aux comm\u00e9morations et d\u00e9fil\u00e9s militaires du 14\r\n                  juillet, l\u00e0 je dis : STOP !!!", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 96", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4061
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-16 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                113
+            ], 
+            "modification_date": "2008-07-16 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-113", 
+            "summary": "C'est ma grand-m\u00e8re qui disait : \"c'est avec 3 fois rien qu'on fait les meilleurs plats\" et bien, l\u00e0, ce soir, 14 juillet 22h54, l'actu du week-end \u00e7a m'fait mais 3 fois rien ;\r\n                  quant aux meilleurs plats, je serre mon stylo entre les doigts et j'dis : \"change pas d'main j'sens qu'\u00e7a vient\".", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 113", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4062
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-16 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                132
+            ], 
+            "modification_date": "2008-09-16 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-132", 
+            "summary": "SCOOP : sans tambour ni trompette, le fichier Edvige a \u00e9t\u00e9 mis en place ce week-end. Siiii, m\u00eame qu'on est les premiers \u00e0 vous l'annoncer (ben tiens, personne s'y risquerait \u00e0\r\n                  celle-l\u00e0 !) Comme on a plein de copains tr\u00e8\u00e8\u00e8\u00e8ss haut plac\u00e9s, ils ont accept\u00e9 de nous refiler la fiche en question. Attention les yeux, c'est du lourd. Y a un individu supra\r\n                  dangereux qui vient de d\u00e9bouler sur le pays\u0085", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 132", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4063
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-17 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                65
+            ], 
+            "modification_date": "2008-04-17 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-65", 
+            "summary": "Je m'\u00e9tais dit : une semaine au bord de la Mer rouge, \u00e7a me fera une semaine sans Sarko... toujours \u00e7a de pris. Eh bien, mission impossible. A peine je descends du car qui m'arr\u00eate\r\n                  \u00e0 Karnac, qu'un gamin se jette sur moi : \"French, M'sieur ? French ?\" - Yes, French ! Et v'l\u00e0 t'y pas qu'il me sort des Rayban \u00e0 3\u0080. \"Sarkozy glasses, M'sieur, Sarkozy glasses...\"", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 65", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4064
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-17 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                97
+            ], 
+            "modification_date": "2008-06-17 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-97", 
+            "summary": "Que notre pr\u00e9sident invite son homologue syrien \u00e0 Paris, le 13 juillet, pour discuter avec d\u0092autres chefs d\u0092Etats du fumeux projet d\u0092union m\u00e9diterran\u00e9enne, soit. Mais qu\u0092il d\u00e9cide\r\n                  seul (qu\u0092on ne me dise pas que Kouchner et Rama Yade ont \u00e9t\u00e9 consult\u00e9s.), qu\u0092il d\u00e9cide donc d\u0092honorer le r\u00e9gime syrien en l\u0092associant aux comm\u00e9morations et d\u00e9fil\u00e9s militaires du 14\r\n                  juillet, l\u00e0 je dis : STOP !!!", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 97", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4065
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-17 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                114
+            ], 
+            "modification_date": "2008-07-17 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-114", 
+            "summary": "C'est ma grand-m\u00e8re qui disait : \"c'est avec 3 fois rien qu'on fait les meilleurs plats\" et bien, l\u00e0, ce soir, 14 juillet 22h54, l'actu du week-end \u00e7a m'fait mais 3 fois rien ;\r\n                  quant aux meilleurs plats, je serre mon stylo entre les doigts et j'dis : \"change pas d'main j'sens qu'\u00e7a vient\".", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 114", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4066
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-17 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                133
+            ], 
+            "modification_date": "2008-09-17 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-133", 
+            "summary": "SCOOP : sans tambour ni trompette, le fichier Edvige a \u00e9t\u00e9 mis en place ce week-end. Siiii, m\u00eame qu'on est les premiers \u00e0 vous l'annoncer (ben tiens, personne s'y risquerait \u00e0\r\n                  celle-l\u00e0 !) Comme on a plein de copains tr\u00e8\u00e8\u00e8\u00e8ss haut plac\u00e9s, ils ont accept\u00e9 de nous refiler la fiche en question. Attention les yeux, c'est du lourd. Y a un individu supra\r\n                  dangereux qui vient de d\u00e9bouler sur le pays\u0085", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 133", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4067
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-18 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                47
+            ], 
+            "modification_date": "2008-03-18 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-47", 
+            "summary": "Dimanche 16 mars,22 heures 48 : D\u00e9p\u00eache de derni\u00e8re minute. Une grave collision serait intervenue dans la commune de l\u0092Hu\u00e8mep\u00e9. Bilan provisoire : plusieurs dizaines de disparus (\r\n                  Darcos, Moudenc, Panafieu, Yade\u0085). A Critic@, nous sugg\u00e9rons humblement au Pr\u00e9sident de la R\u00e9publique de faire en sorte que, d\u00e8s la rentr\u00e9e prochaine, dans chaque classe de CM2, la\r\n                  m\u00e9moire d\u0092un maire disparu de l\u0092UMP soit confi\u00e9e \u00e0 un \u00e9l\u00e8ve.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 47", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4068
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-18 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                66
+            ], 
+            "modification_date": "2008-04-18 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-66", 
+            "summary": "Je m'\u00e9tais dit : une semaine au bord de la Mer rouge, \u00e7a me fera une semaine sans Sarko... toujours \u00e7a de pris. Eh bien, mission impossible. A peine je descends du car qui m'arr\u00eate\r\n                  \u00e0 Karnac, qu'un gamin se jette sur moi : \"French, M'sieur ? French ?\" - Yes, French ! Et v'l\u00e0 t'y pas qu'il me sort des Rayban \u00e0 3\u0080. \"Sarkozy glasses, M'sieur, Sarkozy glasses...\"", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 66", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4069
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-18 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                98
+            ], 
+            "modification_date": "2008-06-18 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-98", 
+            "summary": "Que notre pr\u00e9sident invite son homologue syrien \u00e0 Paris, le 13 juillet, pour discuter avec d\u0092autres chefs d\u0092Etats du fumeux projet d\u0092union m\u00e9diterran\u00e9enne, soit. Mais qu\u0092il d\u00e9cide\r\n                  seul (qu\u0092on ne me dise pas que Kouchner et Rama Yade ont \u00e9t\u00e9 consult\u00e9s.), qu\u0092il d\u00e9cide donc d\u0092honorer le r\u00e9gime syrien en l\u0092associant aux comm\u00e9morations et d\u00e9fil\u00e9s militaires du 14\r\n                  juillet, l\u00e0 je dis : STOP !!!", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 98", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4070
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-18 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                134
+            ], 
+            "modification_date": "2008-09-18 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-134", 
+            "summary": "SCOOP : sans tambour ni trompette, le fichier Edvige a \u00e9t\u00e9 mis en place ce week-end. Siiii, m\u00eame qu'on est les premiers \u00e0 vous l'annoncer (ben tiens, personne s'y risquerait \u00e0\r\n                  celle-l\u00e0 !) Comme on a plein de copains tr\u00e8\u00e8\u00e8\u00e8ss haut plac\u00e9s, ils ont accept\u00e9 de nous refiler la fiche en question. Attention les yeux, c'est du lourd. Y a un individu supra\r\n                  dangereux qui vient de d\u00e9bouler sur le pays\u0085", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 134", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4071
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-19 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                80
+            ], 
+            "modification_date": "2008-05-19 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-80", 
+            "summary": "Doux J\u00e9sus, quel choc mon P\u00e9p\u00e9 quand j\u0092ai aper\u00e7u l\u0092arri\u00e8re de ton cr\u00e2ne lors de l\u0092entretien t\u00e9l\u00e9vis\u00e9 avec Sarko ! Tu sais mon P\u00e9p\u00e9, j\u0092ai presque \u00e9t\u00e9 amoureuse de toi \u00e0 une \u00e9poque,\r\n                  ton c\u00f4t\u00e9 m\u00e8che folle, romantisme \u00e0 tous les \u00e9tages.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 80", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4072
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-19 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                99
+            ], 
+            "modification_date": "2008-06-19 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-99", 
+            "summary": "Que notre pr\u00e9sident invite son homologue syrien \u00e0 Paris, le 13 juillet, pour discuter avec d\u0092autres chefs d\u0092Etats du fumeux projet d\u0092union m\u00e9diterran\u00e9enne, soit. Mais qu\u0092il d\u00e9cide\r\n                  seul (qu\u0092on ne me dise pas que Kouchner et Rama Yade ont \u00e9t\u00e9 consult\u00e9s.), qu\u0092il d\u00e9cide donc d\u0092honorer le r\u00e9gime syrien en l\u0092associant aux comm\u00e9morations et d\u00e9fil\u00e9s militaires du 14\r\n                  juillet, l\u00e0 je dis : STOP !!!", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 99", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4073
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-20 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                49
+            ], 
+            "modification_date": "2008-03-20 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-49", 
+            "summary": "Dimanche 16 mars,22 heures 48 : D\u00e9p\u00eache de derni\u00e8re minute. Une grave collision serait intervenue dans la commune de l\u0092Hu\u00e8mep\u00e9. Bilan provisoire : plusieurs dizaines de disparus (\r\n                  Darcos, Moudenc, Panafieu, Yade\u0085). A Critic@, nous sugg\u00e9rons humblement au Pr\u00e9sident de la R\u00e9publique de faire en sorte que, d\u00e8s la rentr\u00e9e prochaine, dans chaque classe de CM2, la\r\n                  m\u00e9moire d\u0092un maire disparu de l\u0092UMP soit confi\u00e9e \u00e0 un \u00e9l\u00e8ve.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 49", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4074
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-20 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                81
+            ], 
+            "modification_date": "2008-05-20 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-81", 
+            "summary": "Doux J\u00e9sus, quel choc mon P\u00e9p\u00e9 quand j\u0092ai aper\u00e7u l\u0092arri\u00e8re de ton cr\u00e2ne lors de l\u0092entretien t\u00e9l\u00e9vis\u00e9 avec Sarko ! Tu sais mon P\u00e9p\u00e9, j\u0092ai presque \u00e9t\u00e9 amoureuse de toi \u00e0 une \u00e9poque,\r\n                  ton c\u00f4t\u00e9 m\u00e8che folle, romantisme \u00e0 tous les \u00e9tages.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 81", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4075
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-21 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                50
+            ], 
+            "modification_date": "2008-03-21 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-50", 
+            "summary": "Dimanche 16 mars,22 heures 48 : D\u00e9p\u00eache de derni\u00e8re minute. Une grave collision serait intervenue dans la commune de l\u0092Hu\u00e8mep\u00e9. Bilan provisoire : plusieurs dizaines de disparus (\r\n                  Darcos, Moudenc, Panafieu, Yade\u0085). A Critic@, nous sugg\u00e9rons humblement au Pr\u00e9sident de la R\u00e9publique de faire en sorte que, d\u00e8s la rentr\u00e9e prochaine, dans chaque classe de CM2, la\r\n                  m\u00e9moire d\u0092un maire disparu de l\u0092UMP soit confi\u00e9e \u00e0 un \u00e9l\u00e8ve.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 50", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4076
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-21 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                67
+            ], 
+            "modification_date": "2008-04-21 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-67", 
+            "summary": "Vu l\u0092actu de la semaine, je pr\u00e9f\u00e8re pr\u00e9venir, j\u0092suis pas d\u0092humeur. Inutile de me chatouiller avec les Fillon, Bertrand, Sarko, Rachida , Jospin et autres silhouettes qui n\u0092ont\r\n                  d\u0092importance, au fond, que pour leurs propre destins. Non, cette semaine, il y a plus grave que ces messieurs-dames. Beaucoup plus grave.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 67", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4077
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-21 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                82
+            ], 
+            "modification_date": "2008-05-21 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-82", 
+            "summary": "Doux J\u00e9sus, quel choc mon P\u00e9p\u00e9 quand j\u0092ai aper\u00e7u l\u0092arri\u00e8re de ton cr\u00e2ne lors de l\u0092entretien t\u00e9l\u00e9vis\u00e9 avec Sarko ! Tu sais mon P\u00e9p\u00e9, j\u0092ai presque \u00e9t\u00e9 amoureuse de toi \u00e0 une \u00e9poque,\r\n                  ton c\u00f4t\u00e9 m\u00e8che folle, romantisme \u00e0 tous les \u00e9tages.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 82", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4078
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-21 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                115
+            ], 
+            "modification_date": "2008-07-21 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-115", 
+            "summary": "Allez, m\u0092sieurs dames ! N\u0092h\u00e9sitez pas ! R\u00e9servez votre place, y\u0092en aura pas pour tout le monde !!! Le Sarko Circus plante exceptionnellement son chapiteau dans notre bonne ville de\r\n                  Versailles et offre aux citoyens son spectacle complet.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 115", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4079
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-22 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                68
+            ], 
+            "modification_date": "2008-04-22 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-68", 
+            "summary": "Vu l\u0092actu de la semaine, je pr\u00e9f\u00e8re pr\u00e9venir, j\u0092suis pas d\u0092humeur. Inutile de me chatouiller avec les Fillon, Bertrand, Sarko, Rachida , Jospin et autres silhouettes qui n\u0092ont\r\n                  d\u0092importance, au fond, que pour leurs propre destins. Non, cette semaine, il y a plus grave que ces messieurs-dames. Beaucoup plus grave.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 68", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4080
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-22 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                83
+            ], 
+            "modification_date": "2008-05-22 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-83", 
+            "summary": "Doux J\u00e9sus, quel choc mon P\u00e9p\u00e9 quand j\u0092ai aper\u00e7u l\u0092arri\u00e8re de ton cr\u00e2ne lors de l\u0092entretien t\u00e9l\u00e9vis\u00e9 avec Sarko ! Tu sais mon P\u00e9p\u00e9, j\u0092ai presque \u00e9t\u00e9 amoureuse de toi \u00e0 une \u00e9poque,\r\n                  ton c\u00f4t\u00e9 m\u00e8che folle, romantisme \u00e0 tous les \u00e9tages.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 83", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4081
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-22 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                116
+            ], 
+            "modification_date": "2008-07-22 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-116", 
+            "summary": "Allez, m\u0092sieurs dames ! N\u0092h\u00e9sitez pas ! R\u00e9servez votre place, y\u0092en aura pas pour tout le monde !!! Le Sarko Circus plante exceptionnellement son chapiteau dans notre bonne ville de\r\n                  Versailles et offre aux citoyens son spectacle complet.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 116", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4082
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-22 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                135
+            ], 
+            "modification_date": "2008-09-22 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-135", 
+            "summary": "Il y a comme \u00e7a quelques \u00e9missions, apparemment accessibles \u00e0 tous, faciles et grand public, qui n\u00e9cessitent pourtant une petite adaptation rh\u00e9torique. Vous n\u0092aviez pas remarqu\u00e9 ?\r\n                  Je m\u0092en vais de ce pas vous initier aux phrases obligatoirement branch\u00e9es, cit\u00e9es par le grand dramaturge t\u00e9l\u00e9visuel, Nikos Alliagas.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 135", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4083
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-23 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                69
+            ], 
+            "modification_date": "2008-04-23 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-69", 
+            "summary": "Vu l\u0092actu de la semaine, je pr\u00e9f\u00e8re pr\u00e9venir, j\u0092suis pas d\u0092humeur. Inutile de me chatouiller avec les Fillon, Bertrand, Sarko, Rachida , Jospin et autres silhouettes qui n\u0092ont\r\n                  d\u0092importance, au fond, que pour leurs propre destins. Non, cette semaine, il y a plus grave que ces messieurs-dames. Beaucoup plus grave.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 69", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4084
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-23 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                100
+            ], 
+            "modification_date": "2008-06-23 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-100", 
+            "summary": "Bon sang de bon cent ! Ca y\u0092est, Critica.fr souffle aujourd\u0092hui ses cent bougies. Et cent jours, c\u0092est pas rien. Pour Napol\u00e9on, c\u0092\u00e9tait la fin, pour Critic@, c\u0092est juste les\r\n                  premiers pas. Alors aujourd\u0092hui, pas de chronique. Juste une d\u00e9clinaison des sans, des cent, des s\u0092en et des sangs. Va falloir faire le tri. Il y a des sans qui m\u0092amputent comme des\r\n                  blessures de guerre et d\u0092autres, privations fantasm\u00e9es, qui m\u0092offrent une silhouette de vie nouvelle.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 100", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4085
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-23 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                117
+            ], 
+            "modification_date": "2008-07-23 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-117", 
+            "summary": "Allez, m\u0092sieurs dames ! N\u0092h\u00e9sitez pas ! R\u00e9servez votre place, y\u0092en aura pas pour tout le monde !!! Le Sarko Circus plante exceptionnellement son chapiteau dans notre bonne ville de\r\n                  Versailles et offre aux citoyens son spectacle complet.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 117", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4086
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-23 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                136
+            ], 
+            "modification_date": "2008-09-23 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-136", 
+            "summary": "Il y a comme \u00e7a quelques \u00e9missions, apparemment accessibles \u00e0 tous, faciles et grand public, qui n\u00e9cessitent pourtant une petite adaptation rh\u00e9torique. Vous n\u0092aviez pas remarqu\u00e9 ?\r\n                  Je m\u0092en vais de ce pas vous initier aux phrases obligatoirement branch\u00e9es, cit\u00e9es par le grand dramaturge t\u00e9l\u00e9visuel, Nikos Alliagas.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 136", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4087
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-24 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                70
+            ], 
+            "modification_date": "2008-04-24 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-70", 
+            "summary": "Vu l\u0092actu de la semaine, je pr\u00e9f\u00e8re pr\u00e9venir, j\u0092suis pas d\u0092humeur. Inutile de me chatouiller avec les Fillon, Bertrand, Sarko, Rachida , Jospin et autres silhouettes qui n\u0092ont\r\n                  d\u0092importance, au fond, que pour leurs propre destins. Non, cette semaine, il y a plus grave que ces messieurs-dames. Beaucoup plus grave.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 70", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4088
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-24 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                101
+            ], 
+            "modification_date": "2008-06-24 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-101", 
+            "summary": "Bon sang de bon cent ! Ca y\u0092est, Critica.fr souffle aujourd\u0092hui ses cent bougies. Et cent jours, c\u0092est pas rien. Pour Napol\u00e9on, c\u0092\u00e9tait la fin, pour Critic@, c\u0092est juste les\r\n                  premiers pas. Alors aujourd\u0092hui, pas de chronique. Juste une d\u00e9clinaison des sans, des cent, des s\u0092en et des sangs. Va falloir faire le tri. Il y a des sans qui m\u0092amputent comme des\r\n                  blessures de guerre et d\u0092autres, privations fantasm\u00e9es, qui m\u0092offrent une silhouette de vie nouvelle.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 101", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4089
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-24 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                118
+            ], 
+            "modification_date": "2008-07-24 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-118", 
+            "summary": "Allez, m\u0092sieurs dames ! N\u0092h\u00e9sitez pas ! R\u00e9servez votre place, y\u0092en aura pas pour tout le monde !!! Le Sarko Circus plante exceptionnellement son chapiteau dans notre bonne ville de\r\n                  Versailles et offre aux citoyens son spectacle complet.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 118", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4090
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-24 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                137
+            ], 
+            "modification_date": "2008-09-24 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-137", 
+            "summary": "Il y a comme \u00e7a quelques \u00e9missions, apparemment accessibles \u00e0 tous, faciles et grand public, qui n\u00e9cessitent pourtant une petite adaptation rh\u00e9torique. Vous n\u0092aviez pas remarqu\u00e9 ?\r\n                  Je m\u0092en vais de ce pas vous initier aux phrases obligatoirement branch\u00e9es, cit\u00e9es par le grand dramaturge t\u00e9l\u00e9visuel, Nikos Alliagas.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 137", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4091
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-25 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                51
+            ], 
+            "modification_date": "2008-03-25 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-51", 
+            "summary": "La chronique hebdo ? Un calvaire, que dis-je, une torture contre laquelle je m\u0092\u00e9l\u00e8ve violemment. Non mais, c\u0092est vrai ! Se retrouver un lundi de P\u00e2ques, \u00e0 plus de vingt-deux heures,\r\n                  devant une page blanche \u00e0 devoir chroniquer, coupdecoeurer ou coupdegueuler\u0085l\u00e0, ce soir, j\u0092ai le vertige prol\u00e9tarien. Alors, qu\u0092est ce que je fais ? Je me r\u00e9volte ? Je balance ma\r\n                  dem \u00e0 mes patrons oppresseurs ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 51", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4092
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-06-25 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                102
+            ], 
+            "modification_date": "2008-06-25 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-102", 
+            "summary": "Bon sang de bon cent ! Ca y\u0092est, Critica.fr souffle aujourd\u0092hui ses cent bougies. Et cent jours, c\u0092est pas rien. Pour Napol\u00e9on, c\u0092\u00e9tait la fin, pour Critic@, c\u0092est juste les\r\n                  premiers pas. Alors aujourd\u0092hui, pas de chronique. Juste une d\u00e9clinaison des sans, des cent, des s\u0092en et des sangs. Va falloir faire le tri. Il y a des sans qui m\u0092amputent comme des\r\n                  blessures de guerre et d\u0092autres, privations fantasm\u00e9es, qui m\u0092offrent une silhouette de vie nouvelle.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 102", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4093
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-26 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                52
+            ], 
+            "modification_date": "2008-03-26 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-52", 
+            "summary": "La chronique hebdo ? Un calvaire, que dis-je, une torture contre laquelle je m\u0092\u00e9l\u00e8ve violemment. Non mais, c\u0092est vrai ! Se retrouver un lundi de P\u00e2ques, \u00e0 plus de vingt-deux heures,\r\n                  devant une page blanche \u00e0 devoir chroniquer, coupdecoeurer ou coupdegueuler\u0085l\u00e0, ce soir, j\u0092ai le vertige prol\u00e9tarien. Alors, qu\u0092est ce que je fais ? Je me r\u00e9volte ? Je balance ma\r\n                  dem \u00e0 mes patrons oppresseurs ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 52", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4094
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-26 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                84
+            ], 
+            "modification_date": "2008-05-26 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-84", 
+            "summary": "J\u0092arrive de Cannes o\u00f9, incognito, je m\u0092\u00e9tais gliss\u00e9 dans la salle de d\u00e9lib\u00e9rations. Deux heures planqu\u00e9 derri\u00e8re un rideau \u00e0 \u00e9couter Sean Penn, Nathalie Portman et autres membres du\r\n                  jury. Aussi, c\u0092est en exclusivit\u00e9 mondiale que je vous livre l\u0092\u00e9laboration du palmar\u00e8s.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 84", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4095
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-27 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                53
+            ], 
+            "modification_date": "2008-03-27 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-53", 
+            "summary": "La chronique hebdo ? Un calvaire, que dis-je, une torture contre laquelle je m\u0092\u00e9l\u00e8ve violemment. Non mais, c\u0092est vrai ! Se retrouver un lundi de P\u00e2ques, \u00e0 plus de vingt-deux heures,\r\n                  devant une page blanche \u00e0 devoir chroniquer, coupdecoeurer ou coupdegueuler\u0085l\u00e0, ce soir, j\u0092ai le vertige prol\u00e9tarien. Alors, qu\u0092est ce que je fais ? Je me r\u00e9volte ? Je balance ma\r\n                  dem \u00e0 mes patrons oppresseurs ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 53", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4096
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-27 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                85
+            ], 
+            "modification_date": "2008-05-27 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-85", 
+            "summary": "J\u0092arrive de Cannes o\u00f9, incognito, je m\u0092\u00e9tais gliss\u00e9 dans la salle de d\u00e9lib\u00e9rations. Deux heures planqu\u00e9 derri\u00e8re un rideau \u00e0 \u00e9couter Sean Penn, Nathalie Portman et autres membres du\r\n                  jury. Aussi, c\u0092est en exclusivit\u00e9 mondiale que je vous livre l\u0092\u00e9laboration du palmar\u00e8s.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 85", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4097
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-03-28 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                54
+            ], 
+            "modification_date": "2008-03-28 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-54", 
+            "summary": "La chronique hebdo ? Un calvaire, que dis-je, une torture contre laquelle je m\u0092\u00e9l\u00e8ve violemment. Non mais, c\u0092est vrai ! Se retrouver un lundi de P\u00e2ques, \u00e0 plus de vingt-deux heures,\r\n                  devant une page blanche \u00e0 devoir chroniquer, coupdecoeurer ou coupdegueuler\u0085l\u00e0, ce soir, j\u0092ai le vertige prol\u00e9tarien. Alors, qu\u0092est ce que je fais ? Je me r\u00e9volte ? Je balance ma\r\n                  dem \u00e0 mes patrons oppresseurs ?", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 54", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4098
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-28 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                71
+            ], 
+            "modification_date": "2008-04-28 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-71", 
+            "summary": "Nous sommes ce que nous mangeons. Soit. \u00c0 l\u0092approche de l\u0092\u00e9t\u00e9, on nous le mart\u00e8le assez, et les hommes \u00e9pargn\u00e9s jusqu\u0092\u00e0 il y a quelques ann\u00e9es, sont maintenant log\u00e9s \u00e0 la m\u00eame\r\n                  pauvre enseigne que nous. Donc, un esprit sain dans un corps sain, tout \u00e7a, c\u0092est tr\u00e8s bien. Hormis qu\u0092il faut tout de m\u00eame arriver \u00e0 s\u0092y retrouver. Le petit d\u00e9jeuner serait\r\n                  primordial, qu\u0092ils disent. Je d\u00e9cide de m\u0092y mettre.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 71", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4099
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-05-28 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                86
+            ], 
+            "modification_date": "2008-05-28 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-86", 
+            "summary": "J\u0092arrive de Cannes o\u00f9, incognito, je m\u0092\u00e9tais gliss\u00e9 dans la salle de d\u00e9lib\u00e9rations. Deux heures planqu\u00e9 derri\u00e8re un rideau \u00e0 \u00e9couter Sean Penn, Nathalie Portman et autres membres du\r\n                  jury. Aussi, c\u0092est en exclusivit\u00e9 mondiale que je vous livre l\u0092\u00e9laboration du palmar\u00e8s.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 86", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4100
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-04-29 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                72
+            ], 
+            "modification_date": "2008-04-29 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-72", 
+            "summary": "Nous sommes ce que nous mangeons. Soit. \u00c0 l\u0092approche de l\u0092\u00e9t\u00e9, on nous le mart\u00e8le assez, et les hommes \u00e9pargn\u00e9s jusqu\u0092\u00e0 il y a quelques ann\u00e9es, sont maintenant log\u00e9s \u00e0 la m\u00eame\r\n                  pauvre enseigne que nous. Donc, un esprit sain dans un corps sain, tout \u00e7a, c\u0092est tr\u00e8s bien. Hormis qu\u0092il faut tout de m\u00eame arriver \u00e0 s\u0092y retrouver. Le petit d\u00e9jeuner serait\r\n                  primordial, qu\u0092ils disent. Je d\u00e9cide de m\u0092y mettre.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 72", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4101
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-09-29 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                138
+            ], 
+            "modification_date": "2008-09-29 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-138", 
+            "summary": "Il y a comme \u00e7a quelques \u00e9missions, apparemment accessibles \u00e0 tous, faciles et grand public, qui n\u00e9cessitent pourtant une petite adaptation rh\u00e9torique. Vous n\u0092aviez pas remarqu\u00e9 ?\r\n                  Je m\u0092en vais de ce pas vous initier aux phrases obligatoirement branch\u00e9es, cit\u00e9es par le grand dramaturge t\u00e9l\u00e9visuel, Nikos Alliagas.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 138", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4102
+    }, 
+    {
+        "fields": {
+            "author": 4000, 
+            "author_nickname": null, 
+            "category": 4001, 
+            "content": "contenu indisponible", 
+            "creation_date": "2008-07-30 00:00:01", 
+            "image": "", 
+            "image_credits": "", 
+            "image_legend": "", 
+            "is_featured": 0, 
+            "is_ready_to_publish": 1, 
+            "is_reserved": 0, 
+            "issues": [
+                121
+            ], 
+            "modification_date": "2008-07-30 00:00:01", 
+            "opinion": null, 
+            "publication_date": null, 
+            "slug": "coup-de-gueule-n-121", 
+            "summary": "Allez, m\u0092sieurs dames ! N\u0092h\u00e9sitez pas ! R\u00e9servez votre place, y\u0092en aura pas pour tout le monde !!! Le Sarko Circus plante exceptionnellement son chapiteau dans notre bonne ville de\r\n                  Versailles et offre aux citoyens son spectacle complet.", 
+            "tags": "", 
+            "title": "Coup de gueule n\u00b0 121", 
+            "view_count": 0
+        }, 
+        "model": "anger.angerarticle", 
+        "pk": 4103
+    }
+]

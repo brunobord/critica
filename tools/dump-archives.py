@@ -38,11 +38,11 @@ tables = [
 
 # Dump
 # ------------------------------------------------------------------------------
-for table in tables:
-    command = 'mysqldump -u %s %s %s %s > dumps/%s' % (db_user, db_name, options, table, '%s.sql' % table)
-    exec_command = os.system(command)
-    print "Dump table %s... OK." % table
+#for table in tables:
+#    command = 'mysqldump -u %s %s %s %s > dumps/%s' % (db_user, db_name, options, table, '%s.sql' % table)
+#    exec_command = os.system(command)
+#    print "Dump table %s... OK." % table
 
-#command = 'mysqldump -u %s %s %s %s > %s' % (db_user, db_name, options, ' '.join(tables), 'dump.sql')
-#exec_command = os.system(command)
-#print "Dump tables... OK."
+command = 'mysqldump -u %s %s %s %s > %s' % (db_user, db_name, options, ' '.join(tables), 'dump.sql')
+exec_command = os.system(command)
+print "Dump tables... OK."

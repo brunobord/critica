@@ -1,0 +1,210 @@
+[
+    {
+        "fields": {
+            "name": "\u00cele-de-France", 
+            "slug": "ile-de-france"
+        }, 
+        "model": "regions.region", 
+        "pk": 4001
+    }, 
+    {
+        "fields": {
+            "name": "Languedoc-Roussillon", 
+            "slug": "languedoc-roussillon"
+        }, 
+        "model": "regions.region", 
+        "pk": 4002
+    }, 
+    {
+        "fields": {
+            "name": "Limousin", 
+            "slug": "limousin"
+        }, 
+        "model": "regions.region", 
+        "pk": 4003
+    }, 
+    {
+        "fields": {
+            "name": "Lorraine", 
+            "slug": "lorraine"
+        }, 
+        "model": "regions.region", 
+        "pk": 4004
+    }, 
+    {
+        "fields": {
+            "name": "Midi-Pyr\u00e9n\u00e9es", 
+            "slug": "midi-pyrenees"
+        }, 
+        "model": "regions.region", 
+        "pk": 4005
+    }, 
+    {
+        "fields": {
+            "name": "Nord-Pas-de-Calais", 
+            "slug": "nord-pas-de-calais"
+        }, 
+        "model": "regions.region", 
+        "pk": 4006
+    }, 
+    {
+        "fields": {
+            "name": "Pays de la Loire", 
+            "slug": "pays-de-la-loire"
+        }, 
+        "model": "regions.region", 
+        "pk": 4007
+    }, 
+    {
+        "fields": {
+            "name": "Picardie", 
+            "slug": "picardie"
+        }, 
+        "model": "regions.region", 
+        "pk": 4008
+    }, 
+    {
+        "fields": {
+            "name": "Aquitaine", 
+            "slug": "aquitaine"
+        }, 
+        "model": "regions.region", 
+        "pk": 4009
+    }, 
+    {
+        "fields": {
+            "name": "Auvergne", 
+            "slug": "auvergne"
+        }, 
+        "model": "regions.region", 
+        "pk": 4010
+    }, 
+    {
+        "fields": {
+            "name": "Basse-Normandie", 
+            "slug": "basse-normandie"
+        }, 
+        "model": "regions.region", 
+        "pk": 4011
+    }, 
+    {
+        "fields": {
+            "name": "Bourgogne", 
+            "slug": "bourgogne"
+        }, 
+        "model": "regions.region", 
+        "pk": 4012
+    }, 
+    {
+        "fields": {
+            "name": "Bretagne", 
+            "slug": "bretagne"
+        }, 
+        "model": "regions.region", 
+        "pk": 4013
+    }, 
+    {
+        "fields": {
+            "name": "Centre", 
+            "slug": "centre"
+        }, 
+        "model": "regions.region", 
+        "pk": 4014
+    }, 
+    {
+        "fields": {
+            "name": "Champagne-Ardenne", 
+            "slug": "champagne-ardenne"
+        }, 
+        "model": "regions.region", 
+        "pk": 4015
+    }, 
+    {
+        "fields": {
+            "name": "Corse", 
+            "slug": "corse"
+        }, 
+        "model": "regions.region", 
+        "pk": 4016
+    }, 
+    {
+        "fields": {
+            "name": "Franche-Comt\u00e9", 
+            "slug": "franche-comte"
+        }, 
+        "model": "regions.region", 
+        "pk": 4017
+    }, 
+    {
+        "fields": {
+            "name": "Haute-Normandie", 
+            "slug": "haute-normandie"
+        }, 
+        "model": "regions.region", 
+        "pk": 4018
+    }, 
+    {
+        "fields": {
+            "name": "Provence-Alpes-C\u00f4te d'Azur", 
+            "slug": "provence-alpes-cote-d-azur"
+        }, 
+        "model": "regions.region", 
+        "pk": 4019
+    }, 
+    {
+        "fields": {
+            "name": "Rh\u00f4ne-Alpes", 
+            "slug": "rhone-alpes"
+        }, 
+        "model": "regions.region", 
+        "pk": 4020
+    }, 
+    {
+        "fields": {
+            "name": "Guadeloupe", 
+            "slug": "guadeloupe"
+        }, 
+        "model": "regions.region", 
+        "pk": 4021
+    }, 
+    {
+        "fields": {
+            "name": "Guyane", 
+            "slug": "guyane"
+        }, 
+        "model": "regions.region", 
+        "pk": 4022
+    }, 
+    {
+        "fields": {
+            "name": "Martinique", 
+            "slug": "martinique"
+        }, 
+        "model": "regions.region", 
+        "pk": 4023
+    }, 
+    {
+        "fields": {
+            "name": "R\u00e9union", 
+            "slug": "reunion"
+        }, 
+        "model": "regions.region", 
+        "pk": 4024
+    }, 
+    {
+        "fields": {
+            "name": "Poitou-Charentes", 
+            "slug": "poitou-charentes"
+        }, 
+        "model": "regions.region", 
+        "pk": 4025
+    }, 
+    {
+        "fields": {
+            "name": "Alsace", 
+            "slug": "alsace"
+        }, 
+        "model": "regions.region", 
+        "pk": 4026
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "fields": {
+            "name": "L'info off", 
+            "slug": "l-info-off"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4001
+    }, 
+    {
+        "fields": {
+            "name": "Aucun int\u00e9r\u00eat", 
+            "slug": "aucun-interet"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4002
+    }, 
+    {
+        "fields": {
+            "name": "On en rirait presque", 
+            "slug": "on-en-rirait-presque"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4003
+    }, 
+    {
+        "fields": {
+            "name": "Premi\u00e8re nouvelle", 
+            "slug": "premiere-nouvelle"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4004
+    }, 
+    {
+        "fields": {
+            "name": "Ca, c'est fait !", 
+            "slug": "ca-c-est-fait-"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4005
+    }, 
+    {
+        "fields": {
+            "name": "Fallait s'en douter", 
+            "slug": "fallait-s-en-douter"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4006
+    }, 
+    {
+        "fields": {
+            "name": "Ils ont os\u00e9", 
+            "slug": "ils-ont-ose"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4007
+    }, 
+    {
+        "fields": {
+            "name": "Vous saviez ?", 
+            "slug": "vous-saviez-"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4008
+    }, 
+    {
+        "fields": {
+            "name": "On s\u0092en serait pass\u00e9", 
+            "slug": "on-sen-serait-passe"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4009
+    }, 
+    {
+        "fields": {
+            "name": "Criti...cons", 
+            "slug": "criticons"
+        }, 
+        "model": "notes.notetype", 
+        "pk": 4010
+    }
+]
