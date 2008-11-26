@@ -6,6 +6,8 @@ Models of ``critica.apps.anger`` application.
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.articles.models import BaseArticle
+from critica.apps.anger.managers import AngerArticlePublishedManager
+from critica.apps.anger.managers import AngerArticlePreviewManager
 
 
 class AngerArticle(BaseArticle):
@@ -13,6 +15,10 @@ class AngerArticle(BaseArticle):
     Anger article.
     
     """
+    objects   = models.Manager()
+    published = AngerArticlePublishedManager()
+    preview   = AngerArticlePreviewManager()
+    
     class Meta:
         """ 
         Model metadata. 

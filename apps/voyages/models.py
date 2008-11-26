@@ -7,6 +7,9 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.articles.models import BaseArticle
 from critica.apps.utils.widgets import resize_widget
+from critica.apps.voyages import settings as voyages_settings
+from critica.apps.voyages.managers import VoyagesArticlePublishedManager
+from critica.apps.voyages.managers import VoyagesArticlePreviewManager
 
 
 class VoyagesArticle(BaseArticle):
@@ -15,8 +18,12 @@ class VoyagesArticle(BaseArticle):
     
     """
     localization = models.CharField(_('localization'), max_length=255, db_index=True, help_text=_('Please, enter the localization in this format: city, country (e.g. Paris, France).'))
-    widget = models.TextField(_('Google Map widget'), help_text=_('Please, copy-paste the widget here. Do not modify it.'))
+    widget       = models.TextField(_('Google Map widget'), help_text=_('Please, copy-paste the widget here. Do not modify it.'))
 
+    objects   = models.Manager()
+    published = VoyagesArticlePublishedManager()
+    preview   = VoyagesArticlePreviewManager()
+    
     class Meta:
         """ 
         Model metadata. 

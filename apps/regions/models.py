@@ -5,8 +5,11 @@ Models of ``critica.apps.regions`` application.
 """
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.db.models import permalink
 from critica.apps.notes.models import BaseNoteType
 from critica.apps.notes.models import BaseNote
+from critica.apps.regions.managers import RegionNotePublishedManager
+from critica.apps.regions.managers import RegionNotePreviewManager
 
 
 class Region(BaseNoteType):
@@ -14,8 +17,6 @@ class Region(BaseNoteType):
     Region.
     
     """
-    objects = models.Manager()
-    
     class Meta:
         """ 
         Model metadata. 
@@ -57,6 +58,9 @@ class RegionNote(BaseNote):
     """
     region = models.ForeignKey('regions.Region', verbose_name=_('region'), help_text=_('Please, select a region.'))
 
+    published = RegionNotePublishedManager()
+    preview   = RegionNotePreviewManager()
+    
     class Meta:
         """ 
         Model metadata. 
@@ -66,12 +70,13 @@ class RegionNote(BaseNote):
         verbose_name        = _('region note')
         verbose_name_plural = _('region notes')
 
+    @permalink
     def get_absolute_url(self):
         """
-        Returns object absolute URL.
+        Returns absolute URL.
         
         """
-        return u'/regions/'
+        return ('category_regions', (), {})
         
     def save(self):
         """ 

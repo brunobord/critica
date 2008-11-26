@@ -21,8 +21,11 @@ from critica.apps.positions.models import IssueNotePosition
 from critica.apps.articles.models import Article
 from critica.apps.epicurien.models import EpicurienArticle
 from critica.apps.epicurien.models import EpicurienArticleType
+from critica.apps.epicurien import settings as epicurien_settings
 from critica.apps.voyages.models import VoyagesArticle
+from critica.apps.voyages import settings as voyages_settings
 from critica.apps.anger.models import AngerArticle
+from critica.apps.anger import settings as anger_settings
 from critica.apps.notes.models import Note
 from critica.apps.regions.models import RegionNote
 from critica.apps.regions.models import FeaturedRegion
@@ -35,56 +38,20 @@ from critica.apps.ads.models import AdCarousel
 from critica.apps.issues.views import _get_current_issue
 
 
-# ------------------------------------------------------------------------------
 # HOME
 # ------------------------------------------------------------------------------
-def home(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
+def home(request, **kwargs):
     """
-    Displays the homepage.
+    Displays the Homepage.
     
     """
-    # Gets the current issue
-    if issue is None:
-        issue = _get_current_issue()
-    
-    # Initializes context dictionary
-    context = {}
-    if extra_context:
-        context.update(extra_context)
-        
-    # Issue
-    try:
-        context['issue'] = issue
-    except ObjectDoesNotExist:
-        raise Http404
-        
-    # Is a preview
-    if is_preview:
-        context['is_preview'] = True
-    else:
-        context['is_preview'] = False
-
-    # Is a ads preview
-    if is_ads_preview:
-        context['is_ads_preview'] = True
-    else:
-        context['is_ads_preview'] = False
-        
-    # Is an archive
-    if is_archive:
-        context['is_archive'] = True
-    else:
-        context['is_archive'] = False
-        
-    # Is current
-    if not is_preview and not is_archive and not is_ads_preview:
-        is_current = True
-        context['is_current'] = is_current
-    else:
-        is_current = False
-        context['is_current'] = is_current
+    # Initialize context
+    # --------------------------------------------------------------------------
+    context = _initialize_context(kwargs)
+    issue = context['issue']
         
     # Poll
+    # --------------------------------------------------------------------------
     from critica.apps.polls.models import Poll
     from critica.apps.polls.models import Choice
     from critica.apps.polls.models import Vote
@@ -96,12 +63,13 @@ def home(request, issue=None, is_preview=False, is_archive=False, is_ads_preview
             vote = Vote(poll=poll, choice=choice, ip_address=ip_address)
             vote.save()
 
-    # Generic articles
+    # Articles
+    # --------------------------------------------------------------------------
     category_positions = IssueCategoryPosition.objects.filter(issue=issue)
     for category_position in category_positions:
         if category_position.position is not None:
             varname = 'article_%s' % category_position.position.id
-            if is_preview:
+            if context['is_preview']:
                 try:
                     article = Article.preview.filter(issues__id=issue.id, category=category_position.category)
                     context[varname] = article[0:1].get()
@@ -116,116 +84,55 @@ def home(request, issue=None, is_preview=False, is_archive=False, is_ads_preview
                     context[varname] = None
 
     # Regions
-    if is_preview:
-        try:
-            featured = FeaturedRegion.objects.get(issue=issue)
-            region_note = RegionNote.preview.filter(issues__id=issue.id, region=featured.region)
-            region_note = region_note.order_by('-publication_date')
-            region_note = region_note[0:1].get()
-            context['region_note'] = region_note
-        except ObjectDoesNotExist:
-            context['region_note'] = None
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['region_note'] = RegionNote.preview.get_featured(issue_id=issue.id)
     else:
-        try:
-            featured = FeaturedRegion.objects.get(issue=issue)
-            region_note = RegionNote.published.filter(issues__id=issue.id, region=featured.region)
-            region_note = region_note.order_by('-publication_date')
-            region_note = region_note[0:1].get()
-            context['region_note'] = region_note
-        except ObjectDoesNotExist:
-            context['region_note'] = None
+        context['region_note'] = RegionNote.published.get_featured(issue_id=issue.id)
 
     # Voyages
-    if is_preview:
-        try:
-            voyages_article = VoyagesArticle.preview.filter(issues__id=issue.id)
-            voyages_article = voyages_article.order_by('-publication_date')
-            voyages_article = voyages_article[0:1].get()
-            context['voyages_article'] = voyages_article
-        except ObjectDoesNotExist:
-            context['voyages_article'] = None
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['voyages_article'] = VoyagesArticle.preview.issue_article(issue_id=issue.id)
     else:
-        try:
-            voyages_article = VoyagesArticle.published.filter(issues__id=issue.id)
-            voyages_article = voyages_article.order_by('-publication_date')
-            voyages_article = voyages_article[0:1].get()
-            context['voyages_article'] = voyages_article
-        except ObjectDoesNotExist:
-            context['voyages_article'] = None
+        context['voyages_article'] = VoyagesArticle.published.issue_article(issue_id=issue.id)
     
     # Epicurien
-    if is_preview:
-        epicurien_articles = []
-        try:
-            a = EpicurienArticle.preview.filter(issues__id=issue.id, type__slug='cote-gourmets').order_by('-publication_date')[0:1].get()
-            epicurien_articles.append(a)
-        except ObjectDoesNotExist:
-            pass
-        try:
-            a = EpicurienArticle.preview.filter(issues__id=issue.id, type__slug='cote-bar').order_by('-publication_date')[0:1].get()
-            epicurien_articles.append(a)
-        except ObjectDoesNotExist:
-            pass
-        try:
-            a = EpicurienArticle.preview.filter(issues__id=issue.id, type__slug='cote-fumeurs').order_by('-publication_date')[0:1].get()
-            epicurien_articles.append(a)
-        except ObjectDoesNotExist:
-            pass
-        context['epicurien_articles'] = epicurien_articles
+    # --------------------------------------------------------------------------
+    epicurien_articles = []
+    if context['is_preview']:
+        a = EpicurienArticle.preview.issue_article_cotegourmets(issue_id=issue.id)
+        epicurien_articles.append(a)
+        a = EpicurienArticle.preview.issue_article_cotebar(issue_id=issue.id)
+        epicurien_articles.append(a)
+        a = EpicurienArticle.preview.issue_article_cotefumeurs(issue_id=issue.id)
+        epicurien_articles.append(a)
     else:
-        epicurien_articles = []
-        try:
-            a = EpicurienArticle.published.filter(issues__id=issue.id, type__slug='cote-gourmets').order_by('-publication_date')[0:1].get()
-            epicurien_articles.append(a)
-        except ObjectDoesNotExist:
-            pass
-        try:
-            a = EpicurienArticle.published.filter(issues__id=issue.id, type__slug='cote-bar').order_by('-publication_date')[0:1].get()
-            epicurien_articles.append(a)
-        except ObjectDoesNotExist:
-            pass
-        try:
-            a = EpicurienArticle.published.filter(issues__id=issue.id, type__slug='cote-fumeurs').order_by('-publication_date')[0:1].get()
-            epicurien_articles.append(a)
-        except ObjectDoesNotExist:
-            pass
-        context['epicurien_articles'] = epicurien_articles
+        a = EpicurienArticle.published.issue_article_cotegourmets(issue_id=issue.id)
+        epicurien_articles.append(a)
+        a = EpicurienArticle.published.issue_article_cotebar(issue_id=issue.id)
+        epicurien_articles.append(a)
+        a = EpicurienArticle.published.issue_article_cotefumeurs(issue_id=issue.id)
+        epicurien_articles.append(a)
+    context['epicurien_articles'] = epicurien_articles
     
-    # Anger ("Coup de Gueule")
-    if is_preview:
-        try:
-            anger_article = AngerArticle.preview.filter(issues__id=issue.id)
-            anger_article = anger_article.order_by('-publication_date')
-            anger_article = anger_article[0:1].get()
-            context['anger_article'] = anger_article
-        except ObjectDoesNotExist:
-            context['anger_article'] = None
+    # Anger
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['anger_article'] = AngerArticle.preview.issue_article(issue_id=issue.id)
     else:
-        try:
-            anger_article = AngerArticle.published.filter(issues__id=issue.id)
-            anger_article = anger_article.order_by('-publication_date')
-            anger_article = anger_article[0:1].get()
-            context['anger_article'] = anger_article
-        except ObjectDoesNotExist:
-            context['anger_article'] = None
+        context['anger_article'] = AngerArticle.published.issue_article(issue_id=issue.id)
     
     # Illustration of the day
-    try:
-        illustration = IllustrationOfTheDay.objects.filter(issues__id=issue.id)
-        illustration = illustration[0:1].get()
-        context['illustration'] = illustration
-    except ObjectDoesNotExist:
-        context['illustration'] = None
+    # --------------------------------------------------------------------------
+    context['illustration'] = IllustrationOfTheDay.objects.issue_illustration(issue_id=issue.id)
 
-    # Video (reportage)
-    try:
-        video = Video.objects.filter(issues__id=issue.id)
-        video = video[0:1].get()
-        context['video'] = video
-    except ObjectDoesNotExist:
-        context['video'] = None
+    # Video
+    # --------------------------------------------------------------------------
+    context['video'] = Video.published.issue_video(issue_id=issue.id)
         
-    # Tags 
+    # Tag cloud
+    # --------------------------------------------------------------------------
     all_tags = []
     article_tags = Tag.objects.usage_for_queryset(Article.published.all(), counts=True)
     for tag in article_tags:
@@ -263,56 +170,27 @@ def home(request, issue=None, is_preview=False, is_archive=False, is_ads_preview
     
     return direct_to_template(request, 'front/home.html', context)
 
-# ------------------------------------------------------------------------------
+
 # CATEGORY
 # ------------------------------------------------------------------------------
-def category(request, category_slug, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
+def category(request, category_slug, **kwargs):
     """
     Displays the given category page.
     
     """
-    if not issue:
-        issue = _get_current_issue()
+    # Initialize context
+    # --------------------------------------------------------------------------
+    context = _initialize_context(kwargs)
+    issue = context['issue']
     
-    # Context
-    context = {}
-    if extra_context:
-        context.update(extra_context)
-        
-    # Issue
-    context['issue'] = issue
-    
-    # Is a preview
-    if is_preview:
-        context['is_preview'] = True
-    else:
-        context['is_preview'] = False
-
-    # Is a ads preview
-    if is_ads_preview:
-        context['is_ads_preview'] = True
-    else:
-        context['is_ads_preview'] = False
-        
-    # Is an archive
-    if is_archive:
-        context['is_archive'] = True
-    else:
-        context['is_archive'] = False
-        
-    # Is current
-    if not is_preview and not is_archive and not is_ads_preview:
-        is_current = True
-        context['is_current'] = is_current
-    else:
-        is_current = False
-        context['is_current'] = is_current
-    
+    # Category
+    # --------------------------------------------------------------------------
     category = get_object_or_404(Category, slug=category_slug)
     context['category'] = category
     
-    # View count
-    if is_current or is_archive:
+    # Auto-increment view count
+    # --------------------------------------------------------------------------
+    if context['is_current'] or context['is_archive']:
         articles = Article.published.filter(issues__id=issue.id, category=category)
         for article in articles:
             article.view_count += 1
@@ -322,11 +200,13 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
             note.view_count += 1
             note.save()
 
+    # Notes
+    # --------------------------------------------------------------------------
     note_positions = IssueNotePosition.objects.filter(issue=issue, category=category)
     for note_position in note_positions:
         if note_position.position is not None:
             varname = 'note_%s' % note_position.position.id
-            if is_preview:
+            if context['is_preview']:
                 try:
                     note = Note.preview.filter(issues__id=issue.id, type=note_position.type, category=category)
                     note = note.order_by('-publication_date')
@@ -342,500 +222,260 @@ def category(request, category_slug, issue=None, is_preview=False, is_archive=Fa
                     context[varname] = note
                 except ObjectDoesNotExist:
                     context[varname] = None
-    if is_preview:
-        try:
-            article = Article.preview.filter(issues__id=issue.id, category__slug=category_slug)
-            article = article.order_by('-publication_date')
-            article = article[0:1].get()
-            context['article'] = article
-        except ObjectDoesNotExist:
-            context['article'] = None
+                    
+    # Article
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['article'] = Article.preview.category_article(
+            issue_id=issue.id, 
+            category_id=category.id)
     else:
-        try:
-            article = Article.published.filter(issues__id=issue.id, category__slug=category_slug)
-            article = article.order_by('-publication_date')
-            article = article[0:1].get()
-            context['article'] = article
-        except ObjectDoesNotExist:
-            context['article'] = None
+        context['article'] = Article.published.category_article(
+            issue_id=issue.id, 
+            category_id=category.id)
     
     return direct_to_template(request, 'front/category.html', context)
 
 
-# ------------------------------------------------------------------------------
 # REGIONS
 # ------------------------------------------------------------------------------
-def regions(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
+def regions(request, **kwargs):
     """
     Displays "Regions" category page.
     
     """
-    if not issue:
-        issue = _get_current_issue()
+    # Initialize context
+    # --------------------------------------------------------------------------
+    context = _initialize_context(kwargs)
+    issue = context['issue']
     
-    # Context
-    context = {}
-    if extra_context:
-        context.update(extra_context)
-        
-    # Issue
-    context['issue'] = issue
-    
-    # Is a preview
-    if is_preview:
-        context['is_preview'] = True
-    else:
-        context['is_preview'] = False
-
-    # Is a ads preview
-    if is_ads_preview:
-        context['is_ads_preview'] = True
-    else:
-        context['is_ads_preview'] = False
-        
-    # Is an archive
-    if is_archive:
-        context['is_archive'] = True
-    else:
-        context['is_archive'] = False
-        
-    # Is current
-    if not is_preview and not is_archive and not is_ads_preview:
-        is_current = True
-        context['is_current'] = is_current
-    else:
-        is_current = False
-        context['is_current'] = is_current
-        
-    # View count
-    if is_current or is_archive:
+    # Auto-increment view count
+    # --------------------------------------------------------------------------
+    if context['is_current'] or context['is_archive']:
         notes = RegionNote.published.filter(issues__id=issue.id)
         for note in notes:
             note.view_count += 1
             note.save()
     
-    # Featured region
-    try:
-        featured_region = FeaturedRegion.objects.get(issue=issue)
-    except ObjectDoesNotExist:
-        featured_region = None
-    
-    # Featured region note
-    if featured_region:
-        if is_preview:
-            try:
-                featured_region_note = RegionNote.preview.filter(issues__id=issue.id, region=featured_region.region).order_by('-publication_date')[0:1].get()
-                context['featured_region_note'] = featured_region_note
-            except ObjectDoesNotExist:
-                context['featured_region_note'] = None
-        else:
-            try:
-                featured_region_note = RegionNote.published.filter(issues__id=issue.id, region=featured_region.region).order_by('-publication_date')[0:1].get()
-                context['featured_region_note'] = featured_region_note
-            except ObjectDoesNotExist:
-                context['featured_region_note'] = None
-    
-    # Regions notes
-    if is_preview:
-        try:
-            regions_notes = RegionNote.preview.filter(issues__id=issue.id).order_by('region__name')
-            regions_notes = regions_notes.exclude(id=featured_region_note.id)
-            context['regions_notes_1'] = regions_notes[0:10]
-            context['regions_notes_2'] = regions_notes[10:20]
-            context['regions_notes_3'] = regions_notes[20:]
-        except ObjectDoesNotExist:
-            context['regions_notes_1'] = None
-            context['regions_notes_2'] = None
-            context['regions_notes_3'] = None
+    # Notes
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['featured_region_note'] = RegionNote.preview.get_featured(issue_id=issue.id)
+        regions_notes = RegionNote.preview.get_notes(issue_id=issue.id, excluded_obj=context['featured_region_note'])
     else:
-        try:
-            regions_notes = RegionNote.published.filter(issues__id=issue.id).order_by('region__name')
-            regions_notes = regions_notes.exclude(id=featured_region_note.id)
-            context['regions_notes_1'] = regions_notes[0:10]
-            context['regions_notes_2'] = regions_notes[10:20]
-            context['regions_notes_3'] = regions_notes[20:]
-        except ObjectDoesNotExist:
-            context['regions_notes_1'] = None
-            context['regions_notes_2'] = None
-            context['regions_notes_3'] = None
+        context['featured_region_note'] = RegionNote.published.get_featured(issue_id=issue.id)
+        regions_notes = RegionNote.published.get_notes(issue_id=issue.id, excluded_obj=context['featured_region_note'])
+        
+    context['regions_notes_1'] = regions_notes[0:10]
+    context['regions_notes_2'] = regions_notes[10:20]
+    context['regions_notes_3'] = regions_notes[20:]
     
     return direct_to_template(request, 'front/regions.html', context)
 
 
-# ------------------------------------------------------------------------------
 # VOYAGES
 # ------------------------------------------------------------------------------
-def voyages(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
+def voyages(request, **kwargs):
     """
     Displays "Voyages" category page.
     
     """
-    if not issue:
-        issue = _get_current_issue()
+    # Initialize context
+    # --------------------------------------------------------------------------
+    context = _initialize_context(kwargs)
+    issue = context['issue']
     
-    # Context
-    context = {}
-    if extra_context:
-        context.update(extra_context)
-        
-    # Issue
-    context['issue'] = issue
-    
-    # Is a preview
-    if is_preview:
-        context['is_preview'] = True
-    else:
-        context['is_preview'] = False
-
-    # Is a ads preview
-    if is_ads_preview:
-        context['is_ads_preview'] = True
-    else:
-        context['is_ads_preview'] = False
-        
-    # Is an archive
-    if is_archive:
-        context['is_archive'] = True
-    else:
-        context['is_archive'] = False
-        
-    # Is current
-    if not is_preview and not is_archive and not is_ads_preview:
-        is_current = True
-        context['is_current'] = is_current
-    else:
-        is_current = False
-        context['is_current'] = is_current
-    
-    # View count
-    if is_current or is_archive:
+    # Auto-increment view count
+    # --------------------------------------------------------------------------
+    if context['is_current'] or context['is_archive']:
         articles = VoyagesArticle.published.filter(issues__id=issue.id)
         for article in articles:
             article.view_count += 1
             article.save()    
     
-    if is_preview:
-        try:
-            article = VoyagesArticle.preview.filter(issues__id=issue.id)
-            article = article.order_by('-publication_date')
-            article = article[0:1].get()
-            context['article'] = article
-        except ObjectDoesNotExist:
-            article = None
-            context['article'] = article
+    # Articles
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['article'] = VoyagesArticle.preview.issue_article(issue_id=issue.id)
+        context['archives'] = VoyagesArticle.preview.latest(
+            limit=voyages_settings.MAX_ARCHIVES,
+            excluded_obj=context['article'])
     else:
-        try:
-            article = VoyagesArticle.published.filter(issues__id=issue.id)
-            article = article.order_by('-publication_date')
-            article = article[0:1].get()
-            context['article'] = article
-        except ObjectDoesNotExist:
-            article = None
-            context['article'] = article
-        
-    if is_preview:
-        try:
-            archives = VoyagesArticle.preview.all()
-            if hasattr(article, 'id'):
-                archives = archives.exclude(id=article.id)
-            archives = archives.order_by('-publication_date')[:10]
-            context['archives'] = archives
-        except IndexError:
-            archives = None
-            context['archives'] = archives
-        except ObjectDoesNotExist:
-            archives = None
-            context['archives'] = archives
-    else:
-        try:
-            archives = VoyagesArticle.published.all()
-            archives = archives.exclude(id=article.id)
-            archives = archives.order_by('-publication_date')[:10]
-            context['archives'] = archives
-        except IndexError:
-            archives = None
-            context['archives'] = archives
-        except ObjectDoesNotExist:
-            archives = None
-            context['archives'] = archives
+        context['article'] = VoyagesArticle.published.issue_article(issue_id=issue.id)
+        context['archives'] = VoyagesArticle.published.latest(
+            limit=voyages_settings.MAX_ARCHIVES,
+            excluded_obj=context['article'])
         
     return direct_to_template(request, 'front/voyages.html', context)
 
 
-# ------------------------------------------------------------------------------
 # EPICURIEN
 # ------------------------------------------------------------------------------
-def epicurien(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
+def epicurien(request, **kwargs):
     """
     Displays "Epicurien" category page.
     
     """
-    if not issue:
-        issue = _get_current_issue()
-    
-    # Context
-    context = {}
-    if extra_context:
-        context.update(extra_context)
+    # Initialize context
+    # --------------------------------------------------------------------------
+    context = _initialize_context(kwargs)
+    issue = context['issue']
         
-    # Issue
-    context['issue'] = issue
-    
-    # Is a preview
-    if is_preview:
-        context['is_preview'] = True
-    else:
-        context['is_preview'] = False
-
-    # Is a ads preview
-    if is_ads_preview:
-        context['is_ads_preview'] = True
-    else:
-        context['is_ads_preview'] = False
-        
-    # Is an archive
-    if is_archive:
-        context['is_archive'] = True
-    else:
-        context['is_archive'] = False
-        
-    # Is current
-    if not is_preview and not is_archive and not is_ads_preview:
-        is_current = True
-        context['is_current'] = is_current
-    else:
-        is_current = False
-        context['is_current'] = is_current
-        
-    # View count
-    if is_current or is_archive:
+    # Auto-increment view count
+    # --------------------------------------------------------------------------
+    if context['is_current'] or context['is_archive']:
         epicurien_articles = EpicurienArticle.published.filter(issues__id=issue.id)
         for article in epicurien_articles:
             article.view_count += 1
             article.save()
     
-    # Types
-    type_cotefumeurs  = EpicurienArticleType.objects.get(slug='cote-fumeurs')
-    type_cotegourmets = EpicurienArticleType.objects.get(slug='cote-gourmets')
-    type_cotebar      = EpicurienArticleType.objects.get(slug='cote-bar')
-    
     # Côté fumeurs
-    if is_preview:
-        try:
-            article_cotefumeurs = EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotefumeurs)
-            article_cotefumeurs = article_cotefumeurs.order_by('-publication_date')
-            article_cotefumeurs = article_cotefumeurs[0:1].get()
-            context['article_cotefumeurs'] = article_cotefumeurs
-        except ObjectDoesNotExist:
-            article_cotefumeurs = None
-            context['article_cotefumeurs'] = article_cotefumeurs
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['article_cotefumeurs'] = EpicurienArticle.preview.issue_article_cotefumeurs(issue_id=issue.id)
+        context['archives_cotefumeurs'] = EpicurienArticle.preview.latest(
+            type_id=3,
+            limit=epicurien_settings.MAX_ARCHIVES,
+            excluded_obj=context['article_cotefumeurs'])
     else:
-        try:
-            article_cotefumeurs = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotefumeurs)
-            article_cotefumeurs = article_cotefumeurs.order_by('-publication_date')
-            article_cotefumeurs = article_cotefumeurs[0:1].get()
-            context['article_cotefumeurs'] = article_cotefumeurs
-        except ObjectDoesNotExist:
-            article_cotefumeurs = None
-            context['article_cotefumeurs'] = article_cotefumeurs
-    
-    if is_preview:
-        try:
-            archives_cotefumeurs = EpicurienArticle.preview.filter(type=type_cotefumeurs)
-            if hasattr(article_cotefumeurs, 'id'):
-                archives_cotefumeurs = archives_cotefumeurs.exclude(id=article_cotefumeurs.id)
-            archives_cotefumeurs = archives_cotefumeurs.order_by('-publication_date')[:10]
-            context['archives_cotefumeurs'] = archives_cotefumeurs
-        except IndexError:
-            archives_cotefumeurs = None
-            context['archives_cotefumeurs'] = archives_cotefumeurs
-        except ObjectDoesNotExist:
-            archives_cotefumeurs = None
-            context['archives_cotefumeurs'] = archives_cotefumeurs
-    else:
-        try:
-            archives_cotefumeurs = EpicurienArticle.published.filter(type=type_cotefumeurs)
-            archives_cotefumeurs = archives_cotefumeurs.exclude(id=article_cotefumeurs.id)
-            archives_cotefumeurs = archives_cotefumeurs.order_by('-publication_date')[:10]
-            context['archives_cotefumeurs'] = archives_cotefumeurs
-        except ObjectDoesNotExist:
-            archives_cotefumeurs = None
-            context['archives_cotefumeurs'] = archives_cotefumeurs
-    
+        context['article_cotefumeurs'] = EpicurienArticle.published.issue_article_cotefumeurs(issue_id=issue.id)
+        context['archives_cotefumeurs'] = EpicurienArticle.published.latest(
+            type_id=3,
+            limit=epicurien_settings.MAX_ARCHIVES,
+            excluded_obj=context['article_cotefumeurs'])
+            
     # Côté Gourmets
-    if is_preview:
-        try:
-            article_cotegourmets =  EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotegourmets)
-            article_cotegourmets = article_cotegourmets.order_by('-publication_date')
-            article_cotegourmets = article_cotegourmets[0:1].get()
-            context['article_cotegourmets'] = article_cotegourmets
-        except ObjectDoesNotExist:
-            article_cotegourmets = None
-            context['article_cotegourmets'] = article_cotegourmets
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['article_cotegourmets'] = EpicurienArticle.preview.issue_article_cotegourmets(issue_id=issue.id)
+        context['archives_cotegourmets'] = EpicurienArticle.preview.latest(
+            type_id=1,
+            limit=epicurien_settings.MAX_ARCHIVES,
+            excluded_obj=context['article_cotegourmets'])
     else:
-        try:
-            article_cotegourmets = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotegourmets)
-            article_cotegourmets = article_cotegourmets.order_by('-publication_date')
-            article_cotegourmets = article_cotegourmets[0:1].get()
-            context['article_cotegourmets'] = article_cotegourmets
-        except ObjectDoesNotExist:
-            article_cotegourmets = None
-            context['article_cotegourmets'] = article_cotegourmets
-    
-    if is_preview:
-        try:
-            archives_cotegourmets = EpicurienArticle.preview.filter(type=type_cotegourmets)
-            if hasattr(article_cotegourmets, 'id'):
-                archives_cotegourmets = archives_cotegourmets.exclude(id=article_cotegourmets.id)
-            archives_cotegourmets = archives_cotegourmets.order_by('-publication_date')[:10]
-            context['archives_cotegourmets'] = archives_cotegourmets
-        except ObjectDoesNotExist:
-            archives_cotegourmets = None
-            context['archives_cotegourmets'] = archives_cotegourmets
-    else:
-        try:
-            archives_cotegourmets = EpicurienArticle.published.filter(type=type_cotegourmets)
-            archives_cotegourmets = archives_cotegourmets.exclude(id=article_cotegourmets.id)
-            archives_cotegourmets = archives_cotegourmets.order_by('-publication_date')[:10]
-            context['archives_cotegourmets'] = archives_cotegourmets
-        except ObjectDoesNotExist:
-            archives_cotegourmets = None
-            context['archives_cotegourmets'] = archives_cotegourmets
+        context['article_cotegourmets'] = EpicurienArticle.published.issue_article_cotegourmets(issue_id=issue.id)
+        context['archives_cotegourmets'] = EpicurienArticle.published.latest(
+            type_id=1,
+            limit=epicurien_settings.MAX_ARCHIVES,
+            excluded_obj=context['article_cotegourmets'])
     
     # Côté Bar
-    if is_preview:
-        try:
-            article_cotebar = EpicurienArticle.preview.filter(issues__id=issue.id, type=type_cotebar)
-            article_cotebar = article_cotebar.order_by('-publication_date')
-            article_cotebar = article_cotebar[0:1].get()
-            context['article_cotebar'] = article_cotebar
-        except ObjectDoesNotExist:
-            article_cotebar = None
-            context['article_cotebar'] = article_cotebar
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['article_cotebar'] = EpicurienArticle.preview.issue_article_cotebar(issue_id=issue.id)
+        context['archives_cotebar'] = EpicurienArticle.preview.latest(
+            type_id=2,
+            limit=epicurien_settings.MAX_ARCHIVES,
+            excluded_obj=context['article_cotebar'])
     else:
-        try:
-            article_cotebar = EpicurienArticle.published.filter(issues__id=issue.id, type=type_cotebar)
-            article_cotebar = article_cotebar.order_by('-publication_date')
-            article_cotebar = article_cotebar[0:1].get()
-            context['article_cotebar'] = article_cotebar
-        except ObjectDoesNotExist:
-            article_cotebar = None
-            context['article_cotebar'] = article_cotebar
-    
-    if is_preview:
-        try:
-            archives_cotebar = EpicurienArticle.preview.filter(type=type_cotebar).order_by('-publication_date')
-            if hasattr(article_cotebar, 'id'):
-                archives_cotebar = archives_cotebar.exclude(id=article_cotebar.id)
-            archives_cotebar = archives_cotebar.order_by('-publication_date')[:10]
-            context['archives_cotebar'] = archives_cotebar
-        except ObjectDoesNotExist:
-            archives_cotebar = None
-            context['archives_cotebar'] = archives_cotebar
-    else:
-        try:
-            archives_cotebar = EpicurienArticle.published.filter(type=type_cotebar)
-            archives_cotebar = archives_cotebar.exclude(id=article_cotebar.id)
-            archives_cotebar = archives_cotebar.order_by('-publication_date')[:10]
-            context['archives_cotebar'] = archives_cotebar
-        except ObjectDoesNotExist:
-            archives_cotebar = None
-            context['archives_cotebar'] = archives_cotebar
+        context['article_cotebar'] = EpicurienArticle.published.issue_article_cotebar(issue_id=issue.id)
+        context['archives_cotebar'] = EpicurienArticle.published.latest(
+            type_id=2,
+            limit=epicurien_settings.MAX_ARCHIVES,
+            excluded_obj=context['article_cotebar'])
 
     return direct_to_template(request, 'front/epicurien.html', context)
 
 
-# ------------------------------------------------------------------------------
 # ANGER
 # ------------------------------------------------------------------------------
-def anger(request, issue=None, is_preview=False, is_archive=False, is_ads_preview=False, extra_context=None):
+def anger(request, **kwargs):
     """
     Displays "Anger" (Coup de Gueule) category page.
     
     """
-    if not issue:
-        issue = _get_current_issue()
+    # Initialize context
+    # --------------------------------------------------------------------------
+    context = _initialize_context(kwargs)
+    issue = context['issue']
     
-    # Context
+    # Auto-increment view count
+    # --------------------------------------------------------------------------
+    if context['is_current'] or context['is_archive']:
+        articles = AngerArticle.published.filter(issues__id=issue.id)
+        for article in articles:
+            article.view_count += 1
+            article.save()
+
+    # Articles
+    # --------------------------------------------------------------------------
+    if context['is_preview']:
+        context['article'] = AngerArticle.preview.issue_article(issue_id=issue.id)
+        context['archives'] = AngerArticle.preview.latest(
+            limit=anger_settings.MAX_ARCHIVES,
+            excluded_obj=context['article'])
+    else:
+        context['article'] = AngerArticle.published.issue_article(issue_id=issue.id)
+        context['archives'] = AngerArticle.published.latest(
+            limit=anger_settings.MAX_ARCHIVES,
+            excluded_obj=context['article'])
+        
+    return direct_to_template(request, 'front/anger.html', context)
+
+
+# Useful private functions
+# ------------------------------------------------------------------------------
+def _initialize_context(kwarg_dict):
+    """
+    Initialize context.
+    
+    """
+    issue = None
+    if 'issue' in kwarg_dict:
+        issue = kwarg_dict['issue']
+    
+    is_preview = None
+    if 'is_preview' in kwarg_dict:
+        is_preview = kwarg_dict['is_preview']
+    
+    is_archive = None
+    if 'is_archive' in kwarg_dict:
+        is_archive = kwarg_dict['is_archive']
+    
+    is_ads_preview = None
+    if 'is_ads_preview' in kwarg_dict:
+        is_ads_preview = kwarg_dict['is_ads_preview']
+    
+    extra_context = None
+    if 'extra_context' in kwarg_dict:
+        extra_context = kwarg_dict['extra_context']
+
+    # Update context with extra_context
+    # --------------------------------------------------------------------------
     context = {}
     if extra_context:
         context.update(extra_context)
         
     # Issue
+    #---------------------------------------------------------------------------
+    if not issue:
+        issue = _get_current_issue()
     context['issue'] = issue
     
-    # Is a preview
+    # Is a preview mode?
+    # --------------------------------------------------------------------------
+    context['is_preview'] = False
     if is_preview:
         context['is_preview'] = True
-    else:
-        context['is_preview'] = False
-        
-    # Is a ads preview
+    
+    # Is a ads preview mode?
+    # --------------------------------------------------------------------------
+    context['is_ads_preview'] = False
     if is_ads_preview:
         context['is_ads_preview'] = True
-    else:
-        context['is_ads_preview'] = False
         
-    # Is an archive
+    # Is an archive mode?
+    # --------------------------------------------------------------------------
+    context['is_archive'] = False
     if is_archive:
         context['is_archive'] = True
-    else:
-        context['is_archive'] = False
+
+    # Is a current mode?
+    # --------------------------------------------------------------------------
+    context['is_current'] = False
+    if not context['is_preview'] and not context['is_archive'] and not context['is_ads_preview']:
+        context['is_current'] = True
         
-    # Is current
-    if not is_preview and not is_archive and not is_ads_preview:
-        is_current = True
-        context['is_current'] = is_current
-    else:
-        is_current = False
-        context['is_current'] = is_current
-    
-    # View count
-    if is_current or is_archive:
-        articles = AngerArticle.published.filter(issues__id=issue.id)
-        for article in articles:
-            article.view_count += 1
-            article.save()
-    
-    if is_preview:
-        try:
-            article = AngerArticle.preview.filter(issues__id=issue.id)
-            article = article.order_by('-publication_date')
-            article = article[0:1].get()
-            context['article'] = article
-        except ObjectDoesNotExist:
-            article = None
-            context['article'] = article
-    else:
-        try:
-            article = AngerArticle.published.filter(issues__id=issue.id)
-            article = article.order_by('-publication_date')
-            article = article[0:1].get()
-            context['article'] = article
-        except ObjectDoesNotExist:
-            article = None
-            context['article'] = article
-    
-    if is_preview:
-        try:
-            archives = AngerArticle.preview.all()
-            if hasattr(article, 'id'):
-                archives = archives.exclude(id=article.id)
-            archives = archives.order_by('-publication_date')[:10]
-            context['archives'] = archives
-        except ObjectDoesNotExist:
-            archives = None
-            context['archives'] = archives
-    else:
-        try:
-            archives = AngerArticle.published.all()
-            archives = archives.exclude(id=article.id)
-            archives = archives.order_by('-publication_date')[:10]
-            context['archives'] = archives
-        except ObjectDoesNotExist:
-            archives = None
-            context['archives'] = archives
-        
-    return direct_to_template(request, 'front/anger.html', context)
+    return context
 
 

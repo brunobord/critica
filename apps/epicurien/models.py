@@ -8,7 +8,8 @@ from django.db.models import permalink
 from django.utils.translation import ugettext_lazy as _
 from django.template.defaultfilters import slugify
 from critica.apps.articles.models import BaseArticle
-
+from critica.apps.epicurien.managers import EpicurienArticlePublishedManager
+from critica.apps.epicurien.managers import EpicurienArticlePreviewManager
 
 class EpicurienArticleType(models.Model):
     """
@@ -49,6 +50,10 @@ class EpicurienArticle(BaseArticle):
     
     """
     type = models.ForeignKey('epicurien.EpicurienArticleType', verbose_name=_('type'))
+    
+    objects   = models.Manager()
+    published = EpicurienArticlePublishedManager()
+    preview   = EpicurienArticlePreviewManager()
 
     class Meta:
         """ 

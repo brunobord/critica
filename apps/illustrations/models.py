@@ -6,6 +6,7 @@ Models of ``critica.apps.illustrations`` application.
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from critica.apps.illustrations import settings as illustrations_settings
+from critica.apps.illustrations.managers import IllustrationOfTheDayManager
 
 
 def get_image_path(instance, filename):
@@ -28,6 +29,8 @@ class IllustrationOfTheDay(models.Model):
     legend            = models.CharField(_('legend'), max_length=100, help_text=_('100 characters max.'))
     creation_date     = models.DateTimeField(_('creation date'), auto_now_add=True)
     modification_date = models.DateTimeField(_('modification date'), auto_now=True)
+    
+    objects = IllustrationOfTheDayManager()
     
     class Meta:
         """ 
